@@ -12,7 +12,7 @@
 
 -   `#BCF4F5` - Bright tealish blue
 
-## Rendering
+## Rendering - test
 
 Locally, in RStudio, click *Build Website* on the Build tab or in any editor (including RStudio), run `quarto render` in the Terminal.
 
