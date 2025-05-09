@@ -1,0 +1,80 @@
+---
+title: "Linear regression with a multiple predictors II"
+subtitle: "Lecture 17"
+date: "2024-10-31"
+format: 
+  live-revealjs: 
+    output-file: 17-linear-model-multiple-predictors-II-slides.html
+webr:
+  cell-options:
+    autorun: false
+---
+
+<!-- begin: webr fodder -->
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{webr}
+#| edit: false
+#| echo: false
+#| output: false
+options(width = 60)
+```
+
+```{r}
+#| include: false
+library(tidyverse)
+library(tidymodels)
+library(palmerpenguins)
+```
+
+<!-- end: webr fodder -->
+
+<!-- begin: ae definition -->
+
+```{r}
+#| include: false
+todays_ae <- "ae-15-modeling-loans"
+```
+
+<!-- end: ae definition -->
+
+# Warm-up
+
+## While you wait... {.smaller}
+
+::: appex
+-   Go to your `ae` project in RStudio.
+
+-   Make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
+
+-   Click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*.
+
+-   Wait till the you're prompted to work on the application exercise during class before editing the file.
+:::
+
+## Announcements {.smaller}
+
+-   Peer evaluations (via TEAMMATES) are due by Friday (tomorrow), 5 pm.
+-   Lab 5 due on Monday, 8:30 am.
+-   You'll receive project proposal feedback on Monday. Milestone 3 does not have a lab session dedicated, but you're to review and address the feedback issues and close them with commits you make to your repo – opportunity to practice data science workflows and make progress on your project. **Make sure you have weekly team meetings scheduled for the remainder of the semester!**
+
+# Application exercise
+
+## Finish up Tuesday's AE
+
+-   Go to your ae project in RStudio.
+
+-   Get back to working on `ae-14-modeling-penguins-multi`
+
+## `{r} todays_ae` {.smaller}
+
+::: appex
+-   Go to your ae project in RStudio.
+
+-   If you haven't yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
+
+-   If you haven't yet done so, click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*.
+
+-   Work through the application exercise in class, and render, commit, and push your edits.
+:::
