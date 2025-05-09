@@ -1,0 +1,95 @@
+[
+  {
+    "listing": "/course-team.html",
+    "items": [
+      "/ta/anmol.html",
+      "/ta/aurora.html",
+      "/ta/avery.html",
+      "/ta/dav.html",
+      "/ta/dom.html",
+      "/ta/emily.html",
+      "/ta/federico.html",
+      "/ta/grace.html",
+      "/ta/hyunjin.html",
+      "/ta/janice.html",
+      "/ta/jasmine.html",
+      "/ta/john.html",
+      "/ta/jonathan.html",
+      "/ta/kareena.html",
+      "/ta/liane.html",
+      "/ta/lynn.html",
+      "/ta/marie.html",
+      "/ta/netra.html",
+      "/ta/noah.html",
+      "/ta/sarah.html",
+      "/ta/sonya.html"
+    ]
+  },
+  {
+    "listing": "/exam-review.html",
+    "items": [
+      "/exam-review/final-review.html",
+      "/exam-review/final-review-A.html",
+      "/exam-review/midterm-review.html",
+      "/exam-review/midterm-review-A.html"
+    ]
+  },
+  {
+    "listing": "/ae.html",
+    "items": [
+      "/ae/ae-00-unvotes.html",
+      "/ae/ae-01-meet-the-penguins.html",
+      "/ae/ae-02-bechdel-dataviz-A.html",
+      "/ae/ae-02-bechdel-dataviz.html",
+      "/ae/ae-03-bechdel-data-viz-transform-A.html",
+      "/ae/ae-03-bechdel-data-viz-transform.html",
+      "/ae/ae-04-gerrymander-explore-I-A.html",
+      "/ae/ae-04-gerrymander-explore-I.html",
+      "/ae/ae-05-gerrymander-explore-II-A.html",
+      "/ae/ae-05-gerrymander-explore-II.html",
+      "/ae/ae-06-majors-tidy-A.html",
+      "/ae/ae-06-majors-tidy.html",
+      "/ae/ae-07-taxes-join-A.html",
+      "/ae/ae-07-taxes-join.html",
+      "/ae/ae-08-durham-climate-factors-A.html",
+      "/ae/ae-08-durham-climate-factors.html",
+      "/ae/ae-09-age-gaps-sales-import-A.html",
+      "/ae/ae-09-age-gaps-sales-import.html",
+      "/ae/ae-10-chronicle-scrape-A.html",
+      "/ae/ae-10-chronicle-scrape.html",
+      "/ae/ae-11-unvotes-revisit-chatgpt.html",
+      "/ae/ae-12-modeling-fish-A.html",
+      "/ae/ae-12-modeling-fish.html",
+      "/ae/ae-13-modeling-penguins-A.html",
+      "/ae/ae-13-modeling-penguins.html",
+      "/ae/ae-14-modeling-penguins-multi-A.html",
+      "/ae/ae-14-modeling-penguins-multi.html",
+      "/ae/ae-15-modeling-loans-A.html",
+      "/ae/ae-15-modeling-loans.html",
+      "/ae/ae-16-spam-filter-A.html",
+      "/ae/ae-16-spam-filter.html",
+      "/ae/ae-17-forest-classification-A.html",
+      "/ae/ae-17-forest-classification.html",
+      "/ae/ae-18-duke-forest-bootstrap-A.html",
+      "/ae/ae-18-duke-forest-bootstrap.html",
+      "/ae/ae-19-equality-randomization-A.html",
+      "/ae/ae-19-equality-randomization.html",
+      "/ae/ae-20-effective-dataviz-A.html",
+      "/ae/ae-20-effective-dataviz.html"
+    ]
+  },
+  {
+    "listing": "/lab.html",
+    "items": [
+      "/lab/lab-0.html",
+      "/lab/lab-1.html",
+      "/lab/lab-2.html",
+      "/lab/lab-3.html",
+      "/lab/lab-4.html",
+      "/lab/lab-5.html",
+      "/lab/lab-6.html",
+      "/lab/lab-7.html",
+      "/lab/lab-8.html"
+    ]
+  }
+]
