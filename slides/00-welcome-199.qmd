@@ -1,7 +1,7 @@
 ---
 title: "Welcome to STA 199"
 subtitle: "Lecture 0"
-date: "2024-08-27"
+date: "2025-05-14"
 format: 
   live-revealjs: 
     output-file: 00-welcome-199-slides.html
@@ -29,68 +29,30 @@ options("readr.edition" = 1)
 
 # Hello world!
 
-## Meet the prof
+## Meet the team!
 
-::::: columns
-::: {.column width="50%"}
-Dr. Mine Çetinkaya-Rundel
-
-Professor of the Practice
-
-Old Chem 213
+::: columns
+::: {.column width="70%"}
+***Professor***\
+Marie Neubrander \
+marie.neubrander\@duke.edu
 :::
 
-::: {.column width="50%"}
-![](images/00/mine.png){fig-alt="Headshot of Dr. Mine Çetinkaya-Rundel" fig-align="center"}
+::: {.column width="30%"}
+![](images/00/marie.JPG){fig-alt="Headshot Marie Neubrander" fig-align="center" style="border-radius: 50%; object-fit: cover;" width="220"}
 :::
-:::::
-
-## Meet the course team {.smaller}
-
-::::: columns
-::: {.column width="50%"}
--   Mary Knox (Course coordinator)
--   Marie Neubrander (Head TA)
--   Federico Arboleda
--   Jaekyoung Kim
--   Lynn Kremers
--   Netra Mittal
--   Grace Rade
--   Jasmine Wang
--   Emily Jensen
--   Jonathan Lin
--   Mengqi Liu
 :::
 
-::: {.column width="50%"}
--   Sonya Eason
--   Domenic Fenoglio
--   Sarah Wu
--   Avery Hodges
--   David King
--   Hyunjin Lee
--   Kareena Legare
--   Liane Ma
--   Noah Obuya
--   Anmol Sapru
--   John Zito
-:::
-:::::
-
-## Meet each other!
-
-::: question
-Please share with at least two classmates...
-
--   Your name
--   Your year
--   Where you're from
--   What you did this past summer
--   What you hope to get out of this course
+::: columns
+::: {.column width="70%"}
+***Course Coordinator & Lab Instructor***\
+Dr. Mary Knox\
+mary.knox\@duke.edu
 :::
 
-::: {.content-visible when-format="revealjs"}
-{{< countdown minutes=4 font-size="5rem" >}}
+::: {.column width="30%"}
+![](images/00/mary.png){fig-alt="Headshot Midori Yamada" fig-align="center" style="border-radius: 50%; object-fit: cover;" width="220"}
+:::
 :::
 
 ## Meet data science
@@ -103,14 +65,6 @@ Please share with at least two classmates...
 -   This is a course on introduction to data science, with an emphasis on **statistical thinking**.
 :::
 
-## Application exercise
-
-::: appex
-Or more like demo for today...
-
-{{< fa laptop-code >}} [sta199-f24.github.io/ae/ae-00-unvotes.html](https://sta199-f24.github.io/ae/ae-00-unvotes.html)
-:::
-
 # Data science life cycle
 
 ## Data science life cycle
@@ -120,16 +74,15 @@ Or more like demo for today...
 ## Collect birthdays
 
 ::: columns
-
 ::: {.column width="70%"}
 ```{=html}
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1RvmzRhJj2VcgGe_cvsovFOdxjlIwX37aZr9NKMBuvwcquQ/viewform?embedded=true" width="640" height="371" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 ```
 :::
+
 ::: {.column width="30%"}
 {{< qrcode https://forms.gle/S2zpyu6qmkEisSSq5 >}}
 :::
-
 :::
 
 {{< countdown minutes=1 >}}
@@ -253,16 +206,18 @@ All linked from the course website:
 
 -   Midterm comprised of two parts:
 
-    -   In-class (Oct 8): 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”) – 70% of the grade.
+    -   In-class (Oct 8): 75 minute in-class exam.
+        Closed book, one sheet of notes ("cheat sheet") -- 70% of the grade.
 
-    -   Take-home (Oct 8 - Oct 11): Follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade.
+    -   Take-home (Oct 8 - Oct 11): Follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam -- 30% of the grade.
 
--   Final in-class only (Dec 12, 9am - 12pm): Closed book, one sheet of notes (“cheat sheet”).
+-   Final in-class only (Dec 12, 9am - 12pm): Closed book, one sheet of notes ("cheat sheet").
 
-- "Cheat sheet": No larger than 8 1/2 x 11, both sides, **must be prepared by you**.
+-   "Cheat sheet": No larger than 8 1/2 x 11, both sides, **must be prepared by you**.
 
 ::: callout-caution
-Exam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class.
+Exam dates cannot be changed and no make-up exams will be given.
+If you can't take the exams on these dates, you should drop this class.
 :::
 
 ## Project {.smaller}
@@ -282,7 +237,8 @@ Exam dates cannot be changed and no make-up exams will be given. If you can’t 
 -   Some lab sessions allocated to project progress
 
 ::: callout-caution
-Project due date cannot be changed. You must complete the project to pass this class.
+Project due date cannot be changed.
+You must complete the project to pass this class.
 :::
 
 ## Teams {.smaller}
@@ -338,7 +294,8 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 -   The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
 
--   I am committed to making all course materials accessible and I'm always learning how to do this better. If any course component is not accessible to you in any way, please don't hesitate to let me know.
+-   I am committed to making all course materials accessible and I'm always learning how to do this better.
+    If any course component is not accessible to you in any way, please don't hesitate to let me know.
 
 # Course policies
 
@@ -349,9 +306,10 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 ## Use of AI tools
 
--   {{< fa check >}} **AI tools for code:** 
-    - Sure, but be careful/critical! Working code `!=` correct/good code.
-    - Must explicitly cite, with **at a minimum** AI tool you're using (e.g., ChatGPT) and your prompt.
+-   {{< fa check >}} **AI tools for code:**
+
+    -   Sure, but be careful/critical! Working code `!=` correct/good code.
+    -   Must explicitly cite, with **at a minimum** AI tool you're using (e.g., ChatGPT) and your prompt.
 
 -   {{< fa ban >}} **AI tools for narrative:** Absolutely not!
 

@@ -5,9 +5,9 @@ website:
   page-navigation: true
   title: "STA 199"
   description: "Homepage for STA 199 - Introduction to Data Science at Duke University, Fall 2024."
-  site-url: "https://sta199-f24.github.io/"
+  site-url: "https://sta199-su25.github.io/"
 
-  repo-url: https://github.com/sta199-f24/sta199-f24.github.io/
+  repo-url: https://github.com/sta199-su25/sta199-su25.github.io
   repo-actions: [edit, issue]
 
   open-graph: true
@@ -24,7 +24,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/sta199-f24
+        href: https://github.com/sta199-su25
         text: "GitHub organization"
       - icon: code-square
         href: https://cmgr.oit.duke.edu/containers
