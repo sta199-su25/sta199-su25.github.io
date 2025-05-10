@@ -1,4 +1,4 @@
-# sta199-f24.github.io
+# sta199-su25.github.io
 
 ## Colors
 

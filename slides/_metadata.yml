@@ -1,9 +1,9 @@
-institute: "Duke University <br> STA 199 - Fall 2024"
+institute: "Duke University <br> STA 199 - Summer 2025"
 author: "Dr. Mine Çetinkaya-Rundel"
 date-format: long
 format:
   live-revealjs:
-    footer: "[🔗 sta199-f24.github.io](https://sta199-f24.github.io/)"
+    footer: "[🔗 sta199-su25.github.io](https://sta199-su25.github.io/)"
     theme: slides.scss
     transition: fade
     slide-number: true
