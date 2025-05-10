@@ -4,7 +4,7 @@ project:
 website:
   page-navigation: true
   title: "STA 199"
-  description: "Homepage for STA 199 - Introduction to Data Science at Duke University, Fall 2024."
+  description: "Homepage for STA 199 - Introduction to Data Science at Duke University, Spring 2025."
   site-url: "https://sta199-su25.github.io/"
 
   repo-url: https://github.com/sta199-su25/sta199-su25.github.io
