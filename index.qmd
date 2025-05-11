@@ -1,13 +1,13 @@
 ---
-title: "STA 199: Introduction to Data Science and Statistical Thinking"
+title: "STA 199: Intro to Data Science and Statistical Thinking"
 execute: 
   freeze: false
 editor_options: 
   chunk_output_type: console
 ---
 
-This page contains an outline of the topics, content, and assignments for the semester.
-Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.
+This page contains an outline of the topics, content, and assignments for the semester!
+Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!
 
 ```{r}
 #| echo: false
@@ -17,67 +17,73 @@ library(googlesheets4)
 library(gt)
 library(tidyverse)
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1tHdQiEaMW5qE8oKsG4lTMWk60HtxKhtm95zZcDNacdc/edit?usp=sharing", sheet = "Schedule")
-prepare_cutoff_date <- as.Date("2024-12-13")
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1o5Bx8dQKjupw62WxY2nTNUoi0PhNwaShZa7S7bZFD2c/edit?usp=sharing", sheet = "Schedule")
+prepare_cutoff_date <- as.Date("2025-05-13")
 ```
 
 ```{r}
 #| echo: false
 #| column: screen-inset-right
-d |>
-  filter(!is.na(session)) |>
-  select(-dow, -admin_notes, -number, -session) |>
+
+d_display <- d |>
+  filter(!is.na(date)) |>
+  mutate(date = as.Date(date)) |>
   mutate(
-    date = as.Date(date),
-    prepare = if_else(date > prepare_cutoff_date, "*To be posted*", prepare)
-    ) |>
+    highlight_color = case_when(
+      session == "exam" ~ "#fcc5f7",   # light yellow
+      session == "NC" ~ "#b6fccb",     # light gray
+      session == "Lab" ~ "#f3e6f9",    # lab marker, used for text color only
+      TRUE ~ NA_character_
+    )#,
+    #prepare = if_else(date > prepare_cutoff_date, "*To be posted*", prepare)
+  ) |>
+  select(-dow, -admin_notes, -number, -session) |>
   relocate(due, .after = materials) |>
+  group_by(week) |>
+  mutate(is_end_of_week = row_number() == n()) |>
+  ungroup() |>
+  mutate(draw_black_line = is_end_of_week & row_number() != n())
+
+# Clean version for display (removes helpers)
+d_display_clean <- d_display |>
+  select(-is_end_of_week, -draw_black_line, -highlight_color)
+
+# Render gt table
+d_display_clean |>
   gt() |>
   fmt_date(date, date_style = 31) |>
   sub_missing(
-    columns = c(week, prepare, topic, materials, due), 
+    columns = c(week, prepare, topic, materials, due),
     missing_text = ""
   ) |>
   cols_align(
-    align = "center", 
-    columns = c(week)
+    align = "center", columns = c(week)
   ) |>
   cols_align(
-    align = "right", 
-    columns = c(date)
+    align = "right", columns = c(date)
   ) |>
   cols_align(
-    align = "left", 
-    columns = c(topic, prepare, materials, due)
+    align = "left", columns = c(topic, prepare, materials, due)
+  ) |>
+  # Grayed out "to be posted"
+  tab_style(
+    style = cell_text(color = "#b4b4b4"),
+    locations = cells_body(columns = prepare, rows = prepare == "*To be posted*")
   ) |>
   tab_style(
-    style = cell_text(
-      color = "#b4b4b4"
-    ),
-    locations = cells_body(
-      columns = c(prepare),
-      rows = prepare == "*To be posted*"
-    )
+    style = cell_text(color = "#b4b4b4"),
+    locations = cells_body(columns = materials, rows = materials == "*To be posted*")
   ) |>
-  tab_style(
-    style = cell_text(
-      color = "#b4b4b4"
-    ),
-    locations = cells_body(
-      columns = c(materials),
-      rows = materials == "*To be posted*"
-    )
-  ) |>
+  # Light vertical dividers
   tab_style(
     style = cell_borders(
       sides = "right",
       color = "#D3D3D3",
       style = "solid"
     ),
-    locations = cells_body(
-      columns = c(date, topic, prepare, materials)
-    )
+    locations = cells_body(columns = c(date, topic, materials, due))
   ) |>
+  # Thick black line after each week (except last row)
   tab_style(
     style = cell_borders(
       sides = "top",
@@ -85,29 +91,43 @@ d |>
       weight = px(2),
       style = "solid"
     ),
-    locations = cells_body(
-      columns = everything(),
-      rows = str_detect(topic, "[Ll]ab|Project milestone|Final$")
-    )
+    locations = cells_body(columns = everything(), rows = d_display$draw_black_line)
   ) |>
-  fmt_markdown(
-    columns = c(topic, prepare, materials, due)
+  # Highlight: exam (yellow)
+  tab_style(
+    style = cell_fill(color = "#fcc5f7"),
+    locations = cells_body(rows = d_display$highlight_color == "#fcc5f7")
   ) |>
+  # Highlight: no class (gray)
+  tab_style(
+    style = cell_fill(color = "#b6fccb"),
+    locations = cells_body(rows = d_display$highlight_color == "#b6fccb")
+  ) |>
+  # LAB: purple bold text only (no background!)
+  tab_style(
+  style = cell_text(color = "#8000ff", weight = "bold"),
+  locations = cells_body(
+    columns = c(topic, prepare, materials),
+    rows = d_display$highlight_color == "#f3e6f9"
+  )
+) |>
+  # Other styling
+  fmt_markdown(columns = c(topic, prepare, materials, due)) |>
   tab_options(table.width = pct(100)) |>
   cols_width(
     week ~ pct(2),
-    date ~ pct(10), 
+    date ~ pct(10),
     prepare ~ pct(25),
     topic ~ pct(27),
     materials ~ pct(18),
     due ~ pct(18)
   ) |>
   cols_label_with(fn = function(x) {
-      janitor::make_clean_names(x, case = "title") |>
-        toupper() |>
-        stringr::str_replace_all("^|$", "**") |>
-        md()
-    }) |>
-  tab_options(table.font.size = 13) |>
-  opt_row_striping()
+    janitor::make_clean_names(x, case = "title") |>
+      toupper() |>
+      stringr::str_replace_all("^|$", "**") |>
+      md()
+  }) |>
+  tab_options(table.font.size = 13)
+
 ```

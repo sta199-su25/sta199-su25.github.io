@@ -4,14 +4,13 @@ title: "Teaching team"
 
 ## Instructor
 
-![](img/marie.jpg){.circular-portrait-mine style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of Dr. Mine Çetinkaya-Rundel"}
+![](img/marie.jpg){style="float:right; padding: 0 0 0 10px; width:150px; height:150px; border-radius: 50%; object-fit: cover;" fig-alt="Headshot of Marie Neubrander"}
 
-Marie Neubrander is a second year Ph.D. student in the Department of Statistical Science at Duke University.
-Marie's research is focused on developing causal inference methods for text data with various applications in the social sciences.
+Marie Neubrander is a second year Ph.D. student in the Department of Statistical Science at Duke University. Marie's research is focused on developing causal inference methods for text data with various applications in the social sciences.
 
 ## Lab Instructor & Course Coordinator
 
-![](img/mary.png){.circular-portrait-mary style="float:right;" fig-alt="Headshot of Dr. Mary Knox"}
+![](img/mary.png){style="float:right; width:150px; height:150px; border-radius: 50%; object-fit: cover;" fig-alt="Headshot of Dr. Mary Knox"}
 
-Dr. Mary Knox (she/her) is the course coordinator for this course.
+Dr. Mary Knox (she/her) is the course coordinator for this course.  
 You can contact her (at [mary.knox\@duke.edu](mailto:mary.knox@duke.edu)) with any questions regarding accommodations, missed work, extensions, registration, etc.
