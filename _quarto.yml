@@ -64,8 +64,6 @@ website:
             text: Overview
           - href: course-syllabus.qmd
             text: Syllabus
-          - href: course-support.qmd
-            text: Support
           - href: course-team.qmd
             text: Team
           - href: index.qmd

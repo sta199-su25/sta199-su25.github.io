@@ -1,5 +1,5 @@
 ---
-title: "STA 199 - Introduction to Data Science and Statistical Thinking"
+title: "STA 199: Intro to Data Science and Statistical Thinking"
 subtitle: "Summer 2025"
 format:
   html: default
@@ -35,80 +35,6 @@ You will need a laptop you can bring to lecture and lab for this course.
 We will use the statistical software R.
 Students will be able to access R through Docker containers provided by Duke Office of Information Technology.
 See the [computing page](computing-access.qmd) for more information.
-
-## Course community
-
-### Inclusive community
-
-It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit.
-I intend to present materials and activities that respect diversity and align with [Duke's Commitment to Diversity and Inclusion](https://provost.duke.edu/about/dukes-commitment-diversity-and-inclusion/).
-Furthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives, and experiences and honors their identities.
-To help accomplish this:
-
--   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. If you prefer to speak with someone outside of the course, your academic dean is an excellent resource.
--   I (like many people) am still in the process of learning about diverse perspectives and identities. If anything was said in class (by anyone) that made you feel uncomfortable, please let me or a teaching team member know.
-
-### Personal pronouns
-
-Pronouns are meaningful tools to communicate identities and experiences, and using pronouns supports a campus environment where all community members can thrive.
-You can update your gender pronouns in Duke Hub and learn more about personal pronouns at the [Center for Sexual and Gender Diversity's website](https://students.duke.edu/belonging/icr/csgd/pronouns/).
-
-### Accessibility
-
-If any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.
-
-The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students can engage with their courses and related assignments.
-Students should contact the SDAO to [request or update accommodations](https://access.duke.edu/requests) under these circumstances.
-
-### Communication
-
-All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: [sta199-su25.github.io](https://sta199-f24.github.io/ "STA 199 - Fall 2024 course website").
-
-Announcements will periodically be emailed through Canvas Announcements.
-Please check your email regularly to ensure you have the latest announcements for the course.
-
-### Email
-
-If you have questions about assignment extensions, accommodations, or any other matter not appropriate for the class discussion forum, please email me directly at [marie.neubrander\@duke.edu]{.underline}.
-**If you do so, please include "STA 199" in the subject line.** Barring extenuating circumstances, I will respond to STA 199 emails within 48 hours, Monday through Friday.
-Response time may be slower for emails sent Friday evening through Sunday.
-
-## Five tips for success
-
-Your success in this course depends very much on you and the effort you put into it.
-The course team will help you by providing you with materials answering questions, and setting a pace, but for this to work, you must do the following:
-
-1.  Complete all the preparation work before class.
-
-2.  Ask questions.
-    As often as you can.
-    In class, out of class.
-    Ask me, ask your friends, ask the person sitting next to you.
-    This will help you more than anything else.
-    If you get a question wrong on an assessment, ask us why.
-    If you're not sure about the lab, ask.
-    If you hear something on the news that sounds related to what we discussed, ask.
-    If the reading is confusing, ask.
-
-3.  Do the readings!
-
-4.  Do the lab!
-    The earlier you start, the better.
-    It's not enough to just mechanically plow through the exercises.
-    You should ask yourself how these exercises relate to earlier material and imagine how they might be changed (to make questions for an exam, for example).
-
-5.  Don't procrastinate.
-    The content builds upon what was taught in previous weeks, so if something is confusing to you in Week 2, Week 3 will become more confusing, Week 4 even worse, etc.
-    Don't let the week end with unanswered questions.
-    But if you find yourself falling behind and not knowing where to begin asking, come to office hours and work with a member of the teaching team to help you identify a good (re)starting point.
-
-## Getting help
-
--   If you have a question during the lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking, you will create a learning opportunity for everyone.
--   The teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
--   Outside of class and office hours, any general questions about course content or assignments should be posted on the class discussion forum, [Ed Discussion](https://edstem.org/us/courses/62468/discussion/). There is a chance another student has already asked a similar question, so please check the other posts on the forum before adding a new question. If you know the answer to a question, I encourage you to respond!
-
-Check out the [Support](https://sta199-f24.github.io/course-support.html) tab for more resources.
 
 ## Course components
 
@@ -204,15 +130,85 @@ The final letter grade will be determined based on the following thresholds:
 | D-           | 60 - 62.99         |
 | F            | \< 60              |
 
+## Course community
+
+### Inclusive community
+
+It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit.
+I intend to present materials and activities that respect diversity and align with [Duke's Commitment to Diversity and Inclusion](https://provost.duke.edu/about/dukes-commitment-diversity-and-inclusion/).
+Furthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives, and experiences and honors their identities.
+To help accomplish this:
+
+-   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. If you prefer to speak with someone outside of the course, your academic dean is an excellent resource.
+-   I (like many people) am still in the process of learning about diverse perspectives and identities. If anything was said in class (by anyone) that made you feel uncomfortable, please let me or a teaching team member know.
+
+### Personal pronouns
+
+Pronouns are meaningful tools to communicate identities and experiences, and using pronouns supports a campus environment where all community members can thrive.
+You can update your gender pronouns in Duke Hub and learn more about personal pronouns at the [Center for Sexual and Gender Diversity's website](https://students.duke.edu/belonging/icr/csgd/pronouns/).
+
+### Accessibility
+
+If any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.
+
+The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students can engage with their courses and related assignments.
+Students should contact the SDAO to [request or update accommodations](https://access.duke.edu/requests) under these circumstances.
+
+### Communication
+
+All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: [sta199-su25.github.io](https://sta199-f24.github.io/ "STA 199 - Fall 2024 course website").
+
+Announcements will periodically be emailed through Canvas Announcements.
+Please check your email regularly to ensure you have the latest announcements for the course.
+
+### Email
+
+If you have questions about assignment extensions, accommodations, or any other matter not appropriate for the class discussion forum, please email me directly at [marie.neubrander\@duke.edu]{.underline}.
+**If you do so, please include "STA 199" in the subject line.** Barring extenuating circumstances, I will respond to STA 199 emails within 48 hours, Monday through Friday.
+Response time may be slower for emails sent Friday evening through Sunday.
+
+## Five tips for success
+
+Your success in this course depends very much on you and the effort you put into it.
+The course team will help you by providing you with materials answering questions, and setting a pace, but for this to work, you must do the following:
+
+1.  Complete all the preparation work before class.
+
+2.  Ask questions.
+    As often as you can.
+    In class, out of class.
+    Ask me, ask your friends, ask the person sitting next to you.
+    This will help you more than anything else.
+    If you get a question wrong on an assessment, ask us why.
+    If you're not sure about the lab, ask.
+    If you hear something on the news that sounds related to what we discussed, ask.
+    If the reading is confusing, ask.
+
+3.  Do the readings!
+
+4.  Do the lab!
+    The earlier you start, the better.
+    It's not enough to just mechanically plow through the exercises.
+    You should ask yourself how these exercises relate to earlier material and imagine how they might be changed (to make questions for an exam, for example).
+
+5.  Don't procrastinate.
+    The content builds upon what was taught in previous weeks, so if something is confusing to you in Week 2, Week 3 will become more confusing, Week 4 even worse, etc.
+    Don't let the week end with unanswered questions.
+    But if you find yourself falling behind and not knowing where to begin asking, come to office hours and work with a member of the teaching team to help you identify a good (re)starting point.
+
+## Getting help
+
+-   If you have a question during the lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking, you will create a learning opportunity for everyone.
+-   The teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
+-   Outside of class and office hours, any general questions about course content or assignments should be posted on the class discussion forum, [Ed Discussion](https://edstem.org/us/courses/62468/discussion/). There is a chance another student has already asked a similar question, so please check the other posts on the forum before adding a new question. If you know the answer to a question, I encourage you to respond!
+
+Check out the [Support](https://sta199-f24.github.io/course-support.html) tab for more resources.
+
 ## Course policies
 
 ### Duke Community Standard
 
-As a student in this course, you have agreed to uphold the [Duke Community Standard](https://trinity.duke.edu/undergraduate/academic-policies/community-standard-student-conduct) and the practices specific to this course.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-
-</iframe>
+As a student in this course, you have agreed to uphold the [Duke Community Standard](https://trinity.duke.edu/undergraduate/academic-policies/community-standard-student-conduct) (video [here](https://www.youtube.com/watch?v=_KN97j30ST4)!) and the practices specific to this course.
 
 ### Academic honesty
 
@@ -236,8 +232,8 @@ Please abide by the following as you work on assignments in this course:
 
     -   On individual assignments, you may not directly share work (including code) with another student in this class; on team assignments, you may not directly share work (including code) with another team.
 
--   **Online resources:** I am well aware that a huge volume of code is available on the web to solve any number of problems.
-    Unless I explicitly tell you not to use something, the course's policy is that you may make use of any online resources (e.g., StackOverflow), but you must explicitly cite where you obtained any code you directly use (or use as inspiration).
+-   **Online resources:** I know that a huge volume of code is available online to solve any number of problems.
+    Unless I explicitly tell you not to use something, the course's policy is that you may make use of any online resources (e.g., StackOverflow), but **you must explicitly cite where you obtained any code you directly use (or use as inspiration)**.
     Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.
 
 -   **Use of generative artificial intelligence (AI)**: You should treat generative AI, such as ChatGPT, like other online resources.
