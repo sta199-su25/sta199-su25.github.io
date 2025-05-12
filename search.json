@@ -5739,50 +5739,187 @@
     ]
   },
   {
-    "objectID": "computing-troubleshooting.html",
-    "href": "computing-troubleshooting.html",
-    "title": "Computing troubleshooting",
+    "objectID": "ae/ae-01-meet-the-penguins.html",
+    "href": "ae/ae-01-meet-the-penguins.html",
+    "title": "AE 01: Meet the penguins",
     "section": "",
-    "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the Ed Discussions to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. If you’re still having trouble, follow the steps in the order given below:\n\nRestart your browser.\nMake sure there are no updates pending for your browser. If there are, install those updates and restart your browser again.\nRequest a restart of your container – To do so, select your container as you usually do and then, instead of Login, click on Request Restart. Read the warning in the next page, and then click once more to restart your container.\nClear your browser cache and restart your browser again.\nRestart your computer to ensure a fresh new connection.\nIf your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).",
+    "text": "For this application exercise, we’ll use the tidyverse and palmerpenguins packages.\n\nlibrary(tidyverse)\n\nWarning: package 'ggplot2' was built under R version 4.4.1\n\n\nWarning: package 'tidyr' was built under R version 4.4.1\n\n\nWarning: package 'purrr' was built under R version 4.4.1\n\n\nWarning: package 'lubridate' was built under R version 4.4.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\nWarning: package 'palmerpenguins' was built under R version 4.4.1\n\n\nThe dataset we will visualize is called penguins. Let’s glimpse() at it.\n\n\nYour turn: Replace #add code here with the code for “glimpse”ing at the data penguins data frame – glimpse(penguins). Render the document and view the output.\n\n\n# add code here\n\n\n\nDemo: First, replace the blank below with the number of rows in the penguins data frame based on the output of the chunk below. Then, replace it with “inline code” and render again.\n\n\nnrow(penguins)\n\n[1] 344\n\n\nThere are ___ penguins in the penguins data frame."
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Marie Neubrander is a second year Ph.D. student in the Department of Statistical Science at Duke University. Marie’s research is focused on developing causal inference methods for text data with various applications in the social sciences.",
     "crumbs": [
-      "Computing",
-      "Troubleshooting"
+      "Course information",
+      "Team"
     ]
   },
   {
-    "objectID": "ae/ae-00-unvotes.html",
-    "href": "ae/ae-00-unvotes.html",
-    "title": "AE 00: UN Votes",
+    "objectID": "course-team.html#instructor",
+    "href": "course-team.html#instructor",
+    "title": "Teaching team",
     "section": "",
-    "text": "How do various countries vote in the United Nations General Assembly, how have their voting patterns evolved throughout time, and how similarly or differently do they view certain issues? Answering these questions (at a high level) is the focus of this analysis.\n\nWe will use the tidyverse, lubridate, and scales packages for data wrangling and visualization, and the DT package for interactive display of tabular output, and the unvotes package for the data.\n\n\n\n\n\n\n\n\n\nThe data we’re using originally come from the unvotes package. In the chunk below we modify the data by joining the various data frames provided in the package to help you get started with the analysis."
+    "text": "Marie Neubrander is a second year Ph.D. student in the Department of Statistical Science at Duke University. Marie’s research is focused on developing causal inference methods for text data with various applications in the social sciences.",
+    "crumbs": [
+      "Course information",
+      "Team"
+    ]
   },
   {
-    "objectID": "ae/ae-00-unvotes.html#introduction",
-    "href": "ae/ae-00-unvotes.html#introduction",
-    "title": "AE 00: UN Votes",
+    "objectID": "course-team.html#lab-instructor-course-coordinator",
+    "href": "course-team.html#lab-instructor-course-coordinator",
+    "title": "Teaching team",
+    "section": "Lab Instructor & Course Coordinator",
+    "text": "Lab Instructor & Course Coordinator\n\nDr. Mary Knox (she/her) is the course coordinator for this course.\nYou can contact her (at mary.knox@duke.edu) with any questions regarding accommodations, missed work, extensions, registration, etc.",
+    "crumbs": [
+      "Course information",
+      "Team"
+    ]
+  },
+  {
+    "objectID": "exam-review/midterm-review.html",
+    "href": "exam-review/midterm-review.html",
+    "title": "Midterm Review",
     "section": "",
-    "text": "How do various countries vote in the United Nations General Assembly, how have their voting patterns evolved throughout time, and how similarly or differently do they view certain issues? Answering these questions (at a high level) is the focus of this analysis.\n\nWe will use the tidyverse, lubridate, and scales packages for data wrangling and visualization, and the DT package for interactive display of tabular output, and the unvotes package for the data.\n\n\n\n\n\n\n\n\n\nThe data we’re using originally come from the unvotes package. In the chunk below we modify the data by joining the various data frames provided in the package to help you get started with the analysis."
+    "text": "Note\n\n\n\nSuggested answers can be found here, but resist the urge to peek before you go through it yourself.\nIn 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation. (Source: Blizzard Workers Share Salaries in Revolt Over Pay)\nThe name of the data frame used for this analysis is blizzard_salary and the variables are:\nThe top ten rows of blizzard_salary are shown below:\n# A tibble: 409 × 4\n   percent_incr salary_type annual_salary performance_rating\n          &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             \n 1          1   Salaried               1  High              \n 2          1   Salaried               1  Successful        \n 3          1   Salaried               1  High              \n 4          1   Hourly             33987. Successful        \n 5         NA   Hourly             34798. High              \n 6         NA   Hourly             35360  &lt;NA&gt;              \n 7         NA   Hourly             37440  &lt;NA&gt;              \n 8          0   Hourly             37814. &lt;NA&gt;              \n 9          4   Hourly             41101. Top               \n10          1.2 Hourly             42328  &lt;NA&gt;              \n# ℹ 399 more rows"
   },
   {
-    "objectID": "ae/ae-00-unvotes.html#un-voting-patterns",
-    "href": "ae/ae-00-unvotes.html#un-voting-patterns",
-    "title": "AE 00: UN Votes",
-    "section": "UN voting patterns",
-    "text": "UN voting patterns\nLet’s create a data visualisation that displays how the voting record of the United States, United Kingdom, and Turkey changed over time.\n\n\n\n\n\n\n\n\n\nTask: Write your first piece of (R) code!\n\nModify the code cell above to change the plot to include a different country in place of Turkey. Note that the country name should be spelled and capitalized exactly the same way as it appears in the data. See the Appendix for a list of the countries in the data."
+    "objectID": "exam-review/midterm-review.html#question-1",
+    "href": "exam-review/midterm-review.html#question-1",
+    "title": "Midterm Review",
+    "section": "Question 1",
+    "text": "Question 1\nWhich of the following is correct? Choose all that apply.\n\nThe blizzard_salary dataset has 399 rows.\nThe blizzard_salary dataset has 4 columns.\nEach row represents a Blizzard Entertainment worker who filled out the spreadsheet.\nThe percent_incr variable is numerical and discrete.\nThe salary_type variable is numerical.\nThe annual_salary variable is numerical.\nThe performance_rating variable is categorical and ordinal."
   },
   {
-    "objectID": "ae/ae-00-unvotes.html#references",
-    "href": "ae/ae-00-unvotes.html#references",
-    "title": "AE 00: UN Votes",
-    "section": "References",
-    "text": "References\n\nRobinson D (2021). unvotes: United Nations General Assembly Voting Data. R package version 0.3.0, https://github.com/dgrtwo/unvotes.\nErik Voeten “Data and Analyses of Voting in the UN General Assembly” Routledge Handbook of International Organization, edited by Bob Reinalda (published May 27, 2013).\nMuch of the analysis has been modeled on the examples presented in the unvotes package vignette."
+    "objectID": "exam-review/midterm-review.html#question-2",
+    "href": "exam-review/midterm-review.html#question-2",
+    "title": "Midterm Review",
+    "section": "Question 2",
+    "text": "Question 2\nFigure 1 (a) and Figure 1 (b) show the distributions of annual salaries of hourly and salaried workers. The two figures show the same data, with the facets organized across rows and across columns. Which of the two figures is better for comparing the median annual salaries of hourly and salaried workers. Explain your reasoning.\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\nFigure 1: Distribution of annual salaries of Blizzard employees"
   },
   {
-    "objectID": "ae/ae-00-unvotes.html#appendix",
-    "href": "ae/ae-00-unvotes.html#appendix",
-    "title": "AE 00: UN Votes",
-    "section": "Appendix",
-    "text": "Appendix\nBelow is a list of countries in the dataset:"
+    "objectID": "exam-review/midterm-review.html#question-3",
+    "href": "exam-review/midterm-review.html#question-3",
+    "title": "Midterm Review",
+    "section": "Question 3",
+    "text": "Question 3\nSuppose your teammate wrote the following code as part of their analysis of the data.\nThey then printed out the results shown below. Unfortunately one of the numbers got erased from the printout. It’s indicated with _____ below.\n# A tibble: 2 × 3\n  salary_type mean_annual_salary median_annual_salary\n  &lt;chr&gt;                    &lt;dbl&gt;                &lt;dbl&gt;\n1 Hourly                  63003.               54246.\n2 Salaried                90183.               _____\nWhich of the following is the best estimate for that erased value?\n\n30,000\n50,000\n80,000\n100,000"
+  },
+  {
+    "objectID": "exam-review/midterm-review.html#question-4",
+    "href": "exam-review/midterm-review.html#question-4",
+    "title": "Midterm Review",
+    "section": "Question 4",
+    "text": "Question 4\nWhich distribution of annual salaries has a higher standard deviation?\n\nHourly workers\nSalaried workers\nRoughly the same"
+  },
+  {
+    "objectID": "exam-review/midterm-review.html#question-5",
+    "href": "exam-review/midterm-review.html#question-5",
+    "title": "Midterm Review",
+    "section": "Question 5",
+    "text": "Question 5\nWhich of the following alternate plots would also be useful for visualizing the distributions of annual salaries of hourly and salaried workers? Choose all that apply.\na. Box plots\nb. Density plots\nc. Pie charts\nd. Waffle charts\ne. Histograms\nf. Scatterplots"
+  },
+  {
+    "objectID": "exam-review/midterm-review.html#questions-6-and-7",
+    "href": "exam-review/midterm-review.html#questions-6-and-7",
+    "title": "Midterm Review",
+    "section": "Questions 6 and 7",
+    "text": "Questions 6 and 7\nSuppose you made the bar plot shown in Figure 2 (a) to visualize the distribution of performance_rating and your teammate made the bar plot shown in Figure 2 (b).\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\nFigure 2: Distribution of performance rating\n\n\nYou made your bar plot without transforming the data in any way, while your friend did first transform the data with code like the following:\n\nblizzard_salary &lt;- blizzard_salary |&gt;\n  _(1)_(performance_rating = fct_relevel(performance_rating, _(2)_))\n\nQuestion 6: What goes in the blank (1)?\n\narrange()\nfilter()\nmutate()\nsummarize()\n\nQuestion 7: What goes in the blank (2)?\n\n\"Poor\", \"Successful\", \"High\", \"Top\"\n\"Successful\", \"High\", \"Top\"\n\"Top\", \"High\", \"Successful\", \"Poor\"\nPoor, Successful, High, Top"
+  },
+  {
+    "objectID": "exam-review/midterm-review.html#questions-8---10",
+    "href": "exam-review/midterm-review.html#questions-8---10",
+    "title": "Midterm Review",
+    "section": "Questions 8 - 10",
+    "text": "Questions 8 - 10\nFinally, another teammate creates the following two plots.\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\nFigure 3: Distribution of salary type by performance rating\n\n\nQuestion 8: Your teammate asks you for help deciding which one to use in the final report for visualizing the relationship between performance rating and salary type. In 1-3 sentences, can you help them make a decision, justify your choice, and write the narrative that should go with the plot?\nQuestion 9: A friend with a keen eye points out that the number of observations in Figure 3 (a) seems lower than the total number of observations in blizzard_salary. What might be going on here? Explain your reasoning.\nQuestion 10: Below are the proportions of performance ratings for hourly and salaried workers. Place these values in the corresponding segments in Figure 3 (b).\n\n\n# A tibble: 4 × 3\n  performance_rating Hourly Salaried\n  &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;\n1 High                0.2     0.384 \n2 Successful          0.686   0.521 \n3 Top                 0.114   0.0760\n4 Poor                0       0.0190"
+  },
+  {
+    "objectID": "exam-review/midterm-review.html#questions-11-and-12",
+    "href": "exam-review/midterm-review.html#questions-11-and-12",
+    "title": "Midterm Review",
+    "section": "Questions 11 and 12",
+    "text": "Questions 11 and 12\nThe table below shows the distribution of salary_type and performance_rating.\n\n\n# A tibble: 2 × 6\n  salary_type  Poor Successful  High   Top  `NA`\n  &lt;chr&gt;       &lt;int&gt;      &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;\n1 Hourly         NA         24     7     4    28\n2 Salaried        5        137   101    20    83\n\n\nThe pipeline below produces a data frame with a fewer number of rows than blizzard_salary.\n\nblizzard_salary |&gt;\n  filter(salary_type _(1)_ \"Hourly\" _(2)_ performance_rating == \"Poor\") |&gt;\n  _(3)_(annual_salary)\n\n\n\n# A tibble: 5 × 4\n  percent_incr salary_type annual_salary performance_rating\n         &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             \n1            0 Salaried            80000 Poor              \n2            3 Salaried            83000 Poor              \n3            0 Salaried           116000 Poor              \n4            0 Salaried           135219 Poor              \n5            0 Salaried           147500 Poor              \n\n\nQuestion 11: Which of the following goes in blanks (1) and (2)?\n\n\n\n(1)\n(2)\n\n\n\na.\n!=\n|\n\n\nb.\n==\n&\n\n\nc.\n!=\n&\n\n\nd.\n==\n|\n\n\n\nQuestion 12: Which function or functions go into blank (3)?\n\narrange()\nmutate()\norder()\nsort()"
+  },
+  {
+    "objectID": "exam-review/midterm-review.html#question-13",
+    "href": "exam-review/midterm-review.html#question-13",
+    "title": "Midterm Review",
+    "section": "Question 13",
+    "text": "Question 13\nYou’re reviewing another team’s work and they made the following visualization:\n\n\n\n\n\n\n\n\nAnd they wrote the following interpretation for the relationship between annual salary and percent increase for Top performers:\n\nThe relationship is positive, having a higher salary results in a higher percent increase. There is one clear outlier.\n\nWhich of the following is/are the most accurate and helpful) peer review note for this interpretation. Choose all that apply.\n\nThe interpretation is complete and perfect, no changes needed!\nThe interpretation doesn’t mention the direction of the relationship.\nThe interpretation doesn’t mention the form of the relationship, which is linear.\nThe interpretation doesn’t mention the strength of the relationship, which is somewhat strong.\nThere isn’t a clear outlier in the plot. If any points stand out as potential outliers, more guidance should be given to the reader to identify them (e.g., salary and/or percent increase amount).\nThe interpretation is causal – we don’t know if the cause of the high percent increase is higher annual salary based on observational data. The causal direction might be the other way around, or there may be other factors contributing to the apparent relationship."
+  },
+  {
+    "objectID": "exam-review/midterm-review.html#question-14",
+    "href": "exam-review/midterm-review.html#question-14",
+    "title": "Midterm Review",
+    "section": "Question 14",
+    "text": "Question 14\nBelow is some code and its output.\n```{r}\n# label=plot blizzard\n\nggplot(blizzard_salary,aes(x=performance_rating,y=percent_incr))+geom_boxplot()\nlabs(x=\"Performance rating\", y = \"Percent increase\")\n```\n\n\nWarning: Removed 39 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n$x\n[1] \"Performance rating\"\n\n$y\n[1] \"Percent increase\"\n\nattr(,\"class\")\n[1] \"labels\"\n\n\nPart 1: List at least 5 things that should be fixed or improved in the code.\nPart 2: What is the cause of the warning and what does it mean?"
+  },
+  {
+    "objectID": "exam-review/midterm-review.html#question-15",
+    "href": "exam-review/midterm-review.html#question-15",
+    "title": "Midterm Review",
+    "section": "Question 15",
+    "text": "Question 15\nYou’re working on a data analysis on salaries of Blizzard employees in a Quarto document in a project version controlled by Git. You create a plot and write up a paragraph describing any patterns in it. Then, your teammate says “render, commit, and push”.\nPart 1: What do they mean by each of these three steps. In 1-2 sentences for each, explain in your own words what they mean.\n\nRender:\n\n\nCommit:\n\n\nPush:\n\nPart 2: Your teammate is getting impatient and they interrupt you after you rendered and committed and say “I still can’t see your changes in our shared GitHub repo when I look at it in my web browser.” Which of the following answers is the most accurate?\n\nI rendered my document, you should be seeing my changes on GitHub when you look at it in your web browser.\nI committed my changes, you should be seeing my changes on GitHub when you look at it in your web browser.\nI didn’t yet push my changes, it’s expected that you are not seeing them on GitHub when you look at it in your web browser. Wait until I push, and check again.\nYou need to pull to see my changes on GitHub in the web browser."
+  },
+  {
+    "objectID": "exam-review/midterm-review.html#bonus",
+    "href": "exam-review/midterm-review.html#bonus",
+    "title": "Midterm Review",
+    "section": "Bonus",
+    "text": "Bonus\nPick a concept we introduced in class so far that you’ve been struggling with and explain it in your own words."
+  },
+  {
+    "objectID": "exam-review/midterm-review-A.html",
+    "href": "exam-review/midterm-review-A.html",
+    "title": "Midterm review",
+    "section": "",
+    "text": "b, c, f, g -\n\nThe blizzard_salary dataset has 409 rows.\nThe percent_incr variable is numerical and continuous.\nThe salary_type variable is categorical.\n\nFigure 1 - A shared x-axis makes it easier to compare summary statistics for the variable on the x-axis.\nc - It’s a value higher than the median for hourly but lower than the mean for salaried.\nb - There is more variability around the mean compared to the hourly distribution.\na, b, e - Pie charts and waffle charts are for visualizing distributions of categorical data only. Scatterplots are for visualizing the relationship between two numerical variables.\nc - mutate() is used to create or modify a variable.\na - \"Poor\", \"Successful\", \"High\", \"Top\"\nb - Option 2. The plot in Option 1 shows the number of employees with a given performance rating for each salary type while the plot in Option 2 gives the proportion of employees with a given performance rating for each salary type. In order to assess the relationship between these variables (e.g., how much more likely is a Top rating among Salaried vs. Hourly workers), we need the proportions, not the counts.\nThere may be some NAs in these two variables that are not visible in the plot.\nThe proportions under Hourly would go in the Hourly bar, and those under Salaried would go in the Salaried bar.\nc - filter(salary_type != \"Hourly\" & performance_rating == \"Poor\") - There are 5 observations for “not Hourly” “and” Poor.\na - arrange() - The result is arranged in increasing order of annual_salary, which is the default for arrange().\nc, d, e, f.\nPart 1: The following should be fixed:\n\nThere should be a | after # before label\nThere should be a : after label, not =\nThere shouldn’t be a space in the chunk label, it should be plot-blizzard\nThere should be spaces after commas in the code\nThere should be spaces on both sides of = in the code\nThere should be a space before +\ngeom_boxplot() should be on the next line and indented\nThere should be a + at the end of the geom_boxplot() line\nlabs() should be indented\n\nPart 2: The warning is caused by NA in the data. It means that 39 observations were NAs and are not plotted/represented on the plot.\nPart 1:\n\nRender: Run all of the code and render all of the text in the document and produce an output.\nCommit: Take a snapshot of your changes in Git with an appropriate message.\nPush: Send your changes off to GitHub.\n\nPart 2: c - Rendering or committing isn’t sufficient to send your changes to your GitHub repository, a push is needed. A pull is also not needed to view the changes in the browser."
+  },
+  {
+    "objectID": "course-faq.html",
+    "href": "course-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
+  },
+  {
+    "objectID": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
+    "href": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
+  },
+  {
+    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "title": "FAQ",
+    "section": "How can I submit my assignment to Gradescope?",
+    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions."
+  },
+  {
+    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "title": "FAQ",
+    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
+    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.4.1: https://cran.r-project.org/\nDownload and install RStudio: https://posit.co/download/rstudio-desktop/\nInstall Quarto 1.5.56 or higher: https://quarto.org/docs/get-started/\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here."
+  },
+  {
+    "objectID": "ae.html",
+    "href": "ae.html",
+    "title": "Application exercises",
+    "section": "",
+    "text": "All application exercises (AEs) are due by the end of lecture (or, precisely, by 10:45 am) on the day they’re covered in lecture. To submit your AE, make at least one change to your AE, commit and then push your change to your AE repo. AEs are graded for engagement, not accuracy.\nMore AEs to be added as the semester progresses.\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\nAE 00: UN Votes\n\n\n \n\n\n\n\nAE 01: Meet the penguins\n\n\n \n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Application exercises"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review-A.html",
+    "href": "exam-review/final-review-A.html",
+    "title": "Final review",
+    "section": "",
+    "text": "Take a random sample of size 25, with replacement, from the original sample. Calculate the proportion of students in this simulated sample who work 5 or more hours. Repeat this process 1000 times to build the bootstrap distribution. Take the middle 95% of this distribution to construct a 95% confidence interval for the true proportion of statistics majors who work 5 or more hours.\nThe exact 95% CI is (40%, 80%). Answers reasonably close to the upper and lower bounds would be accepted.\n(e) None of the above. The correct interpretation is “We are 95% confident that 40% to 80% of statistics majors work at least 5 hours per week.”\n(c) For every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.\n$R^2$ of raise_2_fit is higher than $R^2$ of raise_1_fit since raise_2_fit has one more predictor and $R^2$ always\nThe reference level of performance_rating is High, since it’s the first level alphabetically. Therefore, the coefficient -2.40% is the predicted difference in raise comparing High to Successful. In this context a negative coefficient makes sense since we would expect those with High performance rating to get higher raises than those with Successful performance.\n(a) “Poor”, “Successful”, “High”, “Top”.\nOption 3. It’s a linear model with no interaction effect, so parallel lines. And since the slope for salary_typeSalaried is positive, its intercept is higher. The equations of the lines are as follows:\n\nHourly:\n\\[\n\\begin{align*}\n\\widehat{percent\\_incr} &= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 salary\\_typeSalaried \\\\\n&= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 \\times 0 \\\\\n&= 1.24 + 0.0000137 \\times annual\\_salary\n\\end{align*}\n\\]\nSalaried:\n\\[\n\\begin{align*}\n\\widehat{percent\\_incr} &= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 salary\\_typeSalaried \\\\\n&= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 \\times 1 \\\\\n&= 2.153 + 0.0000137 \\times annual\\_salary\n\\end{align*}\n\\]\n\nA parsimonious model is the simplest model with the best predictive performance.\n(c) The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\\/(a) and (d).\n(a) and (d).\n(c) We are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550."
   },
   {
     "objectID": "exam-review/final-review.html",
@@ -5883,187 +6020,50 @@
     "text": "Bonus\nPick a concept we introduced in class so far that you’ve been struggling with and explain it in your own words."
   },
   {
-    "objectID": "exam-review/final-review-A.html",
-    "href": "exam-review/final-review-A.html",
-    "title": "Final review",
+    "objectID": "ae/ae-00-unvotes.html",
+    "href": "ae/ae-00-unvotes.html",
+    "title": "AE 00: UN Votes",
     "section": "",
-    "text": "Take a random sample of size 25, with replacement, from the original sample. Calculate the proportion of students in this simulated sample who work 5 or more hours. Repeat this process 1000 times to build the bootstrap distribution. Take the middle 95% of this distribution to construct a 95% confidence interval for the true proportion of statistics majors who work 5 or more hours.\nThe exact 95% CI is (40%, 80%). Answers reasonably close to the upper and lower bounds would be accepted.\n(e) None of the above. The correct interpretation is “We are 95% confident that 40% to 80% of statistics majors work at least 5 hours per week.”\n(c) For every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.\n$R^2$ of raise_2_fit is higher than $R^2$ of raise_1_fit since raise_2_fit has one more predictor and $R^2$ always\nThe reference level of performance_rating is High, since it’s the first level alphabetically. Therefore, the coefficient -2.40% is the predicted difference in raise comparing High to Successful. In this context a negative coefficient makes sense since we would expect those with High performance rating to get higher raises than those with Successful performance.\n(a) “Poor”, “Successful”, “High”, “Top”.\nOption 3. It’s a linear model with no interaction effect, so parallel lines. And since the slope for salary_typeSalaried is positive, its intercept is higher. The equations of the lines are as follows:\n\nHourly:\n\\[\n\\begin{align*}\n\\widehat{percent\\_incr} &= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 salary\\_typeSalaried \\\\\n&= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 \\times 0 \\\\\n&= 1.24 + 0.0000137 \\times annual\\_salary\n\\end{align*}\n\\]\nSalaried:\n\\[\n\\begin{align*}\n\\widehat{percent\\_incr} &= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 salary\\_typeSalaried \\\\\n&= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 \\times 1 \\\\\n&= 2.153 + 0.0000137 \\times annual\\_salary\n\\end{align*}\n\\]\n\nA parsimonious model is the simplest model with the best predictive performance.\n(c) The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\\/(a) and (d).\n(a) and (d).\n(c) We are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550."
+    "text": "How do various countries vote in the United Nations General Assembly, how have their voting patterns evolved throughout time, and how similarly or differently do they view certain issues? Answering these questions (at a high level) is the focus of this analysis.\n\nWe will use the tidyverse, lubridate, and scales packages for data wrangling and visualization, and the DT package for interactive display of tabular output, and the unvotes package for the data.\n\n\n\n\n\n\n\n\n\nThe data we’re using originally come from the unvotes package. In the chunk below we modify the data by joining the various data frames provided in the package to help you get started with the analysis."
   },
   {
-    "objectID": "ae.html",
-    "href": "ae.html",
-    "title": "Application exercises",
+    "objectID": "ae/ae-00-unvotes.html#introduction",
+    "href": "ae/ae-00-unvotes.html#introduction",
+    "title": "AE 00: UN Votes",
     "section": "",
-    "text": "All application exercises (AEs) are due by the end of lecture (or, precisely, by 10:45 am) on the day they’re covered in lecture. To submit your AE, make at least one change to your AE, commit and then push your change to your AE repo. AEs are graded for engagement, not accuracy.\nMore AEs to be added as the semester progresses.\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\nAE 00: UN Votes\n\n\n \n\n\n\n\nAE 01: Meet the penguins\n\n\n \n\n\n\n\n\nNo matching items",
+    "text": "How do various countries vote in the United Nations General Assembly, how have their voting patterns evolved throughout time, and how similarly or differently do they view certain issues? Answering these questions (at a high level) is the focus of this analysis.\n\nWe will use the tidyverse, lubridate, and scales packages for data wrangling and visualization, and the DT package for interactive display of tabular output, and the unvotes package for the data.\n\n\n\n\n\n\n\n\n\nThe data we’re using originally come from the unvotes package. In the chunk below we modify the data by joining the various data frames provided in the package to help you get started with the analysis."
+  },
+  {
+    "objectID": "ae/ae-00-unvotes.html#un-voting-patterns",
+    "href": "ae/ae-00-unvotes.html#un-voting-patterns",
+    "title": "AE 00: UN Votes",
+    "section": "UN voting patterns",
+    "text": "UN voting patterns\nLet’s create a data visualisation that displays how the voting record of the United States, United Kingdom, and Turkey changed over time.\n\n\n\n\n\n\n\n\n\nTask: Write your first piece of (R) code!\n\nModify the code cell above to change the plot to include a different country in place of Turkey. Note that the country name should be spelled and capitalized exactly the same way as it appears in the data. See the Appendix for a list of the countries in the data."
+  },
+  {
+    "objectID": "ae/ae-00-unvotes.html#references",
+    "href": "ae/ae-00-unvotes.html#references",
+    "title": "AE 00: UN Votes",
+    "section": "References",
+    "text": "References\n\nRobinson D (2021). unvotes: United Nations General Assembly Voting Data. R package version 0.3.0, https://github.com/dgrtwo/unvotes.\nErik Voeten “Data and Analyses of Voting in the UN General Assembly” Routledge Handbook of International Organization, edited by Bob Reinalda (published May 27, 2013).\nMuch of the analysis has been modeled on the examples presented in the unvotes package vignette."
+  },
+  {
+    "objectID": "ae/ae-00-unvotes.html#appendix",
+    "href": "ae/ae-00-unvotes.html#appendix",
+    "title": "AE 00: UN Votes",
+    "section": "Appendix",
+    "text": "Appendix\nBelow is a list of countries in the dataset:"
+  },
+  {
+    "objectID": "computing-troubleshooting.html",
+    "href": "computing-troubleshooting.html",
+    "title": "Computing troubleshooting",
+    "section": "",
+    "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the Ed Discussions to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. If you’re still having trouble, follow the steps in the order given below:\n\nRestart your browser.\nMake sure there are no updates pending for your browser. If there are, install those updates and restart your browser again.\nRequest a restart of your container – To do so, select your container as you usually do and then, instead of Login, click on Request Restart. Read the warning in the next page, and then click once more to restart your container.\nClear your browser cache and restart your browser again.\nRestart your computer to ensure a fresh new connection.\nIf your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).",
     "crumbs": [
-      "Application exercises"
+      "Computing",
+      "Troubleshooting"
     ]
-  },
-  {
-    "objectID": "course-faq.html",
-    "href": "course-faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
-  },
-  {
-    "objectID": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
-    "href": "course-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
-    "title": "FAQ",
-    "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
-  },
-  {
-    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "title": "FAQ",
-    "section": "How can I submit my assignment to Gradescope?",
-    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions."
-  },
-  {
-    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
-    "title": "FAQ",
-    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
-    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.4.1: https://cran.r-project.org/\nDownload and install RStudio: https://posit.co/download/rstudio-desktop/\nInstall Quarto 1.5.56 or higher: https://quarto.org/docs/get-started/\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here."
-  },
-  {
-    "objectID": "exam-review/midterm-review-A.html",
-    "href": "exam-review/midterm-review-A.html",
-    "title": "Midterm review",
-    "section": "",
-    "text": "b, c, f, g -\n\nThe blizzard_salary dataset has 409 rows.\nThe percent_incr variable is numerical and continuous.\nThe salary_type variable is categorical.\n\nFigure 1 - A shared x-axis makes it easier to compare summary statistics for the variable on the x-axis.\nc - It’s a value higher than the median for hourly but lower than the mean for salaried.\nb - There is more variability around the mean compared to the hourly distribution.\na, b, e - Pie charts and waffle charts are for visualizing distributions of categorical data only. Scatterplots are for visualizing the relationship between two numerical variables.\nc - mutate() is used to create or modify a variable.\na - \"Poor\", \"Successful\", \"High\", \"Top\"\nb - Option 2. The plot in Option 1 shows the number of employees with a given performance rating for each salary type while the plot in Option 2 gives the proportion of employees with a given performance rating for each salary type. In order to assess the relationship between these variables (e.g., how much more likely is a Top rating among Salaried vs. Hourly workers), we need the proportions, not the counts.\nThere may be some NAs in these two variables that are not visible in the plot.\nThe proportions under Hourly would go in the Hourly bar, and those under Salaried would go in the Salaried bar.\nc - filter(salary_type != \"Hourly\" & performance_rating == \"Poor\") - There are 5 observations for “not Hourly” “and” Poor.\na - arrange() - The result is arranged in increasing order of annual_salary, which is the default for arrange().\nc, d, e, f.\nPart 1: The following should be fixed:\n\nThere should be a | after # before label\nThere should be a : after label, not =\nThere shouldn’t be a space in the chunk label, it should be plot-blizzard\nThere should be spaces after commas in the code\nThere should be spaces on both sides of = in the code\nThere should be a space before +\ngeom_boxplot() should be on the next line and indented\nThere should be a + at the end of the geom_boxplot() line\nlabs() should be indented\n\nPart 2: The warning is caused by NA in the data. It means that 39 observations were NAs and are not plotted/represented on the plot.\nPart 1:\n\nRender: Run all of the code and render all of the text in the document and produce an output.\nCommit: Take a snapshot of your changes in Git with an appropriate message.\nPush: Send your changes off to GitHub.\n\nPart 2: c - Rendering or committing isn’t sufficient to send your changes to your GitHub repository, a push is needed. A pull is also not needed to view the changes in the browser."
-  },
-  {
-    "objectID": "exam-review/midterm-review.html",
-    "href": "exam-review/midterm-review.html",
-    "title": "Midterm Review",
-    "section": "",
-    "text": "Note\n\n\n\nSuggested answers can be found here, but resist the urge to peek before you go through it yourself.\nIn 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation. (Source: Blizzard Workers Share Salaries in Revolt Over Pay)\nThe name of the data frame used for this analysis is blizzard_salary and the variables are:\nThe top ten rows of blizzard_salary are shown below:\n# A tibble: 409 × 4\n   percent_incr salary_type annual_salary performance_rating\n          &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             \n 1          1   Salaried               1  High              \n 2          1   Salaried               1  Successful        \n 3          1   Salaried               1  High              \n 4          1   Hourly             33987. Successful        \n 5         NA   Hourly             34798. High              \n 6         NA   Hourly             35360  &lt;NA&gt;              \n 7         NA   Hourly             37440  &lt;NA&gt;              \n 8          0   Hourly             37814. &lt;NA&gt;              \n 9          4   Hourly             41101. Top               \n10          1.2 Hourly             42328  &lt;NA&gt;              \n# ℹ 399 more rows"
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#question-1",
-    "href": "exam-review/midterm-review.html#question-1",
-    "title": "Midterm Review",
-    "section": "Question 1",
-    "text": "Question 1\nWhich of the following is correct? Choose all that apply.\n\nThe blizzard_salary dataset has 399 rows.\nThe blizzard_salary dataset has 4 columns.\nEach row represents a Blizzard Entertainment worker who filled out the spreadsheet.\nThe percent_incr variable is numerical and discrete.\nThe salary_type variable is numerical.\nThe annual_salary variable is numerical.\nThe performance_rating variable is categorical and ordinal."
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#question-2",
-    "href": "exam-review/midterm-review.html#question-2",
-    "title": "Midterm Review",
-    "section": "Question 2",
-    "text": "Question 2\nFigure 1 (a) and Figure 1 (b) show the distributions of annual salaries of hourly and salaried workers. The two figures show the same data, with the facets organized across rows and across columns. Which of the two figures is better for comparing the median annual salaries of hourly and salaried workers. Explain your reasoning.\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\nFigure 1: Distribution of annual salaries of Blizzard employees"
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#question-3",
-    "href": "exam-review/midterm-review.html#question-3",
-    "title": "Midterm Review",
-    "section": "Question 3",
-    "text": "Question 3\nSuppose your teammate wrote the following code as part of their analysis of the data.\nThey then printed out the results shown below. Unfortunately one of the numbers got erased from the printout. It’s indicated with _____ below.\n# A tibble: 2 × 3\n  salary_type mean_annual_salary median_annual_salary\n  &lt;chr&gt;                    &lt;dbl&gt;                &lt;dbl&gt;\n1 Hourly                  63003.               54246.\n2 Salaried                90183.               _____\nWhich of the following is the best estimate for that erased value?\n\n30,000\n50,000\n80,000\n100,000"
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#question-4",
-    "href": "exam-review/midterm-review.html#question-4",
-    "title": "Midterm Review",
-    "section": "Question 4",
-    "text": "Question 4\nWhich distribution of annual salaries has a higher standard deviation?\n\nHourly workers\nSalaried workers\nRoughly the same"
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#question-5",
-    "href": "exam-review/midterm-review.html#question-5",
-    "title": "Midterm Review",
-    "section": "Question 5",
-    "text": "Question 5\nWhich of the following alternate plots would also be useful for visualizing the distributions of annual salaries of hourly and salaried workers? Choose all that apply.\na. Box plots\nb. Density plots\nc. Pie charts\nd. Waffle charts\ne. Histograms\nf. Scatterplots"
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#questions-6-and-7",
-    "href": "exam-review/midterm-review.html#questions-6-and-7",
-    "title": "Midterm Review",
-    "section": "Questions 6 and 7",
-    "text": "Questions 6 and 7\nSuppose you made the bar plot shown in Figure 2 (a) to visualize the distribution of performance_rating and your teammate made the bar plot shown in Figure 2 (b).\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\nFigure 2: Distribution of performance rating\n\n\nYou made your bar plot without transforming the data in any way, while your friend did first transform the data with code like the following:\n\nblizzard_salary &lt;- blizzard_salary |&gt;\n  _(1)_(performance_rating = fct_relevel(performance_rating, _(2)_))\n\nQuestion 6: What goes in the blank (1)?\n\narrange()\nfilter()\nmutate()\nsummarize()\n\nQuestion 7: What goes in the blank (2)?\n\n\"Poor\", \"Successful\", \"High\", \"Top\"\n\"Successful\", \"High\", \"Top\"\n\"Top\", \"High\", \"Successful\", \"Poor\"\nPoor, Successful, High, Top"
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#questions-8---10",
-    "href": "exam-review/midterm-review.html#questions-8---10",
-    "title": "Midterm Review",
-    "section": "Questions 8 - 10",
-    "text": "Questions 8 - 10\nFinally, another teammate creates the following two plots.\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\nFigure 3: Distribution of salary type by performance rating\n\n\nQuestion 8: Your teammate asks you for help deciding which one to use in the final report for visualizing the relationship between performance rating and salary type. In 1-3 sentences, can you help them make a decision, justify your choice, and write the narrative that should go with the plot?\nQuestion 9: A friend with a keen eye points out that the number of observations in Figure 3 (a) seems lower than the total number of observations in blizzard_salary. What might be going on here? Explain your reasoning.\nQuestion 10: Below are the proportions of performance ratings for hourly and salaried workers. Place these values in the corresponding segments in Figure 3 (b).\n\n\n# A tibble: 4 × 3\n  performance_rating Hourly Salaried\n  &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;\n1 High                0.2     0.384 \n2 Successful          0.686   0.521 \n3 Top                 0.114   0.0760\n4 Poor                0       0.0190"
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#questions-11-and-12",
-    "href": "exam-review/midterm-review.html#questions-11-and-12",
-    "title": "Midterm Review",
-    "section": "Questions 11 and 12",
-    "text": "Questions 11 and 12\nThe table below shows the distribution of salary_type and performance_rating.\n\n\n# A tibble: 2 × 6\n  salary_type  Poor Successful  High   Top  `NA`\n  &lt;chr&gt;       &lt;int&gt;      &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;\n1 Hourly         NA         24     7     4    28\n2 Salaried        5        137   101    20    83\n\n\nThe pipeline below produces a data frame with a fewer number of rows than blizzard_salary.\n\nblizzard_salary |&gt;\n  filter(salary_type _(1)_ \"Hourly\" _(2)_ performance_rating == \"Poor\") |&gt;\n  _(3)_(annual_salary)\n\n\n\n# A tibble: 5 × 4\n  percent_incr salary_type annual_salary performance_rating\n         &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             \n1            0 Salaried            80000 Poor              \n2            3 Salaried            83000 Poor              \n3            0 Salaried           116000 Poor              \n4            0 Salaried           135219 Poor              \n5            0 Salaried           147500 Poor              \n\n\nQuestion 11: Which of the following goes in blanks (1) and (2)?\n\n\n\n(1)\n(2)\n\n\n\na.\n!=\n|\n\n\nb.\n==\n&\n\n\nc.\n!=\n&\n\n\nd.\n==\n|\n\n\n\nQuestion 12: Which function or functions go into blank (3)?\n\narrange()\nmutate()\norder()\nsort()"
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#question-13",
-    "href": "exam-review/midterm-review.html#question-13",
-    "title": "Midterm Review",
-    "section": "Question 13",
-    "text": "Question 13\nYou’re reviewing another team’s work and they made the following visualization:\n\n\n\n\n\n\n\n\nAnd they wrote the following interpretation for the relationship between annual salary and percent increase for Top performers:\n\nThe relationship is positive, having a higher salary results in a higher percent increase. There is one clear outlier.\n\nWhich of the following is/are the most accurate and helpful) peer review note for this interpretation. Choose all that apply.\n\nThe interpretation is complete and perfect, no changes needed!\nThe interpretation doesn’t mention the direction of the relationship.\nThe interpretation doesn’t mention the form of the relationship, which is linear.\nThe interpretation doesn’t mention the strength of the relationship, which is somewhat strong.\nThere isn’t a clear outlier in the plot. If any points stand out as potential outliers, more guidance should be given to the reader to identify them (e.g., salary and/or percent increase amount).\nThe interpretation is causal – we don’t know if the cause of the high percent increase is higher annual salary based on observational data. The causal direction might be the other way around, or there may be other factors contributing to the apparent relationship."
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#question-14",
-    "href": "exam-review/midterm-review.html#question-14",
-    "title": "Midterm Review",
-    "section": "Question 14",
-    "text": "Question 14\nBelow is some code and its output.\n```{r}\n# label=plot blizzard\n\nggplot(blizzard_salary,aes(x=performance_rating,y=percent_incr))+geom_boxplot()\nlabs(x=\"Performance rating\", y = \"Percent increase\")\n```\n\n\nWarning: Removed 39 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n$x\n[1] \"Performance rating\"\n\n$y\n[1] \"Percent increase\"\n\nattr(,\"class\")\n[1] \"labels\"\n\n\nPart 1: List at least 5 things that should be fixed or improved in the code.\nPart 2: What is the cause of the warning and what does it mean?"
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#question-15",
-    "href": "exam-review/midterm-review.html#question-15",
-    "title": "Midterm Review",
-    "section": "Question 15",
-    "text": "Question 15\nYou’re working on a data analysis on salaries of Blizzard employees in a Quarto document in a project version controlled by Git. You create a plot and write up a paragraph describing any patterns in it. Then, your teammate says “render, commit, and push”.\nPart 1: What do they mean by each of these three steps. In 1-2 sentences for each, explain in your own words what they mean.\n\nRender:\n\n\nCommit:\n\n\nPush:\n\nPart 2: Your teammate is getting impatient and they interrupt you after you rendered and committed and say “I still can’t see your changes in our shared GitHub repo when I look at it in my web browser.” Which of the following answers is the most accurate?\n\nI rendered my document, you should be seeing my changes on GitHub when you look at it in your web browser.\nI committed my changes, you should be seeing my changes on GitHub when you look at it in your web browser.\nI didn’t yet push my changes, it’s expected that you are not seeing them on GitHub when you look at it in your web browser. Wait until I push, and check again.\nYou need to pull to see my changes on GitHub in the web browser."
-  },
-  {
-    "objectID": "exam-review/midterm-review.html#bonus",
-    "href": "exam-review/midterm-review.html#bonus",
-    "title": "Midterm Review",
-    "section": "Bonus",
-    "text": "Bonus\nPick a concept we introduced in class so far that you’ve been struggling with and explain it in your own words."
-  },
-  {
-    "objectID": "course-team.html",
-    "href": "course-team.html",
-    "title": "Teaching team",
-    "section": "",
-    "text": "Marie Neubrander is a second year Ph.D. student in the Department of Statistical Science at Duke University. Marie’s research is focused on developing causal inference methods for text data with various applications in the social sciences.",
-    "crumbs": [
-      "Course information",
-      "Team"
-    ]
-  },
-  {
-    "objectID": "course-team.html#instructor",
-    "href": "course-team.html#instructor",
-    "title": "Teaching team",
-    "section": "",
-    "text": "Marie Neubrander is a second year Ph.D. student in the Department of Statistical Science at Duke University. Marie’s research is focused on developing causal inference methods for text data with various applications in the social sciences.",
-    "crumbs": [
-      "Course information",
-      "Team"
-    ]
-  },
-  {
-    "objectID": "course-team.html#lab-instructor-course-coordinator",
-    "href": "course-team.html#lab-instructor-course-coordinator",
-    "title": "Teaching team",
-    "section": "Lab Instructor & Course Coordinator",
-    "text": "Lab Instructor & Course Coordinator\n\nDr. Mary Knox (she/her) is the course coordinator for this course.\nYou can contact her (at mary.knox@duke.edu) with any questions regarding accommodations, missed work, extensions, registration, etc.",
-    "crumbs": [
-      "Course information",
-      "Team"
-    ]
-  },
-  {
-    "objectID": "ae/ae-01-meet-the-penguins.html",
-    "href": "ae/ae-01-meet-the-penguins.html",
-    "title": "AE 01: Meet the penguins",
-    "section": "",
-    "text": "For this application exercise, we’ll use the tidyverse and palmerpenguins packages.\n\nlibrary(tidyverse)\n\nWarning: package 'ggplot2' was built under R version 4.4.1\n\n\nWarning: package 'tidyr' was built under R version 4.4.1\n\n\nWarning: package 'purrr' was built under R version 4.4.1\n\n\nWarning: package 'lubridate' was built under R version 4.4.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\nWarning: package 'palmerpenguins' was built under R version 4.4.1\n\n\nThe dataset we will visualize is called penguins. Let’s glimpse() at it.\n\n\nYour turn: Replace #add code here with the code for “glimpse”ing at the data penguins data frame – glimpse(penguins). Render the document and view the output.\n\n\n# add code here\n\n\n\nDemo: First, replace the blank below with the number of rows in the penguins data frame based on the output of the chunk below. Then, replace it with “inline code” and render again.\n\n\nnrow(penguins)\n\n[1] 344\n\n\nThere are ___ penguins in the penguins data frame."
   },
   {
     "objectID": "computing-access.html",
