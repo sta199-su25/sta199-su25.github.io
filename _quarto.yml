@@ -18,7 +18,7 @@ website:
   draft-mode: unlinked
 
   sidebar:
-    background: "#f0bde9"
+    background: "#bfd9d5"
     logo: "img/logo.png"
     pinned: true
     align: center

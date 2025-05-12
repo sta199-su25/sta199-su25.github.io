@@ -30,8 +30,8 @@ d_display <- d |>
   mutate(date = as.Date(date)) |>
   mutate(
     highlight_color = case_when(
-      session == "exam" ~ "#fcc5f7",   # light yellow
-      session == "NC" ~ "#b6fccb",     # light gray
+      session == "exam" ~ "#f45ca4",   # light yellow
+      session == "NC" ~ "#ffd561",     # light gray
       session == "Lab" ~ "#f3e6f9",    # lab marker, used for text color only
       TRUE ~ NA_character_
     )#,
@@ -95,13 +95,13 @@ d_display_clean |>
   ) |>
   # Highlight: exam (yellow)
   tab_style(
-    style = cell_fill(color = "#fcc5f7"),
-    locations = cells_body(rows = d_display$highlight_color == "#fcc5f7")
+    style = cell_fill(color = "#f45ca4"),
+    locations = cells_body(rows = d_display$highlight_color == "#f45ca4")
   ) |>
   # Highlight: no class (gray)
   tab_style(
-    style = cell_fill(color = "#b6fccb"),
-    locations = cells_body(rows = d_display$highlight_color == "#b6fccb")
+    style = cell_fill(color = "#ffd561"),
+    locations = cells_body(rows = d_display$highlight_color == "#ffd561")
   ) |>
   # LAB: purple bold text only (no background!)
   tab_style(
