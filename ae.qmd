@@ -10,9 +10,11 @@ listing:
   fields: [title, subtitle]
 ---
 
-All application exercises (AEs) are due by the end of lecture (or, precisely, by 2 pm) on the day they're covered in lecture.
+All application exercises (AEs) are due by the end of lecture (or, precisely, by 10:45 am) on the day they're covered in lecture.
 To submit your AE, make at least one change to your AE, **commit and then push** your change to your AE repo.
 AEs are graded for engagement, not accuracy.
+
+More AEs to be added as the semester progresses.
 
 <br>
 
@@ -20,5 +22,3 @@ AEs are graded for engagement, not accuracy.
 :::
 
 <br>
-
-More AEs to be added as the semester progresses.

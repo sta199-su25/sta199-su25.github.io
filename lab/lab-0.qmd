@@ -1,7 +1,7 @@
 ---
 title: "Lab 0"
 subtitle: "Hello, World and STA 199!"
-description: "End of lab on Mon, Aug 26"
+description: "End of lab on May 15"
 categories: "Lab"
 execute:
   eval: false
@@ -12,7 +12,7 @@ This lab will set you up for the computing workflow and give you an opportunity 
 # `Hello, World!`
 
 You may have heard/seen this phrase, `Hello, World!`, elsewhere before.
-It's usually the first thing you learn in programming – to learn to write a computer program to print this sentence to screen.
+It's usually the first thing you learn in programming -- to learn to write a computer program to print this sentence to screen.
 Things will be different in this course, as it's not a programming, but a data science course.
 So, starting tomorrow in class, you'll learn to use a computer program (called R) to work with data.
 
@@ -66,26 +66,12 @@ To launch your container click on it under My reservations, then click *Login*, 
 
 ## Create a GitHub account
 
-Go to <https://github.com/> and walk through the steps for creating an account.
-You do not have to use your Duke email address, but I recommend doing so.[^2]
-
-[^2]: GitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.
-
-::: callout-note
-You'll need to choose a user name.
-I recommend reviewing the user name advice at <https://happygitwithr.com/github-acct#username-advice> before choosing a username.
-:::
-
-::: {.callout-important collapse="true"}
-## What if I already have a GitHub account?
-
-If you already have a GitHub account, you do not need to create a new one for this course.
-Just log in to that account to make sure you still remember your username and password.
-:::
+You should have already done this yesterday during class!
+Go ahead and check to make sure you remember what email address you used with your GitHub account.
 
 ## Set up your SSH key
 
-You will authenticate GitHub using SSH (Secure Shell Protocol – it doesn't really matter what this means for the purpose of this course).
+You will authenticate GitHub using SSH (Secure Shell Protocol -- it doesn't really matter what this means for the purpose of this course).
 Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.
 
 ::: callout-note
@@ -108,7 +94,7 @@ This requires two pieces of information: your name and email address.
 To do so, you will use the `use_git_config()` function from the `usethis` package.
 
 ::: callout-note
-You'll hear about 📦 packages a lot in the context of R – basically they're how developers write functions and bundle them to distribute to the community (and more on this later too!).
+You'll hear about 📦 packages a lot in the context of R -- basically they're how developers write functions and bundle them to distribute to the community (and more on this later too!).
 :::
 
 Type the following lines of code in the **console** in RStudio filling in your name and the address associated with your GitHub account.
@@ -124,14 +110,14 @@ For example, mine would be
 
 ```{r}
 usethis::use_git_config(
-  user.name = "Mine Çetinkaya-Rundel", 
-  user.email = "cetinkaya.mine@gmail.com"
+  user.name = "Marie Meubrander", 
+  user.email = "mneubrander@crimson.ua.edu"
 )
 ```
 
 ::: callout-note
-I used my gmail because that is the one I used to create my GitHub account.
-You should also be using the email address you used to create your GitHub account, it's ok if it isn't your Duke email.
+I used my Alabama email because that is the one I used to create my GitHub account.
+You should also be using the email address you used to create your GitHub account, even if it isn't your Duke email.
 :::
 
 You are now ready interact with GitHub via RStudio!
@@ -153,6 +139,6 @@ The following video walks you through the steps outlined in the SSH key generati
 
 # Hello STA 199!
 
-Fill out the course "Getting to know you" survey on Canvas: <https://canvas.duke.edu/courses/39994/quizzes/25798>.
+Fill out the course "Getting to know you" [survey](https://canvas.duke.edu/courses/56756/quizzes/35368) on Canvas.
 
 We will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns.

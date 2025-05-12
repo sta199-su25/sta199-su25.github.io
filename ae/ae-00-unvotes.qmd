@@ -82,9 +82,9 @@ unvotes |>
 ```
 
 ::: {style="border-left:3px solid #BCF4F5; padding: 0.5em;background: #BCF4F550;"}
-**Task:** Write your first piece of (R) code! 
+**Task:** Write your first piece of (R) code!
 
----
+------------------------------------------------------------------------
 
 Modify the code cell above to change the plot to include a different country in place of Turkey.
 Note that the country name should be spelled and capitalized exactly the same way as it appears in the data.
@@ -93,7 +93,7 @@ See the [Appendix](#appendix) for a list of the countries in the data.
 
 ## References
 
-1.  Robinson D (2021). _unvotes: United Nations General Assembly Voting Data_. R package version 0.3.0, <https://github.com/dgrtwo/unvotes>.
+1.  Robinson D (2021). *unvotes: United Nations General Assembly Voting Data*. R package version 0.3.0, <https://github.com/dgrtwo/unvotes>.
 2.  Erik Voeten "Data and Analyses of Voting in the UN General Assembly" Routledge Handbook of International Organization, edited by Bob Reinalda (published May 27, 2013).
 3.  Much of the analysis has been modeled on the examples presented in the [unvotes package vignette](https://cran.r-project.org/web/packages/unvotes/vignettes/unvotes.html).
 

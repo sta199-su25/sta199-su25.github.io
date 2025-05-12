@@ -1,11 +1,5 @@
 ---
 title: "Exam reviews"
-listing:
-  contents: exam-review
-  sort: [title, subtitle]
-  sort-ui: false
-  filter-ui: false
-  type: table
-  fields: [title, subtitle]
 ---
 
+Exam reviews and practice questions will be posted here closer to the midterm and final!
