@@ -65,14 +65,12 @@ website:
     left: "&copy; Copyright 2025, Mine Çetinkaya-Rundel, Marie Neubrander"
     background: "#121940"
 
-format: 
+format:
   html:
-    mainfont: Roboto
-    highlight-style: a11y-light
+    theme: cosmo
+    css:
+      - style/sta199.scss
 
-theme:
-  light: [cosmo, style/sta199.scss]
-  dark: [cosmo, style/sta199.scss, style/dark.scss]
 linkcolor: "#5D737E"
 toc: true
 code-copy: hover

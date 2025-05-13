@@ -1,0 +1,46 @@
+---
+title: "Welcome to STA 199!"
+subtitle: "Lecture 0"
+date: "2025-01-09"
+format: revealjs
+auto-stretch: false
+---
+
+```{r}
+#| echo: false 
+#| message: false 
+#| warning: false
+library(tidyverse)
+```
+
+## Statistical lessons
+
+-   **Domain knowledge and modeling assumptions**: data do not speak for themselves. You need some subject-matter expertise about what you're studying, as well as an interpretive lens;
+-   Are you asking questions the data can actually answer?
+-   Uncertainty has many sources, and in some cases, it may be simply irreducible, no matter how hard you try;
+-   **Data quality and data cleaning**: Data are not gospel. There could be noise and mistakes. Then what?
+-   **Wisdom of crowds**: aggregating many imperfect guesses can do better than any one individual guess.
+
+## Hard skills
+
+-   GitHub repositories: cloning and pulling;
+-   Working with data in CSV format;
+-   Rendering a Quarto document to get PDFs that seamlessly integrate written text, code, and output;
+-   Using `ggplot` to build up visualizations in layers, like a cake.
+
+::: callout-note
+## Get ready
+
+You will do all of these things on a weekly basis in this course.
+:::
+
+# Wrap up
+
+## This week's tasks
+
+-   Complete Lab 0
+    -   Computational setup
+    -   Getting to know you survey
+-   Read the syllabus and ask questions on Ed
+-   Complete readings and videos for next class
+-   Accept your invitation to the GitHub organization pronto!
