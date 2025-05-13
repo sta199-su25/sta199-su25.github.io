@@ -105,7 +105,7 @@ d_display_clean |>
   ) |>
   # LAB: purple bold text only (no background!)
   tab_style(
-  style = cell_text(color = "#8000ff", weight = "bold"),
+  style = cell_text(color = "#8000fd", weight = "bold"),
   locations = cells_body(
     columns = c(topic, prepare, materials),
     rows = d_display$highlight_color == "#f3e6f9"
