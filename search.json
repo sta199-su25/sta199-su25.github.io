@@ -154,46 +154,46 @@
     ]
   },
   {
-    "objectID": "ae/ae-00-unvotes.html",
-    "href": "ae/ae-00-unvotes.html",
-    "title": "AE 00: UN Votes",
+    "objectID": "ae/ae-00-github.html",
+    "href": "ae/ae-00-github.html",
+    "title": "AE 00: Make a Github",
     "section": "",
-    "text": "How do various countries vote in the United Nations General Assembly, how have their voting patterns evolved throughout time, and how similarly or differently do they view certain issues? Answering these questions (at a high level) is the focus of this analysis.\n\nWe will use the tidyverse, lubridate, and scales packages for data wrangling and visualization, and the DT package for interactive display of tabular output, and the unvotes package for the data.\n\n\n\n\n\n\n\n\n\nThe data we’re using originally come from the unvotes package. In the chunk below we modify the data by joining the various data frames provided in the package to help you get started with the analysis."
+    "text": "Normally, these AEs will contain coding practice assignments. However, before you’re able to start coding, you will need a Github account.\nIn tomorrow’s lecture (and throughout the rest of the class), you will learn more about how GitHub works. For now, understand that GitHub is like the Google Drive of coding. You can upload files, track changes over time, and work with others without overwriting each other's work.\nIn this class, we will have a GitHub organization so that:\n\nEveryone has a central place to both access and work on course materials (AEs, labs, project, etc.)\nWe can see your progress, give help, and review changes over time.\nYou learn to use tools that are standard in data science, research, and industry.\n\nIf you’ve never coded before, it might not be clear why we need something specialized and can’t just use a Google Drive (or Box, or iCloud, or similar). I think that this becomes more clear as you dive into coding, but the long story very short is that you aren’t typing code into a word document. You’re using and running special code files, and normal drives are not properly equipped to handle these."
   },
   {
-    "objectID": "ae/ae-00-unvotes.html#introduction",
-    "href": "ae/ae-00-unvotes.html#introduction",
-    "title": "AE 00: UN Votes",
+    "objectID": "ae/ae-00-github.html#introduction",
+    "href": "ae/ae-00-github.html#introduction",
+    "title": "AE 00: Make a Github",
     "section": "",
-    "text": "How do various countries vote in the United Nations General Assembly, how have their voting patterns evolved throughout time, and how similarly or differently do they view certain issues? Answering these questions (at a high level) is the focus of this analysis.\n\nWe will use the tidyverse, lubridate, and scales packages for data wrangling and visualization, and the DT package for interactive display of tabular output, and the unvotes package for the data.\n\n\n\n\n\n\n\n\n\nThe data we’re using originally come from the unvotes package. In the chunk below we modify the data by joining the various data frames provided in the package to help you get started with the analysis."
+    "text": "Normally, these AEs will contain coding practice assignments. However, before you’re able to start coding, you will need a Github account.\nIn tomorrow’s lecture (and throughout the rest of the class), you will learn more about how GitHub works. For now, understand that GitHub is like the Google Drive of coding. You can upload files, track changes over time, and work with others without overwriting each other's work.\nIn this class, we will have a GitHub organization so that:\n\nEveryone has a central place to both access and work on course materials (AEs, labs, project, etc.)\nWe can see your progress, give help, and review changes over time.\nYou learn to use tools that are standard in data science, research, and industry.\n\nIf you’ve never coded before, it might not be clear why we need something specialized and can’t just use a Google Drive (or Box, or iCloud, or similar). I think that this becomes more clear as you dive into coding, but the long story very short is that you aren’t typing code into a word document. You’re using and running special code files, and normal drives are not properly equipped to handle these."
   },
   {
-    "objectID": "ae/ae-00-unvotes.html#un-voting-patterns",
-    "href": "ae/ae-00-unvotes.html#un-voting-patterns",
-    "title": "AE 00: UN Votes",
-    "section": "UN voting patterns",
-    "text": "UN voting patterns\nLet’s create a data visualisation that displays how the voting record of the United States, United Kingdom, and Turkey changed over time.\n\n\n\n\n\n\n\n\n\nTask: Write your first piece of (R) code!\n\nModify the code cell above to change the plot to include a different country in place of Turkey. Note that the country name should be spelled and capitalized exactly the same way as it appears in the data. See the Appendix for a list of the countries in the data."
+    "objectID": "ae/ae-00-github.html#create-a-github-account",
+    "href": "ae/ae-00-github.html#create-a-github-account",
+    "title": "AE 00: Make a Github",
+    "section": "Create a GitHub account",
+    "text": "Create a GitHub account\nTomorrow, we will give a more detailed introduction to using GitHub. But, in order for you to access the course organization, you need an account, and we need to add your username to the list of users with access.\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.1\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nWhat if I already have a GitHub account?\n\n\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password. If you are unsure of your login credentials, carefully follow GitHub’s instructions for recovering this information. If you accumulate too many failed login attempts, you will be locked out of your account for the day."
   },
   {
-    "objectID": "ae/ae-00-unvotes.html#references",
-    "href": "ae/ae-00-unvotes.html#references",
-    "title": "AE 00: UN Votes",
-    "section": "References",
-    "text": "References\n\nRobinson D (2021). unvotes: United Nations General Assembly Voting Data. R package version 0.3.0, https://github.com/dgrtwo/unvotes.\nErik Voeten “Data and Analyses of Voting in the UN General Assembly” Routledge Handbook of International Organization, edited by Bob Reinalda (published May 27, 2013).\nMuch of the analysis has been modeled on the examples presented in the unvotes package vignette."
+    "objectID": "ae/ae-00-github.html#share-the-account-with-us",
+    "href": "ae/ae-00-github.html#share-the-account-with-us",
+    "title": "AE 00: Make a Github",
+    "section": "Share the Account with Us",
+    "text": "Share the Account with Us\nSo that we can add you to the course organization, share your username with us via the GitHub canvas quiz. Do this before you leave the room!!!"
   },
   {
-    "objectID": "ae/ae-00-unvotes.html#appendix",
-    "href": "ae/ae-00-unvotes.html#appendix",
-    "title": "AE 00: UN Votes",
-    "section": "Appendix",
-    "text": "Appendix\nBelow is a list of countries in the dataset:"
+    "objectID": "ae/ae-00-github.html#footnotes",
+    "href": "ae/ae-00-github.html#footnotes",
+    "title": "AE 00: Make a Github",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student. However, this is still possible even if you use a different email!↩︎"
   },
   {
     "objectID": "ae.html",
     "href": "ae.html",
     "title": "Application exercises",
     "section": "",
-    "text": "All application exercises (AEs) are due by the end of lecture (or, precisely, by 10:45 am) on the day they’re covered in lecture. To submit your AE, make at least one change to your AE, commit and then push your change to your AE repo. AEs are graded for engagement, not accuracy.\nMore AEs to be added as the semester progresses.\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\nAE 00: UN Votes\n\n\n \n\n\n\n\nAE 01: Meet the penguins\n\n\n \n\n\n\n\n\nNo matching items",
+    "text": "All application exercises (AEs) are due by the end of lecture (or, precisely, by 10:45 am) on the day they’re covered in lecture. To submit your AE, make at least one change to your AE, commit and then push your change to your AE repo. AEs are graded for engagement, not accuracy.\nMore AEs to be added as the semester progresses.\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\nAE 00: Make a Github\n\n\n \n\n\n\n\nAE 01: Meet the penguins\n\n\n \n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Application exercises"
     ]
@@ -731,53 +731,487 @@
     "text": "Footnotes\n\nYes, it’s too many steps. I don’t know why! But it works, and you’ll get used to it. Trust me, it beats downloading and installing everything you need on your computers!↩︎"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#test",
-    "href": "slides/00-welcome-199-slides.html#test",
+    "objectID": "slides/00-welcome-199-slides.html#meet-the-team",
+    "href": "slides/00-welcome-199-slides.html#meet-the-team",
     "title": "Welcome to STA 199!",
-    "section": "Test",
-    "text": "Test\nthis is a test!!??"
+    "section": "Meet the team",
+    "text": "Meet the team\n\nInstructorMarie Neubrander\nOld Chem 203\nmarie.neubrander@duke.edu\n\nCourse Coordinator, Lab InstructorDr. Mary Knox\nmary.knox@duke.edu"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#how-does-it-look",
-    "href": "slides/00-welcome-199-slides.html#how-does-it-look",
+    "objectID": "slides/00-welcome-199-slides.html#meet-each-other",
+    "href": "slides/00-welcome-199-slides.html#meet-each-other",
     "title": "Welcome to STA 199!",
-    "section": "How does it look?",
-    "text": "How does it look?\n\nx &lt;- 5"
+    "section": "Meet each other!",
+    "text": "Meet each other!\n\nName\nYear\nHometown\nSomething you plan to do this summer"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#how-does-it-look-1",
-    "href": "slides/00-welcome-199-slides.html#how-does-it-look-1",
+    "objectID": "slides/00-welcome-199-slides.html#meet-data-science",
+    "href": "slides/00-welcome-199-slides.html#meet-data-science",
     "title": "Welcome to STA 199!",
-    "section": "How does it look?",
-    "text": "How does it look?\n\nx &lt;- 5\nx * 2\n\n[1] 10"
+    "section": "Meet data science",
+    "text": "Meet data science\n\nData science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#excel---not",
+    "href": "slides/00-welcome-199-slides.html#excel---not",
+    "title": "Welcome to STA 199!",
+    "section": "Excel - not…",
+    "text": "Excel - not…"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#r",
+    "href": "slides/00-welcome-199-slides.html#r",
+    "title": "Welcome to STA 199!",
+    "section": "R",
+    "text": "R"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#data-science-life-cycle-1",
+    "href": "slides/00-welcome-199-slides.html#data-science-life-cycle-1",
+    "title": "Welcome to STA 199!",
+    "section": "Data science life cycle",
+    "text": "Data science life cycle"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#import",
+    "href": "slides/00-welcome-199-slides.html#import",
+    "title": "Welcome to STA 199!",
+    "section": "Import",
+    "text": "Import"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#tidy-transform",
+    "href": "slides/00-welcome-199-slides.html#tidy-transform",
+    "title": "Welcome to STA 199!",
+    "section": "Tidy + transform",
+    "text": "Tidy + transform"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#visualize",
+    "href": "slides/00-welcome-199-slides.html#visualize",
+    "title": "Welcome to STA 199!",
+    "section": "Visualize",
+    "text": "Visualize"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#model",
+    "href": "slides/00-welcome-199-slides.html#model",
+    "title": "Welcome to STA 199!",
+    "section": "Model",
+    "text": "Model"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#understand",
+    "href": "slides/00-welcome-199-slides.html#understand",
+    "title": "Welcome to STA 199!",
+    "section": "Understand",
+    "text": "Understand"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#communicate",
+    "href": "slides/00-welcome-199-slides.html#communicate",
+    "title": "Welcome to STA 199!",
+    "section": "Communicate",
+    "text": "Communicate"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#understand-communicate",
+    "href": "slides/00-welcome-199-slides.html#understand-communicate",
+    "title": "Welcome to STA 199!",
+    "section": "Understand + communicate",
+    "text": "Understand + communicate"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#program",
+    "href": "slides/00-welcome-199-slides.html#program",
+    "title": "Welcome to STA 199!",
+    "section": "Program",
+    "text": "Program"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#activities",
+    "href": "slides/00-welcome-199-slides.html#activities",
+    "title": "Welcome to STA 199!",
+    "section": "Activities",
+    "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures and labs, office hours, team meetings\nPractice with application exercises during lecture\nUse what you’ve learned to analyze real-world data\n\nLab assignments x 6\nExams x 2\nTerm project"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#application-exercises",
+    "href": "slides/00-welcome-199-slides.html#application-exercises",
+    "title": "Welcome to STA 199!",
+    "section": "Application exercises",
+    "text": "Application exercises\n\nDaily-ish in lecture\n“Graded” for attempt, not accuracy\nPractice this week; graded thereafter\nAt least one commit by 10:45am of the day of lecture\nTurn in at least 80% for full credit"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#labs",
+    "href": "slides/00-welcome-199-slides.html#labs",
+    "title": "Welcome to STA 199!",
+    "section": "Labs",
+    "text": "Labs\n\nMonday and Thursday; right after lecture\nStart in lab session, complete at home\n\nDue dates (typically):\n\nMonday Lab: Due Wednesday at 11:59 PM\nThursday Lab: Due Sunday at 11:59 PM\n\n\nDiscussion with classmates = 🤩 ; Copying = ❌\nLowest score dropped"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#exams",
+    "href": "slides/00-welcome-199-slides.html#exams",
+    "title": "Welcome to STA 199!",
+    "section": "Exams",
+    "text": "Exams\n\nTwo exams, each 20%\n\nMidterm (June 3) has two parts:\n\nIn class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”) – 70% of the grade\nTake home: After the in class exam; analyze a dataset – 30% of the grade\n\n\nFinal (June 26): Closed book, one sheet of notes (“cheat sheet”).\n\n\n\n\n\n\n\nCaution\n\n\nExam dates cannot be changed. If you cannot take the exams on these dates, please have a discussion with me today."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#project",
+    "href": "slides/00-welcome-199-slides.html#project",
+    "title": "Welcome to STA 199!",
+    "section": "Project",
+    "text": "Project\n\nDataset of your choice, method of your choice\nTeamwork\nPresentation and write-up\nPresentations in the last lab (June 23)\nInterim deadlines, peer review on content, peer evaluation for team contribution\nSome lab sessions allocated to project progress\n\n\n\n\n\n\n\nCaution\n\n\nFinal presentation date cannot be changed; you must complete the project to pass this class."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#teams",
+    "href": "slides/00-welcome-199-slides.html#teams",
+    "title": "Welcome to STA 199!",
+    "section": "Teams",
+    "text": "Teams\n\nAssigned by me\nProject\nPeer evaluation during teamwork and after completion\nExpectations and roles\n\nEveryone is expected to contribute equal effort\n\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#grading",
+    "href": "slides/00-welcome-199-slides.html#grading",
+    "title": "Welcome to STA 199!",
+    "section": "Grading",
+    "text": "Grading\n\n\nCategory\nPercentage\n\n\n\nLabs\n30%\n\n\nProject\n20%\n\n\nExam 1\n20%\n\n\nExam 2\n20%\n\n\nApplication Exercises\n10%\n\n\n\n See course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#support",
+    "href": "slides/00-welcome-199-slides.html#support",
+    "title": "Welcome to STA 199!",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours\nAsk and answer questions on the Ed discussion board\nReserve email for questions on personal matters and/or grades"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#office-hours",
+    "href": "slides/00-welcome-199-slides.html#office-hours",
+    "title": "Welcome to STA 199!",
+    "section": "Office Hours",
+    "text": "Office Hours\nMarie: Old Chem 203\n\nTuesday 3:30PM - 5:30PM\nFriday 1:00 - 3:00 PM\n\nMary: ZoomTime TBD"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#announcements",
+    "href": "slides/00-welcome-199-slides.html#announcements",
+    "title": "Welcome to STA 199!",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements tool) and sent via email, be sure to check both regularly\nAll information is on the course website - please refer to it often!"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#homepage",
+    "href": "slides/00-welcome-199-slides.html#homepage",
+    "title": "Welcome to STA 199!",
+    "section": "Homepage",
+    "text": "Homepage\nhttps://sta199-su25.github.io\n\nAll course materials\nLinks to Canvas, GitHub, RStudio containers, etc."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#course-toolkit",
+    "href": "slides/00-welcome-199-slides.html#course-toolkit",
+    "title": "Welcome to STA 199!",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-su25\n\nRStudio containers: cmgr.oit.duke.edu/containers\n\nCommunication: Ed Discussion\nAssignment submission and feedback: Gradescope"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#accessibility",
+    "href": "slides/00-welcome-199-slides.html#accessibility",
+    "title": "Welcome to STA 199!",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better!"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#late-work-waivers-regrades-policy",
+    "href": "slides/00-welcome-199-slides.html#late-work-waivers-regrades-policy",
+    "title": "Welcome to STA 199!",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it\n\n\n\n\n\n\n\nIf you need testing accommodations\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#collaboration",
+    "href": "slides/00-welcome-199-slides.html#collaboration",
+    "title": "Welcome to STA 199!",
+    "section": "Collaboration",
+    "text": "Collaboration\n\nLabs: discussing and helping is fine. Sharing your solutions and copying others is not;\nExams: collaboration of any kind is completely forbidden on any part of any exam;\nProjects: collaboration of any kind is enthusiastically encouraged within your team. Between teams, it’s the same as labs; do not directly share your stuff or copy off of others."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#use-of-ai-tools",
+    "href": "slides/00-welcome-199-slides.html#use-of-ai-tools",
+    "title": "Welcome to STA 199!",
+    "section": "Use of AI tools",
+    "text": "Use of AI tools\n\n\n AI tools for code:\n\nSure, but be careful/critical! Working code != correct/good code.\nMust explicitly cite with a direct url linking to the conversation you had.\n\n\n AI tools for narrative: Absolutely not!\n AI tools for learning: Sure, but be careful/critical!"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#academic-integrity",
+    "href": "slides/00-welcome-199-slides.html#academic-integrity",
+    "title": "Welcome to STA 199!",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#what-is-github",
+    "href": "slides/00-welcome-199-slides.html#what-is-github",
+    "title": "Welcome to STA 199!",
+    "section": "What is GitHub?",
+    "text": "What is GitHub?\n\nMore on this tomorrow - basically, it is the Google Drive of coding!"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#ae0-make-your-github-account",
+    "href": "slides/00-welcome-199-slides.html#ae0-make-your-github-account",
+    "title": "Welcome to STA 199!",
+    "section": "AE0: Make your GitHub account",
+    "text": "AE0: Make your GitHub account\n Find AE0 on the course website!"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#this-weeks-tasks",
+    "href": "slides/00-welcome-199-slides.html#this-weeks-tasks",
+    "title": "Welcome to STA 199!",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nComplete Lab 0\n\nComputational setup\nGetting to know you survey\n\n\nRead the syllabus\nStart readings for next week"
   },
   {
     "objectID": "slides/00-welcome-199.html",
     "href": "slides/00-welcome-199.html",
     "title": "Welcome to STA 199!",
     "section": "",
-    "text": "this is a test!!??"
+    "text": "InstructorMarie Neubrander\nOld Chem 203\nmarie.neubrander@duke.edu\n\nCourse Coordinator, Lab InstructorDr. Mary Knox\nmary.knox@duke.edu\n\n\nName\nYear\nHometown\nSomething you plan to do this summer\n\n\nData science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge."
   },
   {
-    "objectID": "slides/00-welcome-199.html#test",
-    "href": "slides/00-welcome-199.html#test",
+    "objectID": "slides/00-welcome-199.html#meet-the-team",
+    "href": "slides/00-welcome-199.html#meet-the-team",
     "title": "Welcome to STA 199!",
     "section": "",
-    "text": "this is a test!!??"
+    "text": "InstructorMarie Neubrander\nOld Chem 203\nmarie.neubrander@duke.edu\n\nCourse Coordinator, Lab InstructorDr. Mary Knox\nmary.knox@duke.edu"
   },
   {
-    "objectID": "slides/00-welcome-199.html#how-does-it-look",
-    "href": "slides/00-welcome-199.html#how-does-it-look",
+    "objectID": "slides/00-welcome-199.html#meet-each-other",
+    "href": "slides/00-welcome-199.html#meet-each-other",
     "title": "Welcome to STA 199!",
-    "section": "How does it look?",
-    "text": "How does it look?\n\nx &lt;- 5"
+    "section": "",
+    "text": "Name\nYear\nHometown\nSomething you plan to do this summer"
   },
   {
-    "objectID": "slides/00-welcome-199.html#how-does-it-look-1",
-    "href": "slides/00-welcome-199.html#how-does-it-look-1",
+    "objectID": "slides/00-welcome-199.html#meet-data-science",
+    "href": "slides/00-welcome-199.html#meet-data-science",
     "title": "Welcome to STA 199!",
-    "section": "How does it look?",
-    "text": "How does it look?\n\nx &lt;- 5\nx * 2\n\n[1] 10"
+    "section": "",
+    "text": "Data science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge."
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#excel---not",
+    "href": "slides/00-welcome-199.html#excel---not",
+    "title": "Welcome to STA 199!",
+    "section": "Excel - not…",
+    "text": "Excel - not…"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#r",
+    "href": "slides/00-welcome-199.html#r",
+    "title": "Welcome to STA 199!",
+    "section": "R",
+    "text": "R"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#data-science-life-cycle-1",
+    "href": "slides/00-welcome-199.html#data-science-life-cycle-1",
+    "title": "Welcome to STA 199!",
+    "section": "Data science life cycle",
+    "text": "Data science life cycle"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#import",
+    "href": "slides/00-welcome-199.html#import",
+    "title": "Welcome to STA 199!",
+    "section": "Import",
+    "text": "Import"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#tidy-transform",
+    "href": "slides/00-welcome-199.html#tidy-transform",
+    "title": "Welcome to STA 199!",
+    "section": "Tidy + transform",
+    "text": "Tidy + transform"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#visualize",
+    "href": "slides/00-welcome-199.html#visualize",
+    "title": "Welcome to STA 199!",
+    "section": "Visualize",
+    "text": "Visualize"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#model",
+    "href": "slides/00-welcome-199.html#model",
+    "title": "Welcome to STA 199!",
+    "section": "Model",
+    "text": "Model"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#understand",
+    "href": "slides/00-welcome-199.html#understand",
+    "title": "Welcome to STA 199!",
+    "section": "Understand",
+    "text": "Understand"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#communicate",
+    "href": "slides/00-welcome-199.html#communicate",
+    "title": "Welcome to STA 199!",
+    "section": "Communicate",
+    "text": "Communicate"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#understand-communicate",
+    "href": "slides/00-welcome-199.html#understand-communicate",
+    "title": "Welcome to STA 199!",
+    "section": "Understand + communicate",
+    "text": "Understand + communicate"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#program",
+    "href": "slides/00-welcome-199.html#program",
+    "title": "Welcome to STA 199!",
+    "section": "Program",
+    "text": "Program"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#activities",
+    "href": "slides/00-welcome-199.html#activities",
+    "title": "Welcome to STA 199!",
+    "section": "Activities",
+    "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures and labs, office hours, team meetings\nPractice with application exercises during lecture\nUse what you’ve learned to analyze real-world data\n\nLab assignments x 6\nExams x 2\nTerm project"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#application-exercises",
+    "href": "slides/00-welcome-199.html#application-exercises",
+    "title": "Welcome to STA 199!",
+    "section": "Application exercises",
+    "text": "Application exercises\n\nDaily-ish in lecture\n“Graded” for attempt, not accuracy\nPractice this week; graded thereafter\nAt least one commit by 10:45am of the day of lecture\nTurn in at least 80% for full credit"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#labs",
+    "href": "slides/00-welcome-199.html#labs",
+    "title": "Welcome to STA 199!",
+    "section": "Labs",
+    "text": "Labs\n\nMonday and Thursday; right after lecture\nStart in lab session, complete at home\n\nDue dates (typically):\n\nMonday Lab: Due Wednesday at 11:59 PM\nThursday Lab: Due Sunday at 11:59 PM\n\n\nDiscussion with classmates = 🤩 ; Copying = ❌\nLowest score dropped"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#exams",
+    "href": "slides/00-welcome-199.html#exams",
+    "title": "Welcome to STA 199!",
+    "section": "Exams",
+    "text": "Exams\n\nTwo exams, each 20%\n\nMidterm (June 3) has two parts:\n\nIn class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”) – 70% of the grade\nTake home: After the in class exam; analyze a dataset – 30% of the grade\n\n\nFinal (June 26): Closed book, one sheet of notes (“cheat sheet”).\n\n\n\n\n\n\n\nCaution\n\n\n\nExam dates cannot be changed. If you cannot take the exams on these dates, please have a discussion with me today."
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#project",
+    "href": "slides/00-welcome-199.html#project",
+    "title": "Welcome to STA 199!",
+    "section": "Project",
+    "text": "Project\n\nDataset of your choice, method of your choice\nTeamwork\nPresentation and write-up\nPresentations in the last lab (June 23)\nInterim deadlines, peer review on content, peer evaluation for team contribution\nSome lab sessions allocated to project progress\n\n\n\n\n\n\n\nCaution\n\n\n\nFinal presentation date cannot be changed; you must complete the project to pass this class."
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#teams",
+    "href": "slides/00-welcome-199.html#teams",
+    "title": "Welcome to STA 199!",
+    "section": "Teams",
+    "text": "Teams\n\nAssigned by me\nProject\nPeer evaluation during teamwork and after completion\nExpectations and roles\n\nEveryone is expected to contribute equal effort\n\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#grading",
+    "href": "slides/00-welcome-199.html#grading",
+    "title": "Welcome to STA 199!",
+    "section": "Grading",
+    "text": "Grading\n\n\nCategory\nPercentage\n\n\n\nLabs\n30%\n\n\nProject\n20%\n\n\nExam 1\n20%\n\n\nExam 2\n20%\n\n\nApplication Exercises\n10%\n\n\n\n See course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#support",
+    "href": "slides/00-welcome-199.html#support",
+    "title": "Welcome to STA 199!",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours\nAsk and answer questions on the Ed discussion board\nReserve email for questions on personal matters and/or grades"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#office-hours",
+    "href": "slides/00-welcome-199.html#office-hours",
+    "title": "Welcome to STA 199!",
+    "section": "Office Hours",
+    "text": "Office Hours\nMarie: Old Chem 203\n\nTuesday 3:30PM - 5:30PM\nFriday 1:00 - 3:00 PM\n\nMary: ZoomTime TBD"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#announcements",
+    "href": "slides/00-welcome-199.html#announcements",
+    "title": "Welcome to STA 199!",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements tool) and sent via email, be sure to check both regularly\nAll information is on the course website - please refer to it often!"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#homepage",
+    "href": "slides/00-welcome-199.html#homepage",
+    "title": "Welcome to STA 199!",
+    "section": "Homepage",
+    "text": "Homepage\nhttps://sta199-su25.github.io\n\nAll course materials\nLinks to Canvas, GitHub, RStudio containers, etc."
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#course-toolkit",
+    "href": "slides/00-welcome-199.html#course-toolkit",
+    "title": "Welcome to STA 199!",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-su25\n\nRStudio containers: cmgr.oit.duke.edu/containers\n\nCommunication: Ed Discussion\nAssignment submission and feedback: Gradescope"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#accessibility",
+    "href": "slides/00-welcome-199.html#accessibility",
+    "title": "Welcome to STA 199!",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better!"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#late-work-waivers-regrades-policy",
+    "href": "slides/00-welcome-199.html#late-work-waivers-regrades-policy",
+    "title": "Welcome to STA 199!",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it\n\n\n\n\n\n\n\nIf you need testing accommodations\n\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#collaboration",
+    "href": "slides/00-welcome-199.html#collaboration",
+    "title": "Welcome to STA 199!",
+    "section": "Collaboration",
+    "text": "Collaboration\n\nLabs: discussing and helping is fine. Sharing your solutions and copying others is not;\nExams: collaboration of any kind is completely forbidden on any part of any exam;\nProjects: collaboration of any kind is enthusiastically encouraged within your team. Between teams, it’s the same as labs; do not directly share your stuff or copy off of others."
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#use-of-ai-tools",
+    "href": "slides/00-welcome-199.html#use-of-ai-tools",
+    "title": "Welcome to STA 199!",
+    "section": "Use of AI tools",
+    "text": "Use of AI tools\n\n\n AI tools for code:\n\nSure, but be careful/critical! Working code != correct/good code.\nMust explicitly cite with a direct url linking to the conversation you had.\n\n\n AI tools for narrative: Absolutely not!\n AI tools for learning: Sure, but be careful/critical!"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#academic-integrity",
+    "href": "slides/00-welcome-199.html#academic-integrity",
+    "title": "Welcome to STA 199!",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#what-is-github",
+    "href": "slides/00-welcome-199.html#what-is-github",
+    "title": "Welcome to STA 199!",
+    "section": "What is GitHub?",
+    "text": "What is GitHub?\n\nMore on this tomorrow - basically, it is the Google Drive of coding!"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#ae0-make-your-github-account",
+    "href": "slides/00-welcome-199.html#ae0-make-your-github-account",
+    "title": "Welcome to STA 199!",
+    "section": "AE0: Make your GitHub account",
+    "text": "AE0: Make your GitHub account\n Find AE0 on the course website!"
+  },
+  {
+    "objectID": "slides/00-welcome-199.html#this-weeks-tasks",
+    "href": "slides/00-welcome-199.html#this-weeks-tasks",
+    "title": "Welcome to STA 199!",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nComplete Lab 0\n\nComputational setup\nGetting to know you survey\n\n\nRead the syllabus\nStart readings for next week"
   },
   {
     "objectID": "course-support.html",
@@ -871,7 +1305,7 @@
     "href": "index.html",
     "title": "STA 199: Intro to Data Science and Statistical Thinking",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00 \nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Vis\n\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nGrammar of Data Transform\n\n\n\n\n\n\nMon, May 19\nLab 1\n\n\n\n\n\n\nTue, May 20\nExploring Data I\n\n\n\n\n\n\nWed, May 21\nExploring Data II\n\nLab 1 - 11:59PM ET\n\n\n\n\nThu, May 22\nTidying Data\n\n\n\n\n\n\nThu, May 22\nLab 2\n\n\n\n\n\n\nFri, May 23\nJoining Data\n\n\n\n\n\n\nSun, May 25\n\n\nLab 2 - 11:59PM ET\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n\n\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n\n\n\n\n\n\nThu, May 29\nWeb Scraping\n\n\n\n\n\n\nThu, May 29\nLab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n\n\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Vis\n\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nGrammar of Data Transform\n\n\n\n\n\n\nMon, May 19\nLab 1\n\n\n\n\n\n\nTue, May 20\nExploring Data I\n\n\n\n\n\n\nWed, May 21\nExploring Data II\n\nLab 1 - 11:59PM ET\n\n\n\n\nThu, May 22\nTidying Data\n\n\n\n\n\n\nThu, May 22\nLab 2\n\n\n\n\n\n\nFri, May 23\nJoining Data\n\n\n\n\n\n\nSun, May 25\n\n\nLab 2 - 11:59PM ET\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n\n\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n\n\n\n\n\n\nThu, May 29\nWeb Scraping\n\n\n\n\n\n\nThu, May 29\nLab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n\n\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
     "crumbs": [
       "Course information",
       "Schedule"
