@@ -1,8 +1,8 @@
 {
-  "hash": "5dfbe9e6fa3968eadf8ab6bd80e069af",
+  "hash": "f1a92e0641c604e2bd1135af784180af",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Welcome to STA 199!\"\nsubtitle: \"Lecture 0\"\ndate: \"2025-01-09\"\nformat: revealjs\nauto-stretch: false\n---\n\n\n::: {.cell}\n\n:::\n\n\n## Test\n\nthis is a test!!??\n\n",
+    "markdown": "---\ntitle: \"Welcome to STA 199!\"\nsubtitle: \"Lecture 0\"\ndate: \"2025-01-09\"\nformat: \n  revealjs:\n    output-file: 00-welcome-199-slides.html\nauto-stretch: false\n---\n\n\n::: {.cell}\n\n:::\n\n\n## Test\n\nthis is a test!!??\n\n## How does it look?\n\n\n::: {.cell}\n\n```{.r .cell-code}\nx <- 5\n```\n:::\n\n\n## How does it look?\n\n\n::: {.cell}\n\n```{.r .cell-code}\nx <- 5\nx * 2\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 10\n```\n\n\n:::\n:::\n\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

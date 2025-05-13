@@ -1,6 +1,6 @@
 date-format: long
 format:
-  live-revealjs:
+  revealjs:
     footer: "[🔗 sta199-su25.github.io](https://sta199-su25.github.io/)"
     theme: slides.scss
     transition: fade
@@ -10,7 +10,7 @@ format:
     webr:
       cell-options:
         autorun: false
-  live-html:
+  html:
     code-link: true
     webr:
       cell-options:

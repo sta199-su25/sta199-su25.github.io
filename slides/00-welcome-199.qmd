@@ -2,7 +2,9 @@
 title: "Welcome to STA 199!"
 subtitle: "Lecture 0"
 date: "2025-01-09"
-format: revealjs
+format: 
+  revealjs:
+    output-file: 00-welcome-199-slides.html
 auto-stretch: false
 ---
 
@@ -17,3 +19,15 @@ library(tidyverse)
 
 this is a test!!??
 
+## How does it look?
+
+```{r}
+x <- 5
+```
+
+## How does it look?
+
+```{r}
+x <- 5
+x * 2
+```
