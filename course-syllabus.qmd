@@ -108,10 +108,8 @@ The final course grade will be calculated as follows:
 | Project               | 20%        |
 | Midterm               | 20%        |
 | Final                 | 20%        |
-| Application Exercises | 10%        |
-
-While there are no specific points allocated to attendance, we will record your attendance periodically throughout the semester.
-This information will be used as "extra credit" if you're in between two grades and a minor bump would help.
+| Application Exercises | 5%         |
+| Lab Attendance        | 5%         |
 
 The final letter grade will be determined based on the following thresholds:
 

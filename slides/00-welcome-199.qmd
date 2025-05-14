@@ -187,7 +187,8 @@ Final presentation date cannot be changed; you must complete the project to pass
 | Project               | 20%        |
 | Exam 1                | 20%        |
 | Exam 2                | 20%        |
-| Application Exercises | 10%        |
+| Application Exercises | 5%         |
+| Lab attendance        | 5%         |
 
 <br><br> See [course syllabus](https://sta199-su25.github.io/syllabus/) for how the final letter grade will be determined.
 
@@ -302,4 +303,4 @@ Find AE0 on the course website!
     -   Computational setup
     -   Getting to know you survey
 -   Read the syllabus
--   Start readings for next week
+-   Get started with data science!
