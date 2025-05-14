@@ -158,14 +158,14 @@
     "href": "ae/ae-00-github.html",
     "title": "AE 00: Make a Github",
     "section": "",
-    "text": "Normally, these AEs will contain coding practice assignments. However, before you’re able to start coding, you will need a Github account.\nIn tomorrow’s lecture (and throughout the rest of the class), you will learn more about how GitHub works. For now, understand that GitHub is like the Google Drive of coding. You can upload files, track changes over time, and work with others without overwriting each other's work.\nIn this class, we will have a GitHub organization so that:\n\nEveryone has a central place to both access and work on course materials (AEs, labs, project, etc.)\nWe can see your progress, give help, and review changes over time.\nYou learn to use tools that are standard in data science, research, and industry.\n\nIf you’ve never coded before, it might not be clear why we need something specialized and can’t just use a Google Drive (or Box, or iCloud, or similar). I think that this becomes more clear as you dive into coding, but the long story very short is that you aren’t typing code into a word document. You’re using and running special code files, and normal drives are not properly equipped to handle these."
+    "text": "Normally, these AEs will contain coding practice assignments. However, before you’re able to start coding, you will need a Github account.\nIn tomorrow’s lecture (and throughout the rest of the class), you will learn more about how GitHub works. For now, understand that GitHub is like the Google Drive of coding. You can upload files, track changes over time, and work with others without overwriting each other’s work.\nIn this class, we will have a GitHub organization so that:\n\nEveryone has a central place to both access and work on course materials (AEs, labs, project, etc.)\nWe can see your progress, give help, and review changes over time.\nYou learn to use tools that are standard in data science, research, and industry.\n\nIf you’ve never coded before, it might not be clear why we need something specialized and can’t just use a Google Drive (or Box, or iCloud, or similar). I think that this becomes more clear as you dive into coding, but the long story very short is that you aren’t typing code into a word document. You’re using and running special code files, and normal drives are not properly equipped to handle these."
   },
   {
     "objectID": "ae/ae-00-github.html#introduction",
     "href": "ae/ae-00-github.html#introduction",
     "title": "AE 00: Make a Github",
     "section": "",
-    "text": "Normally, these AEs will contain coding practice assignments. However, before you’re able to start coding, you will need a Github account.\nIn tomorrow’s lecture (and throughout the rest of the class), you will learn more about how GitHub works. For now, understand that GitHub is like the Google Drive of coding. You can upload files, track changes over time, and work with others without overwriting each other's work.\nIn this class, we will have a GitHub organization so that:\n\nEveryone has a central place to both access and work on course materials (AEs, labs, project, etc.)\nWe can see your progress, give help, and review changes over time.\nYou learn to use tools that are standard in data science, research, and industry.\n\nIf you’ve never coded before, it might not be clear why we need something specialized and can’t just use a Google Drive (or Box, or iCloud, or similar). I think that this becomes more clear as you dive into coding, but the long story very short is that you aren’t typing code into a word document. You’re using and running special code files, and normal drives are not properly equipped to handle these."
+    "text": "Normally, these AEs will contain coding practice assignments. However, before you’re able to start coding, you will need a Github account.\nIn tomorrow’s lecture (and throughout the rest of the class), you will learn more about how GitHub works. For now, understand that GitHub is like the Google Drive of coding. You can upload files, track changes over time, and work with others without overwriting each other’s work.\nIn this class, we will have a GitHub organization so that:\n\nEveryone has a central place to both access and work on course materials (AEs, labs, project, etc.)\nWe can see your progress, give help, and review changes over time.\nYou learn to use tools that are standard in data science, research, and industry.\n\nIf you’ve never coded before, it might not be clear why we need something specialized and can’t just use a Google Drive (or Box, or iCloud, or similar). I think that this becomes more clear as you dive into coding, but the long story very short is that you aren’t typing code into a word document. You’re using and running special code files, and normal drives are not properly equipped to handle these."
   },
   {
     "objectID": "ae/ae-00-github.html#create-a-github-account",
@@ -731,242 +731,487 @@
     "text": "Footnotes\n\nYes, it’s too many steps. I don’t know why! But it works, and you’ll get used to it. Trust me, it beats downloading and installing everything you need on your computers!↩︎"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#meet-the-team",
-    "href": "slides/00-welcome-199-slides.html#meet-the-team",
-    "title": "Welcome to STA 199!",
-    "section": "Meet the team",
-    "text": "Meet the team\n\nInstructorMarie Neubrander\nOld Chem 203\nmarie.neubrander@duke.edu\n\nCourse Coordinator, Lab InstructorDr. Mary Knox\nmary.knox@duke.edu"
+    "objectID": "slides/01-meet-the-toolkit-slides.html#reminders",
+    "href": "slides/01-meet-the-toolkit-slides.html#reminders",
+    "title": "Meet the Toolkit",
+    "section": "Reminders",
+    "text": "Reminders\n\nIf you have not yet finished the Getting to Know You survey, please do so ASAP!\nMake your appointments in the Testing Center now!\nAny questions about the syllabus??"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#meet-each-other",
-    "href": "slides/00-welcome-199-slides.html#meet-each-other",
-    "title": "Welcome to STA 199!",
-    "section": "Meet each other!",
-    "text": "Meet each other!\n\nName\nYear\nHometown\nSomething you plan to do this summer"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#meet-data-science",
-    "href": "slides/00-welcome-199-slides.html#meet-data-science",
-    "title": "Welcome to STA 199!",
-    "section": "Meet data science",
-    "text": "Meet data science\n\nData science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge."
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#excel---not",
-    "href": "slides/00-welcome-199-slides.html#excel---not",
-    "title": "Welcome to STA 199!",
-    "section": "Excel - not…",
-    "text": "Excel - not…"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#r",
-    "href": "slides/00-welcome-199-slides.html#r",
-    "title": "Welcome to STA 199!",
-    "section": "R",
-    "text": "R"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#data-science-life-cycle-1",
-    "href": "slides/00-welcome-199-slides.html#data-science-life-cycle-1",
-    "title": "Welcome to STA 199!",
-    "section": "Data science life cycle",
-    "text": "Data science life cycle"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#import",
-    "href": "slides/00-welcome-199-slides.html#import",
-    "title": "Welcome to STA 199!",
-    "section": "Import",
-    "text": "Import"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#tidy-transform",
-    "href": "slides/00-welcome-199-slides.html#tidy-transform",
-    "title": "Welcome to STA 199!",
-    "section": "Tidy + transform",
-    "text": "Tidy + transform"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#visualize",
-    "href": "slides/00-welcome-199-slides.html#visualize",
-    "title": "Welcome to STA 199!",
-    "section": "Visualize",
-    "text": "Visualize"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#model",
-    "href": "slides/00-welcome-199-slides.html#model",
-    "title": "Welcome to STA 199!",
-    "section": "Model",
-    "text": "Model"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#understand",
-    "href": "slides/00-welcome-199-slides.html#understand",
-    "title": "Welcome to STA 199!",
-    "section": "Understand",
-    "text": "Understand"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#communicate",
-    "href": "slides/00-welcome-199-slides.html#communicate",
-    "title": "Welcome to STA 199!",
-    "section": "Communicate",
-    "text": "Communicate"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#understand-communicate",
-    "href": "slides/00-welcome-199-slides.html#understand-communicate",
-    "title": "Welcome to STA 199!",
-    "section": "Understand + communicate",
-    "text": "Understand + communicate"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#program",
-    "href": "slides/00-welcome-199-slides.html#program",
-    "title": "Welcome to STA 199!",
-    "section": "Program",
-    "text": "Program"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#activities",
-    "href": "slides/00-welcome-199-slides.html#activities",
-    "title": "Welcome to STA 199!",
-    "section": "Activities",
-    "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures and labs, office hours, team meetings\nPractice with application exercises during lecture\nUse what you’ve learned to analyze real-world data\n\nLab assignments x 6\nExams x 2\nTerm project"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#application-exercises",
-    "href": "slides/00-welcome-199-slides.html#application-exercises",
-    "title": "Welcome to STA 199!",
-    "section": "Application exercises",
-    "text": "Application exercises\n\nDaily-ish in lecture\n“Graded” for attempt, not accuracy\nPractice this week; graded thereafter\nAt least one commit by 10:45am of the day of lecture\nTurn in at least 80% for full credit"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#labs",
-    "href": "slides/00-welcome-199-slides.html#labs",
-    "title": "Welcome to STA 199!",
-    "section": "Labs",
-    "text": "Labs\n\nMonday and Thursday; right after lecture\nStart in lab session, complete at home\n\nDue dates (typically):\n\nMonday Lab: Due Wednesday at 11:59 PM\nThursday Lab: Due Sunday at 11:59 PM\n\n\nDiscussion with classmates = 🤩 ; Copying = ❌\nLowest score dropped"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#exams",
-    "href": "slides/00-welcome-199-slides.html#exams",
-    "title": "Welcome to STA 199!",
-    "section": "Exams",
-    "text": "Exams\n\nTwo exams, each 20%\n\nMidterm (June 3) has two parts:\n\nIn class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”) – 70% of the grade\nTake home: After the in class exam; analyze a dataset – 30% of the grade\n\n\nFinal (June 26): Closed book, one sheet of notes (“cheat sheet”).\n\n\n\n\n\n\n\nCaution\n\n\nExam dates cannot be changed. If you cannot take the exams on these dates, please have a discussion with me today."
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#project",
-    "href": "slides/00-welcome-199-slides.html#project",
-    "title": "Welcome to STA 199!",
-    "section": "Project",
-    "text": "Project\n\nDataset of your choice, method of your choice\nTeamwork\nPresentation and write-up\nPresentations in the last lab (June 23)\nInterim deadlines, peer review on content, peer evaluation for team contribution\nSome lab sessions allocated to project progress\n\n\n\n\n\n\n\nCaution\n\n\nFinal presentation date cannot be changed; you must complete the project to pass this class."
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#teams",
-    "href": "slides/00-welcome-199-slides.html#teams",
-    "title": "Welcome to STA 199!",
-    "section": "Teams",
-    "text": "Teams\n\nAssigned by me\nProject\nPeer evaluation during teamwork and after completion\nExpectations and roles\n\nEveryone is expected to contribute equal effort\n\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#grading",
-    "href": "slides/00-welcome-199-slides.html#grading",
-    "title": "Welcome to STA 199!",
-    "section": "Grading",
-    "text": "Grading\n\n\nCategory\nPercentage\n\n\n\nLabs\n30%\n\n\nProject\n20%\n\n\nExam 1\n20%\n\n\nExam 2\n20%\n\n\nApplication Exercises\n5%\n\n\nLab attendance\n5%\n\n\n\n See course syllabus for how the final letter grade will be determined."
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#support",
-    "href": "slides/00-welcome-199-slides.html#support",
-    "title": "Welcome to STA 199!",
-    "section": "Support",
-    "text": "Support\n\nAttend office hours\nAsk and answer questions on the Ed discussion board\nReserve email for questions on personal matters and/or grades"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#office-hours",
-    "href": "slides/00-welcome-199-slides.html#office-hours",
-    "title": "Welcome to STA 199!",
-    "section": "Office Hours",
-    "text": "Office Hours\nMarie: Old Chem 203\n\nTuesday 3:30PM - 5:30PM\nFriday 1:00 - 3:00 PM\n\nMary: ZoomTime TBD"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#announcements",
-    "href": "slides/00-welcome-199-slides.html#announcements",
-    "title": "Welcome to STA 199!",
-    "section": "Announcements",
-    "text": "Announcements\n\nPosted on Canvas (Announcements tool) and sent via email, be sure to check both regularly\nAll information is on the course website - please refer to it often!"
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#homepage",
-    "href": "slides/00-welcome-199-slides.html#homepage",
-    "title": "Welcome to STA 199!",
-    "section": "Homepage",
-    "text": "Homepage\nhttps://sta199-su25.github.io\n\nAll course materials\nLinks to Canvas, GitHub, RStudio containers, etc."
-  },
-  {
-    "objectID": "slides/00-welcome-199-slides.html#course-toolkit",
-    "href": "slides/00-welcome-199-slides.html#course-toolkit",
-    "title": "Welcome to STA 199!",
+    "objectID": "slides/01-meet-the-toolkit-slides.html#course-toolkit",
+    "href": "slides/01-meet-the-toolkit-slides.html#course-toolkit",
+    "title": "Meet the Toolkit",
     "section": "Course toolkit",
-    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-su25\n\nRStudio containers: cmgr.oit.duke.edu/containers\n\nCommunication: Ed Discussion\nAssignment submission and feedback: Gradescope"
+    "text": "Course toolkit\n\n\nCourse operation\n\nMaterials: sta199-f24.github.io\n\nSubmission: Gradescope\nDiscussion: Ed Discussion\nGradebook: Canvas\n\n\n\nDoing data science\n\nComputing:\n\nR\n\nRStudio\n\ntidyverse\n\nQuarto\n\n\n\nVersion control and collaboration:\n\nGit\n\nGitHub"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#accessibility",
-    "href": "slides/00-welcome-199-slides.html#accessibility",
-    "title": "Welcome to STA 199!",
-    "section": "Accessibility",
-    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better!"
+    "objectID": "slides/01-meet-the-toolkit-slides.html#learning-goals",
+    "href": "slides/01-meet-the-toolkit-slides.html#learning-goals",
+    "title": "Meet the Toolkit",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\n\ngain insight from data, reproducibly, using modern programming tools and techniques\n\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control) and collaboratively, using modern programming tools and techniques"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#late-work-waivers-regrades-policy",
-    "href": "slides/00-welcome-199-slides.html#late-work-waivers-regrades-policy",
-    "title": "Welcome to STA 199!",
-    "section": "Late work, waivers, regrades policy",
-    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it\n\n\n\n\n\n\n\nIf you need testing accommodations\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
+    "objectID": "slides/01-meet-the-toolkit-slides.html#reproducibility-checklist",
+    "href": "slides/01-meet-the-toolkit-slides.html#reproducibility-checklist",
+    "title": "Meet the Toolkit",
+    "section": "Reproducibility checklist",
+    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\n\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n\n\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#collaboration",
-    "href": "slides/00-welcome-199-slides.html#collaboration",
-    "title": "Welcome to STA 199!",
-    "section": "Collaboration",
-    "text": "Collaboration\n\nLabs: discussing and helping is fine. Sharing your solutions and copying others is not;\nExams: collaboration of any kind is completely forbidden on any part of any exam;\nProjects: collaboration of any kind is enthusiastically encouraged within your team. Between teams, it’s the same as labs; do not directly share your stuff or copy off of others."
+    "objectID": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english",
+    "href": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english",
+    "title": "Meet the Toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#use-of-ai-tools",
-    "href": "slides/00-welcome-199-slides.html#use-of-ai-tools",
-    "title": "Welcome to STA 199!",
-    "section": "Use of AI tools",
-    "text": "Use of AI tools\n\n\n AI tools for code:\n\nSure, but be careful/critical! Working code != correct/good code.\nMust explicitly cite with a direct url linking to the conversation you had.\n\n\n AI tools for narrative: Absolutely not!\n AI tools for learning: Sure, but be careful/critical!"
+    "objectID": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english-1",
+    "href": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english-1",
+    "title": "Meet the Toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#academic-integrity",
-    "href": "slides/00-welcome-199-slides.html#academic-integrity",
-    "title": "Welcome to STA 199!",
-    "section": "Academic integrity",
-    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+    "objectID": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english-2",
+    "href": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english-2",
+    "title": "Meet the Toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#what-is-github",
-    "href": "slides/00-welcome-199-slides.html#what-is-github",
-    "title": "Welcome to STA 199!",
-    "section": "What is GitHub?",
-    "text": "What is GitHub?\n\nMore on this tomorrow - basically, it is the Google Drive of coding!"
+    "objectID": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english-3",
+    "href": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english-3",
+    "title": "Meet the Toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#ae0-make-your-github-account",
-    "href": "slides/00-welcome-199-slides.html#ae0-make-your-github-account",
-    "title": "Welcome to STA 199!",
-    "section": "AE0: Make your GitHub account",
-    "text": "AE0: Make your GitHub account\n Find AE0 on the course website!"
+    "objectID": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english-4",
+    "href": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english-4",
+    "title": "Meet the Toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
   },
   {
-    "objectID": "slides/00-welcome-199-slides.html#this-weeks-tasks",
-    "href": "slides/00-welcome-199-slides.html#this-weeks-tasks",
-    "title": "Welcome to STA 199!",
-    "section": "This week’s tasks",
-    "text": "This week’s tasks\n\nComplete Lab 0\n\nComputational setup\nGetting to know you survey\n\n\nRead the syllabus\nGet started with data science!"
+    "objectID": "slides/01-meet-the-toolkit-slides.html#r-and-rstudio-1",
+    "href": "slides/01-meet-the-toolkit-slides.html#r-and-rstudio-1",
+    "title": "Meet the Toolkit",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\n\nPackages enable lots of functionality\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#r-vs.-rstudio-another-analogy",
+    "href": "slides/01-meet-the-toolkit-slides.html#r-vs.-rstudio-another-analogy",
+    "title": "Meet the Toolkit",
+    "section": "R vs. RStudio: Another Analogy",
+    "text": "R vs. RStudio: Another Analogy\n\n\n\n\n\n\nSource: Modern Dive."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#tour-r-rstudio",
+    "href": "slides/01-meet-the-toolkit-slides.html#tour-r-rstudio",
+    "title": "Meet the Toolkit",
+    "section": "Tour: R + RStudio",
+    "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nGo to your container and launch RStudio."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#tour-recap-r-rstudio",
+    "href": "slides/01-meet-the-toolkit-slides.html#tour-recap-r-rstudio",
+    "title": "Meet the Toolkit",
+    "section": "Tour recap: R + RStudio",
+    "text": "Tour recap: R + RStudio"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#a-short-list-for-now-of-r-essentials",
+    "href": "slides/01-meet-the-toolkit-slides.html#a-short-list-for-now-of-r-essentials",
+    "title": "Meet the Toolkit",
+    "section": "A short list (for now) of R essentials",
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#r-essentials-continued",
+    "href": "slides/01-meet-the-toolkit-slides.html#r-essentials-continued",
+    "title": "Meet the Toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\nData frames: like the spreadsheets of R\n\nEach row of a data frame is an observation\n\nEach column of a data frame is a variable"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#r-packages",
+    "href": "slides/01-meet-the-toolkit-slides.html#r-packages",
+    "title": "Meet the Toolkit",
+    "section": "R packages",
+    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of 27 August 2024, there are 21,168 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2CRAN contributed packages."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#tidyverse",
+    "href": "slides/01-meet-the-toolkit-slides.html#tidyverse",
+    "title": "Meet the Toolkit",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is a collection of R packages designed for data science\n\n\n\nAll packages share an underlying philosophy and a common grammar"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#quarto-1",
+    "href": "slides/01-meet-the-toolkit-slides.html#quarto-1",
+    "title": "Meet the Toolkit",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks; narrative (normal text) goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#tour-quarto",
+    "href": "slides/01-meet-the-toolkit-slides.html#tour-quarto",
+    "title": "Meet the Toolkit",
+    "section": "Tour: Quarto",
+    "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nGo to RStudio and open the document ae-01-meet-the-penguins.qmd."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#tour-recap-quarto",
+    "href": "slides/01-meet-the-toolkit-slides.html#tour-recap-quarto",
+    "title": "Meet the Toolkit",
+    "section": "Tour recap: Quarto",
+    "text": "Tour recap: Quarto"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#how-will-we-use-quarto",
+    "href": "slides/01-meet-the-toolkit-slides.html#how-will-we-use-quarto",
+    "title": "Meet the Toolkit",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#git-and-github-1",
+    "href": "slides/01-meet-the-toolkit-slides.html#git-and-github-1",
+    "title": "Meet the Toolkit",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#versioning---done-badly",
+    "href": "slides/01-meet-the-toolkit-slides.html#versioning---done-badly",
+    "title": "Meet the Toolkit",
+    "section": "Versioning - done badly",
+    "text": "Versioning - done badly"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#versioning---done-better",
+    "href": "slides/01-meet-the-toolkit-slides.html#versioning---done-better",
+    "title": "Meet the Toolkit",
+    "section": "Versioning - done better",
+    "text": "Versioning - done better"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#versioning---done-even-better",
+    "href": "slides/01-meet-the-toolkit-slides.html#versioning---done-even-better",
+    "title": "Meet the Toolkit",
+    "section": "Versioning - done even better",
+    "text": "Versioning - done even better\n\nwith human readable messages"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#how-will-we-use-git-and-github",
+    "href": "slides/01-meet-the-toolkit-slides.html#how-will-we-use-git-and-github",
+    "title": "Meet the Toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#how-will-we-use-git-and-github-1",
+    "href": "slides/01-meet-the-toolkit-slides.html#how-will-we-use-git-and-github-1",
+    "title": "Meet the Toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#how-will-we-use-git-and-github-2",
+    "href": "slides/01-meet-the-toolkit-slides.html#how-will-we-use-git-and-github-2",
+    "title": "Meet the Toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#how-will-we-use-git-and-github-3",
+    "href": "slides/01-meet-the-toolkit-slides.html#how-will-we-use-git-and-github-3",
+    "title": "Meet the Toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#git-and-github-tips",
+    "href": "slides/01-meet-the-toolkit-slides.html#git-and-github-tips",
+    "title": "Meet the Toolkit",
+    "section": "Git and GitHub tips",
+    "text": "Git and GitHub tips\n\n\nThere are so many and very few people know them all. 99% of the time you will use git to commit, push, and pull:\n\ncommit: tell git to keep track of what changes you’ve made - use a message!!\npush: add the changes to the repository (folder)\npull: get changes from the repository (folder)\n\n\nThere is a great resource for working with git and R: happygitwithr.com. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#tour-git-github",
+    "href": "slides/01-meet-the-toolkit-slides.html#tour-git-github",
+    "title": "Meet the Toolkit",
+    "section": "Tour: Git + GitHub",
+    "text": "Tour: Git + GitHub\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nGo to the course GitHub organization and clone ae-your_github_name repo to your container."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#tour-recap-git-github",
+    "href": "slides/01-meet-the-toolkit-slides.html#tour-recap-git-github",
+    "title": "Meet the Toolkit",
+    "section": "Tour recap: Git + GitHub",
+    "text": "Tour recap: Git + GitHub\n\nFind your application repo, that will always be named using the naming convention assignment_title-your_github_name\nClick on the green “Code” button, make sure SSH is selected, copy the repo URL"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#tour-recap-git-github-1",
+    "href": "slides/01-meet-the-toolkit-slides.html#tour-recap-git-github-1",
+    "title": "Meet the Toolkit",
+    "section": "Tour recap: Git + GitHub",
+    "text": "Tour recap: Git + GitHub\nOnce we made changes to our Quarto document, we\n\nwent to the Git pane in RStudio\nstaged our changes by clicking the checkboxes next to the relevant files\ncommitted our changes with an informative commit message\npushed our changes to our application exercise repos\nconfirmed on GitHub that we could see our changes pushed from RStudio"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#lets-practice-ae01",
+    "href": "slides/01-meet-the-toolkit-slides.html#lets-practice-ae01",
+    "title": "Meet the Toolkit",
+    "section": "Let’s Practice: AE01",
+    "text": "Let’s Practice: AE01"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html",
+    "href": "slides/01-meet-the-toolkit.html",
+    "title": "Meet the Toolkit",
+    "section": "",
+    "text": "If you have not yet finished the Getting to Know You survey, please do so ASAP!\nMake your appointments in the Testing Center now!\nAny questions about the syllabus??"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#reminders",
+    "href": "slides/01-meet-the-toolkit.html#reminders",
+    "title": "Meet the Toolkit",
+    "section": "",
+    "text": "If you have not yet finished the Getting to Know You survey, please do so ASAP!\nMake your appointments in the Testing Center now!\nAny questions about the syllabus??"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#course-toolkit",
+    "href": "slides/01-meet-the-toolkit.html#course-toolkit",
+    "title": "Meet the Toolkit",
+    "section": "Course toolkit",
+    "text": "Course toolkit\n\n\nCourse operation\n\nMaterials: sta199-f24.github.io\n\nSubmission: Gradescope\nDiscussion: Ed Discussion\nGradebook: Canvas\n\n\n\nDoing data science\n\nComputing:\n\nR\n\nRStudio\n\ntidyverse\n\nQuarto\n\n\n\nVersion control and collaboration:\n\nGit\n\nGitHub"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#learning-goals",
+    "href": "slides/01-meet-the-toolkit.html#learning-goals",
+    "title": "Meet the Toolkit",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\n\ngain insight from data, reproducibly, using modern programming tools and techniques\n\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control) and collaboratively, using modern programming tools and techniques"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
+    "href": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
+    "title": "Meet the Toolkit",
+    "section": "Reproducibility checklist",
+    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\n. . .\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n. . .\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english",
+    "href": "slides/01-meet-the-toolkit.html#an-analogy-to-english",
+    "title": "Meet the Toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english-1",
+    "href": "slides/01-meet-the-toolkit.html#an-analogy-to-english-1",
+    "title": "Meet the Toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english-2",
+    "href": "slides/01-meet-the-toolkit.html#an-analogy-to-english-2",
+    "title": "Meet the Toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english-3",
+    "href": "slides/01-meet-the-toolkit.html#an-analogy-to-english-3",
+    "title": "Meet the Toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english-4",
+    "href": "slides/01-meet-the-toolkit.html#an-analogy-to-english-4",
+    "title": "Meet the Toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "href": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "title": "Meet the Toolkit",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\n\nPackages enable lots of functionality\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-vs.-rstudio-another-analogy",
+    "href": "slides/01-meet-the-toolkit.html#r-vs.-rstudio-another-analogy",
+    "title": "Meet the Toolkit",
+    "section": "R vs. RStudio: Another Analogy",
+    "text": "R vs. RStudio: Another Analogy\n\n\n\n\n\n\nSource: Modern Dive."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
+    "title": "Meet the Toolkit",
+    "section": "Tour: R + RStudio",
+    "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nGo to your container and launch RStudio."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
+    "title": "Meet the Toolkit",
+    "section": "Tour recap: R + RStudio",
+    "text": "Tour recap: R + RStudio"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#a-short-list-for-now-of-r-essentials",
+    "href": "slides/01-meet-the-toolkit.html#a-short-list-for-now-of-r-essentials",
+    "title": "Meet the Toolkit",
+    "section": "A short list (for now) of R essentials",
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-essentials-continued",
+    "href": "slides/01-meet-the-toolkit.html#r-essentials-continued",
+    "title": "Meet the Toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\nData frames: like the spreadsheets of R\n\nEach row of a data frame is an observation\n\nEach column of a data frame is a variable"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-packages",
+    "href": "slides/01-meet-the-toolkit.html#r-packages",
+    "title": "Meet the Toolkit",
+    "section": "R packages",
+    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of 27 August 2024, there are 21,168 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2CRAN contributed packages."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tidyverse",
+    "href": "slides/01-meet-the-toolkit.html#tidyverse",
+    "title": "Meet the Toolkit",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is a collection of R packages designed for data science\n\n\n\nAll packages share an underlying philosophy and a common grammar"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#quarto-1",
+    "href": "slides/01-meet-the-toolkit.html#quarto-1",
+    "title": "Meet the Toolkit",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks; narrative (normal text) goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-quarto",
+    "href": "slides/01-meet-the-toolkit.html#tour-quarto",
+    "title": "Meet the Toolkit",
+    "section": "Tour: Quarto",
+    "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nGo to RStudio and open the document ae-01-meet-the-penguins.qmd."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-quarto",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-quarto",
+    "title": "Meet the Toolkit",
+    "section": "Tour recap: Quarto",
+    "text": "Tour recap: Quarto"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
+    "title": "Meet the Toolkit",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#git-and-github-1",
+    "href": "slides/01-meet-the-toolkit.html#git-and-github-1",
+    "title": "Meet the Toolkit",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#versioning---done-badly",
+    "href": "slides/01-meet-the-toolkit.html#versioning---done-badly",
+    "title": "Meet the Toolkit",
+    "section": "Versioning - done badly",
+    "text": "Versioning - done badly"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#versioning---done-better",
+    "href": "slides/01-meet-the-toolkit.html#versioning---done-better",
+    "title": "Meet the Toolkit",
+    "section": "Versioning - done better",
+    "text": "Versioning - done better"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#versioning---done-even-better",
+    "href": "slides/01-meet-the-toolkit.html#versioning---done-even-better",
+    "title": "Meet the Toolkit",
+    "section": "Versioning - done even better",
+    "text": "Versioning - done even better\n\nwith human readable messages"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github",
+    "title": "Meet the Toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-1",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-1",
+    "title": "Meet the Toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-2",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-2",
+    "title": "Meet the Toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-3",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-3",
+    "title": "Meet the Toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#git-and-github-tips",
+    "href": "slides/01-meet-the-toolkit.html#git-and-github-tips",
+    "title": "Meet the Toolkit",
+    "section": "Git and GitHub tips",
+    "text": "Git and GitHub tips\n\n\nThere are so many and very few people know them all. 99% of the time you will use git to commit, push, and pull:\n\ncommit: tell git to keep track of what changes you’ve made - use a message!!\npush: add the changes to the repository (folder)\npull: get changes from the repository (folder)\n\n\nThere is a great resource for working with git and R: happygitwithr.com. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-git-github",
+    "href": "slides/01-meet-the-toolkit.html#tour-git-github",
+    "title": "Meet the Toolkit",
+    "section": "Tour: Git + GitHub",
+    "text": "Tour: Git + GitHub\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nGo to the course GitHub organization and clone ae-your_github_name repo to your container."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-git-github",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-git-github",
+    "title": "Meet the Toolkit",
+    "section": "Tour recap: Git + GitHub",
+    "text": "Tour recap: Git + GitHub\n\nFind your application repo, that will always be named using the naming convention assignment_title-your_github_name\nClick on the green “Code” button, make sure SSH is selected, copy the repo URL"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-git-github-1",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-git-github-1",
+    "title": "Meet the Toolkit",
+    "section": "Tour recap: Git + GitHub",
+    "text": "Tour recap: Git + GitHub\nOnce we made changes to our Quarto document, we\n\nwent to the Git pane in RStudio\nstaged our changes by clicking the checkboxes next to the relevant files\ncommitted our changes with an informative commit message\npushed our changes to our application exercise repos\nconfirmed on GitHub that we could see our changes pushed from RStudio"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#lets-practice-ae01",
+    "href": "slides/01-meet-the-toolkit.html#lets-practice-ae01",
+    "title": "Meet the Toolkit",
+    "section": "Let’s Practice: AE01",
+    "text": "Let’s Practice: AE01"
   },
   {
     "objectID": "slides/00-welcome-199.html",
@@ -1214,6 +1459,244 @@
     "text": "This week’s tasks\n\nComplete Lab 0\n\nComputational setup\nGetting to know you survey\n\n\nRead the syllabus\nGet started with data science!"
   },
   {
+    "objectID": "slides/00-welcome-199-slides.html#meet-the-team",
+    "href": "slides/00-welcome-199-slides.html#meet-the-team",
+    "title": "Welcome to STA 199!",
+    "section": "Meet the team",
+    "text": "Meet the team\n\nInstructorMarie Neubrander\nOld Chem 203\nmarie.neubrander@duke.edu\n\nCourse Coordinator, Lab InstructorDr. Mary Knox\nmary.knox@duke.edu"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#meet-each-other",
+    "href": "slides/00-welcome-199-slides.html#meet-each-other",
+    "title": "Welcome to STA 199!",
+    "section": "Meet each other!",
+    "text": "Meet each other!\n\nName\nYear\nHometown\nSomething you plan to do this summer"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#meet-data-science",
+    "href": "slides/00-welcome-199-slides.html#meet-data-science",
+    "title": "Welcome to STA 199!",
+    "section": "Meet data science",
+    "text": "Meet data science\n\nData science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#excel---not",
+    "href": "slides/00-welcome-199-slides.html#excel---not",
+    "title": "Welcome to STA 199!",
+    "section": "Excel - not…",
+    "text": "Excel - not…"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#r",
+    "href": "slides/00-welcome-199-slides.html#r",
+    "title": "Welcome to STA 199!",
+    "section": "R",
+    "text": "R"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#data-science-life-cycle-1",
+    "href": "slides/00-welcome-199-slides.html#data-science-life-cycle-1",
+    "title": "Welcome to STA 199!",
+    "section": "Data science life cycle",
+    "text": "Data science life cycle"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#import",
+    "href": "slides/00-welcome-199-slides.html#import",
+    "title": "Welcome to STA 199!",
+    "section": "Import",
+    "text": "Import"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#tidy-transform",
+    "href": "slides/00-welcome-199-slides.html#tidy-transform",
+    "title": "Welcome to STA 199!",
+    "section": "Tidy + transform",
+    "text": "Tidy + transform"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#visualize",
+    "href": "slides/00-welcome-199-slides.html#visualize",
+    "title": "Welcome to STA 199!",
+    "section": "Visualize",
+    "text": "Visualize"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#model",
+    "href": "slides/00-welcome-199-slides.html#model",
+    "title": "Welcome to STA 199!",
+    "section": "Model",
+    "text": "Model"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#understand",
+    "href": "slides/00-welcome-199-slides.html#understand",
+    "title": "Welcome to STA 199!",
+    "section": "Understand",
+    "text": "Understand"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#communicate",
+    "href": "slides/00-welcome-199-slides.html#communicate",
+    "title": "Welcome to STA 199!",
+    "section": "Communicate",
+    "text": "Communicate"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#understand-communicate",
+    "href": "slides/00-welcome-199-slides.html#understand-communicate",
+    "title": "Welcome to STA 199!",
+    "section": "Understand + communicate",
+    "text": "Understand + communicate"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#program",
+    "href": "slides/00-welcome-199-slides.html#program",
+    "title": "Welcome to STA 199!",
+    "section": "Program",
+    "text": "Program"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#activities",
+    "href": "slides/00-welcome-199-slides.html#activities",
+    "title": "Welcome to STA 199!",
+    "section": "Activities",
+    "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures and labs, office hours, team meetings\nPractice with application exercises during lecture\nUse what you’ve learned to analyze real-world data\n\nLab assignments x 6\nExams x 2\nTerm project"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#application-exercises",
+    "href": "slides/00-welcome-199-slides.html#application-exercises",
+    "title": "Welcome to STA 199!",
+    "section": "Application exercises",
+    "text": "Application exercises\n\nDaily-ish in lecture\n“Graded” for attempt, not accuracy\nPractice this week; graded thereafter\nAt least one commit by 10:45am of the day of lecture\nTurn in at least 80% for full credit"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#labs",
+    "href": "slides/00-welcome-199-slides.html#labs",
+    "title": "Welcome to STA 199!",
+    "section": "Labs",
+    "text": "Labs\n\nMonday and Thursday; right after lecture\nStart in lab session, complete at home\n\nDue dates (typically):\n\nMonday Lab: Due Wednesday at 11:59 PM\nThursday Lab: Due Sunday at 11:59 PM\n\n\nDiscussion with classmates = 🤩 ; Copying = ❌\nLowest score dropped"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#exams",
+    "href": "slides/00-welcome-199-slides.html#exams",
+    "title": "Welcome to STA 199!",
+    "section": "Exams",
+    "text": "Exams\n\nTwo exams, each 20%\n\nMidterm (June 3) has two parts:\n\nIn class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”) – 70% of the grade\nTake home: After the in class exam; analyze a dataset – 30% of the grade\n\n\nFinal (June 26): Closed book, one sheet of notes (“cheat sheet”).\n\n\n\n\n\n\n\nCaution\n\n\nExam dates cannot be changed. If you cannot take the exams on these dates, please have a discussion with me today."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#project",
+    "href": "slides/00-welcome-199-slides.html#project",
+    "title": "Welcome to STA 199!",
+    "section": "Project",
+    "text": "Project\n\nDataset of your choice, method of your choice\nTeamwork\nPresentation and write-up\nPresentations in the last lab (June 23)\nInterim deadlines, peer review on content, peer evaluation for team contribution\nSome lab sessions allocated to project progress\n\n\n\n\n\n\n\nCaution\n\n\nFinal presentation date cannot be changed; you must complete the project to pass this class."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#teams",
+    "href": "slides/00-welcome-199-slides.html#teams",
+    "title": "Welcome to STA 199!",
+    "section": "Teams",
+    "text": "Teams\n\nAssigned by me\nProject\nPeer evaluation during teamwork and after completion\nExpectations and roles\n\nEveryone is expected to contribute equal effort\n\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#grading",
+    "href": "slides/00-welcome-199-slides.html#grading",
+    "title": "Welcome to STA 199!",
+    "section": "Grading",
+    "text": "Grading\n\n\nCategory\nPercentage\n\n\n\nLabs\n30%\n\n\nProject\n20%\n\n\nExam 1\n20%\n\n\nExam 2\n20%\n\n\nApplication Exercises\n5%\n\n\nLab attendance\n5%\n\n\n\n See course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#support",
+    "href": "slides/00-welcome-199-slides.html#support",
+    "title": "Welcome to STA 199!",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours\nAsk and answer questions on the Ed discussion board\nReserve email for questions on personal matters and/or grades"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#office-hours",
+    "href": "slides/00-welcome-199-slides.html#office-hours",
+    "title": "Welcome to STA 199!",
+    "section": "Office Hours",
+    "text": "Office Hours\nMarie: Old Chem 203\n\nTuesday 3:30PM - 5:30PM\nFriday 1:00 - 3:00 PM\n\nMary: ZoomTime TBD"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#announcements",
+    "href": "slides/00-welcome-199-slides.html#announcements",
+    "title": "Welcome to STA 199!",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements tool) and sent via email, be sure to check both regularly\nAll information is on the course website - please refer to it often!"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#homepage",
+    "href": "slides/00-welcome-199-slides.html#homepage",
+    "title": "Welcome to STA 199!",
+    "section": "Homepage",
+    "text": "Homepage\nhttps://sta199-su25.github.io\n\nAll course materials\nLinks to Canvas, GitHub, RStudio containers, etc."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#course-toolkit",
+    "href": "slides/00-welcome-199-slides.html#course-toolkit",
+    "title": "Welcome to STA 199!",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-su25\n\nRStudio containers: cmgr.oit.duke.edu/containers\n\nCommunication: Ed Discussion\nAssignment submission and feedback: Gradescope"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#accessibility",
+    "href": "slides/00-welcome-199-slides.html#accessibility",
+    "title": "Welcome to STA 199!",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better!"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#late-work-waivers-regrades-policy",
+    "href": "slides/00-welcome-199-slides.html#late-work-waivers-regrades-policy",
+    "title": "Welcome to STA 199!",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it\n\n\n\n\n\n\n\nIf you need testing accommodations\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#collaboration",
+    "href": "slides/00-welcome-199-slides.html#collaboration",
+    "title": "Welcome to STA 199!",
+    "section": "Collaboration",
+    "text": "Collaboration\n\nLabs: discussing and helping is fine. Sharing your solutions and copying others is not;\nExams: collaboration of any kind is completely forbidden on any part of any exam;\nProjects: collaboration of any kind is enthusiastically encouraged within your team. Between teams, it’s the same as labs; do not directly share your stuff or copy off of others."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#use-of-ai-tools",
+    "href": "slides/00-welcome-199-slides.html#use-of-ai-tools",
+    "title": "Welcome to STA 199!",
+    "section": "Use of AI tools",
+    "text": "Use of AI tools\n\n\n AI tools for code:\n\nSure, but be careful/critical! Working code != correct/good code.\nMust explicitly cite with a direct url linking to the conversation you had.\n\n\n AI tools for narrative: Absolutely not!\n AI tools for learning: Sure, but be careful/critical!"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#academic-integrity",
+    "href": "slides/00-welcome-199-slides.html#academic-integrity",
+    "title": "Welcome to STA 199!",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#what-is-github",
+    "href": "slides/00-welcome-199-slides.html#what-is-github",
+    "title": "Welcome to STA 199!",
+    "section": "What is GitHub?",
+    "text": "What is GitHub?\n\nMore on this tomorrow - basically, it is the Google Drive of coding!"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#ae0-make-your-github-account",
+    "href": "slides/00-welcome-199-slides.html#ae0-make-your-github-account",
+    "title": "Welcome to STA 199!",
+    "section": "AE0: Make your GitHub account",
+    "text": "AE0: Make your GitHub account\n Find AE0 on the course website!"
+  },
+  {
+    "objectID": "slides/00-welcome-199-slides.html#this-weeks-tasks",
+    "href": "slides/00-welcome-199-slides.html#this-weeks-tasks",
+    "title": "Welcome to STA 199!",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nComplete Lab 0\n\nComputational setup\nGetting to know you survey\n\n\nRead the syllabus\nGet started with data science!"
+  },
+  {
     "objectID": "course-support.html",
     "href": "course-support.html",
     "title": "Course support",
@@ -1305,7 +1788,7 @@
     "href": "index.html",
     "title": "STA 199: Intro to Data Science and Statistical Thinking",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Vis\n\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nGrammar of Data Transform\n\n\n\n\n\n\nMon, May 19\nLab 1\n\n\n\n\n\n\nTue, May 20\nExploring Data I\n\n\n\n\n\n\nWed, May 21\nExploring Data II\n\nLab 1 - 11:59PM ET\n\n\n\n\nThu, May 22\nTidying Data\n\n\n\n\n\n\nThu, May 22\nLab 2\n\n\n\n\n\n\nFri, May 23\nJoining Data\n\n\n\n\n\n\nSun, May 25\n\n\nLab 2 - 11:59PM ET\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n\n\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n\n\n\n\n\n\nThu, May 29\nWeb Scraping\n\n\n\n\n\n\nThu, May 29\nLab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n\n\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Vis\n\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nGrammar of Data Transform\n\n\n\n\n\n\nMon, May 19\nLab 1\n\n\n\n\n\n\nTue, May 20\nExploring Data I\n\n\n\n\n\n\nWed, May 21\nExploring Data II\n\nLab 1 - 11:59PM ET\n\n\n\n\nThu, May 22\nTidying Data\n\n\n\n\n\n\nThu, May 22\nLab 2\n\n\n\n\n\n\nFri, May 23\nJoining Data\n\n\n\n\n\n\nSun, May 25\n\n\nLab 2 - 11:59PM ET\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n\n\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n\n\n\n\n\n\nThu, May 29\nWeb Scraping\n\n\n\n\n\n\nThu, May 29\nLab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n\n\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -1544,11 +2027,60 @@
     "text": "Data visualization and transformation\n\nUN Votes\nFirst look at R amd RStudio.\n\n\n\nFirst look at Palmer Penguins\nFirst look at data science with the tidyverse.\n\n\n\nFlights and pipes\nData transformation\n\n\n\nStarwars characters\nData visualization\n\n\n\nDiving deeper with Palmer Penguins\nData visualization and transformation"
   },
   {
-    "objectID": "ae/ae-01-meet-the-penguins.html",
-    "href": "ae/ae-01-meet-the-penguins.html",
+    "objectID": "ae/ae-01-github.html",
+    "href": "ae/ae-01-github.html",
     "title": "AE 01: Meet the penguins",
     "section": "",
-    "text": "For this application exercise, we’ll use the tidyverse and palmerpenguins packages.\n\nlibrary(tidyverse)\n\nWarning: package 'tidyr' was built under R version 4.4.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\nWarning: package 'palmerpenguins' was built under R version 4.4.1\n\n\nThe dataset we will visualize is called penguins. Let’s glimpse() at it.\n\n\nYour turn: Replace #add code here with the code for “glimpse”ing at the data penguins data frame – glimpse(penguins). Render the document and view the output.\n\n\n# add code here\n\n\n\nDemo: First, replace the blank below with the number of rows in the penguins data frame based on the output of the chunk below. Then, replace it with “inline code” and render again.\n\n\nnrow(penguins)\n\n[1] 344\n\n\nThere are ___ penguins in the penguins data frame."
+    "text": "The goal of this application exercise is to get exposure to using the computational toolkit. Let’s get started!"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#quarto-code-chunks",
+    "href": "ae/ae-01-github.html#quarto-code-chunks",
+    "title": "AE 01: Meet the penguins",
+    "section": "Quarto Code Chunks",
+    "text": "Quarto Code Chunks\n\nCode goes in “code chunks”: these are grey boxes and can be recognized by ‘{r}’\nTo run a code chunk, click the little green right facing arrow; to run a code chunk and all preceding code chunks, use the downward pointing arrow.\nText goes outside of the code chunks!\n\n\n# this is a code chunk\n\n\n\n\n\n\n\nWhat’s going on?\n\n\n\nWhat’s that text in the code chunk?\n\n#| label: code-chunk : this blue text at the top is a label: basically, it names the code chunk for easy reference. Code chunk names cannot be repeated!\n\\# this is a code chunk : this green text is a comment. A comment goes in a code chunk, but functions like normal text\n\n\n\nWhat’s the difference between a label and a comment?"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#load-packages",
+    "href": "ae/ae-01-github.html#load-packages",
+    "title": "AE 01: Meet the penguins",
+    "section": "Load Packages",
+    "text": "Load Packages\nFor this application exercise, we’ll use the tidyverse and palmerpenguins packages.\n\nlibrary(tidyverse)\n\nWarning: package 'tidyr' was built under R version 4.4.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\nWarning: package 'palmerpenguins' was built under R version 4.4.1"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#examine-data",
+    "href": "ae/ae-01-github.html#examine-data",
+    "title": "AE 01: Meet the penguins",
+    "section": "Examine Data",
+    "text": "Examine Data\nThe dataset we will use is called penguins; it was loaded with the palmerpenguins package. You’ll notice it’s not visible yet in the environment pane - let’s put it there.\n\ndata(\"penguins\")\n\nTwo useful functions to examine it are glimpse() and View()\nLet’s glimpse() at it.\n\n\nYour turn: Replace #add code here with the code for “glimpse” ing at the data penguins data frame – glimpse(penguins). Render the document and view the output.\n\n\n# add code here\n\nNow, let’s View() it.\n\n\nYour turn: Replace #add code here with the code for “view” ing at the data penguins data frame – View(penguins).\n\n\n# add code here\n\nWhat information can you see from these two operations? How are they different?"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#some-r-fundamentals",
+    "href": "ae/ae-01-github.html#some-r-fundamentals",
+    "title": "AE 01: Meet the penguins",
+    "section": "Some R Fundamentals",
+    "text": "Some R Fundamentals\nYou just used some functions above - library(), data(), glimpse(), and view(). Let’s practice with some more!\nGetting Help\nThere is a function that tells you how many rows are in the data frame: nrow(). Perhaps this is your first time using it and you aren’t sure how it works: you can use ? to see the documentation.\n\n\nYour turn: Write code to get help with the nrow function\n\n\n#add code here\n\n(This works for any function, not just nrow!)\n\n\nYour Turn: Now, let’s compute the number of rows in the data frame:\n\n\n#add code here\n\nOh no!! Errors!!\nUnfortunately, not every time you run a function it will work correctly.\nWhat happens if you run mean() on the data frame? Does this even make sense???\n\n\nYour turn: try running this function on the penguins data frame and see what happens!\n\n\n# add code here\n\nAccessing Columns\nAs we saw with the mean example, not every function works on a full data frame. Sometimes, you need to access just one column. To do that, we can use $ as dataframe$column_name.\n\n\nYour turn: In the code chunk below, compute the mean of the bill_depth_mm variable in the penguins data frame.\n\n\n#add code here\n\nHmmm… something weird is still happening! What does this NA value mean?? Do you have any guesses??? How can we fix this?\n&gt;1 Argument\nTo fix our issue with mean, we need to tell the function something else (that is, use more than one argument).\n\n\nYour turn: First, get help with the ? . Then, try to compute the mean value, ignoring the NA values\n\n\n#add code here"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#how-is-the-document-looking",
+    "href": "ae/ae-01-github.html#how-is-the-document-looking",
+    "title": "AE 01: Meet the penguins",
+    "section": "How is the document looking?",
+    "text": "How is the document looking?\nClick render to see!"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#lets-push-our-changes-to-github",
+    "href": "ae/ae-01-github.html#lets-push-our-changes-to-github",
+    "title": "AE 01: Meet the penguins",
+    "section": "Let’s push our changes to GitHub!",
+    "text": "Let’s push our changes to GitHub!\nRemember:\n\nStage changes with the checkboxes\nCommit with a message\nPush!"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#miscellaneous",
+    "href": "ae/ae-01-github.html#miscellaneous",
+    "title": "AE 01: Meet the penguins",
+    "section": "Miscellaneous:",
+    "text": "Miscellaneous:\nIf there is extra time in class, we’ll add some other tips here!"
   },
   {
     "objectID": "course-links.html",
