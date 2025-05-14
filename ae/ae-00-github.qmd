@@ -8,7 +8,7 @@ Normally, these AEs will contain coding practice assignments.
 However, before you're able to start coding, you will need a Github account.
 
 In tomorrow's lecture (and throughout the rest of the class), you will learn more about how GitHub works.
-For now, understand that ***GitHub is like the Google Drive of coding.*** You can upload files, track changes over time, and work with others without overwriting each other\'s work.
+For now, understand that ***GitHub is like the Google Drive of coding.*** You can upload files, track changes over time, and work with others without overwriting each other's work.
 
 In this class, we will have a **GitHub organization** so that:
 
