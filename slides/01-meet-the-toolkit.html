@@ -96,7 +96,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="../style/sta199.scss">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="../style/sta199.scss">
 <meta property="og:title" content="Meet the Toolkit – STA 199">
 <meta property="og:description" content="Lecture 1">
 <meta property="og:image" content="https://sta199-su25.github.io/slides/images/R-english-analogy/1.jpg">
@@ -253,12 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <a href="#ask-so-many-questions" id="toc-ask-so-many-questions" class="nav-link" data-scroll-target="#ask-so-many-questions">Ask so many questions!!!</a>
   <ul class="collapse">
 <li><a href="#course-toolkit" id="toc-course-toolkit" class="nav-link" data-scroll-target="#course-toolkit">Course toolkit</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#toolkit-computing" id="toc-toolkit-computing" class="nav-link" data-scroll-target="#toolkit-computing">Toolkit: Computing</a>
-  <ul class="collapse">
-<li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning goals</a></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning goals</a></li>
   </ul>
 </li>
   <li>
@@ -276,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li>
 <a href="#r-and-rstudio" id="toc-r-and-rstudio" class="nav-link" data-scroll-target="#r-and-rstudio">R and RStudio</a>
   <ul class="collapse">
-<li><a href="#r-and-rstudio-1" id="toc-r-and-rstudio-1" class="nav-link" data-scroll-target="#r-and-rstudio-1">R and RStudio</a></li>
+<li><a href="#what-are-r-and-rstudio" id="toc-what-are-r-and-rstudio" class="nav-link" data-scroll-target="#what-are-r-and-rstudio">What are R and RStudio?</a></li>
   <li><a href="#r-vs.-rstudio-another-analogy" id="toc-r-vs.-rstudio-another-analogy" class="nav-link" data-scroll-target="#r-vs.-rstudio-another-analogy">R vs.&nbsp;RStudio: Another Analogy</a></li>
   <li><a href="#tour-r-rstudio" id="toc-tour-r-rstudio" class="nav-link" data-scroll-target="#tour-r-rstudio">Tour: R + RStudio</a></li>
   <li><a href="#tour-recap-r-rstudio" id="toc-tour-recap-r-rstudio" class="nav-link" data-scroll-target="#tour-recap-r-rstudio">Tour recap: R + RStudio</a></li>
@@ -292,16 +312,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li>
 <a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a>
   <ul class="collapse">
-<li><a href="#quarto-1" id="toc-quarto-1" class="nav-link" data-scroll-target="#quarto-1">Quarto</a></li>
+<li><a href="#what-is-quarto" id="toc-what-is-quarto" class="nav-link" data-scroll-target="#what-is-quarto">What is Quarto?</a></li>
   <li><a href="#tour-quarto" id="toc-tour-quarto" class="nav-link" data-scroll-target="#tour-quarto">Tour: Quarto</a></li>
   <li><a href="#tour-recap-quarto" id="toc-tour-recap-quarto" class="nav-link" data-scroll-target="#tour-recap-quarto">Tour recap: Quarto</a></li>
   <li><a href="#how-will-we-use-quarto" id="toc-how-will-we-use-quarto" class="nav-link" data-scroll-target="#how-will-we-use-quarto">How will we use Quarto?</a></li>
   </ul>
 </li>
   <li>
-<a href="#toolkit-version-control" id="toc-toolkit-version-control" class="nav-link" data-scroll-target="#toolkit-version-control">Toolkit: Version Control</a>
+<a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and GitHub</a>
   <ul class="collapse">
-<li><a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and GitHub</a></li>
+<li><a href="#what-are-git-and-github" id="toc-what-are-git-and-github" class="nav-link" data-scroll-target="#what-are-git-and-github">What are Git and GitHub?</a></li>
   <li><a href="#versioning---done-badly" id="toc-versioning---done-badly" class="nav-link" data-scroll-target="#versioning---done-badly">Versioning - done badly</a></li>
   <li><a href="#versioning---done-better" id="toc-versioning---done-better" class="nav-link" data-scroll-target="#versioning---done-better">Versioning - done better</a></li>
   <li><a href="#versioning---done-even-better" id="toc-versioning---done-even-better" class="nav-link" data-scroll-target="#versioning---done-even-better">Versioning - done even better</a></li>
@@ -387,8 +407,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-</section></section><section id="toolkit-computing" class="level1"><h1>Toolkit: Computing</h1>
-<section id="learning-goals" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="learning-goals">Learning goals</h2>
+</section><section id="learning-goals" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="learning-goals">Learning goals</h2>
 <p>By the end of the course, you will be able to…</p>
 <div class="incremental">
 <ul class="incremental">
@@ -419,9 +438,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Can the code be used for other data?</li>
 <li>Can you extend the code to do other things?</li>
 </ul></section><section id="toolkit-for-reproducibility" class="level2"><h2 class="anchored" data-anchor-id="toolkit-for-reproducibility">Toolkit for reproducibility</h2>
-<p>- Scriptability $\rightarrow$ R</p>
-<p>- Literate programming (code, narrative, output in one place) $\rightarrow$ Quarto</p>
-<p>- Version control $\rightarrow$ Git / GitHub</p>
+<p>- Scriptability <span class="math inline">\(\rightarrow\)</span> R</p>
+<p>- Literate programming (code, narrative, output in one place) <span class="math inline">\(\rightarrow\)</span> Quarto</p>
+<p>- Version control <span class="math inline">\(\rightarrow\)</span> Git / GitHub</p>
 </section><section id="an-analogy-to-english" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english">An Analogy to English</h2>
 <p><img src="images/R-english-analogy/1.jpg" class="img-fluid" alt="R"></p>
 </section><section id="an-analogy-to-english-1" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english-1">An Analogy to English</h2>
@@ -433,7 +452,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section><section id="an-analogy-to-english-4" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english-4">An Analogy to English</h2>
 <p><img src="images/R-english-analogy/5.jpg" class="img-fluid" alt="github"></p>
 </section></section><section id="r-and-rstudio" class="level1 page-columns page-full"><h1>R and RStudio</h1>
-<section id="r-and-rstudio-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="r-and-rstudio-1">R and RStudio</h2>
+<section id="what-are-r-and-rstudio" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="what-are-r-and-rstudio">What are R and RStudio?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -555,10 +574,26 @@ Note
 </div>
 </section><section id="r-essentials-continued-3" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="r-essentials-continued-3">R essentials (continued)</h2>
 <ul>
-<li><p>Look out for warning and error messages!!!</p></li>
-<li><p>These are essential for figuring out where your code is going wrong. If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.</p></li>
+<li>Look out for warning and error messages!!!</li>
 </ul>
-<p>Check your environment pane for the saved object!</p>
+<p><br></p>
+<ul>
+<li>These are essential for figuring out where your code is going wrong.</li>
+</ul>
+<p><br><br></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.</p>
+</div>
+</div>
 </section><section id="r-packages" class="level2 smaller page-columns page-full"><h2 class="smaller anchored" data-anchor-id="r-packages">R packages</h2>
 <div class="incremental">
 <ul class="incremental">
@@ -587,7 +622,7 @@ Note
 </div>
 </div>
 </section></section><section id="quarto" class="level1"><h1>Quarto</h1>
-<section id="quarto-1" class="level2"><h2 class="anchored" data-anchor-id="quarto-1">Quarto</h2>
+<section id="what-is-quarto" class="level2"><h2 class="anchored" data-anchor-id="what-is-quarto">What is Quarto?</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>Fully reproducible reports – each time you render the analysis is ran from the beginning</li>
@@ -619,8 +654,8 @@ Note
 <li>Every application exercise, lab, project, etc. is an Quarto document</li>
 <li>You’ll always have a template Quarto document to start with</li>
 <li>The amount of scaffolding in the template will decrease over the semester</li>
-</ul></section></section><section id="toolkit-version-control" class="level1"><h1>Toolkit: Version Control</h1>
-<section id="git-and-github" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="git-and-github">Git and GitHub</h2>
+</ul></section></section><section id="git-and-github" class="level1"><h1>Git and GitHub</h1>
+<section id="what-are-git-and-github" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="what-are-git-and-github">What are Git and GitHub?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">

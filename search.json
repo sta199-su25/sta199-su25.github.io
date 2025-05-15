@@ -770,7 +770,7 @@
     "href": "slides/01-meet-the-toolkit-slides.html#toolkit-for-reproducibility",
     "title": "Meet the Toolkit",
     "section": "Toolkit for reproducibility",
-    "text": "Toolkit for reproducibility\n- Scriptability $\\rightarrow$ R\n- Literate programming (code, narrative, output in one place) $\\rightarrow$ Quarto\n- Version control $\\rightarrow$ Git / GitHub"
+    "text": "Toolkit for reproducibility\n- Scriptability \\(\\rightarrow\\) R\n- Literate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\n- Version control \\(\\rightarrow\\) Git / GitHub"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english",
@@ -808,11 +808,11 @@
     "text": "An Analogy to English"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit-slides.html#r-and-rstudio-1",
-    "href": "slides/01-meet-the-toolkit-slides.html#r-and-rstudio-1",
+    "objectID": "slides/01-meet-the-toolkit-slides.html#what-are-r-and-rstudio",
+    "href": "slides/01-meet-the-toolkit-slides.html#what-are-r-and-rstudio",
     "title": "Meet the Toolkit",
-    "section": "R and RStudio",
-    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\n\nPackages make R easily extensible\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+    "section": "What are R and RStudio?",
+    "text": "What are R and RStudio?\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\n\nPackages make R easily extensible\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#r-vs.-rstudio-another-analogy",
@@ -868,7 +868,7 @@
     "href": "slides/01-meet-the-toolkit-slides.html#r-essentials-continued-3",
     "title": "Meet the Toolkit",
     "section": "R essentials (continued)",
-    "text": "R essentials (continued)\n\nLook out for warning and error messages!!!\nThese are essential for figuring out where your code is going wrong. If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.\n\nCheck your environment pane for the saved object!"
+    "text": "R essentials (continued)\n\nLook out for warning and error messages!!!\n\n\n\nThese are essential for figuring out where your code is going wrong.\n\n\n\n\n\n\n\n\nNote\n\n\nIf you have trouble understanding what a message is saying, there is a high chance someone has explained the message online."
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#r-packages",
@@ -885,11 +885,11 @@
     "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is a collection of R packages designed for data science\n\n\n\nAll packages share an underlying philosophy and a common grammar"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit-slides.html#quarto-1",
-    "href": "slides/01-meet-the-toolkit-slides.html#quarto-1",
+    "objectID": "slides/01-meet-the-toolkit-slides.html#what-is-quarto",
+    "href": "slides/01-meet-the-toolkit-slides.html#what-is-quarto",
     "title": "Meet the Toolkit",
-    "section": "Quarto",
-    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks; narrative (normal text) goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks; narrative (normal text) goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#tour-quarto",
@@ -913,11 +913,11 @@
     "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit-slides.html#git-and-github",
-    "href": "slides/01-meet-the-toolkit-slides.html#git-and-github",
+    "objectID": "slides/01-meet-the-toolkit-slides.html#what-are-git-and-github",
+    "href": "slides/01-meet-the-toolkit-slides.html#what-are-git-and-github",
     "title": "Meet the Toolkit",
-    "section": "Git and GitHub",
-    "text": "Git and GitHub\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
+    "section": "What are Git and GitHub?",
+    "text": "What are Git and GitHub?\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#versioning---done-badly",
@@ -1043,7 +1043,7 @@
     "href": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
     "title": "Meet the Toolkit",
     "section": "Toolkit for reproducibility",
-    "text": "Toolkit for reproducibility\n- Scriptability $\\rightarrow$ R\n- Literate programming (code, narrative, output in one place) $\\rightarrow$ Quarto\n- Version control $\\rightarrow$ Git / GitHub"
+    "text": "Toolkit for reproducibility\n- Scriptability \\(\\rightarrow\\) R\n- Literate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\n- Version control \\(\\rightarrow\\) Git / GitHub"
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english",
@@ -1081,11 +1081,11 @@
     "text": "An Analogy to English"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
-    "href": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "objectID": "slides/01-meet-the-toolkit.html#what-are-r-and-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#what-are-r-and-rstudio",
     "title": "Meet the Toolkit",
-    "section": "R and RStudio",
-    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\n\nPackages make R easily extensible\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+    "section": "What are R and RStudio?",
+    "text": "What are R and RStudio?\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\n\nPackages make R easily extensible\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#r-vs.-rstudio-another-analogy",
@@ -1141,7 +1141,7 @@
     "href": "slides/01-meet-the-toolkit.html#r-essentials-continued-3",
     "title": "Meet the Toolkit",
     "section": "R essentials (continued)",
-    "text": "R essentials (continued)\n\nLook out for warning and error messages!!!\nThese are essential for figuring out where your code is going wrong. If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.\n\nCheck your environment pane for the saved object!"
+    "text": "R essentials (continued)\n\nLook out for warning and error messages!!!\n\n\n\nThese are essential for figuring out where your code is going wrong.\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf you have trouble understanding what a message is saying, there is a high chance someone has explained the message online."
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#r-packages",
@@ -1158,11 +1158,11 @@
     "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is a collection of R packages designed for data science\n\n\n\nAll packages share an underlying philosophy and a common grammar"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#quarto-1",
-    "href": "slides/01-meet-the-toolkit.html#quarto-1",
+    "objectID": "slides/01-meet-the-toolkit.html#what-is-quarto",
+    "href": "slides/01-meet-the-toolkit.html#what-is-quarto",
     "title": "Meet the Toolkit",
-    "section": "Quarto",
-    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks; narrative (normal text) goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks; narrative (normal text) goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#tour-quarto",
@@ -1186,11 +1186,11 @@
     "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#git-and-github",
-    "href": "slides/01-meet-the-toolkit.html#git-and-github",
+    "objectID": "slides/01-meet-the-toolkit.html#what-are-git-and-github",
+    "href": "slides/01-meet-the-toolkit.html#what-are-git-and-github",
     "title": "Meet the Toolkit",
-    "section": "Git and GitHub",
-    "text": "Git and GitHub\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
+    "section": "What are Git and GitHub?",
+    "text": "What are Git and GitHub?\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#versioning---done-badly",
