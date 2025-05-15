@@ -252,6 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#create-a-github-account" id="toc-create-a-github-account" class="nav-link" data-scroll-target="#create-a-github-account">Create a GitHub account</a></li>
   <li><a href="#set-up-your-ssh-key" id="toc-set-up-your-ssh-key" class="nav-link" data-scroll-target="#set-up-your-ssh-key">Set up your SSH key</a></li>
   <li><a href="#configure-git-to-introduce-yourself" id="toc-configure-git-to-introduce-yourself" class="nav-link" data-scroll-target="#configure-git-to-introduce-yourself">Configure Git to introduce yourself</a></li>
+  <li><a href="#clone-first-repo" id="toc-clone-first-repo" class="nav-link" data-scroll-target="#clone-first-repo">Clone first repo</a></li>
   </ul>
 </li>
   <li><a href="#hello-sta-199" id="toc-hello-sta-199" class="nav-link" data-scroll-target="#hello-sta-199">Hello STA 199!</a></li>
@@ -407,7 +408,7 @@ Note
 <p>For example, mine would be</p>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git_config.html">use_git_config</a></span><span class="op">(</span></span>
-<span>  user.name <span class="op">=</span> <span class="st">"Marie Meubrander"</span>, </span>
+<span>  user.name <span class="op">=</span> <span class="st">"Marie Neubrander"</span>, </span>
 <span>  user.email <span class="op">=</span> <span class="st">"mneubrander@crimson.ua.edu"</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -456,9 +457,19 @@ Need a recap? Watch this video!
 </div>
 </div>
 </div>
+</section><section id="clone-first-repo" class="level2"><h2 class="anchored" data-anchor-id="clone-first-repo">Clone first repo</h2>
+<p>A GitHub repository (repo) is a collection of files hosted on GitHub. Repos are the main way we will distribute files to you during the semester. When you copy the files in a repo to your local computing environment (your container, in this case), that’s called “cloning”. So, let’s clone our first repo:</p>
+<ul>
+<li><p>Go to the course organization at <a href="https://github.com/sta199-su25">github.com/sta199-su25</a> organization on GitHub. Click on the repo with the prefix <strong>ae</strong>. This is your application exercise (AE) repo. It contains the starter documents you need to complete your AE for today’s lecture.</p></li>
+<li><p>Click on the green <strong>CODE</strong> button, select <strong>Use SSH</strong> (this might already be selected by default, and if it is, you’ll see the text <strong>Clone with SSH</strong>). Click on the clipboard icon to copy the repo URL.</p></li>
+<li><p>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</p></li>
+<li><p>Copy and paste the URL of your assignment repo into the dialog box <em>Repository URL</em>. Again, please make sure to have <em>SSH</em> highlighted under <em>Clone</em> when you copy the address.</p></li>
+<li><p>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</p></li>
+</ul>
+<p>You will need to get used to these steps, because you’ll probably clone at least one new repo every week.</p>
 </section></section><section id="hello-sta-199" class="level1"><h1>Hello STA 199!</h1>
 <p>Fill out the course “Getting to know you” <a href="https://canvas.duke.edu/courses/56756/quizzes/35368">survey</a> on Canvas.</p>
-<p>We will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns.</p>
+<p>We will use the information collected in this survey for a variety of goals, including getting to know you as a person and your course goals and concerns.</p>
 
 
 </section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
