@@ -16,7 +16,6 @@ auto-stretch: false
 
 -   Any questions about the syllabus??
 
-
 # Today: Course toolkit
 
 # Ask so many questions!!!
@@ -68,7 +67,7 @@ By the end of the course, you will be able to...
 ## Reproducibility checklist {.smaller}
 
 ::: question
-What does it mean for a data analysis to be "reproducible"?
+How do we make sure a data analysis is "reproducible"?
 :::
 
 . . .
@@ -85,6 +84,14 @@ What does it mean for a data analysis to be "reproducible"?
 
 -   Can the code be used for other data?
 -   Can you extend the code to do other things?
+
+## Toolkit for reproducibility
+
+\- Scriptability \$\\rightarrow\$ R
+
+\- Literate programming (code, narrative, output in one place) \$\\rightarrow\$ Quarto
+
+\- Version control \$\\rightarrow\$ Git / GitHub
 
 ## An Analogy to English
 
@@ -116,7 +123,7 @@ What does it mean for a data analysis to be "reproducible"?
 
 -   R is an open-source statistical **programming language**
 -   R is also an environment for statistical computing and graphics
--   *Packages* enable lots of functionality
+-   *Packages* make R easily *extensible*
 :::
 
 ::: {.column width="50%"}
@@ -189,6 +196,55 @@ Data frames: like the spreadsheets of R
 -   Each column of a data frame is a **variable**
 
 ![](images/df.png)
+
+## R essentials (continued) {.smaller}
+
+-   Use the question mark `?` to get help with objects (like data frames and functions):
+
+```{r}
+#| eval: false
+
+?function_name
+
+```
+
+-   Use the dollar sign `$` to access columns
+
+```{r}
+#| eval: false
+
+dataframe$column
+
+```
+
+::: callout-note
+Generally, you need to use the `$` to tell R *where* to find that column.
+:::
+
+## R essentials (continued) {.smaller}
+
+-   Use the arrow `<-` or equals sign `=` to save objects
+
+```{r}
+#| eval: false
+
+x = some_thing
+y <- some_other_thing
+
+```
+
+::: callout-note
+Check your environment pane for the saved object!
+:::
+
+## R essentials (continued) {.smaller}
+
+-   Look out for warning and error messages!!!
+
+-   These are essential for figuring out where your code is going wrong.
+    If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.
+
+Check your environment pane for the saved object!
 
 ## R packages {.smaller}
 
@@ -264,7 +320,7 @@ Go to RStudio and open the document `ae-01-meet-the-penguins.qmd`.
 -   You'll always have a template Quarto document to start with
 -   The amount of scaffolding in the template will decrease over the semester
 
-# Git and Github
+# Toolkit: Version Control
 
 ## Git and GitHub {.smaller}
 
@@ -369,4 +425,4 @@ Once we made changes to our Quarto document, we
 
 -   **confirmed on GitHub** that we could see our changes pushed from RStudio
 
-## Let's Practice: AE01  {.smaller}
+## Let's Practice: AE01 {.smaller}
