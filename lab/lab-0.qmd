@@ -110,7 +110,7 @@ For example, mine would be
 
 ```{r}
 usethis::use_git_config(
-  user.name = "Marie Meubrander", 
+  user.name = "Marie Neubrander", 
   user.email = "mneubrander@crimson.ua.edu"
 )
 ```
@@ -129,6 +129,12 @@ Well, a more accurate statement would be that we will be reaching out to you to 
 But, it's best if you can get it right today!
 :::
 
+::: callout-note
+## How do I know if I did it right?
+
+When you input the `usethis::use_git_config(...)` command into the console and hit enter/return, it will appear as if nothing happened. To verify that everything worked, you can briefly switch over to the **Terminal** tab (should be to the right of **Console**) and type the commands `git config user.name` and `git config user.email`. If all is well, these will return whatever text you originally provided. If you notice a mistake or typo, you can just go back to the Console and rerun `usethis::use_git_config(...)` with modified inputs.
+:::
+
 ::: {.callout-tip collapse="true"}
 ## Need a recap? Watch this video!
 
@@ -137,8 +143,24 @@ The following video walks you through the steps outlined in the SSH key generati
 {{< video https://youtu.be/3lONVzFw680 >}}
 :::
 
+## Clone first repo
+
+A GitHub repository (repo) is a collection of files hosted on GitHub. Repos are the main way we will distribute files to you during the semester. When you copy the files in a repo to your local computing environment (your container, in this case), that's called "cloning". So, let's clone our first repo: 
+
+-   Go to the course organization at [github.com/sta199-su25](https://github.com/sta199-su25) organization on GitHub. Click on the repo with the prefix **ae**. This is your application exercise (AE) repo. It contains the starter documents you need to complete your AE for today's lecture (and will contain the starter files for future AEs).
+
+-   Click on the green **CODE** button, select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**). Click on the clipboard icon to copy the repo URL.
+
+-   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
+
+-   Copy and paste the URL of your assignment repo into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
+
+-   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
+
+You will need to get used to these steps, because you'll probably clone at least one new repo every week.
+
 # Hello STA 199!
 
 Fill out the course "Getting to know you" [survey](https://canvas.duke.edu/courses/56756/quizzes/35368) on Canvas.
 
-We will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns.
+We will use the information collected in this survey for a variety of goals, including getting to know you as a person and your course goals and concerns.
