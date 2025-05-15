@@ -129,6 +129,12 @@ Well, a more accurate statement would be that we will be reaching out to you to 
 But, it's best if you can get it right today!
 :::
 
+::: callout-note
+## How do I know if I did it right?
+
+When you input the `usethis::use_git_config(...)` command into the console and hit enter/return, it will appear as if nothing happened. To verify that everything worked, you can briefly switch over to the **Terminal** tab (should be to the right of **Console**) and type the commands `git config user.name` and `git config user.email`. If all is well, these will return whatever text you originally provided. If you notice a mistake or typo, you can just go back to the Console and rerun `usethis::use_git_config(...)` with modified inputs.
+:::
+
 ::: {.callout-tip collapse="true"}
 ## Need a recap? Watch this video!
 
