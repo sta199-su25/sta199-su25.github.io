@@ -48,8 +48,6 @@ auto-stretch: false
 :::
 :::
 
-# Toolkit: Computing
-
 ## Learning goals {.smaller}
 
 By the end of the course, you will be able to...
@@ -85,13 +83,13 @@ How do we make sure a data analysis is "reproducible"?
 -   Can the code be used for other data?
 -   Can you extend the code to do other things?
 
-## Toolkit for reproducibility
+## Toolkit for reproducibility 
 
-\- Scriptability \$\\rightarrow\$ R
+\- Scriptability $\rightarrow$ R
 
-\- Literate programming (code, narrative, output in one place) \$\\rightarrow\$ Quarto
+\- Literate programming (code, narrative, output in one place) $\rightarrow$  Quarto
 
-\- Version control \$\\rightarrow\$ Git / GitHub
+\- Version control $\rightarrow$ Git / GitHub
 
 ## An Analogy to English
 
@@ -115,7 +113,7 @@ How do we make sure a data analysis is "reproducible"?
 
 # R and RStudio
 
-## R and RStudio {.smaller}
+## What are R and RStudio? {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
@@ -241,10 +239,16 @@ Check your environment pane for the saved object!
 
 -   Look out for warning and error messages!!!
 
--   These are essential for figuring out where your code is going wrong.
-    If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.
+<br>
 
-Check your environment pane for the saved object!
+-   These are essential for figuring out where your code is going wrong.
+   
+<br><br>
+  
+::: callout-note
+If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online. 
+:::
+ 
 
 ## R packages {.smaller}
 
@@ -282,7 +286,7 @@ Check your environment pane for the saved object!
 
 # Quarto
 
-## Quarto
+## What is Quarto?
 
 ::: incremental
 -   Fully reproducible reports -- each time you render the analysis is ran from the beginning
@@ -320,9 +324,9 @@ Go to RStudio and open the document `ae-01-meet-the-penguins.qmd`.
 -   You'll always have a template Quarto document to start with
 -   The amount of scaffolding in the template will decrease over the semester
 
-# Toolkit: Version Control
+# Git and GitHub
 
-## Git and GitHub {.smaller}
+## What are Git and GitHub? {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
