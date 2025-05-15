@@ -8,6 +8,15 @@ format:
 auto-stretch: false
 ---
 
+## Reminders {.smaller}
+
+-   I have office hours today!
+    1:00-3:00 PM in Old Chemistry 203/203B.
+
+-   We will start grading your ae repositories next week - make sure you have them ready to go.
+
+-   First 'real' lab is on Monday; the topic will be data visualization (what we are starting today).
+
 ## Outline {.smaller}
 
 -   Last time:
@@ -429,3 +438,9 @@ What if we want to use our own data?
 -   The formula is (almost) always as follows:
 
 `{r} #| eval: false ggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +   geom_XXX()`
+
+## Coming Up... {.smaller}
+
+-   What are some other types of plots you can make?
+
+-   How can you talk about the information conveyed by plots?
