@@ -265,6 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <a href="#reproducible-data-analysis" id="toc-reproducible-data-analysis" class="nav-link" data-scroll-target="#reproducible-data-analysis">Reproducible data analysis</a>
   <ul class="collapse">
 <li><a href="#reproducibility-checklist" id="toc-reproducibility-checklist" class="nav-link" data-scroll-target="#reproducibility-checklist">Reproducibility checklist</a></li>
+  <li><a href="#toolkit-for-reproducibility" id="toc-toolkit-for-reproducibility" class="nav-link" data-scroll-target="#toolkit-for-reproducibility">Toolkit for reproducibility</a></li>
   <li><a href="#an-analogy-to-english" id="toc-an-analogy-to-english" class="nav-link" data-scroll-target="#an-analogy-to-english">An Analogy to English</a></li>
   <li><a href="#an-analogy-to-english-1" id="toc-an-analogy-to-english-1" class="nav-link" data-scroll-target="#an-analogy-to-english-1">An Analogy to English</a></li>
   <li><a href="#an-analogy-to-english-2" id="toc-an-analogy-to-english-2" class="nav-link" data-scroll-target="#an-analogy-to-english-2">An Analogy to English</a></li>
@@ -281,6 +282,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#tour-recap-r-rstudio" id="toc-tour-recap-r-rstudio" class="nav-link" data-scroll-target="#tour-recap-r-rstudio">Tour recap: R + RStudio</a></li>
   <li><a href="#a-short-list-for-now-of-r-essentials" id="toc-a-short-list-for-now-of-r-essentials" class="nav-link" data-scroll-target="#a-short-list-for-now-of-r-essentials">A short list (for now) of R essentials</a></li>
   <li><a href="#r-essentials-continued" id="toc-r-essentials-continued" class="nav-link" data-scroll-target="#r-essentials-continued">R essentials (continued)</a></li>
+  <li><a href="#r-essentials-continued-1" id="toc-r-essentials-continued-1" class="nav-link" data-scroll-target="#r-essentials-continued-1">R essentials (continued)</a></li>
+  <li><a href="#r-essentials-continued-2" id="toc-r-essentials-continued-2" class="nav-link" data-scroll-target="#r-essentials-continued-2">R essentials (continued)</a></li>
+  <li><a href="#r-essentials-continued-3" id="toc-r-essentials-continued-3" class="nav-link" data-scroll-target="#r-essentials-continued-3">R essentials (continued)</a></li>
   <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages">R packages</a></li>
   <li><a href="#tidyverse" id="toc-tidyverse" class="nav-link" data-scroll-target="#tidyverse">tidyverse</a></li>
   </ul>
@@ -295,9 +299,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul>
 </li>
   <li>
-<a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and Github</a>
+<a href="#toolkit-version-control" id="toc-toolkit-version-control" class="nav-link" data-scroll-target="#toolkit-version-control">Toolkit: Version Control</a>
   <ul class="collapse">
-<li><a href="#git-and-github-1" id="toc-git-and-github-1" class="nav-link" data-scroll-target="#git-and-github-1">Git and GitHub</a></li>
+<li><a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and GitHub</a></li>
   <li><a href="#versioning---done-badly" id="toc-versioning---done-badly" class="nav-link" data-scroll-target="#versioning---done-badly">Versioning - done badly</a></li>
   <li><a href="#versioning---done-better" id="toc-versioning---done-better" class="nav-link" data-scroll-target="#versioning---done-better">Versioning - done better</a></li>
   <li><a href="#versioning---done-even-better" id="toc-versioning---done-even-better" class="nav-link" data-scroll-target="#versioning---done-even-better">Versioning - done even better</a></li>
@@ -400,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section></section><section id="reproducible-data-analysis" class="level1"><h1>Reproducible data analysis</h1>
 <section id="reproducibility-checklist" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="reproducibility-checklist">Reproducibility checklist</h2>
 <div class="question">
-<p>What does it mean for a data analysis to be “reproducible”?</p>
+<p>How do we make sure a data analysis is “reproducible”?</p>
 </div>
 <p>. . .</p>
 <p><strong>Short-term goals:</strong></p>
@@ -414,7 +418,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Can the code be used for other data?</li>
 <li>Can you extend the code to do other things?</li>
-</ul></section><section id="an-analogy-to-english" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english">An Analogy to English</h2>
+</ul></section><section id="toolkit-for-reproducibility" class="level2"><h2 class="anchored" data-anchor-id="toolkit-for-reproducibility">Toolkit for reproducibility</h2>
+<p>- Scriptability $\rightarrow$ R</p>
+<p>- Literate programming (code, narrative, output in one place) $\rightarrow$ Quarto</p>
+<p>- Version control $\rightarrow$ Git / GitHub</p>
+</section><section id="an-analogy-to-english" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english">An Analogy to English</h2>
 <p><img src="images/R-english-analogy/1.jpg" class="img-fluid" alt="R"></p>
 </section><section id="an-analogy-to-english-1" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english-1">An Analogy to English</h2>
 <p><img src="images/R-english-analogy/2.jpg" class="img-fluid" alt="Rstudio"></p>
@@ -437,7 +445,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>R is also an environment for statistical computing and graphics</li>
 <li>
-<em>Packages</em> enable lots of functionality</li>
+<em>Packages</em> make R easily <em>extensible</em>
+</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img src="images/01/rstudio-logo.png" class="img-fluid" alt="RStudio logo"></p>
@@ -497,6 +506,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 </ul>
 <p><img src="images/df.png" class="img-fluid"></p>
+</section><section id="r-essentials-continued-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="r-essentials-continued-1">R essentials (continued)</h2>
+<ul>
+<li>Use the question mark <code>?</code> to get help with objects (like data frames and functions):</li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">?</span><span class="va">function_name</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Use the dollar sign <code>$</code> to access columns</li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dataframe</span><span class="op">$</span><span class="va">column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Generally, you need to use the <code>$</code> to tell R <em>where</em> to find that column.</p>
+</div>
+</div>
+</section><section id="r-essentials-continued-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="r-essentials-continued-2">R essentials (continued)</h2>
+<ul>
+<li>Use the arrow <code>&lt;-</code> or equals sign <code>=</code> to save objects</li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">=</span> <span class="va">some_thing</span></span>
+<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="va">some_other_thing</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Check your environment pane for the saved object!</p>
+</div>
+</div>
+</section><section id="r-essentials-continued-3" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="r-essentials-continued-3">R essentials (continued)</h2>
+<ul>
+<li><p>Look out for warning and error messages!!!</p></li>
+<li><p>These are essential for figuring out where your code is going wrong. If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.</p></li>
+</ul>
+<p>Check your environment pane for the saved object!</p>
 </section><section id="r-packages" class="level2 smaller page-columns page-full"><h2 class="smaller anchored" data-anchor-id="r-packages">R packages</h2>
 <div class="incremental">
 <ul class="incremental">
@@ -557,8 +619,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Every application exercise, lab, project, etc. is an Quarto document</li>
 <li>You’ll always have a template Quarto document to start with</li>
 <li>The amount of scaffolding in the template will decrease over the semester</li>
-</ul></section></section><section id="git-and-github" class="level1"><h1>Git and Github</h1>
-<section id="git-and-github-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="git-and-github-1">Git and GitHub</h2>
+</ul></section></section><section id="toolkit-version-control" class="level1"><h1>Toolkit: Version Control</h1>
+<section id="git-and-github" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="git-and-github">Git and GitHub</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -665,7 +727,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></section><section id="lets-practice-ae01" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="lets-practice-ae01">Let’s Practice: AE01</h2>
 
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");

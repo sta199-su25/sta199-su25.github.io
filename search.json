@@ -763,7 +763,14 @@
     "href": "slides/01-meet-the-toolkit-slides.html#reproducibility-checklist",
     "title": "Meet the Toolkit",
     "section": "Reproducibility checklist",
-    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\n\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n\n\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+    "text": "Reproducibility checklist\n\nHow do we make sure a data analysis is “reproducible”?\n\n\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n\n\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#toolkit-for-reproducibility",
+    "href": "slides/01-meet-the-toolkit-slides.html#toolkit-for-reproducibility",
+    "title": "Meet the Toolkit",
+    "section": "Toolkit for reproducibility",
+    "text": "Toolkit for reproducibility\n- Scriptability $\\rightarrow$ R\n- Literate programming (code, narrative, output in one place) $\\rightarrow$ Quarto\n- Version control $\\rightarrow$ Git / GitHub"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#an-analogy-to-english",
@@ -805,7 +812,7 @@
     "href": "slides/01-meet-the-toolkit-slides.html#r-and-rstudio-1",
     "title": "Meet the Toolkit",
     "section": "R and RStudio",
-    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\n\nPackages enable lots of functionality\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\n\nPackages make R easily extensible\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#r-vs.-rstudio-another-analogy",
@@ -841,6 +848,27 @@
     "title": "Meet the Toolkit",
     "section": "R essentials (continued)",
     "text": "R essentials (continued)\nData frames: like the spreadsheets of R\n\nEach row of a data frame is an observation\n\nEach column of a data frame is a variable"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#r-essentials-continued-1",
+    "href": "slides/01-meet-the-toolkit-slides.html#r-essentials-continued-1",
+    "title": "Meet the Toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nUse the question mark ? to get help with objects (like data frames and functions):\n\n\n?function_name\n\n\nUse the dollar sign $ to access columns\n\n\ndataframe$column\n\n\n\n\n\n\n\nNote\n\n\nGenerally, you need to use the $ to tell R where to find that column."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#r-essentials-continued-2",
+    "href": "slides/01-meet-the-toolkit-slides.html#r-essentials-continued-2",
+    "title": "Meet the Toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nUse the arrow &lt;- or equals sign = to save objects\n\n\nx = some_thing\ny &lt;- some_other_thing\n\n\n\n\n\n\n\nNote\n\n\nCheck your environment pane for the saved object!"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit-slides.html#r-essentials-continued-3",
+    "href": "slides/01-meet-the-toolkit-slides.html#r-essentials-continued-3",
+    "title": "Meet the Toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nLook out for warning and error messages!!!\nThese are essential for figuring out where your code is going wrong. If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.\n\nCheck your environment pane for the saved object!"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#r-packages",
@@ -885,8 +913,8 @@
     "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit-slides.html#git-and-github-1",
-    "href": "slides/01-meet-the-toolkit-slides.html#git-and-github-1",
+    "objectID": "slides/01-meet-the-toolkit-slides.html#git-and-github",
+    "href": "slides/01-meet-the-toolkit-slides.html#git-and-github",
     "title": "Meet the Toolkit",
     "section": "Git and GitHub",
     "text": "Git and GitHub\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
@@ -1008,7 +1036,14 @@
     "href": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
     "title": "Meet the Toolkit",
     "section": "Reproducibility checklist",
-    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\n. . .\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n. . .\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+    "text": "Reproducibility checklist\n\nHow do we make sure a data analysis is “reproducible”?\n\n. . .\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n. . .\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
+    "href": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
+    "title": "Meet the Toolkit",
+    "section": "Toolkit for reproducibility",
+    "text": "Toolkit for reproducibility\n- Scriptability $\\rightarrow$ R\n- Literate programming (code, narrative, output in one place) $\\rightarrow$ Quarto\n- Version control $\\rightarrow$ Git / GitHub"
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english",
@@ -1050,7 +1085,7 @@
     "href": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
     "title": "Meet the Toolkit",
     "section": "R and RStudio",
-    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\n\nPackages enable lots of functionality\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\n\nPackages make R easily extensible\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#r-vs.-rstudio-another-analogy",
@@ -1086,6 +1121,27 @@
     "title": "Meet the Toolkit",
     "section": "R essentials (continued)",
     "text": "R essentials (continued)\nData frames: like the spreadsheets of R\n\nEach row of a data frame is an observation\n\nEach column of a data frame is a variable"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-essentials-continued-1",
+    "href": "slides/01-meet-the-toolkit.html#r-essentials-continued-1",
+    "title": "Meet the Toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nUse the question mark ? to get help with objects (like data frames and functions):\n\n\n?function_name\n\n\nUse the dollar sign $ to access columns\n\n\ndataframe$column\n\n\n\n\n\n\n\nNote\n\n\n\nGenerally, you need to use the $ to tell R where to find that column."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-essentials-continued-2",
+    "href": "slides/01-meet-the-toolkit.html#r-essentials-continued-2",
+    "title": "Meet the Toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nUse the arrow &lt;- or equals sign = to save objects\n\n\nx = some_thing\ny &lt;- some_other_thing\n\n\n\n\n\n\n\nNote\n\n\n\nCheck your environment pane for the saved object!"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-essentials-continued-3",
+    "href": "slides/01-meet-the-toolkit.html#r-essentials-continued-3",
+    "title": "Meet the Toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nLook out for warning and error messages!!!\nThese are essential for figuring out where your code is going wrong. If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.\n\nCheck your environment pane for the saved object!"
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#r-packages",
@@ -1130,8 +1186,8 @@
     "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
   },
   {
-    "objectID": "slides/01-meet-the-toolkit.html#git-and-github-1",
-    "href": "slides/01-meet-the-toolkit.html#git-and-github-1",
+    "objectID": "slides/01-meet-the-toolkit.html#git-and-github",
+    "href": "slides/01-meet-the-toolkit.html#git-and-github",
     "title": "Meet the Toolkit",
     "section": "Git and GitHub",
     "text": "Git and GitHub\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
