@@ -32,7 +32,8 @@ Not open to students who have taken a 100-level Statistical Science course, Stat
 
 ## Office hours
 
-| Name | Location | Time |
-|------------------|-----------------------------|--------------------------|
-| Marie Neubrander | Old Chem 203 | Tu 3:30PM - 5:30PM; F 1PM - 3PM |
-| Mary Knox | [Zoom](https://duke.zoom.us/j/95219443117?pwd=n8DbwA8TTSbhb8pZRsJYnLb6BMzF2m.1) | W 2PM - 3PM |
+| Name             | Location                                                                        | Time                            |
+|------------------|----------------------------|--------------------------|
+| Marie Neubrander | Old Chem 203                                                                    | Tu 3:30PM - 5:30PM; F 1PM - 3PM |
+| Mary Knox        | [Zoom](https://duke.zoom.us/j/95219443117?pwd=n8DbwA8TTSbhb8pZRsJYnLb6BMzF2m.1) | W 2PM - 3PM                     |
+| Katie Solarz     | TBD                                                                             | TBD                             |
