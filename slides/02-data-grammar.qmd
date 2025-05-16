@@ -47,8 +47,7 @@ Go to RStudio, confirm that you're in the `ae` project, and open the document `a
 
 ## Common problems: {.smaller}
 
--   The environment used by Quarto ***when rendering*** starts EMPTY - it does *not see* what *you see* in your environment.
-    \
+-   The environment used by Quarto ***when rendering*** starts EMPTY - it does *not see* what *you see* in your environment.\
 
 -   Using functions that cause a popup (like `View()` ) are *not going to work* when you render a document.
     Either use a comment (with `#`) to remove them, or just delete before rendering!\
@@ -60,21 +59,29 @@ Go to RStudio, confirm that you're in the `ae` project, and open the document `a
 
 ## Thoughts on this plot?
 
-![](images/02/female-heights.png)
+![](images/02/female-heights.png){fig-align="center"}
 
 ## More Penguins {.smaller}
 
-![](images/02/peng_plot.png)
+![](images/02/peng_plot.png){fig-align="center"}
 
-## Start plotting!
+## Start plotting! {.smaller}
 
 How can you create something like this???
 
-<br>
+::: columns
+::: {.column width="30%"}
+![](images/02/ggplot.png)
+:::
 
-If there is one thing you take away from today: We ❤️ `ggplot()` !
+::: {.column width="70%"}
+-   The [**ggplot2**](https://ggplot2.tidyverse.org) package has the plotting functions you need!
 
-## Load packages
+-   **ggplot2** is a part of the **tidyverse** package - when you load tidyverse, you also load **ggplot2**
+:::
+:::
+
+## Load Packages
 
 ```{r}
 #| label: load-packages
@@ -88,7 +95,7 @@ library(ggthemes)
 
 ## Look at the data
 
-![](images/df.png)
+![](images/df.png){fig-align="center"}
 
 ## Visualize the data
 
@@ -127,22 +134,6 @@ ggplot(data = penguins, mapping = aes(x = bill_length_mm))
 ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = body_mass_g))
 ```
 
-## So... what are aesthetics?? {.smaller}
-
--   **Aesthetics** are visual properties of a plot that are mapped to from **variables**
-
--   Some common aesthetics:
-
-    -   **x** and **y** axes
-
-    -   color
-
-    -   fill
-
-    -   size
-
-    -   shape
-
 ## Argument names {.smaller}
 
 It's common practice in R to omit the names of first two arguments of a function:
@@ -161,6 +152,26 @@ ggplot(data = your_data, mapping = aes(x = x_variable, y = y_variable))
 ggplot(your_data, aes(x = x_variable, y = y_variable))
 ```
 
+## Step 3. Map variables to aesthetics {.smaller}
+
+*Map* `percent_yes` to the `y` *aesthetic*
+
+```{r}
+#| fig-width: 9
+#| fig-height: 3
+ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = body_mass_g))
+```
+
+## Step 3. Map variables to aesthetics {.smaller}
+
+*Map* `percent_yes` to the `y` *aesthetic*
+
+```{r}
+#| fig-width: 9
+#| fig-height: 3
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g))
+```
+
 ## Step 4. Represent data on your canvas {.smaller}
 
 with a `geom`
@@ -171,6 +182,7 @@ with a `geom`
 ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g)) +
   geom_point()
 ```
+
 ## Step 4. Represent data on your canvas {.smaller}
 
 -   Adding `geom_point()` resulted in the following warning:
@@ -178,6 +190,19 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g)) +
 ```         
 Warning: Removed 2 rows containing missing values or values outside the scale
 range (`geom_point()`)
+```
+
+## Step 4. Represent data on your canvas {.smaller}
+
+with a `geom`
+
+```{r}
+#| fig-width: 9
+#| fig-height: 3
+#| warning: false
+
+ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g)) +
+  geom_point()
 ```
 
 ## Step 5. Map variables to aesthetics {.smaller}
@@ -192,7 +217,25 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   geom_point()
 ```
 
-## Step 6. Represent data on your canvas {.smaller}
+## Step 5. Map variables to aesthetics {.smaller}
+
+*Map* `species` to the `color` *aesthetic*
+
+```{r}
+#| fig-width: 9
+#| fig-height: 3
+#| warning: false
+ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  geom_point()
+```
+
+***What exactly are aesthetics?*** They map from a variable to a plot feature.
+
+-   x and y axes
+
+-   color, shape, size of points
+
+## Step 6. Represent data on your canvas{.smaller}
 
 with another `geom`
 
@@ -204,7 +247,7 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   geom_smooth()
 ```
 
-## Warnings and messages
+## Warnings and messages {.smaller}
 
 -   Adding `geom_smooth()` resulted in the following warning:
 
@@ -220,9 +263,22 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
 
 -   Going forward we'll suppress this warning to save some space.
 
-## Step 7. Split plot into facets  {.smaller}
+## Step 6. Represent data on your canvas {.smaller}
 
-When you hear 'facet', think 'sub-plots'!
+with another `geom`
+
+```{r}
+#| fig-width: 9
+#| fig-height: 3
+#| warning: false
+ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  geom_point() +
+  geom_smooth()
+```
+
+## Step 7. Split plot into facets {.smaller}
+
+Use `facet_wrap` to make sub-plots
 
 ```{r}
 #| fig-width: 9
@@ -234,9 +290,9 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   facet_wrap(~island)
 ```
 
-## Step 7. Split plot into facets  {.smaller}
+## Step 7. Split plot into facets {.smaller}
 
-You have options!
+We can facet by other variables!
 
 ```{r}
 #| fig-width: 9
@@ -250,7 +306,6 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
 
 ## A note on facets: {.smaller}
 
-More is not always better!
 Which plot do you think made it easier to compare between penguin species?
 
 ```{r}
@@ -262,7 +317,9 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   geom_smooth() 
 ```
 
-## Step 8. Use a different color scale
+## Step 8. Use a different color scale {.smaller}
+
+With a `scale_color_` function
 
 ```{r}
 #| fig-width: 9
@@ -271,10 +328,12 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
 ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +
   geom_point() +
   geom_smooth() +
-  scale_color_canva()
+  scale_color_grey() 
 ```
 
-## Step 8. Use a different color scale
+## Step 8. Use a different color scale {.smaller}
+
+With another `scale_color_` function
 
 ```{r}
 #| fig-width: 9
@@ -283,10 +342,12 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
 ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +
   geom_point() +
   geom_smooth() +
-  scale_color_colorblind()
+  scale_color_colorblind() #this is from ggthemes 
 ```
 
-## Step 9. Apply a different theme
+## Step 9. Apply a different theme {.smaller}
+
+With a `theme_` function
 
 ```{r}
 #| fig-width: 9
@@ -299,7 +360,9 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   theme_minimal()
 ```
 
-## Step 9. Apply a different theme
+## Step 9. Apply a different theme {.smaller}
+
+With a `theme_` function
 
 ```{r}
 #| fig-width: 9
@@ -312,7 +375,9 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   theme_classic()
 ```
 
-## Step 9. Apply a different theme
+## Step 9. Apply a different theme {.smaller}
+
+With a `theme_` function
 
 ```{r}
 #| fig-width: 9
@@ -322,10 +387,12 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   geom_point() +
   geom_smooth() +
   scale_color_colorblind() +
-  theme_solarized()
+  theme_solarized() #this is from ggthemes
 ```
 
-## Step 9. Apply a different theme
+## Step 9. Apply a different theme {.smaller}
+
+With a `theme_` function
 
 ```{r}
 #| fig-width: 9
@@ -338,7 +405,9 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   theme_minimal()
 ```
 
-## Step 10. Add labels
+## Step 10. Add labels {.smaller}
+
+With `labs()` function
 
 ```{r}
 #| fig-width: 9
@@ -348,11 +417,11 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   geom_point() +
   geom_smooth() +
   scale_color_colorblind() +
+  theme_minimal() +
   labs(x = "Bill Length (mm)", y = "Body Mass (g)", color = "Species", title = "Penguin Body Mass vs. Bill Length")
 ```
 
-
-## Step 11. Set transparency of points
+## Step 11. Set transparency of points {.smaller}
 
 with `alpha`
 
@@ -364,10 +433,12 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   geom_point(alpha = 0.1) +
   geom_smooth() +
   scale_color_colorblind() +
+  theme_minimal() +
   labs(x = "Bill Length (mm)", y = "Body Mass (g)", color = "Species")
 ```
 
-## Step 11. Set transparency of points
+## Step 11. Set transparency of points {.smaller}
+
 with `alpha`
 
 ```{r}
@@ -379,10 +450,11 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   geom_point(alpha = 0.7) +
   geom_smooth() +
   scale_color_colorblind() +
+  theme_minimal() +
   labs(x = "Bill Length (mm)", y = "Body Mass (g)", color = "Species")
 ```
 
-## Step 12. Hide standard errors of curves
+## Step 12. Hide standard errors of curves {.smaller}
 
 with `se = FALSE`
 
@@ -394,6 +466,7 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   geom_point(alpha = 0.5) +
   geom_smooth(se = FALSE) +
   scale_color_colorblind() +
+  theme_minimal() +
   labs(x = "Bill Length (mm)", y = "Body Mass (g)", color = "Species")
 ```
 
@@ -401,13 +474,12 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
 
 ***You aren't!!!***
 
--   It's important to (eventually) know and remember the key ideas: what does changing a theme do?
-    What are aesthetics?
-    What is a geom?
-
+::: incremental
+-   It's important to (eventually) know and remember the key ideas: what does changing a theme do? What are aesthetics? What is a geom?
 -   You do *not* need to memorize a comprehensive list of *all* of the different geoms, themes, color scales, etc.
-
--   There will be a few fundamentals we expect you to know - more on that later!
+-   There will be a few fundamentals we expect you to know -- more on that later!
+-   <https://ggplot2.tidyverse.org> is super helpful!
+:::
 
 ## Grammar of graphics {.smaller}
 
@@ -430,11 +502,17 @@ We built a plot layer-by-layer
 
 # Application exercise
 
+## Application exercise {.smaller}
+
 What if we want to use our own data?
 
--   `read_csv("data_file.csv")` (assuming the data is in a CSV format)
+<br>
 
-# Application exercise
+`read_csv("data_file.csv")` (assuming the data is in a CSV format)
+
+## `ae-02-bechdel-dataviz` {.smaller}
+
+We will be looking at data on movies and the Bechdel test.
 
 ## `ae-02-bechdel-dataviz` {.smaller}
 
