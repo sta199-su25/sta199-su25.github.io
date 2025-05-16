@@ -263,19 +263,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="#thoughts-on-this-plot" id="toc-thoughts-on-this-plot" class="nav-link" data-scroll-target="#thoughts-on-this-plot">Thoughts on this plot?</a></li>
   <li><a href="#more-penguins" id="toc-more-penguins" class="nav-link" data-scroll-target="#more-penguins">More Penguins</a></li>
   <li><a href="#start-plotting" id="toc-start-plotting" class="nav-link" data-scroll-target="#start-plotting">Start plotting!</a></li>
-  <li><a href="#load-packages" id="toc-load-packages" class="nav-link" data-scroll-target="#load-packages">Load packages</a></li>
+  <li><a href="#load-packages" id="toc-load-packages" class="nav-link" data-scroll-target="#load-packages">Load Packages</a></li>
   <li><a href="#look-at-the-data" id="toc-look-at-the-data" class="nav-link" data-scroll-target="#look-at-the-data">Look at the data</a></li>
   <li><a href="#visualize-the-data" id="toc-visualize-the-data" class="nav-link" data-scroll-target="#visualize-the-data">Visualize the data</a></li>
   <li><a href="#step-1.-prepare-a-canvas-for-plotting" id="toc-step-1.-prepare-a-canvas-for-plotting" class="nav-link" data-scroll-target="#step-1.-prepare-a-canvas-for-plotting">Step 1. Prepare a canvas for plotting</a></li>
   <li><a href="#step-2.-map-variables-to-aesthetics" id="toc-step-2.-map-variables-to-aesthetics" class="nav-link" data-scroll-target="#step-2.-map-variables-to-aesthetics">Step 2. Map variables to aesthetics</a></li>
   <li><a href="#step-3.-map-variables-to-aesthetics" id="toc-step-3.-map-variables-to-aesthetics" class="nav-link" data-scroll-target="#step-3.-map-variables-to-aesthetics">Step 3. Map variables to aesthetics</a></li>
-  <li><a href="#so-what-are-aesthetics" id="toc-so-what-are-aesthetics" class="nav-link" data-scroll-target="#so-what-are-aesthetics">So… what are aesthetics??</a></li>
   <li><a href="#argument-names" id="toc-argument-names" class="nav-link" data-scroll-target="#argument-names">Argument names</a></li>
+  <li><a href="#step-3.-map-variables-to-aesthetics-1" id="toc-step-3.-map-variables-to-aesthetics-1" class="nav-link" data-scroll-target="#step-3.-map-variables-to-aesthetics-1">Step 3. Map variables to aesthetics</a></li>
+  <li><a href="#step-3.-map-variables-to-aesthetics-2" id="toc-step-3.-map-variables-to-aesthetics-2" class="nav-link" data-scroll-target="#step-3.-map-variables-to-aesthetics-2">Step 3. Map variables to aesthetics</a></li>
   <li><a href="#step-4.-represent-data-on-your-canvas" id="toc-step-4.-represent-data-on-your-canvas" class="nav-link" data-scroll-target="#step-4.-represent-data-on-your-canvas">Step 4. Represent data on your canvas</a></li>
   <li><a href="#step-4.-represent-data-on-your-canvas-1" id="toc-step-4.-represent-data-on-your-canvas-1" class="nav-link" data-scroll-target="#step-4.-represent-data-on-your-canvas-1">Step 4. Represent data on your canvas</a></li>
+  <li><a href="#step-4.-represent-data-on-your-canvas-2" id="toc-step-4.-represent-data-on-your-canvas-2" class="nav-link" data-scroll-target="#step-4.-represent-data-on-your-canvas-2">Step 4. Represent data on your canvas</a></li>
   <li><a href="#step-5.-map-variables-to-aesthetics" id="toc-step-5.-map-variables-to-aesthetics" class="nav-link" data-scroll-target="#step-5.-map-variables-to-aesthetics">Step 5. Map variables to aesthetics</a></li>
+  <li><a href="#step-5.-map-variables-to-aesthetics-1" id="toc-step-5.-map-variables-to-aesthetics-1" class="nav-link" data-scroll-target="#step-5.-map-variables-to-aesthetics-1">Step 5. Map variables to aesthetics</a></li>
   <li><a href="#step-6.-represent-data-on-your-canvas" id="toc-step-6.-represent-data-on-your-canvas" class="nav-link" data-scroll-target="#step-6.-represent-data-on-your-canvas">Step 6. Represent data on your canvas</a></li>
   <li><a href="#warnings-and-messages" id="toc-warnings-and-messages" class="nav-link" data-scroll-target="#warnings-and-messages">Warnings and messages</a></li>
+  <li><a href="#step-6.-represent-data-on-your-canvas-1" id="toc-step-6.-represent-data-on-your-canvas-1" class="nav-link" data-scroll-target="#step-6.-represent-data-on-your-canvas-1">Step 6. Represent data on your canvas</a></li>
   <li><a href="#step-7.-split-plot-into-facets" id="toc-step-7.-split-plot-into-facets" class="nav-link" data-scroll-target="#step-7.-split-plot-into-facets">Step 7. Split plot into facets</a></li>
   <li><a href="#step-7.-split-plot-into-facets-1" id="toc-step-7.-split-plot-into-facets-1" class="nav-link" data-scroll-target="#step-7.-split-plot-into-facets-1">Step 7. Split plot into facets</a></li>
   <li><a href="#a-note-on-facets" id="toc-a-note-on-facets" class="nav-link" data-scroll-target="#a-note-on-facets">A note on facets:</a></li>
@@ -293,11 +297,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#grammar-of-graphics" id="toc-grammar-of-graphics" class="nav-link" data-scroll-target="#grammar-of-graphics">Grammar of graphics</a></li>
   </ul>
 </li>
-  <li><a href="#application-exercise" id="toc-application-exercise" class="nav-link" data-scroll-target="#application-exercise">Application exercise</a></li>
   <li>
-<a href="#application-exercise-1" id="toc-application-exercise-1" class="nav-link" data-scroll-target="#application-exercise-1">Application exercise</a>
+<a href="#application-exercise" id="toc-application-exercise" class="nav-link" data-scroll-target="#application-exercise">Application exercise</a>
   <ul class="collapse">
-<li><a href="#ae-02-bechdel-dataviz" id="toc-ae-02-bechdel-dataviz" class="nav-link" data-scroll-target="#ae-02-bechdel-dataviz"><code>ae-02-bechdel-dataviz</code></a></li>
+<li><a href="#application-exercise-1" id="toc-application-exercise-1" class="nav-link" data-scroll-target="#application-exercise-1">Application exercise</a></li>
+  <li><a href="#ae-02-bechdel-dataviz" id="toc-ae-02-bechdel-dataviz" class="nav-link" data-scroll-target="#ae-02-bechdel-dataviz"><code>ae-02-bechdel-dataviz</code></a></li>
+  <li><a href="#ae-02-bechdel-dataviz-1" id="toc-ae-02-bechdel-dataviz-1" class="nav-link" data-scroll-target="#ae-02-bechdel-dataviz-1"><code>ae-02-bechdel-dataviz</code></a></li>
   <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
   <li><a href="#coming-up" id="toc-coming-up" class="nav-link" data-scroll-target="#coming-up">Coming Up…</a></li>
   </ul>
@@ -365,21 +370,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Make sure you commit and then PUSH! Just committing is not enough!</p></li>
 </ul></section></section><section id="data-visualization" class="level1"><h1>Data visualization</h1>
 <section id="thoughts-on-this-plot" class="level2"><h2 class="anchored" data-anchor-id="thoughts-on-this-plot">Thoughts on this plot?</h2>
-<p><img src="images/02/female-heights.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/02/female-heights.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 </section><section id="more-penguins" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="more-penguins">More Penguins</h2>
-<p><img src="images/02/peng_plot.png" class="img-fluid"></p>
-</section><section id="start-plotting" class="level2"><h2 class="anchored" data-anchor-id="start-plotting">Start plotting!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/02/peng_plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section><section id="start-plotting" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="start-plotting">Start plotting!</h2>
 <p>How can you create something like this???</p>
-<p><br></p>
-<p>If there is one thing you take away from today: We ❤️ <code><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot()</a></code> !</p>
-</section><section id="load-packages" class="level2"><h2 class="anchored" data-anchor-id="load-packages">Load packages</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img src="images/02/ggplot.png" class="img-fluid"></p>
+</div><div class="column" style="width:70%;">
+<ul>
+<li><p>The <a href="https://ggplot2.tidyverse.org"><strong>ggplot2</strong></a> package has the plotting functions you need!</p></li>
+<li><p><strong>ggplot2</strong> is a part of the <strong>tidyverse</strong> package - when you load tidyverse, you also load <strong>ggplot2</strong></p></li>
+</ul>
+</div>
+</div>
+</section><section id="load-packages" class="level2"><h2 class="anchored" data-anchor-id="load-packages">Load Packages</h2>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jrnold.github.io/ggthemes/">ggthemes</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="look-at-the-data" class="level2"><h2 class="anchored" data-anchor-id="look-at-the-data">Look at the data</h2>
-<p><img src="images/df.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/df.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 </section><section id="visualize-the-data" class="level2"><h2 class="anchored" data-anchor-id="visualize-the-data">Visualize the data</h2>
 <p>What are some steps you can take to visualize a data set?</p>
 <ul>
@@ -417,20 +439,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-</section><section id="so-what-are-aesthetics" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="so-what-are-aesthetics">So… what are aesthetics??</h2>
-<ul>
-<li><p><strong>Aesthetics</strong> are visual properties of a plot that are mapped to from <strong>variables</strong></p></li>
-<li>
-<p>Some common aesthetics:</p>
-<ul>
-<li><p><strong>x</strong> and <strong>y</strong> axes</p></li>
-<li><p>color</p></li>
-<li><p>fill</p></li>
-<li><p>size</p></li>
-<li><p>shape</p></li>
-</ul>
-</li>
-</ul></section><section id="argument-names" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="argument-names">Argument names</h2>
+</section><section id="argument-names" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="argument-names">Argument names</h2>
 <p>It’s common practice in R to omit the names of first two arguments of a function:</p>
 <p>. . .</p>
 <ul>
@@ -441,10 +450,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Use</li>
 </ul>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">your_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x_variable</span>, y <span class="op">=</span> <span class="va">y_variable</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="step-3.-map-variables-to-aesthetics-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-3.-map-variables-to-aesthetics-1">Step 3. Map variables to aesthetics</h2>
+<p><em>Map</em> <code>percent_yes</code> to the <code>y</code> <em>aesthetic</em></p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-3.-map-variables-to-aesthetics-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-3.-map-variables-to-aesthetics-2">Step 3. Map variables to aesthetics</h2>
+<p><em>Map</em> <code>percent_yes</code> to the <code>y</code> <em>aesthetic</em></p>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
 </section><section id="step-4.-represent-data-on-your-canvas" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-4.-represent-data-on-your-canvas">Step 4. Represent data on your canvas</h2>
 <p>with a <code>geom</code></p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 2 rows containing missing values or values outside the scale
@@ -452,7 +483,7 @@ range (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="864"></p>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
@@ -463,22 +494,50 @@ range (`geom_point()`).</code></pre>
 </ul>
 <pre><code>Warning: Removed 2 rows containing missing values or values outside the scale
 range (`geom_point()`)</code></pre>
-</section><section id="step-5.-map-variables-to-aesthetics" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-5.-map-variables-to-aesthetics">Step 5. Map variables to aesthetics</h2>
-<p><em>Map</em> <code>species</code> to the <code>color</code> <em>aesthetic</em></p>
+</section><section id="step-4.-represent-data-on-your-canvas-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-4.-represent-data-on-your-canvas-2">Step 4. Represent data on your canvas</h2>
+<p>with a <code>geom</code></p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="864"></p>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="step-6.-represent-data-on-your-canvas" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-6.-represent-data-on-your-canvas">Step 6. Represent data on your canvas</h2>
+</section><section id="step-5.-map-variables-to-aesthetics" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-5.-map-variables-to-aesthetics">Step 5. Map variables to aesthetics</h2>
+<p><em>Map</em> <code>species</code> to the <code>color</code> <em>aesthetic</em></p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-5.-map-variables-to-aesthetics-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-5.-map-variables-to-aesthetics-1">Step 5. Map variables to aesthetics</h2>
+<p><em>Map</em> <code>species</code> to the <code>color</code> <em>aesthetic</em></p>
+<div class="cell">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>What exactly are aesthetics?</em></strong> They map from a variable to a plot feature.</p>
+<ul>
+<li><p>x and y axes</p></li>
+<li><p>color, shape, size of points</p></li>
+</ul></section><section id="step-6.-represent-data-on-your-canvas" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-6.-represent-data-on-your-canvas">Step 6. Represent data on your canvas</h2>
 <p>with another <code>geom</code></p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -494,12 +553,12 @@ range (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="864"></p>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="warnings-and-messages" class="level2"><h2 class="anchored" data-anchor-id="warnings-and-messages">Warnings and messages</h2>
+</section><section id="warnings-and-messages" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="warnings-and-messages">Warnings and messages</h2>
 <ul>
 <li>Adding <code><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth()</a></code> resulted in the following warning:</li>
 </ul>
@@ -511,66 +570,12 @@ range (`geom_point()`).</code></pre>
 <p>. . .</p>
 <ul>
 <li>Going forward we’ll suppress this warning to save some space.</li>
-</ul></section><section id="step-7.-split-plot-into-facets" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-7.-split-plot-into-facets">Step 7. Split plot into facets</h2>
-<p>When you hear ‘facet’, think ‘sub-plots’!</p>
-<div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">island</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-7.-split-plot-into-facets-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-7.-split-plot-into-facets-1">Step 7. Split plot into facets</h2>
-<p>You have options!</p>
-<div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">species</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="a-note-on-facets" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="a-note-on-facets">A note on facets:</h2>
-<p>More is not always better! Which plot do you think made it easier to compare between penguin species?</p>
-<div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-8.-use-a-different-color-scale" class="level2"><h2 class="anchored" data-anchor-id="step-8.-use-a-different-color-scale">Step 8. Use a different color scale</h2>
-<div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/scale_colour_canva.html">scale_color_canva</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-8.-use-a-different-color-scale-1" class="level2"><h2 class="anchored" data-anchor-id="step-8.-use-a-different-color-scale-1">Step 8. Use a different color scale</h2>
+</ul></section><section id="step-6.-represent-data-on-your-canvas-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-6.-represent-data-on-your-canvas-1">Step 6. Represent data on your canvas</h2>
+<p>with another <code>geom</code></p>
 <div class="cell">
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="864"></p>
@@ -578,13 +583,13 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-9.-apply-a-different-theme" class="level2"><h2 class="anchored" data-anchor-id="step-9.-apply-a-different-theme">Step 9. Apply a different theme</h2>
+</section><section id="step-7.-split-plot-into-facets" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-7.-split-plot-into-facets">Step 7. Split plot into facets</h2>
+<p>Use <code>facet_wrap</code> to make sub-plots</p>
 <div class="cell">
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">island</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="864"></p>
@@ -592,13 +597,13 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-9.-apply-a-different-theme-1" class="level2"><h2 class="anchored" data-anchor-id="step-9.-apply-a-different-theme-1">Step 9. Apply a different theme</h2>
+</section><section id="step-7.-split-plot-into-facets-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-7.-split-plot-into-facets-1">Step 7. Split plot into facets</h2>
+<p>We can facet by other variables!</p>
 <div class="cell">
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">species</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="864"></p>
@@ -606,13 +611,12 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-9.-apply-a-different-theme-2" class="level2"><h2 class="anchored" data-anchor-id="step-9.-apply-a-different-theme-2">Step 9. Apply a different theme</h2>
+</section><section id="a-note-on-facets" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="a-note-on-facets">A note on facets:</h2>
+<p>Which plot do you think made it easier to compare between penguin species?</p>
 <div class="cell">
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/theme_solarized.html">theme_solarized</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="864"></p>
@@ -620,13 +624,13 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-9.-apply-a-different-theme-3" class="level2"><h2 class="anchored" data-anchor-id="step-9.-apply-a-different-theme-3">Step 9. Apply a different theme</h2>
+</section><section id="step-8.-use-a-different-color-scale" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-8.-use-a-different-color-scale">Step 8. Use a different color scale</h2>
+<p>With a <code>scale_color_</code> function</p>
 <div class="cell">
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_grey.html">scale_color_grey</a></span><span class="op">(</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="864"></p>
@@ -634,13 +638,13 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-10.-add-labels" class="level2"><h2 class="anchored" data-anchor-id="step-10.-add-labels">Step 10. Add labels</h2>
+</section><section id="step-8.-use-a-different-color-scale-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-8.-use-a-different-color-scale-1">Step 8. Use a different color scale</h2>
+<p>With another <code>scale_color_</code> function</p>
 <div class="cell">
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Bill Length (mm)"</span>, y <span class="op">=</span> <span class="st">"Body Mass (g)"</span>, color <span class="op">=</span> <span class="st">"Species"</span>, title <span class="op">=</span> <span class="st">"Penguin Body Mass vs. Bill Length"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="co">#this is from ggthemes </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="864"></p>
@@ -648,14 +652,14 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-11.-set-transparency-of-points" class="level2"><h2 class="anchored" data-anchor-id="step-11.-set-transparency-of-points">Step 11. Set transparency of points</h2>
-<p>with <code>alpha</code></p>
+</section><section id="step-9.-apply-a-different-theme" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-9.-apply-a-different-theme">Step 9. Apply a different theme</h2>
+<p>With a <code>theme_</code> function</p>
 <div class="cell">
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Bill Length (mm)"</span>, y <span class="op">=</span> <span class="st">"Body Mass (g)"</span>, color <span class="op">=</span> <span class="st">"Species"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="864"></p>
@@ -663,14 +667,14 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-11.-set-transparency-of-points-1" class="level2"><h2 class="anchored" data-anchor-id="step-11.-set-transparency-of-points-1">Step 11. Set transparency of points</h2>
-<p>with <code>alpha</code></p>
+</section><section id="step-9.-apply-a-different-theme-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-9.-apply-a-different-theme-1">Step 9. Apply a different theme</h2>
+<p>With a <code>theme_</code> function</p>
 <div class="cell">
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Bill Length (mm)"</span>, y <span class="op">=</span> <span class="st">"Body Mass (g)"</span>, color <span class="op">=</span> <span class="st">"Species"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="864"></p>
@@ -678,14 +682,14 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-12.-hide-standard-errors-of-curves" class="level2"><h2 class="anchored" data-anchor-id="step-12.-hide-standard-errors-of-curves">Step 12. Hide standard errors of curves</h2>
-<p>with <code>se = FALSE</code></p>
+</section><section id="step-9.-apply-a-different-theme-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-9.-apply-a-different-theme-2">Step 9. Apply a different theme</h2>
+<p>With a <code>theme_</code> function</p>
 <div class="cell">
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Bill Length (mm)"</span>, y <span class="op">=</span> <span class="st">"Body Mass (g)"</span>, color <span class="op">=</span> <span class="st">"Species"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/theme_solarized.html">theme_solarized</a></span><span class="op">(</span><span class="op">)</span> <span class="co">#this is from ggthemes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="864"></p>
@@ -693,13 +697,97 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
+</section><section id="step-9.-apply-a-different-theme-3" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-9.-apply-a-different-theme-3">Step 9. Apply a different theme</h2>
+<p>With a <code>theme_</code> function</p>
+<div class="cell">
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-10.-add-labels" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-10.-add-labels">Step 10. Add labels</h2>
+<p>With <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code> function</p>
+<div class="cell">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Bill Length (mm)"</span>, y <span class="op">=</span> <span class="st">"Body Mass (g)"</span>, color <span class="op">=</span> <span class="st">"Species"</span>, title <span class="op">=</span> <span class="st">"Penguin Body Mass vs. Bill Length"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-11.-set-transparency-of-points" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-11.-set-transparency-of-points">Step 11. Set transparency of points</h2>
+<p>with <code>alpha</code></p>
+<div class="cell">
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Bill Length (mm)"</span>, y <span class="op">=</span> <span class="st">"Body Mass (g)"</span>, color <span class="op">=</span> <span class="st">"Species"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-11.-set-transparency-of-points-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-11.-set-transparency-of-points-1">Step 11. Set transparency of points</h2>
+<p>with <code>alpha</code></p>
+<div class="cell">
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Bill Length (mm)"</span>, y <span class="op">=</span> <span class="st">"Body Mass (g)"</span>, color <span class="op">=</span> <span class="st">"Species"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-12.-hide-standard-errors-of-curves" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-12.-hide-standard-errors-of-curves">Step 12. Hide standard errors of curves</h2>
+<p>with <code>se = FALSE</code></p>
+<div class="cell">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bill_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="http://jrnold.github.io/ggthemes/reference/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Bill Length (mm)"</span>, y <span class="op">=</span> <span class="st">"Body Mass (g)"</span>, color <span class="op">=</span> <span class="st">"Species"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="02-data-grammar_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
 </section><section id="how-am-i-supposed-to-remember-all-of-this" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="how-am-i-supposed-to-remember-all-of-this">How am I supposed to remember all of this?!</h2>
 <p><strong><em>You aren’t!!!</em></strong></p>
-<ul>
-<li><p>It’s important to (eventually) know and remember the key ideas: what does changing a theme do? What are aesthetics? What is a geom?</p></li>
-<li><p>You do <em>not</em> need to memorize a comprehensive list of <em>all</em> of the different geoms, themes, color scales, etc.</p></li>
-<li><p>There will be a few fundamentals we expect you to know - more on that later!</p></li>
-</ul></section><section id="grammar-of-graphics" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="grammar-of-graphics">Grammar of graphics</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>It’s important to (eventually) know and remember the key ideas: what does changing a theme do? What are aesthetics? What is a geom?</li>
+<li>You do <em>not</em> need to memorize a comprehensive list of <em>all</em> of the different geoms, themes, color scales, etc.</li>
+<li>There will be a few fundamentals we expect you to know – more on that later!</li>
+<li>
+<a href="https://ggplot2.tidyverse.org" class="uri">https://ggplot2.tidyverse.org</a> is super helpful!</li>
+</ul>
+</div>
+</section><section id="grammar-of-graphics" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="grammar-of-graphics">Grammar of graphics</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>We built a plot layer-by-layer</p>
@@ -714,12 +802,13 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </section></section><section id="application-exercise" class="level1"><h1>Application exercise</h1>
+<section id="application-exercise-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="application-exercise-1">Application exercise</h2>
 <p>What if we want to use our own data?</p>
-<ul>
-<li>
-<code>read_csv("data_file.csv")</code> (assuming the data is in a CSV format)</li>
-</ul></section><section id="application-exercise-1" class="level1"><h1>Application exercise</h1>
-<section id="ae-02-bechdel-dataviz" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="ae-02-bechdel-dataviz"><code>ae-02-bechdel-dataviz</code></h2>
+<p><br></p>
+<p><code>read_csv("data_file.csv")</code> (assuming the data is in a CSV format)</p>
+</section><section id="ae-02-bechdel-dataviz" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="ae-02-bechdel-dataviz"><code>ae-02-bechdel-dataviz</code></h2>
+<p>We will be looking at data on movies and the Bechdel test.</p>
+</section><section id="ae-02-bechdel-dataviz-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="ae-02-bechdel-dataviz-1"><code>ae-02-bechdel-dataviz</code></h2>
 <div class="appex">
 <ul>
 <li>Go to your <code>ae</code> project in RStudio.</li>
@@ -735,7 +824,7 @@ range (`geom_point()`).</code></pre>
 <li>The formula is (almost) always as follows:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">DATA</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span><span class="op">-</span><span class="va">VAR</span>, y <span class="op">=</span> <span class="va">Y</span><span class="op">-</span><span class="va">VAR</span>, <span class="va">...</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">DATA</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span><span class="op">-</span><span class="va">VAR</span>, y <span class="op">=</span> <span class="va">Y</span><span class="op">-</span><span class="va">VAR</span>, <span class="va">...</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_XXX</span><span class="op">(</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="coming-up" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="coming-up">Coming Up…</h2>

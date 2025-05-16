@@ -436,7 +436,7 @@
     "href": "index.html",
     "title": "STA 199: Intro to Data Science and Statistical Thinking",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Vis\n🖥️ slides 02  ⌨️ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nGrammar of Data Transform\n\n\n\n\n\n\nMon, May 19\nLab 1\n\n\n\n\n\n\nTue, May 20\nExploring Data I\n\n\n\n\n\n\nWed, May 21\nExploring Data II\n\nLab 1 - 11:59PM ET\n\n\n\n\nThu, May 22\nTidying Data\n\n\n\n\n\n\nThu, May 22\nLab 2\n\n\n\n\n\n\nFri, May 23\nJoining Data\n\n\n\n\n\n\nSun, May 25\n\n\nLab 2 - 11:59PM ET\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n\n\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n\n\n\n\n\n\nThu, May 29\nWeb Scraping\n\n\n\n\n\n\nThu, May 29\nLab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n\n\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Vis\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nGrammar of Data Transform\n\n\n\n\n\n\nMon, May 19\nLab 1\n\n\n\n\n\n\nTue, May 20\nExploring Data I\n\n\n\n\n\n\nWed, May 21\nExploring Data II\n\nLab 1 - 11:59PM ET\n\n\n\n\nThu, May 22\nTidying Data\n\n\n\n\n\n\nThu, May 22\nLab 2\n\n\n\n\n\n\nFri, May 23\nJoining Data\n\n\n\n\n\n\nSun, May 25\n\n\nLab 2 - 11:59PM ET\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n\n\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n\n\n\n\n\n\nThu, May 29\nWeb Scraping\n\n\n\n\n\n\nThu, May 29\nLab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n\n\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -576,14 +576,14 @@
     "href": "slides/02-data-grammar-slides.html#start-plotting",
     "title": "Grammar of data visualization",
     "section": "Start plotting!",
-    "text": "Start plotting!\nHow can you create something like this???\n\nIf there is one thing you take away from today: We ❤️ ggplot() !"
+    "text": "Start plotting!\nHow can you create something like this???\n\n\n\n\n\nThe ggplot2 package has the plotting functions you need!\nggplot2 is a part of the tidyverse package - when you load tidyverse, you also load ggplot2"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#load-packages",
     "href": "slides/02-data-grammar-slides.html#load-packages",
     "title": "Grammar of data visualization",
-    "section": "Load packages",
-    "text": "Load packages\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)\nlibrary(ggthemes)"
+    "section": "Load Packages",
+    "text": "Load Packages\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)\nlibrary(ggthemes)"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#look-at-the-data",
@@ -621,18 +621,25 @@
     "text": "Step 3. Map variables to aesthetics\nMap percent_yes to the y aesthetic\n\nggplot(data = penguins, mapping = aes(x = bill_length_mm, y = body_mass_g))"
   },
   {
-    "objectID": "slides/02-data-grammar-slides.html#so-what-are-aesthetics",
-    "href": "slides/02-data-grammar-slides.html#so-what-are-aesthetics",
-    "title": "Grammar of data visualization",
-    "section": "So… what are aesthetics??",
-    "text": "So… what are aesthetics??\n\nAesthetics are visual properties of a plot that are mapped to from variables\n\nSome common aesthetics:\n\nx and y axes\ncolor\nfill\nsize\nshape"
-  },
-  {
     "objectID": "slides/02-data-grammar-slides.html#argument-names",
     "href": "slides/02-data-grammar-slides.html#argument-names",
     "title": "Grammar of data visualization",
     "section": "Argument names",
     "text": "Argument names\nIt’s common practice in R to omit the names of first two arguments of a function:\n\n\nInstead of\n\nggplot(data = your_data, mapping = aes(x = x_variable, y = y_variable))\n\nUse\n\nggplot(your_data, aes(x = x_variable, y = y_variable))"
+  },
+  {
+    "objectID": "slides/02-data-grammar-slides.html#step-3.-map-variables-to-aesthetics-1",
+    "href": "slides/02-data-grammar-slides.html#step-3.-map-variables-to-aesthetics-1",
+    "title": "Grammar of data visualization",
+    "section": "Step 3. Map variables to aesthetics",
+    "text": "Step 3. Map variables to aesthetics\nMap percent_yes to the y aesthetic\n\nggplot(data = penguins, mapping = aes(x = bill_length_mm, y = body_mass_g))"
+  },
+  {
+    "objectID": "slides/02-data-grammar-slides.html#step-3.-map-variables-to-aesthetics-2",
+    "href": "slides/02-data-grammar-slides.html#step-3.-map-variables-to-aesthetics-2",
+    "title": "Grammar of data visualization",
+    "section": "Step 3. Map variables to aesthetics",
+    "text": "Step 3. Map variables to aesthetics\nMap percent_yes to the y aesthetic\n\nggplot(penguins, aes(x = bill_length_mm, y = body_mass_g))"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-4.-represent-data-on-your-canvas",
@@ -649,11 +656,25 @@
     "text": "Step 4. Represent data on your canvas\n\nAdding geom_point() resulted in the following warning:\n\nWarning: Removed 2 rows containing missing values or values outside the scale\nrange (`geom_point()`)"
   },
   {
+    "objectID": "slides/02-data-grammar-slides.html#step-4.-represent-data-on-your-canvas-2",
+    "href": "slides/02-data-grammar-slides.html#step-4.-represent-data-on-your-canvas-2",
+    "title": "Grammar of data visualization",
+    "section": "Step 4. Represent data on your canvas",
+    "text": "Step 4. Represent data on your canvas\nwith a geom\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g)) +\n  geom_point()"
+  },
+  {
     "objectID": "slides/02-data-grammar-slides.html#step-5.-map-variables-to-aesthetics",
     "href": "slides/02-data-grammar-slides.html#step-5.-map-variables-to-aesthetics",
     "title": "Grammar of data visualization",
     "section": "Step 5. Map variables to aesthetics",
     "text": "Step 5. Map variables to aesthetics\nMap species to the color aesthetic\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides/02-data-grammar-slides.html#step-5.-map-variables-to-aesthetics-1",
+    "href": "slides/02-data-grammar-slides.html#step-5.-map-variables-to-aesthetics-1",
+    "title": "Grammar of data visualization",
+    "section": "Step 5. Map variables to aesthetics",
+    "text": "Step 5. Map variables to aesthetics\nMap species to the color aesthetic\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point()\n\n\n\n\n\n\n\nWhat exactly are aesthetics? They map from a variable to a plot feature.\n\nx and y axes\ncolor, shape, size of points"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-6.-represent-data-on-your-canvas",
@@ -670,102 +691,109 @@
     "text": "Warnings and messages\n\nAdding geom_smooth() resulted in the following warning:\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\nIt tells us the type of smoothing ggplot2 does under the hood when drawing the smooth curves that represent trends for each species.\n\n\n\n\nGoing forward we’ll suppress this warning to save some space."
   },
   {
+    "objectID": "slides/02-data-grammar-slides.html#step-6.-represent-data-on-your-canvas-1",
+    "href": "slides/02-data-grammar-slides.html#step-6.-represent-data-on-your-canvas-1",
+    "title": "Grammar of data visualization",
+    "section": "Step 6. Represent data on your canvas",
+    "text": "Step 6. Represent data on your canvas\nwith another geom\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth()"
+  },
+  {
     "objectID": "slides/02-data-grammar-slides.html#step-7.-split-plot-into-facets",
     "href": "slides/02-data-grammar-slides.html#step-7.-split-plot-into-facets",
     "title": "Grammar of data visualization",
     "section": "Step 7. Split plot into facets",
-    "text": "Step 7. Split plot into facets\nWhen you hear ‘facet’, think ‘sub-plots’!\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~island)"
+    "text": "Step 7. Split plot into facets\nUse facet_wrap to make sub-plots\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~island)"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-7.-split-plot-into-facets-1",
     "href": "slides/02-data-grammar-slides.html#step-7.-split-plot-into-facets-1",
     "title": "Grammar of data visualization",
     "section": "Step 7. Split plot into facets",
-    "text": "Step 7. Split plot into facets\nYou have options!\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~species)"
+    "text": "Step 7. Split plot into facets\nWe can facet by other variables!\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~species)"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#a-note-on-facets",
     "href": "slides/02-data-grammar-slides.html#a-note-on-facets",
     "title": "Grammar of data visualization",
     "section": "A note on facets:",
-    "text": "A note on facets:\nMore is not always better! Which plot do you think made it easier to compare between penguin species?\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth()"
+    "text": "A note on facets:\nWhich plot do you think made it easier to compare between penguin species?\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth()"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-8.-use-a-different-color-scale",
     "href": "slides/02-data-grammar-slides.html#step-8.-use-a-different-color-scale",
     "title": "Grammar of data visualization",
     "section": "Step 8. Use a different color scale",
-    "text": "Step 8. Use a different color scale\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_canva()"
+    "text": "Step 8. Use a different color scale\nWith a scale_color_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_grey()"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-8.-use-a-different-color-scale-1",
     "href": "slides/02-data-grammar-slides.html#step-8.-use-a-different-color-scale-1",
     "title": "Grammar of data visualization",
     "section": "Step 8. Use a different color scale",
-    "text": "Step 8. Use a different color scale\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind()"
+    "text": "Step 8. Use a different color scale\nWith another scale_color_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() #this is from ggthemes"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-9.-apply-a-different-theme",
     "href": "slides/02-data-grammar-slides.html#step-9.-apply-a-different-theme",
     "title": "Grammar of data visualization",
     "section": "Step 9. Apply a different theme",
-    "text": "Step 9. Apply a different theme\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal()"
+    "text": "Step 9. Apply a different theme\nWith a theme_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal()"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-9.-apply-a-different-theme-1",
     "href": "slides/02-data-grammar-slides.html#step-9.-apply-a-different-theme-1",
     "title": "Grammar of data visualization",
     "section": "Step 9. Apply a different theme",
-    "text": "Step 9. Apply a different theme\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_classic()"
+    "text": "Step 9. Apply a different theme\nWith a theme_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_classic()"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-9.-apply-a-different-theme-2",
     "href": "slides/02-data-grammar-slides.html#step-9.-apply-a-different-theme-2",
     "title": "Grammar of data visualization",
     "section": "Step 9. Apply a different theme",
-    "text": "Step 9. Apply a different theme\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_solarized()"
+    "text": "Step 9. Apply a different theme\nWith a theme_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_solarized() #this is from ggthemes"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-9.-apply-a-different-theme-3",
     "href": "slides/02-data-grammar-slides.html#step-9.-apply-a-different-theme-3",
     "title": "Grammar of data visualization",
     "section": "Step 9. Apply a different theme",
-    "text": "Step 9. Apply a different theme\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal()"
+    "text": "Step 9. Apply a different theme\nWith a theme_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal()"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-10.-add-labels",
     "href": "slides/02-data-grammar-slides.html#step-10.-add-labels",
     "title": "Grammar of data visualization",
     "section": "Step 10. Add labels",
-    "text": "Step 10. Add labels\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\", title = \"Penguin Body Mass vs. Bill Length\")"
+    "text": "Step 10. Add labels\nWith labs() function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\", title = \"Penguin Body Mass vs. Bill Length\")"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-11.-set-transparency-of-points",
     "href": "slides/02-data-grammar-slides.html#step-11.-set-transparency-of-points",
     "title": "Grammar of data visualization",
     "section": "Step 11. Set transparency of points",
-    "text": "Step 11. Set transparency of points\nwith alpha\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.1) +\n  geom_smooth() +\n  scale_color_colorblind() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
+    "text": "Step 11. Set transparency of points\nwith alpha\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.1) +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-11.-set-transparency-of-points-1",
     "href": "slides/02-data-grammar-slides.html#step-11.-set-transparency-of-points-1",
     "title": "Grammar of data visualization",
     "section": "Step 11. Set transparency of points",
-    "text": "Step 11. Set transparency of points\nwith alpha\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.7) +\n  geom_smooth() +\n  scale_color_colorblind() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
+    "text": "Step 11. Set transparency of points\nwith alpha\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.7) +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#step-12.-hide-standard-errors-of-curves",
     "href": "slides/02-data-grammar-slides.html#step-12.-hide-standard-errors-of-curves",
     "title": "Grammar of data visualization",
     "section": "Step 12. Hide standard errors of curves",
-    "text": "Step 12. Hide standard errors of curves\nwith se = FALSE\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  scale_color_colorblind() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
+    "text": "Step 12. Hide standard errors of curves\nwith se = FALSE\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#how-am-i-supposed-to-remember-all-of-this",
     "href": "slides/02-data-grammar-slides.html#how-am-i-supposed-to-remember-all-of-this",
     "title": "Grammar of data visualization",
     "section": "How am I supposed to remember all of this?!",
-    "text": "How am I supposed to remember all of this?!\nYou aren’t!!!\n\nIt’s important to (eventually) know and remember the key ideas: what does changing a theme do? What are aesthetics? What is a geom?\nYou do not need to memorize a comprehensive list of all of the different geoms, themes, color scales, etc.\nThere will be a few fundamentals we expect you to know - more on that later!"
+    "text": "How am I supposed to remember all of this?!\nYou aren’t!!!\n\n\nIt’s important to (eventually) know and remember the key ideas: what does changing a theme do? What are aesthetics? What is a geom?\nYou do not need to memorize a comprehensive list of all of the different geoms, themes, color scales, etc.\nThere will be a few fundamentals we expect you to know – more on that later!\n\nhttps://ggplot2.tidyverse.org is super helpful!"
   },
   {
     "objectID": "slides/02-data-grammar-slides.html#grammar-of-graphics",
@@ -775,8 +803,22 @@
     "text": "Grammar of graphics\n\n\nWe built a plot layer-by-layer\n\njust like described in the book The Grammar of Graphics and\nimplemented in the ggplot2 package, the data visualization package of the tidyverse."
   },
   {
+    "objectID": "slides/02-data-grammar-slides.html#application-exercise-1",
+    "href": "slides/02-data-grammar-slides.html#application-exercise-1",
+    "title": "Grammar of data visualization",
+    "section": "Application exercise",
+    "text": "Application exercise\nWhat if we want to use our own data?\n\nread_csv(\"data_file.csv\") (assuming the data is in a CSV format)"
+  },
+  {
     "objectID": "slides/02-data-grammar-slides.html#ae-02-bechdel-dataviz",
     "href": "slides/02-data-grammar-slides.html#ae-02-bechdel-dataviz",
+    "title": "Grammar of data visualization",
+    "section": "ae-02-bechdel-dataviz",
+    "text": "ae-02-bechdel-dataviz\nWe will be looking at data on movies and the Bechdel test."
+  },
+  {
+    "objectID": "slides/02-data-grammar-slides.html#ae-02-bechdel-dataviz-1",
+    "href": "slides/02-data-grammar-slides.html#ae-02-bechdel-dataviz-1",
     "title": "Grammar of data visualization",
     "section": "ae-02-bechdel-dataviz",
     "text": "ae-02-bechdel-dataviz\n\n\nGo to your ae project in RStudio.\nMake sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nIf you haven’t yet done so, click Pull to get today’s application exercise file.\nWork through the application exercise in class, and render, commit, and push your edits by the end of class."
@@ -849,14 +891,14 @@
     "href": "slides/02-data-grammar.html#start-plotting",
     "title": "Grammar of data visualization",
     "section": "Start plotting!",
-    "text": "Start plotting!\nHow can you create something like this???\n\nIf there is one thing you take away from today: We ❤️ ggplot() !"
+    "text": "Start plotting!\nHow can you create something like this???\n\n\n\n\n\nThe ggplot2 package has the plotting functions you need!\nggplot2 is a part of the tidyverse package - when you load tidyverse, you also load ggplot2"
   },
   {
     "objectID": "slides/02-data-grammar.html#load-packages",
     "href": "slides/02-data-grammar.html#load-packages",
     "title": "Grammar of data visualization",
-    "section": "Load packages",
-    "text": "Load packages\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)\nlibrary(ggthemes)"
+    "section": "Load Packages",
+    "text": "Load Packages\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)\nlibrary(ggthemes)"
   },
   {
     "objectID": "slides/02-data-grammar.html#look-at-the-data",
@@ -894,18 +936,25 @@
     "text": "Step 3. Map variables to aesthetics\nMap percent_yes to the y aesthetic\n\nggplot(data = penguins, mapping = aes(x = bill_length_mm, y = body_mass_g))"
   },
   {
-    "objectID": "slides/02-data-grammar.html#so-what-are-aesthetics",
-    "href": "slides/02-data-grammar.html#so-what-are-aesthetics",
-    "title": "Grammar of data visualization",
-    "section": "So… what are aesthetics??",
-    "text": "So… what are aesthetics??\n\nAesthetics are visual properties of a plot that are mapped to from variables\n\nSome common aesthetics:\n\nx and y axes\ncolor\nfill\nsize\nshape"
-  },
-  {
     "objectID": "slides/02-data-grammar.html#argument-names",
     "href": "slides/02-data-grammar.html#argument-names",
     "title": "Grammar of data visualization",
     "section": "Argument names",
     "text": "Argument names\nIt’s common practice in R to omit the names of first two arguments of a function:\n. . .\n\nInstead of\n\nggplot(data = your_data, mapping = aes(x = x_variable, y = y_variable))\n\nUse\n\nggplot(your_data, aes(x = x_variable, y = y_variable))"
+  },
+  {
+    "objectID": "slides/02-data-grammar.html#step-3.-map-variables-to-aesthetics-1",
+    "href": "slides/02-data-grammar.html#step-3.-map-variables-to-aesthetics-1",
+    "title": "Grammar of data visualization",
+    "section": "Step 3. Map variables to aesthetics",
+    "text": "Step 3. Map variables to aesthetics\nMap percent_yes to the y aesthetic\n\nggplot(data = penguins, mapping = aes(x = bill_length_mm, y = body_mass_g))"
+  },
+  {
+    "objectID": "slides/02-data-grammar.html#step-3.-map-variables-to-aesthetics-2",
+    "href": "slides/02-data-grammar.html#step-3.-map-variables-to-aesthetics-2",
+    "title": "Grammar of data visualization",
+    "section": "Step 3. Map variables to aesthetics",
+    "text": "Step 3. Map variables to aesthetics\nMap percent_yes to the y aesthetic\n\nggplot(penguins, aes(x = bill_length_mm, y = body_mass_g))"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-4.-represent-data-on-your-canvas",
@@ -922,11 +971,25 @@
     "text": "Step 4. Represent data on your canvas\n\nAdding geom_point() resulted in the following warning:\n\nWarning: Removed 2 rows containing missing values or values outside the scale\nrange (`geom_point()`)"
   },
   {
+    "objectID": "slides/02-data-grammar.html#step-4.-represent-data-on-your-canvas-2",
+    "href": "slides/02-data-grammar.html#step-4.-represent-data-on-your-canvas-2",
+    "title": "Grammar of data visualization",
+    "section": "Step 4. Represent data on your canvas",
+    "text": "Step 4. Represent data on your canvas\nwith a geom\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g)) +\n  geom_point()"
+  },
+  {
     "objectID": "slides/02-data-grammar.html#step-5.-map-variables-to-aesthetics",
     "href": "slides/02-data-grammar.html#step-5.-map-variables-to-aesthetics",
     "title": "Grammar of data visualization",
     "section": "Step 5. Map variables to aesthetics",
     "text": "Step 5. Map variables to aesthetics\nMap species to the color aesthetic\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides/02-data-grammar.html#step-5.-map-variables-to-aesthetics-1",
+    "href": "slides/02-data-grammar.html#step-5.-map-variables-to-aesthetics-1",
+    "title": "Grammar of data visualization",
+    "section": "Step 5. Map variables to aesthetics",
+    "text": "Step 5. Map variables to aesthetics\nMap species to the color aesthetic\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point()\n\n\n\n\n\n\n\nWhat exactly are aesthetics? They map from a variable to a plot feature.\n\nx and y axes\ncolor, shape, size of points"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-6.-represent-data-on-your-canvas",
@@ -943,102 +1006,109 @@
     "text": "Warnings and messages\n\nAdding geom_smooth() resulted in the following warning:\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n. . .\n\nIt tells us the type of smoothing ggplot2 does under the hood when drawing the smooth curves that represent trends for each species.\n\n. . .\n\nGoing forward we’ll suppress this warning to save some space."
   },
   {
+    "objectID": "slides/02-data-grammar.html#step-6.-represent-data-on-your-canvas-1",
+    "href": "slides/02-data-grammar.html#step-6.-represent-data-on-your-canvas-1",
+    "title": "Grammar of data visualization",
+    "section": "Step 6. Represent data on your canvas",
+    "text": "Step 6. Represent data on your canvas\nwith another geom\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth()"
+  },
+  {
     "objectID": "slides/02-data-grammar.html#step-7.-split-plot-into-facets",
     "href": "slides/02-data-grammar.html#step-7.-split-plot-into-facets",
     "title": "Grammar of data visualization",
     "section": "Step 7. Split plot into facets",
-    "text": "Step 7. Split plot into facets\nWhen you hear ‘facet’, think ‘sub-plots’!\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~island)"
+    "text": "Step 7. Split plot into facets\nUse facet_wrap to make sub-plots\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~island)"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-7.-split-plot-into-facets-1",
     "href": "slides/02-data-grammar.html#step-7.-split-plot-into-facets-1",
     "title": "Grammar of data visualization",
     "section": "Step 7. Split plot into facets",
-    "text": "Step 7. Split plot into facets\nYou have options!\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~species)"
+    "text": "Step 7. Split plot into facets\nWe can facet by other variables!\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~species)"
   },
   {
     "objectID": "slides/02-data-grammar.html#a-note-on-facets",
     "href": "slides/02-data-grammar.html#a-note-on-facets",
     "title": "Grammar of data visualization",
     "section": "A note on facets:",
-    "text": "A note on facets:\nMore is not always better! Which plot do you think made it easier to compare between penguin species?\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth()"
+    "text": "A note on facets:\nWhich plot do you think made it easier to compare between penguin species?\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth()"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-8.-use-a-different-color-scale",
     "href": "slides/02-data-grammar.html#step-8.-use-a-different-color-scale",
     "title": "Grammar of data visualization",
     "section": "Step 8. Use a different color scale",
-    "text": "Step 8. Use a different color scale\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_canva()"
+    "text": "Step 8. Use a different color scale\nWith a scale_color_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_grey()"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-8.-use-a-different-color-scale-1",
     "href": "slides/02-data-grammar.html#step-8.-use-a-different-color-scale-1",
     "title": "Grammar of data visualization",
     "section": "Step 8. Use a different color scale",
-    "text": "Step 8. Use a different color scale\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind()"
+    "text": "Step 8. Use a different color scale\nWith another scale_color_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() #this is from ggthemes"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-9.-apply-a-different-theme",
     "href": "slides/02-data-grammar.html#step-9.-apply-a-different-theme",
     "title": "Grammar of data visualization",
     "section": "Step 9. Apply a different theme",
-    "text": "Step 9. Apply a different theme\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal()"
+    "text": "Step 9. Apply a different theme\nWith a theme_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal()"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-9.-apply-a-different-theme-1",
     "href": "slides/02-data-grammar.html#step-9.-apply-a-different-theme-1",
     "title": "Grammar of data visualization",
     "section": "Step 9. Apply a different theme",
-    "text": "Step 9. Apply a different theme\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_classic()"
+    "text": "Step 9. Apply a different theme\nWith a theme_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_classic()"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-9.-apply-a-different-theme-2",
     "href": "slides/02-data-grammar.html#step-9.-apply-a-different-theme-2",
     "title": "Grammar of data visualization",
     "section": "Step 9. Apply a different theme",
-    "text": "Step 9. Apply a different theme\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_solarized()"
+    "text": "Step 9. Apply a different theme\nWith a theme_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_solarized() #this is from ggthemes"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-9.-apply-a-different-theme-3",
     "href": "slides/02-data-grammar.html#step-9.-apply-a-different-theme-3",
     "title": "Grammar of data visualization",
     "section": "Step 9. Apply a different theme",
-    "text": "Step 9. Apply a different theme\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal()"
+    "text": "Step 9. Apply a different theme\nWith a theme_ function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal()"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-10.-add-labels",
     "href": "slides/02-data-grammar.html#step-10.-add-labels",
     "title": "Grammar of data visualization",
     "section": "Step 10. Add labels",
-    "text": "Step 10. Add labels\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\", title = \"Penguin Body Mass vs. Bill Length\")"
+    "text": "Step 10. Add labels\nWith labs() function\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\", title = \"Penguin Body Mass vs. Bill Length\")"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-11.-set-transparency-of-points",
     "href": "slides/02-data-grammar.html#step-11.-set-transparency-of-points",
     "title": "Grammar of data visualization",
     "section": "Step 11. Set transparency of points",
-    "text": "Step 11. Set transparency of points\nwith alpha\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.1) +\n  geom_smooth() +\n  scale_color_colorblind() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
+    "text": "Step 11. Set transparency of points\nwith alpha\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.1) +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-11.-set-transparency-of-points-1",
     "href": "slides/02-data-grammar.html#step-11.-set-transparency-of-points-1",
     "title": "Grammar of data visualization",
     "section": "Step 11. Set transparency of points",
-    "text": "Step 11. Set transparency of points\nwith alpha\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.7) +\n  geom_smooth() +\n  scale_color_colorblind() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
+    "text": "Step 11. Set transparency of points\nwith alpha\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.7) +\n  geom_smooth() +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
   },
   {
     "objectID": "slides/02-data-grammar.html#step-12.-hide-standard-errors-of-curves",
     "href": "slides/02-data-grammar.html#step-12.-hide-standard-errors-of-curves",
     "title": "Grammar of data visualization",
     "section": "Step 12. Hide standard errors of curves",
-    "text": "Step 12. Hide standard errors of curves\nwith se = FALSE\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  scale_color_colorblind() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
+    "text": "Step 12. Hide standard errors of curves\nwith se = FALSE\n\nggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Bill Length (mm)\", y = \"Body Mass (g)\", color = \"Species\")"
   },
   {
     "objectID": "slides/02-data-grammar.html#how-am-i-supposed-to-remember-all-of-this",
     "href": "slides/02-data-grammar.html#how-am-i-supposed-to-remember-all-of-this",
     "title": "Grammar of data visualization",
     "section": "How am I supposed to remember all of this?!",
-    "text": "How am I supposed to remember all of this?!\nYou aren’t!!!\n\nIt’s important to (eventually) know and remember the key ideas: what does changing a theme do? What are aesthetics? What is a geom?\nYou do not need to memorize a comprehensive list of all of the different geoms, themes, color scales, etc.\nThere will be a few fundamentals we expect you to know - more on that later!"
+    "text": "How am I supposed to remember all of this?!\nYou aren’t!!!\n\n\nIt’s important to (eventually) know and remember the key ideas: what does changing a theme do? What are aesthetics? What is a geom?\nYou do not need to memorize a comprehensive list of all of the different geoms, themes, color scales, etc.\nThere will be a few fundamentals we expect you to know – more on that later!\n\nhttps://ggplot2.tidyverse.org is super helpful!"
   },
   {
     "objectID": "slides/02-data-grammar.html#grammar-of-graphics",
@@ -1048,8 +1118,22 @@
     "text": "Grammar of graphics\n\n\nWe built a plot layer-by-layer\n\njust like described in the book The Grammar of Graphics and\nimplemented in the ggplot2 package, the data visualization package of the tidyverse."
   },
   {
+    "objectID": "slides/02-data-grammar.html#application-exercise-1",
+    "href": "slides/02-data-grammar.html#application-exercise-1",
+    "title": "Grammar of data visualization",
+    "section": "Application exercise",
+    "text": "Application exercise\nWhat if we want to use our own data?\n\nread_csv(\"data_file.csv\") (assuming the data is in a CSV format)"
+  },
+  {
     "objectID": "slides/02-data-grammar.html#ae-02-bechdel-dataviz",
     "href": "slides/02-data-grammar.html#ae-02-bechdel-dataviz",
+    "title": "Grammar of data visualization",
+    "section": "ae-02-bechdel-dataviz",
+    "text": "ae-02-bechdel-dataviz\nWe will be looking at data on movies and the Bechdel test."
+  },
+  {
+    "objectID": "slides/02-data-grammar.html#ae-02-bechdel-dataviz-1",
+    "href": "slides/02-data-grammar.html#ae-02-bechdel-dataviz-1",
     "title": "Grammar of data visualization",
     "section": "ae-02-bechdel-dataviz",
     "text": "ae-02-bechdel-dataviz\n\n\nGo to your ae project in RStudio.\nMake sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nIf you haven’t yet done so, click Pull to get today’s application exercise file.\nWork through the application exercise in class, and render, commit, and push your edits by the end of class."

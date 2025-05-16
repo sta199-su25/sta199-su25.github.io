@@ -248,21 +248,37 @@
 </ul></section></section><section><section id="data-visualization" class="title-slide slide level1 center"><h1>Data visualization</h1>
 
 </section><section id="thoughts-on-this-plot" class="slide level2"><h2>Thoughts on this plot?</h2>
-<p><img data-src="images/02/female-heights.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/02/female-heights.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 </section><section id="more-penguins" class="slide level2 smaller"><h2>More Penguins</h2>
-<p><img data-src="images/02/peng_plot.png"></p>
-</section><section id="start-plotting" class="slide level2"><h2>Start plotting!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/02/peng_plot.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section><section id="start-plotting" class="slide level2 smaller"><h2>Start plotting!</h2>
 <p>How can you create something like this???</p>
-<p><br></p>
-<p>If there is one thing you take away from today: We ❤️ <code>ggplot()</code> !</p>
-</section><section id="load-packages" class="slide level2"><h2>Load packages</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/02/ggplot.png"></p>
+</div><div class="column" style="width:70%;">
+<ul>
+<li><p>The <a href="https://ggplot2.tidyverse.org"><strong>ggplot2</strong></a> package has the plotting functions you need!</p></li>
+<li><p><strong>ggplot2</strong> is a part of the <strong>tidyverse</strong> package - when you load tidyverse, you also load <strong>ggplot2</strong></p></li>
+</ul>
+</div></div>
+</section><section id="load-packages" class="slide level2"><h2>Load Packages</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(palmerpenguins)</span>
 <span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="look-at-the-data" class="slide level2"><h2>Look at the data</h2>
-<p><img data-src="images/df.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/df.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 </section><section id="visualize-the-data" class="slide level2"><h2>Visualize the data</h2>
 <p>What are some steps you can take to visualize a data set?</p>
 <ul>
@@ -300,20 +316,7 @@
 </div>
 </div>
 </div>
-</section><section id="so-what-are-aesthetics" class="slide level2 smaller"><h2>So… what are aesthetics??</h2>
-<ul>
-<li><p><strong>Aesthetics</strong> are visual properties of a plot that are mapped to from <strong>variables</strong></p></li>
-<li>
-<p>Some common aesthetics:</p>
-<ul>
-<li><p><strong>x</strong> and <strong>y</strong> axes</p></li>
-<li><p>color</p></li>
-<li><p>fill</p></li>
-<li><p>size</p></li>
-<li><p>shape</p></li>
-</ul>
-</li>
-</ul></section><section id="argument-names" class="slide level2 smaller"><h2>Argument names</h2>
+</section><section id="argument-names" class="slide level2 smaller"><h2>Argument names</h2>
 <p>It’s common practice in R to omit the names of first two arguments of a function:</p>
 <div class="fragment">
 <ul>
@@ -325,18 +328,40 @@
 </ul>
 <div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(your_data, <span class="fu">aes</span>(<span class="at">x =</span> x_variable, <span class="at">y =</span> y_variable))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section><section id="step-3.-map-variables-to-aesthetics-1" class="slide level2 smaller"><h2>Step 3. Map variables to aesthetics</h2>
+<p><em>Map</em> <code>percent_yes</code> to the <code>y</code> <em>aesthetic</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-5-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-3.-map-variables-to-aesthetics-2" class="slide level2 smaller"><h2>Step 3. Map variables to aesthetics</h2>
+<p><em>Map</em> <code>percent_yes</code> to the <code>y</code> <em>aesthetic</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-6-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
 </section><section id="step-4.-represent-data-on-your-canvas" class="slide level2 smaller"><h2>Step 4. Represent data on your canvas</h2>
 <p>with a <code>geom</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 2 rows containing missing values or values outside the scale
 range (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-5-1.png" width="864"></p>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-7-1.png" width="864"></p>
 </figure>
 </div>
 </div>
@@ -347,24 +372,52 @@ range (`geom_point()`).</code></pre>
 </ul>
 <pre><code>Warning: Removed 2 rows containing missing values or values outside the scale
 range (`geom_point()`)</code></pre>
-</section><section id="step-5.-map-variables-to-aesthetics" class="slide level2 smaller"><h2>Step 5. Map variables to aesthetics</h2>
-<p><em>Map</em> <code>species</code> to the <code>color</code> <em>aesthetic</em></p>
+</section><section id="step-4.-represent-data-on-your-canvas-2" class="slide level2 smaller"><h2>Step 4. Represent data on your canvas</h2>
+<p>with a <code>geom</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb10-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-6-1.png" width="864"></p>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-8-1.png" width="864"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="step-6.-represent-data-on-your-canvas" class="slide level2 smaller"><h2>Step 6. Represent data on your canvas</h2>
+</section><section id="step-5.-map-variables-to-aesthetics" class="slide level2 smaller"><h2>Step 5. Map variables to aesthetics</h2>
+<p><em>Map</em> <code>species</code> to the <code>color</code> <em>aesthetic</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-9-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-5.-map-variables-to-aesthetics-1" class="slide level2 smaller"><h2>Step 5. Map variables to aesthetics</h2>
+<p><em>Map</em> <code>species</code> to the <code>color</code> <em>aesthetic</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-10-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>What exactly are aesthetics?</em></strong> They map from a variable to a plot feature.</p>
+<ul>
+<li><p>x and y axes</p></li>
+<li><p>color, shape, size of points</p></li>
+</ul></section><section id="step-6.-represent-data-on-your-canvas" class="slide level2 smaller"><h2>Step 6. Represent data on your canvas</h2>
 <p>with another <code>geom</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb11-3"><a></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb15-3"><a></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
 </div>
@@ -378,12 +431,12 @@ range (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-7-1.png" width="864"></p>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-11-1.png" width="864"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="warnings-and-messages" class="slide level2"><h2>Warnings and messages</h2>
+</section><section id="warnings-and-messages" class="slide level2 smaller"><h2>Warnings and messages</h2>
 <ul>
 <li>Adding <code>geom_smooth()</code> resulted in the following warning:</li>
 </ul>
@@ -398,66 +451,12 @@ range (`geom_point()`).</code></pre>
 <li>Going forward we’ll suppress this warning to save some space.</li>
 </ul>
 </div>
-</section><section id="step-7.-split-plot-into-facets" class="slide level2 smaller"><h2>Step 7. Split plot into facets</h2>
-<p>When you hear ‘facet’, think ‘sub-plots’!</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb16-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb16-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb16-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>island)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-8-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-7.-split-plot-into-facets-1" class="slide level2 smaller"><h2>Step 7. Split plot into facets</h2>
-<p>You have options!</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb17-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb17-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb17-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-9-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="a-note-on-facets" class="slide level2 smaller"><h2>A note on facets:</h2>
-<p>More is not always better! Which plot do you think made it easier to compare between penguin species?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb18-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb18-3"><a></a>  <span class="fu">geom_smooth</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-10-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-8.-use-a-different-color-scale" class="slide level2"><h2>Step 8. Use a different color scale</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb19-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb19-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb19-4"><a></a>  <span class="fu">scale_color_canva</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-11-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-8.-use-a-different-color-scale-1" class="slide level2"><h2>Step 8. Use a different color scale</h2>
+</section><section id="step-6.-represent-data-on-your-canvas-1" class="slide level2 smaller"><h2>Step 6. Represent data on your canvas</h2>
+<p>with another <code>geom</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
 <span id="cb20-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb20-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb20-4"><a></a>  <span class="fu">scale_color_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-3"><a></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-12-1.png" width="864"></p>
@@ -465,13 +464,13 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-9.-apply-a-different-theme" class="slide level2"><h2>Step 9. Apply a different theme</h2>
+</section><section id="step-7.-split-plot-into-facets" class="slide level2 smaller"><h2>Step 7. Split plot into facets</h2>
+<p>Use <code>facet_wrap</code> to make sub-plots</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
 <span id="cb21-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb21-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb21-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb21-5"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>island)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-13-1.png" width="864"></p>
@@ -479,13 +478,13 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-9.-apply-a-different-theme-1" class="slide level2"><h2>Step 9. Apply a different theme</h2>
+</section><section id="step-7.-split-plot-into-facets-1" class="slide level2 smaller"><h2>Step 7. Split plot into facets</h2>
+<p>We can facet by other variables!</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
 <span id="cb22-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb22-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb22-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb22-5"><a></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-14-1.png" width="864"></p>
@@ -493,13 +492,12 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-9.-apply-a-different-theme-2" class="slide level2"><h2>Step 9. Apply a different theme</h2>
+</section><section id="a-note-on-facets" class="slide level2 smaller"><h2>A note on facets:</h2>
+<p>Which plot do you think made it easier to compare between penguin species?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
 <span id="cb23-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb23-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb23-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb23-5"><a></a>  <span class="fu">theme_solarized</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-3"><a></a>  <span class="fu">geom_smooth</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-15-1.png" width="864"></p>
@@ -507,13 +505,13 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-9.-apply-a-different-theme-3" class="slide level2"><h2>Step 9. Apply a different theme</h2>
+</section><section id="step-8.-use-a-different-color-scale" class="slide level2 smaller"><h2>Step 8. Use a different color scale</h2>
+<p>With a <code>scale_color_</code> function</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
 <span id="cb24-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb24-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb24-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb24-5"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-4"><a></a>  <span class="fu">scale_color_grey</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-16-1.png" width="864"></p>
@@ -521,13 +519,13 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-10.-add-labels" class="slide level2"><h2>Step 10. Add labels</h2>
+</section><section id="step-8.-use-a-different-color-scale-1" class="slide level2 smaller"><h2>Step 8. Use a different color scale</h2>
+<p>With another <code>scale_color_</code> function</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
 <span id="cb25-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb25-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb25-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb25-5"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Bill Length (mm)"</span>, <span class="at">y =</span> <span class="st">"Body Mass (g)"</span>, <span class="at">color =</span> <span class="st">"Species"</span>, <span class="at">title =</span> <span class="st">"Penguin Body Mass vs. Bill Length"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="co">#this is from ggthemes </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-17-1.png" width="864"></p>
@@ -535,14 +533,14 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-11.-set-transparency-of-points" class="slide level2"><h2>Step 11. Set transparency of points</h2>
-<p>with <code>alpha</code></p>
+</section><section id="step-9.-apply-a-different-theme" class="slide level2 smaller"><h2>Step 9. Apply a different theme</h2>
+<p>With a <code>theme_</code> function</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb26-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb26-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb26-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
 <span id="cb26-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb26-5"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Bill Length (mm)"</span>, <span class="at">y =</span> <span class="st">"Body Mass (g)"</span>, <span class="at">color =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-5"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-18-1.png" width="864"></p>
@@ -550,14 +548,14 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-11.-set-transparency-of-points-1" class="slide level2"><h2>Step 11. Set transparency of points</h2>
-<p>with <code>alpha</code></p>
+</section><section id="step-9.-apply-a-different-theme-1" class="slide level2 smaller"><h2>Step 9. Apply a different theme</h2>
+<p>With a <code>theme_</code> function</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb27-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb27-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb27-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
 <span id="cb27-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb27-5"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Bill Length (mm)"</span>, <span class="at">y =</span> <span class="st">"Body Mass (g)"</span>, <span class="at">color =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-5"><a></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-19-1.png" width="864"></p>
@@ -565,14 +563,14 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
-</section><section id="step-12.-hide-standard-errors-of-curves" class="slide level2"><h2>Step 12. Hide standard errors of curves</h2>
-<p>with <code>se = FALSE</code></p>
+</section><section id="step-9.-apply-a-different-theme-2" class="slide level2 smaller"><h2>Step 9. Apply a different theme</h2>
+<p>With a <code>theme_</code> function</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb28-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb28-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb28-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb28-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
 <span id="cb28-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb28-5"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Bill Length (mm)"</span>, <span class="at">y =</span> <span class="st">"Body Mass (g)"</span>, <span class="at">color =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb28-5"><a></a>  <span class="fu">theme_solarized</span>() <span class="co">#this is from ggthemes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-20-1.png" width="864"></p>
@@ -580,13 +578,97 @@ range (`geom_point()`).</code></pre>
 </div>
 </div>
 </div>
+</section><section id="step-9.-apply-a-different-theme-3" class="slide level2 smaller"><h2>Step 9. Apply a different theme</h2>
+<p>With a <code>theme_</code> function</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb29-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb29-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb29-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb29-5"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-21-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-10.-add-labels" class="slide level2 smaller"><h2>Step 10. Add labels</h2>
+<p>With <code>labs()</code> function</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb30-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb30-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb30-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb30-5"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb30-6"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Bill Length (mm)"</span>, <span class="at">y =</span> <span class="st">"Body Mass (g)"</span>, <span class="at">color =</span> <span class="st">"Species"</span>, <span class="at">title =</span> <span class="st">"Penguin Body Mass vs. Bill Length"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-22-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-11.-set-transparency-of-points" class="slide level2 smaller"><h2>Step 11. Set transparency of points</h2>
+<p>with <code>alpha</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb31-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb31-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb31-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb31-5"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb31-6"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Bill Length (mm)"</span>, <span class="at">y =</span> <span class="st">"Body Mass (g)"</span>, <span class="at">color =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-23-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-11.-set-transparency-of-points-1" class="slide level2 smaller"><h2>Step 11. Set transparency of points</h2>
+<p>with <code>alpha</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb32-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb32-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb32-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb32-5"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb32-6"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Bill Length (mm)"</span>, <span class="at">y =</span> <span class="st">"Body Mass (g)"</span>, <span class="at">color =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-24-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-12.-hide-standard-errors-of-curves" class="slide level2 smaller"><h2>Step 12. Hide standard errors of curves</h2>
+<p>with <code>se = FALSE</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb33-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb33-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb33-4"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb33-5"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb33-6"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Bill Length (mm)"</span>, <span class="at">y =</span> <span class="st">"Body Mass (g)"</span>, <span class="at">color =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="02-data-grammar_files/figure-html/unnamed-chunk-25-1.png" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
 </section><section id="how-am-i-supposed-to-remember-all-of-this" class="slide level2 smaller"><h2>How am I supposed to remember all of this?!</h2>
 <p><strong><em>You aren’t!!!</em></strong></p>
+<div>
 <ul>
-<li><p>It’s important to (eventually) know and remember the key ideas: what does changing a theme do? What are aesthetics? What is a geom?</p></li>
-<li><p>You do <em>not</em> need to memorize a comprehensive list of <em>all</em> of the different geoms, themes, color scales, etc.</p></li>
-<li><p>There will be a few fundamentals we expect you to know - more on that later!</p></li>
-</ul></section><section id="grammar-of-graphics" class="slide level2 smaller"><h2>Grammar of graphics</h2>
+<li class="fragment">It’s important to (eventually) know and remember the key ideas: what does changing a theme do? What are aesthetics? What is a geom?</li>
+<li class="fragment">You do <em>not</em> need to memorize a comprehensive list of <em>all</em> of the different geoms, themes, color scales, etc.</li>
+<li class="fragment">There will be a few fundamentals we expect you to know – more on that later!</li>
+<li class="fragment">
+<a href="https://ggplot2.tidyverse.org" class="uri">https://ggplot2.tidyverse.org</a> is super helpful!</li>
+</ul>
+</div>
+</section><section id="grammar-of-graphics" class="slide level2 smaller"><h2>Grammar of graphics</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>We built a plot layer-by-layer</p>
@@ -599,14 +681,15 @@ range (`geom_point()`).</code></pre>
 </div><div class="column" style="width:30%;">
 <p><img data-src="images/02/gg-layers.png"></p>
 </div></div>
-</section></section><section id="application-exercise" class="title-slide slide level1 center"><h1>Application exercise</h1>
-<p>What if we want to use our own data?</p>
-<ul>
-<li>
-<code>read_csv("data_file.csv")</code> (assuming the data is in a CSV format)</li>
-</ul></section><section><section id="application-exercise-1" class="title-slide slide level1 center"><h1>Application exercise</h1>
+</section></section><section><section id="application-exercise" class="title-slide slide level1 center"><h1>Application exercise</h1>
 
+</section><section id="application-exercise-1" class="slide level2 smaller"><h2>Application exercise</h2>
+<p>What if we want to use our own data?</p>
+<p><br></p>
+<p><code>read_csv("data_file.csv")</code> (assuming the data is in a CSV format)</p>
 </section><section id="ae-02-bechdel-dataviz" class="slide level2 smaller"><h2><code>ae-02-bechdel-dataviz</code></h2>
+<p>We will be looking at data on movies and the Bechdel test.</p>
+</section><section id="ae-02-bechdel-dataviz-1" class="slide level2 smaller"><h2><code>ae-02-bechdel-dataviz</code></h2>
 <div class="appex">
 <ul>
 <li>Go to your <code>ae</code> project in RStudio.</li>
@@ -622,8 +705,8 @@ range (`geom_point()`).</code></pre>
 <li>The formula is (almost) always as follows:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(DATA, <span class="fu">aes</span>(<span class="at">x =</span> X<span class="sc">-</span>VAR, <span class="at">y =</span> Y<span class="sc">-</span>VAR, ...)) <span class="sc">+</span></span>
-<span id="cb29-2"><a></a>  <span class="fu">geom_XXX</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">ggplot</span>(DATA, <span class="fu">aes</span>(<span class="at">x =</span> X<span class="sc">-</span>VAR, <span class="at">y =</span> Y<span class="sc">-</span>VAR, ...)) <span class="sc">+</span></span>
+<span id="cb34-2"><a></a>  <span class="fu">geom_XXX</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="coming-up" class="slide level2 smaller"><h2>Coming Up…</h2>
 <ul>
