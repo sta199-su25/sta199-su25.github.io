@@ -268,12 +268,19 @@ What other improvements could we make to this plot?
 
 It's your turn!
 
-Look at the penguins data frame.
+Load and look at the penguins data frame.
 What are two variables you could explore the relationship between?
+
+::: callout-note
+Hint: You will need to load the necessary package first!
+:::
 
 Try to make a plot (or many!).
 
 ```{r}
+#| label: penguin-plot
+
+# add code here
 
 ```
 

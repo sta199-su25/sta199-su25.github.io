@@ -45,7 +45,7 @@ auto-stretch: false
 Go to RStudio, confirm that you're in the `ae` project, and open the document `ae-01-meet-the-penguins.qmd`.
 :::
 
-## Common problems:
+## Common problems: {.smaller}
 
 -   The environment used by Quarto ***when rendering*** starts EMPTY - it does *not see* what *you see* in your environment.
     \
@@ -66,11 +66,11 @@ Go to RStudio, confirm that you're in the `ae` project, and open the document `a
 
 ![](images/02/peng_plot.png)
 
-## Let' see... {.center}
+## Start plotting!
 
 How can you create something like this???
 
-<br><br><br>
+<br>
 
 If there is one thing you take away from today: We ❤️ `ggplot()` !
 
@@ -79,6 +79,8 @@ If there is one thing you take away from today: We ❤️ `ggplot()` !
 ```{r}
 #| label: load-packages
 #| message: false
+#| warning: false
+
 library(palmerpenguins)
 library(tidyverse)
 library(ggthemes)
@@ -101,6 +103,7 @@ What are some steps you can take to visualize a data set?
 ```{r}
 #| fig-width: 9
 #| fig-height: 3
+
 ggplot(data = penguins)
 ```
 
@@ -168,6 +171,14 @@ with a `geom`
 ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g)) +
   geom_point()
 ```
+## Step 4. Represent data on your canvas {.smaller}
+
+-   Adding `geom_point()` resulted in the following warning:
+
+```         
+Warning: Removed 2 rows containing missing values or values outside the scale
+range (`geom_point()`)
+```
 
 ## Step 5. Map variables to aesthetics {.smaller}
 
@@ -176,6 +187,7 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g)) +
 ```{r}
 #| fig-width: 9
 #| fig-height: 3
+#| warning: false
 ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +
   geom_point()
 ```
@@ -271,7 +283,7 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
 ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = species)) +
   geom_point() +
   geom_smooth() +
-  scale_color_canva()
+  scale_color_colorblind()
 ```
 
 ## Step 9. Apply a different theme
@@ -339,7 +351,6 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   labs(x = "Bill Length (mm)", y = "Body Mass (g)", color = "Species", title = "Penguin Body Mass vs. Bill Length")
 ```
 
-## More visual changes!
 
 ## Step 11. Set transparency of points
 
@@ -355,6 +366,9 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   scale_color_colorblind() +
   labs(x = "Bill Length (mm)", y = "Body Mass (g)", color = "Species")
 ```
+
+## Step 11. Set transparency of points
+with `alpha`
 
 ```{r}
 #| fig-width: 9
@@ -383,7 +397,7 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
   labs(x = "Bill Length (mm)", y = "Body Mass (g)", color = "Species")
 ```
 
-## How am I supposed to remember all of this?!
+## How am I supposed to remember all of this?! {.smaller}
 
 ***You aren't!!!***
 
@@ -437,7 +451,12 @@ What if we want to use our own data?
 -   Layers of ggplots are separated by `+`s.
 -   The formula is (almost) always as follows:
 
-`{r} #| eval: false ggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +   geom_XXX()`
+```{r}
+#| eval: false 
+
+ggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +
+  geom_XXX() 
+```
 
 ## Coming Up... {.smaller}
 
