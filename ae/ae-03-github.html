@@ -272,8 +272,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header><section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://openintrostat.github.io/openintro/">openintro</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tidyr' was built under R version 4.4.1</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://openintrostat.github.io/openintro/">openintro</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'airports' was built under R version 4.4.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'cherryblossom' was built under R version 4.4.1</code></pre>
+</div>
 </div>
 </section><section id="data" class="level2"><h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>We will be using the Duke forest data set in the open intro package.</p>
@@ -282,7 +291,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>One of the questions in this AE asks about garages - notice that this is <em>not</em> a variable in the data set. I am adding code that creates a categorical variable called <code>garage</code> that has two levels: <code>Garage</code> or <code>No garage</code>. Our new variable equals&nbsp;<code>"Garage"</code>&nbsp;if the word&nbsp;<code>"Garage"</code>&nbsp;is detected in the&nbsp;<code>parking</code>&nbsp;variable and equals&nbsp;<code>"No garage"</code>&nbsp;if not.</p>
 <p><strong><em>You do not need to understand this code yet - we will learn how to write things like this in the coming days! For now, just run the code!</em></strong></p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">duke_forest</span> <span class="op">=</span> <span class="va">duke_forest</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">duke_forest</span> <span class="op">=</span> <span class="va">duke_forest</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>garage <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect</a></span><span class="op">(</span><span class="va">parking</span>, <span class="st">"Garage"</span><span class="op">)</span>,   <span class="st">"Garage"</span>, <span class="st">"No garage"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong><em>What did this do?</em></strong></p>
@@ -313,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Add narrative here…</p>
 <div class="callout callout-style-default callout-important callout-titled">
