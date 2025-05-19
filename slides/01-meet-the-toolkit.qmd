@@ -83,11 +83,11 @@ How do we make sure a data analysis is "reproducible"?
 -   Can the code be used for other data?
 -   Can you extend the code to do other things?
 
-## Toolkit for reproducibility 
+## Toolkit for reproducibility
 
 \- Scriptability $\rightarrow$ R
 
-\- Literate programming (code, narrative, output in one place) $\rightarrow$  Quarto
+\- Literate programming (code, narrative, output in one place) $\rightarrow$ Quarto
 
 \- Version control $\rightarrow$ Git / GitHub
 
@@ -242,13 +242,12 @@ Check your environment pane for the saved object!
 <br>
 
 -   These are essential for figuring out where your code is going wrong.
-   
+
 <br><br>
-  
+
 ::: callout-note
-If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online. 
+If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.
 :::
- 
 
 ## R packages {.smaller}
 

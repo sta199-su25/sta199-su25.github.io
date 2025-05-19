@@ -46,6 +46,6 @@ Not open to students who have taken a 100-level Statistical Science course, Stat
 | Katie Solarz     | Old Chem 203A                                                                   | W 5:30-7:30 PM         |
 +------------------+---------------------------------------------------------------------------------+------------------------+
 
-::: callout-warning
+::: callout-note
 ## On May 21 (W), Marie will run Katie's office hours. Katie will run Marie's on May 23 (F).
 :::

@@ -1,7 +1,7 @@
 ---
 title: "Grammar of data visualization"
 subtitle: "Lecture 2"
-date: "2025-01-16"
+date: "2025-05-16"
 format: 
   revealjs:
     output-file: 02-data-grammar-slides.html
@@ -235,7 +235,7 @@ ggplot(penguins, mapping = aes(x = bill_length_mm, y = body_mass_g, color = spec
 
 -   color, shape, size of points
 
-## Step 6. Represent data on your canvas{.smaller}
+## Step 6. Represent data on your canvas {.smaller}
 
 with another `geom`
 
