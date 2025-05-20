@@ -4,7 +4,7 @@ subtitle: "Lecture 4"
 date: "2025-05-19"
 format: 
   revealjs:
-    output-file: 04-data-wrangle-slides.html
+    output-file: 04-data-transform-slides.html
 auto-stretch: false
 ---
 
