@@ -10,7 +10,7 @@ auto-stretch: false
 
 ## Announcements/Reminders {.smaller}
 
--   Lab is due tomorrow night!
+-   Lab is due tomorrow night!!
 
 -   Come to office hours and/or post on Ed for help!
 
