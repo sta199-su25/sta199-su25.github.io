@@ -1920,7 +1920,21 @@
     "href": "slides/05-data-transform-2-slides.html#lab-narrative",
     "title": "More Data Transformation",
     "section": "Lab: Narrative",
-    "text": "Lab: Narrative"
+    "text": "Lab: Narrative\n\n\nBoxplots, histograms, density plots:\n\nCenter: Give an idea of a ‘typical value’ (median, most common range, etc.);\nSpread: Does the data have a lot of variability? Or just a little? (IQR, outliers)\nShape: Is there skew? Which direction? Is it unimodal or multimodal?"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#lab-narrative-1",
+    "href": "slides/05-data-transform-2-slides.html#lab-narrative-1",
+    "title": "More Data Transformation",
+    "section": "Lab: Narrative",
+    "text": "Lab: Narrative\n\n\nScatter Plots \n\nIs there a relationship between the two variables? Is it positive or negative?\nIf there is a relationship, does it seem to be strong or weak?\nIs the relationship linear or nonlinear?"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#lab-advice",
+    "href": "slides/05-data-transform-2-slides.html#lab-advice",
+    "title": "More Data Transformation",
+    "section": "Lab: Advice",
+    "text": "Lab: Advice\n\nBe Specific  in your narrative. Don’t just say “the spread is small and the center is low”. What does that mean??? Give numbers, units (if available), etc.\nBe Specific  in your plot labels.\nAnswer all parts of the question!! Statements like “Compare…” mean to do so in the written answer!\nWritten answers should be text outside of code chunks, not comments\nMake sure you can render to PDF early!!!"
   },
   {
     "objectID": "slides/05-data-transform-2-slides.html#outline",
@@ -1949,6 +1963,48 @@
     "title": "More Data Transformation",
     "section": "Quick Review: Groups of rows",
     "text": "Quick Review: Groups of rows\n\n\n\n\nsummarize(): collapses a group into a single row\n\n\ncount(): count unique values of one or more variables\n\n\ngroup_by(): perform calculations separately for each value of a variable\n\n\n\n\n\nX1\nX2\nX3\n\n\n\n1\na\nyes\n\n\n3\nb\nno\n\n\n5\na\nyes\n\n\n7\nb\nyes\n\n\n9\na\nyes"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate",
+    "href": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nWhat does group by do here?\n\nbechdel |&gt;\n  group_by(binary) |&gt;\n  summarise(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) \n\n# A tibble: 2 × 3\n  binary mean_roi mean_budget\n  &lt;chr&gt;     &lt;dbl&gt;       &lt;dbl&gt;\n1 FAIL       8.36   65877024.\n2 PASS       7.99   46913086."
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate-1",
+    "href": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate-1",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nWhat does group by do here?\n\nbechdel |&gt;\n  #group_by(binary) |&gt;\n  summarise(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) \n\n# A tibble: 1 × 2\n  mean_roi mean_budget\n     &lt;dbl&gt;       &lt;dbl&gt;\n1     8.19   57035015."
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate-2",
+    "href": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate-2",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nWhat if I change summarize to mutate?\n\nbechdel |&gt;\n  group_by(binary) |&gt;\n  mutate(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) \n\n# A tibble: 1,615 × 9\n# Groups:   binary [2]\n   title          year gross_2013 budget_2013    roi binary clean_test\n   &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n 1 21 & Over      2013   67878146    13000000  5.22  FAIL   notalk    \n 2 Dredd 3D       2012   55078343    45658735  1.21  PASS   ok        \n 3 12 Years a S…  2013  211714070    20000000 10.6   FAIL   notalk    \n 4 2 Guns         2013  208105475    61000000  3.41  FAIL   notalk    \n 5 42             2013  190040426    40000000  4.75  FAIL   men       \n 6 47 Ronin       2013  184166317   225000000  0.819 FAIL   men       \n 7 A Good Day t…  2013  371598396    92000000  4.04  FAIL   notalk    \n 8 About Time     2013  102648667    12000000  8.55  PASS   ok        \n 9 Admission      2013   36014634    13000000  2.77  PASS   ok        \n10 After Earth    2013  304895295   130000000  2.35  FAIL   notalk    \n# ℹ 1,605 more rows\n# ℹ 2 more variables: mean_roi &lt;dbl&gt;, mean_budget &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate-3",
+    "href": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate-3",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nWhat if I change summarize to mutate?\n\nbechdel |&gt;\n  group_by(binary) |&gt;\n  mutate(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) |&gt;\n  select(title, binary, mean_roi, mean_budget)\n\n# A tibble: 1,615 × 4\n# Groups:   binary [2]\n   title                  binary mean_roi mean_budget\n   &lt;chr&gt;                  &lt;chr&gt;     &lt;dbl&gt;       &lt;dbl&gt;\n 1 21 & Over              FAIL       8.36   65877024.\n 2 Dredd 3D               PASS       7.99   46913086.\n 3 12 Years a Slave       FAIL       8.36   65877024.\n 4 2 Guns                 FAIL       8.36   65877024.\n 5 42                     FAIL       8.36   65877024.\n 6 47 Ronin               FAIL       8.36   65877024.\n 7 A Good Day to Die Hard FAIL       8.36   65877024.\n 8 About Time             PASS       7.99   46913086.\n 9 Admission              PASS       7.99   46913086.\n10 After Earth            FAIL       8.36   65877024.\n# ℹ 1,605 more rows"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate-4",
+    "href": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate-4",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nYou can group by more than one variable!\n\nbechdel |&gt;\n  group_by(binary, year) |&gt;\n  summarise(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) \n\n`summarise()` has grouped output by 'binary'. You can override using\nthe `.groups` argument.\n\n\n# A tibble: 48 × 4\n# Groups:   binary [2]\n   binary  year mean_roi mean_budget\n   &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;\n 1 FAIL    1990    13.1    73101991.\n 2 FAIL    1991     6.71   74299353 \n 3 FAIL    1992    46.3    38883983.\n 4 FAIL    1993     6.36   49099374.\n 5 FAIL    1994    23.7    57812022.\n 6 FAIL    1995     5.69   68251510.\n 7 FAIL    1996     3.82   68600475.\n 8 FAIL    1997    16.5    73257554.\n 9 FAIL    1998     6.95   53083540.\n10 FAIL    1999     5.12   72804781.\n# ℹ 38 more rows"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate-5",
+    "href": "slides/05-data-transform-2-slides.html#recap-group-by-summarize-mutate-5",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nYou can un group with ungroup()\n\nbechdel |&gt;\n  group_by(binary, year) |&gt;\n  summarise(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) |&gt;\n  ungroup()\n\n`summarise()` has grouped output by 'binary'. You can override using\nthe `.groups` argument.\n\n\n# A tibble: 48 × 4\n   binary  year mean_roi mean_budget\n   &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;\n 1 FAIL    1990    13.1    73101991.\n 2 FAIL    1991     6.71   74299353 \n 3 FAIL    1992    46.3    38883983.\n 4 FAIL    1993     6.36   49099374.\n 5 FAIL    1994    23.7    57812022.\n 6 FAIL    1995     5.69   68251510.\n 7 FAIL    1996     3.82   68600475.\n 8 FAIL    1997    16.5    73257554.\n 9 FAIL    1998     6.95   53083540.\n10 FAIL    1999     5.12   72804781.\n# ℹ 38 more rows"
   },
   {
     "objectID": "slides/05-data-transform-2-slides.html#more-about-the-pipe",
@@ -2007,6 +2063,13 @@
     "text": "Plot + data transform\n\nbechdel |&gt;\n  mutate(budget_in_millions = budget_2013/1000000) |&gt;\n  ggplot(aes(x = budget_in_millions))"
   },
   {
+    "objectID": "slides/05-data-transform-2-slides.html#exploratory-data-analysis",
+    "href": "slides/05-data-transform-2-slides.html#exploratory-data-analysis",
+    "title": "More Data Transformation",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\nWhat is exploratory data analysis (EDA)??\n\nBasically everything we have done so far\nMaking plots and computing summary statistics (proportions, means, IQR, etc.) to help explore the data"
+  },
+  {
     "objectID": "slides/05-data-transform-2-slides.html#assignment",
     "href": "slides/05-data-transform-2-slides.html#assignment",
     "title": "More Data Transformation",
@@ -2014,39 +2077,32 @@
     "text": "Assignment\nLet’s make a tiny data frame to use as an example:\n\nlibrary(tidyverse)\ndf &lt;- tibble(x = c(1, 2, 3, 4, 5), y = c(\"a\", \"a\", \"b\", \"c\", \"c\"))\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c"
   },
   {
-    "objectID": "slides/05-data-transform-2-slides.html#recap-assignment",
-    "href": "slides/05-data-transform-2-slides.html#recap-assignment",
-    "title": "More Data Transformation",
-    "section": "Recap: assignment",
-    "text": "Recap: assignment\n\n\n\nDo something and show me\n\n\ndf |&gt;\n  mutate(x = x * 2)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c    \n\n\n\n\nDo something and save result\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
-  },
-  {
     "objectID": "slides/05-data-transform-2-slides.html#assignment-1",
     "href": "slides/05-data-transform-2-slides.html#assignment-1",
     "title": "More Data Transformation",
     "section": "Assignment",
-    "text": "Assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
+    "text": "Assignment\n\n\n\nDo something and show me\n\n\ndf |&gt;\n  mutate(x = x * 2)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c    \n\n\n\n\nDo something and save result\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
   },
   {
     "objectID": "slides/05-data-transform-2-slides.html#assignment-2",
     "href": "slides/05-data-transform-2-slides.html#assignment-2",
     "title": "More Data Transformation",
     "section": "Assignment",
-    "text": "Assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
   },
   {
     "objectID": "slides/05-data-transform-2-slides.html#assignment-3",
     "href": "slides/05-data-transform-2-slides.html#assignment-3",
     "title": "More Data Transformation",
     "section": "Assignment",
-    "text": "Assignment\n\n\n\nDo something, save result, overwriting originaldata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\nDo something, save result, overwriting originalcolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
   },
   {
-    "objectID": "slides/05-data-transform-2-slides.html#in-a-single-pipeline",
-    "href": "slides/05-data-transform-2-slides.html#in-a-single-pipeline",
+    "objectID": "slides/05-data-transform-2-slides.html#assignment-4",
+    "href": "slides/05-data-transform-2-slides.html#assignment-4",
     "title": "More Data Transformation",
-    "section": "“In a single pipeline”",
-    "text": "“In a single pipeline”\nSelect the"
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting originaldata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\nDo something, save result, overwriting originalcolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
   },
   {
     "objectID": "slides/05-data-transform-2.html",
@@ -2067,7 +2123,21 @@
     "href": "slides/05-data-transform-2.html#lab-narrative",
     "title": "More Data Transformation",
     "section": "Lab: Narrative",
-    "text": "Lab: Narrative"
+    "text": "Lab: Narrative\n\n\nBoxplots, histograms, density plots:\n\nCenter: Give an idea of a ‘typical value’ (median, most common range, etc.);\nSpread: Does the data have a lot of variability? Or just a little? (IQR, outliers)\nShape: Is there skew? Which direction? Is it unimodal or multimodal?"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#lab-narrative-1",
+    "href": "slides/05-data-transform-2.html#lab-narrative-1",
+    "title": "More Data Transformation",
+    "section": "Lab: Narrative",
+    "text": "Lab: Narrative\n\n\nScatter Plots \n\nIs there a relationship between the two variables? Is it positive or negative?\nIf there is a relationship, does it seem to be strong or weak?\nIs the relationship linear or nonlinear?"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#lab-advice",
+    "href": "slides/05-data-transform-2.html#lab-advice",
+    "title": "More Data Transformation",
+    "section": "Lab: Advice",
+    "text": "Lab: Advice\n\nBe Specific  in your narrative. Don’t just say “the spread is small and the center is low”. What does that mean??? Give numbers, units (if available), etc.\nBe Specific  in your plot labels.\nAnswer all parts of the question!! Statements like “Compare…” mean to do so in the written answer!\nWritten answers should be text outside of code chunks, not comments\nMake sure you can render to PDF early!!!"
   },
   {
     "objectID": "slides/05-data-transform-2.html#outline",
@@ -2096,6 +2166,48 @@
     "title": "More Data Transformation",
     "section": "Quick Review: Groups of rows",
     "text": "Quick Review: Groups of rows\n\n\n\n\nsummarize(): collapses a group into a single row\n\n\ncount(): count unique values of one or more variables\n\n\ngroup_by(): perform calculations separately for each value of a variable\n\n\n\n\n\nX1\nX2\nX3\n\n\n\n1\na\nyes\n\n\n3\nb\nno\n\n\n5\na\nyes\n\n\n7\nb\nyes\n\n\n9\na\nyes"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate",
+    "href": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nWhat does group by do here?\n\nbechdel |&gt;\n  group_by(binary) |&gt;\n  summarise(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) \n\n# A tibble: 2 × 3\n  binary mean_roi mean_budget\n  &lt;chr&gt;     &lt;dbl&gt;       &lt;dbl&gt;\n1 FAIL       8.36   65877024.\n2 PASS       7.99   46913086."
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate-1",
+    "href": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate-1",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nWhat does group by do here?\n\nbechdel |&gt;\n  #group_by(binary) |&gt;\n  summarise(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) \n\n# A tibble: 1 × 2\n  mean_roi mean_budget\n     &lt;dbl&gt;       &lt;dbl&gt;\n1     8.19   57035015."
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate-2",
+    "href": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate-2",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nWhat if I change summarize to mutate?\n\nbechdel |&gt;\n  group_by(binary) |&gt;\n  mutate(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) \n\n# A tibble: 1,615 × 9\n# Groups:   binary [2]\n   title          year gross_2013 budget_2013    roi binary clean_test\n   &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n 1 21 & Over      2013   67878146    13000000  5.22  FAIL   notalk    \n 2 Dredd 3D       2012   55078343    45658735  1.21  PASS   ok        \n 3 12 Years a S…  2013  211714070    20000000 10.6   FAIL   notalk    \n 4 2 Guns         2013  208105475    61000000  3.41  FAIL   notalk    \n 5 42             2013  190040426    40000000  4.75  FAIL   men       \n 6 47 Ronin       2013  184166317   225000000  0.819 FAIL   men       \n 7 A Good Day t…  2013  371598396    92000000  4.04  FAIL   notalk    \n 8 About Time     2013  102648667    12000000  8.55  PASS   ok        \n 9 Admission      2013   36014634    13000000  2.77  PASS   ok        \n10 After Earth    2013  304895295   130000000  2.35  FAIL   notalk    \n# ℹ 1,605 more rows\n# ℹ 2 more variables: mean_roi &lt;dbl&gt;, mean_budget &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate-3",
+    "href": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate-3",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nWhat if I change summarize to mutate?\n\nbechdel |&gt;\n  group_by(binary) |&gt;\n  mutate(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) |&gt;\n  select(title, binary, mean_roi, mean_budget)\n\n# A tibble: 1,615 × 4\n# Groups:   binary [2]\n   title                  binary mean_roi mean_budget\n   &lt;chr&gt;                  &lt;chr&gt;     &lt;dbl&gt;       &lt;dbl&gt;\n 1 21 & Over              FAIL       8.36   65877024.\n 2 Dredd 3D               PASS       7.99   46913086.\n 3 12 Years a Slave       FAIL       8.36   65877024.\n 4 2 Guns                 FAIL       8.36   65877024.\n 5 42                     FAIL       8.36   65877024.\n 6 47 Ronin               FAIL       8.36   65877024.\n 7 A Good Day to Die Hard FAIL       8.36   65877024.\n 8 About Time             PASS       7.99   46913086.\n 9 Admission              PASS       7.99   46913086.\n10 After Earth            FAIL       8.36   65877024.\n# ℹ 1,605 more rows"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate-4",
+    "href": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate-4",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nYou can group by more than one variable!\n\nbechdel |&gt;\n  group_by(binary, year) |&gt;\n  summarise(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) \n\n`summarise()` has grouped output by 'binary'. You can override using\nthe `.groups` argument.\n\n\n# A tibble: 48 × 4\n# Groups:   binary [2]\n   binary  year mean_roi mean_budget\n   &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;\n 1 FAIL    1990    13.1    73101991.\n 2 FAIL    1991     6.71   74299353 \n 3 FAIL    1992    46.3    38883983.\n 4 FAIL    1993     6.36   49099374.\n 5 FAIL    1994    23.7    57812022.\n 6 FAIL    1995     5.69   68251510.\n 7 FAIL    1996     3.82   68600475.\n 8 FAIL    1997    16.5    73257554.\n 9 FAIL    1998     6.95   53083540.\n10 FAIL    1999     5.12   72804781.\n# ℹ 38 more rows"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate-5",
+    "href": "slides/05-data-transform-2.html#recap-group-by-summarize-mutate-5",
+    "title": "More Data Transformation",
+    "section": "Recap: Group by, summarize, mutate",
+    "text": "Recap: Group by, summarize, mutate\nYou can un group with ungroup()\n\nbechdel |&gt;\n  group_by(binary, year) |&gt;\n  summarise(mean_roi = mean(roi, na.rm = TRUE), \n            mean_budget = mean(budget_2013)) |&gt;\n  ungroup()\n\n`summarise()` has grouped output by 'binary'. You can override using\nthe `.groups` argument.\n\n\n# A tibble: 48 × 4\n   binary  year mean_roi mean_budget\n   &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;\n 1 FAIL    1990    13.1    73101991.\n 2 FAIL    1991     6.71   74299353 \n 3 FAIL    1992    46.3    38883983.\n 4 FAIL    1993     6.36   49099374.\n 5 FAIL    1994    23.7    57812022.\n 6 FAIL    1995     5.69   68251510.\n 7 FAIL    1996     3.82   68600475.\n 8 FAIL    1997    16.5    73257554.\n 9 FAIL    1998     6.95   53083540.\n10 FAIL    1999     5.12   72804781.\n# ℹ 38 more rows"
   },
   {
     "objectID": "slides/05-data-transform-2.html#more-about-the-pipe",
@@ -2154,6 +2266,13 @@
     "text": "Plot + data transform\n\nbechdel |&gt;\n  mutate(budget_in_millions = budget_2013/1000000) |&gt;\n  ggplot(aes(x = budget_in_millions))"
   },
   {
+    "objectID": "slides/05-data-transform-2.html#exploratory-data-analysis",
+    "href": "slides/05-data-transform-2.html#exploratory-data-analysis",
+    "title": "More Data Transformation",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\nWhat is exploratory data analysis (EDA)??\n\nBasically everything we have done so far\nMaking plots and computing summary statistics (proportions, means, IQR, etc.) to help explore the data"
+  },
+  {
     "objectID": "slides/05-data-transform-2.html#assignment",
     "href": "slides/05-data-transform-2.html#assignment",
     "title": "More Data Transformation",
@@ -2161,39 +2280,32 @@
     "text": "Assignment\nLet’s make a tiny data frame to use as an example:\n\nlibrary(tidyverse)\ndf &lt;- tibble(x = c(1, 2, 3, 4, 5), y = c(\"a\", \"a\", \"b\", \"c\", \"c\"))\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c"
   },
   {
-    "objectID": "slides/05-data-transform-2.html#recap-assignment",
-    "href": "slides/05-data-transform-2.html#recap-assignment",
-    "title": "More Data Transformation",
-    "section": "Recap: assignment",
-    "text": "Recap: assignment\n\n\n\nDo something and show me\n\n\ndf |&gt;\n  mutate(x = x * 2)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c    \n\n\n\n\n\nDo something and save result\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
-  },
-  {
     "objectID": "slides/05-data-transform-2.html#assignment-1",
     "href": "slides/05-data-transform-2.html#assignment-1",
     "title": "More Data Transformation",
     "section": "Assignment",
-    "text": "Assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
+    "text": "Assignment\n\n\n\nDo something and show me\n\n\ndf |&gt;\n  mutate(x = x * 2)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c    \n\n\n\n\n\nDo something and save result\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
   },
   {
     "objectID": "slides/05-data-transform-2.html#assignment-2",
     "href": "slides/05-data-transform-2.html#assignment-2",
     "title": "More Data Transformation",
     "section": "Assignment",
-    "text": "Assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
   },
   {
     "objectID": "slides/05-data-transform-2.html#assignment-3",
     "href": "slides/05-data-transform-2.html#assignment-3",
     "title": "More Data Transformation",
     "section": "Assignment",
-    "text": "Assignment\n\n\n\nDo something, save result, overwriting originaldata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\n\nDo something, save result, overwriting originalcolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
   },
   {
-    "objectID": "slides/05-data-transform-2.html#in-a-single-pipeline",
-    "href": "slides/05-data-transform-2.html#in-a-single-pipeline",
+    "objectID": "slides/05-data-transform-2.html#assignment-4",
+    "href": "slides/05-data-transform-2.html#assignment-4",
     "title": "More Data Transformation",
-    "section": "“In a single pipeline”",
-    "text": "“In a single pipeline”\nSelect the"
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting originaldata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\n\nDo something, save result, overwriting originalcolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
   },
   {
     "objectID": "computing-troubleshooting.html",
@@ -4242,7 +4354,7 @@
     "href": "index.html",
     "title": "STA 199: Intro to Data Science and Statistical Thinking",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Visualization\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02  ✅ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nMore Data visualization\n🖥️ slides 03  🗒️ notes 03  ⌨️ ae 03 ✅ ae 03\n\n📘 ims - chp 5 🎥 Visualizing Quantitative Data 🎥 Visualizing Categorical Data\n\n\n\nMon, May 19\nLab 1\n💻 lab 1\n\n📗 r4ds - chp 2  📘 ims - chp 5\n\n\n\nTue, May 20\nGrammar of Data Transformation\n🖥️ slides 04  🗒️ notes 04  ⌨️ ae 04\n\n📗 r4ds - chp 3.1-3.5 \n\n\n\nWed, May 21\nMore Data Transformation\n🖥️ slides 05  🗒️ notes 05  ⌨️ ae 05\nLab 1 - 11:59PM ET\n📗 r4ds - chp 3.6-3.7  🎥 Working with a single data frame\n\n\n\nThu, May 22\nTidying Data\n\n\n📗 r4ds - chp 5\n\n\n\nThu, May 22\nLab 2\n\n\n📗 r4ds - chp 4\n\n\n\nFri, May 23\nJoining Data\n\n\n\n\n\n\nSun, May 25\n\n\n\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n\n\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n\nLab 2 - 11:59PM ET\n\n\n\n\nThu, May 29\nWeb Scraping\n\n\n\n\n\n\nThu, May 29\nLab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n\n\n\n\n\n\nSun, Jun 1\n\n\nLab 3 - 11:59PM ET\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Visualization\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02  ✅ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nMore Data visualization\n🖥️ slides 03  🗒️ notes 03  ⌨️ ae 03  ✅ ae 03\n\n📘 ims - chp 5 🎥 Visualizing Quantitative Data 🎥 Visualizing Categorical Data\n\n\n\nMon, May 19\nLab 1\n💻 lab 1\n\n📗 r4ds - chp 2  📘 ims - chp 5\n\n\n\nTue, May 20\nGrammar of Data Transformation\n🖥️ slides 04  🗒️ notes 04  ⌨️ ae 04\n\n📗 r4ds - chp 3.1-3.5 \n\n\n\nWed, May 21\nMore Data Transformation\n🖥️ slides 05  🗒️ notes 05  ⌨️ ae 05\nLab 1 - 11:59PM ET\n📗 r4ds - chp 3.6-3.7  🎥 Working with a single data frame\n\n\n\nThu, May 22\nTidying Data\n\n\n📗 r4ds - chp 5\n\n\n\nThu, May 22\nLab 2\n\n\n📗 r4ds - chp 4\n\n\n\nFri, May 23\nJoining Data\n\n\n\n\n\n\nSun, May 25\n\n\n\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n\n\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n\nLab 2 - 11:59PM ET\n\n\n\n\nThu, May 29\nWeb Scraping\n\n\n\n\n\n\nThu, May 29\nLab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n\n\n\n\n\n\nSun, Jun 1\n\n\nLab 3 - 11:59PM ET\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
     "crumbs": [
       "Course information",
       "Schedule"
