@@ -20,7 +20,41 @@ auto-stretch: false
 
 -   Make sure you are in the right repository.
 
-## Lab: Narrative
+## Lab: Narrative  {.smaller}
+
+-   ***Boxplots, histograms, density plots:***
+
+    -   Center: Give an idea of a 'typical value' (median, most common range, etc.);
+
+    -   Spread: Does the data have a lot of variability? Or just a little?
+        (IQR, outliers)
+
+    -   Shape: Is there skew? Which direction? Is it unimodal or multimodal?
+    
+  
+## Lab: Narrative  {.smaller}
+
+-   ***Scatter Plots ***
+
+    -   Is there a relationship between the two variables? Is it positive or negative?
+    
+    -   If there is a relationship, does it seem to be strong or weak?
+    
+    -   Is the relationship linear or nonlinear?
+    
+  
+## Lab: Advice  {.smaller}
+
+-   ***Be Specific *** in your narrative. Don't just say "the spread is small and the center is low". What does that mean??? Give numbers, units (if available), etc.
+
+-   ***Be Specific *** in your plot labels.
+
+-  Answer all parts of the question!! Statements like "Compare..." mean to do so in the written answer!
+
+-  Written answers should be text outside of code chunks, not comments
+
+-  Make sure you can render to PDF early!!!
+
 
 ## Outline {.smaller}
 
@@ -108,6 +142,78 @@ bechdel <- read_csv("data/bechdel.csv")
 
 # AE-04
 
+## Recap: Group by, summarize, mutate {.smaller}
+
+What does group by do here?
+
+```{r}
+#| label: pipe-plot-25
+bechdel |>
+  group_by(binary) |>
+  summarise(mean_roi = mean(roi, na.rm = TRUE), 
+            mean_budget = mean(budget_2013)) 
+```
+## Recap: Group by, summarize, mutate {.smaller}
+
+What does group by do here?
+
+```{r}
+#| label: pipe-plot-3
+bechdel |>
+  #group_by(binary) |>
+  summarise(mean_roi = mean(roi, na.rm = TRUE), 
+            mean_budget = mean(budget_2013)) 
+```
+## Recap: Group by, summarize, mutate {.smaller}
+
+What if I change summarize to mutate?
+
+```{r}
+#| label: pipe-plot-4
+bechdel |>
+  group_by(binary) |>
+  mutate(mean_roi = mean(roi, na.rm = TRUE), 
+            mean_budget = mean(budget_2013)) 
+```
+
+## Recap: Group by, summarize, mutate {.smaller}
+
+What if I change summarize to mutate?
+
+```{r}
+#| label: pipe-plot-5
+bechdel |>
+  group_by(binary) |>
+  mutate(mean_roi = mean(roi, na.rm = TRUE), 
+            mean_budget = mean(budget_2013)) |>
+  select(title, binary, mean_roi, mean_budget)
+```
+
+## Recap: Group by, summarize, mutate {.smaller}
+
+You can group by more than one variable!
+
+```{r}
+#| label: gb-multi
+bechdel |>
+  group_by(binary, year) |>
+  summarise(mean_roi = mean(roi, na.rm = TRUE), 
+            mean_budget = mean(budget_2013)) 
+```
+
+## Recap: Group by, summarize, mutate {.smaller}
+
+You can un group with `ungroup()`
+
+```{r}
+#| label: gb-multi-ug
+bechdel |>
+  group_by(binary, year) |>
+  summarise(mean_roi = mean(roi, na.rm = TRUE), 
+            mean_budget = mean(budget_2013)) |>
+  ungroup()
+```
+
 ## More about the pipe {.smaller}
 
 -   The pipe operator passes what comes before it into the function that comes after it as the first argument in that function.
@@ -159,7 +265,7 @@ bechdel |>
 ## Plot + data transform {.smaller}
 
 ```{r}
-#| label: pipe-plot-3
+#| label: pipe-plot-7
 
 bechdel
 ```
@@ -167,7 +273,7 @@ bechdel
 ## Plot + data transform {.smaller}
 
 ```{r}
-#| label: pipe-plot-4
+#| label: pipe-plot-8
 
 bechdel |>
   mutate(budget_in_millions = budget_2013/1000000)
@@ -176,12 +282,26 @@ bechdel |>
 ## Plot + data transform {.smaller}
 
 ```{r}
-#| label: pipe-plot-5
+#| label: pipe-plot-9
 
 bechdel |>
   mutate(budget_in_millions = budget_2013/1000000) |>
   ggplot(aes(x = budget_in_millions))
 ```
+
+## Exploratory Data Analysis
+
+What is exploratory data analysis (EDA)??
+
+-   Basically everything we have done so far
+
+-   Making plots and computing summary statistics (proportions, means, IQR, etc.) to help *explore* the data
+
+# AE 05 {background-image="images/spirit.png" background-size="cover" background-position="center" background-repeat="no-repeat" background-opacity="0.7" style="margin-top:-16vh;"}
+
+::: {style="position:absolute; bottom:15.9em; right:0.01em; font-size:0.4em; color:rgba(255,255,255,0.8);"}
+<a href="https://your.source.link" style="color:inherit; text-decoration:underline;"> Image source </a>
+:::
 
 ## Assignment {.smaller}
 
@@ -195,7 +315,7 @@ df <- tibble(x = c(1, 2, 3, 4, 5), y = c("a", "a", "b", "c", "c"))
 df
 ```
 
-## Recap: assignment {.smaller}
+## Assignment {.smaller}
 
 ::: columns
 ::: {.column .fragment width="50%"}
@@ -330,11 +450,3 @@ df
 ```
 :::
 :::
-
-## "In a single pipeline" {.smaller}
-
-*Select the*
-
-```{r}
-
-```
