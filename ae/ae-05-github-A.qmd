@@ -1,5 +1,5 @@
 ---
-title: "AE 05:Battle of the Budget Airlines"
+title: "AE 05: Battle of the Budget Airlines"
 subtitle: "Suggested answers"
 format:
   html:
