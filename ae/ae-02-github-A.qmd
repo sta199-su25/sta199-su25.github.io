@@ -182,7 +182,6 @@ ggplot(bechdel,
     )
 ```
 
-
 ::: callout-important
 What is the difference between how you changed the color here and how you changed the color in Step 1??
 :::
@@ -302,6 +301,7 @@ What other improvements could we make to this plot?
 
 # Answers may vary
 ```
+
 ### Render, commit, and push
 
 1.  If you made any changes since the last render, render again to get the final version of the AE.

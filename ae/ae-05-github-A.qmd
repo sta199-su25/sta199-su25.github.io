@@ -1,5 +1,6 @@
 ---
-title: "AE 04: NYC flights + data wrangling"
+title: "AE 05:Battle of the Budget Airlines"
+subtitle: "Suggested answers"
 format:
   html:
     self-contained: true
