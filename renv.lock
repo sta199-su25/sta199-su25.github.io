@@ -1706,6 +1706,16 @@
       ],
       "Hash": "61eb941328b49a62d7f9816dfed7d959"
     },
+    "nycflights23": {
+      "Package": "nycflights23",
+      "Version": "0.2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "c1528a2db43f575e76d532eb7dbb90d0"
+    },
     "openintro": {
       "Package": "openintro",
       "Version": "2.5.0",
