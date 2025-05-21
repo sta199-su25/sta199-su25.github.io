@@ -830,11 +830,11 @@ We will only curve up – your absolute grade is the minimum you can get<br>
 <pre><code># A tibble: 5 × 7
   title            year gross_2013 budget_2013   roi binary clean_test
   &lt;chr&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     
-1 Master and Com…  2003  388484252   170921739  2.27 FAIL   nowomen   
-2 The Rules of A…  2002   23733928     5180717  4.58 FAIL   dubious   
-3 We're the Mill…  2013  420394238    37000000 11.4  PASS   ok        
-4 Wimbledon        2004   72177621    43161751  1.67 PASS   ok        
-5 Zoolander        2001  139418131    36843687  3.78 PASS   ok        </code></pre>
+1 Crash            2004  193003880     9006109 21.4  PASS   ok        
+2 Wrath of the T…  2012  391285385   152195785  2.57 FAIL   notalk    
+3 The Visitor      2007   32135415     4494174  7.15 FAIL   dubious   
+4 Take the Lead    2006  115732846    34673890  3.34 PASS   ok        
+5 21 grams         2003   96116670    25321739  3.80 FAIL   dubious   </code></pre>
 </div>
 </div>
 </section></section><section id="column-operations" class="level1"><h1>Column Operations</h1>
@@ -1377,42 +1377,7 @@ We will only curve up – your absolute grade is the minimum you can get<br>
 </section></section><section id="ae-04" class="level1"><h1>AE 04</h1>
 
 
-</section></main><!-- /main --><script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
-    }
-
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
-
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
-        }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
-        }
-      }
-    }
-
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
-
-  })();
-</script><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");

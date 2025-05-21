@@ -353,39 +353,88 @@
     "text": "Exercise 10 - group_by()\n\n\nDemo: Find mean arrival delay for for each month.\n\n\n# add code here\n\n\n\nYour turn: What is the median departure delay for each airports around NYC (origin)? Which airport has the shortest median departure delay?\n\n\n# add code here"
   },
   {
-    "objectID": "ae/ae-00-github.html",
-    "href": "ae/ae-00-github.html",
-    "title": "AE 00: Make a Github",
+    "objectID": "ae/ae-01-github.html",
+    "href": "ae/ae-01-github.html",
+    "title": "AE 01: Meet the penguins",
     "section": "",
-    "text": "Normally, these AEs will contain coding practice assignments. However, before you’re able to start coding, you will need a Github account.\nIn tomorrow’s lecture (and throughout the rest of the class), you will learn more about how GitHub works. For now, understand that GitHub is like the Google Drive of coding. You can upload files, track changes over time, and work with others without overwriting each other’s work.\nIn this class, we will have a GitHub organization so that:\n\nEveryone has a central place to both access and work on course materials (AEs, labs, project, etc.)\nWe can see your progress, give help, and review changes over time.\nYou learn to use tools that are standard in data science, research, and industry.\n\nIf you’ve never coded before, it might not be clear why we need something specialized and can’t just use a Google Drive (or Box, or iCloud, or similar). I think that this becomes more clear as you dive into coding, but the long story very short is that you aren’t typing code into a word document. You’re using and running special code files, and normal drives are not properly equipped to handle these."
+    "text": "The goal of this application exercise is to get exposure to using the computational toolkit. Let’s get started!"
   },
   {
-    "objectID": "ae/ae-00-github.html#introduction",
-    "href": "ae/ae-00-github.html#introduction",
-    "title": "AE 00: Make a Github",
+    "objectID": "ae/ae-01-github.html#quarto-code-chunks",
+    "href": "ae/ae-01-github.html#quarto-code-chunks",
+    "title": "AE 01: Meet the penguins",
+    "section": "Quarto Code Chunks",
+    "text": "Quarto Code Chunks\n\nCode goes in “code chunks”: these are grey boxes and can be recognized by ‘{r}’\nTo run a code chunk, click the little green right facing arrow; to run a code chunk and all preceding code chunks, use the downward pointing arrow.\nText goes outside of the code chunks!\n\n\n# this is a code chunk\n\n\n\n\n\n\n\nWhat’s going on?\n\n\n\nWhat’s that text in the code chunk?\n\n#| label: code-chunk : this blue text at the top is a label: basically, it names the code chunk for easy reference. Code chunk names cannot be repeated!\n\\# this is a code chunk : this green text is a comment. A comment goes in a code chunk, but functions like normal text\n\n\n\nWhat’s the difference between a label and a comment?"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#load-packages",
+    "href": "ae/ae-01-github.html#load-packages",
+    "title": "AE 01: Meet the penguins",
+    "section": "Load Packages",
+    "text": "Load Packages\nFor this application exercise, we’ll use the tidyverse and palmerpenguins packages.\n\nlibrary(tidyverse)\n\nWarning: package 'tidyr' was built under R version 4.4.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\nWarning: package 'palmerpenguins' was built under R version 4.4.1"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#examine-data",
+    "href": "ae/ae-01-github.html#examine-data",
+    "title": "AE 01: Meet the penguins",
+    "section": "Examine Data",
+    "text": "Examine Data\nThe dataset we will use is called penguins; it was loaded with the palmerpenguins package. You’ll notice it’s not visible yet in the environment pane - let’s put it there.\n\ndata(\"penguins\")\n\nTwo useful functions to examine it are glimpse() and View()\nLet’s glimpse() at it.\n\n\nYour turn: Replace #add code here with the code for “glimpse” ing at the data penguins data frame – glimpse(penguins). Render the document and view the output.\n\n\n# add code here\n\nNow, let’s View() it.\n\n\nYour turn: Replace #add code here with the code for “view” ing at the data penguins data frame – View(penguins).\n\n\n# add code here\n\nWhat information can you see from these two operations? How are they different?"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#some-r-fundamentals",
+    "href": "ae/ae-01-github.html#some-r-fundamentals",
+    "title": "AE 01: Meet the penguins",
+    "section": "Some R Fundamentals",
+    "text": "Some R Fundamentals\nYou just used some functions above - library(), data(), glimpse(), and view(). Let’s practice with some more!\nGetting Help\nThere is a function that tells you how many rows are in the data frame: nrow(). Perhaps this is your first time using it and you aren’t sure how it works: you can use ? to see the documentation.\n\n\nYour turn: Write code to get help with the nrow function\n\n\n#add code here\n\n(This works for any function, not just nrow!)\n\n\nYour Turn: Now, let’s compute the number of rows in the data frame:\n\n\n#add code here\n\nOh no!! Errors!!\nUnfortunately, not every time you run a function it will work correctly.\nWhat happens if you run mean() on the data frame? Does this even make sense???\n\n\nYour turn: try running this function on the penguins data frame and see what happens!\n\n\n# add code here\n\nAccessing Columns\nAs we saw with the mean example, not every function works on a full data frame. Sometimes, you need to access just one column. To do that, we can use $ as dataframe$column_name.\n\n\nYour turn: In the code chunk below, compute the mean of the bill_depth_mm variable in the penguins data frame.\n\n\n#add code here\n\nHmmm… something weird is still happening! What does this NA value mean?? Do you have any guesses??? How can we fix this?\n&gt;1 Argument\nTo fix our issue with mean, we need to tell the function something else (that is, use more than one argument).\n\n\nYour turn: First, get help with the ? . Then, try to compute the mean value, ignoring the NA values\n\n\n#add code here"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#how-is-the-document-looking",
+    "href": "ae/ae-01-github.html#how-is-the-document-looking",
+    "title": "AE 01: Meet the penguins",
+    "section": "How is the document looking?",
+    "text": "How is the document looking?\nClick render to see!"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#lets-push-our-changes-to-github",
+    "href": "ae/ae-01-github.html#lets-push-our-changes-to-github",
+    "title": "AE 01: Meet the penguins",
+    "section": "Let’s push our changes to GitHub!",
+    "text": "Let’s push our changes to GitHub!\nRemember:\n\nStage changes with the checkboxes\nCommit with a message\nPush!"
+  },
+  {
+    "objectID": "ae/ae-01-github.html#miscellaneous",
+    "href": "ae/ae-01-github.html#miscellaneous",
+    "title": "AE 01: Meet the penguins",
+    "section": "Miscellaneous:",
+    "text": "Miscellaneous:\nIf there is extra time in class, we’ll add some other tips here!"
+  },
+  {
+    "objectID": "ae/ae-05-github.html",
+    "href": "ae/ae-05-github.html",
+    "title": "AE 05: Battle of the Budget Airlines",
     "section": "",
-    "text": "Normally, these AEs will contain coding practice assignments. However, before you’re able to start coding, you will need a Github account.\nIn tomorrow’s lecture (and throughout the rest of the class), you will learn more about how GitHub works. For now, understand that GitHub is like the Google Drive of coding. You can upload files, track changes over time, and work with others without overwriting each other’s work.\nIn this class, we will have a GitHub organization so that:\n\nEveryone has a central place to both access and work on course materials (AEs, labs, project, etc.)\nWe can see your progress, give help, and review changes over time.\nYou learn to use tools that are standard in data science, research, and industry.\n\nIf you’ve never coded before, it might not be clear why we need something specialized and can’t just use a Google Drive (or Box, or iCloud, or similar). I think that this becomes more clear as you dive into coding, but the long story very short is that you aren’t typing code into a word document. You’re using and running special code files, and normal drives are not properly equipped to handle these."
+    "text": "library(tidyverse)\nlibrary(nycflights23)"
   },
   {
-    "objectID": "ae/ae-00-github.html#create-a-github-account",
-    "href": "ae/ae-00-github.html#create-a-github-account",
-    "title": "AE 00: Make a Github",
-    "section": "Create a GitHub account",
-    "text": "Create a GitHub account\nTomorrow, we will give a more detailed introduction to using GitHub. But, in order for you to access the course organization, you need an account, and we need to add your username to the list of users with access.\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.1\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nWhat if I already have a GitHub account?\n\n\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password. If you are unsure of your login credentials, carefully follow GitHub’s instructions for recovering this information. If you accumulate too many failed login attempts, you will be locked out of your account for the day."
+    "objectID": "ae/ae-05-github.html#nyc-flights",
+    "href": "ae/ae-05-github.html#nyc-flights",
+    "title": "AE 05: Battle of the Budget Airlines",
+    "section": "NYC Flights",
+    "text": "NYC Flights\n\nTo demonstrate data wrangling we will use flights, a tibble in the nycflights23 R package. Note: this is an updated version of the package we used last time!\nThe data set includes characteristics of all flights departing from New York City (JFK, LGA, EWR) in 2023.\nCarrier codes for Spirit and Frontier are NK and F9\n\n\n\n\n\n\n\nCaution\n\n\n\nIf you have already loaded nycflights13, nycflights23 might not load properly, since they are two packages that contain data sets with the same names. If this is causing problems, click Session -&gt; Restart R and Clear Outputs."
   },
   {
-    "objectID": "ae/ae-00-github.html#share-the-account-with-us",
-    "href": "ae/ae-00-github.html#share-the-account-with-us",
-    "title": "AE 00: Make a Github",
-    "section": "Share the Account with Us",
-    "text": "Share the Account with Us\nSo that we can add you to the course organization, share your username with us via the GitHub canvas quiz. Do this before you leave the room!!!"
+    "objectID": "ae/ae-05-github.html#eda-battle-of-the-budget-airlines",
+    "href": "ae/ae-05-github.html#eda-battle-of-the-budget-airlines",
+    "title": "AE 05: Battle of the Budget Airlines",
+    "section": "EDA: Battle of the Budget Airlines",
+    "text": "EDA: Battle of the Budget Airlines\nThere’s a good chance you’ve either experienced or heard about the joys of flying with Spirit and Frontier airlines. They get you where you want to go - no more, no less (well, maybe less) - at a very cheap cost. But which is worse?? Specifically, which of the two airlines has a higher proportion of flights with a delayed arrival time?\nCreate a data visualization and compute corresponding summary statistics that investigate this question.\n\n#add code for plot here\n\n\n#add code for summary statistics here\n\nQuestions:\nCan you use this data to make comments about all Spirit and Frontier flights, or just those leaving New York? Is there anything that might cause this comparison to be unfair?"
   },
   {
-    "objectID": "ae/ae-00-github.html#footnotes",
-    "href": "ae/ae-00-github.html#footnotes",
-    "title": "AE 00: Make a Github",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student. However, this is still possible even if you use a different email!↩︎"
+    "objectID": "ae/ae-05-github.html#more-eda",
+    "href": "ae/ae-05-github.html#more-eda",
+    "title": "AE 05: Battle of the Budget Airlines",
+    "section": "More EDA",
+    "text": "More EDA\nMaybe you care more about how much the delays are by than whether or not there is a delay. If one airline has a lot of delays, but they are all by 5 minutes, does it really matter??\nNow, create a data visualization and compute summary statistics that compare delay times for delayed flights. Now which airline is worse? Has this changed your answer?\n\n#add code for plot here\n\n\n#add code for summary statistics here"
   },
   {
     "objectID": "lab/lab-0.html",
@@ -496,7 +545,7 @@
     "href": "ae.html",
     "title": "Application exercises",
     "section": "",
-    "text": "All application exercises (AEs) are due by the end of lecture (or, precisely, by 10:45 am) on the day they’re covered in lecture. To submit your AE, make at least one change to your AE, commit and then push your change to your AE repo. AEs are graded for engagement, not accuracy.\nMore AEs to be added as the semester progresses.\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\nAE 00: Make a Github\n\n\n \n\n\n\n\nAE 01: Meet the penguins\n\n\n \n\n\n\n\nAE 02: Bechdel Data Vis\n\n\nSuggested answers\n\n\n\n\nAE 02: Bechdel Data Vis\n\n\n \n\n\n\n\nAE 03: Duke Forest\n\n\n \n\n\n\n\nAE 03: Duke Forest\n\n\n \n\n\n\n\nAE 04: NYC flights + data wrangling\n\n\n \n\n\n\n\n\nNo matching items",
+    "text": "All application exercises (AEs) are due by the end of lecture (or, precisely, by 10:45 am) on the day they’re covered in lecture. To submit your AE, make at least one change to your AE, commit and then push your change to your AE repo. AEs are graded for engagement, not accuracy.\nMore AEs to be added as the semester progresses.\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\n\n\n\n\nAE 00: Make a Github\n\n\n \n\n\n\n\nAE 01: Meet the penguins\n\n\n \n\n\n\n\nAE 02: Bechdel Data Vis\n\n\nSuggested answers\n\n\n\n\nAE 02: Bechdel Data Vis\n\n\n \n\n\n\n\nAE 03: Duke Forest\n\n\n \n\n\n\n\nAE 03: Duke Forest\n\n\n \n\n\n\n\nAE 04: NYC flights + data wrangling\n\n\n \n\n\n\n\nAE 04: NYC flights + data wrangling\n\n\n \n\n\n\n\nAE 05: Battle of the Budget Airlines\n\n\n \n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Application exercises"
     ]
@@ -1860,6 +1909,325 @@
     "text": "How to push\n\nYou must commit and push changes to the current AE document before the end of class\nToday, check your github folder for changes to AE-03 with a commit message by you!!"
   },
   {
+    "objectID": "slides/05-data-transform-2-slides.html#announcementsreminders",
+    "href": "slides/05-data-transform-2-slides.html#announcementsreminders",
+    "title": "More Data Transformation",
+    "section": "Announcements/Reminders",
+    "text": "Announcements/Reminders\n\nLab is due TONIGHT at 11:59PM\nCome to office hours and/or post on Ed for help!\nOffice hours are tonight from 5:30-7:30PM in Old Chem 203.\nAEs need to be pushed by the END OF CLASS (10:45AM)!!\nMake sure you are in the right repository."
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#lab-narrative",
+    "href": "slides/05-data-transform-2-slides.html#lab-narrative",
+    "title": "More Data Transformation",
+    "section": "Lab: Narrative",
+    "text": "Lab: Narrative"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#outline",
+    "href": "slides/05-data-transform-2-slides.html#outline",
+    "title": "More Data Transformation",
+    "section": "Outline",
+    "text": "Outline\n\nLast Time: Started learning about data transformation!\n\nToday:\n\nReview from last time + finish AE04\nMore about the pipe\nTransformation + plotting"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#quick-review-row-operations",
+    "href": "slides/05-data-transform-2-slides.html#quick-review-row-operations",
+    "title": "More Data Transformation",
+    "section": "Quick Review: Row operations",
+    "text": "Quick Review: Row operations\n\n\n\n\nslice(): chooses rows based on location\n\n\nfilter(): chooses rows based on column values\n\n\narrange(): changes the order of the rows\n\n\nsample_n(): take a random subset of the rows\n\n\n\n\n\nX1\nX2\nX3\n\n\n\n1\na\nyes\n\n\n3\nb\nno\n\n\n5\na\nyes\n\n\n7\nb\nyes\n\n\n9\na\nyes"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#quick-review-column-operations",
+    "href": "slides/05-data-transform-2-slides.html#quick-review-column-operations",
+    "title": "More Data Transformation",
+    "section": "Quick Review: Column operations",
+    "text": "Quick Review: Column operations\n\n\n\n\nselect(): changes whether or not a column is included\n\n\nrename(): changes the name of columns\n\n\nmutate(): changes the values of columns and creates new columns\n\n\n\n\n\nX1\nX2\nX3\n\n\n\n1\na\nyes\n\n\n3\nb\nno\n\n\n5\na\nyes\n\n\n7\nb\nyes\n\n\n9\na\nyes"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#quick-review-groups-of-rows",
+    "href": "slides/05-data-transform-2-slides.html#quick-review-groups-of-rows",
+    "title": "More Data Transformation",
+    "section": "Quick Review: Groups of rows",
+    "text": "Quick Review: Groups of rows\n\n\n\n\nsummarize(): collapses a group into a single row\n\n\ncount(): count unique values of one or more variables\n\n\ngroup_by(): perform calculations separately for each value of a variable\n\n\n\n\n\nX1\nX2\nX3\n\n\n\n1\na\nyes\n\n\n3\nb\nno\n\n\n5\na\nyes\n\n\n7\nb\nyes\n\n\n9\na\nyes"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#more-about-the-pipe",
+    "href": "slides/05-data-transform-2-slides.html#more-about-the-pipe",
+    "title": "More Data Transformation",
+    "section": "More about the pipe",
+    "text": "More about the pipe\n\nThe pipe operator passes what comes before it into the function that comes after it as the first argument in that function.\n\n\nsum(1, 2)\n\n[1] 3"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#more-about-the-pipe-1",
+    "href": "slides/05-data-transform-2-slides.html#more-about-the-pipe-1",
+    "title": "More Data Transformation",
+    "section": "More about the pipe",
+    "text": "More about the pipe\n\nThe pipe operator passes what comes before it into the function that comes after it as the first argument in that function.\n\n\nsum(1, 2)\n\n[1] 3\n\n\n\n\n1 |&gt; \n  sum(2)\n\n[1] 3"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#pipe-ggplot",
+    "href": "slides/05-data-transform-2-slides.html#pipe-ggplot",
+    "title": "More Data Transformation",
+    "section": "Pipe + ggplot() !!",
+    "text": "Pipe + ggplot() !!\n\nggplot(bechdel, aes(x = budget_2013)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#pipe-ggplot-1",
+    "href": "slides/05-data-transform-2-slides.html#pipe-ggplot-1",
+    "title": "More Data Transformation",
+    "section": "Pipe + ggplot() !!",
+    "text": "Pipe + ggplot() !!\n\nbechdel |&gt;\n  ggplot(aes(x = budget_2013)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#why-is-this-useful",
+    "href": "slides/05-data-transform-2-slides.html#why-is-this-useful",
+    "title": "More Data Transformation",
+    "section": "Why is this useful?",
+    "text": "Why is this useful?\n\nWe can do data transformation immediately followed by a plot!\nNormally, even if we are just plotting, we use the pipe with ggplot()."
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#plot-data-transform",
+    "href": "slides/05-data-transform-2-slides.html#plot-data-transform",
+    "title": "More Data Transformation",
+    "section": "Plot + data transform",
+    "text": "Plot + data transform\n\nbechdel\n\n# A tibble: 1,615 × 7\n   title          year gross_2013 budget_2013    roi binary clean_test\n   &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n 1 21 & Over      2013   67878146    13000000  5.22  FAIL   notalk    \n 2 Dredd 3D       2012   55078343    45658735  1.21  PASS   ok        \n 3 12 Years a S…  2013  211714070    20000000 10.6   FAIL   notalk    \n 4 2 Guns         2013  208105475    61000000  3.41  FAIL   notalk    \n 5 42             2013  190040426    40000000  4.75  FAIL   men       \n 6 47 Ronin       2013  184166317   225000000  0.819 FAIL   men       \n 7 A Good Day t…  2013  371598396    92000000  4.04  FAIL   notalk    \n 8 About Time     2013  102648667    12000000  8.55  PASS   ok        \n 9 Admission      2013   36014634    13000000  2.77  PASS   ok        \n10 After Earth    2013  304895295   130000000  2.35  FAIL   notalk    \n# ℹ 1,605 more rows"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#plot-data-transform-1",
+    "href": "slides/05-data-transform-2-slides.html#plot-data-transform-1",
+    "title": "More Data Transformation",
+    "section": "Plot + data transform",
+    "text": "Plot + data transform\n\nbechdel |&gt;\n  mutate(budget_in_millions = budget_2013/1000000)\n\n# A tibble: 1,615 × 8\n   title          year gross_2013 budget_2013    roi binary clean_test\n   &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n 1 21 & Over      2013   67878146    13000000  5.22  FAIL   notalk    \n 2 Dredd 3D       2012   55078343    45658735  1.21  PASS   ok        \n 3 12 Years a S…  2013  211714070    20000000 10.6   FAIL   notalk    \n 4 2 Guns         2013  208105475    61000000  3.41  FAIL   notalk    \n 5 42             2013  190040426    40000000  4.75  FAIL   men       \n 6 47 Ronin       2013  184166317   225000000  0.819 FAIL   men       \n 7 A Good Day t…  2013  371598396    92000000  4.04  FAIL   notalk    \n 8 About Time     2013  102648667    12000000  8.55  PASS   ok        \n 9 Admission      2013   36014634    13000000  2.77  PASS   ok        \n10 After Earth    2013  304895295   130000000  2.35  FAIL   notalk    \n# ℹ 1,605 more rows\n# ℹ 1 more variable: budget_in_millions &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#plot-data-transform-2",
+    "href": "slides/05-data-transform-2-slides.html#plot-data-transform-2",
+    "title": "More Data Transformation",
+    "section": "Plot + data transform",
+    "text": "Plot + data transform\n\nbechdel |&gt;\n  mutate(budget_in_millions = budget_2013/1000000) |&gt;\n  ggplot(aes(x = budget_in_millions))"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#assignment",
+    "href": "slides/05-data-transform-2-slides.html#assignment",
+    "title": "More Data Transformation",
+    "section": "Assignment",
+    "text": "Assignment\nLet’s make a tiny data frame to use as an example:\n\nlibrary(tidyverse)\ndf &lt;- tibble(x = c(1, 2, 3, 4, 5), y = c(\"a\", \"a\", \"b\", \"c\", \"c\"))\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#recap-assignment",
+    "href": "slides/05-data-transform-2-slides.html#recap-assignment",
+    "title": "More Data Transformation",
+    "section": "Recap: assignment",
+    "text": "Recap: assignment\n\n\n\nDo something and show me\n\n\ndf |&gt;\n  mutate(x = x * 2)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c    \n\n\n\n\nDo something and save result\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#assignment-1",
+    "href": "slides/05-data-transform-2-slides.html#assignment-1",
+    "title": "More Data Transformation",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#assignment-2",
+    "href": "slides/05-data-transform-2-slides.html#assignment-2",
+    "title": "More Data Transformation",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#assignment-3",
+    "href": "slides/05-data-transform-2-slides.html#assignment-3",
+    "title": "More Data Transformation",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting originaldata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\nDo something, save result, overwriting originalcolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
+  },
+  {
+    "objectID": "slides/05-data-transform-2-slides.html#in-a-single-pipeline",
+    "href": "slides/05-data-transform-2-slides.html#in-a-single-pipeline",
+    "title": "More Data Transformation",
+    "section": "“In a single pipeline”",
+    "text": "“In a single pipeline”\nSelect the"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html",
+    "href": "slides/05-data-transform-2.html",
+    "title": "More Data Transformation",
+    "section": "",
+    "text": "Lab is due TONIGHT at 11:59PM\nCome to office hours and/or post on Ed for help!\nOffice hours are tonight from 5:30-7:30PM in Old Chem 203.\nAEs need to be pushed by the END OF CLASS (10:45AM)!!\nMake sure you are in the right repository."
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#announcementsreminders",
+    "href": "slides/05-data-transform-2.html#announcementsreminders",
+    "title": "More Data Transformation",
+    "section": "",
+    "text": "Lab is due TONIGHT at 11:59PM\nCome to office hours and/or post on Ed for help!\nOffice hours are tonight from 5:30-7:30PM in Old Chem 203.\nAEs need to be pushed by the END OF CLASS (10:45AM)!!\nMake sure you are in the right repository."
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#lab-narrative",
+    "href": "slides/05-data-transform-2.html#lab-narrative",
+    "title": "More Data Transformation",
+    "section": "Lab: Narrative",
+    "text": "Lab: Narrative"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#outline",
+    "href": "slides/05-data-transform-2.html#outline",
+    "title": "More Data Transformation",
+    "section": "Outline",
+    "text": "Outline\n\nLast Time: Started learning about data transformation!\n\nToday:\n\nReview from last time + finish AE04\nMore about the pipe\nTransformation + plotting"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#quick-review-row-operations",
+    "href": "slides/05-data-transform-2.html#quick-review-row-operations",
+    "title": "More Data Transformation",
+    "section": "Quick Review: Row operations",
+    "text": "Quick Review: Row operations\n\n\n\n\nslice(): chooses rows based on location\n\n\nfilter(): chooses rows based on column values\n\n\narrange(): changes the order of the rows\n\n\nsample_n(): take a random subset of the rows\n\n\n\n\n\nX1\nX2\nX3\n\n\n\n1\na\nyes\n\n\n3\nb\nno\n\n\n5\na\nyes\n\n\n7\nb\nyes\n\n\n9\na\nyes"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#quick-review-column-operations",
+    "href": "slides/05-data-transform-2.html#quick-review-column-operations",
+    "title": "More Data Transformation",
+    "section": "Quick Review: Column operations",
+    "text": "Quick Review: Column operations\n\n\n\n\nselect(): changes whether or not a column is included\n\n\nrename(): changes the name of columns\n\n\nmutate(): changes the values of columns and creates new columns\n\n\n\n\n\nX1\nX2\nX3\n\n\n\n1\na\nyes\n\n\n3\nb\nno\n\n\n5\na\nyes\n\n\n7\nb\nyes\n\n\n9\na\nyes"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#quick-review-groups-of-rows",
+    "href": "slides/05-data-transform-2.html#quick-review-groups-of-rows",
+    "title": "More Data Transformation",
+    "section": "Quick Review: Groups of rows",
+    "text": "Quick Review: Groups of rows\n\n\n\n\nsummarize(): collapses a group into a single row\n\n\ncount(): count unique values of one or more variables\n\n\ngroup_by(): perform calculations separately for each value of a variable\n\n\n\n\n\nX1\nX2\nX3\n\n\n\n1\na\nyes\n\n\n3\nb\nno\n\n\n5\na\nyes\n\n\n7\nb\nyes\n\n\n9\na\nyes"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#more-about-the-pipe",
+    "href": "slides/05-data-transform-2.html#more-about-the-pipe",
+    "title": "More Data Transformation",
+    "section": "More about the pipe",
+    "text": "More about the pipe\n\nThe pipe operator passes what comes before it into the function that comes after it as the first argument in that function.\n\n\nsum(1, 2)\n\n[1] 3"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#more-about-the-pipe-1",
+    "href": "slides/05-data-transform-2.html#more-about-the-pipe-1",
+    "title": "More Data Transformation",
+    "section": "More about the pipe",
+    "text": "More about the pipe\n\nThe pipe operator passes what comes before it into the function that comes after it as the first argument in that function.\n\n\nsum(1, 2)\n\n[1] 3\n\n\n\n\n1 |&gt; \n  sum(2)\n\n[1] 3"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#pipe-ggplot",
+    "href": "slides/05-data-transform-2.html#pipe-ggplot",
+    "title": "More Data Transformation",
+    "section": "Pipe + ggplot() !!",
+    "text": "Pipe + ggplot() !!\n\nggplot(bechdel, aes(x = budget_2013)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#pipe-ggplot-1",
+    "href": "slides/05-data-transform-2.html#pipe-ggplot-1",
+    "title": "More Data Transformation",
+    "section": "Pipe + ggplot() !!",
+    "text": "Pipe + ggplot() !!\n\nbechdel |&gt;\n  ggplot(aes(x = budget_2013)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#why-is-this-useful",
+    "href": "slides/05-data-transform-2.html#why-is-this-useful",
+    "title": "More Data Transformation",
+    "section": "Why is this useful?",
+    "text": "Why is this useful?\n\nWe can do data transformation immediately followed by a plot!\nNormally, even if we are just plotting, we use the pipe with ggplot()."
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#plot-data-transform",
+    "href": "slides/05-data-transform-2.html#plot-data-transform",
+    "title": "More Data Transformation",
+    "section": "Plot + data transform",
+    "text": "Plot + data transform\n\nbechdel\n\n# A tibble: 1,615 × 7\n   title          year gross_2013 budget_2013    roi binary clean_test\n   &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n 1 21 & Over      2013   67878146    13000000  5.22  FAIL   notalk    \n 2 Dredd 3D       2012   55078343    45658735  1.21  PASS   ok        \n 3 12 Years a S…  2013  211714070    20000000 10.6   FAIL   notalk    \n 4 2 Guns         2013  208105475    61000000  3.41  FAIL   notalk    \n 5 42             2013  190040426    40000000  4.75  FAIL   men       \n 6 47 Ronin       2013  184166317   225000000  0.819 FAIL   men       \n 7 A Good Day t…  2013  371598396    92000000  4.04  FAIL   notalk    \n 8 About Time     2013  102648667    12000000  8.55  PASS   ok        \n 9 Admission      2013   36014634    13000000  2.77  PASS   ok        \n10 After Earth    2013  304895295   130000000  2.35  FAIL   notalk    \n# ℹ 1,605 more rows"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#plot-data-transform-1",
+    "href": "slides/05-data-transform-2.html#plot-data-transform-1",
+    "title": "More Data Transformation",
+    "section": "Plot + data transform",
+    "text": "Plot + data transform\n\nbechdel |&gt;\n  mutate(budget_in_millions = budget_2013/1000000)\n\n# A tibble: 1,615 × 8\n   title          year gross_2013 budget_2013    roi binary clean_test\n   &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n 1 21 & Over      2013   67878146    13000000  5.22  FAIL   notalk    \n 2 Dredd 3D       2012   55078343    45658735  1.21  PASS   ok        \n 3 12 Years a S…  2013  211714070    20000000 10.6   FAIL   notalk    \n 4 2 Guns         2013  208105475    61000000  3.41  FAIL   notalk    \n 5 42             2013  190040426    40000000  4.75  FAIL   men       \n 6 47 Ronin       2013  184166317   225000000  0.819 FAIL   men       \n 7 A Good Day t…  2013  371598396    92000000  4.04  FAIL   notalk    \n 8 About Time     2013  102648667    12000000  8.55  PASS   ok        \n 9 Admission      2013   36014634    13000000  2.77  PASS   ok        \n10 After Earth    2013  304895295   130000000  2.35  FAIL   notalk    \n# ℹ 1,605 more rows\n# ℹ 1 more variable: budget_in_millions &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#plot-data-transform-2",
+    "href": "slides/05-data-transform-2.html#plot-data-transform-2",
+    "title": "More Data Transformation",
+    "section": "Plot + data transform",
+    "text": "Plot + data transform\n\nbechdel |&gt;\n  mutate(budget_in_millions = budget_2013/1000000) |&gt;\n  ggplot(aes(x = budget_in_millions))"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#assignment",
+    "href": "slides/05-data-transform-2.html#assignment",
+    "title": "More Data Transformation",
+    "section": "Assignment",
+    "text": "Assignment\nLet’s make a tiny data frame to use as an example:\n\nlibrary(tidyverse)\ndf &lt;- tibble(x = c(1, 2, 3, 4, 5), y = c(\"a\", \"a\", \"b\", \"c\", \"c\"))\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#recap-assignment",
+    "href": "slides/05-data-transform-2.html#recap-assignment",
+    "title": "More Data Transformation",
+    "section": "Recap: assignment",
+    "text": "Recap: assignment\n\n\n\nDo something and show me\n\n\ndf |&gt;\n  mutate(x = x * 2)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c    \n\n\n\n\n\nDo something and save result\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#assignment-1",
+    "href": "slides/05-data-transform-2.html#assignment-1",
+    "title": "More Data Transformation",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#assignment-2",
+    "href": "slides/05-data-transform-2.html#assignment-2",
+    "title": "More Data Transformation",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#assignment-3",
+    "href": "slides/05-data-transform-2.html#assignment-3",
+    "title": "More Data Transformation",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\nDo something, save result, overwriting originaldata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\n\nDo something, save result, overwriting originalcolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
+  },
+  {
+    "objectID": "slides/05-data-transform-2.html#in-a-single-pipeline",
+    "href": "slides/05-data-transform-2.html#in-a-single-pipeline",
+    "title": "More Data Transformation",
+    "section": "“In a single pipeline”",
+    "text": "“In a single pipeline”\nSelect the"
+  },
+  {
+    "objectID": "computing-troubleshooting.html",
+    "href": "computing-troubleshooting.html",
+    "title": "Computing troubleshooting",
+    "section": "",
+    "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the Ed Discussions to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. If you’re still having trouble, follow the steps in the order given below:\n\nRestart your browser.\nMake sure there are no updates pending for your browser. If there are, install those updates and restart your browser again.\nRequest a restart of your container – To do so, select your container as you usually do and then, instead of Login, click on Request Restart. Read the warning in the next page, and then click once more to restart your container.\nClear your browser cache and restart your browser again.\nRestart your computer to ensure a fresh new connection.\nIf your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).",
+    "crumbs": [
+      "Computing",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "objectID": "lab.html",
+    "href": "lab.html",
+    "title": "Labs",
+    "section": "",
+    "text": "More labs to be added as the semester progresses.\n\n\n\n\n\n\n\n\n\nNo.\n\n\nTitle\n\n\nDue date\n\n\n\n\n\n\nLab 0\n\n\nHello, World and STA 199!\n\n\nEnd of lab on May 15\n\n\n\n\nLab 1\n\n\nFrom the Midwest to North Carolina\n\n\nDue Wed. May 21 11:59 PM\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Labs"
+    ]
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "Course GitHub organization\n🔗 on GitHub\n\n\n\nRStudio containers\n🔗 on Duke Container Manager\n\n\n\nEd Discussion\n🔗 on Canvas\n\n\n\nGradescope\n🔗 on Canvas\n\n\n\nTexbooks\n🔗 R for Data Science\n🔗 Introduction to Modern Statistics\n\n\n\nPackage documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org\n🔗 readxl: readxl.tidyverse.org",
+    "crumbs": [
+      "Course information",
+      "Useful links"
+    ]
+  },
+  {
     "objectID": "course-syllabus.html",
     "href": "course-syllabus.html",
     "title": "STA 199: Intro to Data Science and Statistical Thinking",
@@ -1967,38 +2335,6 @@
     "crumbs": [
       "Course information",
       "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-links.html",
-    "href": "course-links.html",
-    "title": "Useful links",
-    "section": "",
-    "text": "Course GitHub organization\n🔗 on GitHub\n\n\n\nRStudio containers\n🔗 on Duke Container Manager\n\n\n\nEd Discussion\n🔗 on Canvas\n\n\n\nGradescope\n🔗 on Canvas\n\n\n\nTexbooks\n🔗 R for Data Science\n🔗 Introduction to Modern Statistics\n\n\n\nPackage documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org\n🔗 readxl: readxl.tidyverse.org",
-    "crumbs": [
-      "Course information",
-      "Useful links"
-    ]
-  },
-  {
-    "objectID": "lab.html",
-    "href": "lab.html",
-    "title": "Labs",
-    "section": "",
-    "text": "More labs to be added as the semester progresses.\n\n\n\n\n\n\n\n\n\nNo.\n\n\nTitle\n\n\nDue date\n\n\n\n\n\n\nLab 0\n\n\nHello, World and STA 199!\n\n\nEnd of lab on May 15\n\n\n\n\nLab 1\n\n\nFrom the Midwest to North Carolina\n\n\nDue Wed. May 21 11:59 PM\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Labs"
-    ]
-  },
-  {
-    "objectID": "computing-troubleshooting.html",
-    "href": "computing-troubleshooting.html",
-    "title": "Computing troubleshooting",
-    "section": "",
-    "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the Ed Discussions to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. If you’re still having trouble, follow the steps in the order given below:\n\nRestart your browser.\nMake sure there are no updates pending for your browser. If there are, install those updates and restart your browser again.\nRequest a restart of your container – To do so, select your container as you usually do and then, instead of Login, click on Request Restart. Read the warning in the next page, and then click once more to restart your container.\nClear your browser cache and restart your browser again.\nRestart your computer to ensure a fresh new connection.\nIf your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).",
-    "crumbs": [
-      "Computing",
-      "Troubleshooting"
     ]
   },
   {
@@ -3329,7 +3665,7 @@
     "href": "slides/04-data-transform.html#sample_n-1",
     "title": "Grammar of Data Transformation",
     "section": "sample_n()",
-    "text": "sample_n()\nDisplay five random rows ofbechdel:\n\nbechdel |&gt;\n  sample_n(5)\n\n# A tibble: 5 × 7\n  title            year gross_2013 budget_2013   roi binary clean_test\n  &lt;chr&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n1 Master and Com…  2003  388484252   170921739  2.27 FAIL   nowomen   \n2 The Rules of A…  2002   23733928     5180717  4.58 FAIL   dubious   \n3 We're the Mill…  2013  420394238    37000000 11.4  PASS   ok        \n4 Wimbledon        2004   72177621    43161751  1.67 PASS   ok        \n5 Zoolander        2001  139418131    36843687  3.78 PASS   ok"
+    "text": "sample_n()\nDisplay five random rows ofbechdel:\n\nbechdel |&gt;\n  sample_n(5)\n\n# A tibble: 5 × 7\n  title            year gross_2013 budget_2013   roi binary clean_test\n  &lt;chr&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n1 Crash            2004  193003880     9006109 21.4  PASS   ok        \n2 Wrath of the T…  2012  391285385   152195785  2.57 FAIL   notalk    \n3 The Visitor      2007   32135415     4494174  7.15 FAIL   dubious   \n4 Take the Lead    2006  115732846    34673890  3.34 PASS   ok        \n5 21 grams         2003   96116670    25321739  3.80 FAIL   dubious"
   },
   {
     "objectID": "slides/04-data-transform.html#column-operations-1",
@@ -3651,7 +3987,7 @@
     "href": "slides/04-data-transform-slides.html#sample_n-1",
     "title": "Grammar of Data Transformation",
     "section": "sample_n()",
-    "text": "sample_n()\nDisplay five random rows ofbechdel:\n\nbechdel |&gt;\n  sample_n(5)\n\n# A tibble: 5 × 7\n  title            year gross_2013 budget_2013   roi binary clean_test\n  &lt;chr&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n1 Master and Com…  2003  388484252   170921739  2.27 FAIL   nowomen   \n2 The Rules of A…  2002   23733928     5180717  4.58 FAIL   dubious   \n3 We're the Mill…  2013  420394238    37000000 11.4  PASS   ok        \n4 Wimbledon        2004   72177621    43161751  1.67 PASS   ok        \n5 Zoolander        2001  139418131    36843687  3.78 PASS   ok"
+    "text": "sample_n()\nDisplay five random rows ofbechdel:\n\nbechdel |&gt;\n  sample_n(5)\n\n# A tibble: 5 × 7\n  title            year gross_2013 budget_2013   roi binary clean_test\n  &lt;chr&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     \n1 Crash            2004  193003880     9006109 21.4  PASS   ok        \n2 Wrath of the T…  2012  391285385   152195785  2.57 FAIL   notalk    \n3 The Visitor      2007   32135415     4494174  7.15 FAIL   dubious   \n4 Take the Lead    2006  115732846    34673890  3.34 PASS   ok        \n5 21 grams         2003   96116670    25321739  3.80 FAIL   dubious"
   },
   {
     "objectID": "slides/04-data-transform-slides.html#column-operations-1",
@@ -3906,7 +4242,7 @@
     "href": "index.html",
     "title": "STA 199: Intro to Data Science and Statistical Thinking",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Visualization\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02  ✅ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nMore Data visualization\n🖥️ slides 03  🗒️ notes 03  ⌨️ ae 03 ✅ ae 03\n\n📘 ims - chp 5 🎥 Visualizing Quantitative Data 🎥 Visualizing Categorical Data\n\n\n\nMon, May 19\nLab 1\n💻 lab 1\n\n📗 r4ds - chp 2  📘 ims - chp 5\n\n\n\nTue, May 20\nGrammar of Data Transformation\n🖥️ slides 04  🗒️ notes 04  ⌨️ ae 04\n\n📗 r4ds - chp 3.1-3.5 \n\n\n\nWed, May 21\nMore Data Transformation\n\nLab 1 - 11:59PM ET\n📗 r4ds - chp 3.6-3.7  🎥 Working with a single data frame\n\n\n\nThu, May 22\nTidying Data\n\n\n📗 r4ds - chp 5\n\n\n\nThu, May 22\nLab 2\n\n\n📗 r4ds - chp 4\n\n\n\nFri, May 23\nJoining Data\n\n\n\n\n\n\nSun, May 25\n\n\n\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n\n\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n\nLab 2 - 11:59PM ET\n\n\n\n\nThu, May 29\nWeb Scraping\n\n\n\n\n\n\nThu, May 29\nLab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n\n\n\n\n\n\nSun, Jun 1\n\n\nLab 3 - 11:59PM ET\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Visualization\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02  ✅ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nMore Data visualization\n🖥️ slides 03  🗒️ notes 03  ⌨️ ae 03 ✅ ae 03\n\n📘 ims - chp 5 🎥 Visualizing Quantitative Data 🎥 Visualizing Categorical Data\n\n\n\nMon, May 19\nLab 1\n💻 lab 1\n\n📗 r4ds - chp 2  📘 ims - chp 5\n\n\n\nTue, May 20\nGrammar of Data Transformation\n🖥️ slides 04  🗒️ notes 04  ⌨️ ae 04\n\n📗 r4ds - chp 3.1-3.5 \n\n\n\nWed, May 21\nMore Data Transformation\n🖥️ slides 05  🗒️ notes 05  ⌨️ ae 05\nLab 1 - 11:59PM ET\n📗 r4ds - chp 3.6-3.7  🎥 Working with a single data frame\n\n\n\nThu, May 22\nTidying Data\n\n\n📗 r4ds - chp 5\n\n\n\nThu, May 22\nLab 2\n\n\n📗 r4ds - chp 4\n\n\n\nFri, May 23\nJoining Data\n\n\n\n\n\n\nSun, May 25\n\n\n\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n\n\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n\nLab 2 - 11:59PM ET\n\n\n\n\nThu, May 29\nWeb Scraping\n\n\n\n\n\n\nThu, May 29\nLab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n\n\n\n\n\n\nSun, Jun 1\n\n\nLab 3 - 11:59PM ET\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -4092,60 +4428,67 @@
     "text": "Footnotes\n\nRemember, haikus not novellas when writing code!↩︎\nWe’re assigning points to this seemingly trivial task because not selecting your pages and questions will greatly slow down the grading. So we want to make sure you’re properly motivated to complete this task!↩︎"
   },
   {
-    "objectID": "ae/ae-01-github.html",
-    "href": "ae/ae-01-github.html",
-    "title": "AE 01: Meet the penguins",
+    "objectID": "ae/ae-00-github.html",
+    "href": "ae/ae-00-github.html",
+    "title": "AE 00: Make a Github",
     "section": "",
-    "text": "The goal of this application exercise is to get exposure to using the computational toolkit. Let’s get started!"
+    "text": "Normally, these AEs will contain coding practice assignments. However, before you’re able to start coding, you will need a Github account.\nIn tomorrow’s lecture (and throughout the rest of the class), you will learn more about how GitHub works. For now, understand that GitHub is like the Google Drive of coding. You can upload files, track changes over time, and work with others without overwriting each other’s work.\nIn this class, we will have a GitHub organization so that:\n\nEveryone has a central place to both access and work on course materials (AEs, labs, project, etc.)\nWe can see your progress, give help, and review changes over time.\nYou learn to use tools that are standard in data science, research, and industry.\n\nIf you’ve never coded before, it might not be clear why we need something specialized and can’t just use a Google Drive (or Box, or iCloud, or similar). I think that this becomes more clear as you dive into coding, but the long story very short is that you aren’t typing code into a word document. You’re using and running special code files, and normal drives are not properly equipped to handle these."
   },
   {
-    "objectID": "ae/ae-01-github.html#quarto-code-chunks",
-    "href": "ae/ae-01-github.html#quarto-code-chunks",
-    "title": "AE 01: Meet the penguins",
-    "section": "Quarto Code Chunks",
-    "text": "Quarto Code Chunks\n\nCode goes in “code chunks”: these are grey boxes and can be recognized by ‘{r}’\nTo run a code chunk, click the little green right facing arrow; to run a code chunk and all preceding code chunks, use the downward pointing arrow.\nText goes outside of the code chunks!\n\n\n# this is a code chunk\n\n\n\n\n\n\n\nWhat’s going on?\n\n\n\nWhat’s that text in the code chunk?\n\n#| label: code-chunk : this blue text at the top is a label: basically, it names the code chunk for easy reference. Code chunk names cannot be repeated!\n\\# this is a code chunk : this green text is a comment. A comment goes in a code chunk, but functions like normal text\n\n\n\nWhat’s the difference between a label and a comment?"
+    "objectID": "ae/ae-00-github.html#introduction",
+    "href": "ae/ae-00-github.html#introduction",
+    "title": "AE 00: Make a Github",
+    "section": "",
+    "text": "Normally, these AEs will contain coding practice assignments. However, before you’re able to start coding, you will need a Github account.\nIn tomorrow’s lecture (and throughout the rest of the class), you will learn more about how GitHub works. For now, understand that GitHub is like the Google Drive of coding. You can upload files, track changes over time, and work with others without overwriting each other’s work.\nIn this class, we will have a GitHub organization so that:\n\nEveryone has a central place to both access and work on course materials (AEs, labs, project, etc.)\nWe can see your progress, give help, and review changes over time.\nYou learn to use tools that are standard in data science, research, and industry.\n\nIf you’ve never coded before, it might not be clear why we need something specialized and can’t just use a Google Drive (or Box, or iCloud, or similar). I think that this becomes more clear as you dive into coding, but the long story very short is that you aren’t typing code into a word document. You’re using and running special code files, and normal drives are not properly equipped to handle these."
   },
   {
-    "objectID": "ae/ae-01-github.html#load-packages",
-    "href": "ae/ae-01-github.html#load-packages",
-    "title": "AE 01: Meet the penguins",
-    "section": "Load Packages",
-    "text": "Load Packages\nFor this application exercise, we’ll use the tidyverse and palmerpenguins packages.\n\nlibrary(tidyverse)\n\nWarning: package 'tidyr' was built under R version 4.4.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\nWarning: package 'palmerpenguins' was built under R version 4.4.1"
+    "objectID": "ae/ae-00-github.html#create-a-github-account",
+    "href": "ae/ae-00-github.html#create-a-github-account",
+    "title": "AE 00: Make a Github",
+    "section": "Create a GitHub account",
+    "text": "Create a GitHub account\nTomorrow, we will give a more detailed introduction to using GitHub. But, in order for you to access the course organization, you need an account, and we need to add your username to the list of users with access.\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.1\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nWhat if I already have a GitHub account?\n\n\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password. If you are unsure of your login credentials, carefully follow GitHub’s instructions for recovering this information. If you accumulate too many failed login attempts, you will be locked out of your account for the day."
   },
   {
-    "objectID": "ae/ae-01-github.html#examine-data",
-    "href": "ae/ae-01-github.html#examine-data",
-    "title": "AE 01: Meet the penguins",
-    "section": "Examine Data",
-    "text": "Examine Data\nThe dataset we will use is called penguins; it was loaded with the palmerpenguins package. You’ll notice it’s not visible yet in the environment pane - let’s put it there.\n\ndata(\"penguins\")\n\nTwo useful functions to examine it are glimpse() and View()\nLet’s glimpse() at it.\n\n\nYour turn: Replace #add code here with the code for “glimpse” ing at the data penguins data frame – glimpse(penguins). Render the document and view the output.\n\n\n# add code here\n\nNow, let’s View() it.\n\n\nYour turn: Replace #add code here with the code for “view” ing at the data penguins data frame – View(penguins).\n\n\n# add code here\n\nWhat information can you see from these two operations? How are they different?"
+    "objectID": "ae/ae-00-github.html#share-the-account-with-us",
+    "href": "ae/ae-00-github.html#share-the-account-with-us",
+    "title": "AE 00: Make a Github",
+    "section": "Share the Account with Us",
+    "text": "Share the Account with Us\nSo that we can add you to the course organization, share your username with us via the GitHub canvas quiz. Do this before you leave the room!!!"
   },
   {
-    "objectID": "ae/ae-01-github.html#some-r-fundamentals",
-    "href": "ae/ae-01-github.html#some-r-fundamentals",
-    "title": "AE 01: Meet the penguins",
-    "section": "Some R Fundamentals",
-    "text": "Some R Fundamentals\nYou just used some functions above - library(), data(), glimpse(), and view(). Let’s practice with some more!\nGetting Help\nThere is a function that tells you how many rows are in the data frame: nrow(). Perhaps this is your first time using it and you aren’t sure how it works: you can use ? to see the documentation.\n\n\nYour turn: Write code to get help with the nrow function\n\n\n#add code here\n\n(This works for any function, not just nrow!)\n\n\nYour Turn: Now, let’s compute the number of rows in the data frame:\n\n\n#add code here\n\nOh no!! Errors!!\nUnfortunately, not every time you run a function it will work correctly.\nWhat happens if you run mean() on the data frame? Does this even make sense???\n\n\nYour turn: try running this function on the penguins data frame and see what happens!\n\n\n# add code here\n\nAccessing Columns\nAs we saw with the mean example, not every function works on a full data frame. Sometimes, you need to access just one column. To do that, we can use $ as dataframe$column_name.\n\n\nYour turn: In the code chunk below, compute the mean of the bill_depth_mm variable in the penguins data frame.\n\n\n#add code here\n\nHmmm… something weird is still happening! What does this NA value mean?? Do you have any guesses??? How can we fix this?\n&gt;1 Argument\nTo fix our issue with mean, we need to tell the function something else (that is, use more than one argument).\n\n\nYour turn: First, get help with the ? . Then, try to compute the mean value, ignoring the NA values\n\n\n#add code here"
+    "objectID": "ae/ae-00-github.html#footnotes",
+    "href": "ae/ae-00-github.html#footnotes",
+    "title": "AE 00: Make a Github",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student. However, this is still possible even if you use a different email!↩︎"
   },
   {
-    "objectID": "ae/ae-01-github.html#how-is-the-document-looking",
-    "href": "ae/ae-01-github.html#how-is-the-document-looking",
-    "title": "AE 01: Meet the penguins",
-    "section": "How is the document looking?",
-    "text": "How is the document looking?\nClick render to see!"
+    "objectID": "ae/ae-05-github-A-temp.html",
+    "href": "ae/ae-05-github-A-temp.html",
+    "title": "AE 04: NYC flights + data wrangling",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(nycflights23)"
   },
   {
-    "objectID": "ae/ae-01-github.html#lets-push-our-changes-to-github",
-    "href": "ae/ae-01-github.html#lets-push-our-changes-to-github",
-    "title": "AE 01: Meet the penguins",
-    "section": "Let’s push our changes to GitHub!",
-    "text": "Let’s push our changes to GitHub!\nRemember:\n\nStage changes with the checkboxes\nCommit with a message\nPush!"
+    "objectID": "ae/ae-05-github-A-temp.html#nyc-flights",
+    "href": "ae/ae-05-github-A-temp.html#nyc-flights",
+    "title": "AE 04: NYC flights + data wrangling",
+    "section": "NYC Flights",
+    "text": "NYC Flights\n\nTo demonstrate data wrangling we will use flights, a tibble in the nycflights23 R package. Note: this is an updated version of the package we used last time!\nThe data set includes characteristics of all flights departing from New York City (JFK, LGA, EWR) in 2023.\n\n\n\n\n\n\n\nCaution\n\n\n\nIf you have already loaded nycflights13, nycflights23 might not load properly, since they are two packages that contain data sets with the same names. If this is causing problems, click Session -&gt; Restart R and Clear Outputs."
   },
   {
-    "objectID": "ae/ae-01-github.html#miscellaneous",
-    "href": "ae/ae-01-github.html#miscellaneous",
-    "title": "AE 01: Meet the penguins",
-    "section": "Miscellaneous:",
-    "text": "Miscellaneous:\nIf there is extra time in class, we’ll add some other tips here!"
+    "objectID": "ae/ae-05-github-A-temp.html#eda-battle-of-the-budget-airlines",
+    "href": "ae/ae-05-github-A-temp.html#eda-battle-of-the-budget-airlines",
+    "title": "AE 04: NYC flights + data wrangling",
+    "section": "EDA: Battle of the Budget Airlines",
+    "text": "EDA: Battle of the Budget Airlines\nThere’s a good chance you’ve either experienced or heard about the joys of flying with Spirit and Frontier airlines. They get you where you want to go - no more, no less (well, maybe less) - at a very cheap cost. But which is worse?? Specifically, which of the two airlines has a higher proportion of flights with a delayed arrival time?\nCreate a data visualization and compute corresponding summary statistics that investigate this question.\n\nflights |&gt; \n  filter(carrier %in% c(\"F9\", \"NK\")) |&gt; \n  mutate(is_arr_delay = ifelse(arr_delay &gt; 0, \"Delay\", \"No Delay\")) |&gt;\n  filter(!is.na(arr_delay)) |&gt; \n  ggplot(aes(x = carrier, fill = is_arr_delay)) +\n  geom_bar(position = \"fill\")\n\n\n\n\n\n\n\n\nflights |&gt; \n  filter(carrier %in% c(\"F9\", \"NK\")) |&gt; \n  mutate(is_arr_delay = ifelse(arr_delay &gt; 0, \"Delay\", \"No Delay\")) |&gt;\n  filter(!is.na(arr_delay)) |&gt; \n  count(carrier, is_arr_delay) |&gt;\n  group_by(carrier) |&gt;\n  mutate(total = sum(n)) |&gt;\n  mutate(n = n/total)\n\n# A tibble: 4 × 4\n# Groups:   carrier [2]\n  carrier is_arr_delay     n total\n  &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;int&gt;\n1 F9      Delay        0.517  1218\n2 F9      No Delay     0.483  1218\n3 NK      Delay        0.384 14769\n4 NK      No Delay     0.616 14769\n\n\nQuestions:\nCan you use this data to make comments about all Spirit and Frontier flights, or just those leaving New York? Is there anything that might cause this comparison to be unfair?"
+  },
+  {
+    "objectID": "ae/ae-05-github-A-temp.html#more-eda",
+    "href": "ae/ae-05-github-A-temp.html#more-eda",
+    "title": "AE 04: NYC flights + data wrangling",
+    "section": "More EDA",
+    "text": "More EDA\nMaybe you care more about how much the delays are by than whether or not there is a delay. If one airline has a lot of delays, but they are all by 5 minutes, does it really matter??\nNow, create a data visualization and compute summary statistics that compare delay times for delayed flights. Now which airline is worse? Has this changed your answer?\n\nflights |&gt; \n  filter(carrier %in% c(\"F9\", \"NK\")) |&gt; \n  filter(arr_delay &gt; 0) |&gt; \n  ggplot(aes(x = arr_delay, y = carrier)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\nflights |&gt; \n  filter(carrier %in% c(\"F9\", \"NK\")) |&gt; \n  filter(arr_delay &gt; 0) |&gt; \n  group_by(carrier) |&gt;\n  summarise(mean = mean(arr_delay), \n            median = median(arr_delay),\n            Q1 = quantile(arr_delay, 0.25),\n            Q3 = quantile(arr_delay, 0.75))\n\n# A tibble: 2 × 5\n  carrier  mean median    Q1    Q3\n  &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 F9       67.5     37  12.2    75\n2 NK       54.7     27  10      70"
   },
   {
     "objectID": "ae/ae-03-github.html",
