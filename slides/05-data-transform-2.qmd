@@ -1,0 +1,340 @@
+---
+title: "More Data Transformation"
+subtitle: "Lecture 5"
+date: "2025-05-19"
+format: 
+  revealjs:
+    output-file: 05-data-transform-2-slides.html
+auto-stretch: false
+---
+
+## Announcements/Reminders {.smaller}
+
+-   Lab is due TONIGHT at 11:59PM
+
+-   Come to office hours and/or post on Ed for help!
+
+-   Office hours are tonight from **5:30-7:30PM** in **Old Chem 203**.
+
+-   AEs need to be pushed by the **END OF CLASS (10:45AM)!!**
+
+-   Make sure you are in the right repository.
+
+## Lab: Narrative
+
+## Outline {.smaller}
+
+-   ***Last Time:*** Started learning about data transformation!
+
+-   ***Today:***
+
+    -   Review from last time + finish AE04
+
+    -   More about the pipe
+
+    -   Transformation + plotting
+
+```{r}
+#| label: slice
+#| code-line-numbers: "|1|2"
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+bechdel <- read_csv("data/bechdel.csv")
+```
+
+## Quick Review: Row operations {.smaller}
+
+::: columns
+::: {.column width="70%"}
+-   `slice()`: chooses rows based on location\
+-   `filter()`: chooses rows based on column values\
+-   `arrange()`: changes the order of the rows\
+-   `sample_n()`: take a random subset of the rows\
+:::
+
+::: {.column width="30%"}
+| X1  | X2  | X3  |
+|:---:|:---:|:---:|
+|  1  |  a  | yes |
+|  3  |  b  | no  |
+|  5  |  a  | yes |
+|  7  |  b  | yes |
+|  9  |  a  | yes |
+:::
+:::
+
+## Quick Review: Column operations {.smaller}
+
+::: columns
+::: {.column width="70%"}
+-   `select()`: changes whether or not a column is included\
+-   `rename()`: changes the name of columns\
+-   `mutate()`: changes the values of columns and creates new columns\
+:::
+
+::: {.column width="30%"}
+| X1  | X2  | X3  |
+|:---:|:---:|:---:|
+|  1  |  a  | yes |
+|  3  |  b  | no  |
+|  5  |  a  | yes |
+|  7  |  b  | yes |
+|  9  |  a  | yes |
+:::
+:::
+
+## Quick Review: Groups of rows {.smaller}
+
+::: columns
+::: {.column width="70%"}
+-   `summarize()`: collapses a group into a single row\
+-   `count()`: count unique values of one or more variables\
+-   `group_by()`: perform calculations separately for each value of a variable\
+:::
+
+::: {.column width="30%"}
+| X1  | X2  | X3  |
+|:---:|:---:|:---:|
+|  1  |  a  | yes |
+|  3  |  b  | no  |
+|  5  |  a  | yes |
+|  7  |  b  | yes |
+|  9  |  a  | yes |
+:::
+:::
+
+# AE-04
+
+## More about the pipe {.smaller}
+
+-   The pipe operator passes what comes before it into the function that comes after it as the first argument in that function.
+
+```{r}
+sum(1, 2)
+```
+
+<br>
+
+## More about the pipe {.smaller}
+
+-   The pipe operator passes what comes before it into the function that comes after it as the first argument in that function.
+
+```{r}
+sum(1, 2)
+```
+
+<br>
+
+```{r}
+1 |> 
+  sum(2)
+```
+
+## Pipe + ggplot() !! {.smaller}
+
+```{r}
+#| label: pipe-plot
+ggplot(bechdel, aes(x = budget_2013)) +
+  geom_boxplot()
+```
+
+## Pipe + ggplot() !! {.smaller}
+
+```{r}
+#| label: pipe-plot-2s
+bechdel |>
+  ggplot(aes(x = budget_2013)) +
+  geom_boxplot()
+```
+
+## Why is this useful?
+
+-   We can do data transformation immediately followed by a plot!
+
+-   Normally, even if we are just plotting, we use the pipe with ggplot().
+
+## Plot + data transform {.smaller}
+
+```{r}
+#| label: pipe-plot-3
+
+bechdel
+```
+
+## Plot + data transform {.smaller}
+
+```{r}
+#| label: pipe-plot-4
+
+bechdel |>
+  mutate(budget_in_millions = budget_2013/1000000)
+```
+
+## Plot + data transform {.smaller}
+
+```{r}
+#| label: pipe-plot-5
+
+bechdel |>
+  mutate(budget_in_millions = budget_2013/1000000) |>
+  ggplot(aes(x = budget_in_millions))
+```
+
+## Assignment {.smaller}
+
+Let's make a tiny data frame to use as an example:
+
+```{r}
+#| message: false
+
+library(tidyverse)
+df <- tibble(x = c(1, 2, 3, 4, 5), y = c("a", "a", "b", "c", "c"))
+df
+```
+
+## Recap: assignment {.smaller}
+
+::: columns
+::: {.column .fragment width="50%"}
+> **Do something and show me**
+
+```{r}
+df |>
+  mutate(x = x * 2)
+df
+```
+:::
+
+::: {.column .fragment width="50%"}
+> **Do something and save result**
+
+```{r}
+df <- df |>
+  mutate(x = x * 2)
+df
+```
+:::
+:::
+
+## Assignment {.smaller}
+
+::: columns
+::: {.column .fragment width="50%"}
+> **Do something, save result, overwriting original**
+
+```{r}
+#| code-line-numbers: "5-7"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df <- df |>
+  mutate(x = x * 2)
+df
+```
+:::
+
+::: {.column .fragment width="50%"}
+> **Do something, save result, *not* overwriting original**
+
+```{r}
+#| code-line-numbers: "5-7"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df_new <- df |>
+  mutate(x = x * 2)
+df_new
+```
+:::
+:::
+
+## Assignment {.smaller}
+
+::: columns
+::: {.column .fragment width="50%"}
+> **Do something, save result, overwriting original *when you shouldn't***
+
+```{r}
+#| code-line-numbers: "5-8"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df <- df |>
+  group_by(y) |>
+  summarize(mean_x = mean(x))
+df
+```
+:::
+
+::: {.column .fragment width="50%"}
+> **Do something, save result, *not* overwriting original *when you shouldn't***
+
+```{r}
+#| code-line-numbers: "5-8"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df_summary <- df |>
+  group_by(y) |>
+  summarize(mean_x = mean(x))
+df_summary
+```
+:::
+:::
+
+## Assignment {.smaller}
+
+::: columns
+::: {.column .fragment width="50%"}
+> **Do something, save result, overwriting original**\
+> ***data frame***
+
+```{r}
+#| code-line-numbers: "5-7"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df <- df |>
+  mutate(z = x + 2)
+df
+```
+:::
+
+::: {.column .fragment width="50%"}
+> **Do something, save result, overwriting original**\
+> ***column***
+
+```{r}
+#| code-line-numbers: "5-7"
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5), 
+  y = c("a", "a", "b", "c", "c")
+)
+df <- df |>
+  mutate(x = x + 2)
+df
+```
+:::
+:::
+
+## "In a single pipeline" {.smaller}
+
+*Select the*
+
+```{r}
+
+```
