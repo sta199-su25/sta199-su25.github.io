@@ -25,13 +25,10 @@ Not open to students who have taken a 100-level Statistical Science course, Stat
 
 ## Meetings
 
-+---------------+--------------------------------+-----------------------------+
-| Meeting       | Location                       | Time                        |
-+===============+================================+=============================+
-| Lecture       | Perkins LINK 087 (Classroom 3) | M/T/W/Th/F 9:30AM - 10:45AM |
-+---------------+--------------------------------+-----------------------------+
-| Lab           | Perkins LINK 087 (Classroom 3) | M/Th 11:00AM - 12:15PM      |
-+---------------+--------------------------------+-----------------------------+
+| Meeting | Location                       | Time                        |
+|---------|--------------------------------|-----------------------------|
+| Lecture | Perkins LINK 087 (Classroom 3) | M/T/W/Th/F 9:30AM - 10:45AM |
+| Lab     | Perkins LINK 087 (Classroom 3) | M/Th 11:00AM - 12:15PM      |
 
 ## Office hours
 
