@@ -20,41 +20,46 @@ auto-stretch: false
 
 -   Make sure you are in the right repository.
 
-## Lab: Narrative  {.smaller}
+## Lab: Narrative {.smaller}
 
 -   ***Boxplots, histograms, density plots:***
 
     -   Center: Give an idea of a 'typical value' (median, most common range, etc.);
 
-    -   Spread: Does the data have a lot of variability? Or just a little?
+    -   Spread: Does the data have a lot of variability?
+        Or just a little?
         (IQR, outliers)
 
-    -   Shape: Is there skew? Which direction? Is it unimodal or multimodal?
-    
-  
-## Lab: Narrative  {.smaller}
+    -   Shape: Is there skew?
+        Which direction?
+        Is it unimodal or multimodal?
 
--   ***Scatter Plots ***
+## Lab: Narrative {.smaller}
 
-    -   Is there a relationship between the two variables? Is it positive or negative?
-    
+-   ***Scatter Plots***
+
+    -   Is there a relationship between the two variables?
+        Is it positive or negative?
+
     -   If there is a relationship, does it seem to be strong or weak?
-    
+
     -   Is the relationship linear or nonlinear?
-    
-  
-## Lab: Advice  {.smaller}
 
--   ***Be Specific *** in your narrative. Don't just say "the spread is small and the center is low". What does that mean??? Give numbers, units (if available), etc.
+## Lab: Advice {.smaller}
 
--   ***Be Specific *** in your plot labels.
+-   ***Be Specific*** in your narrative.
+    Don't just say "the spread is small and the center is low".
+    What does that mean???
+    Give numbers, units (if available), etc.
 
--  Answer all parts of the question!! Statements like "Compare..." mean to do so in the written answer!
+-   ***Be Specific*** in your plot labels.
 
--  Written answers should be text outside of code chunks, not comments
+-   Answer all parts of the question!!
+    Statements like "Compare..." mean to do so in the written answer!
 
--  Make sure you can render to PDF early!!!
+-   Written answers should be text outside of code chunks, not comments
 
+-   Make sure you can render to PDF early!!!
 
 ## Outline {.smaller}
 
@@ -153,6 +158,7 @@ bechdel |>
   summarise(mean_roi = mean(roi, na.rm = TRUE), 
             mean_budget = mean(budget_2013)) 
 ```
+
 ## Recap: Group by, summarize, mutate {.smaller}
 
 What does group by do here?
@@ -164,6 +170,7 @@ bechdel |>
   summarise(mean_roi = mean(roi, na.rm = TRUE), 
             mean_budget = mean(budget_2013)) 
 ```
+
 ## Recap: Group by, summarize, mutate {.smaller}
 
 What if I change summarize to mutate?
