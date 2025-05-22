@@ -1929,7 +1929,7 @@
     "href": "slides/06-data-tidy-slides.html#announcementsreminders",
     "title": "Data Tidying",
     "section": "Announcements/Reminders",
-    "text": "Announcements/Reminders\n\nYou have lab today! Lab will be a little longer.\nTomorrow’s office hours are with Katie on Zoom."
+    "text": "Announcements/Reminders\n\nYou have lab today! Lab will be a little longer.\nTomorrow’s office hours are with Katie on Zoom.\nSyllabus clarification re: lab attendance - you are allowed to miss one! But let me or Mary know it’s happening!"
   },
   {
     "objectID": "slides/06-data-tidy-slides.html#outline",
@@ -2048,14 +2048,14 @@
     "href": "slides/06-data-tidy.html",
     "title": "Data Tidying",
     "section": "",
-    "text": "You have lab today! Lab will be a little longer.\nTomorrow’s office hours are with Katie on Zoom."
+    "text": "You have lab today! Lab will be a little longer.\nTomorrow’s office hours are with Katie on Zoom.\nSyllabus clarification re: lab attendance - you are allowed to miss one! But let me or Mary know it’s happening!"
   },
   {
     "objectID": "slides/06-data-tidy.html#announcementsreminders",
     "href": "slides/06-data-tidy.html#announcementsreminders",
     "title": "Data Tidying",
     "section": "",
-    "text": "You have lab today! Lab will be a little longer.\nTomorrow’s office hours are with Katie on Zoom."
+    "text": "You have lab today! Lab will be a little longer.\nTomorrow’s office hours are with Katie on Zoom.\nSyllabus clarification re: lab attendance - you are allowed to miss one! But let me or Mary know it’s happening!"
   },
   {
     "objectID": "slides/06-data-tidy.html#outline",
@@ -5144,7 +5144,7 @@
   {
     "objectID": "course-overview.html",
     "href": "course-overview.html",
-    "title": "STA 199Fall 2025",
+    "title": "STA 199Summer 2025",
     "section": "",
     "text": "Intro to data science and statistical thinking. Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, all in a reproducible and shareable manner. Gain experience in data wrangling, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language. No statistical or computing background is necessary. Not open to students who have taken a 100-level Statistical Science course, Statistical Science 210, or a Statistical Science course numbered 300 or above.",
     "crumbs": [
@@ -5155,7 +5155,7 @@
   {
     "objectID": "course-overview.html#overview",
     "href": "course-overview.html#overview",
-    "title": "STA 199Fall 2025",
+    "title": "STA 199Summer 2025",
     "section": "",
     "text": "Intro to data science and statistical thinking. Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, all in a reproducible and shareable manner. Gain experience in data wrangling, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language. No statistical or computing background is necessary. Not open to students who have taken a 100-level Statistical Science course, Statistical Science 210, or a Statistical Science course numbered 300 or above.",
     "crumbs": [
@@ -5166,7 +5166,7 @@
   {
     "objectID": "course-overview.html#meetings",
     "href": "course-overview.html#meetings",
-    "title": "STA 199Fall 2025",
+    "title": "STA 199Summer 2025",
     "section": "Meetings",
     "text": "Meetings\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nPerkins LINK 087 (Classroom 3)\nM/T/W/Th/F 9:30AM - 10:45AM\n\n\nLab\nPerkins LINK 087 (Classroom 3)\nM/Th 11:00AM - 12:15PM",
     "crumbs": [
@@ -5177,9 +5177,9 @@
   {
     "objectID": "course-overview.html#office-hours",
     "href": "course-overview.html#office-hours",
-    "title": "STA 199Fall 2025",
+    "title": "STA 199Summer 2025",
     "section": "Office hours",
-    "text": "Office hours\n\n\n\nName\nLocation\nTime\n\n\n\n\nMarie Neubrander\nOld Chem 203A\nTu 3:30PM - 5:30PM\nF 1PM - 3PM\n\n\nMary Knox\nZoom\nW 2PM - 3PM\n\n\nKatie Solarz\nOld Chem 203A\nW 5:30-7:30 PM\n\n\n\n\n\n\n\n\n\nOn May 21 (W), Marie will run Katie’s office hours. Katie will run Marie’s on May 23 (F).",
+    "text": "Office hours\n\n\n\nName\nLocation\nTime\n\n\n\n\nMarie Neubrander\nOld Chem 203A\nTu 3:30PM - 5:30PM\nF 1PM - 3PM\n\n\nMary Knox\nZoom\nW 2PM - 3PM\n\n\nKatie Solarz\nOld Chem 203A\nW 5:30-7:30 PM\n\n\n\n\n\n\n\n\n\nOn May 21 (W), Marie will run Katie’s office hours. Katie will run Marie’s on May 23 (F). This week, Katie’s office hours will be on Zoom. Link coming soon.",
     "crumbs": [
       "Course information",
       "Overview"
