@@ -15,6 +15,9 @@ auto-stretch: false
 
 -   Tomorrow's office hours are with Katie on Zoom.
 
+-   Syllabus clarification re: lab attendance - you are allowed to miss one!
+    But let me or Mary know it's happening!
+
 ## Outline {.smaller}
 
 -   ***Last Time:*** Did more data transformation and *exploratory data analysis*.
@@ -332,6 +335,5 @@ What should it be?
 -   R cannot know that these words represent years.
 
 -   The variable type should be numeric.
-
 
 # AE 06
