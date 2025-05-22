@@ -153,7 +153,7 @@ df |>
 
 d\.
 Compare this behavior to the following code chunk.
-Run it, analyze the result, and articulate in words what the pipeline does, and how it\'s behavior is different from part (c).
+Run it, analyze the result, and articulate in words what the pipeline does, and how it's behavior is different from part (c).
 
 ```{r}
 #| eval: false
@@ -342,6 +342,7 @@ Your response should be a data frame with two columns: `2023` and `country_name`
 c\.
 Growing life expectancy: **In a single pipeline**, identify which country had the largest ratio of `2023` life expectancy to `1960` life expectancy.
 Your response should be a data frame with one row and two columns: the ratio and `country_name`.
+What is the English interpretation of this result?
 Does this result surprise you?
 
 ::: callout-tip
