@@ -99,10 +99,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script><link rel="stylesheet" href="../style/sta199.scss">
 <meta property="og:title" content="More Data Transformation – STA 199">
 <meta property="og:description" content="Lecture 5">
-<meta property="og:image" content="https://sta199-su25.github.io/slides/05-data-transform-2_files/figure-revealjs/pipe-plot-1.png">
+<meta property="og:image" content="https://sta199-su25.github.io/slides/05-data-transform-2_files/figure-html/pipe-plot-1.png">
 <meta property="og:site_name" content="STA 199">
 <meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1920">
+<meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="More Data Transformation – STA 199">
 <meta name="twitter:description" content="Lecture 5">
 <meta name="twitter:image" content="https://sta199-su25.github.io/slides/img/twitter-card.png">
@@ -331,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></section><section id="lab-narrative-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="lab-narrative-1">Lab: Narrative</h2>
 <ul>
 <li>
-<p><strong><em>Scatter Plots </em></strong></p>
+<p><strong><em>Scatter Plots</em></strong></p>
 <ul>
 <li><p>Is there a relationship between the two variables? Is it positive or negative?</p></li>
 <li><p>If there is a relationship, does it seem to be strong or weak?</p></li>
@@ -340,8 +340,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 </ul></section><section id="lab-advice" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="lab-advice">Lab: Advice</h2>
 <ul>
-<li><p><strong><em>Be Specific </em></strong> in your narrative. Don’t just say “the spread is small and the center is low”. What does that mean??? Give numbers, units (if available), etc.</p></li>
-<li><p><strong><em>Be Specific </em></strong> in your plot labels.</p></li>
+<li><p><strong><em>Be Specific</em></strong> in your narrative. Don’t just say “the spread is small and the center is low”. What does that mean??? Give numbers, units (if available), etc.</p></li>
+<li><p><strong><em>Be Specific</em></strong> in your plot labels.</p></li>
 <li><p>Answer all parts of the question!! Statements like “Compare…” mean to do so in the written answer!</p></li>
 <li><p>Written answers should be text outside of code chunks, not comments</p></li>
 <li><p>Make sure you can render to PDF early!!!</p></li>
@@ -687,7 +687,7 @@ the `.groups` argument.</code></pre>
 <span>  <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="05-data-transform-2_files/figure-revealjs/pipe-plot-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="05-data-transform-2_files/figure-html/pipe-plot-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -699,7 +699,7 @@ the `.groups` argument.</code></pre>
 <span>  <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="05-data-transform-2_files/figure-revealjs/pipe-plot-2s-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="05-data-transform-2_files/figure-html/pipe-plot-2s-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -757,7 +757,7 @@ the `.groups` argument.</code></pre>
 <span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">budget_in_millions</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="05-data-transform-2_files/figure-revealjs/pipe-plot-9-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="05-data-transform-2_files/figure-html/pipe-plot-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -994,42 +994,7 @@ the `.groups` argument.</code></pre>
 </div>
 
 
-</section></section></main><!-- /main --><script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
-    }
-
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
-
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
-        }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
-        }
-      }
-    }
-
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
-
-  })();
-</script><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");

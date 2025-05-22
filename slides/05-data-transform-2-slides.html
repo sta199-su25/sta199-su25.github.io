@@ -226,7 +226,7 @@
 </ul></section><section id="lab-narrative-1" class="slide level2 smaller"><h2>Lab: Narrative</h2>
 <ul>
 <li>
-<p><strong><em>Scatter Plots </em></strong></p>
+<p><strong><em>Scatter Plots</em></strong></p>
 <ul>
 <li><p>Is there a relationship between the two variables? Is it positive or negative?</p></li>
 <li><p>If there is a relationship, does it seem to be strong or weak?</p></li>
@@ -235,8 +235,8 @@
 </li>
 </ul></section><section id="lab-advice" class="slide level2 smaller"><h2>Lab: Advice</h2>
 <ul>
-<li><p><strong><em>Be Specific </em></strong> in your narrative. Don’t just say “the spread is small and the center is low”. What does that mean??? Give numbers, units (if available), etc.</p></li>
-<li><p><strong><em>Be Specific </em></strong> in your plot labels.</p></li>
+<li><p><strong><em>Be Specific</em></strong> in your narrative. Don’t just say “the spread is small and the center is low”. What does that mean??? Give numbers, units (if available), etc.</p></li>
+<li><p><strong><em>Be Specific</em></strong> in your plot labels.</p></li>
 <li><p>Answer all parts of the question!! Statements like “Compare…” mean to do so in the written answer!</p></li>
 <li><p>Written answers should be text outside of code chunks, not comments</p></li>
 <li><p>Make sure you can render to PDF early!!!</p></li>
@@ -580,7 +580,7 @@ the `.groups` argument.</code></pre>
 <span id="cb21-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="05-data-transform-2_files/figure-revealjs/pipe-plot-1.png" width="960"></p>
+<figure><p><img data-src="05-data-transform-2_files/figure-html/pipe-plot-1.png" width="672"></p>
 </figure>
 </div>
 </div>
@@ -592,7 +592,7 @@ the `.groups` argument.</code></pre>
 <span id="cb22-3"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="05-data-transform-2_files/figure-revealjs/pipe-plot-2s-1.png" width="960"></p>
+<figure><p><img data-src="05-data-transform-2_files/figure-html/pipe-plot-2s-1.png" width="672"></p>
 </figure>
 </div>
 </div>
@@ -650,7 +650,7 @@ the `.groups` argument.</code></pre>
 <span id="cb27-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> budget_in_millions))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="05-data-transform-2_files/figure-revealjs/pipe-plot-9-1.png" width="960"></p>
+<figure><p><img data-src="05-data-transform-2_files/figure-html/pipe-plot-9-1.png" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1079,41 +1079,6 @@ the `.groups` argument.</code></pre>
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
