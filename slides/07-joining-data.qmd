@@ -718,6 +718,11 @@ df_X_Y <- df_X |> left_join(df_Y,
                             by = join_by(id_X == id_Y))
 ```
 
+# Your Turn
+
+## What is the result?
+
+
 # AE 07
 
 Goal: Do a join!!!
