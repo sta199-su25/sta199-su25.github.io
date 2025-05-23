@@ -3640,6 +3640,13 @@
     "text": "Let’s save!\nMost often, you will want to save the result of a join to a new data frame.\n\ndf_X_Y &lt;- df_X |&gt; left_join(df_Y, \n                            by = join_by(id_X == id_Y))"
   },
   {
+    "objectID": "slides/07-joining-data.html#what-is-the-result",
+    "href": "slides/07-joining-data.html#what-is-the-result",
+    "title": "Data Joining",
+    "section": "What is the result?",
+    "text": "What is the result?"
+  },
+  {
     "objectID": "slides/07-joining-data.html#data",
     "href": "slides/07-joining-data.html#data",
     "title": "Data Joining",
@@ -3813,6 +3820,13 @@
     "title": "Data Joining",
     "section": "Let’s save!",
     "text": "Let’s save!\nMost often, you will want to save the result of a join to a new data frame.\n\ndf_X_Y &lt;- df_X |&gt; left_join(df_Y, \n                            by = join_by(id_X == id_Y))"
+  },
+  {
+    "objectID": "slides/07-joining-data-slides.html#what-is-the-result",
+    "href": "slides/07-joining-data-slides.html#what-is-the-result",
+    "title": "Data Joining",
+    "section": "What is the result?",
+    "text": "What is the result?"
   },
   {
     "objectID": "slides/07-joining-data-slides.html#data",
