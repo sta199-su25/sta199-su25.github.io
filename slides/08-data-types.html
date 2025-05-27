@@ -258,12 +258,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#concatenation" id="toc-concatenation" class="nav-link" data-scroll-target="#concatenation">Concatenation</a></li>
   <li><a href="#converting-between-types" id="toc-converting-between-types" class="nav-link" data-scroll-target="#converting-between-types">Converting between types</a></li>
   <li><a href="#converting-between-types-1" id="toc-converting-between-types-1" class="nav-link" data-scroll-target="#converting-between-types-1">Converting between types</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#converting-between-types-2" id="toc-converting-between-types-2" class="nav-link" data-scroll-target="#converting-between-types-2">Converting between types</a>
-  <ul class="collapse">
-<li><a href="#converting-between-types-3" id="toc-converting-between-types-3" class="nav-link" data-scroll-target="#converting-between-types-3">Converting between types</a></li>
+  <li><a href="#converting-between-types-2" id="toc-converting-between-types-2" class="nav-link" data-scroll-target="#converting-between-types-2">Converting between types</a></li>
+  <li><a href="#converting-between-types-3" id="toc-converting-between-types-3" class="nav-link" data-scroll-target="#converting-between-types-3">Converting between types</a></li>
   <li><a href="#explicit-vs.-implicit-coercion" id="toc-explicit-vs.-implicit-coercion" class="nav-link" data-scroll-target="#explicit-vs.-implicit-coercion">Explicit vs.&nbsp;implicit coercion</a></li>
   </ul>
 </li>
@@ -324,10 +320,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>General practice/ in class review coming on Friday!</li>
 </ul></section><section id="types-and-classes" class="level1"><h1>Types and classes</h1>
 <section id="types-and-classes-1" class="level2"><h2 class="anchored" data-anchor-id="types-and-classes-1">Types and classes</h2>
-<ul>
-<li>Type is how an object is stored in memory</li>
-<li>
-</li></ul></section><section id="common-data-types" class="level2"><h2 class="anchored" data-anchor-id="common-data-types">Common data types</h2>
+<p>An object’s <em>type</em> indicates how it is stored in memory.</p>
+</section><section id="common-data-types" class="level2"><h2 class="anchored" data-anchor-id="common-data-types">Common data types</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>You’ll commonly encounter:</p>
@@ -535,7 +529,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] "2"   "two"</code></pre>
 </div>
 </div>
-</section></section><section id="converting-between-types-2" class="level1"><h1>Converting between types</h1>
+</section><section id="converting-between-types-2" class="level2"><h2 class="anchored" data-anchor-id="converting-between-types-2">Converting between types</h2>
 <div class="hand">
 <p>with intention…</p>
 </div>
@@ -567,7 +561,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<section id="converting-between-types-3" class="level2"><h2 class="anchored" data-anchor-id="converting-between-types-3">Converting between types</h2>
+</section><section id="converting-between-types-3" class="level2"><h2 class="anchored" data-anchor-id="converting-between-types-3">Converting between types</h2>
 <div class="hand">
 <p>with intention…</p>
 </div>
@@ -781,19 +775,19 @@ Levels: August July June</code></pre>
 <li><p>fct_rev(): reorder factors by reversing</p></li>
 </ul></section><section id="example-factor-re-order" class="level2"><h2 class="anchored" data-anchor-id="example-factor-re-order">Example Factor Re-Order</h2>
 <div class="cell">
-<div class="sourceCode" id="cb91"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">months</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"June"</span>, <span class="st">"July"</span>, <span class="st">"June"</span>, <span class="st">"August"</span>, <span class="st">"June"</span><span class="op">)</span></span>
-<span><span class="va">months_factor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">months</span><span class="op">)</span></span>
-<span><span class="va">months_factor</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb91"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">amounts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"low"</span>, <span class="st">"medium"</span>, <span class="st">"high"</span>, <span class="st">"high"</span>, <span class="st">"medium"</span><span class="op">)</span></span>
+<span><span class="va">amounts_factor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">amounts</span><span class="op">)</span></span>
+<span><span class="va">amounts_factor</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] June   July   June   August June  
-Levels: August July June</code></pre>
+<pre><code>[1] low    medium high   high   medium
+Levels: high low medium</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb93"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fct_relevel</span><span class="op">(</span><span class="va">months_factor</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"June"</span>, <span class="st">"July"</span>, <span class="st">"August"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb93"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fct_relevel</span><span class="op">(</span><span class="va">amounts_factor</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"low"</span>, <span class="st">"medium"</span>, <span class="st">"high"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] June   July   June   August June  
-Levels: June July August</code></pre>
+<pre><code>[1] low    medium high   high   medium
+Levels: low medium high</code></pre>
 </div>
 </div>
 </section></section><section id="application-exercise" class="level1"><h1>Application exercise</h1>

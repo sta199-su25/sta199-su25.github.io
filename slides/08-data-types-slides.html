@@ -219,10 +219,8 @@
 </ul></section><section><section id="types-and-classes" class="title-slide slide level1 center"><h1>Types and classes</h1>
 
 </section><section id="types-and-classes-1" class="slide level2"><h2>Types and classes</h2>
-<ul>
-<li>Type is how an object is stored in memory</li>
-<li>
-</li></ul></section><section id="common-data-types" class="slide level2"><h2>Common data types</h2>
+<p>An object’s <em>type</em> indicates how it is stored in memory.</p>
+</section><section id="common-data-types" class="slide level2"><h2>Common data types</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>You’ll commonly encounter:</p>
@@ -426,7 +424,7 @@
 <pre><code>[1] "2"   "two"</code></pre>
 </div>
 </div>
-</section></section><section><section id="converting-between-types-2" class="title-slide slide level1 center"><h1>Converting between types</h1>
+</section><section id="converting-between-types-2" class="slide level2"><h2>Converting between types</h2>
 <div class="hand">
 <p>with intention…</p>
 </div>
@@ -663,19 +661,19 @@ Levels: August July June</code></pre>
 <li><p>fct_rev(): reorder factors by reversing</p></li>
 </ul></section><section id="example-factor-re-order" class="slide level2"><h2>Example Factor Re-Order</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a></a>months <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"June"</span>, <span class="st">"July"</span>, <span class="st">"June"</span>, <span class="st">"August"</span>, <span class="st">"June"</span>)</span>
-<span id="cb91-2"><a></a>months_factor <span class="ot">&lt;-</span> <span class="fu">factor</span>(months)</span>
-<span id="cb91-3"><a></a>months_factor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a></a>amounts <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"low"</span>, <span class="st">"medium"</span>, <span class="st">"high"</span>, <span class="st">"high"</span>, <span class="st">"medium"</span>)</span>
+<span id="cb91-2"><a></a>amounts_factor <span class="ot">&lt;-</span> <span class="fu">factor</span>(amounts)</span>
+<span id="cb91-3"><a></a>amounts_factor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] June   July   June   August June  
-Levels: August July June</code></pre>
+<pre><code>[1] low    medium high   high   medium
+Levels: high low medium</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a></a><span class="fu">fct_relevel</span>(months_factor, <span class="fu">c</span>(<span class="st">"June"</span>, <span class="st">"July"</span>, <span class="st">"August"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a></a><span class="fu">fct_relevel</span>(amounts_factor, <span class="fu">c</span>(<span class="st">"low"</span>, <span class="st">"medium"</span>, <span class="st">"high"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] June   July   June   August June  
-Levels: June July August</code></pre>
+<pre><code>[1] low    medium high   high   medium
+Levels: low medium high</code></pre>
 </div>
 </div>
 </section></section><section><section id="application-exercise" class="title-slide slide level1 center"><h1>Application exercise</h1>
