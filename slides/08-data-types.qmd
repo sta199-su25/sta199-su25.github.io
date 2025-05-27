@@ -441,13 +441,13 @@ Some commonly used functions are:
 ## Example Factor Re-Order
 
 ```{r}
-months <- c("June", "July", "June", "August", "June")
-months_factor <- factor(months)
-months_factor
+amounts <- c("low", "medium", "high", "high", "medium")
+amounts_factor <- factor(amounts)
+amounts_factor
 ```
 
 ```{r}
-fct_relevel(months_factor, c("June", "July", "August"))
+fct_relevel(amounts_factor, c("low", "medium", "high"))
 ```
 
 # Application exercise
