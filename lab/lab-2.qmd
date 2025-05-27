@@ -411,3 +411,7 @@ Requirements for the plot:
 ## Question 12
 
 Briefly explain why the pivot in question 9 was necessary for creating the plot in question 11.
+
+## Question 13 - Workflow
+
+Workflow: please make sure you have selected pages in gradescope AND made at least three commits to this project to get full credit for this question.
