@@ -6,27 +6,31 @@ format:
 ---
 
 ## Packages
+
 We will use the tidyverse package in this application exercise.
 
 ```{r}
 library(tidyverse)
 ```
 
-
 ## Data
+
 The data come from https://www.usclimatedata.com/climate/durham/north-carolina/united-states/usnc0192 and are stored as `durham-climate.csv` in the `data` folder.
 
 ```{r}
 durham_climate <- read_csv("data/durham-climate.csv")
 ```
+
 ```{r}
 durham_climate
 ```
 
+**Question:** What data types are each of these columns?
 
 ## Factor Reordering
 
 Let's talk about the following plot:
+
 ```{r}
 ggplot(
   durham_climate, 
@@ -52,4 +56,3 @@ Let's fix the plot by re-ordering our factors:
 # add code here
 
 ```
-

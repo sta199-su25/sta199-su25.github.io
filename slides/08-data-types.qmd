@@ -33,8 +33,7 @@ ggplot2::theme_set(theme_gray(base_size = 16))
 
 ## Types and classes
 
--   Type is how an object is stored in memory
--   
+An object's *type* indicates how it is stored in memory.
 
 ## Common data types
 
@@ -224,7 +223,7 @@ c(1.2, 3L)
 c(2L, "two")
 ```
 
-# Converting between types
+## Converting between types
 
 ::: hand
 with intention...
