@@ -12,7 +12,6 @@ auto-stretch: false
 #| echo: false
 #| message: false
 
-library(countdown)
 library(tidyverse)
 library(ggthemes)
 ggplot2::theme_set(theme_gray(base_size = 16))
