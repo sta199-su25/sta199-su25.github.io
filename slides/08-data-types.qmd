@@ -434,6 +434,8 @@ Some commonly used functions are:
 
 -   fct_relevel(): reorder factors by hand
 
+-   fct_reorder(): reorder factors by another variable
+
 -   fct_infreq(): reorder factors by frequency
 
 -   fct_rev(): reorder factors by reversing
