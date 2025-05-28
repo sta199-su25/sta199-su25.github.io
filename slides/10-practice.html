@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Application exercises – STA 199</title>
+<meta name="dcterms.date" content="2025-05-29">
+<title>Midterm + More Practice! – STA 199</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,31 +18,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./exam-review/midterm-review.html" rel="next">
-<link href="./lab.html" rel="prev">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-07f9649d2eb5c92efc60913bb73a6608.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3e476e15ae565c222d94875412ae43a1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-bfeebad62992ce20359633fe86f0eb55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -70,106 +96,38 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-ae-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-ae-listing'] = new List('listing-ae-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="style/sta199.scss">
-<meta property="og:title" content="Application exercises – STA 199">
-<meta property="og:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Summer 2025.">
+}</script><link rel="stylesheet" href="../style/sta199.scss">
+<meta property="og:title" content="Midterm + More Practice! – STA 199">
+<meta property="og:description" content="Lecture 10">
+<meta property="og:image" content="https://sta199-su25.github.io/slides/10-practice_files/figure-revealjs/unnamed-chunk-5-1.png">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="Application exercises – STA 199">
-<meta name="twitter:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Summer 2025.">
-<meta name="twitter:image" content="https://sta199-su25.github.io/img/twitter-card.png">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1920">
+<meta name="twitter:title" content="Midterm + More Practice! – STA 199">
+<meta name="twitter:description" content="Lecture 10">
+<meta name="twitter:image" content="https://sta199-su25.github.io/slides/img/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
-<meta name="twitter:image-height" content="1080">
-<meta name="twitter:image-width" content="1920">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ae.html">Application exercises</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Midterm + More Practice!</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main">
     <a href="https://github.com/sta199-su25" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio containers" class="quarto-navigation-tool px-1" aria-label="RStudio containers"><i class="bi bi-code-square"></i></a>
@@ -182,7 +140,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Course information</span></a>
@@ -190,39 +148,39 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-team.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Team</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Useful links</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -231,48 +189,48 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-access.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-cheatsheets.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-cheatsheets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cheatsheets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./coding-principles-oh.html" class="sidebar-item-text sidebar-link">
+  <a href="../coding-principles-oh.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coding principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-troubleshooting.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-troubleshooting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Troubleshooting</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project/description.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/description.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lab.html" class="sidebar-item-text sidebar-link">
+  <a href="../lab.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Labs</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ae.html" class="sidebar-item-text sidebar-link active">
+  <a href="../ae.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Application exercises</span></a>
   </div>
 </li>
@@ -284,29 +242,42 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exam-review/midterm-review.html" class="sidebar-item-text sidebar-link">
+  <a href="../exam-review/midterm-review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm Review</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#midterm-exam-1" id="toc-midterm-exam-1" class="nav-link" data-scroll-target="#midterm-exam-1">Midterm Exam 1</a></li>
+  <li><a href="#material" id="toc-material" class="nav-link" data-scroll-target="#material">Material</a></li>
+  <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-class</a></li>
+  <li><a href="#what-should-i-put-on-my-cheat-sheet" id="toc-what-should-i-put-on-my-cheat-sheet" class="nav-link" data-scroll-target="#what-should-i-put-on-my-cheat-sheet">What should I put on my cheat sheet?</a></li>
+  <li><a href="#example-in-class-question" id="toc-example-in-class-question" class="nav-link" data-scroll-target="#example-in-class-question">Example in-class question</a></li>
+  <li><a href="#example-in-class-question-1" id="toc-example-in-class-question-1" class="nav-link" data-scroll-target="#example-in-class-question-1">Example in-class question</a></li>
+  <li><a href="#example-in-class-question-2" id="toc-example-in-class-question-2" class="nav-link" data-scroll-target="#example-in-class-question-2">Example in-class question</a></li>
+  <li><a href="#example-in-class-question-3" id="toc-example-in-class-question-3" class="nav-link" data-scroll-target="#example-in-class-question-3">Example in-class question</a></li>
+  <li><a href="#take-home" id="toc-take-home" class="nav-link" data-scroll-target="#take-home">Take-home</a></li>
+  <li><a href="#reminder-conduct-policies" id="toc-reminder-conduct-policies" class="nav-link" data-scroll-target="#reminder-conduct-policies">Reminder: conduct policies</a></li>
+  <li><a href="#things-you-can-do-to-study" id="toc-things-you-can-do-to-study" class="nav-link" data-scroll-target="#things-you-can-do-to-study">Things you can do to study</a></li>
+  <li><a href="#lets-practice" id="toc-lets-practice" class="nav-link" data-scroll-target="#lets-practice">Let’s Practice!</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/slides/10-practice.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="10-practice-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Application exercises</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Midterm + More Practice!</h1>
+<p class="subtitle lead">Lecture 10</p>
 </div>
 
 
@@ -314,156 +285,324 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 29, 2025</p>
+    </div>
+  </div>
   
     
   </div>
   
 
 
-</header>
-
-
-<p>All application exercises (AEs) are due by the end of lecture (or, precisely, by 10:45 am) on the day they’re covered in lecture. To submit your AE, make at least one change to your AE, <strong>commit and then push</strong> your change to your AE repo. AEs are graded for engagement, not accuracy.</p>
-<p>More AEs to be added as the semester progresses.</p>
-<p><br></p>
-<div id="listing-ae-listing" class="quarto-listing quarto-listing-container-table">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Title
-</th>
-<th>
-Subtitle
-</th>
+</header><section id="announcements" class="level2"><h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
+<ul>
+<li>I will not hold office hours on Tuesday, June 3rd: this is when you have your take home!</li>
+<li>Replacement midterm review office hours: June 2nd (3:30 - 5:30)</li>
+<li>Be in class and lab on Monday!!!!</li>
+<li>Tomorrow: Review game!</li>
+</ul></section><section id="midterm-exam-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="midterm-exam-1">Midterm Exam 1</h2>
+<p>Worth 20% of your final grade; consists of two parts:</p>
+<ul>
+<li><p><strong>In-class</strong>: worth 70% of the Midterm 1 grade;</p></li>
+<li><p><strong>Take-home</strong>: worth 30% of the Midterm 1 grade.</p></li>
+</ul></section><section id="material" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="material">Material</h2>
+<p>Everything we have done so far:</p>
+<ul>
+<li>plotting data with <code>ggplot</code> and interpreting plots</li>
+<li>computing and understanding summary statistics</li>
+<li>transforming data (row/column/grouping operations)</li>
+<li>pivoting &amp; joining data</li>
+<li>data types/classes</li>
+<li>importing data</li>
+<li>
+<em>Monday’s class</em>: <em>data science ethics</em>
+</li>
+</ul></section><section id="in-class" class="level2"><h2 class="anchored" data-anchor-id="in-class">In-class</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>All multiple choice</p></li>
+<li><p>You get both sides of one 8.5” x 11” note sheet that you and only you created (written, typed, iPad, etc)</p></li>
+</ul>
+</div>
+<p>. . .</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you have testing accommodations, make sure I get proper documentation from SDAO and make appointments in the Testing Center ASAP. The appointment should overlap substantially with our class time if possible.</p>
+</div>
+</div>
+</section><section id="what-should-i-put-on-my-cheat-sheet" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="what-should-i-put-on-my-cheat-sheet">What should I put on my cheat sheet?</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>description of common functions;</li>
+<li>examples of function usage;</li>
+<li>description of different visualizations: how to interpret, and what to use when;</li>
+<li>doodles;</li>
+<li>cute words of affirmation.</li>
+</ul>
+</div>
+<p>. . .</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Don’t waste space on the details of any specific applications or datasets we’ve seen (penguins, Bechdel, gerrymandering, midwest, etc). Anything we want you to know about a particular application will be introduced from scratch within the exam.</p>
+</div>
+</div>
+</section><section id="example-in-class-question" class="level2"><h2 class="anchored" data-anchor-id="example-in-class-question">Example in-class question</h2>
+<p>Which command can replace a pre-existing column in a data frame with a new and improved version of itself?</p>
+<ol type="a">
+<li><code>group_by</code></li>
+<li><code>summarize</code></li>
+<li><code>pivot_wider</code></li>
+<li><code>geom_replace</code></li>
+<li><code>mutate</code></li>
+</ol></section><section id="example-in-class-question-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="example-in-class-question-1">Example in-class question</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+      x y    
+  &lt;dbl&gt; &lt;chr&gt;
+1     1 Marie
+2     2 Marie
+3     3 Katie
+4     4 Mary 
+5     5 Mary 
+6     6 Mary </code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span>xbar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>How many rows will this output have?</p>
+<ol type="a">
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>6</li>
+<li>11</li>
+</ol>
+</div>
+</div>
+</section><section id="example-in-class-question-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="example-in-class-question-2">Example in-class question</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Which box plot is visualizing the same data as the histogram?</p>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="10-practice_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="10-practice_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="example-in-class-question-3" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="example-in-class-question-3">Example in-class question</h2>
+<p>What code could have been used to produce <code>df_result</code>? Select all that apply.</p>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><code>df_X</code></p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>state</th>
+<th>year</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>LA</td>
+<td>2025</td>
 </tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102697" data-listing-reading-time-sort="3" data-listing-word-count-sort="434" data-listing-title-sort="AE 00: Make a Github" data-listing-filename-sort="ae-00-github.qmd">
-<td>
-<a href="./ae/ae-00-github.html" class="title listing-title">AE 00: Make a Github</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
+<tr class="even">
+<td>NC</td>
+<td>2025</td>
 </tr>
-<tr data-index="1" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102697" data-listing-reading-time-sort="3" data-listing-word-count-sort="598" data-listing-title-sort="AE 01: Meet the penguins" data-listing-filename-sort="ae-01-github.qmd">
-<td>
-<a href="./ae/ae-01-github.html" class="title listing-title">AE 01: Meet the penguins</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102697" data-listing-reading-time-sort="9" data-listing-word-count-sort="1693" data-listing-title-sort="AE 02: Bechdel Data Vis" data-listing-filename-sort="ae-02-github-A.qmd">
-<td>
-<a href="./ae/ae-02-github-A.html" class="title listing-title">AE 02: Bechdel Data Vis</a>
-</td>
-<td>
-<span class="listing-subtitle">Suggested answers</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102697" data-listing-reading-time-sort="7" data-listing-word-count-sort="1243" data-listing-title-sort="AE 02: Bechdel Data Vis" data-listing-filename-sort="ae-02-github.qmd">
-<td>
-<a href="./ae/ae-02-github.html" class="title listing-title">AE 02: Bechdel Data Vis</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="4" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102697" data-listing-reading-time-sort="5" data-listing-word-count-sort="828" data-listing-title-sort="AE 03: Duke Forest" data-listing-filename-sort="ae-03-github-A.qmd">
-<td>
-<a href="./ae/ae-03-github-A.html" class="title listing-title">AE 03: Duke Forest</a>
-</td>
-<td>
-<span class="listing-subtitle">Suggested Answers</span>
-</td>
-</tr>
-<tr data-index="5" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102697" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="AE 03: Duke Forest" data-listing-filename-sort="ae-03-github.qmd">
-<td>
-<a href="./ae/ae-03-github.html" class="title listing-title">AE 03: Duke Forest</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="6" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102697" data-listing-reading-time-sort="9" data-listing-word-count-sort="1637" data-listing-title-sort="AE 04: NYC flights + data wrangling" data-listing-filename-sort="ae-04-github-A.qmd">
-<td>
-<a href="./ae/ae-04-github-A.html" class="title listing-title">AE 04: NYC flights + data wrangling</a>
-</td>
-<td>
-<span class="listing-subtitle">Suggested answers</span>
-</td>
-</tr>
-<tr data-index="7" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102697" data-listing-reading-time-sort="8" data-listing-word-count-sort="1562" data-listing-title-sort="AE 04: NYC flights + data wrangling" data-listing-filename-sort="ae-04-github.qmd">
-<td>
-<a href="./ae/ae-04-github.html" class="title listing-title">AE 04: NYC flights + data wrangling</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="8" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102697" data-listing-reading-time-sort="3" data-listing-word-count-sort="431" data-listing-title-sort="AE 05: Battle of the Budget Airlines" data-listing-filename-sort="ae-05-github-A.qmd">
-<td>
-<a href="./ae/ae-05-github-A.html" class="title listing-title">AE 05: Battle of the Budget Airlines</a>
-</td>
-<td>
-<span class="listing-subtitle">Suggested answers</span>
-</td>
-</tr>
-<tr data-index="9" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102697" data-listing-reading-time-sort="2" data-listing-word-count-sort="299" data-listing-title-sort="AE 05: Battle of the Budget Airlines" data-listing-filename-sort="ae-05-github.qmd">
-<td>
-<a href="./ae/ae-05-github.html" class="title listing-title">AE 05: Battle of the Budget Airlines</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="10" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102698" data-listing-reading-time-sort="4" data-listing-word-count-sort="700" data-listing-title-sort="AE 06: Tidying Stat Sci" data-listing-filename-sort="ae-06-github.qmd">
-<td>
-<a href="./ae/ae-06-github.html" class="title listing-title">AE 06: Tidying Stat Sci</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="11" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102698" data-listing-reading-time-sort="3" data-listing-word-count-sort="459" data-listing-title-sort="AE 07: Joining" data-listing-filename-sort="ae-07-github.qmd">
-<td>
-<a href="./ae/ae-07-github.html" class="title listing-title">AE 07: Joining</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="12" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102698" data-listing-reading-time-sort="1" data-listing-word-count-sort="126" data-listing-title-sort="AE 08: Data Types" data-listing-filename-sort="ae-08-github.qmd">
-<td>
-<a href="./ae/ae-08-github.html" class="title listing-title">AE 08: Data Types</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
-</tr>
-<tr data-index="13" data-categories="QXBwbGljYXRpb24lMjBleGVyY2lzZQ==" data-listing-file-modified-sort="1748476102698" data-listing-reading-time-sort="3" data-listing-word-count-sort="413" data-listing-title-sort="AE 09: Importing Data" data-listing-filename-sort="ae-09-github.qmd">
-<td>
-<a href="./ae/ae-09-github.html" class="title listing-title">AE 09: Importing Data</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
+<tr class="odd">
+<td>LA</td>
+<td>2024</td>
 </tr>
 </tbody>
 </table>
-<div class="listing-no-matching d-none">
-No matching items
+</div><div class="column" style="width:25%;">
+<p><code>df_Y</code></p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>state</th>
+<th>region</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>LA</td>
+<td>south</td>
+</tr>
+<tr class="even">
+<td>NC</td>
+<td>south</td>
+</tr>
+<tr class="odd">
+<td>CA</td>
+<td>west</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<p><code>df_result</code></p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>state</th>
+<th>year</th>
+<th>region</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>LA</td>
+<td>2025</td>
+<td>south</td>
+</tr>
+<tr class="even">
+<td>NC</td>
+<td>2025</td>
+<td>south</td>
+</tr>
+<tr class="odd">
+<td>LA</td>
+<td>2024</td>
+<td>south</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ol type="a">
+<li>
+<code>left_join(df_X, df_Y)</code><br>
+</li>
+<li>
+<code>right_join(df_X, df_Y)</code><br>
+</li>
+<li>
+<code>full_join(df_X, df_Y)</code><br>
+</li>
+</ol>
+</div><div class="column" style="width:50%;">
+<ol start="4" type="a">
+<li>
+<code>anti_join(df_Y, df_X)</code><br>
+</li>
+<li>
+<code>right_join(df_Y, df_X)</code><br>
+</li>
+</ol>
+</div>
+</div>
+</section><section id="take-home" class="level2"><h2 class="anchored" data-anchor-id="take-home">Take-home</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>It will be just like a lab, but shorter;</li>
+<li>Completely open-resource, but citation policies apply;</li>
+<li>Absolutely no collaboration of any kind;</li>
+<li>Seek help by posting <em>privately</em> on Ed;</li>
+<li>Submit your final PDF to Gradescope in the usual way.</li>
+</ul>
+</div>
+</section><section id="reminder-conduct-policies" class="level2"><h2 class="anchored" data-anchor-id="reminder-conduct-policies">Reminder: conduct policies</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Uncited use of outside resources or inappropriate collaboration will result in a zero and be referred to the conduct office;</li>
+<li>If a conduct violation of any kind is discovered, your final letter grade in the course will be permanently reduced (A- down to B+, B+ down to B, etc);</li>
+<li>If folks share solutions, all students involved will be penalized equally, the sharer the same as the recipient.</li>
+</ul>
+</div>
+</section><section id="things-you-can-do-to-study" class="level2"><h2 class="anchored" data-anchor-id="things-you-can-do-to-study">Things you can do to study</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>
+<strong>Practice problems</strong>: released Thursday February 13;</li>
+<li>
+<strong>Attend class tomorrow</strong>: review game</li>
+<li>
+<strong>Old labs</strong>: correct parts where you lost points;</li>
+<li>
+<strong>Old AEs</strong>: complete tasks we didn’t get to and compare with key;</li>
+<li>
+<strong>Code along</strong>: watch these videos specifically;</li>
+<li>
+<strong>Textbook</strong>: odd-numbered exercises in the back of IMS Chs. 1, 4, 5, 6</li>
+</ul>
+</div>
+</section><section id="lets-practice" class="level1"><h1>Let’s Practice!</h1>
 
 
+</section></main><!-- /main --><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
 
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -880,34 +1019,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./lab.html" class="pagination-link" aria-label="Labs">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Labs</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./exam-review/midterm-review.html" class="pagination-link" aria-label="Midterm Review">
-        <span class="nav-page-text">Midterm Review</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025, Mine Çetinkaya-Rundel, Marie Neubrander</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/ae.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/slides/10-practice.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <span style="color: #FFBE98;"><i class="fa-solid fa-heart" aria-label="heart"></i></span> and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
