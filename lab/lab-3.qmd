@@ -271,7 +271,7 @@ c.  How many athletes participated in the 2020 Olympic Games but not the 2024 Ol
 
 ## Question 7
 
-Now, let's focus on the 2024 olympic data in your `team_usa_2024` data frame.
+Now, let's focus on the 2024 Olympic data in your `team_usa_2024` data frame.
 
 a.  States of interest: Choose 2-5 states of interest and save them in a vector called `states_of_interest`.
     For example, if I chose California, Louisiana, and North Carolina, this would be:
