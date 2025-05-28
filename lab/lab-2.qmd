@@ -2,7 +2,7 @@
 title: Lab 2
 subtitle: Data Transformation + Tidying
 categories: Lab
-description: "Due Wed. May 21 11:59 PM"
+description: "Due Wed. May 28 11:59 PM"
 draft: false
 ---
 
