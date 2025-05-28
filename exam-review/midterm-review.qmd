@@ -250,7 +250,7 @@ You made your bar plot without transforming the data in any way, while your frie
 #| echo: true
 
 blizzard_salary <- blizzard_salary |>
-  _(1)_(performance_rating = fct_relevel(performance_rating, _(2)_))
+  _(1)_(performance_rating = fct_relevel(performance_rating, c(_(2)_)))
 ```
 
 **Question 6:** What goes in the blank (1)?
