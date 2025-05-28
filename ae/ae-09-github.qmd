@@ -1,5 +1,5 @@
 ---
-title: "AE 08: Data Types"
+title: "AE 09: Importing Data"
 format:
   html:
     self-contained: true
@@ -23,9 +23,7 @@ library(readxl)
 
 ## Part 1: Hollywood relationships
 
-1.  Load the data from `age-gaps.csv` in your `data` and assign it to `age_gaps`.
-    Confirm that this new object appears in your Environment tab.
-    Click on the *name of the object* in your Environment tab to pop open the data in the data viewer.
+1.  Load the data from `age-gaps.csv` in your `data` and assign it to `age_gaps`. Confirm that this new object appears in your Environment tab. Click on the *name of the object* in your Environment tab to pop open the data in the data viewer.
 
 ```{r}
 #| label: age-gaps-import
