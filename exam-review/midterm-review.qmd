@@ -9,6 +9,18 @@ execute:
   echo: false
 ---
 
+::: {.callout-tip collapse="true"}
+## Solutions
+
+Coming later - try them yourself first!!!
+:::
+
+::: {.callout-tip collapse="true"}
+## Help
+
+Use Ed or office hours for getting help with these practice questions - avoid emails!
+:::
+
 ```{r}
 #| label: load-packages
 #| message: false
@@ -35,10 +47,6 @@ blizzard_salary <- blizzard_salary |>
   filter(!is.na(annual_salary)) |>
   select(percent_incr, salary_type, annual_salary, performance_rating)
 ```
-
-::: callout-note
-Suggested answers can be found [here](/exam-review/midterm-review-A.qmd), but resist the urge to peek before you go through it yourself.
-:::
 
 In 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation.
 (Source: [Blizzard Workers Share Salaries in Revolt Over Pay](https://www.bloomberg.com/news/articles/2020-08-03/blizzard-workers-share-salaries-in-revolt-over-wage-disparities))
@@ -72,13 +80,13 @@ b.  The `blizzard_salary` dataset has 4 columns.
 
 c.  Each row represents a Blizzard Entertainment worker who filled out the spreadsheet.
 
-d.  The `percent_incr` variable is numerical and discrete.
+d.  The `percent_incr` variable is an integer numerical variable.
 
 e.  The `salary_type` variable is numerical.
 
 f.  The `annual_salary` variable is numerical.
 
-g.  The `performance_rating` variable is categorical and ordinal.
+g.  The `performance_rating` variable is categorical.
 
 ::: {.content-visible when-format="pdf"}
 $\vspace{1cm}$
@@ -98,7 +106,8 @@ Explain your reasoning.
 #| fig-width: 8
 #| fig-asp: 0.5
 ggplot(blizzard_salary, aes(x = annual_salary)) +
-  geom_histogram(binwidth = 10000, color = "white") +
+  #geom_histogram(binwidth = 10000, color = "white") +
+  geom_boxplot()+
   facet_wrap(~salary_type, ncol = 1) +
   scale_x_continuous(labels = label_dollar(scale = 1/1000, suffix = "K"), breaks = seq(0, 250000, 25000)) +
   labs(
@@ -114,7 +123,8 @@ ggplot(blizzard_salary, aes(x = annual_salary)) +
 #| fig-asp: 0.3
 
 ggplot(blizzard_salary, aes(x = annual_salary)) +
-  geom_histogram(binwidth = 10000, color = "white") +
+  #geom_histogram(binwidth = 10000, color = "white") +
+  geom_boxplot() +
   facet_wrap(~salary_type, nrow = 1) +
   scale_x_continuous(labels = label_dollar(scale = 1/1000, suffix = "K"), breaks = seq(0, 250000, 25000)) +
   labs(
@@ -167,7 +177,7 @@ d.  100,000
 
 ## Question 4
 
-Which distribution of annual salaries has a higher standard deviation?
+Which distribution of annual salaries has a higher variance?
 
 a.  Hourly workers
 
@@ -179,7 +189,7 @@ c.  Roughly the same
 
 ## Question 5
 
-Which of the following alternate plots would also be useful for visualizing the distributions of annual salaries of hourly and salaried workers?
+Which of the following plots are be useful for comparing the distributions of annual salaries of hourly and salaried workers?
 Choose all that apply.
 
 a\.
@@ -192,7 +202,7 @@ c\.
 Pie charts
 
 d\.
-Waffle charts
+Bar charts
 
 e\.
 Histograms
@@ -409,10 +419,10 @@ ggplot(blizzard_salary, aes(x = annual_salary, percent_incr)) +
 
 And they wrote the following interpretation for the relationship between annual salary and percent increase for Top performers:
 
-> The relationship is positive, having a higher salary results in a higher percent increase.
+> The relationship is positive, having a higher salary causes in a higher percent increase.
 > There is one clear outlier.
 
-Which of the following is/are the most accurate and helpful) peer review note for this interpretation.
+Which of the following is/are the most accurate and helpful peer review note for this interpretation?
 Choose all that apply.
 
 a.  The interpretation is complete and perfect, no changes needed!
@@ -421,13 +431,15 @@ b.  The interpretation doesn't mention the direction of the relationship.
 
 c.  The interpretation doesn't mention the form of the relationship, which is linear.
 
-d.  The interpretation doesn't mention the strength of the relationship, which is somewhat strong.
-
-e.  There isn't a clear outlier in the plot.
+d.  There isn't a clear outlier in the plot.
     If any points stand out as potential outliers, more guidance should be given to the reader to identify them (e.g., salary and/or percent increase amount).
 
-f.  The interpretation is causal – we don't know if the cause of the high percent increase is higher annual salary based on observational data.
+e.  The interpretation is causal -- we don't know if the cause of the high percent increase is higher annual salary based on observational data.
     The causal direction might be the other way around, or there may be other factors contributing to the apparent relationship.
+
+::: callout-tip
+We will talk more about point (e) on Monday.
+:::
 
 ::: {.content-visible when-format="pdf"}
 $\vspace{2cm}$
@@ -440,7 +452,7 @@ $\vspace{2cm}$
 Below is some code and its output.
 
 ```{{r}}
-# label=plot blizzard
+# label=plot_blizzard
 
 ggplot(blizzard_salary,aes(x=performance_rating,y=percent_incr))+geom_boxplot()
 labs(x="Performance rating", y = "Percent increase")
@@ -455,7 +467,7 @@ ggplot(blizzard_salary,aes(x=performance_rating,y=percent_incr))+geom_boxplot()
 labs(x="Performance rating", y = "Percent increase")
 ```
 
-Part 1: List at least 5 things that should be fixed or improved in the code.
+Part 1: List at least 3 things things that should be improved/fixed in this code!
 
 ::: {.content-visible when-format="pdf"}
 $\vspace{5cm}$
@@ -503,6 +515,6 @@ c.  I didn't yet push my changes, it's expected that you are not seeing them on 
 
 d.  You need to pull to see my changes on GitHub in the web browser.
 
-## Bonus
+## Good Practice
 
 Pick a concept we introduced in class so far that you've been struggling with and explain it in your own words.

@@ -58,7 +58,10 @@ website:
       - project/description.qmd
       - lab.qmd
       - ae.qmd
-      - exam-review.qmd
+      - section: "Exam Review"
+        contents:
+          - href: exam-review/midterm-review.qmd   
+            text: "Midterm Review"
             
   page-footer:
     right: 'This page is built with [{{< fa heart >}}]{style="color: #FFBE98;"} and [Quarto](https://quarto.org/).'
