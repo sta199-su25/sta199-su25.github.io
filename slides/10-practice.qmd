@@ -1,0 +1,248 @@
+---
+title: "Midterm + More Practice!"
+subtitle: "Lecture 10"
+date: "2025-05-29"
+format: 
+  revealjs:
+    output-file: 10-practice-slides.html
+auto-stretch: false
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+```
+
+## Announcements
+
+-   I will not hold office hours on Tuesday, June 3rd: this is when you have your take home!
+-   Replacement midterm review office hours: June 2nd (3:30 - 5:30)
+-   Be in class and lab on Monday!!!!
+-   Tomorrow: Review game!
+
+## Midterm Exam 1 {.smaller}
+
+Worth 20% of your final grade; consists of two parts:
+
+-   **In-class**: worth 70% of the Midterm 1 grade;
+
+-   **Take-home**: worth 30% of the Midterm 1 grade.
+
+## Material {.smaller}
+
+Everything we have done so far:
+
+-   plotting data with `ggplot` and interpreting plots
+-   computing and understanding summary statistics
+-   transforming data (row/column/grouping operations)
+-   pivoting & joining data
+-   data types/classes
+-   importing data
+-   *Monday's class*: *data science ethics*
+
+## In-class
+
+::: incremental
+-   All multiple choice
+
+-   You get both sides of one 8.5" x 11" note sheet that you and only you created (written, typed, iPad, etc)
+:::
+
+. . .
+
+::: callout-important
+If you have testing accommodations, make sure I get proper documentation from SDAO and make appointments in the Testing Center ASAP. The appointment should overlap substantially with our class time if possible.
+:::
+
+## What should I put on my cheat sheet? {.smaller}
+
+::: incremental
+-   description of common functions;
+-   examples of function usage;
+-   description of different visualizations: how to interpret, and what to use when;
+-   doodles;
+-   cute words of affirmation.
+:::
+
+. . .
+
+::: callout-warning
+Don't waste space on the details of any specific applications or datasets we've seen (penguins, Bechdel, gerrymandering, midwest, etc).
+Anything we want you to know about a particular application will be introduced from scratch within the exam.
+:::
+
+## Example in-class question
+
+Which command can replace a pre-existing column in a data frame with a new and improved version of itself?
+
+a.  `group_by`
+b.  `summarize`
+c.  `pivot_wider`
+d.  `geom_replace`
+e.  `mutate`
+
+## Example in-class question {.smaller}
+
+```{r}
+#| echo: false
+
+df <- tibble(
+  x = c(1, 2, 3, 4, 5, 6),
+  y = c("Marie", "Marie", "Katie", "Mary", "Mary", "Mary")
+)
+```
+
+::: columns
+::: {.column width="40%"}
+```{r}
+df
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| eval: false 
+
+df |>
+  group_by(y) |>
+  summarize(xbar = mean(x))
+```
+
+How many rows will this output have?
+
+a.  1
+b.  2
+c.  3
+d.  6
+e.  11
+:::
+:::
+
+## Example in-class question {.smaller}
+
+::: columns
+::: {.column width="50%"}
+Which box plot is visualizing the same data as the histogram?
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| warning: false
+set.seed(100)
+x <- c(rnorm(150), rnorm(350, mean = 2, sd = 0.5))
+df <- tibble(x = x)
+ggplot(df, aes(x = x)) +
+  geom_histogram() + 
+  theme(axis.text = element_text(size = 36)) + 
+  labs(x = NULL, y = NULL)
+```
+:::
+:::
+
+```{r}
+#| echo: false
+#| fig-asp: 0.33
+#| warning: false
+w <- rnorm(500)
+y <- c(pmax(rnorm(350, mean = -1), -2), rnorm(150, mean = 2, sd = 0.5))
+z <- x + 10
+X <- as_tibble(cbind(sort(rep(1:4, 500)), c(w, z, x, y))) |>
+  mutate(
+    V1 = case_when(
+      V1 == 1 ~ "a",
+      V1 == 2 ~ "b",
+      V1 == 3 ~ "c",
+      V1 == 4 ~ "d",
+    )
+  )
+ggplot(X, aes(x = V2)) + 
+  geom_boxplot() + 
+  facet_wrap(.~V1, scales = "free") + 
+  theme(axis.text = element_text(size = 18), 
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank()) + 
+  labs(x = NULL, y = NULL)
+```
+
+## Example in-class question {.smaller}
+
+What code could have been used to produce `df_result`? Select all that apply.
+
+::: columns
+::: {.column width="25%"}
+`df_X`
+
+| state | year |
+|-------|------|
+| LA    | 2025 |
+| NC    | 2025 |
+| LA    | 2024 |
+:::
+
+::: {.column width="25%"}
+`df_Y`
+
+| state | region |
+|-------|--------|
+| LA    | south  |
+| NC    | south  |
+| CA    | west   |
+:::
+
+::: {.column width="50%"}
+`df_result`
+
+| state | year | region |
+|-------|------|--------|
+| LA    | 2025 | south  |
+| NC    | 2025 | south  |
+| LA    | 2024 | south  |
+:::
+:::
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+a. `left_join(df_X, df_Y)`  
+b. `right_join(df_X, df_Y)`  
+c. `full_join(df_X, df_Y)`  
+:::
+
+::: {.column width="50%"}
+d. `anti_join(df_Y, df_X)`  
+e. `right_join(df_Y, df_X)`  
+:::
+:::
+## Take-home
+
+::: incremental
+-   It will be just like a lab, but shorter;
+-   Completely open-resource, but citation policies apply;
+-   Absolutely no collaboration of any kind;
+-   Seek help by posting *privately* on Ed;
+-   Submit your final PDF to Gradescope in the usual way.
+:::
+
+## Reminder: conduct policies
+
+::: incremental
+-   Uncited use of outside resources or inappropriate collaboration will result in a zero and be referred to the conduct office;
+-   If a conduct violation of any kind is discovered, your final letter grade in the course will be permanently reduced (A- down to B+, B+ down to B, etc);
+-   If folks share solutions, all students involved will be penalized equally, the sharer the same as the recipient.
+:::
+
+## Things you can do to study
+
+::: incremental
+-   **Practice problems**: released Thursday February 13;
+-   **Attend class tomorrow**: review game
+-   **Old labs**: correct parts where you lost points;
+-   **Old AEs**: complete tasks we didn't get to and compare with key;
+-   **Code along**: watch these videos specifically;
+-   **Textbook**: odd-numbered exercises in the back of IMS Chs. 1, 4, 5, 6
+:::
+
+# Let's Practice!
+
