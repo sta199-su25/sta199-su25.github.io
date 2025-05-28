@@ -17,13 +17,44 @@ library(tidyverse)
 
 -   Practice + some review + many more details tomorrow in class
 
--   Initial in-class practice questions are posted!
+-   Initial practice questions are posted!
 
--   Questions??
+# Lab Check In
 
-# Lab 2 Check-In
+## Lab 1 Grades
 
-## Some small clarifications {.smaller}
+-   Please read comments on ALL questions.
+    Some mistakes we did not penalize for, but could in future problems.
+
+-   In the first few questions, the point adjustment feature was used for partial credit.
+
+-   Regrade requests: submit within a week if you believe a grading mistake was made.
+
+-   **Code style** was the biggest common issue.
+
+    -   Even though most questions had code style points, we did not double penalize on *this lab.*
+
+    -   There were some minor problems we did not take off for *this time* but left comments about.
+
+## Code Style
+
+-   spaces before and line breaks after each `+` when building a `ggplot`,
+
+-   spaces before and line breaks after each `|>` in a data transformation pipeline,
+
+-   code should be properly indented
+
+    -   this should match the automatic indentation when you hit enter
+
+    -   to fix: highlight code, click `code` option on top of RStudio, select `reindent lines`
+
+-   there should be spaces around `=` signs and spaces after commas
+
+-   use `|>` and not `%>%`
+
+-   use `<-` and not `=` for saving a data frame
+
+## Lab 2 clarifications {.smaller}
 
 -   Question 7c: No code needed!
     Use results 7a and 7b to answer.
@@ -34,7 +65,7 @@ library(tidyverse)
 -   Question 2c: 'How is the output different from the one in part (a)?'
     should say from part (b)
 
-## Workflow question added {.smaller}
+## Lab 2 Workflow question  {.smaller}
 
 -   **Select pages on gradescope** when you submit
 
@@ -42,7 +73,7 @@ library(tidyverse)
 
 These should hopefully be free points!!!
 
-## Question 5 {.smaller}
+## Lab 2 Question 5 {.smaller}
 
 ```{r}
 #| echo: false
@@ -56,7 +87,7 @@ ggplot(midwest, aes(x = popdensity)) +
 
 *What is a 'typical value' of population density?*
 
-## Question 5 {.smaller}
+## Lab 2 Question 5 {.smaller}
 
 ```{r}
 #| echo: false
