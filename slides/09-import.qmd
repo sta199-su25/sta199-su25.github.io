@@ -21,7 +21,7 @@ library(tidyverse)
 
 # Lab Check In
 
-## Lab 1 Grades
+## Lab 1 Grades {.smaller}
 
 -   Please read comments on ALL questions.
     Some mistakes we did not penalize for, but could in future problems.
@@ -36,7 +36,7 @@ library(tidyverse)
 
     -   There were some minor problems we did not take off for *this time* but left comments about.
 
-## Code Style
+## Code Style {.smaller}
 
 -   spaces before and line breaks after each `+` when building a `ggplot`,
 
@@ -65,7 +65,7 @@ library(tidyverse)
 -   Question 2c: 'How is the output different from the one in part (a)?'
     should say from part (b)
 
-## Lab 2 Workflow question  {.smaller}
+## Lab 2 Workflow question {.smaller}
 
 -   **Select pages on gradescope** when you submit
 
