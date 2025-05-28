@@ -142,9 +142,10 @@ a.  In a single pipeline, calculate the mean of `x`, mean of `y`, standard devia
     This concept will not be tested on the midterm.
 :::
 
-::: callout-tip
-There are 13 groups but `tibble`s only print out 10 rows by default.
-To display all rows, add `print(n = 13)` as the last step of your pipeline.
+::: callout-note
+The `datasauRus` data is stored in a `tibble`: this is a special class of data frame used in the tidyverse. All `tibble`s are `dataframe`s (with some extra features!), but not vice versa. By default, `tibble`s only print out 10 rows (whereas other dataframes print out all rows).
+
+The result of the summarize should have 13 rows. To display all rows, add `print(n = 13)` as the last step of your pipeline.
 :::
 
 b.  Create a scatterplot of `y` versus `x` and **color** and **facet** it by `dataset`. Then, in 1-2 sentences, briefly discuss how these plots compare across groups (datasets). How does your response in this question compare to your response to the previous question and what does this say about using visualizations and summary statistics when getting to know a dataset?
