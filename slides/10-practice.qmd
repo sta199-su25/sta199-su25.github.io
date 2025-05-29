@@ -11,6 +11,7 @@ auto-stretch: false
 ```{r}
 #| include: false
 library(tidyverse)
+library(readxl)
 durham_climate <- read_csv("data/durham-climate.csv")
 durham_climate <- durham_climate |> rename(precip = precipitation_in)
 ```
@@ -252,11 +253,293 @@ e.  `right_join(df_Y, df_X)`\
 
 ## Today's Goals:
 
--   **Goal 1:** ✨Beautify✨ the plot from AE-08: plotting + ***factors***
--   **Goal 2:** Practice ***pivoting*** with AE-08 data
--   **Goal 3:** Practice data ***transformation*** and working with ***characters*** - sales data from yesterday
+-   **Goal 1:** Practice data ***transformation*** and working with ***characters*** - sales data from yesterday
+-   **Goal 2:** ✨Beautify✨ the plot from AE-08: plotting + ***factors***
+-   **Goal 3:** Practice ***pivoting*** with AE-08 data
 
-## Goal 1: Beautify AE-08 Plot {.smaller}
+
+## Goal 1: Transform Sales Data {.smaller}
+Yesterday: read an Excel file with non-tidy data
+
+![](images/09/sales-excel.png)
+
+## Goal 1: Transform Sales Data {.smaller}
+Yesterday: read an Excel file with non-tidy data
+
+![](images/09/sales-excel.png)
+
+## Goal 1: Transform Sales Data {.smaller}
+
+Goal: tidy up the data
+
+::: columns
+::: {.column width="50%"}
+![](https://sta199-s24.github.io/images/sales-1.png){width="300"}
+:::
+
+::: {.column width="50%"}
+![](https://sta199-s24.github.io/images/sales-2.png){width="300"}
+:::
+:::
+
+## String Functions {.smaller}
+
+::: columns
+::: {.column width="70%"}
+We've seen lots of functions that deal with numeric data (`mean`, `median`, `sum`, etc.) - what about characters?
+
+-   **stringr** is a **tidyverse** package with lots of functions for dealing with character strings
+
+-   today: **str_detect** in **stringr**
+:::
+
+::: {.column width="30%"}
+![](images/stringr.png){width="185"}
+:::
+:::
+
+## String Functions {.smaller}
+
+-   **str_detect()** identifies if some characters are a substring of a larger string
+
+-   useful in cases when you need to check some condition, for example:
+
+    -   in a `filter()`
+
+    -   in an `if_else()` or `case_when()`
+
+## String Functions {.smaller}
+
+-   **str_detect()** identifies if some characters are a substring of a larger string
+
+-   useful in cases when you need to check some condition, for example:
+
+    -   in a `filter()`
+
+    -   in an `if_else()` or `case_when()`
+
+**example:** which classes in a list are in the stats department?
+
+```{r}
+classes <- c("sta199", "dance122", "math185", "sta240", "pubpol202")
+str_detect(classes, "sta")
+```
+
+## String Functions {.smaller}
+
+General form:
+
+```{r}
+#| eval: false
+str_detect(character_var, "word_to_detect")
+```
+
+## Let's get started! {.smaller}
+Open up yesterday's AE file (AE-09).
+
+## Let's get started! {.smaller}
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| eval: false
+sales_raw <- read_excel(
+  "data/sales.xlsx", 
+  skip = 3,
+  col_names = c("id", "n")
+  )
+```
+
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+sales_raw <- read_excel(
+  "data/sales.xlsx", 
+  skip = 3,
+  col_names = c("id", "n")
+  )
+
+sales_raw
+```
+:::
+:::
+
+## Create Brand Column {.smaller}
+
+::: columns
+::: {.column width="57%"}
+```{r}
+#| eval: false
+sales_raw 
+```
+
+:::
+
+::: {.column width="43%"}
+```{r}
+#| echo: false
+
+sales_raw
+```
+:::
+:::
+
+## Create Brand Column {.smaller}
+
+::: columns
+::: {.column width="57%"}
+```{r}
+#| eval: false
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand")
+  )
+```
+
+:::
+
+::: {.column width="43%"}
+```{r}
+#| echo: false
+
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand")
+  )
+```
+:::
+:::
+
+## Create Brand Column {.smaller}
+
+::: columns
+::: {.column width="57%"}
+```{r}
+#| eval: false
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  )
+```
+
+:::
+
+::: {.column width="43%"}
+```{r}
+#| echo: false
+
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  )
+```
+:::
+:::
+
+## Create Brand Column {.smaller}
+
+::: columns
+::: {.column width="57%"}
+```{r}
+#| eval: false
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  )|>
+  fill(brand)
+```
+
+:::
+
+::: {.column width="43%"}
+```{r}
+#| echo: false
+
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  )|>
+  fill(brand)
+```
+:::
+:::
+
+
+## Keep Needed Rows {.smaller}
+
+::: columns
+::: {.column width="57%"}
+```{r}
+#| eval: false
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  )|>
+  fill(brand)|>
+  filter(!is_brand_name)
+```
+
+:::
+
+::: {.column width="43%"}
+```{r}
+#| echo: false
+
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  )|>
+  fill(brand)|>
+  filter(!is_brand_name)
+```
+:::
+:::
+
+
+## Keep Needed Columns {.smaller}
+
+::: columns
+::: {.column width="57%"}
+```{r}
+#| eval: false
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  )|>
+  fill(brand)|>
+  filter(!is_brand_name)|>
+  select(brand, id, n)
+```
+
+:::
+
+::: {.column width="43%"}
+```{r}
+#| echo: false
+
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  )|>
+  fill(brand)|>
+  filter(!is_brand_name)|>
+  select(brand, id, n)
+```
+:::
+:::
+
+
+## Goal 2: Beautify AE-08 Plot {.smaller}
 
 Data:
 
@@ -264,7 +547,7 @@ Data:
 durham_climate 
 ```
 
-## Goal 1: Beautify AE-08 Plot {.smaller}
+## Goal 2: Beautify AE-08 Plot {.smaller}
 
 Original Plot:
 
@@ -286,7 +569,7 @@ ggplot(
   )
 ```
 
-## Goal 1: Beautify AE-08 Plot {.smaller}
+## Goal 2: Beautify AE-08 Plot {.smaller}
 
 Releveling Months:
 
@@ -311,7 +594,7 @@ ggplot(
   )
 ```
 
-## Goal 1: Beautify AE-08 Plot {.smaller}
+## Goal 2: Beautify AE-08 Plot {.smaller}
 
 Goal:
 
@@ -423,9 +706,9 @@ durham_climate
 :::
 :::
 
-## The Code...{.smaller}
+## The Code... {.smaller}
 
-Take a look at the printout! What does each highlighted portion do?
+Take a look at the printout!What does each highlighted portion do?
 
 ```{r}
 #| echo: false
@@ -459,7 +742,42 @@ durham_climate |>
     theme(legend.position = "top") 
 ```
 
-## Task 2: High/Low lines
+## The Code... {.smaller}
+
+Go ahead and pull today's AE - mess around with the code.
+
+```{r}
+#| echo: false
+
+durham_climate |>
+  mutate( season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",)
+    ) |>
+  mutate(season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")) |> 
+  ggplot(aes(x = month, y = avg_high_f, group = 1, fill = season)) +
+    geom_line() +
+    geom_point(shape = "circle filled", size = 3, stroke = 1) +
+    scale_fill_manual(
+      values = c(
+        "Winter" = "lightskyblue1",
+        "Spring" = "chartreuse3",
+        "Summer" = "gold2",
+        "Fall" = "lightsalmon4"
+      )
+    ) +
+    labs(
+      x = "Month",
+      y = "Average high temperature (F)",
+      title = "Durham climate",
+      fill = "Season"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "top") 
+```
+## Goal 3: High/Low lines
 
 ```{r}
 #| echo: false 
@@ -507,7 +825,8 @@ durham_climate |>
   theme(legend.position = "top")
 ```
 
-## Task 2: High/Low lines{.smaller}
+## Goal 3: High/Low lines {.smaller}
+
 ```{r}
 #| echo: false 
 #| fig-height: 3.2
@@ -571,8 +890,10 @@ durham_climate |>
   head(3)
 ```
 
-## Task 2: Goal - Pivot!!! {.smaller}
+## Pivot!!! {.smaller}
 
+::: columns
+::: {.column width="60%"}
 ```{r}
 #| echo: false 
 durham_climate |>
@@ -590,7 +911,7 @@ durham_climate |>
 
 ```
 
-<br> 
+<br>
 
 ```{r}
 #| echo: false 
@@ -612,11 +933,14 @@ durham_climate |>
   ) |>
   slice(1:5)
 ```
+:::
+:::
 
-## Task 2: Goal - Pivot!!! {.smaller}
+## Pivot!!! {.smaller}
 
-Add your pivot code to today's AE. Check out the plotting code! What is going on?
+Add your pivot code to today's AE.
+Check out the plotting code!
+What is going on?
 
 
-## Task 3: Transform Sales Data 
-I will show code here; follow along in your AE!
+
