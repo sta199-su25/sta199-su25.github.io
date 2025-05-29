@@ -271,7 +271,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#take-home" id="toc-take-home" class="nav-link" data-scroll-target="#take-home">Take-home</a></li>
   <li><a href="#reminder-conduct-policies" id="toc-reminder-conduct-policies" class="nav-link" data-scroll-target="#reminder-conduct-policies">Reminder: conduct policies</a></li>
   <li><a href="#things-you-can-do-to-study" id="toc-things-you-can-do-to-study" class="nav-link" data-scroll-target="#things-you-can-do-to-study">Things you can do to study</a></li>
-  <li><a href="#lets-practice" id="toc-lets-practice" class="nav-link" data-scroll-target="#lets-practice">Let’s Practice!</a></li>
+  <li>
+<a href="#lets-practice" id="toc-lets-practice" class="nav-link" data-scroll-target="#lets-practice">Let’s Practice!</a>
+  <ul class="collapse">
+<li><a href="#todays-goals" id="toc-todays-goals" class="nav-link" data-scroll-target="#todays-goals">Today’s Goals:</a></li>
+  <li><a href="#goal-1-beautify-ae-08-plot" id="toc-goal-1-beautify-ae-08-plot" class="nav-link" data-scroll-target="#goal-1-beautify-ae-08-plot">Goal 1: Beautify AE-08 Plot</a></li>
+  <li><a href="#goal-1-beautify-ae-08-plot-1" id="toc-goal-1-beautify-ae-08-plot-1" class="nav-link" data-scroll-target="#goal-1-beautify-ae-08-plot-1">Goal 1: Beautify AE-08 Plot</a></li>
+  <li><a href="#goal-1-beautify-ae-08-plot-2" id="toc-goal-1-beautify-ae-08-plot-2" class="nav-link" data-scroll-target="#goal-1-beautify-ae-08-plot-2">Goal 1: Beautify AE-08 Plot</a></li>
+  <li><a href="#goal-1-beautify-ae-08-plot-3" id="toc-goal-1-beautify-ae-08-plot-3" class="nav-link" data-scroll-target="#goal-1-beautify-ae-08-plot-3">Goal 1: Beautify AE-08 Plot</a></li>
+  <li><a href="#goal-beautify-ae-08-plot" id="toc-goal-beautify-ae-08-plot" class="nav-link" data-scroll-target="#goal-beautify-ae-08-plot">Goal: Beautify AE-08 Plot</a></li>
+  <li><a href="#the-code" id="toc-the-code" class="nav-link" data-scroll-target="#the-code">The Code…</a></li>
+  <li><a href="#task-2-highlow-lines" id="toc-task-2-highlow-lines" class="nav-link" data-scroll-target="#task-2-highlow-lines">Task 2: High/Low lines</a></li>
+  <li><a href="#task-2-highlow-lines-1" id="toc-task-2-highlow-lines-1" class="nav-link" data-scroll-target="#task-2-highlow-lines-1">Task 2: High/Low lines</a></li>
+  <li><a href="#task-2-goal---pivot" id="toc-task-2-goal---pivot" class="nav-link" data-scroll-target="#task-2-goal---pivot">Task 2: Goal - Pivot!!!</a></li>
+  <li><a href="#task-2-goal---pivot-1" id="toc-task-2-goal---pivot-1" class="nav-link" data-scroll-target="#task-2-goal---pivot-1">Task 2: Goal - Pivot!!!</a></li>
+  <li><a href="#task-3-transform-sales-data" id="toc-task-3-transform-sales-data" class="nav-link" data-scroll-target="#task-3-transform-sales-data">Task 3: Transform Sales Data</a></li>
+  </ul>
+</li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/slides/10-practice.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="10-practice-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -565,9 +581,179 @@ Warning
 </ul>
 </div>
 </section><section id="lets-practice" class="level1"><h1>Let’s Practice!</h1>
+<section id="todays-goals" class="level2"><h2 class="anchored" data-anchor-id="todays-goals">Today’s Goals:</h2>
+<ul>
+<li>
+<strong>Goal 1:</strong> ✨Beautify✨ the plot from AE-08: plotting + <strong><em>factors</em></strong>
+</li>
+<li>
+<strong>Goal 2:</strong> Practice <strong><em>pivoting</em></strong> with AE-08 data</li>
+<li>
+<strong>Goal 3:</strong> Practice data <strong><em>transformation</em></strong> and working with <strong><em>characters</em></strong> - sales data from yesterday</li>
+</ul></section><section id="goal-1-beautify-ae-08-plot" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="goal-1-beautify-ae-08-plot">Goal 1: Beautify AE-08 Plot</h2>
+<p>Data:</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">durham_climate</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 4
+   month     avg_high_f avg_low_f precip
+   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;
+ 1 January           49        28   4.45
+ 2 February          53        29   3.7 
+ 3 March             62        37   4.69
+ 4 April             71        46   3.43
+ 5 May               79        56   4.61
+ 6 June              85        65   4.02
+ 7 July              89        70   3.94
+ 8 August            87        68   4.37
+ 9 September         81        60   4.37
+10 October           71        47   3.7 
+11 November          62        37   3.39
+12 December          53        30   3.43</code></pre>
+</div>
+</div>
+</section><section id="goal-1-beautify-ae-08-plot-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="goal-1-beautify-ae-08-plot-1">Goal 1: Beautify AE-08 Plot</h2>
+<p>Original Plot:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="10-practice_files/figure-revealjs/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goal-1-beautify-ae-08-plot-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="goal-1-beautify-ae-08-plot-2">Goal 1: Beautify AE-08 Plot</h2>
+<p>Releveling Months:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="10-practice_files/figure-revealjs/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goal-1-beautify-ae-08-plot-3" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="goal-1-beautify-ae-08-plot-3">Goal 1: Beautify AE-08 Plot</h2>
+<p>Goal:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="10-practice_files/figure-revealjs/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goal-beautify-ae-08-plot" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="goal-beautify-ae-08-plot">Goal: Beautify AE-08 Plot</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="10-practice_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="10-practice_files/figure-revealjs/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 4
+   month     avg_high_f avg_low_f precip
+   &lt;fct&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;
+ 1 January           49        28   4.45
+ 2 February          53        29   3.7 
+ 3 March             62        37   4.69
+ 4 April             71        46   3.43
+ 5 May               79        56   4.61
+ 6 June              85        65   4.02
+ 7 July              89        70   3.94
+ 8 August            87        68   4.37
+ 9 September         81        60   4.37
+10 October           71        47   3.7 
+11 November          62        37   3.39
+12 December          53        30   3.43</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section><section id="the-code" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="the-code">The Code…</h2>
+<p>Take a look at the printout! What does each highlighted portion do?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="10-practice_files/figure-revealjs/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="task-2-highlow-lines" class="level2"><h2 class="anchored" data-anchor-id="task-2-highlow-lines">Task 2: High/Low lines</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="10-practice_files/figure-revealjs/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="task-2-highlow-lines-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="task-2-highlow-lines-1">Task 2: High/Low lines</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="10-practice_files/figure-revealjs/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  month    avg_high_f avg_low_f precip season
+  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; 
+1 January          49        28   4.45 Winter
+2 February         53        29   3.7  Winter
+3 March            62        37   4.69 Spring</code></pre>
+</div>
+</div>
+</section><section id="task-2-goal---pivot" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="task-2-goal---pivot">Task 2: Goal - Pivot!!!</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 5
+  month    avg_high_f avg_low_f precip season
+  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; 
+1 January          49        28   4.45 Winter
+2 February         53        29   3.7  Winter
+3 March            62        37   4.69 Spring
+4 April            71        46   3.43 Spring
+5 May              79        56   4.61 Spring</code></pre>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 5
+  month    precip season temp_type   temp
+  &lt;fct&gt;     &lt;dbl&gt; &lt;fct&gt;  &lt;chr&gt;      &lt;dbl&gt;
+1 January    4.45 Winter avg_high_f    49
+2 January    4.45 Winter avg_low_f     28
+3 February   3.7  Winter avg_high_f    53
+4 February   3.7  Winter avg_low_f     29
+5 March      4.69 Spring avg_high_f    62</code></pre>
+</div>
+</div>
+</section><section id="task-2-goal---pivot-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="task-2-goal---pivot-1">Task 2: Goal - Pivot!!!</h2>
+<p>Add your pivot code to today’s AE. Check out the plotting code! What is going on?</p>
+</section><section id="task-3-transform-sales-data" class="level2"><h2 class="anchored" data-anchor-id="task-3-transform-sales-data">Task 3: Transform Sales Data</h2>
+<p>I will show code here; follow along in your AE!</p>
 
 
-</section></main><!-- /main --><script>
+</section></section></main><!-- /main --><script>
   // htmlwidgets need to know to resize themselves when slides are shown/hidden.
   // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
   // slide changes (different for each slide format).

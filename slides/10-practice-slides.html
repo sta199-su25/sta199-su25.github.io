@@ -471,10 +471,180 @@
 <strong>Textbook</strong>: odd-numbered exercises in the back of IMS Chs. 1, 4, 5, 6</li>
 </ul>
 </div>
-</section><section id="lets-practice" class="title-slide slide level1 center"><h1>Let’s Practice!</h1>
+</section><section><section id="lets-practice" class="title-slide slide level1 center"><h1>Let’s Practice!</h1>
+
+</section><section id="todays-goals" class="slide level2"><h2>Today’s Goals:</h2>
+<ul>
+<li>
+<strong>Goal 1:</strong> ✨Beautify✨ the plot from AE-08: plotting + <strong><em>factors</em></strong>
+</li>
+<li>
+<strong>Goal 2:</strong> Practice <strong><em>pivoting</em></strong> with AE-08 data</li>
+<li>
+<strong>Goal 3:</strong> Practice data <strong><em>transformation</em></strong> and working with <strong><em>characters</em></strong> - sales data from yesterday</li>
+</ul></section><section id="goal-1-beautify-ae-08-plot" class="slide level2 smaller"><h2>Goal 1: Beautify AE-08 Plot</h2>
+<p>Data:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>durham_climate </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 4
+   month     avg_high_f avg_low_f precip
+   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;
+ 1 January           49        28   4.45
+ 2 February          53        29   3.7 
+ 3 March             62        37   4.69
+ 4 April             71        46   3.43
+ 5 May               79        56   4.61
+ 6 June              85        65   4.02
+ 7 July              89        70   3.94
+ 8 August            87        68   4.37
+ 9 September         81        60   4.37
+10 October           71        47   3.7 
+11 November          62        37   3.39
+12 December          53        30   3.43</code></pre>
+</div>
+</div>
+</section><section id="goal-1-beautify-ae-08-plot-1" class="slide level2 smaller"><h2>Goal 1: Beautify AE-08 Plot</h2>
+<p>Original Plot:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="10-practice_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goal-1-beautify-ae-08-plot-2" class="slide level2 smaller"><h2>Goal 1: Beautify AE-08 Plot</h2>
+<p>Releveling Months:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="10-practice_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goal-1-beautify-ae-08-plot-3" class="slide level2 smaller"><h2>Goal 1: Beautify AE-08 Plot</h2>
+<p>Goal:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="10-practice_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goal-beautify-ae-08-plot" class="slide level2 smaller"><h2>Goal: Beautify AE-08 Plot</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="10-practice_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="10-practice_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 4
+   month     avg_high_f avg_low_f precip
+   &lt;fct&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;
+ 1 January           49        28   4.45
+ 2 February          53        29   3.7 
+ 3 March             62        37   4.69
+ 4 April             71        46   3.43
+ 5 May               79        56   4.61
+ 6 June              85        65   4.02
+ 7 July              89        70   3.94
+ 8 August            87        68   4.37
+ 9 September         81        60   4.37
+10 October           71        47   3.7 
+11 November          62        37   3.39
+12 December          53        30   3.43</code></pre>
+</div>
+</div>
+</div></div>
+</section><section id="the-code" class="slide level2 smaller"><h2>The Code…</h2>
+<p>Take a look at the printout! What does each highlighted portion do?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="10-practice_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="task-2-highlow-lines" class="slide level2"><h2>Task 2: High/Low lines</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="10-practice_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="task-2-highlow-lines-1" class="slide level2 smaller"><h2>Task 2: High/Low lines</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="10-practice_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  month    avg_high_f avg_low_f precip season
+  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; 
+1 January          49        28   4.45 Winter
+2 February         53        29   3.7  Winter
+3 March            62        37   4.69 Spring</code></pre>
+</div>
+</div>
+</section><section id="task-2-goal---pivot" class="slide level2 smaller"><h2>Task 2: Goal - Pivot!!!</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 5
+  month    avg_high_f avg_low_f precip season
+  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; 
+1 January          49        28   4.45 Winter
+2 February         53        29   3.7  Winter
+3 March            62        37   4.69 Spring
+4 April            71        46   3.43 Spring
+5 May              79        56   4.61 Spring</code></pre>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 5
+  month    precip season temp_type   temp
+  &lt;fct&gt;     &lt;dbl&gt; &lt;fct&gt;  &lt;chr&gt;      &lt;dbl&gt;
+1 January    4.45 Winter avg_high_f    49
+2 January    4.45 Winter avg_low_f     28
+3 February   3.7  Winter avg_high_f    53
+4 February   3.7  Winter avg_low_f     29
+5 March      4.69 Spring avg_high_f    62</code></pre>
+</div>
+</div>
+</section><section id="task-2-goal---pivot-1" class="slide level2 smaller"><h2>Task 2: Goal - Pivot!!!</h2>
+<p>Add your pivot code to today’s AE. Check out the plotting code! What is going on?</p>
+</section><section id="task-3-transform-sales-data" class="slide level2"><h2>Task 3: Transform Sales Data</h2>
+<p>I will show code here; follow along in your AE!</p>
 
 
-</section>
+</section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/logo.png" class="slide-logo"></p>

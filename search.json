@@ -1047,6 +1047,90 @@
     "text": "Things you can do to study\n\n\n\nPractice problems: released Thursday February 13;\n\nAttend class tomorrow: review game\n\nOld labs: correct parts where you lost points;\n\nOld AEs: complete tasks we didn’t get to and compare with key;\n\nCode along: watch these videos specifically;\n\nTextbook: odd-numbered exercises in the back of IMS Chs. 1, 4, 5, 6"
   },
   {
+    "objectID": "slides/10-practice-slides.html#todays-goals",
+    "href": "slides/10-practice-slides.html#todays-goals",
+    "title": "Midterm + More Practice!",
+    "section": "Today’s Goals:",
+    "text": "Today’s Goals:\n\n\nGoal 1: ✨Beautify✨ the plot from AE-08: plotting + factors\n\n\nGoal 2: Practice pivoting with AE-08 data\n\nGoal 3: Practice data transformation and working with characters - sales data from yesterday"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot",
+    "href": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 1: Beautify AE-08 Plot",
+    "text": "Goal 1: Beautify AE-08 Plot\nData:\n\ndurham_climate \n\n# A tibble: 12 × 4\n   month     avg_high_f avg_low_f precip\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;\n 1 January           49        28   4.45\n 2 February          53        29   3.7 \n 3 March             62        37   4.69\n 4 April             71        46   3.43\n 5 May               79        56   4.61\n 6 June              85        65   4.02\n 7 July              89        70   3.94\n 8 August            87        68   4.37\n 9 September         81        60   4.37\n10 October           71        47   3.7 \n11 November          62        37   3.39\n12 December          53        30   3.43"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-1",
+    "href": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-1",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 1: Beautify AE-08 Plot",
+    "text": "Goal 1: Beautify AE-08 Plot\nOriginal Plot:"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-2",
+    "href": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-2",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 1: Beautify AE-08 Plot",
+    "text": "Goal 1: Beautify AE-08 Plot\nReleveling Months:"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-3",
+    "href": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-3",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 1: Beautify AE-08 Plot",
+    "text": "Goal 1: Beautify AE-08 Plot\nGoal:"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#goal-beautify-ae-08-plot",
+    "href": "slides/10-practice-slides.html#goal-beautify-ae-08-plot",
+    "title": "Midterm + More Practice!",
+    "section": "Goal: Beautify AE-08 Plot",
+    "text": "Goal: Beautify AE-08 Plot\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 12 × 4\n   month     avg_high_f avg_low_f precip\n   &lt;fct&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;\n 1 January           49        28   4.45\n 2 February          53        29   3.7 \n 3 March             62        37   4.69\n 4 April             71        46   3.43\n 5 May               79        56   4.61\n 6 June              85        65   4.02\n 7 July              89        70   3.94\n 8 August            87        68   4.37\n 9 September         81        60   4.37\n10 October           71        47   3.7 \n11 November          62        37   3.39\n12 December          53        30   3.43"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#the-code",
+    "href": "slides/10-practice-slides.html#the-code",
+    "title": "Midterm + More Practice!",
+    "section": "The Code…",
+    "text": "The Code…\nTake a look at the printout! What does each highlighted portion do?"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#task-2-highlow-lines",
+    "href": "slides/10-practice-slides.html#task-2-highlow-lines",
+    "title": "Midterm + More Practice!",
+    "section": "Task 2: High/Low lines",
+    "text": "Task 2: High/Low lines"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#task-2-highlow-lines-1",
+    "href": "slides/10-practice-slides.html#task-2-highlow-lines-1",
+    "title": "Midterm + More Practice!",
+    "section": "Task 2: High/Low lines",
+    "text": "Task 2: High/Low lines\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#task-2-goal---pivot",
+    "href": "slides/10-practice-slides.html#task-2-goal---pivot",
+    "title": "Midterm + More Practice!",
+    "section": "Task 2: Goal - Pivot!!!",
+    "text": "Task 2: Goal - Pivot!!!\n\n\n# A tibble: 5 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring\n4 April            71        46   3.43 Spring\n5 May              79        56   4.61 Spring\n\n\n\n\n\n# A tibble: 5 × 5\n  month    precip season temp_type   temp\n  &lt;fct&gt;     &lt;dbl&gt; &lt;fct&gt;  &lt;chr&gt;      &lt;dbl&gt;\n1 January    4.45 Winter avg_high_f    49\n2 January    4.45 Winter avg_low_f     28\n3 February   3.7  Winter avg_high_f    53\n4 February   3.7  Winter avg_low_f     29\n5 March      4.69 Spring avg_high_f    62"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#task-2-goal---pivot-1",
+    "href": "slides/10-practice-slides.html#task-2-goal---pivot-1",
+    "title": "Midterm + More Practice!",
+    "section": "Task 2: Goal - Pivot!!!",
+    "text": "Task 2: Goal - Pivot!!!\nAdd your pivot code to today’s AE. Check out the plotting code! What is going on?"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#task-3-transform-sales-data",
+    "href": "slides/10-practice-slides.html#task-3-transform-sales-data",
+    "title": "Midterm + More Practice!",
+    "section": "Task 3: Transform Sales Data",
+    "text": "Task 3: Transform Sales Data\nI will show code here; follow along in your AE!"
+  },
+  {
     "objectID": "slides/10-practice.html",
     "href": "slides/10-practice.html",
     "title": "Midterm + More Practice!",
@@ -1136,6 +1220,90 @@
     "title": "Midterm + More Practice!",
     "section": "Things you can do to study",
     "text": "Things you can do to study\n\n\n\nPractice problems: released Thursday February 13;\n\nAttend class tomorrow: review game\n\nOld labs: correct parts where you lost points;\n\nOld AEs: complete tasks we didn’t get to and compare with key;\n\nCode along: watch these videos specifically;\n\nTextbook: odd-numbered exercises in the back of IMS Chs. 1, 4, 5, 6"
+  },
+  {
+    "objectID": "slides/10-practice.html#todays-goals",
+    "href": "slides/10-practice.html#todays-goals",
+    "title": "Midterm + More Practice!",
+    "section": "Today’s Goals:",
+    "text": "Today’s Goals:\n\n\nGoal 1: ✨Beautify✨ the plot from AE-08: plotting + factors\n\n\nGoal 2: Practice pivoting with AE-08 data\n\nGoal 3: Practice data transformation and working with characters - sales data from yesterday"
+  },
+  {
+    "objectID": "slides/10-practice.html#goal-1-beautify-ae-08-plot",
+    "href": "slides/10-practice.html#goal-1-beautify-ae-08-plot",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 1: Beautify AE-08 Plot",
+    "text": "Goal 1: Beautify AE-08 Plot\nData:\n\ndurham_climate \n\n# A tibble: 12 × 4\n   month     avg_high_f avg_low_f precip\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;\n 1 January           49        28   4.45\n 2 February          53        29   3.7 \n 3 March             62        37   4.69\n 4 April             71        46   3.43\n 5 May               79        56   4.61\n 6 June              85        65   4.02\n 7 July              89        70   3.94\n 8 August            87        68   4.37\n 9 September         81        60   4.37\n10 October           71        47   3.7 \n11 November          62        37   3.39\n12 December          53        30   3.43"
+  },
+  {
+    "objectID": "slides/10-practice.html#goal-1-beautify-ae-08-plot-1",
+    "href": "slides/10-practice.html#goal-1-beautify-ae-08-plot-1",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 1: Beautify AE-08 Plot",
+    "text": "Goal 1: Beautify AE-08 Plot\nOriginal Plot:"
+  },
+  {
+    "objectID": "slides/10-practice.html#goal-1-beautify-ae-08-plot-2",
+    "href": "slides/10-practice.html#goal-1-beautify-ae-08-plot-2",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 1: Beautify AE-08 Plot",
+    "text": "Goal 1: Beautify AE-08 Plot\nReleveling Months:"
+  },
+  {
+    "objectID": "slides/10-practice.html#goal-1-beautify-ae-08-plot-3",
+    "href": "slides/10-practice.html#goal-1-beautify-ae-08-plot-3",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 1: Beautify AE-08 Plot",
+    "text": "Goal 1: Beautify AE-08 Plot\nGoal:"
+  },
+  {
+    "objectID": "slides/10-practice.html#goal-beautify-ae-08-plot",
+    "href": "slides/10-practice.html#goal-beautify-ae-08-plot",
+    "title": "Midterm + More Practice!",
+    "section": "Goal: Beautify AE-08 Plot",
+    "text": "Goal: Beautify AE-08 Plot\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 12 × 4\n   month     avg_high_f avg_low_f precip\n   &lt;fct&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;\n 1 January           49        28   4.45\n 2 February          53        29   3.7 \n 3 March             62        37   4.69\n 4 April             71        46   3.43\n 5 May               79        56   4.61\n 6 June              85        65   4.02\n 7 July              89        70   3.94\n 8 August            87        68   4.37\n 9 September         81        60   4.37\n10 October           71        47   3.7 \n11 November          62        37   3.39\n12 December          53        30   3.43"
+  },
+  {
+    "objectID": "slides/10-practice.html#the-code",
+    "href": "slides/10-practice.html#the-code",
+    "title": "Midterm + More Practice!",
+    "section": "The Code…",
+    "text": "The Code…\nTake a look at the printout! What does each highlighted portion do?"
+  },
+  {
+    "objectID": "slides/10-practice.html#task-2-highlow-lines",
+    "href": "slides/10-practice.html#task-2-highlow-lines",
+    "title": "Midterm + More Practice!",
+    "section": "Task 2: High/Low lines",
+    "text": "Task 2: High/Low lines"
+  },
+  {
+    "objectID": "slides/10-practice.html#task-2-highlow-lines-1",
+    "href": "slides/10-practice.html#task-2-highlow-lines-1",
+    "title": "Midterm + More Practice!",
+    "section": "Task 2: High/Low lines",
+    "text": "Task 2: High/Low lines\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring"
+  },
+  {
+    "objectID": "slides/10-practice.html#task-2-goal---pivot",
+    "href": "slides/10-practice.html#task-2-goal---pivot",
+    "title": "Midterm + More Practice!",
+    "section": "Task 2: Goal - Pivot!!!",
+    "text": "Task 2: Goal - Pivot!!!\n\n\n# A tibble: 5 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring\n4 April            71        46   3.43 Spring\n5 May              79        56   4.61 Spring\n\n\n\n\n\n# A tibble: 5 × 5\n  month    precip season temp_type   temp\n  &lt;fct&gt;     &lt;dbl&gt; &lt;fct&gt;  &lt;chr&gt;      &lt;dbl&gt;\n1 January    4.45 Winter avg_high_f    49\n2 January    4.45 Winter avg_low_f     28\n3 February   3.7  Winter avg_high_f    53\n4 February   3.7  Winter avg_low_f     29\n5 March      4.69 Spring avg_high_f    62"
+  },
+  {
+    "objectID": "slides/10-practice.html#task-2-goal---pivot-1",
+    "href": "slides/10-practice.html#task-2-goal---pivot-1",
+    "title": "Midterm + More Practice!",
+    "section": "Task 2: Goal - Pivot!!!",
+    "text": "Task 2: Goal - Pivot!!!\nAdd your pivot code to today’s AE. Check out the plotting code! What is going on?"
+  },
+  {
+    "objectID": "slides/10-practice.html#task-3-transform-sales-data",
+    "href": "slides/10-practice.html#task-3-transform-sales-data",
+    "title": "Midterm + More Practice!",
+    "section": "Task 3: Transform Sales Data",
+    "text": "Task 3: Transform Sales Data\nI will show code here; follow along in your AE!"
   },
   {
     "objectID": "slides/00-welcome-199-slides.html#meet-the-team",
