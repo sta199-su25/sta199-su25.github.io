@@ -11,6 +11,8 @@ auto-stretch: false
 ```{r}
 #| include: false
 library(tidyverse)
+durham_climate <- read_csv("data/durham-climate.csv")
+durham_climate <- durham_climate |> rename(precip = precipitation_in)
 ```
 
 ## Announcements
@@ -167,7 +169,8 @@ ggplot(X, aes(x = V2)) +
 
 ## Example in-class question {.smaller}
 
-What code could have been used to produce `df_result`? Select all that apply.
+What code could have been used to produce `df_result`?
+Select all that apply.
 
 ::: columns
 ::: {.column width="25%"}
@@ -205,16 +208,17 @@ What code could have been used to produce `df_result`? Select all that apply.
 
 ::: columns
 ::: {.column width="50%"}
-a. `left_join(df_X, df_Y)`  
-b. `right_join(df_X, df_Y)`  
-c. `full_join(df_X, df_Y)`  
+a.  `left_join(df_X, df_Y)`\
+b.  `right_join(df_X, df_Y)`\
+c.  `full_join(df_X, df_Y)`\
 :::
 
 ::: {.column width="50%"}
-d. `anti_join(df_Y, df_X)`  
-e. `right_join(df_Y, df_X)`  
+d.  `anti_join(df_Y, df_X)`\
+e.  `right_join(df_Y, df_X)`\
 :::
 :::
+
 ## Take-home
 
 ::: incremental
@@ -246,3 +250,373 @@ e. `right_join(df_Y, df_X)`
 
 # Let's Practice!
 
+## Today's Goals:
+
+-   **Goal 1:** ✨Beautify✨ the plot from AE-08: plotting + ***factors***
+-   **Goal 2:** Practice ***pivoting*** with AE-08 data
+-   **Goal 3:** Practice data ***transformation*** and working with ***characters*** - sales data from yesterday
+
+## Goal 1: Beautify AE-08 Plot {.smaller}
+
+Data:
+
+```{r}
+durham_climate 
+```
+
+## Goal 1: Beautify AE-08 Plot {.smaller}
+
+Original Plot:
+
+```{r}
+#| echo: false
+ggplot(
+  durham_climate, 
+  aes(x = month, y = avg_high_f, group = 1)
+  ) +
+  geom_line() +
+  geom_point(
+    shape = "circle filled", size = 2,
+    color = "black", fill = "white", stroke = 1
+  ) +
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  )
+```
+
+## Goal 1: Beautify AE-08 Plot {.smaller}
+
+Releveling Months:
+
+```{r}
+#| echo: false
+durham_climate <- durham_climate |>
+  mutate(month = fct_relevel(month, month.name))
+
+ggplot(
+  durham_climate,
+  aes(x = month, y = avg_high_f, group = 1)
+  ) +
+  geom_line() +
+  geom_point(
+    shape = "circle filled", size = 2,
+    color = "black", fill = "white", stroke = 1
+  ) +
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  )
+```
+
+## Goal 1: Beautify AE-08 Plot {.smaller}
+
+Goal:
+
+```{r}
+#| echo: false
+durham_climate |>
+  mutate(
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    ),
+    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
+  ) |> ggplot(
+  aes(x = month, y = avg_high_f, group = 1)
+  ) +
+  geom_line() +
+  geom_point(
+    aes(fill = season),
+    shape = "circle filled", size = 3, stroke = 1
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Winter" = "lightskyblue1",
+      "Spring" = "chartreuse3",
+      "Summer" = "gold2",
+      "Fall" = "lightsalmon4"
+    )
+  ) +
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate",
+    fill = "Season"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top") 
+```
+
+## Goal: Beautify AE-08 Plot {.smaller}
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+ggplot(
+  durham_climate,
+  aes(x = month, y = avg_high_f, group = 1)
+  ) +
+  geom_line() +
+  geom_point(
+    shape = "circle filled", size = 2,
+    color = "black", fill = "white", stroke = 1
+  ) +
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  )
+```
+
+```{r}
+#| echo: false
+durham_climate |>
+  mutate(
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    ),
+    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
+  ) |> ggplot(
+  aes(x = month, y = avg_high_f, group = 1)
+  ) +
+  geom_line() +
+  geom_point(
+    aes(fill = season),
+    shape = "circle filled", size = 3, stroke = 1
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Winter" = "lightskyblue1",
+      "Spring" = "chartreuse3",
+      "Summer" = "gold2",
+      "Fall" = "lightsalmon4"
+    )
+  ) +
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate",
+    fill = "Season"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top") 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+
+durham_climate 
+  
+
+```
+:::
+:::
+
+## The Code...{.smaller}
+
+Take a look at the printout! What does each highlighted portion do?
+
+```{r}
+#| echo: false
+
+durham_climate |>
+  mutate( season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",)
+    ) |>
+  mutate(season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")) |> 
+  ggplot(aes(x = month, y = avg_high_f, group = 1, fill = season)) +
+    geom_line() +
+    geom_point(shape = "circle filled", size = 3, stroke = 1) +
+    scale_fill_manual(
+      values = c(
+        "Winter" = "lightskyblue1",
+        "Spring" = "chartreuse3",
+        "Summer" = "gold2",
+        "Fall" = "lightsalmon4"
+      )
+    ) +
+    labs(
+      x = "Month",
+      y = "Average high temperature (F)",
+      title = "Durham climate",
+      fill = "Season"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "top") 
+```
+
+## Task 2: High/Low lines
+
+```{r}
+#| echo: false 
+durham_climate |>
+  mutate(
+    month = fct_relevel(month, month.name),
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    ),
+    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
+  ) |>
+  pivot_longer(
+    cols = c(avg_high_f, avg_low_f),
+    names_to = "temp_type",
+    values_to = "avg_temp_f"
+  ) |>
+  ggplot(aes(x = month, y = avg_temp_f, group = temp_type, color = temp_type, fill = season)) +
+  geom_line() +
+  geom_point(shape = "circle filled", size = 3, stroke = 1) +
+  scale_fill_manual(
+    values = c(
+      "Winter" = "lightskyblue1",
+      "Spring" = "chartreuse3",
+      "Summer" = "gold2",
+      "Fall" = "lightsalmon4"
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      "avg_high_f" = "gray20",
+      "avg_low_f" = "gray70"
+    )
+  ) +
+  labs(
+    x = "Month",
+    y = "Average temperature (F)",
+    title = "Durham climate",
+    fill = "Season",
+    color = "Type"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top")
+```
+
+## Task 2: High/Low lines{.smaller}
+```{r}
+#| echo: false 
+#| fig-height: 3.2
+durham_climate |>
+  mutate(
+    month = fct_relevel(month, month.name),
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    ),
+    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
+  ) |>
+  pivot_longer(
+    cols = c(avg_high_f, avg_low_f),
+    names_to = "temp_type",
+    values_to = "temp"
+  ) |>
+  ggplot(aes(x = month, y = temp, group = temp_type, color = temp_type, fill = season)) +
+  geom_line() +
+  geom_point(shape = "circle filled", size = 3, stroke = 1) +
+  scale_fill_manual(
+    values = c(
+      "Winter" = "lightskyblue1",
+      "Spring" = "chartreuse3",
+      "Summer" = "gold2",
+      "Fall" = "lightsalmon4"
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      "avg_high_f" = "gray20",
+      "avg_low_f" = "gray70"
+    )
+  ) +
+  labs(
+    x = "Month",
+    y = "Average temperature (F)",
+    title = "Durham climate",
+    fill = "Season",
+    color = "Type"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top")
+```
+
+```{r}
+#| echo: false 
+durham_climate |>
+  mutate(
+    month = fct_relevel(month, month.name),
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    ),
+    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
+  ) |>
+  head(3)
+```
+
+## Task 2: Goal - Pivot!!! {.smaller}
+
+```{r}
+#| echo: false 
+durham_climate |>
+  mutate(
+    month = fct_relevel(month, month.name),
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    ),
+    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
+  ) |>
+  slice(1:5)
+
+```
+
+<br> 
+
+```{r}
+#| echo: false 
+durham_climate |>
+  mutate(
+    month = fct_relevel(month, month.name),
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    ),
+    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
+  ) |>
+  pivot_longer(
+    cols = c(avg_high_f, avg_low_f),
+    names_to = "temp_type",
+    values_to = "temp"
+  ) |>
+  slice(1:5)
+```
+
+## Task 2: Goal - Pivot!!! {.smaller}
+
+Add your pivot code to today's AE. Check out the plotting code! What is going on?
+
+
+## Task 3: Transform Sales Data 
+I will show code here; follow along in your AE!
