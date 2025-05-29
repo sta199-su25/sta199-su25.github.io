@@ -172,6 +172,7 @@ a\.
 You come across the following visualization of these data.
 
 ```{r}
+#| eval: true
 ggplot(mtcars, aes(x = wt, y = mpg, color = am)) +
   geom_point() +
   labs(
