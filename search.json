@@ -433,14 +433,7 @@
     "href": "ae/ae-09-github.html#part-1-hollywood-relationships",
     "title": "AE 09: Importing Data",
     "section": "Part 1: Hollywood relationships",
-    "text": "Part 1: Hollywood relationships\n\nLoad the data from age-gaps.csv in your data and assign it to age_gaps. Confirm that this new object appears in your Environment tab. Click on the name of the object in your Environment tab to pop open the data in the data viewer.\n\n\n#code here\n\n\nCreate a subset of the data frame for heterosexual relationships on screen. Save this into a new pipeline.\n\n\n#code here\n\n\nSplit the data for heterosexual relationships into three – where woman is older, where man is older, where they are the same age. Save these subsets as three appropriately named data frames. Confirm that these new objects appear in your Environment tab and that the sum of the number of observations in the two new data frames add to the number of observations in the original data frame.\n\n\n\n\n\n\n\nNote\n\n\n\nIf you are stuck, here is an idea on a process to get started:\n\nUse mutate to create a variable that tells which case the row has: older woman, older man, or same age\nfilter the data frame based on the previously created variable\n\n\n\n\n# code here\n\nWrite the three new datasets you created as .csv files in the data folder:\n\n# code here"
-  },
-  {
-    "objectID": "ae/ae-09-github.html#part-2-sales",
-    "href": "ae/ae-09-github.html#part-2-sales",
-    "title": "AE 09: Importing Data",
-    "section": "Part 2: Sales",
-    "text": "Part 2: Sales\nSales data are stored in an Excel file that looks like the following:\n\nRead in the Excel file called sales.xlsx from the data-raw/ folder such that it looks like the following.\n\nFill in the blanks in the following code to accomplish this.\n\nsales_raw &lt;- read_excel(\n  file_name, \n  skip = ___,\n  col_names = _____\n  )\n\n\n\n\n\n\n\nTip\n\n\n\nThe skip and col_names attributes are very useful for reading in messy data!\n\nskip tells R how many rows at the top of the file the function should ignore\ncol_names tells R what to name the columns it imports\n\n\n\nStretch goal: Manipulate the sales data such such that it looks like the following.\n\n\n# code here\n\nWhy should we bother with writing code for reading the data in by skipping columns and assigning variable names as well as cleaning it up in multiple steps instead of opening the Excel file and editing the data in there to prepare it for a clean import?"
+    "text": "Part 1: Hollywood relationships\n\nLoad the data from age-gaps.csv in your data and assign it to age_gaps. Confirm that this new object appears in your Environment tab. Click on the name of the object in your Environment tab to pop open the data in the data viewer.\n\n\n#code here\n\n\nCreate a subset of the data frame for heterosexual relationships on screen. Save this into a new pipeline.\n\n\n#code here\n\n\nSplit the data for heterosexual relationships into three – where woman is older, where man is older, where they are the same age. Save these subsets as three appropriately named data frames. Confirm that these new objects appear in your Environment tab and that the sum of the number of observations in the two new data frames add to the number of observations in the original data frame.\n\n\n\n\n\n\n\nNote\n\n\n\nIf you are stuck, here is an idea on a process to get started:\n\nUse mutate to create a variable that tells which case the row has: older woman, older man, or same age\nfilter the data frame based on the previously created variable\n\n\n\n\n# code here\n\nWrite the three new datasets you created as .csv files in the data folder:\n\n# code here\n\ns## Part 2: Sales\nSales data are stored in an Excel file that looks like the following:\n\nRead in the Excel file called sales.xlsx from the data-raw/ folder such that it looks like the following.\n\nFill in the blanks in the following code to accomplish this.\n\nsales_raw &lt;- read_excel(\n  file_name, \n  skip = ___,\n  col_names = _____\n  )\n\n\n\n\n\n\n\nTip\n\n\n\nThe skip and col_names attributes are very useful for reading in messy data!\n\nskip tells R how many rows at the top of the file the function should ignore\ncol_names tells R what to name the columns it imports\n\n\n\nStretch goal: Manipulate the sales data such such that it looks like the following.\n\n\n# code here\n\nWhy should we bother with writing code for reading the data in by skipping columns and assigning variable names as well as cleaning it up in multiple steps instead of opening the Excel file and editing the data in there to prepare it for a clean import?"
   },
   {
     "objectID": "lab/lab-3.html",
@@ -1051,35 +1044,140 @@
     "href": "slides/10-practice-slides.html#todays-goals",
     "title": "Midterm + More Practice!",
     "section": "Today’s Goals:",
-    "text": "Today’s Goals:\n\n\nGoal 1: ✨Beautify✨ the plot from AE-08: plotting + factors\n\n\nGoal 2: Practice pivoting with AE-08 data\n\nGoal 3: Practice data transformation and working with characters - sales data from yesterday"
+    "text": "Today’s Goals:\n\n\nGoal 1: Practice data transformation and working with characters - sales data from yesterday\n\nGoal 2: ✨Beautify✨ the plot from AE-08: plotting + factors\n\n\nGoal 3: Practice pivoting with AE-08 data"
   },
   {
-    "objectID": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot",
-    "href": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot",
+    "objectID": "slides/10-practice-slides.html#goal-1-transform-sales-data",
+    "href": "slides/10-practice-slides.html#goal-1-transform-sales-data",
     "title": "Midterm + More Practice!",
-    "section": "Goal 1: Beautify AE-08 Plot",
-    "text": "Goal 1: Beautify AE-08 Plot\nData:\n\ndurham_climate \n\n# A tibble: 12 × 4\n   month     avg_high_f avg_low_f precip\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;\n 1 January           49        28   4.45\n 2 February          53        29   3.7 \n 3 March             62        37   4.69\n 4 April             71        46   3.43\n 5 May               79        56   4.61\n 6 June              85        65   4.02\n 7 July              89        70   3.94\n 8 August            87        68   4.37\n 9 September         81        60   4.37\n10 October           71        47   3.7 \n11 November          62        37   3.39\n12 December          53        30   3.43"
+    "section": "Goal 1: Transform Sales Data",
+    "text": "Goal 1: Transform Sales Data\nYesterday: read an Excel file with non-tidy data"
   },
   {
-    "objectID": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-1",
-    "href": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-1",
+    "objectID": "slides/10-practice-slides.html#goal-1-transform-sales-data-1",
+    "href": "slides/10-practice-slides.html#goal-1-transform-sales-data-1",
     "title": "Midterm + More Practice!",
-    "section": "Goal 1: Beautify AE-08 Plot",
-    "text": "Goal 1: Beautify AE-08 Plot\nOriginal Plot:"
+    "section": "Goal 1: Transform Sales Data",
+    "text": "Goal 1: Transform Sales Data\nYesterday: read an Excel file with non-tidy data"
   },
   {
-    "objectID": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-2",
-    "href": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-2",
+    "objectID": "slides/10-practice-slides.html#goal-1-transform-sales-data-2",
+    "href": "slides/10-practice-slides.html#goal-1-transform-sales-data-2",
     "title": "Midterm + More Practice!",
-    "section": "Goal 1: Beautify AE-08 Plot",
-    "text": "Goal 1: Beautify AE-08 Plot\nReleveling Months:"
+    "section": "Goal 1: Transform Sales Data",
+    "text": "Goal 1: Transform Sales Data\nGoal: tidy up the data"
   },
   {
-    "objectID": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-3",
-    "href": "slides/10-practice-slides.html#goal-1-beautify-ae-08-plot-3",
+    "objectID": "slides/10-practice-slides.html#string-functions",
+    "href": "slides/10-practice-slides.html#string-functions",
     "title": "Midterm + More Practice!",
-    "section": "Goal 1: Beautify AE-08 Plot",
-    "text": "Goal 1: Beautify AE-08 Plot\nGoal:"
+    "section": "String Functions",
+    "text": "String Functions\n\n\nWe’ve seen lots of functions that deal with numeric data (mean, median, sum, etc.) - what about characters?\n\nstringr is a tidyverse package with lots of functions for dealing with character strings\ntoday: str_detect in stringr"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#string-functions-1",
+    "href": "slides/10-practice-slides.html#string-functions-1",
+    "title": "Midterm + More Practice!",
+    "section": "String Functions",
+    "text": "String Functions\n\nstr_detect() identifies if some characters are a substring of a larger string\n\nuseful in cases when you need to check some condition, for example:\n\nin a filter()\nin an if_else() or case_when()"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#string-functions-2",
+    "href": "slides/10-practice-slides.html#string-functions-2",
+    "title": "Midterm + More Practice!",
+    "section": "String Functions",
+    "text": "String Functions\n\nstr_detect() identifies if some characters are a substring of a larger string\n\nuseful in cases when you need to check some condition, for example:\n\nin a filter()\nin an if_else() or case_when()\n\n\n\nexample: which classes in a list are in the stats department?\n\nclasses &lt;- c(\"sta199\", \"dance122\", \"math185\", \"sta240\", \"pubpol202\")\nstr_detect(classes, \"sta\")\n\n[1]  TRUE FALSE FALSE  TRUE FALSE"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#string-functions-3",
+    "href": "slides/10-practice-slides.html#string-functions-3",
+    "title": "Midterm + More Practice!",
+    "section": "String Functions",
+    "text": "String Functions\nGeneral form:\n\nstr_detect(character_var, \"word_to_detect\")"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#lets-get-started",
+    "href": "slides/10-practice-slides.html#lets-get-started",
+    "title": "Midterm + More Practice!",
+    "section": "Let’s get started!",
+    "text": "Let’s get started!\nOpen up yesterday’s AE file (AE-09)."
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#lets-get-started-1",
+    "href": "slides/10-practice-slides.html#lets-get-started-1",
+    "title": "Midterm + More Practice!",
+    "section": "Let’s get started!",
+    "text": "Let’s get started!\n\n\n\nsales_raw &lt;- read_excel(\n  \"data/sales.xlsx\", \n  skip = 3,\n  col_names = c(\"id\", \"n\")\n  )\n\n\n\n\n# A tibble: 9 × 2\n  id      n    \n  &lt;chr&gt;   &lt;chr&gt;\n1 Brand 1 n    \n2 1234    8    \n3 8721    2    \n4 1822    3    \n5 Brand 2 n    \n6 3333    1    \n7 2156    3    \n8 3987    6    \n9 3216    5"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#create-brand-column",
+    "href": "slides/10-practice-slides.html#create-brand-column",
+    "title": "Midterm + More Practice!",
+    "section": "Create Brand Column",
+    "text": "Create Brand Column\n\n\n\nsales_raw \n\n\n\n\n# A tibble: 9 × 2\n  id      n    \n  &lt;chr&gt;   &lt;chr&gt;\n1 Brand 1 n    \n2 1234    8    \n3 8721    2    \n4 1822    3    \n5 Brand 2 n    \n6 3333    1    \n7 2156    3    \n8 3987    6    \n9 3216    5"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#create-brand-column-1",
+    "href": "slides/10-practice-slides.html#create-brand-column-1",
+    "title": "Midterm + More Practice!",
+    "section": "Create Brand Column",
+    "text": "Create Brand Column\n\n\n\nsales_raw |&gt;\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\")\n  )\n\n\n\n\n# A tibble: 9 × 3\n  id      n     is_brand_name\n  &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;        \n1 Brand 1 n     TRUE         \n2 1234    8     FALSE        \n3 8721    2     FALSE        \n4 1822    3     FALSE        \n5 Brand 2 n     TRUE         \n6 3333    1     FALSE        \n7 2156    3     FALSE        \n8 3987    6     FALSE        \n9 3216    5     FALSE"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#create-brand-column-2",
+    "href": "slides/10-practice-slides.html#create-brand-column-2",
+    "title": "Midterm + More Practice!",
+    "section": "Create Brand Column",
+    "text": "Create Brand Column\n\n\n\nsales_raw |&gt;\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\"),\n    brand = if_else(is_brand_name, id, NA)\n  )\n\n\n\n\n# A tibble: 9 × 4\n  id      n     is_brand_name brand  \n  &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;         &lt;chr&gt;  \n1 Brand 1 n     TRUE          Brand 1\n2 1234    8     FALSE         &lt;NA&gt;   \n3 8721    2     FALSE         &lt;NA&gt;   \n4 1822    3     FALSE         &lt;NA&gt;   \n5 Brand 2 n     TRUE          Brand 2\n6 3333    1     FALSE         &lt;NA&gt;   \n7 2156    3     FALSE         &lt;NA&gt;   \n8 3987    6     FALSE         &lt;NA&gt;   \n9 3216    5     FALSE         &lt;NA&gt;"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#create-brand-column-3",
+    "href": "slides/10-practice-slides.html#create-brand-column-3",
+    "title": "Midterm + More Practice!",
+    "section": "Create Brand Column",
+    "text": "Create Brand Column\n\n\n\nsales_raw |&gt;\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\"),\n    brand = if_else(is_brand_name, id, NA)\n  )|&gt;\n  fill(brand)\n\n\n\n\n# A tibble: 9 × 4\n  id      n     is_brand_name brand  \n  &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;         &lt;chr&gt;  \n1 Brand 1 n     TRUE          Brand 1\n2 1234    8     FALSE         Brand 1\n3 8721    2     FALSE         Brand 1\n4 1822    3     FALSE         Brand 1\n5 Brand 2 n     TRUE          Brand 2\n6 3333    1     FALSE         Brand 2\n7 2156    3     FALSE         Brand 2\n8 3987    6     FALSE         Brand 2\n9 3216    5     FALSE         Brand 2"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#keep-needed-rows",
+    "href": "slides/10-practice-slides.html#keep-needed-rows",
+    "title": "Midterm + More Practice!",
+    "section": "Keep Needed Rows",
+    "text": "Keep Needed Rows\n\n\n\nsales_raw |&gt;\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\"),\n    brand = if_else(is_brand_name, id, NA)\n  )|&gt;\n  fill(brand)|&gt;\n  filter(!is_brand_name)\n\n\n\n\n# A tibble: 7 × 4\n  id    n     is_brand_name brand  \n  &lt;chr&gt; &lt;chr&gt; &lt;lgl&gt;         &lt;chr&gt;  \n1 1234  8     FALSE         Brand 1\n2 8721  2     FALSE         Brand 1\n3 1822  3     FALSE         Brand 1\n4 3333  1     FALSE         Brand 2\n5 2156  3     FALSE         Brand 2\n6 3987  6     FALSE         Brand 2\n7 3216  5     FALSE         Brand 2"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#keep-needed-columns",
+    "href": "slides/10-practice-slides.html#keep-needed-columns",
+    "title": "Midterm + More Practice!",
+    "section": "Keep Needed Columns",
+    "text": "Keep Needed Columns\n\n\n\nsales_raw |&gt;\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\"),\n    brand = if_else(is_brand_name, id, NA)\n  )|&gt;\n  fill(brand)|&gt;\n  filter(!is_brand_name)|&gt;\n  select(brand, id, n)\n\n\n\n\n# A tibble: 7 × 3\n  brand   id    n    \n  &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;\n1 Brand 1 1234  8    \n2 Brand 1 8721  2    \n3 Brand 1 1822  3    \n4 Brand 2 3333  1    \n5 Brand 2 2156  3    \n6 Brand 2 3987  6    \n7 Brand 2 3216  5"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#goal-2-beautify-ae-08-plot",
+    "href": "slides/10-practice-slides.html#goal-2-beautify-ae-08-plot",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 2: Beautify AE-08 Plot",
+    "text": "Goal 2: Beautify AE-08 Plot\nData:\n\ndurham_climate \n\n# A tibble: 12 × 4\n   month     avg_high_f avg_low_f precip\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;\n 1 January           49        28   4.45\n 2 February          53        29   3.7 \n 3 March             62        37   4.69\n 4 April             71        46   3.43\n 5 May               79        56   4.61\n 6 June              85        65   4.02\n 7 July              89        70   3.94\n 8 August            87        68   4.37\n 9 September         81        60   4.37\n10 October           71        47   3.7 \n11 November          62        37   3.39\n12 December          53        30   3.43"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#goal-2-beautify-ae-08-plot-1",
+    "href": "slides/10-practice-slides.html#goal-2-beautify-ae-08-plot-1",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 2: Beautify AE-08 Plot",
+    "text": "Goal 2: Beautify AE-08 Plot\nOriginal Plot:"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#goal-2-beautify-ae-08-plot-2",
+    "href": "slides/10-practice-slides.html#goal-2-beautify-ae-08-plot-2",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 2: Beautify AE-08 Plot",
+    "text": "Goal 2: Beautify AE-08 Plot\nReleveling Months:"
+  },
+  {
+    "objectID": "slides/10-practice-slides.html#goal-2-beautify-ae-08-plot-3",
+    "href": "slides/10-practice-slides.html#goal-2-beautify-ae-08-plot-3",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 2: Beautify AE-08 Plot",
+    "text": "Goal 2: Beautify AE-08 Plot\nGoal:"
   },
   {
     "objectID": "slides/10-practice-slides.html#goal-beautify-ae-08-plot",
@@ -1093,42 +1191,42 @@
     "href": "slides/10-practice-slides.html#the-code",
     "title": "Midterm + More Practice!",
     "section": "The Code…",
-    "text": "The Code…\nTake a look at the printout! What does each highlighted portion do?"
+    "text": "The Code…\nTake a look at the printout!What does each highlighted portion do?"
   },
   {
-    "objectID": "slides/10-practice-slides.html#task-2-highlow-lines",
-    "href": "slides/10-practice-slides.html#task-2-highlow-lines",
+    "objectID": "slides/10-practice-slides.html#the-code-1",
+    "href": "slides/10-practice-slides.html#the-code-1",
     "title": "Midterm + More Practice!",
-    "section": "Task 2: High/Low lines",
-    "text": "Task 2: High/Low lines"
+    "section": "The Code…",
+    "text": "The Code…\nGo ahead and pull today’s AE - mess around with the code."
   },
   {
-    "objectID": "slides/10-practice-slides.html#task-2-highlow-lines-1",
-    "href": "slides/10-practice-slides.html#task-2-highlow-lines-1",
+    "objectID": "slides/10-practice-slides.html#goal-3-highlow-lines",
+    "href": "slides/10-practice-slides.html#goal-3-highlow-lines",
     "title": "Midterm + More Practice!",
-    "section": "Task 2: High/Low lines",
-    "text": "Task 2: High/Low lines\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring"
+    "section": "Goal 3: High/Low lines",
+    "text": "Goal 3: High/Low lines"
   },
   {
-    "objectID": "slides/10-practice-slides.html#task-2-goal---pivot",
-    "href": "slides/10-practice-slides.html#task-2-goal---pivot",
+    "objectID": "slides/10-practice-slides.html#goal-3-highlow-lines-1",
+    "href": "slides/10-practice-slides.html#goal-3-highlow-lines-1",
     "title": "Midterm + More Practice!",
-    "section": "Task 2: Goal - Pivot!!!",
-    "text": "Task 2: Goal - Pivot!!!\n\n\n# A tibble: 5 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring\n4 April            71        46   3.43 Spring\n5 May              79        56   4.61 Spring\n\n\n\n\n\n# A tibble: 5 × 5\n  month    precip season temp_type   temp\n  &lt;fct&gt;     &lt;dbl&gt; &lt;fct&gt;  &lt;chr&gt;      &lt;dbl&gt;\n1 January    4.45 Winter avg_high_f    49\n2 January    4.45 Winter avg_low_f     28\n3 February   3.7  Winter avg_high_f    53\n4 February   3.7  Winter avg_low_f     29\n5 March      4.69 Spring avg_high_f    62"
+    "section": "Goal 3: High/Low lines",
+    "text": "Goal 3: High/Low lines\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring"
   },
   {
-    "objectID": "slides/10-practice-slides.html#task-2-goal---pivot-1",
-    "href": "slides/10-practice-slides.html#task-2-goal---pivot-1",
+    "objectID": "slides/10-practice-slides.html#pivot",
+    "href": "slides/10-practice-slides.html#pivot",
     "title": "Midterm + More Practice!",
-    "section": "Task 2: Goal - Pivot!!!",
-    "text": "Task 2: Goal - Pivot!!!\nAdd your pivot code to today’s AE. Check out the plotting code! What is going on?"
+    "section": "Pivot!!!",
+    "text": "Pivot!!!\n\n\n\n\n# A tibble: 5 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring\n4 April            71        46   3.43 Spring\n5 May              79        56   4.61 Spring\n\n\n\n\n\n# A tibble: 5 × 5\n  month    precip season temp_type   temp\n  &lt;fct&gt;     &lt;dbl&gt; &lt;fct&gt;  &lt;chr&gt;      &lt;dbl&gt;\n1 January    4.45 Winter avg_high_f    49\n2 January    4.45 Winter avg_low_f     28\n3 February   3.7  Winter avg_high_f    53\n4 February   3.7  Winter avg_low_f     29\n5 March      4.69 Spring avg_high_f    62"
   },
   {
-    "objectID": "slides/10-practice-slides.html#task-3-transform-sales-data",
-    "href": "slides/10-practice-slides.html#task-3-transform-sales-data",
+    "objectID": "slides/10-practice-slides.html#pivot-1",
+    "href": "slides/10-practice-slides.html#pivot-1",
     "title": "Midterm + More Practice!",
-    "section": "Task 3: Transform Sales Data",
-    "text": "Task 3: Transform Sales Data\nI will show code here; follow along in your AE!"
+    "section": "Pivot!!!",
+    "text": "Pivot!!!\nAdd your pivot code to today’s AE. Check out the plotting code! What is going on?"
   },
   {
     "objectID": "slides/10-practice.html",
@@ -1226,35 +1324,140 @@
     "href": "slides/10-practice.html#todays-goals",
     "title": "Midterm + More Practice!",
     "section": "Today’s Goals:",
-    "text": "Today’s Goals:\n\n\nGoal 1: ✨Beautify✨ the plot from AE-08: plotting + factors\n\n\nGoal 2: Practice pivoting with AE-08 data\n\nGoal 3: Practice data transformation and working with characters - sales data from yesterday"
+    "text": "Today’s Goals:\n\n\nGoal 1: Practice data transformation and working with characters - sales data from yesterday\n\nGoal 2: ✨Beautify✨ the plot from AE-08: plotting + factors\n\n\nGoal 3: Practice pivoting with AE-08 data"
   },
   {
-    "objectID": "slides/10-practice.html#goal-1-beautify-ae-08-plot",
-    "href": "slides/10-practice.html#goal-1-beautify-ae-08-plot",
+    "objectID": "slides/10-practice.html#goal-1-transform-sales-data",
+    "href": "slides/10-practice.html#goal-1-transform-sales-data",
     "title": "Midterm + More Practice!",
-    "section": "Goal 1: Beautify AE-08 Plot",
-    "text": "Goal 1: Beautify AE-08 Plot\nData:\n\ndurham_climate \n\n# A tibble: 12 × 4\n   month     avg_high_f avg_low_f precip\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;\n 1 January           49        28   4.45\n 2 February          53        29   3.7 \n 3 March             62        37   4.69\n 4 April             71        46   3.43\n 5 May               79        56   4.61\n 6 June              85        65   4.02\n 7 July              89        70   3.94\n 8 August            87        68   4.37\n 9 September         81        60   4.37\n10 October           71        47   3.7 \n11 November          62        37   3.39\n12 December          53        30   3.43"
+    "section": "Goal 1: Transform Sales Data",
+    "text": "Goal 1: Transform Sales Data\nYesterday: read an Excel file with non-tidy data"
   },
   {
-    "objectID": "slides/10-practice.html#goal-1-beautify-ae-08-plot-1",
-    "href": "slides/10-practice.html#goal-1-beautify-ae-08-plot-1",
+    "objectID": "slides/10-practice.html#goal-1-transform-sales-data-1",
+    "href": "slides/10-practice.html#goal-1-transform-sales-data-1",
     "title": "Midterm + More Practice!",
-    "section": "Goal 1: Beautify AE-08 Plot",
-    "text": "Goal 1: Beautify AE-08 Plot\nOriginal Plot:"
+    "section": "Goal 1: Transform Sales Data",
+    "text": "Goal 1: Transform Sales Data\nYesterday: read an Excel file with non-tidy data"
   },
   {
-    "objectID": "slides/10-practice.html#goal-1-beautify-ae-08-plot-2",
-    "href": "slides/10-practice.html#goal-1-beautify-ae-08-plot-2",
+    "objectID": "slides/10-practice.html#goal-1-transform-sales-data-2",
+    "href": "slides/10-practice.html#goal-1-transform-sales-data-2",
     "title": "Midterm + More Practice!",
-    "section": "Goal 1: Beautify AE-08 Plot",
-    "text": "Goal 1: Beautify AE-08 Plot\nReleveling Months:"
+    "section": "Goal 1: Transform Sales Data",
+    "text": "Goal 1: Transform Sales Data\nGoal: tidy up the data"
   },
   {
-    "objectID": "slides/10-practice.html#goal-1-beautify-ae-08-plot-3",
-    "href": "slides/10-practice.html#goal-1-beautify-ae-08-plot-3",
+    "objectID": "slides/10-practice.html#string-functions",
+    "href": "slides/10-practice.html#string-functions",
     "title": "Midterm + More Practice!",
-    "section": "Goal 1: Beautify AE-08 Plot",
-    "text": "Goal 1: Beautify AE-08 Plot\nGoal:"
+    "section": "String Functions",
+    "text": "String Functions\n\n\nWe’ve seen lots of functions that deal with numeric data (mean, median, sum, etc.) - what about characters?\n\nstringr is a tidyverse package with lots of functions for dealing with character strings\ntoday: str_detect in stringr"
+  },
+  {
+    "objectID": "slides/10-practice.html#string-functions-1",
+    "href": "slides/10-practice.html#string-functions-1",
+    "title": "Midterm + More Practice!",
+    "section": "String Functions",
+    "text": "String Functions\n\nstr_detect() identifies if some characters are a substring of a larger string\n\nuseful in cases when you need to check some condition, for example:\n\nin a filter()\nin an if_else() or case_when()"
+  },
+  {
+    "objectID": "slides/10-practice.html#string-functions-2",
+    "href": "slides/10-practice.html#string-functions-2",
+    "title": "Midterm + More Practice!",
+    "section": "String Functions",
+    "text": "String Functions\n\nstr_detect() identifies if some characters are a substring of a larger string\n\nuseful in cases when you need to check some condition, for example:\n\nin a filter()\nin an if_else() or case_when()\n\n\n\nexample: which classes in a list are in the stats department?\n\nclasses &lt;- c(\"sta199\", \"dance122\", \"math185\", \"sta240\", \"pubpol202\")\nstr_detect(classes, \"sta\")\n\n[1]  TRUE FALSE FALSE  TRUE FALSE"
+  },
+  {
+    "objectID": "slides/10-practice.html#string-functions-3",
+    "href": "slides/10-practice.html#string-functions-3",
+    "title": "Midterm + More Practice!",
+    "section": "String Functions",
+    "text": "String Functions\nGeneral form:\n\nstr_detect(character_var, \"word_to_detect\")"
+  },
+  {
+    "objectID": "slides/10-practice.html#lets-get-started",
+    "href": "slides/10-practice.html#lets-get-started",
+    "title": "Midterm + More Practice!",
+    "section": "Let’s get started!",
+    "text": "Let’s get started!\nOpen up yesterday’s AE file (AE-09)."
+  },
+  {
+    "objectID": "slides/10-practice.html#lets-get-started-1",
+    "href": "slides/10-practice.html#lets-get-started-1",
+    "title": "Midterm + More Practice!",
+    "section": "Let’s get started!",
+    "text": "Let’s get started!\n\n\n\nsales_raw &lt;- read_excel(\n  \"data/sales.xlsx\", \n  skip = 3,\n  col_names = c(\"id\", \"n\")\n  )\n\n\n\n\n# A tibble: 9 × 2\n  id      n    \n  &lt;chr&gt;   &lt;chr&gt;\n1 Brand 1 n    \n2 1234    8    \n3 8721    2    \n4 1822    3    \n5 Brand 2 n    \n6 3333    1    \n7 2156    3    \n8 3987    6    \n9 3216    5"
+  },
+  {
+    "objectID": "slides/10-practice.html#create-brand-column",
+    "href": "slides/10-practice.html#create-brand-column",
+    "title": "Midterm + More Practice!",
+    "section": "Create Brand Column",
+    "text": "Create Brand Column\n\n\n\nsales_raw \n\n\n\n\n# A tibble: 9 × 2\n  id      n    \n  &lt;chr&gt;   &lt;chr&gt;\n1 Brand 1 n    \n2 1234    8    \n3 8721    2    \n4 1822    3    \n5 Brand 2 n    \n6 3333    1    \n7 2156    3    \n8 3987    6    \n9 3216    5"
+  },
+  {
+    "objectID": "slides/10-practice.html#create-brand-column-1",
+    "href": "slides/10-practice.html#create-brand-column-1",
+    "title": "Midterm + More Practice!",
+    "section": "Create Brand Column",
+    "text": "Create Brand Column\n\n\n\nsales_raw |&gt;\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\")\n  )\n\n\n\n\n# A tibble: 9 × 3\n  id      n     is_brand_name\n  &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;        \n1 Brand 1 n     TRUE         \n2 1234    8     FALSE        \n3 8721    2     FALSE        \n4 1822    3     FALSE        \n5 Brand 2 n     TRUE         \n6 3333    1     FALSE        \n7 2156    3     FALSE        \n8 3987    6     FALSE        \n9 3216    5     FALSE"
+  },
+  {
+    "objectID": "slides/10-practice.html#create-brand-column-2",
+    "href": "slides/10-practice.html#create-brand-column-2",
+    "title": "Midterm + More Practice!",
+    "section": "Create Brand Column",
+    "text": "Create Brand Column\n\n\n\nsales_raw |&gt;\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\"),\n    brand = if_else(is_brand_name, id, NA)\n  )\n\n\n\n\n# A tibble: 9 × 4\n  id      n     is_brand_name brand  \n  &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;         &lt;chr&gt;  \n1 Brand 1 n     TRUE          Brand 1\n2 1234    8     FALSE         &lt;NA&gt;   \n3 8721    2     FALSE         &lt;NA&gt;   \n4 1822    3     FALSE         &lt;NA&gt;   \n5 Brand 2 n     TRUE          Brand 2\n6 3333    1     FALSE         &lt;NA&gt;   \n7 2156    3     FALSE         &lt;NA&gt;   \n8 3987    6     FALSE         &lt;NA&gt;   \n9 3216    5     FALSE         &lt;NA&gt;"
+  },
+  {
+    "objectID": "slides/10-practice.html#create-brand-column-3",
+    "href": "slides/10-practice.html#create-brand-column-3",
+    "title": "Midterm + More Practice!",
+    "section": "Create Brand Column",
+    "text": "Create Brand Column\n\n\n\nsales_raw |&gt;\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\"),\n    brand = if_else(is_brand_name, id, NA)\n  )|&gt;\n  fill(brand)\n\n\n\n\n# A tibble: 9 × 4\n  id      n     is_brand_name brand  \n  &lt;chr&gt;   &lt;chr&gt; &lt;lgl&gt;         &lt;chr&gt;  \n1 Brand 1 n     TRUE          Brand 1\n2 1234    8     FALSE         Brand 1\n3 8721    2     FALSE         Brand 1\n4 1822    3     FALSE         Brand 1\n5 Brand 2 n     TRUE          Brand 2\n6 3333    1     FALSE         Brand 2\n7 2156    3     FALSE         Brand 2\n8 3987    6     FALSE         Brand 2\n9 3216    5     FALSE         Brand 2"
+  },
+  {
+    "objectID": "slides/10-practice.html#keep-needed-rows",
+    "href": "slides/10-practice.html#keep-needed-rows",
+    "title": "Midterm + More Practice!",
+    "section": "Keep Needed Rows",
+    "text": "Keep Needed Rows\n\n\n\nsales_raw |&gt;\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\"),\n    brand = if_else(is_brand_name, id, NA)\n  )|&gt;\n  fill(brand)|&gt;\n  filter(!is_brand_name)\n\n\n\n\n# A tibble: 7 × 4\n  id    n     is_brand_name brand  \n  &lt;chr&gt; &lt;chr&gt; &lt;lgl&gt;         &lt;chr&gt;  \n1 1234  8     FALSE         Brand 1\n2 8721  2     FALSE         Brand 1\n3 1822  3     FALSE         Brand 1\n4 3333  1     FALSE         Brand 2\n5 2156  3     FALSE         Brand 2\n6 3987  6     FALSE         Brand 2\n7 3216  5     FALSE         Brand 2"
+  },
+  {
+    "objectID": "slides/10-practice.html#keep-needed-columns",
+    "href": "slides/10-practice.html#keep-needed-columns",
+    "title": "Midterm + More Practice!",
+    "section": "Keep Needed Columns",
+    "text": "Keep Needed Columns\n\n\n\nsales_raw |&gt;\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\"),\n    brand = if_else(is_brand_name, id, NA)\n  )|&gt;\n  fill(brand)|&gt;\n  filter(!is_brand_name)|&gt;\n  select(brand, id, n)\n\n\n\n\n# A tibble: 7 × 3\n  brand   id    n    \n  &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;\n1 Brand 1 1234  8    \n2 Brand 1 8721  2    \n3 Brand 1 1822  3    \n4 Brand 2 3333  1    \n5 Brand 2 2156  3    \n6 Brand 2 3987  6    \n7 Brand 2 3216  5"
+  },
+  {
+    "objectID": "slides/10-practice.html#goal-2-beautify-ae-08-plot",
+    "href": "slides/10-practice.html#goal-2-beautify-ae-08-plot",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 2: Beautify AE-08 Plot",
+    "text": "Goal 2: Beautify AE-08 Plot\nData:\n\ndurham_climate \n\n# A tibble: 12 × 4\n   month     avg_high_f avg_low_f precip\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;\n 1 January           49        28   4.45\n 2 February          53        29   3.7 \n 3 March             62        37   4.69\n 4 April             71        46   3.43\n 5 May               79        56   4.61\n 6 June              85        65   4.02\n 7 July              89        70   3.94\n 8 August            87        68   4.37\n 9 September         81        60   4.37\n10 October           71        47   3.7 \n11 November          62        37   3.39\n12 December          53        30   3.43"
+  },
+  {
+    "objectID": "slides/10-practice.html#goal-2-beautify-ae-08-plot-1",
+    "href": "slides/10-practice.html#goal-2-beautify-ae-08-plot-1",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 2: Beautify AE-08 Plot",
+    "text": "Goal 2: Beautify AE-08 Plot\nOriginal Plot:"
+  },
+  {
+    "objectID": "slides/10-practice.html#goal-2-beautify-ae-08-plot-2",
+    "href": "slides/10-practice.html#goal-2-beautify-ae-08-plot-2",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 2: Beautify AE-08 Plot",
+    "text": "Goal 2: Beautify AE-08 Plot\nReleveling Months:"
+  },
+  {
+    "objectID": "slides/10-practice.html#goal-2-beautify-ae-08-plot-3",
+    "href": "slides/10-practice.html#goal-2-beautify-ae-08-plot-3",
+    "title": "Midterm + More Practice!",
+    "section": "Goal 2: Beautify AE-08 Plot",
+    "text": "Goal 2: Beautify AE-08 Plot\nGoal:"
   },
   {
     "objectID": "slides/10-practice.html#goal-beautify-ae-08-plot",
@@ -1268,42 +1471,42 @@
     "href": "slides/10-practice.html#the-code",
     "title": "Midterm + More Practice!",
     "section": "The Code…",
-    "text": "The Code…\nTake a look at the printout! What does each highlighted portion do?"
+    "text": "The Code…\nTake a look at the printout!What does each highlighted portion do?"
   },
   {
-    "objectID": "slides/10-practice.html#task-2-highlow-lines",
-    "href": "slides/10-practice.html#task-2-highlow-lines",
+    "objectID": "slides/10-practice.html#the-code-1",
+    "href": "slides/10-practice.html#the-code-1",
     "title": "Midterm + More Practice!",
-    "section": "Task 2: High/Low lines",
-    "text": "Task 2: High/Low lines"
+    "section": "The Code…",
+    "text": "The Code…\nGo ahead and pull today’s AE - mess around with the code."
   },
   {
-    "objectID": "slides/10-practice.html#task-2-highlow-lines-1",
-    "href": "slides/10-practice.html#task-2-highlow-lines-1",
+    "objectID": "slides/10-practice.html#goal-3-highlow-lines",
+    "href": "slides/10-practice.html#goal-3-highlow-lines",
     "title": "Midterm + More Practice!",
-    "section": "Task 2: High/Low lines",
-    "text": "Task 2: High/Low lines\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring"
+    "section": "Goal 3: High/Low lines",
+    "text": "Goal 3: High/Low lines"
   },
   {
-    "objectID": "slides/10-practice.html#task-2-goal---pivot",
-    "href": "slides/10-practice.html#task-2-goal---pivot",
+    "objectID": "slides/10-practice.html#goal-3-highlow-lines-1",
+    "href": "slides/10-practice.html#goal-3-highlow-lines-1",
     "title": "Midterm + More Practice!",
-    "section": "Task 2: Goal - Pivot!!!",
-    "text": "Task 2: Goal - Pivot!!!\n\n\n# A tibble: 5 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring\n4 April            71        46   3.43 Spring\n5 May              79        56   4.61 Spring\n\n\n\n\n\n# A tibble: 5 × 5\n  month    precip season temp_type   temp\n  &lt;fct&gt;     &lt;dbl&gt; &lt;fct&gt;  &lt;chr&gt;      &lt;dbl&gt;\n1 January    4.45 Winter avg_high_f    49\n2 January    4.45 Winter avg_low_f     28\n3 February   3.7  Winter avg_high_f    53\n4 February   3.7  Winter avg_low_f     29\n5 March      4.69 Spring avg_high_f    62"
+    "section": "Goal 3: High/Low lines",
+    "text": "Goal 3: High/Low lines\n\n\n\n\n\n\n\n\n\n\n# A tibble: 3 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring"
   },
   {
-    "objectID": "slides/10-practice.html#task-2-goal---pivot-1",
-    "href": "slides/10-practice.html#task-2-goal---pivot-1",
+    "objectID": "slides/10-practice.html#pivot",
+    "href": "slides/10-practice.html#pivot",
     "title": "Midterm + More Practice!",
-    "section": "Task 2: Goal - Pivot!!!",
-    "text": "Task 2: Goal - Pivot!!!\nAdd your pivot code to today’s AE. Check out the plotting code! What is going on?"
+    "section": "Pivot!!!",
+    "text": "Pivot!!!\n\n\n\n\n# A tibble: 5 × 5\n  month    avg_high_f avg_low_f precip season\n  &lt;fct&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt; \n1 January          49        28   4.45 Winter\n2 February         53        29   3.7  Winter\n3 March            62        37   4.69 Spring\n4 April            71        46   3.43 Spring\n5 May              79        56   4.61 Spring\n\n\n\n\n\n# A tibble: 5 × 5\n  month    precip season temp_type   temp\n  &lt;fct&gt;     &lt;dbl&gt; &lt;fct&gt;  &lt;chr&gt;      &lt;dbl&gt;\n1 January    4.45 Winter avg_high_f    49\n2 January    4.45 Winter avg_low_f     28\n3 February   3.7  Winter avg_high_f    53\n4 February   3.7  Winter avg_low_f     29\n5 March      4.69 Spring avg_high_f    62"
   },
   {
-    "objectID": "slides/10-practice.html#task-3-transform-sales-data",
-    "href": "slides/10-practice.html#task-3-transform-sales-data",
+    "objectID": "slides/10-practice.html#pivot-1",
+    "href": "slides/10-practice.html#pivot-1",
     "title": "Midterm + More Practice!",
-    "section": "Task 3: Transform Sales Data",
-    "text": "Task 3: Transform Sales Data\nI will show code here; follow along in your AE!"
+    "section": "Pivot!!!",
+    "text": "Pivot!!!\nAdd your pivot code to today’s AE. Check out the plotting code! What is going on?"
   },
   {
     "objectID": "slides/00-welcome-199-slides.html#meet-the-team",
