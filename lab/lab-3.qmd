@@ -170,6 +170,16 @@ For both parts of this question, you should review the data dictionary that is i
 
 a\.
 You come across the following visualization of these data.
+
+```{r}
+ggplot(mtcars, aes(x = wt, y = mpg, color = am)) +
+  geom_point() +
+  labs(
+    x = "Weight (1000 lbs)",
+    y = "Miles / gallon"
+  )
+```
+
 First, determine what is wrong with this visualization and describe it in one sentence.
 Then, **fix** it and**improve** the visualization.
 As part of your improvement, make sure your legend
