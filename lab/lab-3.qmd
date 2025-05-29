@@ -274,10 +274,10 @@ b.  If you have even a passing knowledge of the Olympic Games, you might know th
 Your answer must use the `str_to_upper()` function.
 :::
 
-b.  Let's try that question again: How many athletes participated in both Olympic Games?
+c.  Let's try that question again: How many athletes participated in both Olympic Games?
 
 
-c.  How many athletes participated in the 2020 Olympic Games but not the 2024 Olympic Games? How many athletes participated in the 2024 Olympic Games but not the 2020 Olympic Games? Use appropriate joins to arrive at these answers. Make sure to show the result of the join in a way that makes the resulting numbers clear AND state them in a sentence.
+d.  How many athletes participated in the 2020 Olympic Games but not the 2024 Olympic Games? How many athletes participated in the 2024 Olympic Games but not the 2020 Olympic Games? Use appropriate joins to arrive at these answers. Make sure to show the result of the join in a way that makes the resulting numbers clear AND state them in a sentence.
 
 
 
