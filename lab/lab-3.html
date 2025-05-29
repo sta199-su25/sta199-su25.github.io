@@ -512,7 +512,16 @@ Tip
 <p>For both parts of this question, you should review the data dictionary that is in the documentation for the dataset which you can find at <a href="https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html" class="uri">https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html</a> or by typing <code><a href="https://rdrr.io/r/datasets/mtcars.html">?mtcars</a></code> in your Console.</p>
 </div>
 </div>
-<p>a. You come across the following visualization of these data. First, determine what is wrong with this visualization and describe it in one sentence. Then, <strong>fix</strong> it and<strong>improve</strong> the visualization. As part of your improvement, make sure your legend</p>
+<p>a. You come across the following visualization of these data.</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">wt</span>, y <span class="op">=</span> <span class="va">mpg</span>, color <span class="op">=</span> <span class="va">am</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Weight (1000 lbs)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Miles / gallon"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>First, determine what is wrong with this visualization and describe it in one sentence. Then, <strong>fix</strong> it and<strong>improve</strong> the visualization. As part of your improvement, make sure your legend</p>
 <ul>
 <li>is on <strong>top</strong> of the plot,</li>
 <li>is <strong>informative</strong>, and</li>
@@ -638,7 +647,7 @@ Important
 <li>
 <p>States of interest: Choose 2-5 states of interest and save them in a vector called <code>states_of_interest</code>. For example, if I chose California, Louisiana, and North Carolina, this would be:</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">states_of_interest</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alabama"</span>, <span class="st">"Louisiana"</span>, <span class="st">"North Carolina"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">states_of_interest</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alabama"</span>, <span class="st">"Louisiana"</span>, <span class="st">"North Carolina"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then, filter the <code>team_usa_2024</code> result to only include Olympians from these states, saving the results as <code>team_usa_2024_soi</code> .</p>
 </li>
@@ -647,7 +656,7 @@ Important
 The first uses <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar()</a></code>, as we have seen before. The second uses an alternative function for creating bar charts: <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code>.<br><br><strong>Run both</strong> blocks of code. <strong>Discuss</strong> what is different between the two pieces of code and the difference between what <code>geom_bar</code> and <code>geom_col</code> need to produce the same plot.</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># geom_bar:</span></span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># geom_bar:</span></span>
 <span><span class="va">team_usa_2024_soi</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">hometown_state</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
