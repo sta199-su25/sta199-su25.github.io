@@ -1,6 +1,6 @@
 ---
 title: "AE 08: Data Types"
-subtitle: "Suggested Answers"
+subtitle: "Suggested answers"
 format:
   html:
     self-contained: true

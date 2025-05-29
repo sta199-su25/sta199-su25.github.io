@@ -1,6 +1,6 @@
 ---
 title: "AE 03: Duke Forest"
-subtitle: "Suggested Answers"
+subtitle: "Suggested answers"
 execute:
   error: true
 ---
