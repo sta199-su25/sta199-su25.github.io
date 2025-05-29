@@ -1,5 +1,6 @@
 ---
 title: "AE 09: Importing Data"
+subtitle: "Suggested answers"
 format:
   html:
     self-contained: true
@@ -28,7 +29,7 @@ library(readxl)
 ```{r}
 #| label: age-gaps-import
 
-#code here
+age_gaps <- read_csv("data/age-gaps.csv")
 
 ```
 
@@ -37,7 +38,9 @@ library(readxl)
 ```{r}
 #| label: age-gaps-hetero
 
-#code here
+
+age_gaps_mw <- age_gaps |> 
+  filter(character_1_gender != character_2_gender )
 
 ```
 
@@ -54,7 +57,22 @@ If you are stuck, here is an idea on a process to get started:
 ```{r}
 #| label: age-gaps-split
 
-# code here
+age_gaps_mw <- age_gaps_mw |>
+  mutate(
+    older = case_when(
+      character_1_gender == "woman" & actor_1_age > actor_2_age ~ "woman older",
+      character_2_gender == "woman" & actor_2_age > actor_1_age ~ "woman older",
+      character_1_gender == "man"   & actor_1_age > actor_2_age ~ "man older",
+      character_2_gender == "man"   & actor_2_age > actor_1_age ~ "man older",
+      actor_1_age == actor_2_age ~ "same age"
+    )
+  )
+
+man_older <- age_gaps_mw |> filter(older == "man older")
+woman_older <- age_gaps_mw |> filter(older == "woman older")
+same_age <- age_gaps_mw |> filter(older == "same age")
+
+(nrow(man_older) + nrow(woman_older) + nrow(same_age)) == nrow(age_gaps_mw)
 ```
 
 Write the three new datasets you created as `.csv` files in the `data` folder:
@@ -63,7 +81,8 @@ Write the three new datasets you created as `.csv` files in the `data` folder:
 #| label: age-gaps-export
 #| eval: false
 
-# code here
+write_csv(woman_older, "data/woman-older.csv")
+# do the same thing for the two other
 ```
 
 s## Part 2: Sales
@@ -82,9 +101,9 @@ Fill in the blanks in the following code to accomplish this.
 #| label: sales-import
 #| eval: false
 sales_raw <- read_excel(
-  file_name, 
-  skip = ___,
-  col_names = _____
+  "data/sales.xlsx",
+  skip = 3,
+  col_names = c("id", "n")
   )
 ```
 
@@ -102,8 +121,15 @@ The `skip` and `col_names` attributes are **very useful** for reading in messy d
 
 ```{r}
 #| label: sales-cleanup
-
-# code here
+sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  )|>
+  fill(brand)|>
+  filter(!is_brand_name)|>
+  select(brand, id, n)
 ```
 
 Why should we bother with writing code for reading the data in by skipping columns and assigning variable names as well as cleaning it up in multiple steps instead of opening the Excel file and editing the data in there to prepare it for a clean import?
+
