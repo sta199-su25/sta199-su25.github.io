@@ -99,7 +99,7 @@ Fill in the blanks in the following code to accomplish this.
 
 ```{r}
 #| label: sales-import
-#| eval: false
+
 sales_raw <- read_excel(
   "data/sales.xlsx",
   skip = 3,
