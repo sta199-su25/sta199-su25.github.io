@@ -171,17 +171,18 @@ For both parts of this question, you should review the data dictionary that is i
 a\.
 You come across the following visualization of these data.
 First, determine what is wrong with this visualization and describe it in one sentence.
-Then, fix it and improve the visualization.
+Then, **fix** it and**improve** the visualization.
 As part of your improvement, make sure your legend
 
--   is on top of the plot,
--   is informative, and
+-   is on **top** of the plot,
+-   is **informative**, and
 -   lists **levels** in the order they appear in the plot (that is, the level with more points on the left should be on the left of the legend)
 
+b\.Update your plot from part (a) further, this time using different shaped points for cars with V-shaped and straight engines. The legend should be again be informative, but this time,  on the **right** of the plot.
 
 ### Question 3
 
-Your task is to make your plot from Question 4b as ugly and as ineffective as possible.
+Your task is to make your plot from Question 2b as ugly and as ineffective as possible.
 Like, seriously.
 I want something that is apocalyptically heinous.
 Change colors, axes, fonts, themes, or anything else you can think of.
@@ -191,7 +192,7 @@ I want Voldemort, Cruella de Vil, and Regina George all nodding in approval at h
 
 You must make at least 5 updates to the plot, and your answer must include:
 
--   a list of the at least 5 updates you've made to your plot from Question 4b, and
+-   a list of the at least 5 updates you've made to your plot from Question 2b, and
 
 -   1-2 sentence explanation of why the plot you created is *ugly* (to you, at least) and ineffective.
 
