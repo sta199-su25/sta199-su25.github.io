@@ -1,11 +1,13 @@
-
 ---
-title: "Data science ethics"
-subtitle: "Lecture 11"
-date: "2025-02-18"
-format: revealjs
+title: "Data Ethics"
+subtitle: "Lecture 12"
+date: "2025-06-01"
+format: 
+  revealjs:
+    output-file: 12-ethics-slides.html
 auto-stretch: false
 ---
+
 
 <!-- begin: ae definition -->
 
