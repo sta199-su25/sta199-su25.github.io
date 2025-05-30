@@ -168,33 +168,38 @@ data_set |>
 
 What happens if we want information from two different data sets?
 
-## Joining Data: Sample Scenario {.smaller}
+## Joining Data: Sample Scenario{.smaller}
 
 ::: columns
-::: {.column width="50%"}
+::: {.column  width="50%"}
+
 ```{r}
 
 population
 
 ```
+
 :::
 
 ::: {.column width="50%"}
--   We want to know about population in different continents.
+-  We want to know about population in different continents.
 
--   We could use mutate to create a continent variable, but that would be terrible....
-:::
+-  We could use mutate to create a continent variable, but that would be terrible....
 :::
 
-## Joining Data: Sample Scenario {.smaller}
+:::
+
+## Joining Data: Sample Scenario{.smaller}
 
 ::: columns
-::: {.column width="44%"}
+::: {.column  width="44%"}
+
 ```{r}
 
 population
 
 ```
+
 :::
 
 ::: {.column width="56%"}
@@ -204,7 +209,10 @@ continent
 
 ```
 :::
+
 :::
+
+
 
 ## Joining: Example Data
 
@@ -303,16 +311,16 @@ continent
 :::
 
 <!-- small Venn diagram in the bottom-right -->
-
-::: {style="
+<div style="
   position: absolute;
   bottom: 80px;
   right: -90px;
   width: 280px;           /* adjust to taste */
   pointer-events: none;  /* so it never steals clicks */
-"}
-<img src="images/venn-1.png" style="width: 100%; height: auto;"/>
-:::
+">
+  <img src="images/venn-1.png" style="width: 100%; height: auto;" />
+</div>
+
 
 ## Joining: Right Join
 
@@ -361,7 +369,7 @@ continent
 | 3   | X3  |
 :::
 
-::: {.column width="25%"}
+::: {.column  width="25%"}
 > df_Y
 
 | id  | Y   |
@@ -383,16 +391,97 @@ continent
 :::
 
 <!-- small Venn diagram in the bottom-right -->
-
-::: {style="
+<div style="
   position: absolute;
   bottom: 80px;
   right: -90px;
   width: 280px;           /* adjust to taste */
   pointer-events: none;  /* so it never steals clicks */
-"}
-<img src="images/venn-1.png" style="width: 100%; height: auto;"/>
+">
+  <img src="images/venn-1.png" style="width: 100%; height: auto;" />
+</div>
+
+## Joining: Full Join
+
+::: columns
+::: {.column .fragment width="25%"}
+> df_X
+
+| id  | X   |
+|-----|-----|
+| 1   | X1  |
+| 2   | X2  |
+| 3   | X3  |
 :::
+
+::: {.column .fragment width="25%"}
+> df_Y
+
+| id  | Y   |
+|-----|-----|
+| 1   | Y1  |
+| 2   | Y2  |
+| 4   | Y4  |
+:::
+
+::: {.column .fragment width="50%"}
+> right_join(df_X, df_Y)
+
+| id  | X    | Y   |
+|-----|------|-----|
+| 1   | X1   | Y1  |
+| 2   | X2   | Y2  |
+| 3   | X3   | *NA*|
+| 4   | *NA* | Y4  |
+:::
+:::
+
+## Joining: Full Join
+
+::: columns
+::: {.column width="25%"}
+> df_X
+
+| id  | X   |
+|-----|-----|
+| 1   | X1  |
+| 2   | X2  |
+| 3   | X3  |
+:::
+
+::: {.column  width="25%"}
+> df_Y
+
+| id  | Y   |
+|-----|-----|
+| 1   | Y1  |
+| 2   | Y2  |
+| 4   | Y4  |
+:::
+
+::: {.column width="50%"}
+> right_join(df_X, df_Y)
+
+| id  | X    | Y   |
+|-----|------|-----|
+| 1   | X1   | Y1  |
+| 2   | X2   | Y2  |
+| 3   | X3   | *NA*|
+| 4   | *NA* | Y4  |
+:::
+:::
+
+<!-- small Venn diagram in the bottom-right -->
+<div style="
+  position: absolute;
+  bottom: 80px;
+  right: -90px;
+  width: 280px;           /* adjust to taste */
+  pointer-events: none;  /* so it never steals clicks */
+">
+  <img src="images/venn-1.png" style="width: 100%; height: auto;" />
+</div>
+
 
 ## Joining: Inner Join
 
@@ -461,16 +550,15 @@ continent
 :::
 
 <!-- small Venn diagram in the bottom-right -->
-
-::: {style="
+<div style="
   position: absolute;
   bottom: 80px;
   right: -90px;
   width: 280px;           /* adjust to taste */
   pointer-events: none;  /* so it never steals clicks */
-"}
-<img src="images/venn-1.png" style="width: 100%; height: auto;"/>
-:::
+">
+  <img src="images/venn-1.png" style="width: 100%; height: auto;" />
+</div>
 
 ## Joining: Semi Join
 
@@ -503,6 +591,7 @@ continent
 | 1   | X1  |
 | 2   | X2  |
 :::
+
 :::
 
 ## Joining: Semi Join
@@ -539,16 +628,16 @@ continent
 :::
 
 <!-- small Venn diagram in the bottom-right -->
-
-::: {style="
+<div style="
   position: absolute;
   bottom: 80px;
   right: -90px;
   width: 280px;           /* adjust to taste */
   pointer-events: none;  /* so it never steals clicks */
-"}
-<img src="images/venn-1.png" style="width: 100%; height: auto;"/>
-:::
+">
+  <img src="images/venn-1.png" style="width: 100%; height: auto;" />
+</div>
+
 
 ## Joining: Anti Join
 
@@ -582,6 +671,7 @@ continent
 :::
 :::
 
+
 ## Joining: Anti Join
 
 ::: columns
@@ -608,23 +698,23 @@ continent
 ::: {.column width="50%"}
 > anti_join(df_X, df_Y)
 
-|     |     |
+
+| id  | X   |
 |-----|-----|
-|     |     |
+| 3   | X3  |
 :::
 :::
 
 <!-- small Venn diagram in the bottom-right -->
-
-::: {style="
+<div style="
   position: absolute;
   bottom: 80px;
   right: -90px;
   width: 280px;           /* adjust to taste */
   pointer-events: none;  /* so it never steals clicks */
-"}
-<img src="images/venn-1.png" style="width: 100%; height: auto;"/>
-:::
+">
+  <img src="images/venn-1.png" style="width: 100%; height: auto;" />
+</div>
 
 ## Summary of Join Types
 
@@ -715,6 +805,7 @@ df_X_Y <- df_X |> left_join(df_Y,
 
 ## What is the result?
 
+
 # AE 07
 
 Goal: Do a join!!!
@@ -722,12 +813,14 @@ Goal: Do a join!!!
 ## Data {.smaller}
 
 ::: columns
-::: {.column width="44%"}
+::: {.column  width="44%"}
+
 ```{r}
 
 population
 
 ```
+
 :::
 
 ::: {.column width="56%"}
@@ -737,4 +830,5 @@ continent
 
 ```
 :::
+
 :::
