@@ -1,210 +1,289 @@
 ---
-title: "Data Joining"
-subtitle: "Lecture 7"
-date: "2025-05-23"
+title: "Midterm Review"
+subtitle: "Lecture 11"
+date: "2025-05-30"
 format: 
   revealjs:
-    output-file: 07-joining-data-slides.html
+    output-file: 11-review-slides.html
 auto-stretch: false
 ---
 
-## Announcements/Reminders {.smaller}
-
--   Office hours are today from **1:00-3:00** on **Zoom**
-
--   AE04... that was a lot
-
-    -   The first 3 parts that we did in class are what are important!
-
-    -   The rest is a good exercise in data vis.
-
--   Questions about lab?
-
-## Outline {.smaller}
-
--   ***Last Time:*** Started learning about data transformation!
-
--   ***Today:***
-
-    -   Review from last time
-
-    -   Joining data (working with multiple data frames)
-
 ```{r}
-#| label: slice
-#| code-line-numbers: "|1|2"
-#| echo: false
-#| message: false
-#| warning: false
+#| include: false
 
+library(tidyverse)
 library(tidyverse)
 statsci <- read_csv("data/statsci.csv")
 population <- read_csv("data/world-pop-2022.csv")
 continent <- read_csv("data/continents.csv")
 ```
 
-## Review: Pivot Longer {.smaller}
+## Announcements
+
+-   Office hours today from 1:00-3:00.
+-   Be in class and lab on Monday!!!!
+
+# Review
+
+-   `group_by`/`summarize`/`mutate`
+-   joins
+-   pivots
+
+## Computing summary stats
+
+-   **With summarize:** condenses information into smaller result table
+
+-   **With mutate:** adds a new column to the data
+
+-   **With groupby:** results for each provided group
+
+## Sample Data
+
+```{r}
+df <- tibble(
+    C1 = c("A", "A", "A", "B", "B"),
+    C2 = c("X", "Y", "X", "X", "Y"),
+    C3 = 1:5
+)
+
+df
+```
+
+## 
+
+## Mutate vs. Summarize {.smaller}
+
+Compute the mean of `C3`.
 
 ::: columns
-::: {.column .fragment width="65%"}
-> How do we go from this...
-
+::: {.column width="25%"}
 ```{r}
-#| echo: false
-
-statsci |>
-  separate(degree, sep = " \\(", into = c("major", "degree_type")) |>
-  mutate(
-    degree_type = str_remove(degree_type, "\\)"),
-    degree = fct_relevel(degree_type, "BS", "BS2", "AB", "AB2")
-  ) |>
-  select(degree, `2011`, `2012`, `2013`, `2014`, `2015`)
+df
 ```
 :::
 
-::: {.column .fragment width="29%"}
-> ...to this?
-
+::: {.column width="35%"}
 ```{r}
-#| echo: false
-
-statsci |>
-  pivot_longer(
-    cols = -degree,
-    names_to = "year",
-    names_transform = as.numeric,
-    values_to = "n"
-  ) |>
-  separate(degree, sep = " \\(", into = c("major", "degree")) |>
-  mutate(
-    degree = str_remove(degree, "\\)"),
-    degree = fct_relevel(degree, "BS", "BS2", "AB", "AB2")
-  ) |>
-  select(degree, year, n) |>
-  print(n = 5)
+df |>
+  mutate(mean_3 = mean(C3))
 ```
 :::
+
+::: {.column width="40%"}
+:::
 :::
 
-## Reverse It: Pivot Wider {.smaller}
+## Mutate vs. Summarize {.smaller}
+
+Compute the mean of `C3`.
 
 ::: columns
-::: {.column .fragment width="65%"}
-> How do we get back to this...
-
+::: {.column width="25%"}
 ```{r}
-#| echo: false
-
-statsci |>
-  separate(degree, sep = " \\(", into = c("major", "degree_type")) |>
-  mutate(
-    degree_type = str_remove(degree_type, "\\)"),
-    degree = fct_relevel(degree_type, "BS", "BS2", "AB", "AB2")
-  ) |>
-  select(degree, `2011`, `2012`, `2013`, `2014`, `2015`)
+df
 ```
 :::
 
-::: {.column .fragment width="29%"}
-> ... from this?
-
+::: {.column width="35%"}
 ```{r}
-#| echo: false
+df |>
+  mutate(mean_3 = mean(C3))
+```
+:::
 
-statsci |>
-  pivot_longer(
-    cols = -degree,
-    names_to = "year",
-    names_transform = as.numeric,
-    values_to = "n"
-  ) |>
-  separate(degree, sep = " \\(", into = c("major", "degree")) |>
-  mutate(
-    degree = str_remove(degree, "\\)"),
-    degree = fct_relevel(degree, "BS", "BS2", "AB", "AB2")
-  ) |>
-  select(degree, year, n) |>
-  print(n = 5)
+::: {.column width="40%"}
+```{r}
+df |>
+  summarise(mean_3 = mean(C3))
 ```
 :::
 :::
 
-## Recap: Pivot Functions {.smaller}
+## Grouping {.smaller}
+
+Group by `C1`.
 
 ::: columns
-::: {.column .fragment width="50%"}
-> Pivot longer...
-
+::: {.column width="30%"}
 ```{r}
-#| eval: false
-
-data_set |>
-  pivot_longer(
-    cols = colums_to_move,
-    names_to = "var_for_column_names", 
-    values_to = "var_for_values"
-  )
+df
 ```
 :::
 
-::: {.column .fragment width="50%"}
-> ... or wider
-
+::: {.column width="70%"}
 ```{r}
-#| eval: false
-
-data_set |>
-  pivot_wider( 
-    names_from = var_with_cols, 
-    values_to = var_with_vals
-  )
+df |>
+  group_by(C1)
 ```
 :::
 :::
 
-# Joining Data
+## Grouping {.smaller}
 
-## Joining Data
+Group by `C1` and `C2`.
 
-What happens if we want information from two different data sets?
+::: columns
+::: {.column width="30%"}
+```{r}
+df
+```
+:::
 
-## Joining Data: Sample Scenario {.smaller}
+::: {.column width="70%"}
+```{r}
+df |>
+  group_by(C1, C2)
+```
+:::
+:::
+
+## Mutate vs. Summarize (with grouping) {.smaller}
+
+Compute the mean of `C3` by value of `C1`.
+
+::: columns
+::: {.column width="25%"}
+```{r}
+df
+```
+:::
+
+::: {.column width="35%"}
+```{r}
+df |>
+  group_by(C1) |>
+  mutate(mean_3 = mean(C3))
+```
+:::
+
+::: {.column width="40%"}
+:::
+:::
+
+## Mutate vs. Summarize (with grouping) {.smaller}
+
+Compute the mean of `C3` by value of `C1`.
+
+::: columns
+::: {.column width="25%"}
+```{r}
+df
+```
+:::
+
+::: {.column width="35%"}
+```{r}
+df |>
+  group_by(C1) |>
+  mutate(mean_3 = mean(C3))
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+df |>
+  group_by(C1) |>
+  summarise(mean_3 = mean(C3))
+```
+:::
+:::
+
+## Mutate vs. Summarize (with grouping) {.smaller}
+
+Compute the mean of `C3` by value of `C1` and `C2`.
+
+::: columns
+::: {.column width="25%"}
+```{r}
+df
+```
+:::
+
+::: {.column width="35%"}
+```{r}
+df |>
+  group_by(C1, C2) |>
+  mutate(mean_3 = mean(C3))
+```
+:::
+
+::: {.column width="40%"}
+:::
+:::
+
+## Mutate vs. Summarize (with grouping) {.smaller}
+
+Compute the mean of `C3` by value of `C1` and `C2`.
+
+::: columns
+::: {.column width="25%"}
+```{r}
+df
+```
+:::
+
+::: {.column width="35%"}
+```{r}
+df |>
+  group_by(C1, C2) |>
+  mutate(mean_3 = mean(C3))
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+df |>
+  group_by(C1, C2) |>
+  summarise(mean_3 = mean(C3))
+```
+:::
+:::
+
+## More about summarize and grouping {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
 ```{r}
-
-population
-
+df |>
+  group_by(C1, C2) |>
+  summarise(mean_3 = mean(C3))
 ```
 :::
 
 ::: {.column width="50%"}
--   We want to know about population in different continents.
-
--   We could use mutate to create a continent variable, but that would be terrible....
+```{r}
+df |>
+  group_by(C1, C2) |>
+  summarise(mean_3 = mean(C3), 
+            .groups = "drop")
+```
 :::
 :::
 
-## Joining Data: Sample Scenario {.smaller}
+## More about summarize and grouping {.smaller}
 
 ::: columns
-::: {.column width="44%"}
+::: {.column width="50%"}
 ```{r}
-
-population
-
+df |>
+  group_by(C1, C2) |>
+  summarise(mean_3 = mean(C3)) |>
+  summarise(mean_again = mean(mean_3))
 ```
 :::
 
-::: {.column width="56%"}
+::: {.column width="50%"}
 ```{r}
-
-continent
-
+df |>
+  group_by(C1, C2) |>
+  summarise(mean_3 = mean(C3), 
+            .groups = "drop")|>
+  summarise(mean_again = mean(mean_3))
 ```
 :::
 :::
+
+# Joins
 
 ## Joining: Example Data
 
@@ -712,111 +791,126 @@ continent
 
 ![](images/left.png)
 
-## More Notes on Join
 
--   In the following examples, I use left_join()
-
--   The same concept holds for other types of joins!
-
--   *Idea: how do we specify which columns we want to join with?*
-
-## Join: Which columns? {.smaller}
-
-How can I specify which column to join by?
+## Try it!
 
 ::: columns
-::: {.column .fragment width="25%"}
-> df_X
+::: {.column width="35%"}
+> df_contacts
 
-| id_X | X   |
-|------|-----|
-| 1    | X1  |
-| 2    | X2  |
-| 3    | X3  |
+| person | phone |
+|--------|-------|
+| Marie  | 1     |
+| Katie  | 2     |
+| John   | 3     |
+| John   | 4     |
 :::
 
-::: {.column .fragment width="25%"}
-> df_Y
+::: {.column width="30%"}
+> df_texts
 
-| id_Y | Y   |
-|------|-----|
-| 1    | Y1  |
-| 2    | Y2  |
-| 4    | Y4  |
-:::
-
-::: {.column .fragment width="50%"}
-> goal: left join
-
-| id_X | X   | Y    |
-|------|-----|------|
-| 1    | X1  | Y1   |
-| 2    | X2  | Y2   |
-| 3    | X3  | *NA* |
-
-```{r}
-#| eval: false
-
-left_join(df_X, df_Y, 
-          by = join_by(id_X == id_Y))
-```
+| phone | texts |
+|-------|-------|
+| 1     | 100   |
+| 2     | 700   |
+| 4     | 400   |
+| 5     | 50    |
 :::
 :::
 
-## What about the pipe? {.smaller}
+## Remember...
 
-The following two pieces of code are equivalent:
+Remember: sometimes we need to specify which columns we are joining with.
 
-```{r}
-#| eval: false
-left_join(df_X, df_Y, 
-          by = join_by(id_X == id_Y))
-```
-
-<br> <br>
-
-```{r}
-#| eval: false
-
-df_X |> left_join(df_Y, 
-                  by = join_by(id_X == id_Y))
-```
-
-## Let's save!
-
-Most often, you will want to save the result of a join to a new data frame.
-
-```{r}
-#| eval: false
-
-df_X_Y <- df_X |> left_join(df_Y, 
-                            by = join_by(id_X == id_Y))
-```
-
-# Your Turn
-
-## What is the result?
-
-# AE 07
-
-Goal: Do a join!!!
-
-## Data {.smaller}
+## Review: Pivot Longer {.smaller}
 
 ::: columns
-::: {.column width="44%"}
+::: {.column .fragment width="65%"}
+> How do we go from this...
+
 ```{r}
+#| echo: false
 
-population
-
+statsci |>
+  separate(degree, sep = " \\(", into = c("major", "degree_type")) |>
+  mutate(
+    degree_type = str_remove(degree_type, "\\)"),
+    degree = fct_relevel(degree_type, "BS", "BS2", "AB", "AB2")
+  ) |>
+  select(degree, `2011`, `2012`, `2013`, `2014`, `2015`)
 ```
 :::
 
-::: {.column width="56%"}
+::: {.column .fragment width="29%"}
+> ...to this?
+
 ```{r}
+#| echo: false
 
-continent
-
+statsci |>
+  pivot_longer(
+    cols = -degree,
+    names_to = "year",
+    names_transform = as.numeric,
+    values_to = "n"
+  ) |>
+  separate(degree, sep = " \\(", into = c("major", "degree")) |>
+  mutate(
+    degree = str_remove(degree, "\\)"),
+    degree = fct_relevel(degree, "BS", "BS2", "AB", "AB2")
+  ) |>
+  select(degree, year, n) |>
+  print(n = 5)
 ```
 :::
 :::
+
+## Reverse It: Pivot Wider {.smaller}
+
+::: columns
+::: {.column .fragment width="65%"}
+> How do we get back to this...
+
+```{r}
+#| echo: false
+
+statsci |>
+  separate(degree, sep = " \\(", into = c("major", "degree_type")) |>
+  mutate(
+    degree_type = str_remove(degree_type, "\\)"),
+    degree = fct_relevel(degree_type, "BS", "BS2", "AB", "AB2")
+  ) |>
+  select(degree, `2011`, `2012`, `2013`, `2014`, `2015`)
+```
+:::
+
+::: {.column .fragment width="29%"}
+> ... from this?
+
+```{r}
+#| echo: false
+
+statsci |>
+  pivot_longer(
+    cols = -degree,
+    names_to = "year",
+    names_transform = as.numeric,
+    values_to = "n"
+  ) |>
+  separate(degree, sep = " \\(", into = c("major", "degree")) |>
+  mutate(
+    degree = str_remove(degree, "\\)"),
+    degree = fct_relevel(degree, "BS", "BS2", "AB", "AB2")
+  ) |>
+  select(degree, year, n) |>
+  print(n = 5)
+```
+:::
+:::
+
+
+# AE
+
+Kahoot!
+
+

@@ -257,13 +257,14 @@ e.  `right_join(df_Y, df_X)`\
 -   **Goal 2:** ✨Beautify✨ the plot from AE-08: plotting + ***factors***
 -   **Goal 3:** Practice ***pivoting*** with AE-08 data
 
-
 ## Goal 1: Transform Sales Data {.smaller}
+
 Yesterday: read an Excel file with non-tidy data
 
 ![](images/09/sales-excel.png)
 
 ## Goal 1: Transform Sales Data {.smaller}
+
 Yesterday: read an Excel file with non-tidy data
 
 ![](images/09/sales-excel.png)
@@ -335,6 +336,7 @@ str_detect(character_var, "word_to_detect")
 ```
 
 ## Let's get started! {.smaller}
+
 Open up yesterday's AE file (AE-09).
 
 ## Let's get started! {.smaller}
@@ -349,7 +351,6 @@ sales_raw <- read_excel(
   col_names = c("id", "n")
   )
 ```
-
 :::
 
 ::: {.column width="50%"}
@@ -374,7 +375,6 @@ sales_raw
 #| eval: false
 sales_raw 
 ```
-
 :::
 
 ::: {.column width="43%"}
@@ -397,7 +397,6 @@ sales_raw |>
     is_brand_name = str_detect(id, "Brand")
   )
 ```
-
 :::
 
 ::: {.column width="43%"}
@@ -424,7 +423,6 @@ sales_raw |>
     brand = if_else(is_brand_name, id, NA)
   )
 ```
-
 :::
 
 ::: {.column width="43%"}
@@ -453,7 +451,6 @@ sales_raw |>
   )|>
   fill(brand)
 ```
-
 :::
 
 ::: {.column width="43%"}
@@ -470,7 +467,6 @@ sales_raw |>
 :::
 :::
 
-
 ## Keep Needed Rows {.smaller}
 
 ::: columns
@@ -485,7 +481,6 @@ sales_raw |>
   fill(brand)|>
   filter(!is_brand_name)
 ```
-
 :::
 
 ::: {.column width="43%"}
@@ -502,7 +497,6 @@ sales_raw |>
 ```
 :::
 :::
-
 
 ## Keep Needed Columns {.smaller}
 
@@ -519,7 +513,6 @@ sales_raw |>
   filter(!is_brand_name)|>
   select(brand, id, n)
 ```
-
 :::
 
 ::: {.column width="43%"}
@@ -537,7 +530,6 @@ sales_raw |>
 ```
 :::
 :::
-
 
 ## Goal 2: Beautify AE-08 Plot {.smaller}
 
@@ -708,7 +700,8 @@ durham_climate
 
 ## The Code... {.smaller}
 
-Take a look at the printout!What does each highlighted portion do?
+Take a look at the printout!W
+hat does each highlighted portion do?
 
 ```{r}
 #| echo: false
@@ -777,6 +770,7 @@ durham_climate |>
     theme_minimal() +
     theme(legend.position = "top") 
 ```
+
 ## Goal 3: High/Low lines
 
 ```{r}
@@ -941,6 +935,3 @@ durham_climate |>
 Add your pivot code to today's AE.
 Check out the plotting code!
 What is going on?
-
-
-
