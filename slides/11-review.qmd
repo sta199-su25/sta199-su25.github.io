@@ -497,7 +497,7 @@ df |>
 :::
 
 ::: {.column .fragment width="50%"}
-> right_join(df_X, df_Y)
+> full_join(df_X, df_Y)
 
 | id  | X    | Y   |
 |-----|------|-----|
@@ -532,7 +532,7 @@ df |>
 :::
 
 ::: {.column width="50%"}
-> right_join(df_X, df_Y)
+> full_join(df_X, df_Y)
 
 | id  | X    | Y   |
 |-----|------|-----|
