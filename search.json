@@ -4455,7 +4455,7 @@
     "href": "slides/07-joining-data.html#joining-left-join-1",
     "title": "Data Joining",
     "section": "Joining: Left Join",
-    "text": "Joining: Left Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nleft_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n3\nX3\nNA\n\n\n\n\n\n\n\nposition: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste / pointer-events: none; / so it never steals clicks */ “}"
+    "text": "Joining: Left Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nleft_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n3\nX3\nNA"
   },
   {
     "objectID": "slides/07-joining-data.html#joining-right-join",
@@ -4469,7 +4469,21 @@
     "href": "slides/07-joining-data.html#joining-right-join-1",
     "title": "Data Joining",
     "section": "Joining: Right Join",
-    "text": "Joining: Right Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nright_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n4\nNA\nY4\n\n\n\n\n\n\n\nposition: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste / pointer-events: none; / so it never steals clicks */ “}"
+    "text": "Joining: Right Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nright_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n4\nNA\nY4"
+  },
+  {
+    "objectID": "slides/07-joining-data.html#joining-full-join",
+    "href": "slides/07-joining-data.html#joining-full-join",
+    "title": "Data Joining",
+    "section": "Joining: Full Join",
+    "text": "Joining: Full Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\n\nright_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n3\nX3\nNA\n\n\n4\nNA\nY4"
+  },
+  {
+    "objectID": "slides/07-joining-data.html#joining-full-join-1",
+    "href": "slides/07-joining-data.html#joining-full-join-1",
+    "title": "Data Joining",
+    "section": "Joining: Full Join",
+    "text": "Joining: Full Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nright_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n3\nX3\nNA\n\n\n4\nNA\nY4"
   },
   {
     "objectID": "slides/07-joining-data.html#joining-inner-join",
@@ -4483,7 +4497,7 @@
     "href": "slides/07-joining-data.html#joining-inner-join-1",
     "title": "Data Joining",
     "section": "Joining: Inner Join",
-    "text": "Joining: Inner Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\ninner_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n\n\n\n\n\nposition: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste / pointer-events: none; / so it never steals clicks */ “}"
+    "text": "Joining: Inner Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\ninner_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2"
   },
   {
     "objectID": "slides/07-joining-data.html#joining-semi-join",
@@ -4497,7 +4511,7 @@
     "href": "slides/07-joining-data.html#joining-semi-join-1",
     "title": "Data Joining",
     "section": "Joining: Semi Join",
-    "text": "Joining: Semi Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nsemi_join(df_X, df_Y)\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n\n\n\n\n\nposition: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste / pointer-events: none; / so it never steals clicks */ “}"
+    "text": "Joining: Semi Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nsemi_join(df_X, df_Y)\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2"
   },
   {
     "objectID": "slides/07-joining-data.html#joining-anti-join",
@@ -4511,7 +4525,7 @@
     "href": "slides/07-joining-data.html#joining-anti-join-1",
     "title": "Data Joining",
     "section": "Joining: Anti Join",
-    "text": "Joining: Anti Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nanti_join(df_X, df_Y)\n\n\n\n\n\n\n\n\n\nposition: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste / pointer-events: none; / so it never steals clicks */ “}"
+    "text": "Joining: Anti Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nanti_join(df_X, df_Y)\n\n\n\nid\nX\n\n\n3\nX3"
   },
   {
     "objectID": "slides/07-joining-data.html#summary-of-join-types",
@@ -4637,7 +4651,7 @@
     "href": "slides/07-joining-data-slides.html#joining-left-join-1",
     "title": "Data Joining",
     "section": "Joining: Left Join",
-    "text": "Joining: Left Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nleft_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n3\nX3\nNA\n\n\n\n\n\n\nposition: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste / pointer-events: none; / so it never steals clicks */ “}"
+    "text": "Joining: Left Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nleft_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n3\nX3\nNA"
   },
   {
     "objectID": "slides/07-joining-data-slides.html#joining-right-join",
@@ -4651,7 +4665,21 @@
     "href": "slides/07-joining-data-slides.html#joining-right-join-1",
     "title": "Data Joining",
     "section": "Joining: Right Join",
-    "text": "Joining: Right Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nright_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n4\nNA\nY4\n\n\n\n\n\n\nposition: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste / pointer-events: none; / so it never steals clicks */ “}"
+    "text": "Joining: Right Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nright_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n4\nNA\nY4"
+  },
+  {
+    "objectID": "slides/07-joining-data-slides.html#joining-full-join",
+    "href": "slides/07-joining-data-slides.html#joining-full-join",
+    "title": "Data Joining",
+    "section": "Joining: Full Join",
+    "text": "Joining: Full Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nright_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n3\nX3\nNA\n\n\n4\nNA\nY4"
+  },
+  {
+    "objectID": "slides/07-joining-data-slides.html#joining-full-join-1",
+    "href": "slides/07-joining-data-slides.html#joining-full-join-1",
+    "title": "Data Joining",
+    "section": "Joining: Full Join",
+    "text": "Joining: Full Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nright_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n3\nX3\nNA\n\n\n4\nNA\nY4"
   },
   {
     "objectID": "slides/07-joining-data-slides.html#joining-inner-join",
@@ -4665,7 +4693,7 @@
     "href": "slides/07-joining-data-slides.html#joining-inner-join-1",
     "title": "Data Joining",
     "section": "Joining: Inner Join",
-    "text": "Joining: Inner Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\ninner_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2\n\n\n\n\n\n\nposition: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste / pointer-events: none; / so it never steals clicks */ “}"
+    "text": "Joining: Inner Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\ninner_join(df_X, df_Y)\n\n\n\nid\nX\nY\n\n\n\n1\nX1\nY1\n\n\n2\nX2\nY2"
   },
   {
     "objectID": "slides/07-joining-data-slides.html#joining-semi-join",
@@ -4679,7 +4707,7 @@
     "href": "slides/07-joining-data-slides.html#joining-semi-join-1",
     "title": "Data Joining",
     "section": "Joining: Semi Join",
-    "text": "Joining: Semi Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nsemi_join(df_X, df_Y)\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n\n\n\n\nposition: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste / pointer-events: none; / so it never steals clicks */ “}"
+    "text": "Joining: Semi Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nsemi_join(df_X, df_Y)\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2"
   },
   {
     "objectID": "slides/07-joining-data-slides.html#joining-anti-join",
@@ -4693,7 +4721,7 @@
     "href": "slides/07-joining-data-slides.html#joining-anti-join-1",
     "title": "Data Joining",
     "section": "Joining: Anti Join",
-    "text": "Joining: Anti Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nanti_join(df_X, df_Y)\n\n\n\n\n\n\n\n\nposition: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste / pointer-events: none; / so it never steals clicks */ “}"
+    "text": "Joining: Anti Join\n\n\n\ndf_X\n\n\n\nid\nX\n\n\n\n1\nX1\n\n\n2\nX2\n\n\n3\nX3\n\n\n\n\n\ndf_Y\n\n\n\nid\nY\n\n\n\n1\nY1\n\n\n2\nY2\n\n\n4\nY4\n\n\n\n\n\nanti_join(df_X, df_Y)\n\n\n\nid\nX\n\n\n3\nX3"
   },
   {
     "objectID": "slides/07-joining-data-slides.html#summary-of-join-types",

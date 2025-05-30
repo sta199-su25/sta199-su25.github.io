@@ -275,6 +275,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#joining-left-join-1" id="toc-joining-left-join-1" class="nav-link" data-scroll-target="#joining-left-join-1">Joining: Left Join</a></li>
   <li><a href="#joining-right-join" id="toc-joining-right-join" class="nav-link" data-scroll-target="#joining-right-join">Joining: Right Join</a></li>
   <li><a href="#joining-right-join-1" id="toc-joining-right-join-1" class="nav-link" data-scroll-target="#joining-right-join-1">Joining: Right Join</a></li>
+  <li><a href="#joining-full-join" id="toc-joining-full-join" class="nav-link" data-scroll-target="#joining-full-join">Joining: Full Join</a></li>
+  <li><a href="#joining-full-join-1" id="toc-joining-full-join-1" class="nav-link" data-scroll-target="#joining-full-join-1">Joining: Full Join</a></li>
   <li><a href="#joining-inner-join" id="toc-joining-inner-join" class="nav-link" data-scroll-target="#joining-inner-join">Joining: Inner Join</a></li>
   <li><a href="#joining-inner-join-1" id="toc-joining-inner-join-1" class="nav-link" data-scroll-target="#joining-inner-join-1">Joining: Inner Join</a></li>
   <li><a href="#joining-semi-join" id="toc-joining-semi-join" class="nav-link" data-scroll-target="#joining-semi-join">Joining: Semi Join</a></li>
@@ -743,8 +745,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <!-- small Venn diagram in the bottom-right -->
-<div class="{style=&quot;">
-<p>position: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste <em>/ pointer-events: none; /</em> so it never steals clicks */ “} <img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
+<div style="
+  position: absolute;
+  bottom: 80px;
+  right: -90px;
+  width: 280px;           /* adjust to taste */
+  pointer-events: none;  /* so it never steals clicks */
+">
+<p><img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
 </div>
 </section><section id="joining-right-join" class="level2"><h2 class="anchored" data-anchor-id="joining-right-join">Joining: Right Join</h2>
 <div class="columns">
@@ -909,8 +917,196 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <!-- small Venn diagram in the bottom-right -->
-<div class="{style=&quot;">
-<p>position: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste <em>/ pointer-events: none; /</em> so it never steals clicks */ “} <img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
+<div style="
+  position: absolute;
+  bottom: 80px;
+  right: -90px;
+  width: 280px;           /* adjust to taste */
+  pointer-events: none;  /* so it never steals clicks */
+">
+<p><img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
+</div>
+</section><section id="joining-full-join" class="level2"><h2 class="anchored" data-anchor-id="joining-full-join">Joining: Full Join</h2>
+<div class="columns">
+<div class="column fragment" style="width:25%;">
+<blockquote class="blockquote">
+<p>df_X</p>
+</blockquote>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>id</th>
+<th>X</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>X1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>X2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>X3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="column fragment" style="width:25%;">
+<blockquote class="blockquote">
+<p>df_Y</p>
+</blockquote>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>id</th>
+<th>Y</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Y1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Y2</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Y4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="column fragment" style="width:50%;">
+<blockquote class="blockquote">
+<p>right_join(df_X, df_Y)</p>
+</blockquote>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>id</th>
+<th>X</th>
+<th>Y</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>X1</td>
+<td>Y1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>X2</td>
+<td>Y2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>X3</td>
+<td><em>NA</em></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><em>NA</em></td>
+<td>Y4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="joining-full-join-1" class="level2"><h2 class="anchored" data-anchor-id="joining-full-join-1">Joining: Full Join</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<blockquote class="blockquote">
+<p>df_X</p>
+</blockquote>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>id</th>
+<th>X</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>X1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>X2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>X3</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:25%;">
+<blockquote class="blockquote">
+<p>df_Y</p>
+</blockquote>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>id</th>
+<th>Y</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Y1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Y2</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Y4</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<blockquote class="blockquote">
+<p>right_join(df_X, df_Y)</p>
+</blockquote>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>id</th>
+<th>X</th>
+<th>Y</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>X1</td>
+<td>Y1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>X2</td>
+<td>Y2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>X3</td>
+<td><em>NA</em></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><em>NA</em></td>
+<td>Y4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- small Venn diagram in the bottom-right -->
+<div style="
+  position: absolute;
+  bottom: 80px;
+  right: -90px;
+  width: 280px;           /* adjust to taste */
+  pointer-events: none;  /* so it never steals clicks */
+">
+<p><img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
 </div>
 </section><section id="joining-inner-join" class="level2"><h2 class="anchored" data-anchor-id="joining-inner-join">Joining: Inner Join</h2>
 <div class="columns">
@@ -1065,8 +1261,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <!-- small Venn diagram in the bottom-right -->
-<div class="{style=&quot;">
-<p>position: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste <em>/ pointer-events: none; /</em> so it never steals clicks */ “} <img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
+<div style="
+  position: absolute;
+  bottom: 80px;
+  right: -90px;
+  width: 280px;           /* adjust to taste */
+  pointer-events: none;  /* so it never steals clicks */
+">
+<p><img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
 </div>
 </section><section id="joining-semi-join" class="level2"><h2 class="anchored" data-anchor-id="joining-semi-join">Joining: Semi Join</h2>
 <div class="columns">
@@ -1215,8 +1417,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <!-- small Venn diagram in the bottom-right -->
-<div class="{style=&quot;">
-<p>position: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste <em>/ pointer-events: none; /</em> so it never steals clicks */ “} <img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
+<div style="
+  position: absolute;
+  bottom: 80px;
+  right: -90px;
+  width: 280px;           /* adjust to taste */
+  pointer-events: none;  /* so it never steals clicks */
+">
+<p><img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
 </div>
 </section><section id="joining-anti-join" class="level2"><h2 class="anchored" data-anchor-id="joining-anti-join">Joining: Anti Join</h2>
 <div class="columns">
@@ -1340,15 +1548,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>anti_join(df_X, df_Y)</p>
 </blockquote>
-<table class="caption-top table"><tbody><tr class="odd">
-<td></td>
-<td></td>
-</tr></tbody></table>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>id</th>
+<th>X</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td>3</td>
+<td>X3</td>
+</tr></tbody>
+</table>
 </div>
 </div>
 <!-- small Venn diagram in the bottom-right -->
-<div class="{style=&quot;">
-<p>position: absolute; bottom: 80px; right: -90px; width: 280px; /* adjust to taste <em>/ pointer-events: none; /</em> so it never steals clicks */ “} <img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
+<div style="
+  position: absolute;
+  bottom: 80px;
+  right: -90px;
+  width: 280px;           /* adjust to taste */
+  pointer-events: none;  /* so it never steals clicks */
+">
+<p><img src="images/venn-1.png" style="width: 100%; height: auto;"></p>
 </div>
 </section><section id="summary-of-join-types" class="level2"><h2 class="anchored" data-anchor-id="summary-of-join-types">Summary of Join Types</h2>
 <p><img src="images/left.png" class="img-fluid"></p>
@@ -1511,7 +1731,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
