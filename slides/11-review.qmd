@@ -29,6 +29,7 @@ continent <- read_csv("data/continents.csv")
 -   joins
 -   pivots
 
+
 ## Computing summary stats
 
 -   **With summarize:** condenses information into smaller result table
