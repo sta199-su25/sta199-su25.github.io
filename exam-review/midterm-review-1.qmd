@@ -6,7 +6,7 @@ subtitle: Part 1
 ::: {.callout-tip collapse="true"}
 ## Solutions
 
-Coming later - try them yourself first!!!
+Posted!
 :::
 
 ::: {.callout-tip collapse="true"}
@@ -27,6 +27,9 @@ library(janitor)
 library(knitr)
 #theme_set(theme_bw(base_size = 12))
 ```
+
+Some of these review questions uses data sets that you have seen before.
+Remember, you do not need to have any details of these data sets memorized - any specifics needed on the exam will be provided.
 
 ## Penguins
 
@@ -337,176 +340,6 @@ d.  `summarize()`
 
 e.  `slice()`
 
-## Law & Order
-
-You've heard of the tidyverse, now let's visit the Law & Order-verse.
-Doink doink![^1]
-
-[^1]: "Doink doink" is the scene and episode introductory sound on the Law & Order series.
-    If you've never heard it, you're not at any disadvantage for the exam.
-    If you've ever heard it, good luck getting it out of your head!
-
-Law & Order is a police procedural and legal drama television series that has been running since the 1990s.
-The Law & Order franchise includes a number of series such as Law & Order, Law & Order: SVU, Law & Order: Criminal Intent, etc.
-
-You will work with data on average ratings for each season of three series from the Law & Order-verse -- a subset of the data from the previous questions.
-Below is a peek at the first ten rows of the Law & Order data.
-
-```{r}
-#| echo: false
-#| message: false
-tv <- read_csv("data/tv.csv")
-law_and_order <- tv |>
-  filter(str_detect(title, "Law & Order"))
-```
-
-The plot below shows the distributions of average ratings of various Law & Order series across seasons.
-
-```{r}
-#| echo: false
-#| fig-asp: 0.35
-#| fig-width: 8
-
-law_and_order |>
-  mutate(title = str_replace(title, "Law & Order: ", "Law & Order:\n")) |>
-  ggplot(aes(x = av_rating, y = fct_rev(title))) +
-  geom_boxplot(alpha = 0.5, show.legend = FALSE, outlier.size = 2) +
-  labs(x = "Average rating", y = "Series title")
-```
-
-### Question 8
-
-Based on the information from the side-by-side box plots, fill in the legend of the plot below with Law & Order series titles.
-
-```{r}
-#| echo: false
-#| fig-asp: 0.35
-#| fig-width: 8
-#| warning: false
-
-ggplot(law_and_order, aes(x = season, y = av_rating, shape = title)) +
-  geom_line(linewidth = 0.3) +
-  geom_point(size = 3) +
-  scale_shape_manual(
-    values = c("Law & Order: SVU" = "triangle", 
-               "Law & Order: Criminal Intent" = "diamond", 
-               "Law & Order: True Crime" = "square", 
-               "Law & Order" = "asterisk", 
-               "Law & Order: LA" = "circle"), 
-    labels = c("__________________________________",
-               "__________________________________",
-               "__________________________________",
-               "__________________________________",
-               "__________________________________")
-  ) +
-  labs(
-    x = "Season",
-    y = "Average rating",
-    shape = "Series title"
-  ) +
-  theme(legend.key.height = unit(1.25, "cm"))
-```
-
-### Question 9
-
-The following code calculates the standard deviations of average season ratings of the five Law & Order series.
-Unfortunately, the output is partially erased and replaced with blanks.
-
-::: callout-tip
-Standard deviation is a measure of variation in the data.
-A higher standard deviation indicates the data has more variation; a lower standard deviation indicates less variation.
-:::
-
-```{r}
-#| results: hide
-
-lo_titles <- c("Law & Order", "Law & Order: Criminal Intent", "Law & Order: SVU")
-
-law_and_order |>
-  filter(title %in% lo_titles) |>
-  group_by(title) |>
-  summarize(mean_av_rating = mean(av_rating), sd_av_rating = sd(av_rating))
-```
-
-```         
-# A tibble: 5 × 3
-  title                         mean_av_rating sd_av_rating
-  <chr>                                  <dbl>        <dbl>
-1 Law & Order                            _(1)_        0.106
-2 Law & Order: Criminal Intent            8.20        0.129
-4 Law & Order: SVU                        8.67        _(2)_
-```
-
-Based on the visualizations you've seen of these data so far, which of the following is [**true**]{.underline} about the blanks in the output?
-**Select all that are true.**
-
-a.  The **mean** of average ratings (Blank 1) of Law & Order seasons is **lower** than the other two means.
-
-b.  The **mean** of average ratings (Blank 1) of Law & Order seasons is **higher** than the other two means.
-
-c.  The **standard deviation** of average ratings of Law & Order: SVU seasons (Blank 2) is **lower** than the other two standard deviations.
-
-d.  The **standard deviation** of average ratings of Law & Order: SVU seasons (Blank 2) is **higher** than the other two standard deviations.
-
-e.  The **standard deviation** of average ratings of Law & Order: SVU seasons (Blank 2) is **between** the other two standard deviations.
-
-## Romance and comedy
-
-Finally, we focus on romance and comedy shows.
-We first filter the dataset for any shows that have romance or comedy as their genre (`genre_1`, `genre_2`, or `genre_3`) and then remove shows that have both of these genre labels.
-For the next two questions, we focus on these shows that we identify as either romance or comedy.
-We then calculate the mean of the average season ratings for each show, to obtain a single "mean average rating" value per show.
-
-```{r}
-#| echo: false
-
-romance_shows <- tv |>
-  filter(genre_1 == "Romance" | genre_2 == "Romance" | genre_3 == "Romance") |>
-  distinct(title) |>
-  pull()
-
-comedy_shows <- tv |>
-  filter(genre_1 == "Comedy" | genre_2 == "Comedy" | genre_3 == "Comedy") |>
-  distinct(title) |>
-  pull()
-
-romance_comedy <- tv |>
-  filter(title %in% c(romance_shows, comedy_shows)) |>
-  filter(!(title %in% romance_shows & title %in% comedy_shows)) |>
-  mutate(
-    genre = if_else(title %in% romance_shows, "Comedy", "Romance")
-  ) |>
-  select(-genre_1, -genre_2, -genre_3)
-
-romance_comedy_means <- romance_comedy |>
-  group_by(genre, title) |>
-  summarize(mean_av_rating = mean(av_rating), .groups = "drop")
-```
-
-The plot below shows the distributions of mean average ratings of seasons of comedy and romance shows.
-
-```{r}
-#| echo: false
-#| fig-asp: 0.6
-
-ggplot(romance_comedy_means, aes(x = mean_av_rating, fill = genre)) +
-  geom_histogram(binwidth = 0.25, show.legend = FALSE, color = "white") +
-  facet_wrap(~genre, nrow = 2) +
-  labs(x = "Mean average rating", y = "Count") +
-  scale_fill_grey(start = 0.2, end = 0.6)
-```
-
-### Question 10
-
-Which of the following statements is [**true**]{.underline} about these distributions?
-**Select all that are true.**
-
-a.  Mean average ratings of romance shows are bimodal.
-b.  Mean average ratings of comedy are unimodal.
-c.  Mean average ratings of romance shows is left skewed.
-d.  Mean average ratings of comedy shows is right skewed.
-e.  There are more romance shows than comedy shows.
-
 ## IMDB
 
 The data for the next few questions come from the Internet Movie Database (IMDB).
@@ -523,7 +356,7 @@ The name of the data frame used for this analysis is `movies`, and it contains t
 \setcounter{table}{0}
 
 | Variable          | Description                                                             |
-|------------------------|------------------------------------------------|
+|------------------------|-----------------------------------------------|
 | `name`            | name of the movie                                                       |
 | `rating`          | rating of the movie (R, PG, etc.)                                       |
 | `genre`           | main genre of the movie.                                                |
@@ -589,7 +422,7 @@ options(
 ```
 :::
 
-### Question 11
+### Question 7
 
 The `name` and `runtime` variables are shown below, with the variable types suppressed.
 
@@ -631,7 +464,7 @@ e.  Logical
 
 \vspace{2cm}
 
-### Question 12
+### Question 8
 
 The code below summarizes the data in a certain way.
 
