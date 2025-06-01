@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../exam-review/midterm-review.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -89,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Midterm review</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exam-review/midterm-review.html">Exam Review</a></li><li class="breadcrumb-item"><a href="../exam-review/midterm-review-A.html">Midterm Review Answers</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -214,17 +215,23 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Exam Review</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exam-review/midterm-review.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exam-review/midterm-review-A.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Midterm Review Answers</span></a>
   </div>
 </li>
       </ul>
@@ -240,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exam-review/midterm-review.html">Exam Review</a></li><li class="breadcrumb-item"><a href="../exam-review/midterm-review-A.html">Midterm Review Answers</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Midterm review</h1>
 <p class="subtitle lead">Suggested answers</p>
@@ -264,13 +271,13 @@ ul.task-list li input[type="checkbox"] {
 <li><p>b, c, f, g -</p>
 <ul>
 <li><p>The <code>blizzard_salary</code> dataset has 409 rows.</p></li>
-<li><p>The <code>percent_incr</code> variable is numerical and continuous.</p></li>
+<li><p>The <code>percent_incr</code> variable is numerical and continuous (a double - &lt;dbl&gt;).</p></li>
 <li><p>The <code>salary_type</code> variable is categorical.</p></li>
 </ul></li>
 <li><p>Figure 1 - A shared x-axis makes it easier to compare summary statistics for the variable on the x-axis.</p></li>
 <li><p>c - It’s a value higher than the median for hourly but lower than the mean for salaried.</p></li>
 <li><p>b - There is more variability around the mean compared to the hourly distribution.</p></li>
-<li><p>a, b, e - Pie charts and waffle charts are for visualizing distributions of categorical data only. Scatterplots are for visualizing the relationship between two numerical variables.</p></li>
+<li><p>a, b, e - Pie charts and bar charts are for visualizing distributions of categorical data. Scatterplots are for visualizing the relationship between two numerical variables.</p></li>
 <li><p>c - <code>mutate()</code> is used to create or modify a variable.</p></li>
 <li><p>a - <code>"Poor", "Successful", "High", "Top"</code></p></li>
 <li><p>b - Option 2. The plot in Option 1 shows the number of employees with a given performance rating for each salary type while the plot in Option 2 gives the proportion of employees with a given performance rating for each salary type. In order to assess the relationship between these variables (e.g., how much more likely is a Top rating among Salaried vs.&nbsp;Hourly workers), we need the proportions, not the counts.</p></li>
@@ -278,12 +285,11 @@ ul.task-list li input[type="checkbox"] {
 <li><p>The proportions under Hourly would go in the Hourly bar, and those under Salaried would go in the Salaried bar.</p></li>
 <li><p>c - <code>filter(salary_type != "Hourly" &amp; performance_rating == "Poor")</code> - There are 5 observations for <strong>“not Hourly”</strong> <strong>“and”</strong> Poor.</p></li>
 <li><p>a - <code>arrange()</code> - The result is arranged in increasing order of <code>annual_salary</code>, which is the default for <code>arrange()</code>.</p></li>
-<li><p>c, d, e, f.</p></li>
+<li><p>c, d, e</p></li>
 <li><p>Part 1: The following should be fixed:</p>
 <ul>
 <li><p>There should be a <code>|</code> after <code>#</code> before <code>label</code></p></li>
 <li><p>There should be a <code>:</code> after label, not <code>=</code></p></li>
-<li><p>There shouldn’t be a space in the chunk label, it should be <code>plot-blizzard</code></p></li>
 <li><p>There should be spaces after commas in the code</p></li>
 <li><p>There should be spaces on both sides of <code>=</code> in the code</p></li>
 <li><p>There should be a space before <code>+</code></p></li>
@@ -721,6 +727,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../exam-review/midterm-review.html" class="pagination-link" aria-label="Midterm Review">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Midterm Review</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
