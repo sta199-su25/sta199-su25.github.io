@@ -12,7 +12,7 @@ execute:
 ::: {.callout-tip collapse="true"}
 ## Solutions
 
-Coming later - try them yourself first!!!
+Posted!!
 :::
 
 ::: {.callout-tip collapse="true"}
