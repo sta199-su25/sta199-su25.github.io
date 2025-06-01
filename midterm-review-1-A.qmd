@@ -1,5 +1,5 @@
 ---
-title: Midterm Practice Questions: Suggested answers
+title: Midterm Practice Questions Suggested answers
 subtitle: Part 2
 execute:
   echo: false
