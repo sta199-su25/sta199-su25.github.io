@@ -1,6 +1,6 @@
 ---
-title: Midterm 1 Practice Questions
-subtitle: Part 1
+title: Midterm Practice Questions
+subtitle: Part 2
 ---
 
 ::: {.callout-tip collapse="true"}
@@ -422,7 +422,7 @@ options(
 ```
 :::
 
-### Question 7
+### Question 8
 
 The `name` and `runtime` variables are shown below, with the variable types suppressed.
 
@@ -464,7 +464,7 @@ e.  Logical
 
 \vspace{2cm}
 
-### Question 8
+### Question 9
 
 The code below summarizes the data in a certain way.
 
@@ -486,7 +486,7 @@ d.  Results in a character vector.
 
 e.  The result shows there are 435 movies released in the United States.
 
-### Question 13
+### Question 10
 
 Suppose you want a visualization that shows the number of movies in the sample in each `genre`.
 Your first attempt is as follows.
@@ -532,24 +532,3 @@ c.  Map `genre` to the `y` aesthetic.
 d.  Add a title, x and y-axis labels, and a caption.
 
 e.  Filter out all moves in genres other than Comedy, Drama, Action, and Horror before plotting.
-
-### Question 14
-
-Which of the following is [**TRUE**]{.underline} about the code and its result?
-**Select all that are true.**
-
-```{r}
-movies |>
-  count(rating, genre) |>
-  pivot_wider(names_from = genre, values_from = n, values_fill = 0)
-```
-
-a.  The code counts how many movies are in each rating and genre combination.
-
-b.  The code sorts the results in descending order.
-
-c.  Each row of the output is a movie.
-
-d.  The output shows that there are six distinct ratings in the dataset.
-
-e.  The code reduces the number of variables and observations in the `movies` data frame to six.
