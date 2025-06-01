@@ -9,7 +9,7 @@ execute:
 
     -   The `blizzard_salary` dataset has 409 rows.
 
-    -   The `percent_incr` variable is numerical and continuous.
+    -   The `percent_incr` variable is numerical and continuous (a double - \<dbl\>).
 
     -   The `salary_type` variable is categorical.
 
@@ -19,7 +19,7 @@ execute:
 
 4.  b - There is more variability around the mean compared to the hourly distribution.
 
-5.  a, b, e - Pie charts and waffle charts are for visualizing distributions of categorical data only.
+5.  a, b, e - Pie charts and bar charts are for visualizing distributions of categorical data.
     Scatterplots are for visualizing the relationship between two numerical variables.
 
 6.  c - `mutate()` is used to create or modify a variable.
@@ -38,15 +38,13 @@ execute:
 
 12. a - `arrange()` - The result is arranged in increasing order of `annual_salary`, which is the default for `arrange()`.
 
-13. c, d, e, f.
+13. c, d, e
 
 14. Part 1: The following should be fixed:
 
     -   There should be a `|` after `#` before `label`
 
     -   There should be a `:` after label, not `=`
-
-    -   There shouldn't be a space in the chunk label, it should be `plot-blizzard`
 
     -   There should be spaces after commas in the code
 
