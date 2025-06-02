@@ -940,6 +940,22 @@ by Carl Bergstrom and Jevin West
 :::
 :::
 
+## Invisible Women
+
+::: columns
+::: column
+![](images/11/invisible.jpg){width="530"}
+:::
+
+::: column
+Invisible Women: Data Bias in a World Designed for Men
+
+by Caroline Criado Perez
+:::
+:::
+
+## 
+
 ## Machine Bias
 
 ::: columns
