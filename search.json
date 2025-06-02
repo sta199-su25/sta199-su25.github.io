@@ -932,7 +932,7 @@
     "href": "index.html",
     "title": "STA 199: Intro to Data Science and Statistical Thinking",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Visualization\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02  ✅ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nMore Data visualization\n🖥️ slides 03  🗒️ notes 03  ⌨️ ae 03  ✅ ae 03\n\n📘 ims - chp 5 🎥 Visualizing Quantitative Data 🎥 Visualizing Categorical Data\n\n\n\nMon, May 19\nLab 1\n💻 lab 1\n\n📗 r4ds - chp 2  📘 ims - chp 5\n\n\n\nTue, May 20\nGrammar of Data Transformation\n🖥️ slides 04  🗒️ notes 04  ⌨️ ae 04  ✅ ae 04\n\n📗 r4ds - chp 3.1-3.5 \n\n\n\nWed, May 21\nMore Data Transformation\n🖥️ slides 05  🗒️ notes 05  ⌨️ ae 05  ✅ ae 05\nLab 1 - 11:59PM ET\n📗 r4ds - chp 3.6-3.7  🎥 Working with a single data frame\n\n\n\nThu, May 22\nTidying Data\n🖥️ slides 06  🗒️ notes 06  ⌨️ ae 06  ✅ ae 06\n\n📗 r4ds - chp 5 📘 ims - chp 6\n\n\n\nThu, May 22\nLab 2\n💻 lab 2\n\n📗 r4ds - chp 4 🎥 Tidy data 🎥 Tidying data 🎥 Code Along: Population over time\n\n\n\nFri, May 23\nJoining Data\n🖥️ slides 07  🗒️ notes 07  ⌨️ ae 07  ✅ ae 07\n\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n\n\nSun, May 25\n\n\n\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n🖥️ slides 08  🗒️ notes 08  ⌨️ ae 08  ✅ ae 08\n\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n\n\nWed, May 28\nImporting and Recoding Data\n🖥️ slides 09  🗒️ notes 09  ⌨️ ae 09  ✅ ae 09\nLab 2 - 11:59PM ET\n🎥 Importing data  🎥 Code along :: Student survey  📗 r4ds - chp 7\n\n\n\nThu, May 29\nMore Practice + Midterm Review\n🖥️ slides 10  🗒️ notes 10  ⌨️ ae 10  ✅ ae 10\n\n\n\n\n\nThu, May 29\nLab 3\n💻 lab 3\n\n\n\n\n\nFri, May 30\nMidterm Review\n🖥️ slides 11  🗒️ notes 11  📊 Kahoot!! \n\n\n\n\n\nSun, Jun 1\n\n\nLab 3 - 11:59PM ET\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n\n\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\nProject Milestone 2 - 12:30PM ET\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Visualization\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02  ✅ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nMore Data visualization\n🖥️ slides 03  🗒️ notes 03  ⌨️ ae 03  ✅ ae 03\n\n📘 ims - chp 5 🎥 Visualizing Quantitative Data 🎥 Visualizing Categorical Data\n\n\n\nMon, May 19\nLab 1\n💻 lab 1\n\n📗 r4ds - chp 2  📘 ims - chp 5\n\n\n\nTue, May 20\nGrammar of Data Transformation\n🖥️ slides 04  🗒️ notes 04  ⌨️ ae 04  ✅ ae 04\n\n📗 r4ds - chp 3.1-3.5 \n\n\n\nWed, May 21\nMore Data Transformation\n🖥️ slides 05  🗒️ notes 05  ⌨️ ae 05  ✅ ae 05\nLab 1 - 11:59PM ET\n📗 r4ds - chp 3.6-3.7  🎥 Working with a single data frame\n\n\n\nThu, May 22\nTidying Data\n🖥️ slides 06  🗒️ notes 06  ⌨️ ae 06  ✅ ae 06\n\n📗 r4ds - chp 5 📘 ims - chp 6\n\n\n\nThu, May 22\nLab 2\n💻 lab 2\n\n📗 r4ds - chp 4 🎥 Tidy data 🎥 Tidying data 🎥 Code Along: Population over time\n\n\n\nFri, May 23\nJoining Data\n🖥️ slides 07  🗒️ notes 07  ⌨️ ae 07  ✅ ae 07\n\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n\n\nSun, May 25\n\n\n\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n🖥️ slides 08  🗒️ notes 08  ⌨️ ae 08  ✅ ae 08\n\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n\n\nWed, May 28\nImporting and Recoding Data\n🖥️ slides 09  🗒️ notes 09  ⌨️ ae 09  ✅ ae 09\nLab 2 - 11:59PM ET\n🎥 Importing data  🎥 Code along :: Student survey  📗 r4ds - chp 7\n\n\n\nThu, May 29\nMore Practice + Midterm Review\n🖥️ slides 10  🗒️ notes 10  ⌨️ ae 10  ✅ ae 10\n\n\n\n\n\nThu, May 29\nLab 3\n💻 lab 3\n\n\n\n\n\nFri, May 30\nMidterm Review\n🖥️ slides 11  🗒️ notes 11  📊 Kahoot!! \n\n\n\n\n\nSun, Jun 1\n\n\nLab 3 - 11:59PM ET\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n🖥️ slides 12  🗒️ notes 12 \n\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n💻 Project Milestone 1\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n\nMidterm Takehome - 9:30AM ET\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\n\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n\n\n\n\n\n\nSun, Jun 8\n\n\nProject Milestone 2 - 11:59PM ET\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n\n\n\n\n\n\nMon, Jun 9\nLab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n\nLab 4 - 11:59PM ET\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n\n\n\n\n\n\nThu, Jun 12\nLab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n\n\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n\n\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n\n\n\n\n\n\nSun, Jun 22\n\n\nLab 6 - 11:59PM ET\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -950,7 +950,7 @@
     "href": "project/1-working-collaboratively.html#activity",
     "title": "Working collaboratively",
     "section": "Activity",
-    "text": "Activity\n\nSetup\n\nClone the project repo and open the about.qmd file.\nAssign the numbers 1, 2, 3, 4, and 5 to each of the team members. If your team has fewer than 5 people, some people will need to have multiple numbers.\n\n\n\nLet’s cause a merge conflict!\nOur goal is to see two different types of merges: first we’ll see a type of merge that git can’t figure out on its own how to do on its own (a merge conflict) and requires human intervention, then another type of where that git can figure out how to do without human intervention.\nDoing this will require some tight choreography, so pay attention!\nTake turns in completing the exercise, only one member at a time. Others should just watch, not doing anything on their own projects (this includes not even pulling changes!) until they are instructed to. If you feel like you won’t be able to resist the urge to touch your computer when it’s not your turn, we recommend putting your hands in your pockets or sitting on them!\n\nBefore starting\nEveryone should have the repo cloned and know which role number(s) they are.\n\n\nRole 1\n\nGo to about.qmd in your project repo. Change the [team name] to your actual team name.\nRender the project by clicking on Render in the Build tab, commit (all changed files), and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 2\n\nChange the team name to some other word.\nRender the project by clicking on Render in the Build tab, commit (all changed files), and push. You should get an error.\nPull. Take a look at the document (about.qmd) with the merge conflict.\nClear the merge conflict by editing the document to choose the correct/preferred change.\nRender the project by clicking on Render in the Build tab.\nClick the Stage checkbox for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.\nCommit and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 3\n\nChange the name of the first team member.\nRender the project by clicking on Render in the Build tab, commit, and push. You should get an error.\nPull. No merge conflicts should occur, but you should see a message about merging.\nNow push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 4\n\nChange the name of the first team member to something other than what the previous team member did.\nRender the project by clicking on Render in the Build tab, commit, and push. You should get an error.\nPull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. Render the project by clicking on Render in the Build tab, commit, and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 5\n\nChange the name of the rest of the team members and add descriptions for each person with the help of your team members. Role 5 should be the only one typing; the others should help verbally.\nRender the project by clicking on Render in the Build tab and commit. Discuss as a team what you expect to happen when you hit push. Should there be a merge conflict error or not?\nIf there is a merge conflict, fix it. If not, push your changes.\n\n\n\nEveryone\nPull, and observe the changes in your project."
+    "text": "Activity\n\nSetup\n\nClone the project repo and open the about.qmd file.\nAssign the numbers 1, 2, 3, 4, and 5 to each of the team members. If your team has fewer than 5 people, some people will need to have multiple numbers.\n\n\n\nLet’s cause a merge conflict!\nOur goal is to see two different types of merges: first we’ll see a type of merge that git can’t figure out on its own how to do on its own (a merge conflict) and requires human intervention, then another type of where that git can figure out how to do without human intervention.\nDoing this will require some tight choreography, so pay attention!\nTake turns in completing the exercise, only one member at a time. Others should just watch, not doing anything on their own projects (this includes not even pulling changes!) until they are instructed to. If you feel like you won’t be able to resist the urge to touch your computer when it’s not your turn, we recommend putting your hands in your pockets or sitting on them!\n\nBefore starting\nEveryone should have the repo cloned and know which role number(s) they are.\n\n\nRole 1\n\nGo to about.qmd in your project repo. Change the [team name] to your actual team name.\nRender the project by clicking on Render in the Build tab, commit (all changed files), and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 2\n\nChange the team name to some other word.\nRender the project by clicking on Render in the Build tab, commit (all changed files), and push. You should get an error.\nPull. Take a look at the document (about.qmd) with the merge conflict.\nClear the merge conflict by editing the document to choose the correct/preferred change.\nRender the project by clicking on Render in the Build tab.\nClick the Stage checkbox for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.\nCommit and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 3\n\nChange the name of the first team member.\nRender the project by clicking on Render in the Build tab, commit, and push. You should get an error.\nPull. No merge conflicts should occur, but you should see a message about merging.\nNow push.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 4\n\nChange the name of the first team member to something other than what the previous team member did.\nRender the project by clicking on Render in the Build tab, commit, and push. You should get an error.\nPull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. Render the project by clicking on Render in the Build tab, commit, and push!\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure the previous role has finished before moving on to the next step.\n\n\n\n\nRole 5\n\nChange the name of the rest of the team members and add descriptions for each person with the help of your team members. Role 5 should be the only one typing; the others should help verbally.\nRender the project by clicking on Render in the Build tab and commit. Discuss as a team what you expect to happen when you hit push. Should there be a merge conflict error or not?\nIf there is a merge conflict, fix it. If not, push your changes.\n\n\n\nEveryone\nPull, and observe the changes in your project."
   },
   {
     "objectID": "project/1-working-collaboratively.html#tips-for-collaborating-via-github",
@@ -2006,32 +2006,32 @@
     "text": "AE 08: Working with Factors"
   },
   {
-    "objectID": "slides/12-ethics-slides.html#basic-facts",
-    "href": "slides/12-ethics-slides.html#basic-facts",
+    "objectID": "slides/12-ethics-slides.html#announcements",
+    "href": "slides/12-ethics-slides.html#announcements",
     "title": "Data Ethics",
-    "section": "Basic facts",
-    "text": "Basic facts\nWorth 20% of your final grade; consists of two parts:\n\n\nIn-class: worth 70% of the Midterm 1 grade;\n\nThursday February 20 11:45 AM - 1:00 PM;\nTake note of your room assignment!\nAll multiple choice;\nBoth sides of one 8.5” x 11” sheet of notes.\n\n\n\nTake-home: worth 30% of the Midterm 1 grade.\n\nReleased Thursday February 20 at 1:00 PM;\nDue Monday February 24 at 8:30 AM;\nWorks just like a mini-lab, only zero collaboration."
+    "section": "Announcements",
+    "text": "Announcements\n\nOffice hours today from 3:30 - 7:30\n\nMe: 3:30 - 5:30\nKatie: 5:30 - 7:30\n\n\nIf you were planning on coming to Wednesday’s office hours, let me know!"
   },
   {
-    "objectID": "slides/12-ethics-slides.html#last-weeks-advice",
-    "href": "slides/12-ethics-slides.html#last-weeks-advice",
+    "objectID": "slides/12-ethics-slides.html#policy",
+    "href": "slides/12-ethics-slides.html#policy",
     "title": "Data Ethics",
-    "section": "Last week’s advice",
-    "text": "Last week’s advice\nWhen the world was your oyster and you had nothing but time…\n\n\nPractice problems: released Thursday February 13;\n\nAttend lab: Kahoot on Monday February 17;\n\nOld labs: correct parts where you lost points;\n\nOld AEs: complete tasks we didn’t get to and compare with key;\n\nCode along: watch these videos specifically;\n\nTextbook: odd-numbered exercises in the back of Chs. 1, 4, 5, 6."
+    "section": "Policy:",
+    "text": "Policy:\nYou must explicitly cite the usage of any external online resources. Failure to do so is academic dishonesty."
   },
   {
-    "objectID": "slides/12-ethics-slides.html#this-weeks-advice",
-    "href": "slides/12-ethics-slides.html#this-weeks-advice",
+    "objectID": "slides/12-ethics-slides.html#todays-advice",
+    "href": "slides/12-ethics-slides.html#todays-advice",
     "title": "Data Ethics",
-    "section": "This week’s advice",
-    "text": "This week’s advice\nNow that you only have forty-eight hours…\n\nStudy the Kahoot and the practice problems;\nStudy the Lab 4 solutions;\nSpend some serious time with your cheat sheet;\nStudy old AE keys, and work stuff we didn’t complete."
+    "section": "Today’s advice",
+    "text": "Today’s advice\nNow that you only have forty-eight hours…\n\nStudy the Kahoot and the practice problems;\nLook over the lab problems/solutions\nSpend some serious time with your cheat sheet;\nReview notes/readings for topics you feel unsure about"
   },
   {
-    "objectID": "slides/12-ethics-slides.html#what-if-we-get-snowed-out",
-    "href": "slides/12-ethics-slides.html#what-if-we-get-snowed-out",
+    "objectID": "slides/12-ethics-slides.html#project-goal",
+    "href": "slides/12-ethics-slides.html#project-goal",
     "title": "Data Ethics",
-    "section": "What if we get snowed out?",
-    "text": "What if we get snowed out?\n\nIf classes are canceled: in-class exam is moved to 2/25;\nIf classes are not canceled: in-class exam is 2/20 as planned;\nTake-home exam is the same regardless;\nIf classes are canceled, Testing Center appointments are canceled, and we’ll cross that bridge when we come to it (it will be a mess)."
+    "section": "Project goal:",
+    "text": "Project goal:\n\nWork with a team on a full data analysis project\nToday: how to use git collaboratively!"
   },
   {
     "objectID": "slides/12-ethics-slides.html#misrepresenting-data-science-results",
@@ -2039,6 +2039,41 @@
     "title": "Data Ethics",
     "section": "Misrepresenting data science results",
     "text": "Misrepresenting data science results\nSome common ways people do this, either intentionally or unintentionally, include:\n\n\nClaiming causality where it’s not in the scope of inference of the underlying study\nDistorting axes and scales to make the data tell a different story\nVisualizing spatial areas instead of human density for issues that depend on and affect humans\nOmitting uncertainty in reporting"
+  },
+  {
+    "objectID": "slides/12-ethics-slides.html#my-favorite-saying",
+    "href": "slides/12-ethics-slides.html#my-favorite-saying",
+    "title": "Data Ethics",
+    "section": "My favorite saying:",
+    "text": "My favorite saying:\nCorrelation does not imply causation."
+  },
+  {
+    "objectID": "slides/12-ethics-slides.html#causality-ice-cream-and-drowning",
+    "href": "slides/12-ethics-slides.html#causality-ice-cream-and-drowning",
+    "title": "Data Ethics",
+    "section": "Causality: Ice Cream and Drowning",
+    "text": "Causality: Ice Cream and Drowning"
+  },
+  {
+    "objectID": "slides/12-ethics-slides.html#causality-ice-cream-and-drowning-1",
+    "href": "slides/12-ethics-slides.html#causality-ice-cream-and-drowning-1",
+    "title": "Data Ethics",
+    "section": "Causality: Ice Cream and Drowning",
+    "text": "Causality: Ice Cream and Drowning"
+  },
+  {
+    "objectID": "slides/12-ethics-slides.html#causality-ice-cream-and-drowning-2",
+    "href": "slides/12-ethics-slides.html#causality-ice-cream-and-drowning-2",
+    "title": "Data Ethics",
+    "section": "Causality: Ice Cream and Drowning",
+    "text": "Causality: Ice Cream and Drowning"
+  },
+  {
+    "objectID": "slides/12-ethics-slides.html#causality-ice-cream-and-drowning-3",
+    "href": "slides/12-ethics-slides.html#causality-ice-cream-and-drowning-3",
+    "title": "Data Ethics",
+    "section": "Causality: Ice Cream and Drowning",
+    "text": "Causality: Ice Cream and Drowning"
   },
   {
     "objectID": "slides/12-ethics-slides.html#causality---time-coverage",
@@ -2059,7 +2094,14 @@
     "href": "slides/12-ethics-slides.html#causality---original-study",
     "title": "Data Ethics",
     "section": "Causality - Original study",
-    "text": "Causality - Original study\nMoore, Steven C., et al. “Association of leisure-time physical activity with risk of 26 types of cancer in 1.44 million adults.” JAMA internal medicine 176.6 (2016): 816-825.\n\n\nVolunteers were asked about their physical activity level over the preceding year.\nHalf exercised less than about 150 minutes per week, half exercised more.\nCompared to the bottom 10% of exercisers, the top 10% had lower rates of esophageal, liver, lung, endometrial, colon, and breast cancer.\nResearchers found no association between exercising and 13 other cancers (e.g. pancreatic, ovarian, and brain).\n\nCarl Bergstrom and Jevin West. Calling Bullshit: The art of skepticism in a data-driven world.\nRandom House, 2020.\nSharon Begley. “Does exercise prevent cancer?”. StatNews. 16 May 2016."
+    "text": "Causality - Original study\nMoore, Steven C., et al. “Association of leisure-time physical activity with risk of 26 types of cancer in 1.44 million adults.” JAMA internal medicine 176.6 (2016): 816-825.\n\n\n\nVolunteers were asked about their physical activity level over the preceding year.\nHalf exercised less than about 150 minutes per week, half exercised more.\nCompared to the bottom 10% of exercisers, the top 10% had lower rates of esophageal, liver, lung, endometrial, colon, and breast cancer.\nResearchers found no association between exercising and 13 other cancers (e.g. pancreatic, ovarian, and brain).\n\n\nCarl Bergstrom and Jevin West. Calling Bullshit: The art of skepticism in a data-driven world.\nRandom House, 2020.\nSharon Begley. “Does exercise prevent cancer?”. StatNews. 16 May 2016.\n#Axes and scales"
+  },
+  {
+    "objectID": "slides/12-ethics-slides.html#remember-this",
+    "href": "slides/12-ethics-slides.html#remember-this",
+    "title": "Data Ethics",
+    "section": "Remember this?",
+    "text": "Remember this?"
   },
   {
     "objectID": "slides/12-ethics-slides.html#axes-and-scales---tax-cuts",
@@ -2073,7 +2115,7 @@
     "href": "slides/12-ethics-slides.html#axes-and-scales---cost-of-gas",
     "title": "Data Ethics",
     "section": "Axes and scales - Cost of gas",
-    "text": "Axes and scales - Cost of gas\n\nWhat is wrong with this picture? How would you correct it?"
+    "text": "Axes and scales - Cost of gas\nWhat is wrong with this image?"
   },
   {
     "objectID": "slides/12-ethics-slides.html#axes-and-scales---cost-of-gas-1",
@@ -2087,7 +2129,7 @@
     "href": "slides/12-ethics-slides.html#axes-and-scales---covid-in-ga",
     "title": "Data Ethics",
     "section": "Axes and scales - COVID in GA",
-    "text": "Axes and scales - COVID in GA\n\nWhat is wrong with this picture? How would you correct it?\n\n\n\n\nGeorgia Department of Public Health. 11 May 2020."
+    "text": "Axes and scales - COVID in GA\nWhat is wrong with this image?\n\n\n\nGeorgia Department of Public Health. 11 May 2020."
   },
   {
     "objectID": "slides/12-ethics-slides.html#axes-and-scales---covid-in-ga-1",
@@ -2101,14 +2143,14 @@
     "href": "slides/12-ethics-slides.html#axes-and-scales---pp-services",
     "title": "Data Ethics",
     "section": "Axes and scales - PP services",
-    "text": "Axes and scales - PP services\n\n\n\nWhat is wrong with this picture? How would you correct it?\n\n\n\n\n\n\nTimothy B. Lee. Whatever you think of Planned Parenthood, this is a terrible and dishonest chart. Vox. 29 September 2019."
+    "text": "Axes and scales - PP services\n\n\nWhat is wrong with this picture? How would you correct it?\n\n\n\n\n\nTimothy B. Lee. Whatever you think of Planned Parenthood, this is a terrible and dishonest chart. Vox. 29 September 201 9."
   },
   {
     "objectID": "slides/12-ethics-slides.html#axes-and-scales---pp-services-1",
     "href": "slides/12-ethics-slides.html#axes-and-scales---pp-services-1",
     "title": "Data Ethics",
     "section": "Axes and scales - PP services",
-    "text": "Axes and scales - PP services\n\npp &lt;- tibble(\n  year = c(2006, 2006, 2013, 2013),\n  service = c(\"Abortion\", \"Cancer\", \"Abortion\", \"Cancer\"),\n  n = c(289750, 2007371, 327000, 935573)\n)\n\nggplot(pp, aes(x = year, y = n, color = service)) +\n  geom_point(size = 2) +\n  geom_line(linewidth = 1) +\n  geom_text(aes(label = n), nudge_y = 100000) +\n  geom_text(\n    aes(label = year), \n    nudge_y = 200000, \n    color = \"darkgray\"\n  ) +\n  labs(\n    title = \"Services provided by Planned Parenthood\",\n    caption = \"Source: Planned Parenthood\",\n    x = NULL,\n    y = NULL\n  ) +\n  scale_x_continuous(breaks = c(2006, 2013)) +\n  scale_y_continuous(labels = label_number(big.mark = \",\")) +\n  scale_color_manual(values = c(\"red\", \"purple\")) +\n  annotate(\n    geom = \"text\",\n    label = \"Abortions\",\n    x = 2009.5,\n    y = 400000,\n    color = \"red\"\n  ) +\n  annotate(\n    geom = \"text\",\n    label = \"Cancer screening\\nand prevention services\",\n    x = 2010.5,\n    y = 1600000, \n    color = \"purple\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\")"
+    "text": "Axes and scales - PP services\n\npp &lt;- tibble(\n  year = c(2006, 2006, 2013, 2013),\n  service = c(\"Abortion\", \"Cancer\", \"Abortion\", \"Cancer\"),\n  n = c(289750, 2007371, 327000, 935573)\n)\n\nggplot(pp, aes(x = year, y = n, color = service)) +\n  geom_point(size = 2) +\n  geom_line(linewidth = 1) +\n  geom_text(aes(label = n), nudge_y = 100000) +\n  geom_text(\n    aes(label = year), \n    nudge_y = 200000, \n    color = \"darkgray\"\n  ) +\n  labs(\n    title = \"Services provided by Planned Parenthood\",\n    caption = \"Source: Planned Parenthood\",\n    x = NULL,\n    y = NULL\n  ) +\n  scale_x_continuous(breaks = c(2006, 2013)) +\n  scale_y_continuous(labels = label_number(big.mark = \",\")) +\n  scale_color_manual(values = c(\"darkred\", \"hotpink\")) +\n  annotate(\n    geom = \"text\",\n    label = \"Abortions\",\n    x = 2009.5,\n    y = 400000,\n    color = \"darkred\"\n  ) +\n  annotate(\n    geom = \"text\",\n    label = \"Cancer screening\\nand prevention services\",\n    x = 2010.5,\n    y = 1600000, \n    color = \"hotpink\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\")"
   },
   {
     "objectID": "slides/12-ethics-slides.html#maps-and-areas---voting-map",
@@ -2116,13 +2158,6 @@
     "title": "Data Ethics",
     "section": "Maps and areas - Voting map",
     "text": "Maps and areas - Voting map\n\nDo you recognize this map? What does it show?\n\n\n\n\nLazaro Gamio. “Election maps are telling you big lies about small things”. The Washington Post. 1 Nov 2016."
-  },
-  {
-    "objectID": "slides/12-ethics-slides.html#maps-and-areas---two-alternate-tales",
-    "href": "slides/12-ethics-slides.html#maps-and-areas---two-alternate-tales",
-    "title": "Data Ethics",
-    "section": "Maps and areas - Two alternate tales",
-    "text": "Maps and areas - Two alternate tales\n\n\n\n\n\n\n\n\nAlberto Cairo. Visual Trumpery talk."
   },
   {
     "objectID": "slides/12-ethics-slides.html#maps-and-areas---voting-percentages",
@@ -2157,21 +2192,21 @@
     "href": "slides/12-ethics-slides.html#california-proposition-25-2020",
     "title": "Data Ethics",
     "section": "California Proposition 25 (2020)",
-    "text": "California Proposition 25 (2020)\nPopular referendum on 2018’s Senate Bill 10:\n\n\n\nYES: replace cash bail with ``risk assessment.’’\n\nDemocratic Party, Governor Gavin Newson, League of Women Voters of California, California Medical Association, Democracy for America (progressive PAC), etc.\n\n\n\nNO: keep the cash bail system.\n\nRepublican Party, American Bail Coalition, ACLU of Southern California, NAACP, California Asian Pacific Chamber of Commerce, etc.\n\n\nIf passed, each county would be empowered to develop a tool that predicts the risk of a suspect reoffending before trial.\nJudges would consult this prediction to make bail decisions."
+    "text": "California Proposition 25 (2020)\nPopular referendum on 2018’s Senate Bill 10:\n\n\n\nYES: replace cash bail with “risk assessment”.\n\nDemocratic Party, Governor Gavin Newson, League of Women Voters of California, California Medical Association, Democracy for America (progressive PAC), etc.\n\n\n\nNO: keep the cash bail system.\n\nRepublican Party, American Bail Coalition, ACLU of Southern California, NAACP, California Asian Pacific Chamber of Commerce, etc.\n\n\nIf passed, each county would be empowered to develop a tool that predicts the risk of a suspect reoffending before trial.\nJudges would consult this prediction to make bail decisions."
   },
   {
     "objectID": "slides/12-ethics-slides.html#what-might-risk-assessment-look-like",
     "href": "slides/12-ethics-slides.html#what-might-risk-assessment-look-like",
     "title": "Data Ethics",
     "section": "What might “risk assessment” look like?",
-    "text": "What might “risk assessment” look like?\nSomething we will study after spring break:\n\n\n\n\n\n\n\n\nAbove the line means high risk means no bail. Is this progress?"
+    "text": "What might “risk assessment” look like?\nSomething we will study after the midterm:\n\n\n\n\n\n\n\n\nAbove the line means high risk means no bail. Is this progress?"
   },
   {
     "objectID": "slides/12-ethics-slides.html#what-happens-when-we-try-predictive-policing",
     "href": "slides/12-ethics-slides.html#what-happens-when-we-try-predictive-policing",
     "title": "Data Ethics",
     "section": "What happens when we try “predictive policing”?",
-    "text": "What happens when we try “predictive policing”?\n2016 ProPublica article on algorithm used for rating a defendant’s risk of future crime:\n\n\n\nIn forecasting who would re-offend, the algorithm made mistakes with black and white defendants at roughly the same rate but in very different ways.\n\nThe formula was particularly likely to falsely flag black defendants as future criminals, wrongly labeling them this way at almost twice the rate as white defendants.\nWhite defendants were mislabeled as low risk more often than black defendants.\n\n\n\n\n\n\n\n\n\n\nSource: ProPublica"
+    "text": "What happens when we try “predictive policing”?\n2016 ProPublica article on algorithm used for rating a defendant’s risk of future crime:\n\n\nIn forecasting who would re-offend, the algorithm made mistakes with black and white defendants at roughly the same rate but in very different ways.\n\nThe formula was particularly likely to falsely flag black defendants as future criminals, wrongly labeling them this way at almost twice the rate as white defendants.\nWhite defendants were mislabeled as low risk more often than black defendants.\n\n\n\n\n\nSource: ProPublica"
   },
   {
     "objectID": "slides/12-ethics-slides.html#notice-anything",
@@ -2192,28 +2227,14 @@
     "href": "slides/12-ethics-slides.html#predicting-ethnicity",
     "title": "Data Ethics",
     "section": "Predicting ethnicity",
-    "text": "Predicting ethnicity\nImproving Ecological Inference by Predicting Individual Ethnicity from Voter Registration Record (Imran and Khan, 2016)\n\nIn both political behavior research and voting rights litigation, turnout and vote choice for different racial groups are often inferred using aggregate election results and racial composition. Over the past several decades, many statistical methods have been proposed to address this ecological inference problem. We propose an alternative method to reduce aggregation bias by predicting individual-level ethnicity from voter registration records. Building on the existing methodological literature, we use Bayes’s rule to combine the Census Bureau’s Surname List with various information from geocoded voter registration records. We evaluate the performance of the proposed methodology using approximately nine million voter registration records from Florida, where self-reported ethnicity is available. We find that it is possible to reduce the false positive rate among Black and Latino voters to 6% and 3%, respectively, while maintaining the true positive rate above 80%. Moreover, we use our predictions to estimate turnout by race and find that our estimates yields substantially less amounts of bias and root mean squared error than standard ecological inference estimates. We provide open-source software to implement the proposed methodology. The open-source software is available for implementing the proposed methodology."
+    "text": "Predicting ethnicity\nImproving Ecological Inference by Predicting Individual Ethnicity from Voter Registration Record (Imran and Khan, 2016)\n\nOpen source package makes probabilistic estimates of individual-level race/ethnicity given voter file information."
   },
   {
     "objectID": "slides/12-ethics-slides.html#wru-package",
     "href": "slides/12-ethics-slides.html#wru-package",
     "title": "Data Ethics",
     "section": "\nwru package",
-    "text": "wru package\nThe said “source software” is the wru package: https://github.com/kosukeimai/wru.\n\nDo you have any ethical concerns about installing this package?"
-  },
-  {
-    "objectID": "slides/12-ethics-slides.html#wru-package-1",
-    "href": "slides/12-ethics-slides.html#wru-package-1",
-    "title": "Data Ethics",
-    "section": "\nwru package",
-    "text": "wru package\n\nWas the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?\n\n\nlibrary(wru)\npredict_race(voter.file = voters, surname.only = TRUE) |&gt;\n  select(surname, pred.whi, pred.bla, pred.his, pred.asi, pred.oth)\n\n      surname    pred.whi    pred.bla     pred.his    pred.asi\n1      Khanna 0.045110474 0.003067623 0.0068522723 0.860411906\n2        Imai 0.052645440 0.001334812 0.0558160072 0.719376581\n3      Rivera 0.043285692 0.008204605 0.9136195794 0.024316883\n4     Fifield 0.895405704 0.001911388 0.0337464844 0.011079323\n5        Zhou 0.006572555 0.001298962 0.0005388581 0.982365594\n6    Ratkovic 0.861236727 0.008212824 0.0095395642 0.011334635\n7     Johnson 0.543815322 0.344128607 0.0272403940 0.007405765\n8       Lopez 0.038939877 0.004920643 0.9318797791 0.012154125\n10 Wantchekon 0.330697188 0.194700665 0.4042849478 0.021379541\n9       Morse 0.866360147 0.044429853 0.0246568086 0.010219712\n      pred.oth\n1  0.084557725\n2  0.170827160\n3  0.010573240\n4  0.057857101\n5  0.009224032\n6  0.109676251\n7  0.077409913\n8  0.012105576\n10 0.048937658\n9  0.054333479"
-  },
-  {
-    "objectID": "slides/12-ethics-slides.html#wru-package-2",
-    "href": "slides/12-ethics-slides.html#wru-package-2",
-    "title": "Data Ethics",
-    "section": "\nwru package",
-    "text": "wru package\n\nme &lt;- tibble(surname = \"Zito\")\n\npredict_race(voter.file = me, surname.only = TRUE)\n\n  surname  pred.whi   pred.bla   pred.his    pred.asi   pred.oth\n1    Zito 0.9220001 0.00419631 0.03968994 0.009652312 0.02446131"
+    "text": "wru package\n\nWas the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?\n\n\nlibrary(wru)\npredict_race(voter.file = voters, surname.only = TRUE) |&gt;\n  select(surname, pred.whi, pred.bla, pred.his, pred.asi, pred.oth) |&gt;\n  slice(1:5)\n\n  surname    pred.whi    pred.bla     pred.his   pred.asi    pred.oth\n1  Khanna 0.045110474 0.003067623 0.0068522723 0.86041191 0.084557725\n2    Imai 0.052645440 0.001334812 0.0558160072 0.71937658 0.170827160\n3  Rivera 0.043285692 0.008204605 0.9136195794 0.02431688 0.010573240\n4 Fifield 0.895405704 0.001911388 0.0337464844 0.01107932 0.057857101\n5    Zhou 0.006572555 0.001298962 0.0005388581 0.98236559 0.009224032"
   },
   {
     "objectID": "slides/12-ethics-slides.html#california-prop-25-did-not-pass",
@@ -2227,18 +2248,18 @@
     "href": "slides/12-ethics-slides.html#another-algorithmic-decision",
     "title": "Data Ethics",
     "section": "Another algorithmic decision…",
-    "text": "Another algorithmic decision…\n Armies of stats PhDs go to work on these models. They have no training in the ethics of what they’re doing."
+    "text": "Another algorithmic decision…\n Armies of stats PhDs go to work on these models. They (generally) have no training in the ethics of what they’re doing."
   },
   {
     "objectID": "slides/12-ethics-slides.html#a-success-story",
     "href": "slides/12-ethics-slides.html#a-success-story",
     "title": "Data Ethics",
     "section": "A success story?",
-    "text": "A success story?\n\nData + Model to predict timing of menstrual cycle:\n\n\n\nA perfect microcosm of the themes of our course, and maybe one of the real triumphs of data and modeling improving modern life.\n\n\n…but what if you learned they were selling your data?"
+    "text": "A success story?\n\nData + Model to predict timing of menstrual cycle:\n\n\n\nA perfect microcosm of the themes of our course…\n\n\n…but what if you learned they were selling your data?"
   },
   {
-    "objectID": "slides/12-ethics-slides.html#data-privacy",
-    "href": "slides/12-ethics-slides.html#data-privacy",
+    "objectID": "slides/12-ethics-slides.html#data-privacy-1",
+    "href": "slides/12-ethics-slides.html#data-privacy-1",
     "title": "Data Ethics",
     "section": "Data privacy",
     "text": "Data privacy"
@@ -2255,21 +2276,21 @@
     "href": "slides/12-ethics-slides.html#privacy-of-your-data",
     "title": "Data Ethics",
     "section": "Privacy of your data",
-    "text": "Privacy of your data\n\nWhat pieces of data have you left on the internet today? Think through everything you’ve logged into, clicked on, checked in, either actively or automatically, that might be tracking you. Do you know where that data is stored? Who it can be accessed by? Whether it’s shared with others?"
+    "text": "Privacy of your data\n\nWhat pieces of data have you left on the internet today?\n\n\nThink through everything you’ve logged into, clicked on, checked in, either actively or automatically, that might be tracking you.\nDo you know where that data is stored? Who it can be accessed by? Whether it’s shared with others?"
   },
   {
     "objectID": "slides/12-ethics-slides.html#sharing-your-data",
     "href": "slides/12-ethics-slides.html#sharing-your-data",
     "title": "Data Ethics",
     "section": "Sharing your data",
-    "text": "Sharing your data\n\nWhat are you OK with sharing?\n\n\n\n\n\nName\nAge\nEmail\nPhone Number\nList of every video you watch\nList of every video you comment on\n\n\n\n\n\nHow you type: speed, accuracy\nHow long you spend on different content\nList of all your private messages (date, time, person sent to)\nInfo about your photos (how it was taken, where it was taken (GPS), when it was taken)"
+    "text": "Sharing your data\n\nWhat are you OK with sharing?\n\n\n\n\n\nName\nAge\nEmail\nPhone Number\nList of every video you watch\n\n\n\n\n\nHow you type: speed, accuracy\nHow long you spend on different content\nList of all your private messages\nInfo about your photos (how/where/when taken)"
   },
   {
     "objectID": "slides/12-ethics-slides.html#what-does-google-thinkknow-about-you",
     "href": "slides/12-ethics-slides.html#what-does-google-thinkknow-about-you",
     "title": "Data Ethics",
     "section": "What does Google think/know about you?",
-    "text": "What does Google think/know about you?\n\nHave you ever thought about why you’re seeing an ad on Google? Google it! Try to figure out if you have ad personalization on and how your ads are personalized."
+    "text": "What does Google think/know about you?\n\nHave you ever thought about why you’re seeing an ad on Google? Try to figure out if you have ad personalization on and how your ads are personalized."
   },
   {
     "objectID": "slides/12-ethics-slides.html#your-browsing-history",
@@ -2290,7 +2311,14 @@
     "href": "slides/12-ethics-slides.html#aol-search-data-leak",
     "title": "Data Ethics",
     "section": "AOL search data leak",
-    "text": "AOL search data leak\n\n\n\nMichael Barbaro and Tom Zeller Jr. A Face Is Exposed for AOL Searcher No. 4417749.\nNew York Times. 9 August 2006."
+    "text": "AOL search data leak\n\n\n2006: AOL released a file with millions of “anonymous” search queries from users over 3 months; data was intended for research\nNew York Times used search queries to identify users\n\nUser #4417749:\n\n\"numb fingers”\n\"60 single men\"\n\"dog that urinates on everything.\"\n“landscapers in Lilburn, Ga”"
+  },
+  {
+    "objectID": "slides/12-ethics-slides.html#aol-search-data-leak-1",
+    "href": "slides/12-ethics-slides.html#aol-search-data-leak-1",
+    "title": "Data Ethics",
+    "section": "AOL search data leak",
+    "text": "AOL search data leak\n\n\n\nMichael Barbaro and Tom Zeller Jr. A Face Is Exposed for AOL Searcher No. 4417749.\nNew York Times. 9 August 2006."
   },
   {
     "objectID": "slides/12-ethics-slides.html#ok-cupid-data-breach",
@@ -2314,8 +2342,8 @@
     "text": "OK Cupid data breach\n\nSome may object to the ethics of gathering and releasing this data. However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form.\nResearchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær"
   },
   {
-    "objectID": "slides/12-ethics-slides.html#data-privacy-1",
-    "href": "slides/12-ethics-slides.html#data-privacy-1",
+    "objectID": "slides/12-ethics-slides.html#data-privacy-2",
+    "href": "slides/12-ethics-slides.html#data-privacy-2",
     "title": "Data Ethics",
     "section": "Data privacy",
     "text": "Data privacy\n\nIn analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don’t violate reasonable expectations of privacy?"
@@ -2395,35 +2423,35 @@
     "href": "slides/12-ethics.html",
     "title": "Data Ethics",
     "section": "",
-    "text": "Worth 20% of your final grade; consists of two parts:\n\n\nIn-class: worth 70% of the Midterm 1 grade;\n\nThursday February 20 11:45 AM - 1:00 PM;\nTake note of your room assignment!\nAll multiple choice;\nBoth sides of one 8.5” x 11” sheet of notes.\n\n\n\nTake-home: worth 30% of the Midterm 1 grade.\n\nReleased Thursday February 20 at 1:00 PM;\nDue Monday February 24 at 8:30 AM;\nWorks just like a mini-lab, only zero collaboration.\n\n\n\nWhen the world was your oyster and you had nothing but time…\n\n\nPractice problems: released Thursday February 13;\n\nAttend lab: Kahoot on Monday February 17;\n\nOld labs: correct parts where you lost points;\n\nOld AEs: complete tasks we didn’t get to and compare with key;\n\nCode along: watch these videos specifically;\n\nTextbook: odd-numbered exercises in the back of Chs. 1, 4, 5, 6.\n\nNow that you only have forty-eight hours…\n\nStudy the Kahoot and the practice problems;\nStudy the Lab 4 solutions;\nSpend some serious time with your cheat sheet;\nStudy old AE keys, and work stuff we didn’t complete.\n\n\nIf classes are canceled: in-class exam is moved to 2/25;\nIf classes are not canceled: in-class exam is 2/20 as planned;\nTake-home exam is the same regardless;\nIf classes are canceled, Testing Center appointments are canceled, and we’ll cross that bridge when we come to it (it will be a mess)."
+    "text": "Office hours today from 3:30 - 7:30\n\nMe: 3:30 - 5:30\nKatie: 5:30 - 7:30\n\n\nIf you were planning on coming to Wednesday’s office hours, let me know!"
   },
   {
-    "objectID": "slides/12-ethics.html#basic-facts",
-    "href": "slides/12-ethics.html#basic-facts",
+    "objectID": "slides/12-ethics.html#announcements",
+    "href": "slides/12-ethics.html#announcements",
     "title": "Data Ethics",
     "section": "",
-    "text": "Worth 20% of your final grade; consists of two parts:\n\n\nIn-class: worth 70% of the Midterm 1 grade;\n\nThursday February 20 11:45 AM - 1:00 PM;\nTake note of your room assignment!\nAll multiple choice;\nBoth sides of one 8.5” x 11” sheet of notes.\n\n\n\nTake-home: worth 30% of the Midterm 1 grade.\n\nReleased Thursday February 20 at 1:00 PM;\nDue Monday February 24 at 8:30 AM;\nWorks just like a mini-lab, only zero collaboration."
+    "text": "Office hours today from 3:30 - 7:30\n\nMe: 3:30 - 5:30\nKatie: 5:30 - 7:30\n\n\nIf you were planning on coming to Wednesday’s office hours, let me know!"
   },
   {
-    "objectID": "slides/12-ethics.html#last-weeks-advice",
-    "href": "slides/12-ethics.html#last-weeks-advice",
+    "objectID": "slides/12-ethics.html#policy",
+    "href": "slides/12-ethics.html#policy",
     "title": "Data Ethics",
-    "section": "",
-    "text": "When the world was your oyster and you had nothing but time…\n\n\nPractice problems: released Thursday February 13;\n\nAttend lab: Kahoot on Monday February 17;\n\nOld labs: correct parts where you lost points;\n\nOld AEs: complete tasks we didn’t get to and compare with key;\n\nCode along: watch these videos specifically;\n\nTextbook: odd-numbered exercises in the back of Chs. 1, 4, 5, 6."
+    "section": "Policy:",
+    "text": "Policy:\nYou must explicitly cite the usage of any external online resources. Failure to do so is academic dishonesty."
   },
   {
-    "objectID": "slides/12-ethics.html#this-weeks-advice",
-    "href": "slides/12-ethics.html#this-weeks-advice",
+    "objectID": "slides/12-ethics.html#todays-advice",
+    "href": "slides/12-ethics.html#todays-advice",
     "title": "Data Ethics",
-    "section": "",
-    "text": "Now that you only have forty-eight hours…\n\nStudy the Kahoot and the practice problems;\nStudy the Lab 4 solutions;\nSpend some serious time with your cheat sheet;\nStudy old AE keys, and work stuff we didn’t complete."
+    "section": "Today’s advice",
+    "text": "Today’s advice\nNow that you only have forty-eight hours…\n\nStudy the Kahoot and the practice problems;\nLook over the lab problems/solutions\nSpend some serious time with your cheat sheet;\nReview notes/readings for topics you feel unsure about"
   },
   {
-    "objectID": "slides/12-ethics.html#what-if-we-get-snowed-out",
-    "href": "slides/12-ethics.html#what-if-we-get-snowed-out",
+    "objectID": "slides/12-ethics.html#project-goal",
+    "href": "slides/12-ethics.html#project-goal",
     "title": "Data Ethics",
-    "section": "",
-    "text": "If classes are canceled: in-class exam is moved to 2/25;\nIf classes are not canceled: in-class exam is 2/20 as planned;\nTake-home exam is the same regardless;\nIf classes are canceled, Testing Center appointments are canceled, and we’ll cross that bridge when we come to it (it will be a mess)."
+    "section": "Project goal:",
+    "text": "Project goal:\n\nWork with a team on a full data analysis project\nToday: how to use git collaboratively!"
   },
   {
     "objectID": "slides/12-ethics.html#misrepresenting-data-science-results",
@@ -2431,6 +2459,41 @@
     "title": "Data Ethics",
     "section": "Misrepresenting data science results",
     "text": "Misrepresenting data science results\nSome common ways people do this, either intentionally or unintentionally, include:\n\n\nClaiming causality where it’s not in the scope of inference of the underlying study\nDistorting axes and scales to make the data tell a different story\nVisualizing spatial areas instead of human density for issues that depend on and affect humans\nOmitting uncertainty in reporting"
+  },
+  {
+    "objectID": "slides/12-ethics.html#my-favorite-saying",
+    "href": "slides/12-ethics.html#my-favorite-saying",
+    "title": "Data Ethics",
+    "section": "My favorite saying:",
+    "text": "My favorite saying:\nCorrelation does not imply causation."
+  },
+  {
+    "objectID": "slides/12-ethics.html#causality-ice-cream-and-drowning",
+    "href": "slides/12-ethics.html#causality-ice-cream-and-drowning",
+    "title": "Data Ethics",
+    "section": "Causality: Ice Cream and Drowning",
+    "text": "Causality: Ice Cream and Drowning"
+  },
+  {
+    "objectID": "slides/12-ethics.html#causality-ice-cream-and-drowning-1",
+    "href": "slides/12-ethics.html#causality-ice-cream-and-drowning-1",
+    "title": "Data Ethics",
+    "section": "Causality: Ice Cream and Drowning",
+    "text": "Causality: Ice Cream and Drowning"
+  },
+  {
+    "objectID": "slides/12-ethics.html#causality-ice-cream-and-drowning-2",
+    "href": "slides/12-ethics.html#causality-ice-cream-and-drowning-2",
+    "title": "Data Ethics",
+    "section": "Causality: Ice Cream and Drowning",
+    "text": "Causality: Ice Cream and Drowning"
+  },
+  {
+    "objectID": "slides/12-ethics.html#causality-ice-cream-and-drowning-3",
+    "href": "slides/12-ethics.html#causality-ice-cream-and-drowning-3",
+    "title": "Data Ethics",
+    "section": "Causality: Ice Cream and Drowning",
+    "text": "Causality: Ice Cream and Drowning"
   },
   {
     "objectID": "slides/12-ethics.html#causality---time-coverage",
@@ -2451,7 +2514,14 @@
     "href": "slides/12-ethics.html#causality---original-study",
     "title": "Data Ethics",
     "section": "Causality - Original study",
-    "text": "Causality - Original study\nMoore, Steven C., et al. “Association of leisure-time physical activity with risk of 26 types of cancer in 1.44 million adults.” JAMA internal medicine 176.6 (2016): 816-825.\n\n\nVolunteers were asked about their physical activity level over the preceding year.\nHalf exercised less than about 150 minutes per week, half exercised more.\nCompared to the bottom 10% of exercisers, the top 10% had lower rates of esophageal, liver, lung, endometrial, colon, and breast cancer.\nResearchers found no association between exercising and 13 other cancers (e.g. pancreatic, ovarian, and brain).\n\n\nCarl Bergstrom and Jevin West. Calling Bullshit: The art of skepticism in a data-driven world.\nRandom House, 2020.\nSharon Begley. “Does exercise prevent cancer?”. StatNews. 16 May 2016."
+    "text": "Causality - Original study\nMoore, Steven C., et al. “Association of leisure-time physical activity with risk of 26 types of cancer in 1.44 million adults.” JAMA internal medicine 176.6 (2016): 816-825.\n\n\n\nVolunteers were asked about their physical activity level over the preceding year.\nHalf exercised less than about 150 minutes per week, half exercised more.\nCompared to the bottom 10% of exercisers, the top 10% had lower rates of esophageal, liver, lung, endometrial, colon, and breast cancer.\nResearchers found no association between exercising and 13 other cancers (e.g. pancreatic, ovarian, and brain).\n\n\n\nCarl Bergstrom and Jevin West. Calling Bullshit: The art of skepticism in a data-driven world.\nRandom House, 2020.\nSharon Begley. “Does exercise prevent cancer?”. StatNews. 16 May 2016.\n\n#Axes and scales"
+  },
+  {
+    "objectID": "slides/12-ethics.html#remember-this",
+    "href": "slides/12-ethics.html#remember-this",
+    "title": "Data Ethics",
+    "section": "Remember this?",
+    "text": "Remember this?"
   },
   {
     "objectID": "slides/12-ethics.html#axes-and-scales---tax-cuts",
@@ -2465,7 +2535,7 @@
     "href": "slides/12-ethics.html#axes-and-scales---cost-of-gas",
     "title": "Data Ethics",
     "section": "Axes and scales - Cost of gas",
-    "text": "Axes and scales - Cost of gas\n\nWhat is wrong with this picture? How would you correct it?"
+    "text": "Axes and scales - Cost of gas\nWhat is wrong with this image?"
   },
   {
     "objectID": "slides/12-ethics.html#axes-and-scales---cost-of-gas-1",
@@ -2479,7 +2549,7 @@
     "href": "slides/12-ethics.html#axes-and-scales---covid-in-ga",
     "title": "Data Ethics",
     "section": "Axes and scales - COVID in GA",
-    "text": "Axes and scales - COVID in GA\n\nWhat is wrong with this picture? How would you correct it?\n\n\n\n\nGeorgia Department of Public Health. 11 May 2020."
+    "text": "Axes and scales - COVID in GA\nWhat is wrong with this image?\n\n\n\nGeorgia Department of Public Health. 11 May 2020."
   },
   {
     "objectID": "slides/12-ethics.html#axes-and-scales---covid-in-ga-1",
@@ -2493,14 +2563,14 @@
     "href": "slides/12-ethics.html#axes-and-scales---pp-services",
     "title": "Data Ethics",
     "section": "Axes and scales - PP services",
-    "text": "Axes and scales - PP services\n\n\n\nWhat is wrong with this picture? How would you correct it?\n\n\n\n\n\n\n\nTimothy B. Lee. Whatever you think of Planned Parenthood, this is a terrible and dishonest chart. Vox. 29 September 2019."
+    "text": "Axes and scales - PP services\n\n\nWhat is wrong with this picture? How would you correct it?\n\n\n\n\n\n\nTimothy B. Lee. Whatever you think of Planned Parenthood, this is a terrible and dishonest chart. Vox. 29 September 201 9."
   },
   {
     "objectID": "slides/12-ethics.html#axes-and-scales---pp-services-1",
     "href": "slides/12-ethics.html#axes-and-scales---pp-services-1",
     "title": "Data Ethics",
     "section": "Axes and scales - PP services",
-    "text": "Axes and scales - PP services\n\npp &lt;- tibble(\n  year = c(2006, 2006, 2013, 2013),\n  service = c(\"Abortion\", \"Cancer\", \"Abortion\", \"Cancer\"),\n  n = c(289750, 2007371, 327000, 935573)\n)\n\nggplot(pp, aes(x = year, y = n, color = service)) +\n  geom_point(size = 2) +\n  geom_line(linewidth = 1) +\n  geom_text(aes(label = n), nudge_y = 100000) +\n  geom_text(\n    aes(label = year), \n    nudge_y = 200000, \n    color = \"darkgray\"\n  ) +\n  labs(\n    title = \"Services provided by Planned Parenthood\",\n    caption = \"Source: Planned Parenthood\",\n    x = NULL,\n    y = NULL\n  ) +\n  scale_x_continuous(breaks = c(2006, 2013)) +\n  scale_y_continuous(labels = label_number(big.mark = \",\")) +\n  scale_color_manual(values = c(\"red\", \"purple\")) +\n  annotate(\n    geom = \"text\",\n    label = \"Abortions\",\n    x = 2009.5,\n    y = 400000,\n    color = \"red\"\n  ) +\n  annotate(\n    geom = \"text\",\n    label = \"Cancer screening\\nand prevention services\",\n    x = 2010.5,\n    y = 1600000, \n    color = \"purple\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\")"
+    "text": "Axes and scales - PP services\n\npp &lt;- tibble(\n  year = c(2006, 2006, 2013, 2013),\n  service = c(\"Abortion\", \"Cancer\", \"Abortion\", \"Cancer\"),\n  n = c(289750, 2007371, 327000, 935573)\n)\n\nggplot(pp, aes(x = year, y = n, color = service)) +\n  geom_point(size = 2) +\n  geom_line(linewidth = 1) +\n  geom_text(aes(label = n), nudge_y = 100000) +\n  geom_text(\n    aes(label = year), \n    nudge_y = 200000, \n    color = \"darkgray\"\n  ) +\n  labs(\n    title = \"Services provided by Planned Parenthood\",\n    caption = \"Source: Planned Parenthood\",\n    x = NULL,\n    y = NULL\n  ) +\n  scale_x_continuous(breaks = c(2006, 2013)) +\n  scale_y_continuous(labels = label_number(big.mark = \",\")) +\n  scale_color_manual(values = c(\"darkred\", \"hotpink\")) +\n  annotate(\n    geom = \"text\",\n    label = \"Abortions\",\n    x = 2009.5,\n    y = 400000,\n    color = \"darkred\"\n  ) +\n  annotate(\n    geom = \"text\",\n    label = \"Cancer screening\\nand prevention services\",\n    x = 2010.5,\n    y = 1600000, \n    color = \"hotpink\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\")"
   },
   {
     "objectID": "slides/12-ethics.html#maps-and-areas---voting-map",
@@ -2508,13 +2578,6 @@
     "title": "Data Ethics",
     "section": "Maps and areas - Voting map",
     "text": "Maps and areas - Voting map\n\nDo you recognize this map? What does it show?\n\n\n\n\nLazaro Gamio. “Election maps are telling you big lies about small things”. The Washington Post. 1 Nov 2016."
-  },
-  {
-    "objectID": "slides/12-ethics.html#maps-and-areas---two-alternate-tales",
-    "href": "slides/12-ethics.html#maps-and-areas---two-alternate-tales",
-    "title": "Data Ethics",
-    "section": "Maps and areas - Two alternate tales",
-    "text": "Maps and areas - Two alternate tales\n\n\n\n\n\n\n\n\n\nAlberto Cairo. Visual Trumpery talk."
   },
   {
     "objectID": "slides/12-ethics.html#maps-and-areas---voting-percentages",
@@ -2549,21 +2612,21 @@
     "href": "slides/12-ethics.html#california-proposition-25-2020",
     "title": "Data Ethics",
     "section": "California Proposition 25 (2020)",
-    "text": "California Proposition 25 (2020)\nPopular referendum on 2018’s Senate Bill 10:\n\n\n\nYES: replace cash bail with ``risk assessment.’’\n\nDemocratic Party, Governor Gavin Newson, League of Women Voters of California, California Medical Association, Democracy for America (progressive PAC), etc.\n\n\n\nNO: keep the cash bail system.\n\nRepublican Party, American Bail Coalition, ACLU of Southern California, NAACP, California Asian Pacific Chamber of Commerce, etc.\n\n\nIf passed, each county would be empowered to develop a tool that predicts the risk of a suspect reoffending before trial.\nJudges would consult this prediction to make bail decisions."
+    "text": "California Proposition 25 (2020)\nPopular referendum on 2018’s Senate Bill 10:\n\n\n\nYES: replace cash bail with “risk assessment”.\n\nDemocratic Party, Governor Gavin Newson, League of Women Voters of California, California Medical Association, Democracy for America (progressive PAC), etc.\n\n\n\nNO: keep the cash bail system.\n\nRepublican Party, American Bail Coalition, ACLU of Southern California, NAACP, California Asian Pacific Chamber of Commerce, etc.\n\n\nIf passed, each county would be empowered to develop a tool that predicts the risk of a suspect reoffending before trial.\nJudges would consult this prediction to make bail decisions."
   },
   {
     "objectID": "slides/12-ethics.html#what-might-risk-assessment-look-like",
     "href": "slides/12-ethics.html#what-might-risk-assessment-look-like",
     "title": "Data Ethics",
     "section": "What might “risk assessment” look like?",
-    "text": "What might “risk assessment” look like?\nSomething we will study after spring break:\n\n\n\n\n\n\n\n\nAbove the line means high risk means no bail. Is this progress?"
+    "text": "What might “risk assessment” look like?\nSomething we will study after the midterm:\n\n\n\n\n\n\n\n\nAbove the line means high risk means no bail. Is this progress?"
   },
   {
     "objectID": "slides/12-ethics.html#what-happens-when-we-try-predictive-policing",
     "href": "slides/12-ethics.html#what-happens-when-we-try-predictive-policing",
     "title": "Data Ethics",
     "section": "What happens when we try “predictive policing”?",
-    "text": "What happens when we try “predictive policing”?\n2016 ProPublica article on algorithm used for rating a defendant’s risk of future crime:\n\n\n\nIn forecasting who would re-offend, the algorithm made mistakes with black and white defendants at roughly the same rate but in very different ways.\n\nThe formula was particularly likely to falsely flag black defendants as future criminals, wrongly labeling them this way at almost twice the rate as white defendants.\nWhite defendants were mislabeled as low risk more often than black defendants.\n\n\n\n\n\n\n\n\n\n\n\nSource: ProPublica"
+    "text": "What happens when we try “predictive policing”?\n2016 ProPublica article on algorithm used for rating a defendant’s risk of future crime:\n\n\nIn forecasting who would re-offend, the algorithm made mistakes with black and white defendants at roughly the same rate but in very different ways.\n\nThe formula was particularly likely to falsely flag black defendants as future criminals, wrongly labeling them this way at almost twice the rate as white defendants.\nWhite defendants were mislabeled as low risk more often than black defendants.\n\n\n\n\n\nSource: ProPublica"
   },
   {
     "objectID": "slides/12-ethics.html#notice-anything",
@@ -2584,28 +2647,14 @@
     "href": "slides/12-ethics.html#predicting-ethnicity",
     "title": "Data Ethics",
     "section": "Predicting ethnicity",
-    "text": "Predicting ethnicity\nImproving Ecological Inference by Predicting Individual Ethnicity from Voter Registration Record (Imran and Khan, 2016)\n\nIn both political behavior research and voting rights litigation, turnout and vote choice for different racial groups are often inferred using aggregate election results and racial composition. Over the past several decades, many statistical methods have been proposed to address this ecological inference problem. We propose an alternative method to reduce aggregation bias by predicting individual-level ethnicity from voter registration records. Building on the existing methodological literature, we use Bayes’s rule to combine the Census Bureau’s Surname List with various information from geocoded voter registration records. We evaluate the performance of the proposed methodology using approximately nine million voter registration records from Florida, where self-reported ethnicity is available. We find that it is possible to reduce the false positive rate among Black and Latino voters to 6% and 3%, respectively, while maintaining the true positive rate above 80%. Moreover, we use our predictions to estimate turnout by race and find that our estimates yields substantially less amounts of bias and root mean squared error than standard ecological inference estimates. We provide open-source software to implement the proposed methodology. The open-source software is available for implementing the proposed methodology."
+    "text": "Predicting ethnicity\nImproving Ecological Inference by Predicting Individual Ethnicity from Voter Registration Record (Imran and Khan, 2016)\n\nOpen source package makes probabilistic estimates of individual-level race/ethnicity given voter file information."
   },
   {
     "objectID": "slides/12-ethics.html#wru-package",
     "href": "slides/12-ethics.html#wru-package",
     "title": "Data Ethics",
     "section": "\nwru package",
-    "text": "wru package\nThe said “source software” is the wru package: https://github.com/kosukeimai/wru.\n\nDo you have any ethical concerns about installing this package?"
-  },
-  {
-    "objectID": "slides/12-ethics.html#wru-package-1",
-    "href": "slides/12-ethics.html#wru-package-1",
-    "title": "Data Ethics",
-    "section": "\nwru package",
-    "text": "wru package\n\nWas the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?\n\n\nlibrary(wru)\npredict_race(voter.file = voters, surname.only = TRUE) |&gt;\n  select(surname, pred.whi, pred.bla, pred.his, pred.asi, pred.oth)\n\n      surname    pred.whi    pred.bla     pred.his    pred.asi\n1      Khanna 0.045110474 0.003067623 0.0068522723 0.860411906\n2        Imai 0.052645440 0.001334812 0.0558160072 0.719376581\n3      Rivera 0.043285692 0.008204605 0.9136195794 0.024316883\n4     Fifield 0.895405704 0.001911388 0.0337464844 0.011079323\n5        Zhou 0.006572555 0.001298962 0.0005388581 0.982365594\n6    Ratkovic 0.861236727 0.008212824 0.0095395642 0.011334635\n7     Johnson 0.543815322 0.344128607 0.0272403940 0.007405765\n8       Lopez 0.038939877 0.004920643 0.9318797791 0.012154125\n10 Wantchekon 0.330697188 0.194700665 0.4042849478 0.021379541\n9       Morse 0.866360147 0.044429853 0.0246568086 0.010219712\n      pred.oth\n1  0.084557725\n2  0.170827160\n3  0.010573240\n4  0.057857101\n5  0.009224032\n6  0.109676251\n7  0.077409913\n8  0.012105576\n10 0.048937658\n9  0.054333479"
-  },
-  {
-    "objectID": "slides/12-ethics.html#wru-package-2",
-    "href": "slides/12-ethics.html#wru-package-2",
-    "title": "Data Ethics",
-    "section": "\nwru package",
-    "text": "wru package\n\nme &lt;- tibble(surname = \"Zito\")\n\npredict_race(voter.file = me, surname.only = TRUE)\n\n  surname  pred.whi   pred.bla   pred.his    pred.asi   pred.oth\n1    Zito 0.9220001 0.00419631 0.03968994 0.009652312 0.02446131"
+    "text": "wru package\n\nWas the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?\n\n\nlibrary(wru)\npredict_race(voter.file = voters, surname.only = TRUE) |&gt;\n  select(surname, pred.whi, pred.bla, pred.his, pred.asi, pred.oth) |&gt;\n  slice(1:5)\n\n  surname    pred.whi    pred.bla     pred.his   pred.asi    pred.oth\n1  Khanna 0.045110474 0.003067623 0.0068522723 0.86041191 0.084557725\n2    Imai 0.052645440 0.001334812 0.0558160072 0.71937658 0.170827160\n3  Rivera 0.043285692 0.008204605 0.9136195794 0.02431688 0.010573240\n4 Fifield 0.895405704 0.001911388 0.0337464844 0.01107932 0.057857101\n5    Zhou 0.006572555 0.001298962 0.0005388581 0.98236559 0.009224032"
   },
   {
     "objectID": "slides/12-ethics.html#california-prop-25-did-not-pass",
@@ -2619,18 +2668,18 @@
     "href": "slides/12-ethics.html#another-algorithmic-decision",
     "title": "Data Ethics",
     "section": "Another algorithmic decision…",
-    "text": "Another algorithmic decision…\n Armies of stats PhDs go to work on these models. They have no training in the ethics of what they’re doing."
+    "text": "Another algorithmic decision…\n Armies of stats PhDs go to work on these models. They (generally) have no training in the ethics of what they’re doing."
   },
   {
     "objectID": "slides/12-ethics.html#a-success-story",
     "href": "slides/12-ethics.html#a-success-story",
     "title": "Data Ethics",
     "section": "A success story?",
-    "text": "A success story?\n. . .\nData + Model to predict timing of menstrual cycle:\n\n. . .\nA perfect microcosm of the themes of our course, and maybe one of the real triumphs of data and modeling improving modern life.\n. . .\n…but what if you learned they were selling your data?"
+    "text": "A success story?\n. . .\nData + Model to predict timing of menstrual cycle:\n\n. . .\nA perfect microcosm of the themes of our course…\n. . .\n…but what if you learned they were selling your data?"
   },
   {
-    "objectID": "slides/12-ethics.html#data-privacy",
-    "href": "slides/12-ethics.html#data-privacy",
+    "objectID": "slides/12-ethics.html#data-privacy-1",
+    "href": "slides/12-ethics.html#data-privacy-1",
     "title": "Data Ethics",
     "section": "Data privacy",
     "text": "Data privacy"
@@ -2647,21 +2696,21 @@
     "href": "slides/12-ethics.html#privacy-of-your-data",
     "title": "Data Ethics",
     "section": "Privacy of your data",
-    "text": "Privacy of your data\n\nWhat pieces of data have you left on the internet today? Think through everything you’ve logged into, clicked on, checked in, either actively or automatically, that might be tracking you. Do you know where that data is stored? Who it can be accessed by? Whether it’s shared with others?"
+    "text": "Privacy of your data\n\nWhat pieces of data have you left on the internet today?\n\n\nThink through everything you’ve logged into, clicked on, checked in, either actively or automatically, that might be tracking you.\nDo you know where that data is stored? Who it can be accessed by? Whether it’s shared with others?"
   },
   {
     "objectID": "slides/12-ethics.html#sharing-your-data",
     "href": "slides/12-ethics.html#sharing-your-data",
     "title": "Data Ethics",
     "section": "Sharing your data",
-    "text": "Sharing your data\n\nWhat are you OK with sharing?\n\n\n\n\n\nName\nAge\nEmail\nPhone Number\nList of every video you watch\nList of every video you comment on\n\n\n\n\n\nHow you type: speed, accuracy\nHow long you spend on different content\nList of all your private messages (date, time, person sent to)\nInfo about your photos (how it was taken, where it was taken (GPS), when it was taken)"
+    "text": "Sharing your data\n\nWhat are you OK with sharing?\n\n\n\n\n\nName\nAge\nEmail\nPhone Number\nList of every video you watch\n\n\n\n\n\nHow you type: speed, accuracy\nHow long you spend on different content\nList of all your private messages\nInfo about your photos (how/where/when taken)"
   },
   {
     "objectID": "slides/12-ethics.html#what-does-google-thinkknow-about-you",
     "href": "slides/12-ethics.html#what-does-google-thinkknow-about-you",
     "title": "Data Ethics",
     "section": "What does Google think/know about you?",
-    "text": "What does Google think/know about you?\n\nHave you ever thought about why you’re seeing an ad on Google? Google it! Try to figure out if you have ad personalization on and how your ads are personalized."
+    "text": "What does Google think/know about you?\n\nHave you ever thought about why you’re seeing an ad on Google? Try to figure out if you have ad personalization on and how your ads are personalized."
   },
   {
     "objectID": "slides/12-ethics.html#your-browsing-history",
@@ -2682,7 +2731,14 @@
     "href": "slides/12-ethics.html#aol-search-data-leak",
     "title": "Data Ethics",
     "section": "AOL search data leak",
-    "text": "AOL search data leak\n\n\n\nMichael Barbaro and Tom Zeller Jr. A Face Is Exposed for AOL Searcher No. 4417749.\nNew York Times. 9 August 2006."
+    "text": "AOL search data leak\n\n\n2006: AOL released a file with millions of “anonymous” search queries from users over 3 months; data was intended for research\nNew York Times used search queries to identify users\n\nUser #4417749:\n\n\"numb fingers”\n\"60 single men\"\n\"dog that urinates on everything.\"\n“landscapers in Lilburn, Ga”"
+  },
+  {
+    "objectID": "slides/12-ethics.html#aol-search-data-leak-1",
+    "href": "slides/12-ethics.html#aol-search-data-leak-1",
+    "title": "Data Ethics",
+    "section": "AOL search data leak",
+    "text": "AOL search data leak\n\n\n\nMichael Barbaro and Tom Zeller Jr. A Face Is Exposed for AOL Searcher No. 4417749.\nNew York Times. 9 August 2006."
   },
   {
     "objectID": "slides/12-ethics.html#ok-cupid-data-breach",
@@ -2706,8 +2762,8 @@
     "text": "OK Cupid data breach\n\nSome may object to the ethics of gathering and releasing this data. However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form.\nResearchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær"
   },
   {
-    "objectID": "slides/12-ethics.html#data-privacy-1",
-    "href": "slides/12-ethics.html#data-privacy-1",
+    "objectID": "slides/12-ethics.html#data-privacy-2",
+    "href": "slides/12-ethics.html#data-privacy-2",
     "title": "Data Ethics",
     "section": "Data privacy",
     "text": "Data privacy\n\nIn analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don’t violate reasonable expectations of privacy?"
