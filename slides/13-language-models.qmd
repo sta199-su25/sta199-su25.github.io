@@ -4,7 +4,7 @@ subtitle: "Lecture 13"
 date: "2025-06-04"
 format: 
   revealjs:
-    output-file: 13-model-slides.html
+    output-file: 13-language-models-slides.html
 auto-stretch: false
 ---
 
