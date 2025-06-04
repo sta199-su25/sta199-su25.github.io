@@ -18,7 +18,6 @@ library(janitor)
 library(palmerpenguins)
 library(datasauRus)
 library(ggplot2)
-library(gt)
 todays_ae <- "ae-11-modeling-fish"
 ```
 
@@ -50,8 +49,6 @@ The class is halfway over!
 
 -   Useful, but... a little subjective?
 
-![](images/exam_image-01.png){fig-align="center" width="590"}
-
 ## Now:
 
 -   Learn statistical tools for quantifying relationships
@@ -76,7 +73,7 @@ The class is halfway over!
 > i love how Tesla thinks the wall in my garage is a semi.
 > 😅
 
-![](images/12/tesla-get-wrong-1.png){fig-align="center" width="300"}
+![](images/tesla-get-wrong-1.png){fig-align="center"}
 
 ::: aside
 Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/vjcpte/i_love_how_tesla_thinks_the_wall_in_my_garage_is/)
@@ -88,7 +85,7 @@ Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/vjcpte/i_love_how
 > Just parked in my garage.
 > Tesla thinks I crashed onto a semi.
 
-![](images/12/tesla-get-wrong-2.png){fig-align="center" width="300"}
+![](images/tesla-get-wrong-2.png){fig-align="center" width="300"}
 
 ::: aside
 Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/112520t/new_owner_here_just_parked_in_my_garage_tesla/)
@@ -98,7 +95,7 @@ Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/112520t/new_owner
 
 > Tesla calls Mercedes trash
 
-![](images/12/tesla-get-wrong-3.png){fig-align="center" width="500"}
+![](images/tesla-get-wrong-3.png){fig-align="center" width="500"}
 
 ::: aside
 Source: [Reddit](https://www.reddit.com/r/FUCKYOUINPARTICULAR/comments/hi5srx/tesla_calls_mercedes_trash/)
