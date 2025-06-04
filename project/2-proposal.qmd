@@ -59,7 +59,7 @@ You shouldn't feel constrained to datasets that are already in a tidy format, yo
 -   [World Bank Data](https://datacatalog.worldbank.org/home)
 -   [CDC](https://www.cdc.gov/datastatistics/)
 -   [European Statistics](https://ec.europa.eu/eurostat/)
--   [CORGIS: The Collection of Really ](https://think.cs.vt.edu/corgis/csv/)[Great](https://corgis-edu.github.io/corgis/csv/)[, Interesting, Situated Datasets](https://think.cs.vt.edu/corgis/csv/)
+-   [CORGIS: The Collection of Really Great, Interesting, Situated Datasets](https://think.cs.vt.edu/corgis/csv/)
 -   [General Social Survey](https://gss.norc.org/)
 -   [Harvard Dataverse](https://dataverse.harvard.edu/)
 -   [International Monetary Fund](https://data.imf.org/?sk=388DFA60-1D26-4ADE-B505-A05A558D9A42&sId=1479329328660)
@@ -83,7 +83,6 @@ You shouldn't feel constrained to datasets that are already in a tidy format, yo
 -   [Data.gov](https://www.data.gov/)
 -   [Awesome public datasets](https://github.com/awesomedata/awesome-public-datasets)
 -   [Durham Open Data Portal](https://live-durhamnc.opendata.arcgis.com/)
--   [Edinburgh Open Data](https://edinburghopendata.info/)
 -   [FiveThirtyEight](https://data.fivethirtyeight.com/)
 
 # Components
