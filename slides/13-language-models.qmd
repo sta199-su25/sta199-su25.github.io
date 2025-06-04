@@ -677,8 +677,162 @@ x <- 10
 -288 + 60.92 * x
 ```
 
-## Model prediction: our data
+## Model prediction: full data {.smaller}
+
+**Goal**: Calculate predicted weights for all fish in the data.
+
+```{r}
+#| results: false
+fish_hw_aug <- augment(fish_hw_fit, new_data = fish)
+```
 
 
+## Model prediction: full data {.smaller}
+
+**Goal**: Calculate predicted weights for all fish in the data.
+
+```{r}
+#| results: false
+fish_hw_aug <- augment(fish_hw_fit, new_data = fish)
+fish_hw_aug
+```
+
+```{r}
+#| echo: false
+
+fish_hw_aug |> relocate(.pred, .resid, species, weight, height, length_vertical)
+```
+
+## Model evaluation: residuals {.smaller}
+
+**Goal**: Visualize the residuals
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| eval: false
+fish_hw_aug |> 
+  ggplot(aes(x = height,
+             y = weight)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", 
+              se = FALSE) +
+  theme_minimal() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| message: false
+#| fig-width: 7
+#| fig-height: 5
+fish_hw_aug |> ggplot(aes(x = height,
+                          y = weight)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", 
+              se = FALSE) +
+  theme_minimal() 
+```
+:::
+:::
+
+## Model evaluation: residuals {.smaller}
+
+**Goal**: Visualize the residuals
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| eval: false
+#| line-numbers: "7-8"
+fish_hw_aug |> 
+  ggplot(aes(x = height,
+             y = weight)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", 
+              se = FALSE) +
+  geom_segment(aes(xend = height, 
+                   yend = .pred)) +
+  theme_minimal() 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+#| message: false
 
 
+fish_hw_aug |> ggplot(aes(x = height,
+                          y = weight)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_segment(aes(xend = height, yend = .pred)) +
+  theme_minimal() 
+```
+:::
+:::
+
+## Model Summary {.smaller}
+
+::: columns
+::: {.column width="40%"}
+
+```{r}
+fish_hw_fit
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+fish_hw_tidy <- tidy(fish_hw_fit)
+fish_hw_tidy
+```
+:::
+:::
+
+## Correlation {.smaller}
+
+Strength and direction of a linear relationship. It’s bounded by -1 and 1.
+
+
+## Correlation {.smaller}
+
+```{r}
+fish |>
+  summarize(r = cor(height, weight))
+```
+
+## Adding a 3rd Variable {.smaller}
+Does the relationship between heights and weights of fish change if we take into consideration species?
+
+```{r}
+ggplot(fish, 
+       aes(x = height, y = weight, color = species)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Weights vs. heights of fish",
+    x = "Height (cm)",
+    y = "Weight (gr)"
+  )
+```
+
+## Adding a 3rd Variable {.smaller}
+Does the relationship between heights and weights of fish change if we take into consideration species?
+
+```{r}
+ggplot(fish, 
+       aes(x = height, y = weight, color = species)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Weights vs. heights of fish",
+    x = "Height (cm)",
+    y = "Weight (gr)"
+  )
+```
