@@ -55,7 +55,20 @@ website:
             text: Coding principles
           - href: computing-troubleshooting.qmd
             text: Troubleshooting
-      - project/description.qmd
+      - section: "Project"
+        contents:
+          - href: project/description.qmd
+            text: "Description"
+          - href: project/1-working-collaboratively.qmd
+            text: "Milestone 1"
+          - href: project/2-proposal.qmd
+            text: "Milestone 2"
+          - href: project/3-improvement-progress.qmd
+            text: "Milestone 3"
+          - href: project/4-peer-review.qmd
+            text: "Milestone 4"
+          - href: project/5-writeup-presentation.qmd
+            text: "Milestone 5"
       - lab.qmd
       - ae.qmd
       - section: "Exam Review"

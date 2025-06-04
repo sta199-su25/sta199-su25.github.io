@@ -133,8 +133,7 @@ Here is a *suggested* outline as you think through the slides; you [**do not**]{
 ## Presentation
 
 Presentations will be recorded and uploaded to Warpwire or YouTube.
-**The presentation must be no longer than 5 minutes.** 
-During grading, we will stop watching your video at the 5-minute mark.
+**The presentation must be no longer than 5 minutes.** During grading, we will stop watching your video at the 5-minute mark.
 
 ### Recording your presentation
 
@@ -157,7 +156,7 @@ To upload your video to Warpwire:
 -   Locate the video on your computer and click to upload.
 
 The instructions should be a lot more straightforward for YouTube.
-See <https://support.google.com/youtube/answer/57407?hl=en&co=GENIE.Platform%3DDesktop> for step-by-step instructions. 
+See <https://support.google.com/youtube/answer/57407?hl=en&co=GENIE.Platform%3DDesktop> for step-by-step instructions.
 You can make it "Unlisted", which means it will only be available to those you've shared the link with.
 
 ### Sharing your presentation
@@ -166,20 +165,22 @@ This step is essential -- if you don't share your video by the deadline, it will
 
 You must share your video with the teaching team **and** with other students in the class.
 
-- Sharing with the teaching team (formal submission): Add a link to your video in your repo's README.
+-   Sharing with the teaching team (formal submission): Add a link to your video in your repo's README.
 
-- Sharing with other students in the class: Post a link to your video on Ed Discussion. Title it "Your team name: Your project title" and use the "Presentation" tag.
+-   Sharing with other students in the class: Post a link to your video on Ed Discussion.
+    Title it "Your team name: Your project title" and use the "Presentation" tag.
 
-Make sure that your video is accessible to others. You should test this by sharing the link with a teammate or checking it in Incognito mode in your browser.
+Make sure that your video is accessible to others.
+You should test this by sharing the link with a teammate or checking it in Incognito mode in your browser.
 
 ## Grading
 
 The presentation is worth 25 points, broken down as follows:
 
-| Total                         | 25 pts |
-|-------------------------------|--------|
-| **Slides**                    | 10 pts |
-| **Presentation**              | 15 pts |
+| Total            | 25 pts |
+|------------------|--------|
+| **Slides**       | 10 pts |
+| **Presentation** | 15 pts |
 
 ### Slides
 
@@ -187,13 +188,13 @@ Are the slides well organized, readable, not full of text, featuring figures wit
 
 ### Presentation
 
-- Time management: Did the team divide the time well amongst themselves or got cut off going over time?
-- Professionalism: How well did the team present? Does the presentation appear to be well practiced? Did everyone get a chance to say something meaningful about the project?
-- Teamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together?
-- Creativity and critical thought: Is the project carefully thought out? Does it appear that time and effort went into the planning and implementation of the project?
-- Content: Including, but not limited to the following:
-  - Is the question well articulated in the presentation?
-  - Can the question be answered with the data?
-  - Does the analysis answer the question?
-  - Are the conclusion(s) made based on the analysis justifiable?
-  - Are the limitations carefully considered and articulated?
+-   Time management: Did the team divide the time well amongst themselves or got cut off going over time?
+-   Professionalism: How well did the team present? Does the presentation appear to be well practiced? Did everyone get a chance to say something meaningful about the project?
+-   Teamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together?
+-   Creativity and critical thought: Is the project carefully thought out? Does it appear that time and effort went into the planning and implementation of the project?
+-   Content: Including, but not limited to the following:
+    -   Is the question well articulated in the presentation?
+    -   Can the question be answered with the data?
+    -   Does the analysis answer the question?
+    -   Are the conclusion(s) made based on the analysis justifiable?
+    -   Are the limitations carefully considered and articulated?
