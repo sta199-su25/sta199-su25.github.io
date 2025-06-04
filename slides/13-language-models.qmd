@@ -74,7 +74,7 @@ The class is halfway over!
 > i love how Tesla thinks the wall in my garage is a semi.
 > 😅
 
-![](images/tesla-get-wrong-1.png){fig-align="center"}
+![](images/tesla/tesla-get-wrong-1.png){fig-align="center" width="244"}
 
 ::: aside
 Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/vjcpte/i_love_how_tesla_thinks_the_wall_in_my_garage_is/)
@@ -86,7 +86,7 @@ Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/vjcpte/i_love_how
 > Just parked in my garage.
 > Tesla thinks I crashed onto a semi.
 
-![](images/tesla-get-wrong-2.png){fig-align="center" width="300"}
+![](images/tesla/tesla-get-wrong-2.png){fig-align="center" width="253"}
 
 ::: aside
 Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/112520t/new_owner_here_just_parked_in_my_garage_tesla/)
@@ -96,7 +96,7 @@ Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/112520t/new_owner
 
 > Tesla calls Mercedes trash
 
-![](images/tesla-get-wrong-3.png){fig-align="center" width="500"}
+![](images/tesla/tesla-get-wrong-3.png){fig-align="center" width="297"}
 
 ::: aside
 Source: [Reddit](https://www.reddit.com/r/FUCKYOUINPARTICULAR/comments/hi5srx/tesla_calls_mercedes_trash/)
@@ -686,7 +686,6 @@ x <- 10
 fish_hw_aug <- augment(fish_hw_fit, new_data = fish)
 ```
 
-
 ## Model prediction: full data {.smaller}
 
 **Goal**: Calculate predicted weights for all fish in the data.
@@ -745,7 +744,7 @@ fish_hw_aug |> ggplot(aes(x = height,
 ::: {.column width="50%"}
 ```{r}
 #| eval: false
-#| line-numbers: "7-8"
+
 fish_hw_aug |> 
   ggplot(aes(x = height,
              y = weight)) + 
@@ -780,11 +779,9 @@ fish_hw_aug |> ggplot(aes(x = height,
 
 ::: columns
 ::: {.column width="40%"}
-
 ```{r}
 fish_hw_fit
 ```
-
 :::
 
 ::: {.column width="60%"}
@@ -797,8 +794,8 @@ fish_hw_tidy
 
 ## Correlation {.smaller}
 
-Strength and direction of a linear relationship. It’s bounded by -1 and 1.
-
+Strength and direction of a linear relationship.
+It's bounded by -1 and 1.
 
 ## Correlation {.smaller}
 
@@ -808,6 +805,7 @@ fish |>
 ```
 
 ## Adding a 3rd Variable {.smaller}
+
 Does the relationship between heights and weights of fish change if we take into consideration species?
 
 ```{r}
@@ -823,6 +821,7 @@ ggplot(fish,
 ```
 
 ## Adding a 3rd Variable {.smaller}
+
 Does the relationship between heights and weights of fish change if we take into consideration species?
 
 ```{r}
