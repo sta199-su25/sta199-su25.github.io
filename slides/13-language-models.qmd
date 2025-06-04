@@ -18,6 +18,7 @@ library(janitor)
 library(palmerpenguins)
 library(datasauRus)
 library(ggplot2)
+library(gt)
 todays_ae <- "ae-11-modeling-fish"
 ```
 
@@ -433,7 +434,7 @@ base +
 -   Ranges between -1 and 1.
 -   Same sign as the slope.
 
-![](images/12/corr-example.png){fig-align="center"}
+![](images/corr-example.png){fig-align="center"}
 
 ## Visualizing the model
 
@@ -468,6 +469,8 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
 
 # Application exercise
 
+Follow along
+
 ## `{r} todays_ae`
 
 ::: appex
@@ -479,3 +482,203 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
 
 -   Work through the application exercise in class, and render, commit, and push your edits.
 :::
+
+## Data: Fish {.smaller}
+
+```{r}
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+
+fish <- read_csv("data/fish.csv")
+```
+
+## Data: Fish {.smaller}
+
+```{r}
+fish
+```
+
+## Visualizing the model
+
+***Goal:*** Analyze the relationship between fish height and weight.
+
+## Visualizing the model {.smaller}
+
+***Goal:*** Analyze the relationship between fish height and weight.
+
+::: columns
+::: {.column width="40%"}
+```{r}
+#| eval: false
+ggplot(fish, aes(x = height,
+                 y = weight)) +
+  geom_point() +
+  labs(x = "Height (cm)",
+       y = "Weight (gr)")
+```
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+ggplot(fish, aes(x = height,
+                 y = weight)) +
+  geom_point(size = 2) +
+  labs(x = "Height (cm)",
+       y = "Weight (gr)")
+```
+:::
+:::
+
+## Visualizing the model {.smaller}
+
+***Goal:*** Analyze the relationship between fish height and weight.
+
+::: columns
+::: {.column width="40%"}
+Where would you draw a line?
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+ggplot(fish, aes(x = height,
+                 y = weight)) +
+  geom_point(size = 2) +
+  labs(x = "Height (cm)",
+       y = "Weight (gr)")
+```
+:::
+:::
+
+## Visualizing the model {.smaller}
+
+Let R draw the line for you!
+
+::: columns
+::: {.column width="40%"}
+```{r}
+#| eval: false
+ggplot(fish, aes(x = height,
+                 y = weight)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "Height (cm)",
+       y = "Weight (gr)")
+```
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+#| message: false
+ggplot(fish, aes(x = height,
+                 y = weight)) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "Height (cm)",
+       y = "Weight (gr)")
+```
+:::
+:::
+
+## Visualizing the model {.smaller}
+
+How can we use the line to make predictions?
+
+::: columns
+::: {.column width="40%"}
+*Predict weight given height:*
+
+-   10 cm
+
+-   15 cm
+
+-   20 cm
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+#| message: false
+ggplot(fish, aes(x = height,
+                 y = weight)) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "Height (cm)",
+       y = "Weight (gr)")
+```
+:::
+:::
+
+## Visualizing the model {.smaller}
+
+Are the predictions good?
+
+::: columns
+::: {.column width="40%"}
+***Residual:** Difference between observed and predicted value*
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+#| message: false
+ggplot(fish, aes(x = height,
+                 y = weight)) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "Height (cm)",
+       y = "Weight (gr)")
+```
+:::
+:::
+
+# Model Fitting
+
+## Fit your first model {.smaller}
+
+```{r}
+fish_hw_fit <- linear_reg() |>
+  fit(weight ~ height, data = fish)
+```
+
+## Fit your first model {.smaller}
+
+```{r}
+fish_hw_fit <- linear_reg() |>
+  fit(weight ~ height, data = fish)
+
+fish_hw_fit
+```
+
+## Model prediction {.smaller}
+
+Use model results to predict weights at heights 10cm, 15cm, and 20cm.
+
+```{r}
+fish_hw_fit
+```
+
+```{r}
+x <- 10
+-288 + 60.92 * x
+```
+
+## Model prediction: our data
+
+
+
+
