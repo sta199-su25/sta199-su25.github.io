@@ -525,11 +525,147 @@ Y \;=\; \mathbf{Model} \;+\; \text{Error}
 <li><p>Work through the application exercise in class, and render, commit, and push your edits.</p></li>
 </ul>
 </div>
-</section></section><section id="regression-with-categorical-variables" class="title-slide slide level1 center"><h1>Regression with Categorical Variables</h1>
+</section></section><section><section id="regression-with-categorical-variables" class="title-slide slide level1 center"><h1>Regression with Categorical Variables</h1>
+
+</section><section id="regression-with-categorical-variables-1" class="slide level2"><h2>Regression with Categorical Variables</h2>
 <p>What does <span class="math inline">\(b_0 +b_1*x\)</span> even mean when <span class="math inline">\(x\)</span> is categorical ???</p>
+<div class="fragment">
+<p>Suppose variable <em>island</em> can take values <em>A, B,</em> or <em>C.</em> We want to model variable <em>mass</em> based on <em>island</em>.</p>
+</div>
+<div class="fragment">
+<p>We tell R to fit <code>mass ~ island</code> … now what?</p>
+</div>
+<div class="fragment">
+<p><span style="background-color: #fcefb3">We get <strong><em>dummy variables!!!</em></strong></span></p>
+</div>
+</section><section id="dummy-variables" class="slide level2"><h2>Dummy Variables</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<thead><tr class="header">
+<th>mass</th>
+<th>island</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>A</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</section><section id="dummy-variables-1" class="slide level2"><h2>Dummy Variables</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<thead><tr class="header">
+<th>mass</th>
+<th>island</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>A</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<thead><tr class="header">
+<th>mass</th>
+<th>island</th>
+<th><strong>A</strong></th>
+<th>B</th>
+<th>C</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>B</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>In a given row, only <em>one</em> of the dummy variables for a given categorical variable can equal 1.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="what-will-a-regression-output-look-like" class="slide level2"><h2>What will a regression output look like?</h2>
+<p><span class="math display">\[
+mass = b_0 + b_2 * B + b_3 *C
+\]</span></p>
+<div class="fragment">
+<p>What is the estimated weight of a penguin from island <em>A?</em></p>
+</div>
+<div class="fragment">
+<p>What is the estimated weight of a penguin from island <em>B?</em></p>
+</div>
+<div class="fragment">
+<p>What is the estimated weight of a penguin from island <em>C?</em></p>
+</div>
+</section><section id="lets-take-a-look-at-the-actual-penguins-data.-back-to-the-ae" class="slide level2"><h2>Let’s take a look at the actual penguins data. Back to the AE!</h2>
 
 
-</section>
+</section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/logo.png" class="slide-logo"></p>
@@ -551,7 +687,7 @@ Y \;=\; \mathbf{Model} \;+\; \text{Error}
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'chalkboard': {"buttons":true,"theme":"whiteboard","chalkEffect":0,"chalkWidth":6},
 'smaller': false,
  
         // Display controls in the bottom right corner

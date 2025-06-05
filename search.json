@@ -2170,6 +2170,41 @@
     "text": "ae-12-modeling-penguins\n\n\nGo to your ae project in RStudio.\nIf you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nIf you haven’t yet done so, click Pull to get today’s application exercise file: ae-12-modeling-penguins.qmd.\nWork through the application exercise in class, and render, commit, and push your edits."
   },
   {
+    "objectID": "slides/14-simple-reg-slides.html#regression-with-categorical-variables-1",
+    "href": "slides/14-simple-reg-slides.html#regression-with-categorical-variables-1",
+    "title": "Linear Regression",
+    "section": "Regression with Categorical Variables",
+    "text": "Regression with Categorical Variables\nWhat does \\(b_0 +b_1*x\\) even mean when \\(x\\) is categorical ???\n\nSuppose variable island can take values A, B, or C. We want to model variable mass based on island.\n\n\nWe tell R to fit mass ~ island … now what?\n\n\nWe get dummy variables!!!"
+  },
+  {
+    "objectID": "slides/14-simple-reg-slides.html#dummy-variables",
+    "href": "slides/14-simple-reg-slides.html#dummy-variables",
+    "title": "Linear Regression",
+    "section": "Dummy Variables",
+    "text": "Dummy Variables\n\n\n\n\nmass\nisland\n\n\n\n10\nA\n\n\n30\nC\n\n\n20\nB\n\n\n15\nA"
+  },
+  {
+    "objectID": "slides/14-simple-reg-slides.html#dummy-variables-1",
+    "href": "slides/14-simple-reg-slides.html#dummy-variables-1",
+    "title": "Linear Regression",
+    "section": "Dummy Variables",
+    "text": "Dummy Variables\n\n\n\n\nmass\nisland\n\n\n\n10\nA\n\n\n30\nC\n\n\n20\nB\n\n\n15\nA\n\n\n\n\n\n\nmass\nisland\nA\nB\nC\n\n\n\n10\nA\n\n\n\n\n\n30\nC\n\n\n\n\n\n20\nB\n\n\n\n\n\n15\nA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nIn a given row, only one of the dummy variables for a given categorical variable can equal 1."
+  },
+  {
+    "objectID": "slides/14-simple-reg-slides.html#what-will-a-regression-output-look-like",
+    "href": "slides/14-simple-reg-slides.html#what-will-a-regression-output-look-like",
+    "title": "Linear Regression",
+    "section": "What will a regression output look like?",
+    "text": "What will a regression output look like?\n\\[\nmass = b_0 + b_2 * B + b_3 *C\n\\]\n\nWhat is the estimated weight of a penguin from island A?\n\n\nWhat is the estimated weight of a penguin from island B?\n\n\nWhat is the estimated weight of a penguin from island C?"
+  },
+  {
+    "objectID": "slides/14-simple-reg-slides.html#lets-take-a-look-at-the-actual-penguins-data.-back-to-the-ae",
+    "href": "slides/14-simple-reg-slides.html#lets-take-a-look-at-the-actual-penguins-data.-back-to-the-ae",
+    "title": "Linear Regression",
+    "section": "Let’s take a look at the actual penguins data. Back to the AE!",
+    "text": "Let’s take a look at the actual penguins data. Back to the AE!"
+  },
+  {
     "objectID": "slides/14-simple-reg.html",
     "href": "slides/14-simple-reg.html",
     "title": "Linear Regression",
@@ -2350,6 +2385,41 @@
     "title": "Linear Regression",
     "section": "ae-12-modeling-penguins",
     "text": "ae-12-modeling-penguins\n\n\nGo to your ae project in RStudio.\nIf you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nIf you haven’t yet done so, click Pull to get today’s application exercise file: ae-12-modeling-penguins.qmd.\nWork through the application exercise in class, and render, commit, and push your edits."
+  },
+  {
+    "objectID": "slides/14-simple-reg.html#regression-with-categorical-variables-1",
+    "href": "slides/14-simple-reg.html#regression-with-categorical-variables-1",
+    "title": "Linear Regression",
+    "section": "Regression with Categorical Variables",
+    "text": "Regression with Categorical Variables\nWhat does \\(b_0 +b_1*x\\) even mean when \\(x\\) is categorical ???\n. . .\nSuppose variable island can take values A, B, or C. We want to model variable mass based on island.\n. . .\nWe tell R to fit mass ~ island … now what?\n. . .\nWe get dummy variables!!!"
+  },
+  {
+    "objectID": "slides/14-simple-reg.html#dummy-variables",
+    "href": "slides/14-simple-reg.html#dummy-variables",
+    "title": "Linear Regression",
+    "section": "Dummy Variables",
+    "text": "Dummy Variables\n\n\n\n\nmass\nisland\n\n\n\n10\nA\n\n\n30\nC\n\n\n20\nB\n\n\n15\nA"
+  },
+  {
+    "objectID": "slides/14-simple-reg.html#dummy-variables-1",
+    "href": "slides/14-simple-reg.html#dummy-variables-1",
+    "title": "Linear Regression",
+    "section": "Dummy Variables",
+    "text": "Dummy Variables\n\n\n\n\nmass\nisland\n\n\n\n10\nA\n\n\n30\nC\n\n\n20\nB\n\n\n15\nA\n\n\n\n\n\n\nmass\nisland\nA\nB\nC\n\n\n\n10\nA\n\n\n\n\n\n30\nC\n\n\n\n\n\n20\nB\n\n\n\n\n\n15\nA\n\n\n\n\n\n\n\n\n. . .\n\n\n\n\n\n\nImportant\n\n\n\nIn a given row, only one of the dummy variables for a given categorical variable can equal 1."
+  },
+  {
+    "objectID": "slides/14-simple-reg.html#what-will-a-regression-output-look-like",
+    "href": "slides/14-simple-reg.html#what-will-a-regression-output-look-like",
+    "title": "Linear Regression",
+    "section": "What will a regression output look like?",
+    "text": "What will a regression output look like?\n\\[\nmass = b_0 + b_2 * B + b_3 *C\n\\]\n. . .\nWhat is the estimated weight of a penguin from island A?\n. . .\nWhat is the estimated weight of a penguin from island B?\n. . .\nWhat is the estimated weight of a penguin from island C?\n. . ."
+  },
+  {
+    "objectID": "slides/14-simple-reg.html#lets-take-a-look-at-the-actual-penguins-data.-back-to-the-ae",
+    "href": "slides/14-simple-reg.html#lets-take-a-look-at-the-actual-penguins-data.-back-to-the-ae",
+    "title": "Linear Regression",
+    "section": "Let’s take a look at the actual penguins data. Back to the AE!",
+    "text": "Let’s take a look at the actual penguins data. Back to the AE!"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#reminders",

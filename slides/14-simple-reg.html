@@ -393,7 +393,16 @@ window.Quarto = {
 <li><a href="#ae-12-modeling-penguins" id="toc-ae-12-modeling-penguins" class="nav-link" data-scroll-target="#ae-12-modeling-penguins">ae-12-modeling-penguins</a></li>
   </ul>
 </li>
-  <li><a href="#regression-with-categorical-variables" id="toc-regression-with-categorical-variables" class="nav-link" data-scroll-target="#regression-with-categorical-variables">Regression with Categorical Variables</a></li>
+  <li>
+<a href="#regression-with-categorical-variables" id="toc-regression-with-categorical-variables" class="nav-link" data-scroll-target="#regression-with-categorical-variables">Regression with Categorical Variables</a>
+  <ul class="collapse">
+<li><a href="#regression-with-categorical-variables-1" id="toc-regression-with-categorical-variables-1" class="nav-link" data-scroll-target="#regression-with-categorical-variables-1">Regression with Categorical Variables</a></li>
+  <li><a href="#dummy-variables" id="toc-dummy-variables" class="nav-link" data-scroll-target="#dummy-variables">Dummy Variables</a></li>
+  <li><a href="#dummy-variables-1" id="toc-dummy-variables-1" class="nav-link" data-scroll-target="#dummy-variables-1">Dummy Variables</a></li>
+  <li><a href="#what-will-a-regression-output-look-like" id="toc-what-will-a-regression-output-look-like" class="nav-link" data-scroll-target="#what-will-a-regression-output-look-like">What will a regression output look like?</a></li>
+  <li><a href="#lets-take-a-look-at-the-actual-penguins-data.-back-to-the-ae" id="toc-lets-take-a-look-at-the-actual-penguins-data.-back-to-the-ae" class="nav-link" data-scroll-target="#lets-take-a-look-at-the-actual-penguins-data.-back-to-the-ae">Let’s take a look at the actual penguins data. Back to the AE!</a></li>
+  </ul>
+</li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/slides/14-simple-reg.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="14-simple-reg-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -785,10 +794,141 @@ Y \;=\; \mathbf{Model} \;+\; \text{Error}
 </ul>
 </div>
 </section></section><section id="regression-with-categorical-variables" class="level1"><h1>Regression with Categorical Variables</h1>
+<section id="regression-with-categorical-variables-1" class="level2"><h2 class="anchored" data-anchor-id="regression-with-categorical-variables-1">Regression with Categorical Variables</h2>
 <p>What does <span class="math inline">\(b_0 +b_1*x\)</span> even mean when <span class="math inline">\(x\)</span> is categorical ???</p>
+<p>. . .</p>
+<p>Suppose variable <em>island</em> can take values <em>A, B,</em> or <em>C.</em> We want to model variable <em>mass</em> based on <em>island</em>.</p>
+<p>. . .</p>
+<p>We tell R to fit <code>mass ~ island</code> … now what?</p>
+<p>. . .</p>
+<p><span style="background-color: #fcefb3">We get <strong><em>dummy variables!!!</em></strong></span></p>
+</section><section id="dummy-variables" class="level2"><h2 class="anchored" data-anchor-id="dummy-variables">Dummy Variables</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top table">
+<thead><tr class="header">
+<th>mass</th>
+<th>island</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>A</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="dummy-variables-1" class="level2"><h2 class="anchored" data-anchor-id="dummy-variables-1">Dummy Variables</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top table">
+<thead><tr class="header">
+<th>mass</th>
+<th>island</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>A</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<table class="caption-top table">
+<thead><tr class="header">
+<th>mass</th>
+<th>island</th>
+<th><strong>A</strong></th>
+<th>B</th>
+<th>C</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>C</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>B</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>. . .</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In a given row, only <em>one</em> of the dummy variables for a given categorical variable can equal 1.</p>
+</div>
+</div>
+</section><section id="what-will-a-regression-output-look-like" class="level2"><h2 class="anchored" data-anchor-id="what-will-a-regression-output-look-like">What will a regression output look like?</h2>
+<p><span class="math display">\[
+mass = b_0 + b_2 * B + b_3 *C
+\]</span></p>
+<p>. . .</p>
+<p>What is the estimated weight of a penguin from island <em>A?</em></p>
+<p>. . .</p>
+<p>What is the estimated weight of a penguin from island <em>B?</em></p>
+<p>. . .</p>
+<p>What is the estimated weight of a penguin from island <em>C?</em></p>
+<p>. . .</p>
+</section><section id="lets-take-a-look-at-the-actual-penguins-data.-back-to-the-ae" class="level2"><h2 class="anchored" data-anchor-id="lets-take-a-look-at-the-actual-penguins-data.-back-to-the-ae">Let’s take a look at the actual penguins data. Back to the AE!</h2>
 
 
-</section></main><!-- /main --><script>
+</section></section></main><!-- /main --><script>
   // htmlwidgets need to know to resize themselves when slides are shown/hidden.
   // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
   // slide changes (different for each slide format).
