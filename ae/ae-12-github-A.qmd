@@ -69,9 +69,9 @@ penguins |>
 
 **Task 3 (Demo) :** Write the [*population model*]{.underline} (model for the *true values)* below that explains the relationship between body mass and flipper length.
 
-*Add answer here!*
-
-**Task 4:** Fit the linear regression model and display the results.
+$$
+{body mass} = \beta_0 + \beta_1 \times flipper length + \epsilon
+$$**Task 4:** Fit the linear regression model and display the results.
 [*Write the estimated model output below.*]{.underline}
 
 ```{r}
@@ -83,7 +83,9 @@ bm_fl_fit <- linear_reg() |>
 tidy(bm_fl_fit)
 ```
 
-*Writee model output here.*
+$$
+\widehat{body mass} = -5780 + 49.7 \times flipper length 
+$$
 
 **Task 5:** Interpret the slope and the intercept in the context of the data.
 
