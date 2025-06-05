@@ -1,5 +1,6 @@
 ---
 title: "AE 12: Modelling penguins"
+subtitle: "Suggested answers"
 ---
 
 In this application exercise we will be studying penguins.
@@ -32,7 +33,8 @@ First, we are going to investigate the relationship between a penguins' flipper 
 ```{r}
 #| label: plot-bm-fl
 
-# Add code here!
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point()
 ```
 
 ## Correlation
@@ -42,9 +44,7 @@ First, we are going to investigate the relationship between a penguins' flipper 
 -   **Question:** What is correlation?
     What values can correlation take?
 
-    \*Add answer here.\
-
-    -   
+    *Strength and direction of a linear relationship. It\'s bounded by -1 and 1.*
 
     ::: callout-note
     *Are you good at guessing correlation?* [Give it a try](https://www.guessthecorrelation.com) with this game!
@@ -55,7 +55,14 @@ First, we are going to investigate the relationship between a penguins' flipper 
 ```{r}
 #| label: correlation
 
-# add code here
+# option 1
+penguins |>
+  summarize(r = cor(flipper_length_mm, body_mass_g, use = "complete.obs"))
+
+# option 2
+penguins |>
+  drop_na(flipper_length_mm, body_mass_g) |>
+  summarize(r = cor(flipper_length_mm, body_mass_g))s
 ```
 
 ## Defining, fitting, and summarizing a model
@@ -70,23 +77,31 @@ First, we are going to investigate the relationship between a penguins' flipper 
 ```{r}
 #| label: fit-bm-fl
 
-# add code here
+bm_fl_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm, data = penguins)
+
+tidy(bm_fl_fit)
 ```
 
 *Writee model output here.*
 
 **Task 5:** Interpret the slope and the intercept in the context of the data.
 
--   *Intercept*:
+-   *Intercept*: Penguins with 0 flipper length are expected, on average, to weigh -5,781 grams.
 
--   *Slope*:
+-   *Slope*: For each additional millimeter of a penguin;s flipper length, the weight of their penguin is expected to be higher, on average, by 49.7 grams.
 
 **Task 6:** Recreate the visualization from above, this time adding a regression line to the visualization `geom_smooth(method = "lm")`.
 
 ```{r}
 #| label: plot-bm-fl-line
 
-# add code here
+ggplot(
+  penguins,
+  aes(x = flipper_length_mm, y = body_mass_g)
+  ) +
+  geom_point() +
+  geom_smooth(method = "lm")
 ```
 
 **Task 7 (Demo):** What is the estimated body mass for a penguin with a flipper length of 210?
@@ -94,7 +109,10 @@ First, we are going to investigate the relationship between a penguins' flipper 
 ```{r}
 #| label: predict-210
 
-# add code here
+penguin_flipper_210 <- tibble(flipper_length_mm = 210)
+
+bm_fl_fit |>
+  predict(new_data = penguin_flipper_210)
 ```
 
 **Task 8:** What is the estimated body mass for a penguin with a flipper length of 100?
@@ -104,8 +122,13 @@ Is there anything weird about making this prediction?
 ```{r}
 #| label: predict-100
 
-# add code here
+penguin_flipper_100 <- tibble(flipper_length_mm = 100)
+
+bm_fl_fit |>
+  predict(new_data = penguin_flipper_100)
 ```
+
+We are extrapolating when we take flipper length = 100: it is outside of the data range.
 
 # Part 2: Another model
 
