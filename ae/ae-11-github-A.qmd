@@ -1,5 +1,6 @@
 ---
 title: "AE 11: Modelling fish"
+subtitle: "Suggested answers"
 format:
   html:
     self-contained: true
@@ -37,7 +38,14 @@ We're going to investigate the relationship between the weights and heights of f
 
 ```{r}
 #| label: plot-hw
-# add code here
+
+ggplot(fish, aes(x = height, y = weight)) +
+  geom_point() +
+  labs(
+    title = "Weights vs. lengths of fish",
+    x = "Head-to-tail lentgh (cm)",
+    y = "Weight of fish (grams)"
+  )
 ```
 
 -   If you were to draw a a straight line to best represent the relationship between the heights and weights of fish, where would it go?
@@ -47,20 +55,33 @@ We're going to investigate the relationship between the weights and heights of f
 
 ```{r}
 #| label: plot-hw-lm
-# add code here
+ggplot(fish, aes(x = height, y = weight)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Weights vs. lengths of fish",
+    x = "Head-to-tail lentgh (cm)",
+    y = "Weight of fish (grams)"
+  )
 ```
 
 -   What types of questions can this plot help answer?
 
-Add response here.
+    *Is there a relationship between fish heights and weights of fish?*
 
--   We can use this line to make predictions. Predict what you think the weight of a fish would be with a height of 10 cm, 15 cm, and 20 cm. Which prediction is considered extrapolation?
+```{=html}
+<!-- -->
+```
+-   We can use this line to make predictions. Predict what you think the weight of a fish would be with a height of 10 cm, 15 cm, and 20 cm. Which prediction is considered extrapolation?\
+    \
+    *At 10 cm, we estimate a weight of 375 grams. At 15 cm, we estimate a weight of 600 grams At 20 cm, we estimate a weight of 975 grams. 20 cm would be considered extrapolation.*
 
-Add response here.
-
--   What is a residual?
-
-Add response here.
+```{=html}
+<!-- -->
+```
+-   What is a residual?\
+    \
+    *Difference between predicted and observed.*
 
 # Model fitting
 
@@ -68,21 +89,38 @@ Add response here.
 
 ```{r}
 #| label: fit-model
-# add code here
+fish_hw_fit <- linear_reg() |>
+  fit(weight ~ height, data = fish)
+
+fish_hw_fit
 ```
 
 -   Predict what the weight of a fish would be with a height of 10 cm, 15 cm, and 20 cm using this model.
 
 ```{r}
 #| label: predict-by-hand
-# add code here
+x <- c(10, 15, 20)
+-288 + 60.92 * x
 ```
 
 -   **Demo:** Calculate predicted weights for all fish in the data and visualize the residuals under this model.
 
 ```{r}
 #| label: residuals
-# add code here
+fish_hw_aug <- augment(fish_hw_fit, new_data = fish)
+
+ggplot(fish_hw_aug, aes(x = height, y = weight)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE, color = "lightgrey") +  
+  geom_segment(aes(xend = height, yend = .pred), color = "gray") +  
+  geom_point(aes(y = .pred), shape = "circle open") + 
+  theme_minimal() +
+  labs(
+    title = "Weights vs. heights of fish",
+    subtitle = "Residuals",
+    x = "Height (cm)",
+    y = "Weight (gr)"
+  )
 ```
 
 # Model summary
@@ -91,7 +129,8 @@ Add response here.
 
 ```{r}
 #| label: model-summary
-# add code here
+fish_hw_tidy <- tidy(fish_hw_fit)
+fish_hw_tidy
 ```
 
 -   **Demo:** Write out your model using mathematical notation.
@@ -114,7 +153,8 @@ Add response here.
 
 ```{r}
 #| label: correlation
-# add code here
+fish |>
+  summarize(r = cor(height, weight))
 ```
 
 # Adding a third variable
@@ -123,7 +163,15 @@ Add response here.
 
 ```{r}
 #| label: plot-hws-lm
-# add code here
+ggplot(fish, 
+       aes(x = height, y = weight, color = species)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Weights vs. heights of fish",
+    x = "Height (cm)",
+    y = "Weight (gr)"
+  )
 ```
 
 # Fitting other models
@@ -132,5 +180,13 @@ Add response here.
 
 ```{r}
 #| label: plot-hw-loess
-# add code here
+ggplot(fish, 
+       aes(x = height, y = weight)) +
+  geom_point() +
+  geom_smooth(method = "loess") +
+  labs(
+    title = "Weights vs. heights of fish",
+    x = "Height (cm)",
+    y = "Weight (gr)"
+  )
 ```
