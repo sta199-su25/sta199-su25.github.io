@@ -326,9 +326,7 @@ $$\small{\text{residual} = \text{observed} - \text{predicted} = y - \hat{y}}$$
 ::: incremental
 -   We have $n$ observations (generally, the number of rows in a df)
 
-
 -   $i^{th}$ observation ($i$ from $1$ to $N$):
-
 
     -   $y_i$ : $i^{th}$ outcome
 
@@ -337,8 +335,7 @@ $$\small{\text{residual} = \text{observed} - \text{predicted} = y - \hat{y}}$$
     -   $\hat{y}$ : $i^{th}$ predicted outcome
 
     -   $e$ : $i^{th}$ residual
-    
-::: 
+:::
 
 ## Notation: Example {.smaller}
 
@@ -395,7 +392,6 @@ ggplot(movie_scores, aes(x = critics, y = audience)) +
   labs(x = "Critics Score", y = "Audience Score")
 ```
 
-
 ## Least squares line {.smaller}
 
 ```{r}
@@ -416,11 +412,10 @@ Let's interpret this!
 $$\widehat{y} = b_0 + b_1 \times x$$
 
 ::: incremental
--   **Slope:** For every one increase in the value of $x$, we expect $y$ to be higher by $b_1$, on average. 
+-   **Slope:** For every one increase in the value of $x$, we expect $y$ to be higher by $b_1$, on average.
 
--   **Intercept:** If $x = 0$, we expect $y = b_0$ 
+-   **Intercept:** If $x = 0$, we expect $y = b_0$
 :::
-
 
 ## Interpreting slope & intercept {.smaller}
 
@@ -442,16 +437,14 @@ $$\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}$$
 
 🛑 Otherwise, it might not be meaningful!
 
-
 ## Properties of least squares regression {.smaller}
 
 ::: incremental
--   Slope ($b_1$) has the same sign as the correlation coefficient ($r$):  $b_1 = r \frac{s_Y}{s_X}$
+-   Slope ($b_1$) has the same sign as the correlation coefficient ($r$): $b_1 = r \frac{s_Y}{s_X}$
 
--  The regression line goes through the center of mass point (the coordinates corresponding to average $X$ and average $Y$)
+-   The regression line goes through the center of mass point (the coordinates corresponding to average $X$ and average $Y$)
 
 -   Sum of the residuals is zero
-
 :::
 
 # Application exercise
@@ -470,4 +463,81 @@ $$\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}$$
 
 # Regression with Categorical Variables
 
+## Regression with Categorical Variables
+
 What does $b_0 +b_1*x$ even mean when $x$ is categorical ???
+
+. . .
+
+Suppose variable *island* can take values *A, B,* or *C.* We want to model variable *mass* based on *island*.
+
+. . .
+
+We tell R to fit `mass ~ island` ... now what?
+
+. . .
+
+[We get ***dummy variables!!!***]{style="background-color: #fcefb3"}
+
+## Dummy Variables
+
+::: columns
+::: {.column width="50%"}
+| mass | island |
+|------|--------|
+| 10   | A      |
+| 30   | C      |
+| 20   | B      |
+| 15   | A      |
+:::
+:::
+
+## Dummy Variables
+
+::: columns
+::: {.column width="50%"}
+| mass | island |
+|------|--------|
+| 10   | A      |
+| 30   | C      |
+| 20   | B      |
+| 15   | A      |
+:::
+
+::: {.column width="50%"}
+| mass | island | **A** | B   | C   |
+|------|--------|-------|-----|-----|
+| 10   | A      |       |     |     |
+| 30   | C      |       |     |     |
+| 20   | B      |       |     |     |
+| 15   | A      |       |     |     |
+:::
+:::
+
+. . .
+
+::: callout-important
+In a given row, only *one* of the dummy variables for a given categorical variable can equal 1.
+:::
+
+## What will a regression output look like?
+
+$$
+mass = b_0 + b_2 * B + b_3 *C
+$$
+
+. . .
+
+What is the estimated weight of a penguin from island *A?*
+
+. . .
+
+What is the estimated weight of a penguin from island *B?*
+
+. . .
+
+What is the estimated weight of a penguin from island *C?*
+
+. . .
+
+## Let's take a look at the actual penguins data. Back to the AE!
