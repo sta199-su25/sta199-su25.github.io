@@ -5,6 +5,7 @@ date: "2025-06-05"
 format: 
   revealjs:
     output-file: 14-simple-reg-slides.html
+    chalkboard: true
 ---
 
 ```{r}
@@ -74,14 +75,6 @@ df |> ggplot(aes(x = mozzarella_cheese_consumption_pounds,
 ## Spurious correlations
 
 ![](images/15/mozarella-ce-phd.png){fig-align="center"}
-
-::: aside
-Source: [tylervigen.com/spurious-correlations](https://www.tylervigen.com/spurious-correlations)
-:::
-
-## Spurious correlations
-
-![](images/15/pool-nick-cage.png){fig-align="center"}
 
 ::: aside
 Source: [tylervigen.com/spurious-correlations](https://www.tylervigen.com/spurious-correlations)
@@ -330,10 +323,12 @@ $$\small{\text{residual} = \text{observed} - \text{predicted} = y - \hat{y}}$$
 
 ## Notation {.smaller}
 
+::: incremental
 -   We have $n$ observations (generally, the number of rows in a df)
 
+
 -   $i^{th}$ observation ($i$ from $1$ to $N$):
-::: incremental
+
 
     -   $y_i$ : $i^{th}$ outcome
 
@@ -342,6 +337,7 @@ $$\small{\text{residual} = \text{observed} - \text{predicted} = y - \hat{y}}$$
     -   $\hat{y}$ : $i^{th}$ predicted outcome
 
     -   $e$ : $i^{th}$ residual
+    
 ::: 
 
 ## Notation: Example {.smaller}
@@ -472,55 +468,6 @@ $$\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}$$
 -   Work through the application exercise in class, and render, commit, and push your edits.
 :::
 
+# Regression with Categorical Variables
 
-## Just because you can... {.smaller}
-**...doesn't mean you should!!**
-
-. . .
-
-Technically, we can fit a line through whatever data we want. 
-
-. . . 
-
-```{r}
-#| echo: false
-#| message: false
-ggplot(movie_scores, aes(x = critics, y = audience)) +
-  geom_point(alpha = 0.4) + 
-  geom_smooth(method = "lm", se = FALSE, color = "hotpink") + 
-  labs(x = "x", y = "y")
-```
-## Just because you can... {.smaller}
-**...doesn't mean you should!!**
-
-
-
-Technically, we can fit a line through whatever data we want. 
-
-
-```{r}
-#| echo: false
-#| message: false
-datasaurus_dozen |>
-  filter(dataset == "circle") |>
-ggplot(aes(x = x, y = y)) +
-  geom_point(alpha = 0.4) + 
-  geom_smooth(method = "lm", se = FALSE, color = "hotpink") + 
-  labs(x = "x", y = "y") 
-```
-
-```{r}
-#| echo: false
-#| message: false
-
-datasaurus_dozen |>
-  filter(dataset == "dino") |>
-ggplot(aes(x = x, y = y)) +
-  geom_point(alpha = 0.4) + 
-  geom_smooth(method = "lm", se = FALSE, color = "hotpink") + 
-  labs(x = "x", y = "y") 
-```
-
-
-
-
+What does $b_0 +b_1*x$ even mean when $x$ is categorical ???
