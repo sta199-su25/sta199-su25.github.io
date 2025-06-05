@@ -5,7 +5,10 @@ date: "2025-06-05"
 format: 
   revealjs:
     output-file: 14-simple-reg-slides.html
-    chalkboard: true
+    chalkboard: 
+      theme: whiteboard
+      chalk-effect: 0
+      chalk-width: 6
 ---
 
 ```{r}
