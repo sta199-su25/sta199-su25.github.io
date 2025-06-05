@@ -209,7 +209,7 @@
 </section><section id="announcements" class="slide level2"><h2>Announcements</h2>
 <ul>
 <li><p>Office hours today: 1-3pm; old chem 203</p></li>
-<li><p>Math warning: logarithms</p></li>
+<li><p>Math warning: logarithms; natural log</p></li>
 <li><p>Let me know if your Milestone 2 is ready to grade!</p></li>
 </ul></section><section id="simple-linear-regression" class="slide level2"><h2>Simple Linear Regression</h2>
 <ul>
@@ -492,6 +492,240 @@ Y = \beta_0 + \beta_1 X + \epsilon
 <ul>
 <li>and so on….</li>
 </ul></section><section id="back-to-ae-12" class="slide level2 smaller"><h2>Back to AE-12!</h2>
+</section></section><section><section id="multiple-predictors" class="title-slide slide level1 center"><h1>Multiple Predictors</h1>
+
+</section><section id="more-than-1-predictor-variable" class="slide level2 smaller"><h2>More than 1 predictor variable</h2>
+<ul>
+<li><p>So far, we have looked at models with one predictor variable. What if we want multiple?</p></li>
+<li><p>First, I will show what happens with one of each type of predictor - numerical and categorical</p></li>
+<li>
+<p>We can also have:</p>
+<ul>
+<li><p>More than 2 predictors (might appear in your projects! will appear in real life!)</p></li>
+<li><p>Different combinations of predictor types (all numerical, all categorical, some of each…)</p></li>
+</ul>
+</li>
+</ul></section><section id="approach" class="slide level2 smaller"><h2>Approach:</h2>
+<ul>
+<li><p>Teach by example</p></li>
+<li><p>You might see a case in lab that we haven’t seen in class - don’t panic! The same concepts will apply.</p></li>
+</ul></section></section><section><section id="penguins-example" class="title-slide slide level1 center"><h1>Penguins Example</h1>
+
+</section><section id="penguins-so-far" class="slide level2 smaller"><h2>Penguins so far</h2>
+<ul>
+<li>
+<p>So far, we have seen body mass predicted by:</p>
+<ul>
+<li><p>Flipper length</p></li>
+<li><p>Island</p></li>
+</ul>
+</li>
+<li><p>What if we should use both for prediction??</p></li>
+</ul></section><section id="penguins-data-visualization" class="slide level2 smaller"><h2>Penguins Data Visualization</h2>
+<p>Both of these use <code>flipper_length_mm</code> <em>and</em> <code>island</code> to predict <code>body_mass_g</code>:</p>
+<div>
+
+</div>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="15-mult-reg_files/figure-revealjs/additive-interaction-viz-1.png" width="960"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="15-mult-reg_files/figure-revealjs/additive-interaction-viz-2.png" width="960"></p>
+</div>
+</div>
+</div>
+</section><section id="the-additive-model-parallel-lines-one-for-each-island" class="slide level2 smaller"><h2>The additive model: parallel lines, one for each island</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>bm_fl_island_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> island, <span class="at">data =</span> penguins)</span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="fu">tidy</span>(bm_fl_island_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+  term              estimate std.error statistic  p.value
+  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)        -4625.     392.      -11.8  4.29e-27
+2 flipper_length_mm     44.5      1.87     23.9  1.65e-74
+3 islandDream         -262.      55.0      -4.77 2.75e- 6
+4 islandTorgersen     -185.      70.3      -2.63 8.84e- 3</code></pre>
+</div>
+</div>
+<p><span class="math display">\[
+\begin{aligned}
+\widehat{body~mass} = -4625 &amp;+ 44.5 \times flipper~length \\
+&amp;- 262 \times Dream \\
+&amp;- 185 \times Torgersen
+\end{aligned}
+\]</span></p>
+</section><section id="where-do-the-three-lines-come-from" class="slide level2 smaller"><h2>Where do the three lines come from?</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\widehat{body~mass} = -4625 &amp;+ 44.5 \times flipper~length \\
+&amp;- 262 \times Dream \\
+&amp;- 185 \times Torgersen
+\end{aligned}
+\]</span></p>
+<div class="fragment">
+<p>If penguin is from Biscoe, Dream = 0 and Torgersen = 0:</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\widehat{body~mass} = -4625 &amp;+ 44.5 \times flipper~length
+\end{aligned}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>If penguin is from Dream, Dream = 1 and Torgersen = 0:</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\widehat{body~mass} = -4887 &amp;+ 44.5 \times flipper~length
+\end{aligned}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>If penguin is from Torgersen, Dream = 0 and Torgersen = 1:</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\widehat{body~mass} = -4810 &amp;+ 44.5 \times flipper~length
+\end{aligned}
+\]</span></p>
+</div>
+</section><section id="how-do-we-interpret-this-in-english" class="slide level2 smaller"><h2>How do we interpret this in English?</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\widehat{body~mass} = -4625 &amp;+ 44.5 \times flipper~length \\
+&amp;- 262 \times Dream \\
+&amp;- 185 \times Torgersen
+\end{aligned}
+\]</span></p>
+<ul>
+<li>Intercept: We expect, <u>on average</u>, penguins from <strong>Biscoe</strong> island with <strong>0mm flipper length</strong> to weigh <strong>-4625 grams</strong>
+</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Slope (flipper length) : <strong><em>Holding island constant,</em></strong> we expect, on average, a <strong>1mm</strong> increase in flipper length corresponds to a <strong>44.5g</strong> increase in body mass</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Slope (dream) : <strong><em>Holding flipper length constant,</em></strong> we expect, <u>on average</u>, a penguin from the <strong>Dream island</strong> to be <strong>262g lighter</strong> than a penguin from <strong>Biscoe</strong> island.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Slope (torgersen) : You try!</li>
+</ul>
+</div>
+</section><section id="prediction" class="slide level2"><h2>Prediction</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb8-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">200</span>,</span>
+<span id="cb8-3"><a></a>  <span class="at">island =</span> <span class="st">"Torgersen"</span></span>
+<span id="cb8-4"><a></a>)</span>
+<span id="cb8-5"><a></a></span>
+<span id="cb8-6"><a></a><span class="fu">predict</span>(bm_fl_island_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  .pred
+  &lt;dbl&gt;
+1 4099.</code></pre>
+</div>
+</div>
+</section><section id="the-interaction-model-different-slopes-for-each-island" class="slide level2 smaller"><h2>The interaction model: different slopes for each island</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>bm_fl_island_int_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">*</span> island, <span class="at">data =</span> penguins)</span>
+<span id="cb10-3"><a></a></span>
+<span id="cb10-4"><a></a><span class="fu">tidy</span>(bm_fl_island_int_fit) <span class="sc">|&gt;</span> <span class="fu">select</span>(term, estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  term                              estimate
+  &lt;chr&gt;                                &lt;dbl&gt;
+1 (Intercept)                        -5464. 
+2 flipper_length_mm                     48.5
+3 islandDream                         3551. 
+4 islandTorgersen                     3218. 
+5 flipper_length_mm:islandDream        -19.4
+6 flipper_length_mm:islandTorgersen    -17.4</code></pre>
+</div>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\widehat{body~mass} = -5464 + 48.5 \times flipper~length &amp;+ 3551 \times Dream \\
+&amp;+ 3218 \times Torgersen \\
+&amp;- 19.4 \times flipper~length*Dream \\
+&amp;- 17.4 \times flipper~length*Torgersen
+\end{aligned}
+\]</span></p>
+</div>
+</section><section id="where-do-the-three-lines-come-from-1" class="slide level2 smaller"><h2>Where do the three lines come from?</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\small\widehat{body~mass} = -5464 &amp;+ 48.5 \times flipper~length \\
+&amp;+ 3551 \times Dream \\
+&amp;+ 3218 \times Torgersen \\
+&amp;- 19.4 \times flipper~length*Dream \\
+&amp;- 17.4 \times flipper~length*Torgersen
+\end{aligned}
+\]</span></p>
+<div class="fragment">
+<p>If penguin is from Biscoe, Dream = 0 and Torgersen = 0:</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\widehat{body~mass} = -5464 &amp;+ 48.5 \times flipper~length
+\end{aligned}
+\]</span></p>
+</div>
+</section><section id="where-do-the-three-lines-come-from-2" class="slide level2 smaller"><h2>Where do the three lines come from?</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\small\widehat{body~mass} = -5464 &amp;+ 48.5 \times flipper~length \\
+&amp;+ 3551 \times Dream \\
+&amp;+ 3218 \times Torgersen \\
+&amp;- 19.4 \times flipper~length*Dream \\
+&amp;- 17.4 \times flipper~length*Torgersen
+\end{aligned}
+\]</span></p>
+<div class="fragment">
+<p>If penguin is from Dream, Dream = 1 and Torgersen = 0:</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\widehat{body~mass} &amp;= (-5464 + 3551) + (48.5-19.4) \times flipper~length\\
+&amp;=-1913+29.1\times flipper~length.
+\end{aligned}
+\]</span></p>
+</div>
+</section><section id="prediction-1" class="slide level2 smaller"><h2>Prediction</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb12-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">200</span>,</span>
+<span id="cb12-3"><a></a>  <span class="at">island =</span> <span class="st">"Torgersen"</span></span>
+<span id="cb12-4"><a></a>)</span>
+<span id="cb12-5"><a></a></span>
+<span id="cb12-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  .pred
+  &lt;dbl&gt;
+1 3980.</code></pre>
+</div>
+</div>
+<p><span class="math display">\[
+\widehat{body~mass} = (-5464 + 3218) + (48.5-17.4) \times 200.
+\]</span></p>
 
 
 </section></section>
@@ -510,7 +744,7 @@ Y = \beta_0 + \beta_1 X + \epsilon
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'pdfSeparateFragments': false,
+'pdfSeparateFragments': true,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
