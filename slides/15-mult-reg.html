@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>AE 12: Modelling penguins – STA 199</title>
+<meta name="dcterms.date" content="2025-06-05">
+<title>Multiple Linear Regression – STA 199</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,10 +65,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3e476e15ae565c222d94875412ae43a1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-07f9649d2eb5c92efc60913bb73a6608.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bfeebad62992ce20359633fe86f0eb55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -95,13 +96,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="../style/sta199.scss">
-<meta property="og:title" content="AE 12: Modelling penguins – STA 199">
-<meta property="og:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Summer 2025.">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="../style/sta199.scss">
+<meta property="og:title" content="Multiple Linear Regression – STA 199">
+<meta property="og:description" content="Lecture 15">
+<meta property="og:image" content="https://sta199-su25.github.io/slides/15-mult-reg_files/figure-revealjs/unnamed-chunk-4-1.png">
 <meta property="og:site_name" content="STA 199">
-<meta name="twitter:title" content="AE 12: Modelling penguins – STA 199">
-<meta name="twitter:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Summer 2025.">
-<meta name="twitter:image" content="https://sta199-su25.github.io/ae/img/twitter-card.png">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1920">
+<meta name="twitter:title" content="Multiple Linear Regression – STA 199">
+<meta name="twitter:description" content="Lecture 15">
+<meta name="twitter:image" content="https://sta199-su25.github.io/slides/img/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -112,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AE 12: Modelling penguins</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Multiple Linear Regression</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -314,170 +343,392 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li>
-<a href="#part-1" id="toc-part-1" class="nav-link active" data-scroll-target="#part-1">Part 1</a>
+<li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#simple-linear-regression" id="toc-simple-linear-regression" class="nav-link" data-scroll-target="#simple-linear-regression">Simple Linear Regression</a></li>
+  <li>
+<a href="#regression-with-categorical-variables" id="toc-regression-with-categorical-variables" class="nav-link" data-scroll-target="#regression-with-categorical-variables">Regression with Categorical Variables</a>
   <ul class="collapse">
-<li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation">Correlation</a></li>
-  <li><a href="#defining-fitting-and-summarizing-a-model" id="toc-defining-fitting-and-summarizing-a-model" class="nav-link" data-scroll-target="#defining-fitting-and-summarizing-a-model">Defining, fitting, and summarizing a model</a></li>
+<li><a href="#regression-with-categorical-variables-1" id="toc-regression-with-categorical-variables-1" class="nav-link" data-scroll-target="#regression-with-categorical-variables-1">Regression with Categorical Variables</a></li>
   </ul>
 </li>
   <li>
-<a href="#part-2-another-model" id="toc-part-2-another-model" class="nav-link" data-scroll-target="#part-2-another-model">Part 2: Another model</a>
+<a href="#movie-example" id="toc-movie-example" class="nav-link" data-scroll-target="#movie-example">Movie Example</a>
   <ul class="collapse">
-<li><a href="#interpreting-categorical-predictors" id="toc-interpreting-categorical-predictors" class="nav-link" data-scroll-target="#interpreting-categorical-predictors">Interpreting Categorical Predictors</a></li>
-  <li><a href="#prediction" id="toc-prediction" class="nav-link" data-scroll-target="#prediction">Prediction:</a></li>
+<li><a href="#example-data" id="toc-example-data" class="nav-link" data-scroll-target="#example-data">Example Data</a></li>
+  <li><a href="#example-data-visualization" id="toc-example-data-visualization" class="nav-link" data-scroll-target="#example-data-visualization">Example Data: Visualization</a></li>
+  <li><a href="#lets-just-try-it" id="toc-lets-just-try-it" class="nav-link" data-scroll-target="#lets-just-try-it">Let’s just try it…</a></li>
+  <li><a href="#whats-going-on" id="toc-whats-going-on" class="nav-link" data-scroll-target="#whats-going-on">What’s going on?</a></li>
+  <li><a href="#dummy-variables" id="toc-dummy-variables" class="nav-link" data-scroll-target="#dummy-variables">Dummy Variables</a></li>
+  <li><a href="#dummy-variables-1" id="toc-dummy-variables-1" class="nav-link" data-scroll-target="#dummy-variables-1">Dummy Variables</a></li>
+  <li><a href="#write-the-regression-output" id="toc-write-the-regression-output" class="nav-link" data-scroll-target="#write-the-regression-output">Write the regression output:</a></li>
+  <li><a href="#what-will-a-regression-output-look-like" id="toc-what-will-a-regression-output-look-like" class="nav-link" data-scroll-target="#what-will-a-regression-output-look-like">What will a regression output look like?</a></li>
+  <li><a href="#what-will-a-regression-output-look-like-1" id="toc-what-will-a-regression-output-look-like-1" class="nav-link" data-scroll-target="#what-will-a-regression-output-look-like-1">What will a regression output look like?</a></li>
+  <li><a href="#interpret-the-output" id="toc-interpret-the-output" class="nav-link" data-scroll-target="#interpret-the-output">Interpret the output:</a></li>
+  <li><a href="#lets-plug-in-some-numbers" id="toc-lets-plug-in-some-numbers" class="nav-link" data-scroll-target="#lets-plug-in-some-numbers">Let’s plug in some numbers:</a></li>
+  <li><a href="#interpretation-with-numbers" id="toc-interpretation-with-numbers" class="nav-link" data-scroll-target="#interpretation-with-numbers">Interpretation with numbers:</a></li>
   </ul>
 </li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/ae/ae-12-github.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  <li>
+<a href="#in-general" id="toc-in-general" class="nav-link" data-scroll-target="#in-general">In General</a>
+  <ul class="collapse">
+<li><a href="#generally" id="toc-generally" class="nav-link" data-scroll-target="#generally">Generally:</a></li>
+  <li><a href="#generally-1" id="toc-generally-1" class="nav-link" data-scroll-target="#generally-1">Generally:</a></li>
+  <li><a href="#generally-2" id="toc-generally-2" class="nav-link" data-scroll-target="#generally-2">Generally:</a></li>
+  <li><a href="#back-to-ae-12" id="toc-back-to-ae-12" class="nav-link" data-scroll-target="#back-to-ae-12">Back to AE-12!</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/slides/15-mult-reg.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="15-mult-reg-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">AE 12: Modelling penguins</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Application exercise</div>
-  </div>
-  </div>
+<h1 class="title">Multiple Linear Regression</h1>
+<p class="subtitle lead">Lecture 15</p>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 5, 2025</p>
+    </div>
+  </div>
   
     
   </div>
   
 
 
-</header><p>In this application exercise we will be studying penguins. The data can be found in the <strong>palmerpenguins</strong> package and we will use <strong>tidyverse</strong> and <strong>tidymodels</strong> for data exploration and modeling, respectively.</p>
+</header><section id="announcements" class="level2"><h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
+<ul>
+<li><p>Office hours today: 1-3pm; old chem 203</p></li>
+<li><p>Math warning: logarithms</p></li>
+<li><p>Let me know if your Milestone 2 is ready to grade!</p></li>
+</ul></section><section id="simple-linear-regression" class="level2"><h2 class="anchored" data-anchor-id="simple-linear-regression">Simple Linear Regression</h2>
+<ul>
+<li><p>A single quantitative <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></p></li>
+<li>
+<p>Population Model:</p>
+<p><span class="math display">\[
+Y = \beta_0 + \beta_1 X + \epsilon
+\]</span></p>
+</li>
+<li>
+<p>Regression Line:</p>
+<p><span class="math display">\[
+\hat{Y} = b_0 + b_1 X
+\]</span></p>
+</li>
+</ul></section><section id="regression-with-categorical-variables" class="level1"><h1>Regression with Categorical Variables</h1>
+<section id="regression-with-categorical-variables-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="regression-with-categorical-variables-1">Regression with Categorical Variables</h2>
+<p><em>It’s possible to want to model an outcome based on a categorical predictor:</em></p>
+<p><span class="math display">\[ Y = \beta_0 + \beta_1 X + \epsilon\]</span></p>
+<p>What does this even mean when <span class="math inline">\(x\)</span> is categorical ???</p>
+</section></section><section id="movie-example" class="level1"><h1>Movie Example</h1>
+<section id="example-data" class="level2"><h2 class="anchored" data-anchor-id="example-data">Example Data</h2>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>You’ve seen the <code>penguins</code> data far too much at this point (sorry!!!), but we’re going to bring it back one more time.</p>
-<div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rows: 344
-Columns: 8
-$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…
-$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…
-$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …
-$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …
-$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…
-$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …
-$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…
-$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…</code></pre>
+<pre><code># A tibble: 146 × 3
+   critics audience imdb_cat
+     &lt;int&gt;    &lt;int&gt; &lt;chr&gt;   
+ 1      74       86 High    
+ 2      85       80 Med     
+ 3      80       90 High    
+ 4      18       84 Low     
+ 5      14       28 Low     
+ 6      63       62 Med     
+ 7      42       53 Med     
+ 8      86       64 Med     
+ 9      99       82 High    
+10      89       87 High    
+# ℹ 136 more rows</code></pre>
 </div>
 </div>
-<section id="part-1" class="level1"><h1>Part 1</h1>
-<p>Our goal is to understand better <strong>how various body measurements and attributes of penguins relate to their body mass</strong>. First, we are going to investigate the relationship between a penguins’ flipper lengths and their body masses.</p>
-<ul>
-<li><em>Based on our research focus, body mass is the response variable.</em></li>
-</ul>
-<p><strong>Task 1 - Exploratory Data Analysis:</strong> Visualize the relationship between flipper length and body mass of penguins.</p>
+</section><section id="example-data-visualization" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="example-data-visualization">Example Data: Visualization</h2>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Add code here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="15-mult-reg_files/figure-revealjs/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
 </div>
-<section id="correlation" class="level2"><h2 class="anchored" data-anchor-id="correlation">Correlation</h2>
-<p><strong>Task 2 - Complete the following</strong></p>
-<ul>
-<li>
-<p><strong>Question:</strong> What is correlation? What values can correlation take?</p>
-<p>*Add answer here.<br></p>
-<ul>
-<li>
-</li></ul>
-<div class="callout callout-style-default callout-note callout-titled">
+</div>
+</div>
+</section><section id="lets-just-try-it" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="lets-just-try-it">Let’s just try it…</h2>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_fit</span> <span class="op">&lt;-</span> <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">audience</span> <span class="op">~</span> <span class="va">imdb_cat</span>, data <span class="op">=</span> <span class="va">movie_scores</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">tidy</span><span class="op">(</span><span class="va">movies_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  term        estimate std.error statistic  p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)     85.1      1.73     49.1  2.29e-91
+2 imdb_catLow    -45.8      2.57    -17.8  3.89e-38
+3 imdb_catMed    -21.6      2.20     -9.83 9.83e-18</code></pre>
+</div>
+</div>
+<p>What’s going on??</p>
+</section><section id="whats-going-on" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="whats-going-on">What’s going on?</h2>
+<p>Variable <code>imdb_cat</code> can take values <em>high, med,</em> or <em>low.</em> We want to model variable <code>audience</code> based on <code>imdb_cat</code>.</p>
+<p>. . .</p>
+<p>We tell R to fit <code>audience ~ imdb_cat</code> … now what?</p>
+<p>. . .</p>
+<p><span style="background-color: #fcefb3">We get <strong><em>dummy variables!!!</em></strong></span></p>
+</section><section id="dummy-variables" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="dummy-variables">Dummy Variables</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top table">
+<thead><tr class="header">
+<th>audience</th>
+<th>imdb_cat</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>70</td>
+<td>high</td>
+</tr>
+<tr class="even">
+<td>40</td>
+<td>low</td>
+</tr>
+<tr class="odd">
+<td>50</td>
+<td>med</td>
+</tr>
+<tr class="even">
+<td>80</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="dummy-variables-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="dummy-variables-1">Dummy Variables</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top table">
+<thead><tr class="header">
+<th>audience</th>
+<th>imdb_cat</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>70</td>
+<td>high</td>
+</tr>
+<tr class="even">
+<td>40</td>
+<td>low</td>
+</tr>
+<tr class="odd">
+<td>50</td>
+<td>med</td>
+</tr>
+<tr class="even">
+<td>80</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<table class="caption-top table">
+<thead><tr class="header">
+<th>audience</th>
+<th>imdb_cat</th>
+<th>high</th>
+<th>low</th>
+<th>med</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>70</td>
+<td>high</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>40</td>
+<td>low</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>50</td>
+<td>med</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>80</td>
+<td>high</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>. . .</p>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>Are you good at guessing correlation?</em> <a href="https://www.guessthecorrelation.com">Give it a try</a> with this game!</p>
+<p>In a given row, only <em>one</em> of the dummy variables for a given categorical variable can equal 1.</p>
 </div>
 </div>
-</li>
-<li><p><strong>Code:</strong> What is the correlation between flipper length and body mass of penguins?</p></li>
-</ul>
-<div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="write-the-regression-output" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="write-the-regression-output">Write the regression output:</h2>
+<p>Using the categorical variable?</p>
+<p><span class="math display">\[
+\widehat{audience} = b_0 + b_1 \times imdb\_cat
+\]</span></p>
+<p><br><br><br></p>
+<p>❌ WRONG ❌ 🛑 DON’T DO THIS 🛑 ❗SERIOUSLY ❗💔 Don’t make me sad :( 💔</p>
+</section><section id="what-will-a-regression-output-look-like" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="what-will-a-regression-output-look-like">What will a regression output look like?</h2>
+<p>Use the dummy variables!!</p>
+<p><span class="math display">\[
+\widehat{audience} = b_0 + b_1 \times low + b_2  \times med
+\]</span></p>
+</section><section id="what-will-a-regression-output-look-like-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="what-will-a-regression-output-look-like-1">What will a regression output look like?</h2>
+<p>Use the dummy variables!!</p>
+<p><span class="math display">\[
+\widehat{audience} = b_0 + b_1 \times low + b_2 \times med
+\]</span></p>
+<p><br><br><br></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</section><section id="defining-fitting-and-summarizing-a-model" class="level2"><h2 class="anchored" data-anchor-id="defining-fitting-and-summarizing-a-model">Defining, fitting, and summarizing a model</h2>
-<p><strong>Task 3 (Demo) :</strong> Write the <u><em>population model</em></u> (model for the <em>true values)</em> below that explains the relationship between body mass and flipper length.</p>
-<p><em>Add answer here!</em></p>
-<p><strong>Task 4:</strong> Fit the linear regression model and display the results. <u><em>Write the estimated model output below.</em></u></p>
-<div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-title-container flex-fill">
+Important
 </div>
-<p><em>Writee model output here.</em></p>
-<p><strong>Task 5:</strong> Interpret the slope and the intercept in the context of the data.</p>
+</div>
+<div class="callout-body-container callout-body">
+<p>All levels except the <strong>baseline level</strong> will show up in the output. Here, high is the <strong>baseline level.</strong> You will be able to identify the baseline by looking at the data and the output!</p>
+</div>
+</div>
+</section><section id="interpret-the-output" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="interpret-the-output">Interpret the output:</h2>
+<p><span class="math display">\[
+\widehat{audience} = b_0 + b_1 \times low + b_2 \times med
+\]</span></p>
 <ul>
-<li><p><em>Intercept</em>:</p></li>
-<li><p><em>Slope</em>:</p></li>
+<li>(Intercept) <span class="math inline">\(b_0\)</span> ?</li>
 </ul>
-<p><strong>Task 6:</strong> Recreate the visualization from above, this time adding a regression line to the visualization <code>geom_smooth(method = "lm")</code>.</p>
+<p><br></p>
+<ul>
+<li>(Slope) <span class="math inline">\(b_1\)</span> ?</li>
+</ul>
+<p><br></p>
+<ul>
+<li>(Slope) <span class="math inline">\(b_2\)</span> ?</li>
+</ul></section><section id="lets-plug-in-some-numbers" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="lets-plug-in-some-numbers">Let’s plug in some numbers:</h2>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies_fit</span> <span class="op">&lt;-</span> <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">audience</span> <span class="op">~</span> <span class="va">imdb_cat</span>, data <span class="op">=</span> <span class="va">movie_scores</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">tidy</span><span class="op">(</span><span class="va">movies_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  term        estimate std.error statistic  p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)     85.1      1.73     49.1  2.29e-91
+2 imdb_catLow    -45.8      2.57    -17.8  3.89e-38
+3 imdb_catMed    -21.6      2.20     -9.83 9.83e-18</code></pre>
 </div>
-<p><strong>Task 7 (Demo):</strong> What is the estimated body mass for a penguin with a flipper length of 210?</p>
-<div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Task 8:</strong> What is the estimated body mass for a penguin with a flipper length of 100? Add code to find it! Is there anything weird about making this prediction?</p>
-<div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section></section><section id="part-2-another-model" class="level1"><h1>Part 2: Another model</h1>
-<p><strong>Task 9:</strong> A different researcher wants to look at body weight of penguins based on the island they were recorded on.</p>
+<p><br></p>
+<p><span class="math display">\[
+\widehat{audience} = 85.1 -45.8 \times low -21.6 \times med
+\]</span></p>
+</section><section id="interpretation-with-numbers" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="interpretation-with-numbers">Interpretation with numbers:</h2>
+<p><span class="math display">\[
+\widehat{audience} = 85.1 -45.8 \times low -21.6 \times med
+\]</span></p>
+<p><br></p>
+<ul>
+<li><p>Expected audience score of high IMDB rating movies: 85.1</p></li>
+<li><p>Movies with low IMDB ratings are expected to have, on average, audience scores 45.8 points lower than movies with high IMDB ratings</p></li>
+<li><p>Movies with medium IMDB ratings are expected to have, on average, audience scores 21.6 points lower than movies with high IMDB ratings</p></li>
+</ul></section></section><section id="in-general" class="level1"><h1>In General</h1>
+<section id="generally" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="generally">Generally:</h2>
+<p>Predicting <span style="background-color: #fcefb3">continuous outcome</span> <span class="math inline">\(y\)</span> using <span style="background-color: #fcefb3">categorical explanatory variable</span> <span class="math inline">\(x\)</span> with levels <span class="math inline">\(cat_0, \ldots cat_L\)</span>:</p>
+</section><section id="generally-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="generally-1">Generally:</h2>
+<p>Predicting <span style="background-color: #fcefb3">continuous outcome</span> <span class="math inline">\(y\)</span> using <span style="background-color: #fcefb3">categorical explanatory variable</span> <span class="math inline">\(x\)</span> with levels <span class="math inline">\(cat_0, \ldots cat_L\)</span>:</p>
+<p><span class="math display">\[
+\hat{y} = b_0 + b_1 \times cat_1 + b_2 \times cat_2 \ldots + b_L \times cat_L
+\]</span></p>
+</section><section id="generally-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="generally-2">Generally:</h2>
+<p>Predicting <span style="background-color: #fcefb3">continuous outcome</span> <span class="math inline">\(y\)</span> using <span style="background-color: #fcefb3">categorical explanatory variable</span> <span class="math inline">\(x\)</span> with levels <span class="math inline">\(cat_0, \ldots cat_L\)</span>:</p>
+<p><span class="math display">\[
+\hat{y} = b_0 + b_1 \times cat_1 + b_2 \times cat_2 \ldots + b_L \times cat_L
+\]</span></p>
 <ul>
 <li>
-<p><strong>Question:</strong> How are the variables involved in this analysis different?<br></p>
-<p><br><em>Add answer here.</em></p>
+<span class="math inline">\(b_0\)</span> : On average, expected <span class="math inline">\(y\)</span> for an entry of <strong>baseline level</strong> <span class="math inline">\(cat_0\)</span>
 </li>
-<li><p><strong>Code:</strong> Make an appropriate visualization to investigate this relationship below. Additionally, calculate the mean body mass by island.</p></li>
 </ul>
-<div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add plot here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add mean by island</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><strong>Task 10:</strong> Change the geom of your previous plot to <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code>. Is this plot useful?</p>
-<div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><strong>Task 11:</strong> Fit the linear regression model and display the results. Write the estimated model output below.</p>
-<div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="interpreting-categorical-predictors" class="level2"><h2 class="anchored" data-anchor-id="interpreting-categorical-predictors">Interpreting Categorical Predictors</h2>
-<p><strong>Task 12:</strong> Fill in the blanks.</p>
+<p><br></p>
 <ul>
-<li>The baseline island is ________.</li>
-</ul>
-<!-- --><ul>
-<li><p>Intercept: Penguins from _________ island are expected to weigh, on average, _______ grams.</p></li>
 <li>
-<p>Slopes:</p>
-<ul>
-<li><p>Penguins from _________ are expected to weigh, on average, _______ grams _____ than those from _______.</p></li>
-<li><p>Penguins from _________ island are expected to weigh, on average, ________ grams _______ than those from _______.</p></li>
-</ul>
+<span class="math inline">\(b_1\)</span>: On average, we expect the <span class="math inline">\(y\)</span> for an observation of level <span class="math inline">\(cat_1\)</span> to be be <span class="math inline">\(b_1\)</span> larger (smaller if negative) than a baseline <span class="math inline">\(cat_0\)</span> observation <br>
 </li>
-</ul></section><section id="prediction" class="level2"><h2 class="anchored" data-anchor-id="prediction">Prediction:</h2>
-<p><strong>Task 13 (Demo):</strong> What is the estimated body weight of a penguin on Biscoe island? What are the estimated body weights of penguins on Dream and Torgersen islands?</p>
-<div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+</ul>
+<p><br></p>
+<ul>
+<li>and so on….</li>
+</ul></section><section id="back-to-ae-12" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="back-to-ae-12">Back to AE-12!</h2>
 
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -901,7 +1152,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/ae/ae-12-github.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/slides/15-mult-reg.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <span style="color: #FFBE98;"><i class="fa-solid fa-heart" aria-label="heart"></i></span> and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
