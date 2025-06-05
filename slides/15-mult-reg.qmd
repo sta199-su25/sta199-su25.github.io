@@ -1,0 +1,287 @@
+---
+title: "Multiple Linear Regression"
+subtitle: "Lecture 15"
+date: "2025-06-05"
+format: 
+  revealjs:
+    output-file: 15-mult-reg-slides.html
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+library(tidymodels)
+library(fivethirtyeight)
+library(datasauRus)
+movie_scores <- fandango |>
+  rename(
+    critics = rottentomatoes, 
+    audience = rottentomatoes_user
+  )
+
+# Treat 'am' as a factor (categorical predictor)
+mtcars$am <- factor(mtcars$am, labels = c("Automatic", "Manual"))
+
+todays_ae <- "ae-12-modeling-penguins"
+
+```
+
+```{r}
+#| include: false
+movie_scores <- movie_scores %>%
+  mutate(imdb_cat = case_when(
+    imdb < 6.3 ~ "Low",
+    imdb < 7.4 ~ "Med",
+    TRUE ~ "High"
+  ))
+# Fit model: critic rating as outcome, audience level as predictor
+model <- lm(audience ~ imdb_cat, data = movie_scores)
+summary(model)
+
+# Plot
+ggplot(movie_scores, aes(x = imdb_cat, y = audience)) +
+  geom_boxplot(fill = "orchid") +
+  geom_jitter(width = 0.1, alpha = 0.5) +
+  stat_summary(fun = mean, geom = "point", color = "darkred", size = 3) +
+  labs(title = "Critic Score by Audience Rating Level",
+       x = "Audience Rating Category",
+       y = "Metacritic Score") +
+  theme_minimal()
+```
+
+## Announcements
+
+-   Office hours today: 1-3pm; old chem 203
+
+-   Math warning: logarithms
+
+-   Let me know if your Milestone 2 is ready to grade!
+
+## Simple Linear Regression
+
+-   A single quantitative $x$ and $y$
+
+-   Population Model:
+
+    $$
+    Y = \beta_0 + \beta_1 X + \epsilon
+    $$
+
+-   Regression Line:
+
+    $$
+    \hat{Y} = b_0 + b_1 X
+    $$
+
+# Regression with Categorical Variables
+
+## Regression with Categorical Variables {.smaller}
+
+*It's possible to want to model an outcome based on a categorical predictor:*
+
+$$ Y = \beta_0 + \beta_1 X + \epsilon$$
+
+What does this even mean when $x$ is categorical ???
+
+# Movie Example
+
+## Example Data
+
+```{r}
+#| echo: false
+movie_scores |>
+  select(critics, audience, imdb_cat)
+```
+
+## Example Data: Visualization {.smaller}
+
+```{r}
+#| echo: false
+
+ggplot(movie_scores, aes(x = imdb_cat, y = audience)) +
+  geom_boxplot(fill = "orchid") +
+  #geom_jitter(width = 0.1, alpha = 0.5) +
+  #stat_summary(fun = mean, geom = "point", color = "darkred", size = 3) +
+  labs(title = "Critic Score by Audience Rating Level",
+       x = "Audience Rating Category",
+       y = "Metacritic Score") +
+  theme_minimal()
+```
+
+## Let's just try it... {.smaller}
+
+```{r}
+movies_fit <- linear_reg() |>
+  fit(audience ~ imdb_cat, data = movie_scores)
+
+tidy(movies_fit)
+```
+
+What's going on??
+
+## What's going on? {.smaller}
+
+Variable `imdb_cat` can take values *high, med,* or *low.* We want to model variable `audience` based on `imdb_cat`.
+
+. . .
+
+We tell R to fit `audience ~ imdb_cat` ... now what?
+
+. . .
+
+[We get ***dummy variables!!!***]{style="background-color: #fcefb3"}
+
+## Dummy Variables {.smaller}
+
+::: columns
+::: {.column width="50%"}
+| audience | imdb_cat |
+|----------|----------|
+| 70       | high     |
+| 40       | low      |
+| 50       | med      |
+| 80       | high     |
+:::
+:::
+
+## Dummy Variables {.smaller}
+
+::: columns
+::: {.column width="50%"}
+| audience | imdb_cat |
+|----------|----------|
+| 70       | high     |
+| 40       | low      |
+| 50       | med      |
+| 80       | high     |
+:::
+
+::: {.column width="50%"}
+| audience | imdb_cat | high | low | med |
+|----------|----------|------|-----|-----|
+| 70       | high     |      |     |     |
+| 40       | low      |      |     |     |
+| 50       | med      |      |     |     |
+| 80       | high     |      |     |     |
+:::
+:::
+
+. . .
+
+::: callout-important
+In a given row, only *one* of the dummy variables for a given categorical variable can equal 1.
+:::
+
+## Write the regression output: {.smaller}
+
+Using the categorical variable?
+
+$$
+\widehat{audience} = b_0 + b_1 \times imdb\_cat
+$$
+
+<br><br><br>
+
+❌ WRONG ❌ 🛑 DON'T DO THIS 🛑 ❗SERIOUSLY ❗💔 Don't make me sad :( 💔
+
+## What will a regression output look like? {.smaller}
+
+Use the dummy variables!!
+
+$$
+\widehat{audience} = b_0 + b_1 \times low + b_2  \times med
+$$
+
+## What will a regression output look like? {.smaller}
+
+Use the dummy variables!!
+
+$$
+\widehat{audience} = b_0 + b_1 \times low + b_2 \times med
+$$
+
+<br><br><br>
+
+::: callout-important
+All levels except the **baseline level** will show up in the output.
+Here, high is the **baseline level.** You will be able to identify the baseline by looking at the data and the output!
+:::
+
+## Interpret the output: {.smaller}
+
+$$
+\widehat{audience} = b_0 + b_1 \times low + b_2 \times med
+$$
+
+-   (Intercept) $b_0$ ?
+
+<br>
+
+-   (Slope) $b_1$ ?
+
+<br>
+
+-   (Slope) $b_2$ ?
+
+## Let's plug in some numbers: {.smaller}
+
+```{r}
+movies_fit <- linear_reg() |>
+  fit(audience ~ imdb_cat, data = movie_scores)
+
+tidy(movies_fit)
+```
+
+<br>
+
+$$
+\widehat{audience} = 85.1 -45.8 \times low -21.6 \times med
+$$
+
+## Interpretation with numbers: {.smaller}
+
+$$
+\widehat{audience} = 85.1 -45.8 \times low -21.6 \times med
+$$
+
+<br>
+
+-   Expected audience score of high IMDB rating movies: 85.1
+
+-   Movies with low IMDB ratings are expected to have, on average, audience scores 45.8 points lower than movies with high IMDB ratings
+
+-   Movies with medium IMDB ratings are expected to have, on average, audience scores 21.6 points lower than movies with high IMDB ratings
+
+# In General
+
+## Generally: {.smaller}
+
+Predicting [continuous outcome]{style="background-color: #fcefb3"} $y$ using [categorical explanatory variable]{style="background-color: #fcefb3"} $x$ with levels $cat_0, \ldots cat_L$:
+
+## Generally: {.smaller}
+
+Predicting [continuous outcome]{style="background-color: #fcefb3"} $y$ using [categorical explanatory variable]{style="background-color: #fcefb3"} $x$ with levels $cat_0, \ldots cat_L$:
+
+$$
+\hat{y} = b_0 + b_1 \times cat_1 + b_2 \times cat_2 \ldots + b_L \times cat_L
+$$
+
+## Generally: {.smaller}
+
+Predicting [continuous outcome]{style="background-color: #fcefb3"} $y$ using [categorical explanatory variable]{style="background-color: #fcefb3"} $x$ with levels $cat_0, \ldots cat_L$:
+
+$$
+\hat{y} = b_0 + b_1 \times cat_1 + b_2 \times cat_2 \ldots + b_L \times cat_L
+$$
+
+-   $b_0$ : On average, expected $y$ for an entry of **baseline level** $cat_0$
+
+<br>
+
+-   $b_1$: On average, we expect the $y$ for an observation of level $cat_1$ to be be $b_1$ larger (smaller if negative) than a baseline $cat_0$ observation <br>
+
+<br>
+
+-   and so on....
+
+## Back to AE-12! {.smaller}

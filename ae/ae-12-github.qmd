@@ -132,7 +132,7 @@ Is there anything weird about making this prediction?
 ```
 
 **Task 10:** Change the geom of your previous plot to `geom_point()`.
-Use this plot to think about how R models these data.
+Is this plot useful?
 
 ```{r}
 #| label: plot-bm-island-points
@@ -149,16 +149,15 @@ Write the estimated model output below.
 # add code here
 ```
 
-***What looks different about these results than what we saw before? How can we interpret them?***
-
-::: callout-note
-Let's go back to the slides now - we'll learn a little more before continuing.
-:::
-
 ## Interpreting Categorical Predictors
 
 **Task 12:** Fill in the blanks.
 
+-   The baseline island is \_\_\_\_\_\_\_\_.
+
+```{=html}
+<!-- -->
+```
 -   Intercept: Penguins from \_\_\_\_\_\_\_\_\_ island are expected to weigh, on average, \_\_\_\_\_\_\_ grams.
 
 -   Slopes:
@@ -167,7 +166,9 @@ Let's go back to the slides now - we'll learn a little more before continuing.
 
     -   Penguins from \_\_\_\_\_\_\_\_\_ island are expected to weigh, on average, \_\_\_\_\_\_\_\_ grams \_\_\_\_\_\_\_ than those from \_\_\_\_\_\_\_.
 
-**Task 13:** What is the estimated body weight of a penguin on Biscoe island?
+## Prediction:
+
+**Task 13 (Demo):** What is the estimated body weight of a penguin on Biscoe island?
 What are the estimated body weights of penguins on Dream and Torgersen islands?
 
 ```{r}

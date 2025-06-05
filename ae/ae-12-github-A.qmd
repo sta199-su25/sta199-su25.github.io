@@ -44,7 +44,7 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
 -   **Question:** What is correlation?
     What values can correlation take?
 
-    *Strength and direction of a linear relationship. It\'s bounded by -1 and 1.*
+    *Strength and direction of a linear relationship. It's bounded by -1 and 1.*
 
     ::: callout-note
     *Are you good at guessing correlation?* [Give it a try](https://www.guessthecorrelation.com) with this game!
@@ -174,16 +174,15 @@ Write the estimated model output below.
 # add code here
 ```
 
-***What looks different about these results than what we saw before? How can we interpret them?***
-
-::: callout-note
-Let's go back to the slides now - we'll learn a little more before continuing.
-:::
-
 ## Interpreting Categorical Predictors
 
 **Task 12:** Fill in the blanks.
 
+-   The baseline island is \_\_\_\_\_\_\_\_.
+
+```{=html}
+<!-- -->
+```
 -   Intercept: Penguins from \_\_\_\_\_\_\_\_\_ island are expected to weigh, on average, \_\_\_\_\_\_\_ grams.
 
 -   Slopes:
