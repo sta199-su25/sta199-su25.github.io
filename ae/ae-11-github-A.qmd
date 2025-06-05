@@ -69,16 +69,14 @@ ggplot(fish, aes(x = height, y = weight)) +
 
     *Is there a relationship between fish heights and weights of fish?*
 
-```{=html}
 <!-- -->
-```
+
 -   We can use this line to make predictions. Predict what you think the weight of a fish would be with a height of 10 cm, 15 cm, and 20 cm. Which prediction is considered extrapolation?\
     \
     *At 10 cm, we estimate a weight of 375 grams. At 15 cm, we estimate a weight of 600 grams At 20 cm, we estimate a weight of 975 grams. 20 cm would be considered extrapolation.*
 
-```{=html}
 <!-- -->
-```
+
 -   What is a residual?\
     \
     *Difference between predicted and observed.*

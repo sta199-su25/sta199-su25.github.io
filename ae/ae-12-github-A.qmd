@@ -62,7 +62,7 @@ penguins |>
 # option 2
 penguins |>
   drop_na(flipper_length_mm, body_mass_g) |>
-  summarize(r = cor(flipper_length_mm, body_mass_g))s
+  summarize(r = cor(flipper_length_mm, body_mass_g))
 ```
 
 ## Defining, fitting, and summarizing a model
@@ -72,7 +72,7 @@ penguins |>
 $$
 {body mass} = \beta_0 + \beta_1 \times flipper length + \epsilon
 $$**Task 4:** Fit the linear regression model and display the results.
-[*Write the estimated model output below.*]{.underline}
+[*Write the estimated model output below!*]{.underline}
 
 ```{r}
 #| label: fit-bm-fl
