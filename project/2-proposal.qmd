@@ -65,6 +65,7 @@ You shouldn't feel constrained to datasets that are already in a tidy format, yo
 -   [International Monetary Fund](https://data.imf.org/?sk=388DFA60-1D26-4ADE-B505-A05A558D9A42&sId=1479329328660)
 -   [IPUMS survey data from around the world](https://ipums.org/)
 -   [Los Angeles Open Data](https://data.lacity.org/browse)
+-   [NFL play by play data](https://www.nflfastr.com)
 -   [NHS Scotland Open Data](https://www.opendata.nhs.scot/)
 -   [NYC OpenData](https://opendata.cityofnewyork.us/)
 -   [Open access to Scotland's official statistics](https://statistics.gov.scot/home)
