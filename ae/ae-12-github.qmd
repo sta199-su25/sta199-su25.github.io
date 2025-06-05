@@ -1,5 +1,5 @@
 ---
-title: "AE 10: Modelling penguins"
+title: "AE 12: Modelling penguins"
 ---
 
 In this application exercise we will be studying penguins.
