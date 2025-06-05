@@ -98,6 +98,8 @@
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
 <style type="text/css">
     .reveal div.sourceCode {
@@ -222,14 +224,6 @@
 <img data-src="14-simple-reg_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="spurious-correlations-1" class="slide level2"><h2>Spurious correlations</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure><p><img data-src="images/15/mozarella-ce-phd.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-
-<aside><div>
-<p>Source: <a href="https://www.tylervigen.com/spurious-correlations">tylervigen.com/spurious-correlations</a></p>
-</div></aside></section><section id="spurious-correlations-2" class="slide level2"><h2>Spurious correlations</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/15/pool-nick-cage.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 
@@ -401,18 +395,21 @@ Y \;=\; \mathbf{Model} \;+\; \text{Error}
 
 <img data-src="14-simple-reg_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p><span class="math display">\[\small{\text{residual} = \text{observed} - \text{predicted} = y - \hat{y}}\]</span></p>
 </section><section id="notation" class="slide level2 smaller"><h2>Notation</h2>
+<div>
 <ul>
-<li><p>We have <span class="math inline">\(n\)</span> observations (generally, the number of rows in a df)</p></li>
-<li>
-<p><span class="math inline">\(i^{th}\)</span> observation (<span class="math inline">\(i\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(N\)</span>): ::: incremental</p>
+<li class="fragment"><p>We have <span class="math inline">\(n\)</span> observations (generally, the number of rows in a df)</p></li>
+<li class="fragment">
+<p><span class="math inline">\(i^{th}\)</span> observation (<span class="math inline">\(i\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(N\)</span>):</p>
 <ul>
-<li><p><span class="math inline">\(y_i\)</span> : <span class="math inline">\(i^{th}\)</span> outcome</p></li>
-<li><p><span class="math inline">\(x_i\)</span> : <span class="math inline">\(i^{th}\)</span> explanatory variable</p></li>
-<li><p><span class="math inline">\(\hat{y}\)</span> : <span class="math inline">\(i^{th}\)</span> predicted outcome</p></li>
-<li><p><span class="math inline">\(e\)</span> : <span class="math inline">\(i^{th}\)</span> residual :::</p></li>
+<li class="fragment"><p><span class="math inline">\(y_i\)</span> : <span class="math inline">\(i^{th}\)</span> outcome</p></li>
+<li class="fragment"><p><span class="math inline">\(x_i\)</span> : <span class="math inline">\(i^{th}\)</span> explanatory variable</p></li>
+<li class="fragment"><p><span class="math inline">\(\hat{y}\)</span> : <span class="math inline">\(i^{th}\)</span> predicted outcome</p></li>
+<li class="fragment"><p><span class="math inline">\(e\)</span> : <span class="math inline">\(i^{th}\)</span> residual</p></li>
 </ul>
 </li>
-</ul></section><section id="notation-example" class="slide level2 smaller"><h2>Notation: Example</h2>
+</ul>
+</div>
+</section><section id="notation-example" class="slide level2 smaller"><h2>Notation: Example</h2>
 <p><em>Back to the movies</em>: audience scores predicted by critic scores.</p>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -528,43 +525,11 @@ Y \;=\; \mathbf{Model} \;+\; \text{Error}
 <li><p>Work through the application exercise in class, and render, commit, and push your edits.</p></li>
 </ul>
 </div>
-</section><section id="just-because-you-can" class="slide level2 smaller"><h2>Just because you can…</h2>
-<p><strong>…doesn’t mean you should!!</strong></p>
-<div class="fragment">
-<p>Technically, we can fit a line through whatever data we want.</p>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="14-simple-reg_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section><section id="just-because-you-can-1" class="slide level2 smaller"><h2>Just because you can…</h2>
-<p><strong>…doesn’t mean you should!!</strong></p>
-<p>Technically, we can fit a line through whatever data we want.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="14-simple-reg_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="14-simple-reg_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
+</section></section><section id="regression-with-categorical-variables" class="title-slide slide level1 center"><h1>Regression with Categorical Variables</h1>
+<p>What does <span class="math inline">\(b_0 +b_1*x\)</span> even mean when <span class="math inline">\(x\)</span> is categorical ???</p>
 
 
-</section></section>
+</section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/logo.png" class="slide-logo"></p>
@@ -573,7 +538,7 @@ Y \;=\; \mathbf{Model} \;+\; \text{Error}
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -585,7 +550,8 @@ Y \;=\; \mathbf{Model} \;+\; \text{Error}
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -756,7 +722,7 @@ Y \;=\; \mathbf{Model} \;+\; \text{Error}
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,

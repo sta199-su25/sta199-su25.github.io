@@ -349,7 +349,6 @@ window.Quarto = {
   <ul class="collapse">
 <li><a href="#spurious-correlations" id="toc-spurious-correlations" class="nav-link" data-scroll-target="#spurious-correlations">Spurious correlations</a></li>
   <li><a href="#spurious-correlations-1" id="toc-spurious-correlations-1" class="nav-link" data-scroll-target="#spurious-correlations-1">Spurious correlations</a></li>
-  <li><a href="#spurious-correlations-2" id="toc-spurious-correlations-2" class="nav-link" data-scroll-target="#spurious-correlations-2">Spurious correlations</a></li>
   </ul>
 </li>
   <li>
@@ -392,10 +391,9 @@ window.Quarto = {
 <a href="#application-exercise" id="toc-application-exercise" class="nav-link" data-scroll-target="#application-exercise">Application exercise</a>
   <ul class="collapse">
 <li><a href="#ae-12-modeling-penguins" id="toc-ae-12-modeling-penguins" class="nav-link" data-scroll-target="#ae-12-modeling-penguins">ae-12-modeling-penguins</a></li>
-  <li><a href="#just-because-you-can" id="toc-just-because-you-can" class="nav-link" data-scroll-target="#just-because-you-can">Just because you can…</a></li>
-  <li><a href="#just-because-you-can-1" id="toc-just-because-you-can-1" class="nav-link" data-scroll-target="#just-because-you-can-1">Just because you can…</a></li>
   </ul>
 </li>
+  <li><a href="#regression-with-categorical-variables" id="toc-regression-with-categorical-variables" class="nav-link" data-scroll-target="#regression-with-categorical-variables">Regression with Categorical Variables</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/slides/14-simple-reg.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="14-simple-reg-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -443,14 +441,6 @@ window.Quarto = {
 </section><section id="spurious-correlations-1" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="spurious-correlations-1">Spurious correlations</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="images/15/mozarella-ce-phd.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>Source: <a href="https://www.tylervigen.com/spurious-correlations">tylervigen.com/spurious-correlations</a></p>
-</div></div></section><section id="spurious-correlations-2" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="spurious-correlations-2">Spurious correlations</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/15/pool-nick-cage.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 
@@ -663,18 +653,21 @@ Y \;=\; \mathbf{Model} \;+\; \text{Error}
 </div>
 <p><span class="math display">\[\small{\text{residual} = \text{observed} - \text{predicted} = y - \hat{y}}\]</span></p>
 </section><section id="notation" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="notation">Notation</h2>
-<ul>
+<div class="incremental">
+<ul class="incremental">
 <li><p>We have <span class="math inline">\(n\)</span> observations (generally, the number of rows in a df)</p></li>
 <li>
-<p><span class="math inline">\(i^{th}\)</span> observation (<span class="math inline">\(i\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(N\)</span>): ::: incremental</p>
-<ul>
+<p><span class="math inline">\(i^{th}\)</span> observation (<span class="math inline">\(i\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(N\)</span>):</p>
+<ul class="incremental">
 <li><p><span class="math inline">\(y_i\)</span> : <span class="math inline">\(i^{th}\)</span> outcome</p></li>
 <li><p><span class="math inline">\(x_i\)</span> : <span class="math inline">\(i^{th}\)</span> explanatory variable</p></li>
 <li><p><span class="math inline">\(\hat{y}\)</span> : <span class="math inline">\(i^{th}\)</span> predicted outcome</p></li>
-<li><p><span class="math inline">\(e\)</span> : <span class="math inline">\(i^{th}\)</span> residual :::</p></li>
+<li><p><span class="math inline">\(e\)</span> : <span class="math inline">\(i^{th}\)</span> residual</p></li>
 </ul>
 </li>
-</ul></section><section id="notation-example" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="notation-example">Notation: Example</h2>
+</ul>
+</div>
+</section><section id="notation-example" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="notation-example">Notation: Example</h2>
 <p><em>Back to the movies</em>: audience scores predicted by critic scores.</p>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -791,41 +784,11 @@ Y \;=\; \mathbf{Model} \;+\; \text{Error}
 <li><p>Work through the application exercise in class, and render, commit, and push your edits.</p></li>
 </ul>
 </div>
-</section><section id="just-because-you-can" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="just-because-you-can">Just because you can…</h2>
-<p><strong>…doesn’t mean you should!!</strong></p>
-<p>. . .</p>
-<p>Technically, we can fit a line through whatever data we want.</p>
-<p>. . .</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="14-simple-reg_files/figure-revealjs/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="just-because-you-can-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="just-because-you-can-1">Just because you can…</h2>
-<p><strong>…doesn’t mean you should!!</strong></p>
-<p>Technically, we can fit a line through whatever data we want.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="14-simple-reg_files/figure-revealjs/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="14-simple-reg_files/figure-revealjs/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
+</section></section><section id="regression-with-categorical-variables" class="level1"><h1>Regression with Categorical Variables</h1>
+<p>What does <span class="math inline">\(b_0 +b_1*x\)</span> even mean when <span class="math inline">\(x\)</span> is categorical ???</p>
 
 
-</section></section></main><!-- /main --><script>
+</section></main><!-- /main --><script>
   // htmlwidgets need to know to resize themselves when slides are shown/hidden.
   // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
   // slide changes (different for each slide format).
