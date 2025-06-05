@@ -5,6 +5,7 @@ date: "2025-06-05"
 format: 
   revealjs:
     output-file: 15-mult-reg-slides.html
+    pdf-separate-fragments: true
 ---
 
 ```{r}
@@ -53,7 +54,7 @@ ggplot(movie_scores, aes(x = imdb_cat, y = audience)) +
 
 -   Office hours today: 1-3pm; old chem 203
 
--   Math warning: logarithms
+-   Math warning: logarithms; natural log
 
 -   Let me know if your Milestone 2 is ready to grade!
 
@@ -285,3 +286,292 @@ $$
 -   and so on....
 
 ## Back to AE-12! {.smaller}
+
+# Multiple Predictors
+
+## More than 1 predictor variable {.smaller}
+
+-   So far, we have looked at models with one predictor variable.
+    What if we want multiple?
+
+-   First, I will show what happens with one of each type of predictor - numerical and categorical
+
+-   We can also have:
+
+    -   More than 2 predictors (might appear in your projects! will appear in real life!)
+
+    -   Different combinations of predictor types (all numerical, all categorical, some of each...)
+
+## Approach: {.smaller}
+
+-   Teach by example
+
+-   You might see a case in lab that we haven't seen in class - don't panic!
+    The same concepts will apply.
+
+# Penguins Example
+
+## Penguins so far {.smaller}
+
+-   So far, we have seen body mass predicted by:
+
+    -   Flipper length
+
+    -   Island
+
+-   What if we should use both for prediction??
+
+## Penguins Data Visualization {.smaller}
+
+Both of these use `flipper_length_mm` *and* `island` to predict `body_mass_g`:
+
+```{r}
+#| include: false
+bm_fl_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)
+
+tidy(bm_fl_island_fit)
+```
+
+```{r}
+#| label: additive-interaction-viz
+#| layout-ncol: 2
+#| echo: false
+#| fig-asp: 1
+#| warning: false
+#| message: false
+
+
+# Plot A
+bm_fl_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)
+bm_fl_island_aug <- augment(bm_fl_island_fit, new_data = penguins)
+# Plot A - Additive model
+ggplot(
+  bm_fl_island_aug, 
+  aes(x = flipper_length_mm, y = body_mass_g, color = island)
+) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(aes(y = .pred), method = "lm") +
+  labs(
+    title = "Plot A - Additive model",
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)",
+    color = "Island"
+  ) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 16),
+    axis.text = element_text(size = 14),
+    legend.title = element_text(size = 14),
+    legend.text = element_text(size = 12)
+  )
+
+# Plot B - Interaction model
+ggplot(
+  penguins, 
+  aes(x = flipper_length_mm, y = body_mass_g, color = island)
+) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Plot B - Interaction model",
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)",
+    color = "Island"
+  ) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 16),
+    axis.text = element_text(size = 14),
+    legend.title = element_text(size = 14),
+    legend.text = element_text(size = 12)
+  )
+
+```
+
+## The additive model: parallel lines, one for each island {.smaller}
+
+```{r}
+bm_fl_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)
+
+tidy(bm_fl_island_fit)
+```
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4625 &+ 44.5 \times flipper~length \\
+&- 262 \times Dream \\
+&- 185 \times Torgersen
+\end{aligned}
+$$
+
+## Where do the three lines come from? {.smaller}
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4625 &+ 44.5 \times flipper~length \\
+&- 262 \times Dream \\
+&- 185 \times Torgersen
+\end{aligned}
+$$
+
+. . .
+
+If penguin is from Biscoe, Dream = 0 and Torgersen = 0:
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4625 &+ 44.5 \times flipper~length
+\end{aligned}
+$$
+
+. . .
+
+If penguin is from Dream, Dream = 1 and Torgersen = 0:
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4887 &+ 44.5 \times flipper~length
+\end{aligned}
+$$
+
+. . .
+
+If penguin is from Torgersen, Dream = 0 and Torgersen = 1:
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4810 &+ 44.5 \times flipper~length
+\end{aligned}
+$$
+
+## How do we interpret this in English? {.smaller}
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4625 &+ 44.5 \times flipper~length \\
+&- 262 \times Dream \\
+&- 185 \times Torgersen
+\end{aligned}
+$$
+
+-   Intercept: We expect, [on average]{.underline}, penguins from **Biscoe** island with **0mm flipper length** to weigh **-4625 grams**
+
+. . .
+
+-   Slope (flipper length) : ***Holding island constant,*** we expect, on average, a **1mm** increase in flipper length corresponds to a **44.5g** increase in body mass
+
+. . .
+
+-   Slope (dream) : ***Holding flipper length constant,*** we expect, [on average]{.underline}, a penguin from the **Dream island** to be **262g lighter** than a penguin from **Biscoe** island.
+
+. . .
+
+-   Slope (torgersen) : You try!
+
+
+## Prediction
+
+```{r}
+new_penguin <- tibble(
+  flipper_length_mm = 200,
+  island = "Torgersen"
+)
+
+predict(bm_fl_island_fit, new_data = new_penguin)
+```
+
+## The interaction model: different slopes for each island {.smaller}
+
+```{r}
+bm_fl_island_int_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm * island, data = penguins)
+
+tidy(bm_fl_island_int_fit) |> select(term, estimate)
+```
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -5464 + 48.5 \times flipper~length &+ 3551 \times Dream \\
+&+ 3218 \times Torgersen \\
+&- 19.4 \times flipper~length*Dream \\
+&- 17.4 \times flipper~length*Torgersen
+\end{aligned}
+$$
+
+## Where do the three lines come from? {.smaller}
+
+$$
+\begin{aligned}
+\small\widehat{body~mass} = -5464 &+ 48.5 \times flipper~length \\
+&+ 3551 \times Dream \\
+&+ 3218 \times Torgersen \\
+&- 19.4 \times flipper~length*Dream \\
+&- 17.4 \times flipper~length*Torgersen
+\end{aligned}
+$$
+
+. . .
+
+If penguin is from Biscoe, Dream = 0 and Torgersen = 0:
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -5464 &+ 48.5 \times flipper~length
+\end{aligned}
+$$
+
+## Where do the three lines come from? {.smaller}
+
+$$
+\begin{aligned}
+\small\widehat{body~mass} = -5464 &+ 48.5 \times flipper~length \\
+&+ 3551 \times Dream \\
+&+ 3218 \times Torgersen \\
+&- 19.4 \times flipper~length*Dream \\
+&- 17.4 \times flipper~length*Torgersen
+\end{aligned}
+$$
+
+. . .
+
+If penguin is from Dream, Dream = 1 and Torgersen = 0:
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} &= (-5464 + 3551) + (48.5-19.4) \times flipper~length\\
+&=-1913+29.1\times flipper~length.
+\end{aligned}
+$$
+
+## Prediction {.smaller}
+
+```{r}
+new_penguin <- tibble(
+  flipper_length_mm = 200,
+  island = "Torgersen"
+)
+
+predict(bm_fl_island_int_fit, new_data = new_penguin)
+```
+
+
+$$
+\widehat{body~mass} = (-5464 + 3218) + (48.5-17.4) \times 200.
+$$
