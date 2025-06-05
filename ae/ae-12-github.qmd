@@ -39,10 +39,12 @@ First, we are going to investigate the relationship between a penguins' flipper 
 
 **Task 2 - Complete the following**
 
--   **Question:** What is correlation? What values can correlation take?
+-   **Question:** What is correlation?
+    What values can correlation take?
 
-    *Add answer here. \
-    *
+    \*Add answer here.\
+
+    -   
 
     ::: callout-note
     *Are you good at guessing correlation?* [Give it a try](https://www.guessthecorrelation.com) with this game!
