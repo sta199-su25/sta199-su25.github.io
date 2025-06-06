@@ -291,8 +291,7 @@ $$
 
 ## More than 1 predictor variable {.smaller}
 
--   So far, we have looked at models with one predictor variable.
-    What if we want multiple?
+-   So far, we have looked at models with one predictor variable. What if we want multiple?
 
 -   First, I will show what happens with one of each type of predictor - numerical and categorical
 
