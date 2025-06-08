@@ -4,7 +4,7 @@ subtitle: "Lecture 15"
 date: "2025-06-05"
 format: 
   revealjs:
-    output-file: 15-mult-reg-slides.html
+    output-file: 16-mult-reg-2-slides.html
     pdf-separate-fragments: true
 ---
 
@@ -56,13 +56,14 @@ ggplot(movie_scores, aes(x = imdb_cat, y = audience)) +
 
 -   Do your team peer evaluations!
 
--   Milestone 2 will be graded by tomorrow morning! Pick your data sets ASAP.
+-   Milestone 2 will be graded by tomorrow morning!
+    Pick your data sets ASAP.
 
 -   Tomorrow we will talk about some project details at the beginning of class - please try to be here!!
 
 ## Midterms are Graded... {.smaller}
 
--   Scores will be posted later today. 
+-   Scores will be posted later today.
 
 -   In class: score out of 70
 
@@ -72,7 +73,7 @@ ggplot(movie_scores, aes(x = imdb_cat, y = audience)) +
 
 ## Tomorrow {.smaller}
 
--   Scores will be posted later today. 
+-   Scores will be posted later today.
 
 -   In class: score out of 70
 
@@ -406,12 +407,12 @@ $$
 $$
 
 ::: incremental
-- We predict that the body mass of a penguin with *zero* flipper length and *zero* bill length will be -5736 grams, on average (**makes no sense**);
-- Holding all other variables constant, for every additional millimeter in flipper length, we expect the body mass of penguins to be higher, on average, by 48.1 grams.
-- Holding all other variables constant, for every additional millimeter in bill length, we expect the body mass of penguins to be higher, on average, by 6 grams.
+-   We predict that the body mass of a penguin with *zero* flipper length and *zero* bill length will be -5736 grams, on average (**makes no sense**);
+-   Holding all other variables constant, for every additional millimeter in flipper length, we expect the body mass of penguins to be higher, on average, by 48.1 grams.
+-   Holding all other variables constant, for every additional millimeter in bill length, we expect the body mass of penguins to be higher, on average, by 6 grams.
 :::
 
-. . . 
+. . .
 
 This is how we interpret additive models with as many predictors as we want!
 
@@ -432,7 +433,8 @@ $$
 
 ## Picture? It's not pretty...
 
-2 predictors + 1 response = 3 dimensions. Ick!
+2 predictors + 1 response = 3 dimensions.
+Ick!
 
 ```{r}
 #| echo: false
@@ -449,7 +451,8 @@ scatterplot3d(
 
 ## Picture? It's not pretty...
 
-Instead of a line of best fit, it's a *plane* of best fit. Double ick!
+Instead of a line of best fit, it's a *plane* of best fit.
+Double ick!
 
 ```{r}
 #| echo: false
@@ -486,18 +489,17 @@ $$
 \end{aligned}
 $$
 
-
 ## What does this model mean? {.smaller}
 
-- We still have an intercept and main effects for both `flipper` and `bill`. **But now we also have an interaction term.** 
+-   We still have an intercept and main effects for both `flipper` and `bill`. **But now we also have an interaction term.**
 
 . . .
 
-- This means: the **effect of flipper length depends on bill length**, and vice versa. 
+-   This means: the **effect of flipper length depends on bill length**, and vice versa.
 
 . . .
 
-- In additive models: each variable has a fixed slope.
-- In interaction models: **the slope of one predictor varies depending on the level of the other.** 
+-   In additive models: each variable has a fixed slope.
+-   In interaction models: **the slope of one predictor varies depending on the level of the other.**
 
-# AE 13: Modelling House Prices 
+# AE 13: Modelling House Prices
