@@ -84,6 +84,24 @@
       ],
       "Hash": "1920b2f11133b12350024297d8a4ff4a"
     },
+    "PL94171": {
+      "Package": "PL94171",
+      "Version": "1.1.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "cli",
+        "dplyr",
+        "httr",
+        "readr",
+        "sf",
+        "stringr",
+        "tinytiger",
+        "withr"
+      ],
+      "Hash": "50b22cca63166eb6930cb1d0dd237049"
+    },
     "R.cache": {
       "Package": "R.cache",
       "Version": "0.16.0",
@@ -168,6 +186,20 @@
         "utils"
       ],
       "Hash": "5ea2700d21e038ace58269ecdbeb9ec0"
+    },
+    "RcppArmadillo": {
+      "Package": "RcppArmadillo",
+      "Version": "14.0.2-1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "Rcpp",
+        "methods",
+        "stats",
+        "utils"
+      ],
+      "Hash": "edff747eebfb8f2e18eed194e000caa1"
     },
     "SQUAREM": {
       "Package": "SQUAREM",
@@ -576,6 +608,16 @@
       ],
       "Hash": "8ee9ac56ef633d0c7cab8b2ca87d683e"
     },
+    "datasauRus": {
+      "Package": "datasauRus",
+      "Version": "0.1.8",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "e43f7047700f36da541a2d386f921b8c"
+    },
     "dbplyr": {
       "Package": "dbplyr",
       "Version": "2.5.0",
@@ -796,6 +838,16 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "aa5e1cd11c2d15497494c5292d7ffcc8"
+    },
+    "fivethirtyeight": {
+      "Package": "fivethirtyeight",
+      "Version": "0.6.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "16801472ed3455dfd53ed3ca1f5f6926"
     },
     "fontawesome": {
       "Package": "fontawesome",
@@ -1814,6 +1866,23 @@
       ],
       "Hash": "e23fb9ecb1258207bcb763d78d513439"
     },
+    "piggyback": {
+      "Package": "piggyback",
+      "Version": "0.1.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "cli",
+        "fs",
+        "gh",
+        "glue",
+        "httr",
+        "jsonlite",
+        "lubridate",
+        "memoise"
+      ],
+      "Hash": "8bb22d293b2f482257d396883cfb2821"
+    },
     "pillar": {
       "Package": "pillar",
       "Version": "1.9.0",
@@ -2309,6 +2378,19 @@
       ],
       "Hash": "c19df082ba346b0ffa6f833e92de34d1"
     },
+    "scatterplot3d": {
+      "Package": "scatterplot3d",
+      "Version": "0.3-44",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "grDevices",
+        "graphics",
+        "stats"
+      ],
+      "Hash": "10ee4b91ec812690bd55d9bf51edccee"
+    },
     "selectr": {
       "Package": "selectr",
       "Version": "0.4-2",
@@ -2715,6 +2797,20 @@
       ],
       "Hash": "d44e2fcd2e4e076f0aac540208559d1d"
     },
+    "tinytiger": {
+      "Package": "tinytiger",
+      "Version": "0.0.9",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "cli",
+        "curl",
+        "glue",
+        "sf"
+      ],
+      "Hash": "eee1c6cf98ac352e0689daf68ec43d3b"
+    },
     "tune": {
       "Package": "tune",
       "Version": "1.2.1",
@@ -2971,6 +3067,28 @@
         "workflows"
       ],
       "Hash": "ff4540bb4cccc1dd2447d58a97158820"
+    },
+    "wru": {
+      "Package": "wru",
+      "Version": "3.0.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "PL94171",
+        "R",
+        "Rcpp",
+        "RcppArmadillo",
+        "cli",
+        "dplyr",
+        "furrr",
+        "future",
+        "piggyback",
+        "purrr",
+        "rlang",
+        "tidyr",
+        "utils"
+      ],
+      "Hash": "a61d55dbf08c1dfd92d7f6bfd5777ee3"
     },
     "xfun": {
       "Package": "xfun",

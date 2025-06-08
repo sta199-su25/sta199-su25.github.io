@@ -180,9 +180,8 @@ Write the estimated model output below.
 
 -   The baseline island is \_\_\_\_\_\_\_\_.
 
-```{=html}
 <!-- -->
-```
+
 -   Intercept: Penguins from \_\_\_\_\_\_\_\_\_ island are expected to weigh, on average, \_\_\_\_\_\_\_ grams.
 
 -   Slopes:
