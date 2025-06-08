@@ -373,6 +373,111 @@ $$
 \widehat{body~mass} = (-5464 + 3218) + (48.5-17.4) \times 200.
 $$
 
+## A note on plotting... {.smaller}
+
+This, we have done.
+It is what R naturally does when we use `color = island`!
+
+```{r}
+#| echo: false
+#| fig-asp: 1
+#| warning: false
+#| message: false
+
+# Plot B - Interaction model
+ggplot(
+  penguins, 
+  aes(x = flipper_length_mm, y = body_mass_g, color = island)
+) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Plot B - Interaction model",
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)",
+    color = "Island"
+  ) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 16),
+    axis.text = element_text(size = 14),
+    legend.title = element_text(size = 14),
+    legend.text = element_text(size = 12)
+  )
+
+```
+
+## A note on plotting... {.smaller}
+
+This, we have not! Here, we use the *predicted* y values (attained using `augment`) from an additive model in `geom_smooth()`. 
+
+```{r}
+
+# Plot A
+bm_fl_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)
+bm_fl_island_aug <- augment(bm_fl_island_fit, new_data = penguins)
+# Plot A - Additive model
+ggplot(
+  bm_fl_island_aug, 
+  aes(x = flipper_length_mm, y = body_mass_g, color = island)
+) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(aes(y = .pred), method = "lm") +
+  labs(
+    title = "Plot A - Additive model",
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)",
+    color = "Island"
+  ) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 16),
+    axis.text = element_text(size = 14),
+    legend.title = element_text(size = 14),
+    legend.text = element_text(size = 12)
+  )
+
+```
+
+## A note on plotting... {.scrollable}
+
+```{r}
+# Fit Model and use Augment
+
+bm_fl_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)
+bm_fl_island_aug <- augment(bm_fl_island_fit, new_data = penguins)
+
+# Additive model
+
+ggplot(
+  bm_fl_island_aug, 
+  aes(x = flipper_length_mm, y = body_mass_g, color = island)
+) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(aes(y = .pred), method = "lm") +
+  labs(
+    title = "Plot A - Additive model",
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)",
+    color = "Island"
+  ) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(size = 18, face = "bold"),
+    axis.title = element_text(size = 16),
+    axis.text = element_text(size = 14),
+    legend.title = element_text(size = 14),
+    legend.text = element_text(size = 12)
+  )
+
+```
+
+# Multiple numeric predictors
+
 ## Multiple Numerical Predictors {.smaller}
 
 What if we want to use multiple numerical predictors to model a numerical outcome?
