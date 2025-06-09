@@ -413,6 +413,11 @@ ggplot(
 This, we have not! Here, we use the *predicted* y values (attained using `augment`) from an additive model in `geom_smooth()`. 
 
 ```{r}
+#| echo: false
+#| fig-asp: 1
+#| warning: false
+#| message: false
+
 
 # Plot A
 bm_fl_island_fit <- linear_reg() |>
@@ -442,9 +447,15 @@ ggplot(
 
 ```
 
-## A note on plotting... {.scrollable}
+## A note on plotting... {.smaller}
 
 ```{r}
+#| eval: false
+#| fig-asp: 1
+#| warning: false
+#| message: false
+
+
 # Fit Model and use Augment
 
 bm_fl_island_fit <- linear_reg() |>
