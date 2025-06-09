@@ -123,7 +123,7 @@ window.Quarto = {
 </script><link rel="stylesheet" href="../style/sta199.scss">
 <meta property="og:title" content="AE 13: Modeling housing prices – STA 199">
 <meta property="og:description" content="Homepage for STA 199 - Introduction to Data Science at Duke University, Summer 2025.">
-<meta property="og:image" content="https://sta199-su25.github.io/ae/ae-13-github_files/figure-html/explore-housing-1.png">
+<meta property="og:image" content="https://sta199-su25.github.io/ae/ae-13-github_files/figure-html/price-sqft-plot-1.png">
 <meta property="og:site_name" content="STA 199">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="1344">
@@ -385,9 +385,8 @@ window.Quarto = {
 <p>Before we use the dataset, we’ll make a few transformations to it.</p>
 <ul>
 <li>
-<strong>Your turn:</strong> Review the code below with your neighbor and write a summary of the data transformation pipeline.</li>
+<strong>Your turn:</strong> Review the code below with your neighbors and write a summary of the data transformation pipeline.</li>
 </ul>
-<p><em>Add response here.</em></p>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">ames</span><span class="op">)</span></span>
 <span><span class="va">housing</span> <span class="op">&lt;-</span> <span class="va">ames</span> <span class="op">|&gt;</span></span>
@@ -420,26 +419,9 @@ $ home_type   &lt;fct&gt; House, House, House, House, House, House, House, House
 <li>
 <strong>Your turn:</strong> What is a typical house price in this dataset? What are some common square footage sizes? What types of homes are most common? Additionally, explore at least 1-2 other features that could be interesting. Share your findings!</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">housing</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">20000</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">housing</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">sqft</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">250</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">housing</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">home_type</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-13-github_files/figure-html/explore-housing-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-13-github_files/figure-html/explore-housing-2.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-13-github_files/figure-html/explore-housing-3.png" class="img-fluid" width="672"></p>
-</div>
-</div>
+
 </div>
 </section><section id="price-vs.-square-footage" class="level1"><h1>Price vs.&nbsp;square footage</h1>
 <p>How can we use square footage to model/predict pricing? Here is the model:</p>
