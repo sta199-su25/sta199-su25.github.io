@@ -2,6 +2,7 @@
 title: Lab 4
 subtitle: Visualize, model, interpret
 categories: Lab
+description: "Due Wed Jun 11 11:59 PM"
 draft: false
 ---
 
@@ -32,7 +33,7 @@ And, as usual, you will also...
 
 ## Getting started
 
-Log in to RStudio, clone your `lab-5` repo from GitHub, open your `lab-5.qmd` document, and get started!
+Log in to RStudio, clone your `lab-4` repo from GitHub, open your `lab-4.qmd` document, and get started!
 
 ::: {.callout-tip collapse="true"}
 ## Click here if you prefer to see step-by-step instructions
@@ -45,7 +46,7 @@ Log in to RStudio, clone your `lab-5` repo from GitHub, open your `lab-5.qmd` do
 ### Step 2: Clone the repo & start a new RStudio project
 
 -   Go to the course organization at github.com/sta199-su25 organization on GitHub.
-    Click on the repo with the prefix **lab-5**.
+    Click on the repo with the prefix **lab-4**.
     It contains the starter documents you need to complete the lab.
 
 -   Click on the green **CODE** button and select **Use SSH**. This might already be selected by default; if it is, you'll see the text **Clone with SSH**.
@@ -57,12 +58,12 @@ Log in to RStudio, clone your `lab-5` repo from GitHub, open your `lab-5.qmd` do
 
 -   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
 
--   Click *lab-5.qmd* to open the template Quarto file.
+-   Click *lab-4.qmd* to open the template Quarto file.
     This is where you will write up your code and narrative for the lab.
 
 ### Step 3: Update the YAML
 
-In `lab-5.qmd`, update the `author` field to your name, render your document and examine the changes.
+In `lab-4.qmd`, update the `author` field to your name, render your document and examine the changes.
 Then, in the Git pane, click on **Diff** to view your changes, add a commit message (e.g., "Added author name"), and click **Commit**.
 Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.
 :::
@@ -213,7 +214,7 @@ Subsequent columns describe metrics that compare the species:
 
 The data are available in `parasites.csv` in your `data` folder.
 
-## Question 5
+## Question 6
 
 Let's start by reading in the `parasites` data and examining the relationship between `divergence_time` and `parsim`.
 
@@ -225,7 +226,7 @@ c.  Visualize the relationship between the two variables.
 
 d.  Use the visualization to describe the relationship between the two variables.
 
-## Question 6
+## Question 7
 
 Next, model this relationship.
 
@@ -237,7 +238,7 @@ c.  Recreate the visualization from Question 4, this time adding a regression li
 
 d.  What do you notice about the prediction (regression) line that may be strange, particularly for very large divergence times?
 
-## Question 7
+## Question 8
 
 Since `parsim` takes values between 0 and 1, we want to transform this variable so that it can range between (−∞,+∞).
 This will be better suited for fitting a regression model (and interpreting predicted values!)
@@ -269,7 +270,7 @@ Think carefully about what exactly we are modelling.
 Come by office hours/contact a member of the teaching team if you get stuck!
 :::
 
-## Question 8
+## Question 9
 
 *Which individual variable is the strongest individual predictor of parasite similarity between species?*
 
