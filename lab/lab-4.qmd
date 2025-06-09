@@ -158,7 +158,7 @@ a.  Before doing any data analysis, do you think that the relationship between n
 *Note: the point of this question is not for you to correctly guess the relationship. Rather, it is to get you thinking about data and the process for choosing models.*
 :::
 
-b.  Create an appropriate data visualization to examine the question part (a). Does this change your opinion?
+b.  Create an appropriate data visualization to examine the question part (a). Does this change your opinion? Why or why not?
 
 ::: callout-tip
 *Note: adding a facet will likely make the plot MUCH easier to interpret.*
