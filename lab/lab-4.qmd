@@ -155,15 +155,15 @@ Now, we want to use both information about both mothers' smoking habits and the 
 a.  Before doing any data analysis, do you think that the relationship between number of hospital visits and the baby's weight would be different depending on whether or not the mother smokes? Why or why not? Based on your answer, which type of model would be more fitting: additive or interaction?
 
 ::: callout-note
-The point of this question is not for you to correctly guess the relationship. Rather, it is to get you thinking about data and the process for choosing models.*
+The point of this question is not for you to correctly guess the relationship.
+Rather, it is to get you thinking about data and the process for choosing models.\*
 :::
 
 b.  Create an appropriate data visualization to examine the question part (a). Does this change your opinion? Why or why not?
 
 ::: callout-tip
-Adding a facet will likely make the plot MUCH easier to interpret.*
+Adding a facet will likely make the plot MUCH easier to interpret.\*
 :::
-
 
 ## Question 5
 
