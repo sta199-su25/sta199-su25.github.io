@@ -18,9 +18,7 @@ We will use the `ames_housing` dataset from the **modeldata** package.
 
 Before we use the dataset, we'll make a few transformations to it.
 
--   **Your turn:** Review the code below with your neighbor and write a summary of the data transformation pipeline.
-
-*Add response here.*
+-   **Your turn:** Review the code below with your neighbors and write a summary of the data transformation pipeline.
 
 ```{r}
 #| label: data-prep
@@ -51,14 +49,8 @@ glimpse(housing)
 ```{r}
 #| label: explore-housing
 #| layout-ncol: 2
-ggplot(housing, aes(x = price)) +
-  geom_histogram(binwidth = 20000)
 
-ggplot(housing, aes(x = sqft)) +
-  geom_histogram(binwidth = 250)
-
-ggplot(housing, aes(x = home_type)) +
-  geom_bar()
+# add code here
 ```
 
 # Price vs. square footage
