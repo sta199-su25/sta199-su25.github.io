@@ -1,8 +1,7 @@
 ---
-title: Lab 5
+title: Lab 4
 subtitle: Visualize, model, interpret
 categories: Lab
-description: "Mon, Nov 4 at 8:30 am"
 draft: false
 ---
 
