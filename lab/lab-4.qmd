@@ -160,11 +160,12 @@ a.  Before doing any data analysis, do you think that the relationship between n
 
 b.  Create an appropriate data visualization to examine the question part (a). Does this change your opinion?
 
-## Question 5
-
 ::: callout-tip
 *Note: adding a facet will likely make the plot MUCH easier to interpret.*
 :::
+
+
+## Question 5
 
 a.  Fit an additive model that models birth weight predicted by both mother's smoking habit and number of hospital visits.
     Display the model output in a `tidy` way.
