@@ -666,68 +666,9 @@ Y = \beta_0 + \beta_1 X + \epsilon
 &amp;- 17.4 \times flipper~length*Torgersen
 \end{aligned}
 \]</span></p>
-</div>
-</section><section id="where-do-the-three-lines-come-from-1" class="slide level2 smaller"><h2>Where do the three lines come from?</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\small\widehat{body~mass} = -5464 &amp;+ 48.5 \times flipper~length \\
-&amp;+ 3551 \times Dream \\
-&amp;+ 3218 \times Torgersen \\
-&amp;- 19.4 \times flipper~length*Dream \\
-&amp;- 17.4 \times flipper~length*Torgersen
-\end{aligned}
-\]</span></p>
-<div class="fragment">
-<p>If penguin is from Biscoe, Dream = 0 and Torgersen = 0:</p>
-</div>
-<div class="fragment">
-<p><span class="math display">\[
-\begin{aligned}
-\widehat{body~mass} = -5464 &amp;+ 48.5 \times flipper~length
-\end{aligned}
-\]</span></p>
-</div>
-</section><section id="where-do-the-three-lines-come-from-2" class="slide level2 smaller"><h2>Where do the three lines come from?</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\small\widehat{body~mass} = -5464 &amp;+ 48.5 \times flipper~length \\
-&amp;+ 3551 \times Dream \\
-&amp;+ 3218 \times Torgersen \\
-&amp;- 19.4 \times flipper~length*Dream \\
-&amp;- 17.4 \times flipper~length*Torgersen
-\end{aligned}
-\]</span></p>
-<div class="fragment">
-<p>If penguin is from Dream, Dream = 1 and Torgersen = 0:</p>
-</div>
-<div class="fragment">
-<p><span class="math display">\[
-\begin{aligned}
-\widehat{body~mass} &amp;= (-5464 + 3551) + (48.5-19.4) \times flipper~length\\
-&amp;=-1913+29.1\times flipper~length.
-\end{aligned}
-\]</span></p>
-</div>
-</section><section id="prediction-1" class="slide level2 smaller"><h2>Prediction</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb12-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">200</span>,</span>
-<span id="cb12-3"><a></a>  <span class="at">island =</span> <span class="st">"Torgersen"</span></span>
-<span id="cb12-4"><a></a>)</span>
-<span id="cb12-5"><a></a></span>
-<span id="cb12-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 1
-  .pred
-  &lt;dbl&gt;
-1 3980.</code></pre>
-</div>
-</div>
-<p><span class="math display">\[
-\widehat{body~mass} = (-5464 + 3218) + (48.5-17.4) \times 200.
-\]</span></p>
 
 
+</div>
 </section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
