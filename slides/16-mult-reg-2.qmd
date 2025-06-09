@@ -73,13 +73,7 @@ ggplot(movie_scores, aes(x = imdb_cat, y = audience)) +
 
 ## Tomorrow {.smaller}
 
--   Scores will be posted later today.
-
--   In class: score out of 70
-
--   Take home: score out of 30
-
--   Overall midterm grade: add the two scores together!
+We will talk about some project stuff! I'll also try to give teams some time to talk about their proposal feedback. Try to be here!
 
 # Quick Review
 

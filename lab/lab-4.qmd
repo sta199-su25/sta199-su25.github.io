@@ -45,7 +45,7 @@ Log in to RStudio, clone your `lab-5` repo from GitHub, open your `lab-5.qmd` do
 
 ### Step 2: Clone the repo & start a new RStudio project
 
--   Go to the course organization at [github.com/sta199-f24](https://github.com/sta199-f24) organization on GitHub.
+-   Go to the course organization at github.com/sta199-su25 organization on GitHub.
     Click on the repo with the prefix **lab-5**.
     It contains the starter documents you need to complete the lab.
 
@@ -270,7 +270,7 @@ Think carefully about what exactly we are modelling.
 Come by office hours/contact a member of the teaching team if you get stuck!
 :::
 
-## Question 8 
+## Question 8
 
 *Which individual variable is the strongest individual predictor of parasite similarity between species?*
 
