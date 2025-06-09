@@ -14,7 +14,7 @@ And you'll wrap up the lab revisiting the topic of data science ethics.
 
 ::: callout-note
 This lab assumes you've completed the labs so far and doesn't repeat setup and overview content from those labs.
-If you haven't done those yet, you should review the previous labs before starting on this one.
+If you haven't done those yet, you should review the previous labs before starting on this one!
 :::
 
 ## Learning objectives
