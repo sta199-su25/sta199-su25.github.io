@@ -307,7 +307,6 @@
 </section><section id="how-to-implement" class="slide level2 smaller"><h2>How to implement?</h2>
 <p>Use the function <code>glance</code> to compute <span class="math inline">\(R^2\)</span> and adjusted <span class="math inline">\(R^2\)</span>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">glance</span>(bm_fl_island_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC
@@ -387,10 +386,10 @@
 </div>
 </section><section id="example-predicting-wages" class="slide level2 smaller"><h2>Example: Predicting Wages</h2>
 <p>You want to understand how <strong>gender</strong> affects wages.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>wage <span class="sc">~</span> gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>wage <span class="sc">~</span> gender</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This tells you the <strong>overall difference</strong>, but doesn’t control for <strong>education</strong> or <strong>experience</strong>.</p>
 </section><section id="add-control-variables" class="slide level2 smaller"><h2>Add control variables</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>wage <span class="sc">~</span> gender <span class="sc">+</span> education <span class="sc">+</span> experience</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>wage <span class="sc">~</span> gender <span class="sc">+</span> education <span class="sc">+</span> experience</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now you’re comparing:</p>
 <blockquote>
 <p>People with the <strong>same education and experience</strong><br>
