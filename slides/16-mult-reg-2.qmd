@@ -73,7 +73,9 @@ ggplot(movie_scores, aes(x = imdb_cat, y = audience)) +
 
 ## Tomorrow {.smaller}
 
-We will talk about some project stuff! I'll also try to give teams some time to talk about their proposal feedback. Try to be here!
+We will talk about some project stuff!
+I'll also try to give teams some time to talk about their proposal feedback.
+Try to be here!
 
 # Quick Review
 
@@ -404,7 +406,8 @@ ggplot(
 
 ## A note on plotting... {.smaller}
 
-This, we have not! Here, we use the *predicted* y values (attained using `augment`) from an additive model in `geom_smooth()`. 
+This, we have not!
+Here, we use the *predicted* y values (attained using `augment`) from an additive model in `geom_smooth()`.
 
 ```{r}
 #| echo: false
