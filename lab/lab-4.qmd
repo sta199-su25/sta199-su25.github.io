@@ -260,15 +260,18 @@ c.  Fit a linear regression to model the relationship between `transformed_parsi
 
 d.  Model interpretation:
 
-    -   Interpret the *intercept* of the model, making sure that your interpretation is **in the units of the original data (not on log scale)**.
+    -   Interpret the *intercept* of the model, making sure that your interpretation is **in the units of the original data (not on log scale)**.\
 
-    -   Interpret the *slope* of the model, making sure that your interpretation is **in the units of the original data (not on log scale).**
+    -   Is the following statement true or false?
+        Why?\
+
+        \
+        *Here, the slope tells us for each additional 1 million year of divergence time how much parasite similarity decreases (in the units of the original data).*
 
 ::: callout-warning
-Part d is intended to be a challenge.
+Part d is intended to be a bit tricky!
 To get the interpretation to be in the original units, you will have to do a little math.
 Think carefully about what exactly we are modelling.
-Come by office hours/contact a member of the teaching team if you get stuck!
 :::
 
 ## Question 9
