@@ -316,7 +316,7 @@ Without controlling, we might:
 
 . . . 
 
-Multiple regression gives us a better picture of **how the world really works**.
+Multiple regression gives us a better picture of **how the world really works**!
 
 
 ## Takeaway {.smaller}
