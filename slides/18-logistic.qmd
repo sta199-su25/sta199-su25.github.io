@@ -21,6 +21,7 @@ library(openintro)
 library(fivethirtyeight)
 library(palmerpenguins)
 library(MASS)
+library(datasauRus)
 hp_spam <- read_csv("data/hp-spam.csv")
 todays_ae <- "ae-14-spam-filter"
 ```
@@ -63,6 +64,48 @@ We have been studying regression:
 -   What combinations of data types have we seen?
 
 -   What did the picture look like?
+
+## Linear Models: Just because you can... {.smaller}
+
+... doesn't mean you should!!
+
+. . .
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+datasaurus_dozen |>
+  ggplot(aes(x = x, y = y, color = dataset)) +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~dataset)
+```
+## Linear Models: Just because you can... {.smaller}
+
+... doesn't mean you should!!
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+datasaurus_dozen |>
+  ggplot(aes(x = x, y = y, color = dataset)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~dataset)
+```
+
+## Linear models have infinite range {.smaller}
+
+```{r}
+#| echo: false
+
+ggplot() +
+  xlim(c(0,2)) +
+  ylim(c(0,6)) +
+  geom_abline(slope = 2, intercept = 1) 
+```
 
 ## Today: a *binary* response {.smaller}
 
@@ -957,7 +1000,7 @@ To balance out the two kinds of errors:
 -   High threshold:
     -   Hard to classify as 1, so FP less likely and FN more likely
 -   Low threshold:
-    -    Easy to classify as 1, so FP more likely and FN less likely
+    -   Easy to classify as 1, so FP more likely and FN less likely
 :::
 
 ## Silly examples {.smaller}
