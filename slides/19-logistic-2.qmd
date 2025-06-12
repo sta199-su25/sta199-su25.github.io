@@ -22,6 +22,7 @@ library(fivethirtyeight)
 library(palmerpenguins)
 library(MASS)
 library(datasauRus)
+library(forested)
 hp_spam <- read_csv("data/hp-spam.csv")
 todays_ae <- "ae-14-spam-filter"
 ```
@@ -487,25 +488,6 @@ ggplot(err_rates, aes(x = `1 - specificity`, y = sensitivity, color = "red")) +
   theme(legend.position="none")
 ```
 
-## ROC curve {.medium}
-
-If we repeat this process for "all" possible thresholds $0\leq p^\star\leq 1$, we trace out the **receiver operating characteristic curve** (ROC curve), which assesses the model's performance across a range of thresholds:
-
-. . . 
-
-```{r}
-#| echo: false
-roc_curve(log_aug_full, truth = spam, .pred_1, event_level = "second") |>
-  ggplot(aes(x = 1 - specificity, y = sensitivity)) +
-  geom_path() +
-  geom_abline(lty = 3) +
-  coord_equal() + 
-  labs(
-    x = "False positive rate = 1 - specificity",
-    y = "True positive rate (sensitivity)"
-  )
-```
-
 
 ## ROC curve {.smaller}
 
@@ -513,7 +495,7 @@ If we repeat this process for "all" possible thresholds $0\leq p^\star\leq 1$, w
 
 ```{r}
 #| echo: false
-roc_curve(log_aug_full, truth = spam, .pred_1, event_level = "second") |>
+roc_curve(spam_aug_all, truth = spam, .pred_1, event_level = "second") |>
   ggplot(aes(x = 1 - specificity, y = sensitivity)) +
   geom_path() +
   geom_abline(lty = 3) +
@@ -547,7 +529,7 @@ Area under the ROC curve will be our "quality score" for comparing logistic regr
 
 ```{r}
 #| echo: false
-roc_curve(log_aug_full, truth = spam, .pred_1, event_level = "second") |>
+roc_curve(spam_aug_all, truth = spam, .pred_1, event_level = "second") |>
   ggplot(aes(x = 1 - specificity, y = sensitivity)) +
   geom_path() +
   geom_abline(lty = 3) +
@@ -605,15 +587,10 @@ For predictive models (used primarily in machine learning), we typically split d
 
 -   The **training set** is used to estimate model parameters (fit models).
 
--   The **test set** is used to find an independent assessment of model performance.
+-   The **test set** is used to find an independent assessment of model performance. NEVER look at the test set during training.
 
-. . .
 
-::: callout-warning
-Do not use, or even peek at, the test set during training.
-:::
-
-## How much to spend?
+## How much to spend? {.smaller}
 
 ::: incremental
 -   The more data we spend (use in training), the better estimates we’ll get.
@@ -623,7 +600,7 @@ Do not use, or even peek at, the test set during training.
 -   Spending too much data in testing prevents us from computing a good estimate of model parameters.
 :::
 
-## The initial split
+## The initial split {.smaller}
 
 Randomly pick training and testing rows!
 
@@ -638,12 +615,12 @@ email_split
 
 Default: 75% training; 25% testing
 
-## The initial split
+## The initial split {.smaller}
 
 Change proportion:
 
 ```{r}
-#| label: initial-split
+#| label: initial-split-2
 set.seed(20250612)
 email_split <- initial_split(email, prop = 0.8)
 email_split
@@ -690,3 +667,48 @@ email_test
 - Create a train and test split
 - Fit models
 - Test and evaluate models
+
+# Washington forests
+
+## Data {.smaller}
+
+-   The U.S. Forest Service maintains machine learning models to predict whether a plot of land is "forested."
+
+-   This classification is important for research, legislation, land management, etc. purposes.
+
+-   Plots are typically remeasured every 10 years.
+
+-   The `forested` dataset contains the most recent measurement per plot.
+
+## Data: `forested` {.smaller}
+
+```{r}
+forested
+```
+
+## Data: `forested` {.smaller}
+
+```{r}
+glimpse(forested)
+```
+
+## Outcome and predictors {.smaller}
+
+-   Outcome: `forested` - Factor, `Yes` or `No`
+
+```{r}
+levels(forested$forested)
+```
+
+-   Predictors: 18 remotely-sensed and easily-accessible predictors:
+
+    -   numeric variables based on weather and topography
+
+    -   categorical variables based on classifications from other governmental organizations
+
+## `?forested`
+
+<iframe width="900" height="500" src="https://simonpcouch.github.io/forested/reference/forested.html" title="forested" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
