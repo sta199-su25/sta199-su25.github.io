@@ -140,19 +140,19 @@ Calculate sensitivity and specificity and draw the ROC curve.
 #| label: forested-custom-roc
 #| eval: false
 forested_custom_roc <- roc_curve(forested_custom_aug, 
-                                 truth = forested, 
-                                 .pred_Yes, 
-                                 event_level = "first")
+                                 truth = ____,  # column with truth
+                                 _____, # column with y = 1 preds
+                                 event_level = _____) # factor level for y = 1
 
 forested_custom_roc
 ```
 
 ```{r}
 #| eval: false
-ggplot(forested_custom_roc, aes(x = 1 - specificity, y = sensitivity)) +
-  geom_path() +
-  geom_abline(lty = 3) +
-  coord_equal()
+ggplot(forested_custom_roc, aes(x = 1 - ______, y = ______)) +
+  geom_path() + # draws line
+  geom_abline(lty = 3) + # x = y line
+  coord_equal() # makes square
 ```
 
 # Model 2: All predictors
@@ -164,7 +164,6 @@ Fit a model for classifying plots as forested or not based on all predictors ava
 ```{r}
 #| label: forested-full-fit
 #| eval: false
-
 forested_full_fit <- logistic_reg() |>
   fit(_________ ~ ________, data = _________)
 
@@ -213,25 +212,27 @@ Calculate sensitivity and specificity and draw the ROC curve.
 #| label: forested-full-roc
 #| eval: false
 forested_full_roc <- roc_curve(forested_full_aug, 
-                               truth = forested, 
-                               .pred_Yes, 
-                               event_level = "first")
+                               truth = ____,  # column with truth
+                                 _____, # column with y = 1 preds
+                                 event_level = _____ # factor level for y = 1
+                               ) 
 
 forested_full_roc
 ```
 
 ```{r}
 #| eval: false
-ggplot(forested_full_roc, aes(x = 1 - specificity, y = sensitivity)) +
-  geom_path() +
-  geom_abline(lty = 3) +
-  coord_equal()
+ggplot(forested_full_roc, aes(x = 1 - _______, y = ______)) +
+  geom_path() + # draws line
+  geom_abline(lty = 3) + # x = y line
+  coord_equal() #makes plot square
 ```
 
 # Model 1 vs. Model 2
 
-Plot both ROC curves and articulate how you would use them to compare these models.
+lot both ROC curves and articulate how you would use them to compare these models.
 
+First, add a column to each roc data.
 ```{r}
 #| label: compare
 #| eval: false
@@ -240,28 +241,41 @@ forested_custom_roc <- forested_custom_roc |>
 
 forested_full_roc <- forested_full_roc |>
   mutate(model = "Full")
+```
 
-bind_rows(
-  forested_custom_roc,
-  forested_full_roc) |>
+Next, combine data.
+```{r}
+#| eval: false
+roc_combined <- bind_rows(forested_custom_roc, forested_full_roc) 
+```
+
+Now, plot!
+
+```{r}
+#| eval: false
+___________ |>
   ggplot(aes(x = 1 - specificity, y = sensitivity, color = model)) +
-  geom_path() +
-  geom_abline(lty = 3) +
-  coord_equal()
+  geom_path() + # draws line
+  geom_abline(lty = 3) + # adds x = y line
+  coord_equal() # makes square
 ```
 
 The full model looks better. We can quantify this comparison with the area under the curve:
 
 ```{r}
 #| eval: false
-full_roc_auc <- roc_auc(
+
+# same as roc_curve, but roc_auc
+
+full_roc_auc <- _______ (
   forested_full_aug, 
   truth = forested, 
   .pred_Yes, 
   event_level = "first"
 )
 
-custom_roc_auc <- roc_auc(
+# same as roc_curve, but roc_auc
+custom_roc_auc <- _______ (
   forested_custom_aug, 
   truth = forested, 
   .pred_Yes, 
