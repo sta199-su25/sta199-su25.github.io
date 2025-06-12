@@ -91,6 +91,14 @@ ggplot(housing, aes(x = sqft, y = price)) +
 
 -   **Your turn:** Write the equation of the model in mathematical notation. Then, interpret the intercept and slope.
 
+$$ \widehat{price} = 11430.20 + 113.76 \times sqft $$
+
+-   **Intercept**: On average, we expect a home that is 0 square feet to cost \$11430.
+    This does not make sense in the context of the data - we won't have a home that is 0 sq.
+    ft.
+
+-   **Slope:** On average, for every 1 additional square foot, we expect hosue price to increase by \$113.76
+
 # Price vs. home type
 
 ```{r}
@@ -102,6 +110,14 @@ tidy(price_type_fit)
 ```
 
 -   **Your turn:** Write the equation of the model in mathematical notation. Then, interpret the intercept and each coefficient in context.
+
+$$
+\widehat{price} = 185469.48 - 45660.54 \times Duplex - 49535.42 \times Townhouse
+$$
+
+-   **Intercept:** On average, we expect houses to cost 185469.48.
+
+-   **Slope for Duplex:** On average, we expect duplexes to cost 45660 dollars less than a house.
 
 # Price vs. square footage and home type
 
@@ -127,7 +143,22 @@ $$
 **Task:** Write the model equations for each home type.
 Provide interpretations of the coefficients.
 
-*Add answer here.*
+**House:** $ \widehat{price} = 13394.8 + 114.5 \times sqft $
+
+-  Intercept: On average, we expect a house with 0 square feet to cost $13394.8. 
+-  Slope: On average, for houses, we expect every one additional square foot to correspond to an additional price of $114.5. 
+
+**Townhouse:** $ \widehat{price} = (13394.8 - 20306) + 114.5 \times sqft $
+
+-  Intercept: On average, we expect a townhouse with 0 square feet to cost $-6911.2. This does not make sense in the context of the data -  townhouses cannot be 0 sqft and prices cannot be negative.
+-  Slope: On average, for townhouses, we expect every one additional square foot to correspond to an additional price of $114.5. 
+
+**Duplex:** $ \widehat{price} = (13394.8 - 63251)  + 114.5 \times sqft $
+
+-  Intercept: On average, we expect a house with 0 square feet to cost -$49856.2. 49856.2. This does not make sense in the context of the data -  duplexes cannot be 0 sqft and prices cannot be negative.
+-  Slope: On average, for duplexes, we expect every one additional square foot to correspond to an additional price of $114.5. 
+
+**NOTE**: Slopes are the SAME for all types!!
 
 ## Interaction effects model
 
@@ -138,16 +169,26 @@ Now, we will fit an interaction effects model.
 ```{r}
 #| label: price-int-fit
 
-#add code here
+price_inter_fit <- linear_reg() |>
+  fit(price ~ sqft  * home_type, data = housing)
+
+tidy(price_inter_fit)
 ```
 
 **Task:** Write the model output using mathematical notation.
 
-*Add answer here.*
+$$
+\widehat{price} = 9087 + 117 \times sqft + 139970 \times Townhouse + 57547 \times Duplex - 73 \times sqft \times Duplex - 27 \times sqft \times Townhouse
+$$
 
 **Task:** Write the model equations for each home type.
 
-*Add answer here.*
+**House:** $ \widehat{price} = 9087 + 117 \times sqft $
+
+**Townhouse:** $ \widehat{price} = (9087 + 139970) + (117 - 27) \times sqft $
+
+**Duplex:** $ \widehat{price} = (9087 + 57547)  + (117 - 73) \times sqft $
+
 
 # Model Comparison
 
@@ -162,10 +203,10 @@ Which is the worst?
 
 ```{r}
 #| label: model-glance
-
-# add code here
+glance(price_main_fit)
+glance(price_inter_fit)
 ```
-
+Adjusted R squared is a higher for the interaction effects model - this is the better model!
 # One more model?
 
 **Task:** Try adding one more variable to your chosen model from above.
@@ -174,5 +215,9 @@ Does it make a difference in *adjusted* $R^2$?
 ```{r}
 #| label: new-model
 
-# add code here
+price_inter_bed_fit <- linear_reg() |>
+  fit(price ~ sqft  * home_type + bedrooms, data = housing)
+
+glance(price_inter_bed_fit)
 ```
+Adding the number of bedrooms greatly boosts the adjusted r squared value - this is a preferrable model!
