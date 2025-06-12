@@ -12317,7 +12317,7 @@
     "href": "ae/ae-15-github.html#sensitivity-specificity-roc-curve",
     "title": "AE 15: Forest classification",
     "section": "Sensitivity, specificity, ROC curve",
-    "text": "Sensitivity, specificity, ROC curve\nCalculate sensitivity and specificity and draw the ROC curve.\n\nforested_custom_roc &lt;- roc_curve(forested_custom_aug, \n                                 truth = forested, \n                                 .pred_Yes, \n                                 event_level = \"first\")\n\nforested_custom_roc\n\n\nggplot(forested_custom_roc, aes(x = 1 - specificity, y = sensitivity)) +\n  geom_path() +\n  geom_abline(lty = 3) +\n  coord_equal()"
+    "text": "Sensitivity, specificity, ROC curve\nCalculate sensitivity and specificity and draw the ROC curve.\n\nforested_custom_roc &lt;- roc_curve(forested_custom_aug, \n                                 truth = ____,  # column with truth\n                                 _____, # column with y = 1 preds\n                                 event_level = _____) # factor level for y = 1\n\nforested_custom_roc\n\n\nggplot(forested_custom_roc, aes(x = 1 - ______, y = ______)) +\n  geom_path() + # draws line\n  geom_abline(lty = 3) + # x = y line\n  coord_equal() # makes square"
   },
   {
     "objectID": "ae/ae-15-github.html#fit-1",
@@ -12345,7 +12345,7 @@
     "href": "ae/ae-15-github.html#sensitivity-specificity-roc-curve-1",
     "title": "AE 15: Forest classification",
     "section": "Sensitivity, specificity, ROC curve",
-    "text": "Sensitivity, specificity, ROC curve\nCalculate sensitivity and specificity and draw the ROC curve.\n\nforested_full_roc &lt;- roc_curve(forested_full_aug, \n                               truth = forested, \n                               .pred_Yes, \n                               event_level = \"first\")\n\nforested_full_roc\n\n\nggplot(forested_full_roc, aes(x = 1 - specificity, y = sensitivity)) +\n  geom_path() +\n  geom_abline(lty = 3) +\n  coord_equal()"
+    "text": "Sensitivity, specificity, ROC curve\nCalculate sensitivity and specificity and draw the ROC curve.\n\nforested_full_roc &lt;- roc_curve(forested_full_aug, \n                               truth = ____,  # column with truth\n                                 _____, # column with y = 1 preds\n                                 event_level = _____ # factor level for y = 1\n                               ) \n\nforested_full_roc\n\n\nggplot(forested_full_roc, aes(x = 1 - _______, y = ______)) +\n  geom_path() + # draws line\n  geom_abline(lty = 3) + # x = y line\n  coord_equal() #makes plot square"
   },
   {
     "objectID": "ae/ae-03-github.html",
