@@ -124,10 +124,10 @@ window.Quarto = {
 </script><link rel="stylesheet" href="../style/sta199.scss">
 <meta property="og:title" content="Model Selection – STA 199">
 <meta property="og:description" content="Lecture 17">
-<meta property="og:image" content="https://sta199-su25.github.io/slides/17-model-select_files/figure-revealjs/unnamed-chunk-3-1.png">
+<meta property="og:image" content="https://sta199-su25.github.io/slides/17-model-select_files/figure-html/unnamed-chunk-3-1.png">
 <meta property="og:site_name" content="STA 199">
 <meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1920">
+<meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="Model Selection – STA 199">
 <meta name="twitter:description" content="Lecture 17">
 <meta name="twitter:image" content="https://sta199-su25.github.io/slides/img/twitter-card.png">
@@ -429,7 +429,7 @@ window.Quarto = {
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="17-model-select_files/figure-revealjs/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></p>
+<figure class="figure"><p><img src="17-model-select_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -462,7 +462,7 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="17-model-select_files/figure-revealjs/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="17-model-select_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -638,42 +638,7 @@ But different gender</p>
 </ul>
 
 
-</section></section></main><!-- /main --><script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
-    }
-
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
-
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
-        }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
-        }
-      }
-    }
-
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
-
-  })();
-</script><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");

@@ -1,15 +1,5 @@
 [
   {
-    "listing": "/lab.html",
-    "items": [
-      "/lab/lab-0.html",
-      "/lab/lab-1.html",
-      "/lab/lab-2.html",
-      "/lab/lab-3.html",
-      "/lab/lab-4.html"
-    ]
-  },
-  {
     "listing": "/ae.html",
     "items": [
       "/ae/ae-00-github.html",
@@ -38,7 +28,18 @@
       "/ae/ae-12-github.html",
       "/ae/ae-13-github-A.html",
       "/ae/ae-13-github.html",
-      "/ae/ae-14-github.html"
+      "/ae/ae-14-github.html",
+      "/ae/ae-15-github.html"
+    ]
+  },
+  {
+    "listing": "/lab.html",
+    "items": [
+      "/lab/lab-0.html",
+      "/lab/lab-1.html",
+      "/lab/lab-2.html",
+      "/lab/lab-3.html",
+      "/lab/lab-4.html"
     ]
   }
 ]

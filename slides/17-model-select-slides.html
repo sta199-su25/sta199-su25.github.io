@@ -227,7 +227,7 @@
 <li><p>How can we tell how good they are? How can we choose between models?</p></li>
 </ul></section><section id="recall-residuals" class="slide level2 smaller"><h2>Recall: Residuals</h2>
 
-<img data-src="17-model-select_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section><section id="recall-least-squares-line" class="slide level2 smaller"><h2>Recall: Least squares line</h2>
+<img data-src="17-model-select_files/figure-html/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"></section><section id="recall-least-squares-line" class="slide level2 smaller"><h2>Recall: Least squares line</h2>
 <p>The residual for the <span class="math inline">\(i^{th}\)</span> observation is</p>
 <p><span class="math display">\[e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i\]</span></p>
 <div class="fragment">
@@ -259,7 +259,7 @@
 </div>
 </section><section id="example" class="slide level2 smaller"><h2>Example</h2>
 
-<img data-src="17-model-select_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section><section id="how-do-we-pick-between-our-models" class="slide level2 smaller"><h2>How do we pick between our models?</h2>
+<img data-src="17-model-select_files/figure-html/unnamed-chunk-4-1.png" width="672" class="r-stretch"></section><section id="how-do-we-pick-between-our-models" class="slide level2 smaller"><h2>How do we pick between our models?</h2>
 <ul>
 <li>
 <p>Over the past few days, we have fit a ton of linear models to predict penguins’ body mass.</p>
@@ -634,41 +634,6 @@ But different gender</p>
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

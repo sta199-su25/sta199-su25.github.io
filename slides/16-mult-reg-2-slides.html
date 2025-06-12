@@ -271,10 +271,10 @@ Y = \beta_0 + \beta_1 X + \epsilon
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="16-mult-reg-2_files/figure-revealjs/additive-interaction-viz-1.png" width="960"></p>
+<p><img data-src="16-mult-reg-2_files/figure-html/additive-interaction-viz-1.png" width="672"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="16-mult-reg-2_files/figure-revealjs/additive-interaction-viz-2.png" width="960"></p>
+<p><img data-src="16-mult-reg-2_files/figure-html/additive-interaction-viz-2.png" width="672"></p>
 </div>
 </div>
 </div>
@@ -455,10 +455,10 @@ Y = \beta_0 + \beta_1 X + \epsilon
 </section><section id="a-note-on-plotting" class="slide level2 smaller"><h2>A note on plotting…</h2>
 <p>This, we have done. It is what R naturally does when we use <code>color = island</code>!</p>
 
-<img data-src="16-mult-reg-2_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section><section id="a-note-on-plotting-1" class="slide level2 smaller"><h2>A note on plotting…</h2>
+<img data-src="16-mult-reg-2_files/figure-html/unnamed-chunk-8-1.png" width="672" class="r-stretch"></section><section id="a-note-on-plotting-1" class="slide level2 smaller"><h2>A note on plotting…</h2>
 <p>This, we have not! Here, we use the <em>predicted</em> y values (attained using <code>augment</code>) from an additive model in <code>geom_smooth()</code>.</p>
 
-<img data-src="16-mult-reg-2_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section><section id="a-note-on-plotting-2" class="slide level2 smaller"><h2>A note on plotting…</h2>
+<img data-src="16-mult-reg-2_files/figure-html/unnamed-chunk-9-1.png" width="672" class="r-stretch"></section><section id="a-note-on-plotting-2" class="slide level2 smaller"><h2>A note on plotting…</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Fit Model and use Augment</span></span>
 <span id="cb7-2"><a></a></span>
@@ -554,10 +554,10 @@ Y = \beta_0 + \beta_1 X + \epsilon
 </section><section id="picture-its-not-pretty" class="slide level2"><h2>Picture? It’s not pretty…</h2>
 <p>2 predictors + 1 response = 3 dimensions. Ick!</p>
 
-<img data-src="16-mult-reg-2_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section><section id="picture-its-not-pretty-1" class="slide level2"><h2>Picture? It’s not pretty…</h2>
+<img data-src="16-mult-reg-2_files/figure-html/unnamed-chunk-13-1.png" width="672" class="r-stretch"></section><section id="picture-its-not-pretty-1" class="slide level2"><h2>Picture? It’s not pretty…</h2>
 <p>Instead of a line of best fit, it’s a <em>plane</em> of best fit. Double ick!</p>
 
-<img data-src="16-mult-reg-2_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section><section id="multiple-numerical-predictors-with-interaction" class="slide level2 smaller"><h2>Multiple Numerical Predictors: With Interaction</h2>
+<img data-src="16-mult-reg-2_files/figure-html/unnamed-chunk-14-1.png" width="672" class="r-stretch"></section><section id="multiple-numerical-predictors-with-interaction" class="slide level2 smaller"><h2>Multiple Numerical Predictors: With Interaction</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>bm_fl_bl_int_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
 <span id="cb12-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">*</span> bill_length_mm, <span class="at">data =</span> penguins)</span>
@@ -802,41 +802,6 @@ Y = \beta_0 + \beta_1 X + \epsilon
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
