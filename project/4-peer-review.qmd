@@ -77,22 +77,20 @@ gs4_deauth()
 make_pairing_table <- function(df) {
   df |>
     mutate(team_to_review_1 = paste0("[", team_to_review_1, "](", url_1, ")")) |>
-    mutate(team_to_review_2 = paste0("[", team_to_review_2, "](", url_2, ")")) |>
-    select(-url_1, -url_2)  |>
+    select(-url_1)  |>
     gt() |>
     fmt_markdown(
       columns = everything() 
     ) |>
     cols_label(
       your_team_name = "Your team name",
-      team_to_review_1 = "Team to review 1",
-      team_to_review_2 = "Team to review 2"
+      team_to_review_1 = "Team to review",
     )
 }
 ```
 
 ::: panel-tabset
-## L1 
+## L1
 
 ```{r}
 #| message: false
