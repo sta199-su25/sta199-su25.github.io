@@ -119,7 +119,6 @@ $$
 
 Interpretations are strange and delicate.
 
-
 ## Questions??? Review??? Anything?! {.smaller}
 
 ## Let's Practice
@@ -229,7 +228,7 @@ predict(spam_exl_fit, new_data = new_email, type = "prob")
 predict(spam_exl_fit, new_data = new_email, type = "class")
 ```
 
-. . . 
+. . .
 
 The default behavior is to threshold the probabilities by 0.5.
 
@@ -242,7 +241,6 @@ spam_fit <- logistic_reg() |>
   fit(spam ~ time + exclaim_mess + line_breaks, data = email)
 ```
 
-
 ## Let's use even more data (Ex. 5b) {.smaller}
 
 What about all the predictors???
@@ -252,14 +250,14 @@ spam_all_fit <- logistic_reg() |>
   fit(spam ~ ., data = email)
 ```
 
-
-The `.` means _all other variables_ .
+The `.` means *all other variables* .
 
 ## Is our model good??? (Ex. 5c) {.smaller}
--  Goal is to evaluate how good our model is. 
--  If you're coding along: pause!! We're going to review concepts first!!
 
-## Reminder: Classification Error  {.smaller}
+-   Goal is to evaluate how good our model is.
+-   If you're coding along: pause!! We're going to review concepts first!!
+
+## Reminder: Classification Error {.smaller}
 
 There are two kinds of mistakes:
 
@@ -267,13 +265,13 @@ There are two kinds of mistakes:
 
 We want to avoid both, but there's a trade-off.
 
-## Terms: False negative and positive rates  {.smaller}
+## Terms: False negative and positive rates {.smaller}
 
 -   **False negative rate** is the *proportion* of actual positives that were classified as negatives.
 
 -   **False positive rate** is the *proportion* of actual negatives that were classified as positives.
 
-. . . 
+. . .
 
 ::: callout-tip
 We want these to be low!
@@ -281,9 +279,9 @@ We want these to be low!
 
 ## Terms: False negative and positive rates {.smaller}
 
--   **False negative rate**  = $\frac{FN}{FN + TP}$ 
+-   **False negative rate** = $\frac{FN}{FN + TP}$
 
--   **False positive rate**  = $\frac{FP}{FP + TN}$ 
+-   **False positive rate** = $\frac{FP}{FP + TN}$
 
 ![](images/18/confusion-matrix.png)
 
@@ -293,7 +291,7 @@ We want these to be low!
 
 -   Also known as **true positive rate** and **recall**
 
--  Specificity = $\frac{FN}{FN + TP}$ 
+-   Sensitivity = $\frac{FN}{FN + TP}$
 
 -   Sensitivity = 1 − False negative rate
 
@@ -303,14 +301,13 @@ We want these to be low!
 We want this to be high!
 :::
 
-
 ## Term: Specificity {.smaller}
 
 **Specificity** is the *proportion* of actual negatives that were correctly classified as negative
 
 -   Also known as **true negative rate**
 
--   Specificity = $\frac{TN}{FP + TN}$ 
+-   Specificity = $\frac{TN}{FP + TN}$
 
 -   Specificity = 1 − False positive rate
 
@@ -320,12 +317,11 @@ We want this to be high!
 We want this to be high!
 :::
 
-
 ## The augment function {.smaller}
 
 The `augment` function takes a data frame and "augments" it by adding three new columns on the left that describe the model predictions for each row:
 
-:::incremental
+::: incremental
 -   `.pred_class`: model prediction ($\hat{y}$) based on a 50% threshold;
 -   `.pred_0`: model estimate of $P(y=0)$;
 -   `.pred_1`: model estimate of $P(y=1) = 1 - P(y = 0)$.
@@ -347,7 +343,7 @@ spam_aug_all |>
   count(spam, .pred_class) 
 ```
 
-## Calculating the error rates  (5c) {.smaller}
+## Calculating the error rates (5c) {.smaller}
 
 ```{r}
 spam_aug_all |>
@@ -355,7 +351,7 @@ spam_aug_all |>
   group_by(spam)
 ```
 
-## Calculating the error rates  (5c) {.smaller}
+## Calculating the error rates (5c) {.smaller}
 
 ```{r}
 spam_aug_all |>
@@ -364,7 +360,7 @@ spam_aug_all |>
   mutate(p = n / sum(n))
 ```
 
-## Calculating the error rates  (5c) {.smaller}
+## Calculating the error rates (5c) {.smaller}
 
 ```{r}
 spam_aug_all |>
@@ -383,13 +379,13 @@ This is where we have AE14 stop....
 
 ## But wait! {.smaller}
 
-Augment uses a default 50% threshold. 
+Augment uses a default 50% threshold.
 
-. . . 
+. . .
 
 If we change the classification threshold, we change the classifications, and we change the error rates:
 
-. . . 
+. . .
 
 ```{r}
 #| code-line-numbers: 2-4
@@ -467,7 +463,6 @@ spam_aug_all |>
   mutate(p = n / sum(n))
 ```
 
-
 ## Let's plot these error rates
 
 ```{r}
@@ -487,7 +482,6 @@ ggplot(err_rates, aes(x = `1 - specificity`, y = sensitivity, color = "red")) +
   ) + 
   theme(legend.position="none")
 ```
-
 
 ## ROC curve {.smaller}
 
@@ -512,14 +506,16 @@ roc_curve(spam_aug_all, truth = spam, .pred_1, event_level = "second") |>
 Which corner of the plot indicates the best model performance?
 :::
 
-![](images/20/roc-curve-annotated.png)
+![](images/20/roc-curve-annotated.png) 
+
 . . .
 
 Upper left!
 
 ## Model comparison
 
-The farther up and to the left the ROC curve is, the better the classification accuracy. You can quantify this with the area under the curve.
+The farther up and to the left the ROC curve is, the better the classification accuracy.
+You can quantify this with the area under the curve.
 
 ::: callout-note
 Area under the ROC curve will be our "quality score" for comparing logistic regression models.
@@ -561,7 +557,8 @@ augment(spam_exl_fit, email) |>
 To determine whether we should include a predictor in a model, we should start by asking:
 
 ::: incremental
--   Is it ethical to use this variable? (Or even legal?)
+-   Is it ethical to use this variable?
+    (Or even legal?)
 
 -   Will this variable be available at prediction time?
 
@@ -573,7 +570,8 @@ To determine whether we should include a predictor in a model, we should start b
 ## We've been cheating! {.smaller}
 
 ::: incremental
--   So far, we've been using all the data we have for building models. In predictive contexts, this would be considered *cheating*.
+-   So far, we've been using all the data we have for building models.
+    In predictive contexts, this would be considered *cheating*.
 
 -   Evaluating model performance for predicting outcomes that were used when building the models is like evaluating your learning with questions whose answers you've already seen.
 :::
@@ -582,18 +580,17 @@ To determine whether we should include a predictor in a model, we should start b
 
 For predictive models (used primarily in machine learning), we typically split data into training and test sets:
 
-![](images/20/test-train-split-1.svg){fig-align="center"}
--   The **training set** is used for EDA (plots, summary statistics, etc.)
+![](images/20/test-train-split-1.svg){fig-align="center"} - The **training set** is used for EDA (plots, summary statistics, etc.)
 
 -   The **training set** is used to estimate model parameters (fit models).
 
--   The **test set** is used to find an independent assessment of model performance. NEVER look at the test set during training.
-
+-   The **test set** is used to find an independent assessment of model performance.
+    NEVER look at the test set during training.
 
 ## How much to spend? {.smaller}
 
 ::: incremental
--   The more data we spend (use in training), the better estimates we’ll get.
+-   The more data we spend (use in training), the better estimates we'll get.
 
 -   Spending too much data in training prevents us from computing a good assessment of predictive performance.
 
@@ -626,7 +623,6 @@ email_split <- initial_split(email, prop = 0.8)
 email_split
 ```
 
-
 ## Setting a seed {.smaller}
 
 ::: task
@@ -634,15 +630,14 @@ What does `set.seed()` do?
 :::
 
 ::: incremental
--   To create that split of the data, R generates “pseudo-random” numbers: while they are made to behave like random numbers, their generation is deterministic given a “seed”.
+-   To create that split of the data, R generates "pseudo-random" numbers: while they are made to behave like random numbers, their generation is deterministic given a "seed".
 
 -   This allows us to reproduce results by setting that seed.
 
--   Which seed you pick doesn’t matter, as long as you don’t try a bunch of seeds and pick the one that gives you the best performance.
+-   Which seed you pick doesn't matter, as long as you don't try a bunch of seeds and pick the one that gives you the best performance.
 :::
 
-
-## Accessing the data  {.smaller}
+## Accessing the data {.smaller}
 
 ```{r}
 #| label: access-data
@@ -664,9 +659,9 @@ email_test
 
 ## AE 15
 
-- Create a train and test split
-- Fit models
-- Test and evaluate models
+-   Create a train and test split
+-   Fit models
+-   Test and evaluate models
 
 # Washington forests
 
@@ -711,4 +706,3 @@ levels(forested$forested)
 <iframe width="900" height="500" src="https://simonpcouch.github.io/forested/reference/forested.html" title="forested" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
 </iframe>
-
