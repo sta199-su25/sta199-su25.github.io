@@ -67,18 +67,18 @@ Quick Recap!
 :::
 
 ::: {.column width="60%"}
-:::incremental
-- False negative rate = $\frac{FN}{FN + TP}$
-- False positive rate = $\frac{FP}{FP + TN}$
-- Sensitivity = $\frac{FN}{FN + TP}$ = 1 − False negative rate
-- Specificity = $\frac{TN}{FP + TN}$ = 1 - False positive rate
+::: incremental
+-   False negative rate = $\frac{FN}{FN + TP}$
+-   False positive rate = $\frac{FP}{FP + TN}$
+-   Sensitivity = $\frac{FN}{FN + TP}$ = 1 − False negative rate
+-   Specificity = $\frac{TN}{FP + TN}$ = 1 - False positive rate
 :::
 :::
 :::
 
 ## ROC Curve
 
-![](images/20/roc-curve-annotated.png) 
+![](images/20/roc-curve-annotated.png)
 
 # Quantifying uncertainty
 
@@ -128,7 +128,6 @@ df |>
 ::: {style="text-align: center;"}
 <strong>Mean: </strong>`r round(mean(df$x), 2)`
 :::
-
 
 ## Example - Means (Sample Size 2) {.smaller}
 
@@ -2357,23 +2356,22 @@ intercept <- tidy(df_fit) |> filter(term == "(Intercept)") |> pull(estimate) |> 
 slope <- tidy(df_fit) |> filter(term == "area") |> pull(estimate) |> round()
 ```
 
-:::incremental
+::: incremental
 -   **Intercept:** Duke Forest houses that are 0 square feet are expected to sell, for `r dollar(intercept)`, on average.
 
 -   **Slope:** For each additional square foot, we expect the sale price of Duke Forest houses to be higher by `r dollar(slope)`, on average.
 :::
 
-
 ## From sample to population {.smaller}
 
 > For each additional square foot, we expect the sale price of Duke Forest houses to be higher by `r dollar(slope)`, on average.
 
-<br> 
+<br>
 
-:::incremental
-- This estimate is valid for the single sample of `r nrow(duke_forest)` houses.
-- But what if we're not interested quantifying the relationship between the size and price of a house in this single sample?
-- What if we want to say something about the relationship between these variables for all houses in Duke Forest?
+::: incremental
+-   This estimate is valid for the single sample of `r nrow(duke_forest)` houses.
+-   But what if we're not interested quantifying the relationship between the size and price of a house in this single sample?
+-   What if we want to say something about the relationship between these variables for all houses in Duke Forest?
 :::
 
 ## Inference for simple linear regression
@@ -2408,11 +2406,11 @@ A confidence interval will allow us to make a statement like "*For each addition
     \$100?
     \$1000?
 
-. . . 
+. . .
 
 -   The answer depends on how variable (from one sample to another sample) the sample statistic (the slope) is
 
-. . . 
+. . .
 
 -   We need a way to quantify the variability of the sample statistic
 
@@ -2422,19 +2420,17 @@ A confidence interval will allow us to make a statement like "*For each addition
 -   Two approaches:
     1.  Via simulation (what we'll do in this course)
     2.  Via mathematical models (what you can learn about in future courses)
-    
 :::
-    
+
 ## Quantify the variability of the slope {.smaller}
 
 **Bootstrapping** to quantify the variability of the slope for the purpose of estimation:
 
-:::incremental
-- Bootstrap new samples from the original sample
-- Fit models to each of the samples and estimate the slope
-- Use features of the distribution of the bootstrapped slopes to construct a confidence interval
+::: incremental
+-   Bootstrap new samples from the original sample
+-   Fit models to each of the samples and estimate the slope
+-   Use features of the distribution of the bootstrapped slopes to construct a confidence interval
 :::
-
 
 ```{r}
 #| echo: false
@@ -2704,9 +2700,7 @@ p_df_boot_samples_100
 
 ## Slopes of bootstrap samples {.smaller}
 
-
 **Fill in the blank:** For each additional square foot, the model predicts the sale price of Duke Forest houses to be higher, on average, by `r dollar(slope)`, plus or minus \_\_\_ dollars.
-
 
 ```{r}
 #| echo: false
@@ -2718,7 +2712,6 @@ p_df_boot_samples_100 +
 ## Slopes of bootstrap samples {.smaller}
 
 **Fill in the blank:** For each additional square foot, we expect the sale price of Duke Forest houses to be higher, on average, by `r dollar(slope)`, plus or minus \_\_\_ dollars.
-
 
 ```{r}
 #| echo: false
