@@ -27,18 +27,6 @@ It was originally scraped from Zillow, and can be found in the `duke_forest` dat
 glimpse(duke_forest)
 ```
 
-## Model
-
-```{r}
-#| label: fit-model
-#| eval: false
-df_fit <- _____ () |>
-  set_engine(_____) |>
-  fit(price ~ area, data = duke_forest)
-
-tidy(df_fit)
-```
-
 ## Bootstrap confidence interval
 
 ### 1. Calculate the observed fit (slope)
@@ -87,8 +75,6 @@ boot_fits |>
 ```
 
 ### 3. Compute the 95% confidence interval as the middle 95% of the bootstrap distribution
-
-Fill in the code, then set `eval: true` .
 
 ```{r}
 #| label: calc-ci
