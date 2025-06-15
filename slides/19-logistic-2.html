@@ -124,10 +124,10 @@ window.Quarto = {
 </script><link rel="stylesheet" href="../style/sta199.scss">
 <meta property="og:title" content="More logistic regression – STA 199">
 <meta property="og:description" content="Lecture 19">
-<meta property="og:image" content="https://sta199-su25.github.io/slides/19-logistic-2_files/figure-revealjs/unnamed-chunk-5-1.png">
+<meta property="og:image" content="https://sta199-su25.github.io/slides/19-logistic-2_files/figure-html/unnamed-chunk-5-1.png">
 <meta property="og:site_name" content="STA 199">
 <meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1920">
+<meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="More logistic regression – STA 199">
 <meta name="twitter:description" content="Lecture 19">
 <meta name="twitter:image" content="https://sta199-su25.github.io/slides/img/twitter-card.png">
@@ -517,7 +517,7 @@ $ to_multiple  &lt;fct&gt; 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0,…
 $ from         &lt;fct&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
 $ cc           &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2, 1,…
 $ sent_email   &lt;fct&gt; 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1,…
-$ time         &lt;dttm&gt; 2012-01-01 06:16:41, 2012-01-01 07:03:59, 2012…
+$ time         &lt;dttm&gt; 2012-01-01 00:16:41, 2012-01-01 01:03:59, 2012…
 $ image        &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,…
 $ attach       &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,…
 $ dollar       &lt;dbl&gt; 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0,…
@@ -539,7 +539,7 @@ $ number       &lt;fct&gt; big, small, small, small, none, none, big, smal…</c
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-2_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -559,7 +559,7 @@ $ number       &lt;fct&gt; big, small, small, small, none, none, big, smal…</c
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-2_files/figure-revealjs/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-2_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -955,7 +955,7 @@ Tip
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-2_files/figure-revealjs/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-2_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -965,7 +965,7 @@ Tip
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-2_files/figure-revealjs/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-2_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -996,7 +996,7 @@ Note
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-2_files/figure-revealjs/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-2_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1005,7 +1005,7 @@ Note
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-2_files/figure-revealjs/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-2_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1088,16 +1088,16 @@ Note
 <pre><code># A tibble: 3,136 × 21
    spam  to_multiple from     cc sent_email time                image
    &lt;fct&gt; &lt;fct&gt;       &lt;fct&gt; &lt;int&gt; &lt;fct&gt;      &lt;dttm&gt;              &lt;dbl&gt;
- 1 0     0           1         0 0          2012-02-18 19:20:54     0
- 2 1     0           1         0 0          2012-03-10 22:43:58     0
- 3 0     1           1         0 0          2012-03-06 14:10:00     0
- 4 1     0           1         0 0          2012-03-18 13:26:41     0
- 5 0     0           1         0 1          2012-03-16 00:47:33     0
- 6 0     0           1         0 1          2012-03-31 13:24:03     0
- 7 0     0           1         0 0          2012-02-16 16:25:22     0
- 8 0     0           1         0 0          2012-02-24 23:18:35     0
- 9 0     1           1         0 1          2012-01-22 09:02:27     0
-10 0     0           1         0 0          2012-02-11 00:46:30     0
+ 1 0     0           1         0 0          2012-02-18 13:20:54     0
+ 2 1     0           1         0 0          2012-03-10 16:43:58     0
+ 3 0     1           1         0 0          2012-03-06 08:10:00     0
+ 4 1     0           1         0 0          2012-03-18 08:26:41     0
+ 5 0     0           1         0 1          2012-03-15 19:47:33     0
+ 6 0     0           1         0 1          2012-03-31 08:24:03     0
+ 7 0     0           1         0 0          2012-02-16 10:25:22     0
+ 8 0     0           1         0 0          2012-02-24 17:18:35     0
+ 9 0     1           1         0 1          2012-01-22 03:02:27     0
+10 0     0           1         0 0          2012-02-10 18:46:30     0
 # ℹ 3,126 more rows
 # ℹ 14 more variables: attach &lt;dbl&gt;, dollar &lt;dbl&gt;, winner &lt;fct&gt;,
 #   inherit &lt;dbl&gt;, viagra &lt;dbl&gt;, password &lt;dbl&gt;, num_char &lt;dbl&gt;,
@@ -1113,16 +1113,16 @@ Note
 <pre><code># A tibble: 785 × 21
    spam  to_multiple from     cc sent_email time                image
    &lt;fct&gt; &lt;fct&gt;       &lt;fct&gt; &lt;int&gt; &lt;fct&gt;      &lt;dttm&gt;              &lt;dbl&gt;
- 1 0     1           1         1 1          2012-01-01 18:45:21     1
- 2 0     0           1         0 1          2012-01-01 18:23:44     0
- 3 0     0           1         1 1          2012-01-01 23:40:14     0
- 4 0     0           1         0 0          2012-01-02 02:51:24     0
- 5 0     0           1         2 0          2012-01-02 04:07:57     0
- 6 0     0           1         0 0          2012-01-02 14:35:56     0
- 7 0     0           1         0 0          2012-01-02 15:12:51     0
- 8 0     0           1         5 0          2012-01-02 17:48:26     0
- 9 0     1           1         1 0          2012-01-02 15:27:07     0
-10 0     0           1         7 0          2012-01-03 00:07:51     0
+ 1 0     1           1         1 1          2012-01-01 12:45:21     1
+ 2 0     0           1         0 1          2012-01-01 12:23:44     0
+ 3 0     0           1         1 1          2012-01-01 17:40:14     0
+ 4 0     0           1         0 0          2012-01-01 20:51:24     0
+ 5 0     0           1         2 0          2012-01-01 22:07:57     0
+ 6 0     0           1         0 0          2012-01-02 08:35:56     0
+ 7 0     0           1         0 0          2012-01-02 09:12:51     0
+ 8 0     0           1         5 0          2012-01-02 11:48:26     0
+ 9 0     1           1         1 0          2012-01-02 09:27:07     0
+10 0     0           1         7 0          2012-01-02 18:07:51     0
 # ℹ 775 more rows
 # ℹ 14 more variables: attach &lt;dbl&gt;, dollar &lt;dbl&gt;, winner &lt;fct&gt;,
 #   inherit &lt;dbl&gt;, viagra &lt;dbl&gt;, password &lt;dbl&gt;, num_char &lt;dbl&gt;,
@@ -1221,42 +1221,7 @@ $ land_type        &lt;fct&gt; Tree, Tree, Tree, Tree, Tree, Tree, Non-tre…</c
 </iframe>
 
 
-</section></section></main><!-- /main --><script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
-    }
-
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
-
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
-        }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
-        }
-      }
-    }
-
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
-
-  })();
-</script><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
