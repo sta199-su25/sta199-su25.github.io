@@ -44,7 +44,6 @@ new_loans <- loans_full_schema |>
 -   Wait till the you're prompted to work on the application exercise during class before editing the file.
 :::
 
-
 # Recap: sampling uncertainty
 
 ## What if this was my dataset?
@@ -57,7 +56,7 @@ new_loans <- loans_full_schema |>
 #| fig-asp: 0.8
 
 n = 50
-set.seed(2345)
+set.seed(1234)
 
 toy_data <- new_loans |>
   slice(sample(1:nrow(new_loans), n, replace = TRUE))
@@ -70,8 +69,8 @@ toy_data |>
   xlim(7, 15) + 
   ylim(0, 15) + 
   labs(
-    x = "Annual income (log $)",
-    y = "Credit utilization (log $)",
+    x = "x",
+    y = "y",
     title = paste("Model fit with sample size of ", n, " people", sep = "")
   ) + 
   theme(title = element_text(size = 20, face = "bold"))
@@ -101,7 +100,7 @@ estimates <- tibble(
 estimates |>
   ggplot(aes(x = estimate)) +
   geom_histogram() + 
-  xlim(0.5, 1.75) + 
+  xlim(0.4, 1.75) + 
   ylim(0, 5) + 
   labs(
     x = "Slope estimate",
@@ -165,7 +164,7 @@ estimates <- estimates |> add_row(
 estimates |>
   ggplot(aes(x = estimate)) +
   geom_histogram() + 
-  xlim(0.5, 1.75) + 
+  xlim(0.4, 1.75) + 
   ylim(0, 5) + 
   labs(
     x = "Slope estimate",
@@ -229,7 +228,7 @@ estimates <- estimates |> add_row(
 estimates |>
   ggplot(aes(x = estimate)) +
   geom_histogram() + 
-  xlim(0.5, 1.75) + 
+  xlim(0.4, 1.75) + 
   ylim(0, 5) + 
   labs(
     x = "Slope estimate",
@@ -291,7 +290,7 @@ df_boot_samples_100_hist <- ggplot(df_boot_samples_100_fit |> filter(term == "lo
   labs(x = "Slope estimate", y = "Count",
        title = "Histogram of alternative estimates") + 
   theme(title = element_text(size = 30, face = "bold")) +
-  xlim(0.5, 1.75)
+  xlim(0.4, 1.75)
 
 df_boot_samples_100_hist
 ```
@@ -355,7 +354,7 @@ df_boot_samples_100_hist <- ggplot(df_boot_samples_100_fit |> filter(term == "lo
   labs(x = "Slope estimate", y = "Count",
        title = "Histogram of alternative estimates") + 
   theme(title = element_text(size = 30, face = "bold")) +
-  xlim(0.5, 1.75)
+  xlim(0.4, 1.75)
 
 df_boot_samples_100_hist
 ```
@@ -409,10 +408,9 @@ df_boot_samples_100_hist
 
 ![](images/bootstrap/7.png){fig-align="center"}
 
-
 ## Confidence intervals {.smaller}
 
-:::incremental
+::: incremental
 -   **Point estimation**: report your single number *best guess* for the unknown quantity;
 
 -   **Interval estimation**: report a range, or interval, or values where you think the unknown quantity is likely to live;
@@ -420,7 +418,8 @@ df_boot_samples_100_hist
     -   Interval should be wide enough to capture the truth with high probability;
     -   Interval should be narrow enough to be informative;
 
--   Unfortunately, there is a trade-off. You adjust the **confidence level** to try to negotiate the trade-off;
+-   Unfortunately, there is a trade-off.
+    You adjust the **confidence level** to try to negotiate the trade-off;
 
 -   Common choices: 90%, 95%, 99%.
 :::
@@ -429,10 +428,9 @@ df_boot_samples_100_hist
 
 ![](images/21/garfield.png)
 
-
 # Recap: Computing Confidence Interval
 
-## Data: Houses in Duke Forest {.smaller}
+## Friday's Data: Houses in Duke Forest {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
@@ -494,7 +492,6 @@ p_df_boot_samples_100 <- ggplot(df_boot_samples_100, aes(x = area, y = price, gr
 p_df_boot_samples_100
 ```
 
-
 ```{r}
 #| echo: false
 #| message: false
@@ -552,7 +549,9 @@ df_boot_samples_100_hist +
 ## Where do the bounds come from? {.smaller}
 
 ::: incremental
--   Think IQR! 50% of the bootstrap distribution is between the 25% quantile on the left and the 75% quantile on the right. But we want more than 50%
+-   Think IQR!
+    50% of the bootstrap distribution is between the 25% quantile on the left and the 75% quantile on the right.
+    But we want more than 50%
 
 -   90% of the bootstrap distribution is between the 5% quantile on the left and the 95% quantile on the right;
 
@@ -584,9 +583,11 @@ df_boot_samples_100_hist +
 A hypothesis test is a statistical technique used to evaluate *competing claims* using data
 
 ::: incremental
--   **Null hypothesis,** $H_0$: An assumption about the population. "There is nothing going on."
+-   **Null hypothesis,** $H_0$: An assumption about the population.
+    "There is nothing going on."
 
--   **Alternative hypothesis,** $H_A$: A research question about the population. "There is something going on".
+-   **Alternative hypothesis,** $H_A$: A research question about the population.
+    "There is something going on".
 :::
 
 . . .
@@ -597,7 +598,8 @@ Note: Hypotheses are always at the population level!
 
 -   **Null hypothesis,** $H_0$: "There is nothing going on." The slope of the model for predicting the prices of houses in Duke Forest from their areas is 0, $\beta_1 = 0$.
 
--   **Alternative hypothesis,** $H_A$: "There is something going on". The slope of the model for predicting the prices of houses in Duke Forest from their areas is different than, $\beta_1 \ne 0$.
+-   **Alternative hypothesis,** $H_A$: "There is something going on".
+    The slope of the model for predicting the prices of houses in Duke Forest from their areas is different than, $\beta_1 \ne 0$.
 
 ## Hypothesis testing "mindset" {.smaller}
 
@@ -642,7 +644,7 @@ Note: Hypotheses are always at the population level!
 ::: incremental
 -   Start with a null hypothesis, $H_0$, that represents the status quo
 
--   Set an alternative hypothesis, $H_A$, that represents the research question, i.e. what we’re testing for
+-   Set an alternative hypothesis, $H_A$, that represents the research question, i.e. what we're testing for
 
 -   Conduct a hypothesis test under the assumption that the null hypothesis is true and calculate a **p-value** (probability of observed or more extreme outcome given that the null hypothesis is true)
 
@@ -680,7 +682,7 @@ null_dist <- duke_forest |>
 null_dist
 ```
 
-## Visualize null distribution 
+## Visualize null distribution
 
 ```{r}
 null_dist |>
@@ -688,7 +690,7 @@ null_dist |>
   ggplot(aes(x = estimate)) +
   geom_histogram(binwidth = 15)
 ```
- 
+
 ## Visualize null distribution (alternative)
 
 ```{r}
@@ -696,7 +698,7 @@ visualize(null_dist) +
   shade_p_value(obs_stat = observed_fit, direction = "two-sided")
 ```
 
-## Get p-value 
+## Get p-value
 
 ```{r}
 #| warning: false
@@ -704,7 +706,7 @@ null_dist |>
   get_p_value(obs_stat = observed_fit, direction = "two-sided")
 ```
 
-## Make a decision 
+## Make a decision
 
 ::: task
 Based on the p-value calculated, what is the conclusion of the hypothesis test?
@@ -715,7 +717,7 @@ Based on the p-value calculated, what is the conclusion of the hypothesis test?
 ![](images/21/general.png)
 
 ## Think about the judge {.smaller}
- 
+
 $H_0$ person innocent vs $H_A$ person guilty
 
 ![](images/21/judge.png)
