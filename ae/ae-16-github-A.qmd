@@ -33,7 +33,7 @@ glimpse(duke_forest)
 
 ```{r}
 #| label: observed-fit
-#| eval: false
+#| eval: true
 observed_fit <- duke_forest |>
   specify(price ~ area) |>
   fit()
@@ -47,7 +47,7 @@ Fill in the code, then set `eval: true` .
 
 ```{r}
 #| label: bootstrap
-#| eval: false
+#| eval: true
 n = 100
 set.seed(1234)
 
@@ -65,7 +65,7 @@ boot_fits
 
 ```{r}
 #| label: boot-hist
-#| eval: false
+#| eval: true
 
 
 boot_fits |>
@@ -78,7 +78,7 @@ boot_fits |>
 
 ```{r}
 #| label: calc-ci
-#| eval: false
+#| eval: true
 
 get_confidence_interval(
   boot_fits, 
@@ -94,7 +94,7 @@ get_confidence_interval(
 
 ```{r}
 #| label: 90-ci
-#| eval: false
+#| eval: true
 get_confidence_interval(
   boot_fits, 
   point_estimate = observed_fit, 
@@ -107,7 +107,7 @@ get_confidence_interval(
 
 ```{r}
 #| label: 99-ci
-#| eval: false
+#| eval: true
 get_confidence_interval(
   boot_fits, 
   point_estimate = observed_fit, 
@@ -117,10 +117,12 @@ get_confidence_interval(
 ```
 
 -   Which confidence level produces the most accurate confidence interval (90%, 95%, 99%)?
-    Explain
 
 -   Which confidence level produces the most precise confidence interval (90%, 95%, 99%)?
-    Explain
 
 -   If we want to be very certain that we capture the population parameter, should we use a wider or a narrower interval?
     What drawbacks are associated with using a wider interval?
+
+The most accurate is the 90% interval - as the widest interval, it is most likely to capture the true parameter.
+The most precise is the 99% interval - it is the narrowest.
+A wider interval makes it more likely that we capture the true parameter but can make interpretation less meaningful.
