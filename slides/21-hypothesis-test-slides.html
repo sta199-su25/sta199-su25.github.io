@@ -302,30 +302,29 @@
 </div>
 </div></div>
 </section><section id="rinse-and-repeat-1000-times" class="slide level2"><h2>Rinse and repeat 1000 times…</h2>
-</section><section id="sampling-uncertainty" class="slide level2 medium"><h2>Sampling uncertainty</h2>
-<div class="columns">
-<div class="column" style="width:49%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:49%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
+</section><section id="sampling-uncertainty" class="slide level2 smaller"><h2>Sampling uncertainty</h2>
+<div class="task">
 <p>How sensitive are the estimates to the data they are based on?</p>
-<pre><code>- Very? Then uncertainty is high, results are unreliable;
-- Not very? Uncertainty is low, results are more reliable.</code></pre>
+</div>
+<div>
+
+</div>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-9-1.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-9-2.png"></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>Very? Then uncertainty is high, results are unreliable;</li>
+<li>Not very? Uncertainty is low, results are more reliable.</li>
+</ul>
+</div>
 </section><section id="that-was-for-n-50.-what-if-i-was-starting-with-n-1000" class="slide level2"><h2>That was for n = 50. What if I was starting with n = 1000?</h2>
 </section><section id="sampling-uncertainty-decreased" class="slide level2"><h2>Sampling uncertainty decreased!</h2>
 <div class="columns">
@@ -333,7 +332,7 @@
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -342,7 +341,7 @@
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -435,11 +434,11 @@
 <p><strong>Goal</strong>: Use the area (in square feet) to understand variability in the price of houses in Duke Forest.</p>
 </section><section id="point-estimate" class="slide level2 smaller"><h2>Point Estimate</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>observed_fit <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">specify</span>(price <span class="sc">~</span> area) <span class="sc">|&gt;</span></span>
-<span id="cb5-3"><a></a>  <span class="fu">fit</span>()</span>
-<span id="cb5-4"><a></a></span>
-<span id="cb5-5"><a></a>observed_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>observed_fit <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">specify</span>(price <span class="sc">~</span> area) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">fit</span>()</span>
+<span id="cb4-4"><a></a></span>
+<span id="cb4-5"><a></a>observed_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   term      estimate
@@ -455,7 +454,7 @@
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-15-1.png" width="768"></p>
 </figure>
 </div>
 </div>
@@ -467,7 +466,7 @@
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-16-1.png" width="768"></p>
 </figure>
 </div>
 </div>
@@ -476,7 +475,7 @@
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -593,11 +592,11 @@
 </section><section id="calculate-observed-slope" class="slide level2"><h2>Calculate observed slope</h2>
 <p>… which we have already done:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>observed_fit <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">specify</span>(price <span class="sc">~</span> area) <span class="sc">|&gt;</span></span>
-<span id="cb7-3"><a></a>  <span class="fu">fit</span>()</span>
-<span id="cb7-4"><a></a></span>
-<span id="cb7-5"><a></a>observed_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>observed_fit <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">specify</span>(price <span class="sc">~</span> area) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a></a>  <span class="fu">fit</span>()</span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a>observed_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   term      estimate
@@ -608,40 +607,51 @@
 </div>
 </section><section id="simulate-null-distribution" class="slide level2"><h2>Simulate null distribution</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="|1|2|3|4|5|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">set.seed</span>(<span class="dv">20241118</span>)</span>
-<span id="cb9-2"><a></a>null_dist <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb9-3"><a></a>  <span class="fu">specify</span>(price <span class="sc">~</span> area) <span class="sc">|&gt;</span></span>
-<span id="cb9-4"><a></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-5"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">100</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-6"><a></a>  <span class="fu">fit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="|1|2|3|4|5|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">set.seed</span>(<span class="dv">20250616</span>)</span>
+<span id="cb8-2"><a></a>null_dist <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">specify</span>(price <span class="sc">~</span> area) <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-5"><a></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">100</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-6"><a></a>  <span class="fu">fit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="view-null-distribution" class="slide level2"><h2>View null distribution</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>null_dist</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>null_dist</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 200 × 3
 # Groups:   replicate [100]
-   replicate term        estimate
-       &lt;int&gt; &lt;chr&gt;          &lt;dbl&gt;
- 1         1 intercept 547294.   
- 2         1 area           4.54 
- 3         2 intercept 568599.   
- 4         2 area          -3.13 
- 5         3 intercept 561547.   
- 6         3 area          -0.593
- 7         4 intercept 526286.   
- 8         4 area          12.1  
- 9         5 intercept 651476.   
-10         5 area         -33.0  
+   replicate term       estimate
+       &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;
+ 1         1 intercept 500510.  
+ 2         1 area          21.4 
+ 3         2 intercept 569335.  
+ 4         2 area          -3.40
+ 5         3 intercept 528454.  
+ 6         3 area          11.3 
+ 7         4 intercept 518056.  
+ 8         4 area          15.1 
+ 9         5 intercept 637111.  
+10         5 area         -27.8 
 # ℹ 190 more rows</code></pre>
 </div>
 </div>
 </section><section id="visualize-null-distribution" class="slide level2"><h2>Visualize null distribution</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>null_dist <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a></a>  <span class="fu">filter</span>(term <span class="sc">==</span> <span class="st">"area"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> estimate)) <span class="sc">+</span></span>
-<span id="cb12-4"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>null_dist <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">filter</span>(term <span class="sc">==</span> <span class="st">"area"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> estimate)) <span class="sc">+</span></span>
+<span id="cb11-4"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-21-1.png" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="visualize-null-distribution-alternative" class="slide level2"><h2>Visualize null distribution (alternative)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">visualize</span>(null_dist) <span class="sc">+</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> observed_fit, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
@@ -649,21 +659,10 @@
 </div>
 </div>
 </div>
-</section><section id="visualize-null-distribution-alternative" class="slide level2"><h2>Visualize null distribution (alternative)</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">visualize</span>(null_dist) <span class="sc">+</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> observed_fit, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="21-hypothesis-test_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
 </section><section id="get-p-value" class="slide level2"><h2>Get p-value</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>null_dist <span class="sc">|&gt;</span></span>
-<span id="cb14-2"><a></a>  <span class="fu">get_p_value</span>(<span class="at">obs_stat =</span> observed_fit, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>null_dist <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">get_p_value</span>(<span class="at">obs_stat =</span> observed_fit, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   term      p_value
@@ -677,23 +676,49 @@
 <p>Based on the p-value calculated, what is the conclusion of the hypothesis test?</p>
 </div>
 </section><section id="sometimes-the-test-will-be-wrong" class="slide level2 smaller"><h2>Sometimes the test will be wrong</h2>
-<p><img data-src="images/21/general.png"></p>
+<ul>
+<li><p>Type 1 error: False positive</p></li>
+<li><p>Type 2 error: False negative</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/21/general.png" class="quarto-figure quarto-figure-center" width="700"></p>
+</figure>
+</div>
 </section><section id="think-about-the-judge" class="slide level2 smaller"><h2>Think about the judge</h2>
-<p><span class="math inline">\(H_0\)</span> person innocent vs <span class="math inline">\(H_A\)</span> person guilty</p>
-<p><img data-src="images/21/judge.png"></p>
+<div class="task">
+<p>Which is worse, Type 1 or Type 2 error?</p>
+<p><strong>Note:</strong> <span class="math inline">\(H_0\)</span> person innocent vs <span class="math inline">\(H_A\)</span> person guilty.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/21/judge.png" class="quarto-figure quarto-figure-center" width="700"></p>
+</figure>
+</div>
+<div class="fragment">
+<p>Aspects of the American trial system regard a Type 1 error as worse than a Type 2 error (reasonable doubt standard, unanimous juries, presumption of innocence, etc).</p>
+</div>
 </section><section id="think-about-the-doctor" class="slide level2 smaller"><h2>Think about the doctor</h2>
-<p><span class="math inline">\(H_0\)</span> person well vs <span class="math inline">\(H_A\)</span> person sick.</p>
-<p><img data-src="images/21/doctor.png"></p>
+<div class="task">
+<p>Which is worse, Type 1 or Type 2 error? Which are doctors more prone to?</p>
+<p><strong>Note:</strong> <span class="math inline">\(H_0\)</span> person well vs <span class="math inline">\(H_A\)</span> person sick.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/21/doctor.png" class="quarto-figure quarto-figure-center" width="700"></p>
+</figure>
+</div>
 </section><section id="how-do-we-negotiate-the-trade-off" class="slide level2 smaller"><h2>How do we negotiate the trade-off?</h2>
 <div>
 <p>Pick a threshold <span class="math inline">\(\alpha\in[0,\,1]\)</span> called the <strong>discernibility level</strong> and threshold the <span class="math inline">\(p\)</span>-value:</p>
 <ul>
-<li class="fragment">If <span class="math inline">\(p\text{-value} &lt; \alpha\)</span>, reject null and accept alternative;</li>
+<li class="fragment">If <span class="math inline">\(p\text{-value} &lt; \alpha\)</span>, reject null and find evidence for the alternative;</li>
 <li class="fragment">If <span class="math inline">\(p\text{-value} \geq \alpha\)</span>, fail to reject null;</li>
 </ul>
 </div>
 <div class="fragment">
-<p><img data-src="images/21/alpha.png"></p>
+<ul>
+<li><p><span class="math inline">\(\alpha\)</span> <span class="math inline">\(\uparrow\)</span> <span class="math inline">\(\rightarrow\)</span> easier to reject <span class="math inline">\(H_0\)</span> <span class="math inline">\(\rightarrow\)</span> Type 1 <span class="math inline">\(\uparrow\)</span> Type 2 <span class="math inline">\(\downarrow\)</span></p></li>
+<li><p><span class="math inline">\(\alpha\)</span> <span class="math inline">\(\downarrow\)</span> <span class="math inline">\(\rightarrow\)</span> harder to reject <span class="math inline">\(H_0\)</span> <span class="math inline">\(\rightarrow\)</span> Type 1 <span class="math inline">\(\downarrow\)</span> Type 2 <span class="math inline">\(\uparrow\)</span></p></li>
+<li><p>Typical choices: <span class="math inline">\(\alpha\)</span> = 0.01, 0.05, 0.10.</p></li>
+</ul>
 
 
 </div>

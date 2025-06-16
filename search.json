@@ -2561,7 +2561,7 @@
     "href": "slides/21-hypothesis-test-slides.html#sampling-uncertainty",
     "title": "Hypothesis Testing",
     "section": "Sampling uncertainty",
-    "text": "Sampling uncertainty\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow sensitive are the estimates to the data they are based on?\n- Very? Then uncertainty is high, results are unreliable;\n- Not very? Uncertainty is low, results are more reliable."
+    "text": "Sampling uncertainty\n\nHow sensitive are the estimates to the data they are based on?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVery? Then uncertainty is high, results are unreliable;\nNot very? Uncertainty is low, results are more reliable."
   },
   {
     "objectID": "slides/21-hypothesis-test-slides.html#that-was-for-n-50.-what-if-i-was-starting-with-n-1000",
@@ -2750,14 +2750,14 @@
     "href": "slides/21-hypothesis-test-slides.html#simulate-null-distribution",
     "title": "Hypothesis Testing",
     "section": "Simulate null distribution",
-    "text": "Simulate null distribution\n\nset.seed(20241118)\nnull_dist &lt;- duke_forest |&gt;\n  specify(price ~ area) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 100, type = \"permute\") |&gt;\n  fit()"
+    "text": "Simulate null distribution\n\nset.seed(20250616)\nnull_dist &lt;- duke_forest |&gt;\n  specify(price ~ area) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 100, type = \"permute\") |&gt;\n  fit()"
   },
   {
     "objectID": "slides/21-hypothesis-test-slides.html#view-null-distribution",
     "href": "slides/21-hypothesis-test-slides.html#view-null-distribution",
     "title": "Hypothesis Testing",
     "section": "View null distribution",
-    "text": "View null distribution\n\nnull_dist\n\n# A tibble: 200 × 3\n# Groups:   replicate [100]\n   replicate term        estimate\n       &lt;int&gt; &lt;chr&gt;          &lt;dbl&gt;\n 1         1 intercept 547294.   \n 2         1 area           4.54 \n 3         2 intercept 568599.   \n 4         2 area          -3.13 \n 5         3 intercept 561547.   \n 6         3 area          -0.593\n 7         4 intercept 526286.   \n 8         4 area          12.1  \n 9         5 intercept 651476.   \n10         5 area         -33.0  \n# ℹ 190 more rows"
+    "text": "View null distribution\n\nnull_dist\n\n# A tibble: 200 × 3\n# Groups:   replicate [100]\n   replicate term       estimate\n       &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;\n 1         1 intercept 500510.  \n 2         1 area          21.4 \n 3         2 intercept 569335.  \n 4         2 area          -3.40\n 5         3 intercept 528454.  \n 6         3 area          11.3 \n 7         4 intercept 518056.  \n 8         4 area          15.1 \n 9         5 intercept 637111.  \n10         5 area         -27.8 \n# ℹ 190 more rows"
   },
   {
     "objectID": "slides/21-hypothesis-test-slides.html#visualize-null-distribution",
@@ -2792,28 +2792,28 @@
     "href": "slides/21-hypothesis-test-slides.html#sometimes-the-test-will-be-wrong",
     "title": "Hypothesis Testing",
     "section": "Sometimes the test will be wrong",
-    "text": "Sometimes the test will be wrong"
+    "text": "Sometimes the test will be wrong\n\nType 1 error: False positive\nType 2 error: False negative"
   },
   {
     "objectID": "slides/21-hypothesis-test-slides.html#think-about-the-judge",
     "href": "slides/21-hypothesis-test-slides.html#think-about-the-judge",
     "title": "Hypothesis Testing",
     "section": "Think about the judge",
-    "text": "Think about the judge\n\\(H_0\\) person innocent vs \\(H_A\\) person guilty"
+    "text": "Think about the judge\n\nWhich is worse, Type 1 or Type 2 error?\nNote: \\(H_0\\) person innocent vs \\(H_A\\) person guilty.\n\n\n\n\n\n\nAspects of the American trial system regard a Type 1 error as worse than a Type 2 error (reasonable doubt standard, unanimous juries, presumption of innocence, etc)."
   },
   {
     "objectID": "slides/21-hypothesis-test-slides.html#think-about-the-doctor",
     "href": "slides/21-hypothesis-test-slides.html#think-about-the-doctor",
     "title": "Hypothesis Testing",
     "section": "Think about the doctor",
-    "text": "Think about the doctor\n\\(H_0\\) person well vs \\(H_A\\) person sick."
+    "text": "Think about the doctor\n\nWhich is worse, Type 1 or Type 2 error? Which are doctors more prone to?\nNote: \\(H_0\\) person well vs \\(H_A\\) person sick."
   },
   {
     "objectID": "slides/21-hypothesis-test-slides.html#how-do-we-negotiate-the-trade-off",
     "href": "slides/21-hypothesis-test-slides.html#how-do-we-negotiate-the-trade-off",
     "title": "Hypothesis Testing",
     "section": "How do we negotiate the trade-off?",
-    "text": "How do we negotiate the trade-off?\n\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level and threshold the \\(p\\)-value:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and accept alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;"
+    "text": "How do we negotiate the trade-off?\n\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level and threshold the \\(p\\)-value:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and find evidence for the alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;\n\n\n\n\n\\(\\alpha\\) \\(\\uparrow\\) \\(\\rightarrow\\) easier to reject \\(H_0\\) \\(\\rightarrow\\) Type 1 \\(\\uparrow\\) Type 2 \\(\\downarrow\\)\n\\(\\alpha\\) \\(\\downarrow\\) \\(\\rightarrow\\) harder to reject \\(H_0\\) \\(\\rightarrow\\) Type 1 \\(\\downarrow\\) Type 2 \\(\\uparrow\\)\nTypical choices: \\(\\alpha\\) = 0.01, 0.05, 0.10."
   },
   {
     "objectID": "slides/21-hypothesis-test.html",
@@ -2862,7 +2862,7 @@
     "href": "slides/21-hypothesis-test.html#sampling-uncertainty",
     "title": "Hypothesis Testing",
     "section": "Sampling uncertainty",
-    "text": "Sampling uncertainty\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow sensitive are the estimates to the data they are based on?\n- Very? Then uncertainty is high, results are unreliable;\n- Not very? Uncertainty is low, results are more reliable."
+    "text": "Sampling uncertainty\n\nHow sensitive are the estimates to the data they are based on?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n. . .\n\nVery? Then uncertainty is high, results are unreliable;\nNot very? Uncertainty is low, results are more reliable."
   },
   {
     "objectID": "slides/21-hypothesis-test.html#that-was-for-n-50.-what-if-i-was-starting-with-n-1000",
@@ -3051,14 +3051,14 @@
     "href": "slides/21-hypothesis-test.html#simulate-null-distribution",
     "title": "Hypothesis Testing",
     "section": "Simulate null distribution",
-    "text": "Simulate null distribution\n\nset.seed(20241118)\nnull_dist &lt;- duke_forest |&gt;\n  specify(price ~ area) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 100, type = \"permute\") |&gt;\n  fit()"
+    "text": "Simulate null distribution\n\nset.seed(20250616)\nnull_dist &lt;- duke_forest |&gt;\n  specify(price ~ area) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 100, type = \"permute\") |&gt;\n  fit()"
   },
   {
     "objectID": "slides/21-hypothesis-test.html#view-null-distribution",
     "href": "slides/21-hypothesis-test.html#view-null-distribution",
     "title": "Hypothesis Testing",
     "section": "View null distribution",
-    "text": "View null distribution\n\nnull_dist\n\n# A tibble: 200 × 3\n# Groups:   replicate [100]\n   replicate term        estimate\n       &lt;int&gt; &lt;chr&gt;          &lt;dbl&gt;\n 1         1 intercept 547294.   \n 2         1 area           4.54 \n 3         2 intercept 568599.   \n 4         2 area          -3.13 \n 5         3 intercept 561547.   \n 6         3 area          -0.593\n 7         4 intercept 526286.   \n 8         4 area          12.1  \n 9         5 intercept 651476.   \n10         5 area         -33.0  \n# ℹ 190 more rows"
+    "text": "View null distribution\n\nnull_dist\n\n# A tibble: 200 × 3\n# Groups:   replicate [100]\n   replicate term       estimate\n       &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;\n 1         1 intercept 500510.  \n 2         1 area          21.4 \n 3         2 intercept 569335.  \n 4         2 area          -3.40\n 5         3 intercept 528454.  \n 6         3 area          11.3 \n 7         4 intercept 518056.  \n 8         4 area          15.1 \n 9         5 intercept 637111.  \n10         5 area         -27.8 \n# ℹ 190 more rows"
   },
   {
     "objectID": "slides/21-hypothesis-test.html#visualize-null-distribution",
@@ -3093,28 +3093,28 @@
     "href": "slides/21-hypothesis-test.html#sometimes-the-test-will-be-wrong",
     "title": "Hypothesis Testing",
     "section": "Sometimes the test will be wrong",
-    "text": "Sometimes the test will be wrong"
+    "text": "Sometimes the test will be wrong\n\nType 1 error: False positive\nType 2 error: False negative"
   },
   {
     "objectID": "slides/21-hypothesis-test.html#think-about-the-judge",
     "href": "slides/21-hypothesis-test.html#think-about-the-judge",
     "title": "Hypothesis Testing",
     "section": "Think about the judge",
-    "text": "Think about the judge\n\\(H_0\\) person innocent vs \\(H_A\\) person guilty"
+    "text": "Think about the judge\n\nWhich is worse, Type 1 or Type 2 error?\nNote: \\(H_0\\) person innocent vs \\(H_A\\) person guilty.\n\n\n\n\n\n. . .\nAspects of the American trial system regard a Type 1 error as worse than a Type 2 error (reasonable doubt standard, unanimous juries, presumption of innocence, etc)."
   },
   {
     "objectID": "slides/21-hypothesis-test.html#think-about-the-doctor",
     "href": "slides/21-hypothesis-test.html#think-about-the-doctor",
     "title": "Hypothesis Testing",
     "section": "Think about the doctor",
-    "text": "Think about the doctor\n\\(H_0\\) person well vs \\(H_A\\) person sick."
+    "text": "Think about the doctor\n\nWhich is worse, Type 1 or Type 2 error? Which are doctors more prone to?\nNote: \\(H_0\\) person well vs \\(H_A\\) person sick."
   },
   {
     "objectID": "slides/21-hypothesis-test.html#how-do-we-negotiate-the-trade-off",
     "href": "slides/21-hypothesis-test.html#how-do-we-negotiate-the-trade-off",
     "title": "Hypothesis Testing",
     "section": "How do we negotiate the trade-off?",
-    "text": "How do we negotiate the trade-off?\n\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level and threshold the \\(p\\)-value:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and accept alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;\n\n\n. . ."
+    "text": "How do we negotiate the trade-off?\n\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level and threshold the \\(p\\)-value:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and find evidence for the alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;\n\n\n. . .\n\n\\(\\alpha\\) \\(\\uparrow\\) \\(\\rightarrow\\) easier to reject \\(H_0\\) \\(\\rightarrow\\) Type 1 \\(\\uparrow\\) Type 2 \\(\\downarrow\\)\n\\(\\alpha\\) \\(\\downarrow\\) \\(\\rightarrow\\) harder to reject \\(H_0\\) \\(\\rightarrow\\) Type 1 \\(\\downarrow\\) Type 2 \\(\\uparrow\\)\nTypical choices: \\(\\alpha\\) = 0.01, 0.05, 0.10."
   },
   {
     "objectID": "slides/00-welcome-199-slides.html#meet-the-team",
