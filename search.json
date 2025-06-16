@@ -14347,7 +14347,7 @@
     "href": "ae/ae-17-github.html#packages",
     "title": "AE 17:Hypothesis Testing",
     "section": "Packages",
-    "text": "Packages\nWe will use tidyverse and tidymodels for data exploration and modeling, respectively, and the openintro package for the data, and the knitr package for formatting tables.\n\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(openintro)\nlibrary(knitr)"
+    "text": "Packages\nWe will use tidyverse and tidymodels for data exploration and modeling, respectively, and the openintro package for the data.\n\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(openintro)"
   },
   {
     "objectID": "ae/ae-17-github.html#data",
