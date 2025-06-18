@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="dcterms.date" content="2025-06-18">
+<title>Final Thoughts: Statistical inference – STA 199</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3e476e15ae565c222d94875412ae43a1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b1194932c152f594ec303edb14c8f3da.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="../style/sta199.scss">
+<meta property="og:title" content="Final Thoughts: Statistical inference – STA 199">
+<meta property="og:description" content="Lecture 23">
+<meta property="og:image" content="https://sta199-su25.github.io/slides/23-inference-recap_files/figure-revealjs/unnamed-chunk-1-1.png">
+<meta property="og:site_name" content="STA 199">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1920">
+<meta name="twitter:title" content="Final Thoughts: Statistical inference – STA 199">
+<meta name="twitter:description" content="Lecture 23">
+<meta name="twitter:image" content="https://sta199-su25.github.io/slides/img/twitter-card.png">
+<meta name="twitter:creator" content="@minebocek">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Final Thoughts: Statistical inference</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/sta199-su25" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://cmgr.oit.duke.edu/containers" title="RStudio containers" class="quarto-navigation-tool px-1" aria-label="RStudio containers"><i class="bi bi-code-square"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-team.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Team</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-links.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful links</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Computing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../computing-access.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../computing-cheatsheets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cheatsheets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../coding-principles-oh.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding principles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../computing-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Troubleshooting</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Project</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Description</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/1-working-collaboratively.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/2-proposal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/3-improvement-progress.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/4-peer-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/5-writeup-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 5</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Labs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ae.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application exercises</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Exam Review</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exam-review/midterm-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Midterm Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exam-review/midterm-review-A.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Midterm Review Answers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exam-review/midterm-review-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Midterm Review: Part 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exam-review/midterm-review-1-A.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Midterm Review: Part 2 Answers</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li>
+<a href="#recap-statistical-inference" id="toc-recap-statistical-inference" class="nav-link active" data-scroll-target="#recap-statistical-inference">Recap: statistical inference</a>
+  <ul class="collapse">
+<li><a href="#point-estimation-whats-your-best-guess" id="toc-point-estimation-whats-your-best-guess" class="nav-link" data-scroll-target="#point-estimation-whats-your-best-guess">Point estimation: what’s your best guess?</a></li>
+  <li><a href="#point-estimation-whats-your-best-guess-1" id="toc-point-estimation-whats-your-best-guess-1" class="nav-link" data-scroll-target="#point-estimation-whats-your-best-guess-1">Point estimation: what’s your best guess?</a></li>
+  <li><a href="#sampling-variability" id="toc-sampling-variability" class="nav-link" data-scroll-target="#sampling-variability">Sampling variability</a></li>
+  <li><a href="#the-bootstrap" id="toc-the-bootstrap" class="nav-link" data-scroll-target="#the-bootstrap">The bootstrap</a></li>
+  <li><a href="#interval-estimation" id="toc-interval-estimation" class="nav-link" data-scroll-target="#interval-estimation">Interval estimation</a></li>
+  <li><a href="#hypothesis-testing" id="toc-hypothesis-testing" class="nav-link" data-scroll-target="#hypothesis-testing">Hypothesis testing</a></li>
+  <li><a href="#p-value" id="toc-p-value" class="nav-link" data-scroll-target="#p-value"><em>p</em>-value</a></li>
+  <li><a href="#discernibility-level" id="toc-discernibility-level" class="nav-link" data-scroll-target="#discernibility-level">Discernibility level</a></li>
+  <li><a href="#ae-17-recap" id="toc-ae-17-recap" class="nav-link" data-scroll-target="#ae-17-recap">AE 17 Recap</a></li>
+  <li><a href="#point-estimate" id="toc-point-estimate" class="nav-link" data-scroll-target="#point-estimate">Point Estimate</a></li>
+  <li><a href="#generating-the-null-distribution" id="toc-generating-the-null-distribution" class="nav-link" data-scroll-target="#generating-the-null-distribution">Generating the null distribution</a></li>
+  <li><a href="#how-does-this-work" id="toc-how-does-this-work" class="nav-link" data-scroll-target="#how-does-this-work">How does this work?</a></li>
+  <li><a href="#how-does-this-work-1" id="toc-how-does-this-work-1" class="nav-link" data-scroll-target="#how-does-this-work-1">How does this work?</a></li>
+  <li><a href="#how-does-this-work-2" id="toc-how-does-this-work-2" class="nav-link" data-scroll-target="#how-does-this-work-2">How does this work?</a></li>
+  <li><a href="#how-does-this-work-3" id="toc-how-does-this-work-3" class="nav-link" data-scroll-target="#how-does-this-work-3">How does this work?</a></li>
+  <li><a href="#what-is-happening" id="toc-what-is-happening" class="nav-link" data-scroll-target="#what-is-happening">What is happening?</a></li>
+  <li><a href="#so-what-does-permuting-do" id="toc-so-what-does-permuting-do" class="nav-link" data-scroll-target="#so-what-does-permuting-do">So what does “permuting” do?</a></li>
+  <li><a href="#small-permutation-example" id="toc-small-permutation-example" class="nav-link" data-scroll-target="#small-permutation-example">Small permutation example:</a></li>
+  <li><a href="#small-permutation-example-1" id="toc-small-permutation-example-1" class="nav-link" data-scroll-target="#small-permutation-example-1">Small permutation example:</a></li>
+  <li><a href="#small-permutation-example-2" id="toc-small-permutation-example-2" class="nav-link" data-scroll-target="#small-permutation-example-2">Small permutation example:</a></li>
+  <li><a href="#null-distribution" id="toc-null-distribution" class="nav-link" data-scroll-target="#null-distribution">Null distribution</a></li>
+  <li><a href="#then-what" id="toc-then-what" class="nav-link" data-scroll-target="#then-what">Then what?</a></li>
+  <li><a href="#better-code" id="toc-better-code" class="nav-link" data-scroll-target="#better-code">Better code</a></li>
+  <li><a href="#the-p-value" id="toc-the-p-value" class="nav-link" data-scroll-target="#the-p-value">The p-value</a></li>
+  <li><a href="#recap-hypothesis-testing" id="toc-recap-hypothesis-testing" class="nav-link" data-scroll-target="#recap-hypothesis-testing">Recap: Hypothesis testing</a></li>
+  <li><a href="#idea-hypothesis-test-for-a-difference-in-means" id="toc-idea-hypothesis-test-for-a-difference-in-means" class="nav-link" data-scroll-target="#idea-hypothesis-test-for-a-difference-in-means">Idea: Hypothesis test for a difference in means</a></li>
+  <li><a href="#example-smokingnon-smoking-mothers" id="toc-example-smokingnon-smoking-mothers" class="nav-link" data-scroll-target="#example-smokingnon-smoking-mothers">Example: smoking/non-smoking mothers</a></li>
+  <li><a href="#visualize" id="toc-visualize" class="nav-link" data-scroll-target="#visualize">Visualize</a></li>
+  <li><a href="#estimate" id="toc-estimate" class="nav-link" data-scroll-target="#estimate">Estimate</a></li>
+  <li><a href="#remember" id="toc-remember" class="nav-link" data-scroll-target="#remember">Remember…</a></li>
+  <li><a href="#those-were-not-magic-numbers" id="toc-those-were-not-magic-numbers" class="nav-link" data-scroll-target="#those-were-not-magic-numbers">Those were not magic numbers</a></li>
+  <li><a href="#confidence-interval" id="toc-confidence-interval" class="nav-link" data-scroll-target="#confidence-interval">Confidence interval</a></li>
+  <li><a href="#competing-claims" id="toc-competing-claims" class="nav-link" data-scroll-target="#competing-claims">Competing claims</a></li>
+  <li><a href="#hypothesis-test" id="toc-hypothesis-test" class="nav-link" data-scroll-target="#hypothesis-test">Hypothesis test</a></li>
+  <li><a href="#what-did-we-learn" id="toc-what-did-we-learn" class="nav-link" data-scroll-target="#what-did-we-learn">What did we learn?</a></li>
+  <li><a href="#so-when-can-we-draw-causal-conclusions" id="toc-so-when-can-we-draw-causal-conclusions" class="nav-link" data-scroll-target="#so-when-can-we-draw-causal-conclusions">So, when can we draw causal conclusions?</a></li>
+  <li><a href="#a-proper-controlled-experiment" id="toc-a-proper-controlled-experiment" class="nav-link" data-scroll-target="#a-proper-controlled-experiment">A proper, controlled experiment</a></li>
+  <li><a href="#visualize-1" id="toc-visualize-1" class="nav-link" data-scroll-target="#visualize-1">Visualize</a></li>
+  <li><a href="#model-fit" id="toc-model-fit" class="nav-link" data-scroll-target="#model-fit">Model fit</a></li>
+  <li><a href="#remember-1" id="toc-remember-1" class="nav-link" data-scroll-target="#remember-1">Remember…</a></li>
+  <li><a href="#again-those-were-not-magic-numbers" id="toc-again-those-were-not-magic-numbers" class="nav-link" data-scroll-target="#again-those-were-not-magic-numbers">Again, those were not magic numbers!!</a></li>
+  <li><a href="#confidence-interval-1" id="toc-confidence-interval-1" class="nav-link" data-scroll-target="#confidence-interval-1">Confidence interval</a></li>
+  <li><a href="#competing-claims-again" id="toc-competing-claims-again" class="nav-link" data-scroll-target="#competing-claims-again">Competing claims: again!</a></li>
+  <li><a href="#hypothesis-test-1" id="toc-hypothesis-test-1" class="nav-link" data-scroll-target="#hypothesis-test-1">Hypothesis test</a></li>
+  <li><a href="#what-did-we-learn-1" id="toc-what-did-we-learn-1" class="nav-link" data-scroll-target="#what-did-we-learn-1">What did we learn?</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#ae" id="toc-ae" class="nav-link" data-scroll-target="#ae">AE !</a>
+  <ul class="collapse">
+<li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/slides/23-inference-recap.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="23-inference-recap-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Final Thoughts: Statistical inference</h1>
+<p class="subtitle lead">Lecture 23</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 18, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header><section id="recap-statistical-inference" class="level1"><h1>Recap: statistical inference</h1>
+<section id="point-estimation-whats-your-best-guess" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="point-estimation-whats-your-best-guess">Point estimation: what’s your best guess?</h2>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">wt</span>, y <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="point-estimation-whats-your-best-guess-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="point-estimation-whats-your-best-guess-1">Point estimation: what’s your best guess?</h2>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">wt</span>, data <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">tidy</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term        estimate std.error statistic  p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)    37.3      1.88      19.9  8.24e-19
+2 wt             -5.34     0.559     -9.56 1.29e-10</code></pre>
+</div>
+</div>
+</section><section id="sampling-variability" class="level2"><h2 class="anchored" data-anchor-id="sampling-variability">Sampling variability</h2>
+<p>Different data &gt;&gt; Different estimate. But how different?</p>
+<ul>
+<li><p><strong>Reassuring</strong>: recompute your estimate on other data and get basically the same answer. Sampling variation is low. Uncertainty is low. Results are more reliable;</p></li>
+<li><p><strong>Concerning</strong>: recompute your estimate on new data and get a wildly different answer. Sampling variation is high. Uncertainty is high. Results are less reliable.</p></li>
+</ul>
+<p>How do we operationalize this?</p>
+</section><section id="the-bootstrap" class="level2"><h2 class="anchored" data-anchor-id="the-bootstrap">The bootstrap</h2>
+<p>Construct different, alternative datasets by sampling <em>with replacement</em> from your original data. Each bootstrap sample gives you a different estimate, and you can see how vigorously they wiggle around:</p>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="interval-estimation" class="level2"><h2 class="anchored" data-anchor-id="interval-estimation">Interval estimation</h2>
+<p>Use the bootstrap distribution to construct a range of likely values for the unknown parameter:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We use quantiles (think IQR), but there are other ways.</p>
+</section><section id="hypothesis-testing" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="hypothesis-testing">Hypothesis testing</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Two competing claims about <span class="math inline">\(\beta_1\)</span>: <span class="math display">\[
+\begin{aligned}
+H_0&amp;: \beta_1=0\quad(\text{nothing going on})\\
+H_A&amp;: \beta_1\neq0\quad(\text{something going on})
+\end{aligned}
+\]</span></p></li>
+<li><p>Do the data strongly favor one or the other?</p></li>
+<li><p>How can we quantify this? p-values!</p></li>
+</ul>
+</div>
+</section><section id="p-value" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="p-value">
+<em>p</em>-value</h2>
+<p><em>p</em>-value is the fraction of the histogram area shaded red:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="discernibility-level" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="discernibility-level">Discernibility level</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>How do we decide if the <em>p</em>-value is big enough or small enough?</p></li>
+<li>
+<p>Pick a threshold <span class="math inline">\(\alpha\in[0,\,1]\)</span> called the <em>discernibility level</em>:</p>
+<ul class="incremental">
+<li>If <span class="math inline">\(p\text{-value} &lt; \alpha\)</span>, reject null and accept alternative;</li>
+<li>If <span class="math inline">\(p\text{-value} \geq \alpha\)</span>, fail to reject null;</li>
+</ul>
+</li>
+<li><p>Standard choices: <span class="math inline">\(\alpha=0.01, 0.05, 0.1, 0.15\)</span>.</p></li>
+</ul>
+</div>
+</section><section id="ae-17-recap" class="level2"><h2 class="anchored" data-anchor-id="ae-17-recap">AE 17 Recap</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p><strong>Goal</strong>: Predicting mean household income using the percent of a county that is uninsured</p></li>
+<li><p>We did inference with <code>counties_sample</code>, a small sample of 25 counties in the US</p></li>
+</ul>
+</div>
+</section><section id="point-estimate" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="point-estimate">Point Estimate</h2>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">observed_fit</span> <span class="op">&lt;-</span> <span class="va">counties_sample</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">mean_household_income</span> <span class="op">~</span> <span class="va">uninsured</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">observed_fit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term      estimate
+  &lt;chr&gt;        &lt;dbl&gt;
+1 intercept   79489.
+2 uninsured    -884.</code></pre>
+</div>
+</div>
+</section><section id="generating-the-null-distribution" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="generating-the-null-distribution">Generating the null distribution</h2>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span> <span class="op">&lt;-</span> <span class="va">counties_sample</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">mean_household_income</span> <span class="op">~</span> <span class="va">uninsured</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">hypothesize</span><span class="op">(</span>null <span class="op">=</span> <span class="st">"independence"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">1000</span>, type <span class="op">=</span> <span class="st">"permute"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">null_dist</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">term</span> <span class="op">==</span> <span class="st">"uninsured"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">estimate</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="how-does-this-work" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="how-does-this-work">How does this work?</h2>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span> <span class="op">&lt;-</span> <span class="va">counties_sample</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">mean_household_income</span> <span class="op">~</span> <span class="va">uninsured</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">hypothesize</span><span class="op">(</span>null <span class="op">=</span> <span class="st">"independence"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">1000</span>, type <span class="op">=</span> <span class="st">"permute"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">null_dist</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2,000 × 3
+# Groups:   replicate [1,000]
+   replicate term      estimate
+       &lt;int&gt; &lt;chr&gt;        &lt;dbl&gt;
+ 1         1 intercept  73680. 
+ 2         1 uninsured   -279. 
+ 3         2 intercept  71343. 
+ 4         2 uninsured    -35.3
+ 5         3 intercept  69869. 
+ 6         3 uninsured    118. 
+ 7         4 intercept  62820. 
+ 8         4 uninsured    853. 
+ 9         5 intercept  84203. 
+10         5 uninsured  -1376. 
+# ℹ 1,990 more rows</code></pre>
+</div>
+</div>
+</section><section id="how-does-this-work-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="how-does-this-work-1">How does this work?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>null_dist <span class="ot">&lt;-</span> counties_sample <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">specify</span>(mean_household_income <span class="sc">~</span> uninsured) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">fit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="how-does-this-work-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="how-does-this-work-2">How does this work?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>null_dist <span class="ot">&lt;-</span> counties_sample <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">specify</span>(mean_household_income <span class="sc">~</span> uninsured) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">fit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="how-does-this-work-3" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="how-does-this-work-3">How does this work?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>null_dist <span class="ot">&lt;-</span> counties_sample <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">specify</span>(mean_household_income <span class="sc">~</span> uninsured) <span class="sc">|&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">fit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="what-is-happening" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="what-is-happening">What is happening?</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>
+<p>Recall: Bootstrapping for confidence intervals</p>
+<ul class="incremental">
+<li><p>We created a bunch of new data sets by <strong>resampling</strong> from our original data set</p></li>
+<li><p>We computed an estimate for each new data set</p></li>
+</ul>
+</li>
+<li>
+<p>Here:</p>
+<ul class="incremental">
+<li><p>We are creating a bunch of new data sets by <strong>permuting</strong> our original data set and computing an estimate for each</p></li>
+<li><p>Instead of attempting to mimic samples from the population data (like boostrapping), we are attempting to mimic samples from the <em>null</em></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section><section id="so-what-does-permuting-do" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="so-what-does-permuting-do">So what does “permuting” do?</h2>
+<p>We are simulating what the world would look like <em>if</em> the <strong>null hypothesis were true</strong>: what if <code>mean_household_income</code> and <code>uninsured</code> are unrelated?</p>
+<div class="incremental">
+<ul class="incremental">
+<li>We <strong>randomly shuffle</strong> the values of the response variable: <code>mean_household_income</code>
+</li>
+<li>We <strong>leave</strong> the explanatory variable (<code>uninsured</code>) unchanged</li>
+<li>We do this many times (e.g.&nbsp;<code>reps = 1000</code>)</li>
+<li>Each time we calculate the slope from the new fake dataset</li>
+</ul>
+</div>
+</section><section id="small-permutation-example" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="small-permutation-example">Small permutation example:</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Original:</strong></p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>Uninsured (%)</th>
+<th>Mean Income ($k)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>5</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>65</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>68</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>66</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
+</section><section id="small-permutation-example-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="small-permutation-example-1">Small permutation example:</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Original:</strong></p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>Uninsured (%)</th>
+<th>Mean Income ($k)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>5</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>65</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>68</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>66</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<p><strong>Permutation 1:</strong></p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>Uninsured (%)</th>
+<th>Mean Income ($k)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>8</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>65</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>68</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>66</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="small-permutation-example-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="small-permutation-example-2">Small permutation example:</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Original:</strong></p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>Uninsured (%)</th>
+<th>Mean Income ($k)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>5</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>65</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>68</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>66</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<p><strong>Permutation 2:</strong></p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>Uninsured (%)</th>
+<th>Mean Income ($k)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>5</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>65</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>68</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>66</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>64</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>. . .</p>
+<p>Do this <code>reps</code> times; make a histogram of slope estimates!</p>
+</section><section id="null-distribution" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="null-distribution">Null distribution</h2>
+<p>The null distribution shows the plot of</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="then-what" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="then-what">Then what?</h2>
+<p>Compare the slope from the original data set to our null distribution!</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="better-code" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="better-code">Better code</h2>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">visualize</span><span class="op">(</span><span class="va">null_dist</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">shade_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">observed_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/shade-p-value-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="the-p-value" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="the-p-value">The p-value</h2>
+<div class="cell">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">get_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">observed_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term      p_value
+  &lt;chr&gt;       &lt;dbl&gt;
+1 intercept   0.138
+2 uninsured   0.138</code></pre>
+</div>
+</div>
+</section><section id="recap-hypothesis-testing" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="recap-hypothesis-testing">Recap: Hypothesis testing</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>
+<p>Think hypothetically: if the null hypothesis were in fact true, would my results be out of the ordinary?</p>
+<ul class="incremental">
+<li>if no, then the null could be true;</li>
+<li>if yes, then the null might be bogus;</li>
+</ul>
+</li>
+<li><p>My results represent the reality of actual data. If they conflict with the null, then you throw out the null and stick with reality;</p></li>
+<li><p>How do we <em>quantify</em> “would my results be out of the ordinary”?</p></li>
+</ul>
+</div>
+</section><section id="idea-hypothesis-test-for-a-difference-in-means" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="idea-hypothesis-test-for-a-difference-in-means">Idea: Hypothesis test for a difference in means</h2>
+<p>What if I want to test if the means of two groups are actually different from each other?</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Is the mean household income different in counties that vote red vs.&nbsp;blue?</li>
+<li>Do athletes who train over a certain number of hours a day have better performance (measured by some metric) than those who train under that number?</li>
+<li>Do babies born to mothers who smoke have lower body weights than non-smoking mothers?</li>
+</ul>
+</div>
+</section><section id="example-smokingnon-smoking-mothers" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="example-smokingnon-smoking-mothers">Example: smoking/non-smoking mothers</h2>
+<p>A random sample of US births from 2014:</p>
+<div class="cell">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">births14</span> <span class="op">&lt;-</span> <span class="va">births14</span> <span class="op">|&gt;</span> <span class="fu">drop_na</span><span class="op">(</span><span class="va">weight</span>, <span class="va">habit</span><span class="op">)</span> </span>
+<span><span class="va">births14</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.6em"><code># A tibble: 981 × 13
+    fage  mage mature weeks premie visits gained weight lowbirthweight
+   &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;         
+ 1    34    34 young…    37 full …     14     28   6.96 not low       
+ 2    36    31 young…    41 full …     12     41   8.86 not low       
+ 3    37    36 matur…    37 full …     10     28   7.51 not low       
+ 4    NA    16 young…    38 full …     NA     29   6.19 not low       
+ 5    32    31 young…    36 premie     12     48   6.75 not low       
+ 6    32    26 young…    39 full …     14     45   6.69 not low       
+ 7    37    36 matur…    36 premie     10     20   6.13 not low       
+ 8    29    24 young…    40 full …     13     65   6.74 not low       
+ 9    30    32 young…    39 full …     15     25   8.94 not low       
+10    29    26 young…    39 full …     11     22   9.12 not low       
+# ℹ 971 more rows
+# ℹ 4 more variables: sex &lt;chr&gt;, habit &lt;chr&gt;, marital &lt;chr&gt;,
+#   whitemom &lt;chr&gt;</code></pre>
+</div>
+</div>
+<p>Do babies born to mothers who smoke have lower body weights than non-smoking mothers?</p>
+</section><section id="visualize" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="visualize">Visualize</h2>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">births14</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">weight</span>, y <span class="op">=</span> <span class="va">habit</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_boxplot</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Birth Weight (lbs)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Mother smoking status"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="estimate" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="estimate">Estimate</h2>
+<div class="cell">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">weight</span> <span class="op">~</span> <span class="va">habit</span>, data <span class="op">=</span> <span class="va">births14</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">tidy</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term        estimate std.error statistic    p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;
+1 (Intercept)    7.27     0.0435    167.   0         
+2 habitsmoker   -0.593    0.128      -4.65 0.00000382</code></pre>
+</div>
+</div>
+<p><span class="math display">\[
+\widehat{weight}=7.27-0.59\times \texttt{smoker}.
+\]</span></p>
+</section><section id="remember" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="remember">Remember…</h2>
+<p><span class="math display">\[
+\widehat{weight}=7.27-0.59\times \texttt{smoker}.
+\]</span></p>
+<div class="incremental">
+<ul class="incremental">
+<li><p><code>habit</code> is categorical with two levels: <code>smoker</code> and <code>non-smoker</code>.</p></li>
+<li><p>The baseline is <code>non-smoker</code>, with <span class="math display">\[
+\widehat{weight} = 7.27;
+\]</span></p></li>
+<li><p>The smoking group has <code>smoker = 1</code>, so <span class="math display">\[
+\widehat{weight} = 7.27 - 0.59 = 6.68.
+\]</span></p></li>
+</ul>
+</div>
+</section><section id="those-were-not-magic-numbers" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="those-were-not-magic-numbers">Those were not magic numbers</h2>
+<div class="cell">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">births14</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">habit</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span></span>
+<span>    mean_weight <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">weight</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  habit     mean_weight
+  &lt;chr&gt;           &lt;dbl&gt;
+1 nonsmoker        7.27
+2 smoker           6.68</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Don’t forget!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In a simple linear regression with a numerical response and a binary predictor, the slope estimate is the difference in the average response between the two groups.</p>
+</div>
+</div>
+</section><section id="confidence-interval" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="confidence-interval">Confidence interval</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We are 95% confident that the true mean difference is between -0.919 and -0.301. This does not contain 0!!!</p>
+</section><section id="competing-claims" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="competing-claims">Competing claims</h2>
+<p>Are the data sufficiently informative to tell the difference between these two possibilities?</p>
+<p><span class="math display">\[
+\begin{aligned}
+H_0&amp;: \beta_1=0 &amp;&amp; (\text{no effect})\\
+H_0&amp;: \beta_1\neq0 &amp;&amp; (\text{some effect})\\
+\end{aligned}
+\]</span></p>
+<div class="incremental">
+<ul class="incremental">
+<li>
+<span class="math inline">\(\beta_1\)</span> is the difference in mean response between the smoking and non-smoking group;</li>
+<li>the alternative does not specify if the effect is positive or negative;</li>
+<li>the alternative does not specify that the effect is “large”.</li>
+</ul>
+</div>
+</section><section id="hypothesis-test" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="hypothesis-test">Hypothesis test</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<p>The p-value is basically zero.</p>
+</section><section id="what-did-we-learn" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="what-did-we-learn">What did we learn?</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Evidence is sufficient to reject the null: smoking during pregnancy is <em>associated</em> with a difference in birth weight;</p></li>
+<li><p>Is smoking <em>causing</em> birth weight to change?</p></li>
+<li><p>The data are observational, and there are many unmeasured factors that could bear on both <code>habit</code> and <code>weight</code>.</p></li>
+<li><p>Maybe there is a causal relationship, and maybe it can be teased out with data like these, but it is not so straightforward</p></li>
+</ul>
+</div>
+<p>. . .</p>
+<blockquote class="blockquote">
+<p>Just because there is a statistically discernible association does not mean there is a causal relationship.</p>
+</blockquote>
+</section><section id="so-when-can-we-draw-causal-conclusions" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="so-when-can-we-draw-causal-conclusions">So, when can we draw causal conclusions?</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>
+<p>Best hope: run a controlled, randomized experiment:</p>
+<ul class="incremental">
+<li>get a big, representative, random sample from target population;</li>
+<li>randomly divide subjects into treatment and control;</li>
+<li>difference in outcomes was <em>caused</em> by the treatment alone;</li>
+<li>but this may be too costly or unethical.</li>
+</ul>
+</li>
+<li>
+<p>Observational data are very challenging:</p>
+<ul class="incremental">
+<li>you couldn’t control gosh darned thing;</li>
+<li>different outcomes could be caused by confounding factors, which you may or may not have measured.</li>
+</ul>
+</li>
+</ul>
+</div>
+</section><section id="a-proper-controlled-experiment" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="a-proper-controlled-experiment">A proper, controlled experiment</h2>
+<p>Does treatment using embryonic stem cells (ESCs) help improve heart function following a heart attack? Each sheep in the study was randomly assigned to the ESC or control group, and the change in their hearts’ pumping capacity was measured in the study. A positive value corresponds to increased pumping capacity, which generally suggests a stronger recovery.</p>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glimpse</span><span class="op">(</span><span class="va">stem_cell</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre style="font-size: 0.5em"><code>Rows: 18
+Columns: 3
+$ trmt   &lt;fct&gt; ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl,…
+$ before &lt;dbl&gt; 35.25, 36.50, 39.75, 39.75, 41.75, 45.00, 47.00, 52.0…
+$ after  &lt;dbl&gt; 29.50, 29.50, 36.25, 38.00, 37.50, 42.75, 39.00, 45.2…</code></pre>
+</div>
+</div>
+</section><section id="visualize-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="visualize-1">Visualize</h2>
+<div class="cell">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">stem_cell</span> <span class="op">&lt;-</span> <span class="va">stem_cell</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span>change <span class="op">=</span> <span class="va">after</span> <span class="op">-</span> <span class="va">before</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">stem_cell</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">change</span>, y <span class="op">=</span> <span class="va">trmt</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="model-fit" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="model-fit">Model fit</h2>
+<div class="cell">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">change</span> <span class="op">~</span> <span class="va">trmt</span>, data <span class="op">=</span> <span class="va">stem_cell</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">tidy</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term        estimate std.error statistic p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 (Intercept)    -4.33      1.38     -3.14 0.00639
+2 trmtesc         7.83      1.95      4.01 0.00102</code></pre>
+</div>
+</div>
+<p><span class="math display">\[
+\widehat{change}=-4.33+7.83\times \texttt{esc}
+\]</span></p>
+</section><section id="remember-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="remember-1">Remember…</h2>
+<p><span class="math display">\[
+\widehat{change}=-4.33+7.83\times \texttt{esc}
+\]</span></p>
+<div class="incremental">
+<ul class="incremental">
+<li><p><code>trmt</code> is categorical with two levels: <code>ctrl</code> (0) and <code>esc</code> (1).</p></li>
+<li><p>The control group has <code>esc = 0</code>, so <span class="math display">\[
+\widehat{change} = -4.33;
+\]</span></p></li>
+<li><p>The treatment group has <code>esc = 1</code>, so <span class="math display">\[
+\widehat{change} = -4.33+7.83=3.5.
+\]</span></p></li>
+</ul>
+</div>
+</section><section id="again-those-were-not-magic-numbers" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="again-those-were-not-magic-numbers">Again, those were not magic numbers!!</h2>
+<div class="cell">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">stem_cell</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">trmt</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span></span>
+<span>    mean_change <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">change</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  trmt  mean_change
+  &lt;fct&gt;       &lt;dbl&gt;
+1 ctrl        -4.33
+2 esc          3.5 </code></pre>
+</div>
+</div>
+</section><section id="confidence-interval-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="confidence-interval-1">Confidence interval</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We are 95% confident that the true mean difference is between 4.34 and 11.7.</p>
+</section><section id="competing-claims-again" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="competing-claims-again">Competing claims: again!</h2>
+<p>Are the data sufficiently informative to tell the difference between these two possibilities?</p>
+<p><span class="math display">\[
+\begin{aligned}
+H_0&amp;: \beta_1=0 &amp;&amp; (\text{no effect})\\
+H_0&amp;: \beta_1\neq0 &amp;&amp; (\text{some effect})\\
+\end{aligned}
+\]</span></p>
+<ul>
+<li>
+<span class="math inline">\(\beta_1\)</span> is the difference in mean response between the treatment and control group;</li>
+<li>the alternative does not specify if the effect is positive or negative;</li>
+<li>the alternative does not specify that the effect is “large”.</li>
+</ul></section><section id="hypothesis-test-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="hypothesis-test-1">Hypothesis test</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-inference-recap_files/figure-revealjs/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<p>The p-value is basically zero.</p>
+</section><section id="what-did-we-learn-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="what-did-we-learn-1">What did we learn?</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>In a hypothetical world where the treatment has no effect, it would be very unlikely to get results like the ones we did;</p></li>
+<li><p>Evidence is sufficient to <em>reject the null</em>. There is <em>some</em> effect;</p></li>
+<li><p>If you are convinced by the experimental design, the effect is <em>causal</em>;</p></li>
+<li><p>Is the effect large and meaningful and something you should base major decisions on? Statistics cannot answer that question!</p></li>
+</ul>
+</div>
+</section></section><section id="ae" class="level1"><h1>AE !</h1>
+<p>Today’s AE: Inference Overview</p>
+<section id="announcements" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="announcements">Announcements</h2>
+<ul>
+<li>
+</li></ul>
+
+
+</section></section></main><!-- /main --><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/sta199-su25\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2025, Mine Çetinkaya-Rundel, Marie Neubrander</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/slides/23-inference-recap.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with <span style="color: #FFBE98;"><i class="fa-solid fa-heart" aria-label="heart"></i></span> and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

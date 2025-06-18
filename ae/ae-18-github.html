@@ -345,6 +345,14 @@ window.Quarto = {
   <li><a href="#point-estimation" id="toc-point-estimation" class="nav-link" data-scroll-target="#point-estimation">Point Estimation</a></li>
   <li><a href="#interval-estimation" id="toc-interval-estimation" class="nav-link" data-scroll-target="#interval-estimation">Interval Estimation</a></li>
   <li><a href="#hypothesis-testing" id="toc-hypothesis-testing" class="nav-link" data-scroll-target="#hypothesis-testing">Hypothesis Testing</a></li>
+  <li>
+<a href="#new-question" id="toc-new-question" class="nav-link" data-scroll-target="#new-question">New Question:</a>
+  <ul class="collapse">
+<li><a href="#visualize-1" id="toc-visualize-1" class="nav-link" data-scroll-target="#visualize-1">Visualize:</a></li>
+  <li><a href="#point-estimate" id="toc-point-estimate" class="nav-link" data-scroll-target="#point-estimate">Point Estimate</a></li>
+  <li><a href="#hypothesis-test" id="toc-hypothesis-test" class="nav-link" data-scroll-target="#hypothesis-test">Hypothesis Test</a></li>
+  </ul>
+</li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/edit/main/ae/ae-18-github.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-su25/sta199-su25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -566,9 +574,34 @@ H_0:\beta_1=0\quad vs\quad H_A: \beta_1\neq 0.
 <span>  <span class="fu">get_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">observed_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Add interpretation here!</p>
+</section><section id="new-question" class="level1"><h1>New Question:</h1>
+<p>Are Apple open prices different in the early week (Mondays and Tuesdays) than the late week (Wednesday - Friday) on average?</p>
+<p>Run this code to create a part of week variable!</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">stocks</span> <span class="op">&lt;-</span> <span class="va">stocks</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>part_of_week <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/weekday.POSIXt.html">weekdays</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span> </span>
+<span>                                <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Monday"</span>, <span class="st">"Tuesday"</span><span class="op">)</span>, <span class="st">"Early"</span>, <span class="st">"Late"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="visualize-1" class="level2"><h2 class="anchored" data-anchor-id="visualize-1">Visualize:</h2>
+<p><strong>Task:</strong> Create a visualization to represent Apple open stock prices in the early vs.&nbsp;late week.</p>
+<div class="cell">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="point-estimate" class="level2"><h2 class="anchored" data-anchor-id="point-estimate">Point Estimate</h2>
+<p><strong>Task:</strong> Use <code>specify</code> to get a point estimate of the difference in means between the two groups.</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="hypothesis-test" class="level2"><h2 class="anchored" data-anchor-id="hypothesis-test">Hypothesis Test</h2>
+<p>We want to test the hypothesis of whether the opening stock prices early in the week look, on average, like prices later in the week.</p>
+<p><strong>Task:</strong> Write the hypothesis we want to test using proper notation.</p>
+<p><strong>Task:</strong> Write code to implement this test. What are your conclusions?</p>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
