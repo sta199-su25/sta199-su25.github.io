@@ -59,98 +59,253 @@
     "href": "exam-review/final-review.html",
     "title": "Final review",
     "section": "",
-    "text": "Warning: package 'tidyr' was built under R version 4.4.1\n\n\nWarning: package 'airports' was built under R version 4.4.1\n\n\nWarning: package 'cherryblossom' was built under R version 4.4.1"
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(openintro)\nlibrary(scales)\nlibrary(distr)\ntheme_set(theme_minimal(base_size = 12))",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-1",
     "href": "exam-review/final-review.html#question-1",
     "title": "Final review",
     "section": "Question 1",
-    "text": "Question 1\nDescribe how you can set up a simulation to estimate the proportion of statistics majors who work 5 or more hours each week based on this sample."
+    "text": "Question 1\nFirst, suppose we want to do some EDA to examine the distributions of GPAs across the working status categories.\nWhich of the following types of plots would be most appropriate for doing so? Select all that apply.\n\nBoxplots\nBar chart\nHistograms\nPie chart\nDensity plots",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-2",
     "href": "exam-review/final-review.html#question-2",
     "title": "Final review",
     "section": "Question 2",
-    "text": "Question 2\nA bootstrap distribution with 1000 simulations is shown below. Approximate the bounds of the 95% confidence interval based on this distribution."
+    "text": "Question 2\nNow, suppose we wanted to look at the mean GPA in each category. Which of the following pieces of code could we have run to get the table below?\n\n\n# A tibble: 2 × 2\n  work   mean\n  &lt;chr&gt; &lt;dbl&gt;\n1 Less   3.58\n2 More   3.66\n\n\n\n\n\n\nstudents |&gt; \n  group_by(work) |&gt;\n  mutate(mean = mean(gpa))\n\n\n\n\n\nstudents |&gt; \n  group_by(gpa) |&gt;\n  mutate(mean = mean(gpa))\n\n\n\n\n\nstudents |&gt; \n  group_by(work) |&gt;\n  summarise(mean = mean(gpa))\n\n\n\n\n\nstudents |&gt; \n  summarise(mean = mean(gpa))\n\n\n\n\n\nstudents |&gt; \n  mutate(mean = mean(gpa))",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-3",
     "href": "exam-review/final-review.html#question-3",
     "title": "Final review",
     "section": "Question 3",
-    "text": "Question 3\nSuppose the lower bound of the confidence interval from the previous question is L and the upper bound is U. Which of the following is correct?\na. Between L to U of statistics majors work at least 5 hours per week.\nb. 95% of the time the true proportion of statistics majors who work at least 5 hours per week is between L and U.\nc. Between L and U of random samples of 25 statistics majors are expected to yield confidence intervals that contain the true proportion of statistics majors who work at least 5 hours per week.\nd. 95% of random samples of 25 statistics majors will yield confidence intervals between L and U.\ne. None of the above."
+    "text": "Question 3\nNow, we want to fit a regression to predict gpa using work. Which of the following pieces of code are valid ways to get estimated regression parameters?\n\n\n\n\nlinear_reg() |&gt;\n  fit(gpa ~ work, data = students)\n\n\n\n\n\nlogistic_reg() |&gt;\n  fit(gpa ~ work, data = students)\n\n\n\n\n\nlogistic_reg() |&gt;\n  fit(work ~ students, data = students)\n\n\n\n\n\nstudents |&gt;\n  specify(gpa ~ work) |&gt;\n  fit()\n\n\n\n\n\nstudents |&gt;\n  specify(work ~ gpa) |&gt;\n  fit()",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-4",
     "href": "exam-review/final-review.html#question-4",
     "title": "Final review",
     "section": "Question 4",
-    "text": "Question 4\nNext, you fit a model for predicting raises (percent_incr) from salaries (annual_salary). We’ll call this model raise_1_fit. A tidy output of the model is shown below.\n\n\n# A tibble: 2 × 5\n  term           estimate  std.error statistic   p.value\n  &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   1.87      0.432           4.33 0.0000194\n2 annual_salary 0.0000155 0.00000452      3.43 0.000669 \n\n\nWhich of the following is the best interpretation of the slope coefficient?\n\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.55%.\nFor every additional $1,000 of annual salary, the raise goes up by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.87%."
+    "text": "Question 4\nHow will we write the output of our estimated regression line?\n\n\\(\\widehat{gpa} = b_0 + b_1\\times work\\)\n\\(\\widehat{gpa} = b_0 + b_1\\times Less\\)\n\\(\\widehat{gpa} = b_0 + b_1\\times More\\)\n\\(\\widehat{gpa} = b_0 + b_1\\times More + b_2 \\times Less\\)\n\\(\\widehat{work} = b_0 + b_1\\times gpa\\)",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-5",
     "href": "exam-review/final-review.html#question-5",
     "title": "Final review",
     "section": "Question 5",
-    "text": "Question 5\nYou then fit a model for predicting raises (percent_incr) from salaries (annual_salary) and performance ratings (performance_rating). We’ll call this model raise_2_fit. Which of the following is definitely true based on the information you have so far?\n\nIntercept of raise_2_fit is higher than intercept of raise_1_fit.\nSlope of raise_2_fit is higher than RMSE of raise_1_fit.\nAdjusted \\(R^2\\) of raise_2_fit is higher than adjusted \\(R^2\\) of raise_1_fit.\n\n\\(R^2\\) of raise_2_fit is higher \\(R^2\\) of raise_1_fit."
+    "text": "Question 5\nUsing everything we have seen about the data so far (hint: refer back to question 2), what will the estimated values of \\(b_1\\) and \\(b_0\\) be?\n\n\n\n\n\n\nCaution\n\n\n\nYou should only need information from questions prior to this one. Information in Question 7 may help you, but you should NOT rely on this information; there is no guarantee you would have it on the exam. I would recommend picking an answer to this question before going any further.\n\n\n\n\n\\(b_0 = 3.576\\), \\(b_1 = 3.658\\)\n\n\n\\(b_0 = 3.658\\), \\(b_1 = 3.576\\)\n\n\n\\(b_0 = 3.576\\), \\(b_1 = 0.0814\\)\n\n\n\\(b_0 = 3.658\\), \\(b_1 = -0.0814\\)\n\n\n\\(b_0 = 3.658\\), \\(b_1 = 0.0814\\)",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-6",
     "href": "exam-review/final-review.html#question-6",
     "title": "Final review",
     "section": "Question 6",
-    "text": "Question 6\nThe tidy model output for the raise_2_fit model you fit is shown below.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic  p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)                   3.55       0.508           6.99 1.99e-11\n2 annual_salary                 0.00000989 0.00000436      2.27 2.42e- 2\n3 performance_ratingPoor       -4.06       1.42           -2.86 4.58e- 3\n4 performance_ratingSuccessful -2.40       0.397          -6.05 4.68e- 9\n5 performance_ratingTop         2.99       0.715           4.18 3.92e- 5\n\n\nWhen your teammate sees this model output, they remark “The coefficient for performance_ratingSuccessful is negative, that’s weird. I guess it means that people who get successful performance ratings get lower raises.” How would you respond to your teammate?"
+    "text": "Question 6\nNow it’s time to perform a hypothesis test to see if the GPAs of the two groups are equal on average. Which of the following is the correct set of hypotheses to test?\n\n\n\\(H_0: \\beta_0 = 0\\), $H_A: _0 $\n\n\\(H_0: \\beta_0 \\neq 0\\), $H_A: _0 = 0 $\n\n\\(H_0: \\beta_1 = 0\\), $H_A: _1 $\n\n\\(H_0: \\beta_1 \\neq 0\\), $H_A: _1 = 0 $\n\n\\(H_0: \\beta_0 = \\beta_1\\), \\(H_A: \\beta_0 \\neq \\beta_1\\)",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-7",
     "href": "exam-review/final-review.html#question-7",
     "title": "Final review",
     "section": "Question 7",
-    "text": "Question 7\nUltimately, your teammate decides they don’t like the negative slope coefficients in the model output you created (not that there’s anything wrong with negative slope coefficients!), does something else, and comes up with the following model output.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic    p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n1 (Intercept)                  -0.511      1.47          -0.347 0.729     \n2 annual_salary                 0.00000989 0.00000436     2.27  0.0242    \n3 performance_ratingSuccessful  1.66       1.42           1.17  0.242     \n4 performance_ratingHigh        4.06       1.42           2.86  0.00458   \n5 performance_ratingTop         7.05       1.53           4.60  0.00000644\n\n\nUnfortunately they didn’t write their code in a Quarto document, instead just wrote some code in the Console and then lost track of their work. They remember using the fct_relevel() function and doing something like the following:\n\nblizzard_salary &lt;- blizzard_salary |&gt;\n  mutate(performance_rating = fct_relevel(performance_rating, ___))\n\nWhat should they put in the blanks to get the same model output as above?\n\n“Poor”, “Successful”, “High”, “Top”\n“Successful”, “High”, “Top”\n“Top”, “High”, “Successful”, “Poor”\nPoor, Successful, High, Top"
+    "text": "Question 7\nThe simulated null distribution and point estimate are displayed below.\n\n\n\n\n\n\n\n\n# A tibble: 2 × 2\n  term      p_value\n  &lt;chr&gt;       &lt;dbl&gt;\n1 intercept   0.304\n2 workMore    0.304\n\n\nWhich of the following statements are true? Select all that apply.\n\nAt the 5% discernability level, we reject the null hypothesis.\nAt the 5% discernability level, we fail to reject the null hypothesis.\nAbout 30% of the samples in the null distribution were more extreme than our observed value.\nAbout 30% of the samples in the null distribution were less extreme than our observed value.\nAbout 15% of the samples in the null distribution were greater than our observed value.",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-8",
     "href": "exam-review/final-review.html#question-8",
     "title": "Final review",
     "section": "Question 8",
-    "text": "Question 8\nSuppose we fit a model to predict percent_incr from annual_salary and salary_type. A tidy output of the model is shown below.\n\n\n# A tibble: 3 × 5\n  term                 estimate  std.error statistic p.value\n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)         1.24      0.570           2.18 0.0300 \n2 annual_salary       0.0000137 0.00000464      2.96 0.00329\n3 salary_typeSalaried 0.913     0.544           1.68 0.0938 \n\n\nWhich of the following visualizations represent this model? Explain your reasoning.\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\n\n\n\n\n\n(c) Option 3\n\n\n\n\n\n\n\n\n\n(d) Option 4\n\n\n\n\n\n\nFigure 1: Visualizations of the relationship between percent increase, annual salary, and salary type"
+    "text": "Question 8\nNext, you fit a model for predicting raises (percent_incr) from salaries (annual_salary). We’ll call this model raise_1_fit. A tidy output of the model is shown below.\n\n\n# A tibble: 2 × 5\n  term           estimate  std.error statistic   p.value\n  &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   1.87      0.432           4.33 0.0000194\n2 annual_salary 0.0000155 0.00000452      3.43 0.000669 \n\n\nWhich of the following is the best interpretation of the slope coefficient?\n\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.55%.\nFor every additional $1,000 of annual salary, the raise goes up by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.87%.",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-9",
     "href": "exam-review/final-review.html#question-9",
     "title": "Final review",
     "section": "Question 9",
-    "text": "Question 9\nDefine the term parsimonious model."
+    "text": "Question 9\nYou then fit a model for predicting raises (percent_incr) from salaries (annual_salary) and performance ratings (performance_rating). We’ll call this model raise_2_fit. Which of the following is definitely true based on the information you have so far?\n\nIntercept of raise_2_fit is higher than intercept of raise_1_fit.\nSlope of raise_2_fit is higher than RMSE of raise_1_fit.\nAdjusted \\(R^2\\) of raise_2_fit is higher than adjusted \\(R^2\\) of raise_1_fit.\n\n\\(R^2\\) of raise_2_fit is higher \\(R^2\\) of raise_1_fit.",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-10",
     "href": "exam-review/final-review.html#question-10",
     "title": "Final review",
     "section": "Question 10",
-    "text": "Question 10\nSuppose you now fit a model to predict the natural log of percent increase, log(percent_incr), from performance rating. The model is called raise_4_fit.\nYou’re provided the following:\n\ntidy(raise_4_fit) |&gt;\n  select(term, estimate) |&gt;\n  mutate(exp_estimate = exp(estimate))\n\n# A tibble: 4 × 3\n  term                         estimate exp_estimate\n  &lt;chr&gt;                           &lt;dbl&gt;        &lt;dbl&gt;\n1 (Intercept)                     -7.15     0.000786\n2 performance_ratingSuccessful     6.93  1025.      \n3 performance_ratingHigh           8.17  3534.      \n4 performance_ratingTop            8.91  7438.      \n\n\nBased on this, which of the following is true?\na. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 10.25% compared to the employees with Poor performance rating.\nb. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 6.93% compared to the employees with Poor performance rating.\nc. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\nd. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 6.93 compared to the employees with Poor performance rating."
+    "text": "Question 10\nThe tidy model output for the raise_2_fit model you fit is shown below.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic  p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)                   3.55       0.508           6.99 1.99e-11\n2 annual_salary                 0.00000989 0.00000436      2.27 2.42e- 2\n3 performance_ratingPoor       -4.06       1.42           -2.86 4.58e- 3\n4 performance_ratingSuccessful -2.40       0.397          -6.05 4.68e- 9\n5 performance_ratingTop         2.99       0.715           4.18 3.92e- 5\n\n\nWhen your teammate sees this model output, they remark “The coefficient for performance_ratingSuccessful is negative, that’s weird. I guess it means that people who get successful performance ratings get lower raises.” How would you respond to your teammate?",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-11",
     "href": "exam-review/final-review.html#question-11",
     "title": "Final review",
     "section": "Question 11",
-    "text": "Question 11\nWhich of the following is the definiton of a regression model? Select all that apply.\na. \\(\\hat{y} = \\beta_0 + \\beta_1 X_1\\)\nb. \\(y = \\beta_0 + \\beta_1 X_1\\)\nc. \\(\\hat{y} = \\beta_0 + \\beta_1 X_1 + \\epsilon\\)\nd. \\(y = \\beta_0 + \\beta_1 X_1 + \\epsilon\\)"
+    "text": "Question 11\nUltimately, your teammate decides they don’t like the negative slope coefficients in the model output you created (not that there’s anything wrong with negative slope coefficients!), does something else, and comes up with the following model output.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic    p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n1 (Intercept)                  -0.511      1.47          -0.347 0.729     \n2 annual_salary                 0.00000989 0.00000436     2.27  0.0242    \n3 performance_ratingSuccessful  1.66       1.42           1.17  0.242     \n4 performance_ratingHigh        4.06       1.42           2.86  0.00458   \n5 performance_ratingTop         7.05       1.53           4.60  0.00000644\n\n\nUnfortunately they didn’t write their code in a Quarto document, instead just wrote some code in the Console and then lost track of their work. They remember using the fct_relevel() function and doing something like the following:\n\nblizzard_salary &lt;- blizzard_salary |&gt;\n  mutate(performance_rating = fct_relevel(performance_rating, ___))\n\nWhat should they put in the blanks to get the same model output as above?\n\n“Poor”, “Successful”, “High”, “Top”\n“Successful”, “High”, “Top”\n“Top”, “High”, “Successful”, “Poor”\nPoor, Successful, High, Top",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review.html#question-12",
     "href": "exam-review/final-review.html#question-12",
     "title": "Final review",
     "section": "Question 12",
-    "text": "Question 12\nChoose the best answer.\nA survey based on a random sample of 2,045 American teenagers found that a 95% confidence interval for the mean number of texts sent per month was (1450, 1550). A valid interpretation of this interval is\n\n95% of all teens who text send between 1450 and 1550 text messages per month.\nIf a new survey with the same sample size were to be taken, there is a 95% chance that the mean number of texts in the sample would be between 1450 and 1550.\nWe are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550.\nWe are 95% confident that, were we to repeat this survey, the mean number of texts per month of those taking part in the survey would be between 1450 and 1550."
+    "text": "Question 12\nSuppose we fit a model to predict percent_incr from annual_salary and salary_type. A tidy output of the model is shown below.\n\n\n# A tibble: 3 × 5\n  term                 estimate  std.error statistic p.value\n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)         1.24      0.570           2.18 0.0300 \n2 annual_salary       0.0000137 0.00000464      2.96 0.00329\n3 salary_typeSalaried 0.913     0.544           1.68 0.0938 \n\n\nWhich of the following visualizations represent this model? Explain your reasoning.\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\n\n\n\n\n\n(c) Option 3\n\n\n\n\n\n\n\n\n\n(d) Option 4\n\n\n\n\n\n\nFigure 1: Visualizations of the relationship between percent increase, annual salary, and salary type",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
-    "objectID": "exam-review/final-review.html#bonus",
-    "href": "exam-review/final-review.html#bonus",
+    "objectID": "exam-review/final-review.html#question-13",
+    "href": "exam-review/final-review.html#question-13",
     "title": "Final review",
-    "section": "Bonus",
-    "text": "Bonus\nPick a concept we introduced in class so far that you’ve been struggling with and explain it in your own words."
+    "section": "Question 13",
+    "text": "Question 13\nWhich of the following is the is the population model in linear regresion? a. \\(\\hat{y} = \\beta_0 + \\beta_1 X_1\\)\nb. \\(y = \\beta_0 + \\beta_1 X_1\\)\nc. \\(\\hat{y} = \\beta_0 + \\beta_1 X_1 + \\epsilon\\)\nd. \\(y = \\beta_0 + \\beta_1 X_1 + \\epsilon\\)",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review.html#question-14",
+    "href": "exam-review/final-review.html#question-14",
+    "title": "Final review",
+    "section": "Question 14",
+    "text": "Question 14\nChoose the best answer.\nA survey based on a random sample of 2,045 American teenagers found that a 95% confidence interval for the mean number of texts sent per month was (1450, 1550). A valid interpretation of this interval is\n\n95% of all teens who text send between 1450 and 1550 text messages per month.\nIf a new survey with the same sample size were to be taken, there is a 95% chance that the mean number of texts in the sample would be between 1450 and 1550.\nWe are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550.\nWe are 95% confident that, were we to repeat this survey, the mean number of texts per month of those taking part in the survey would be between 1450 and 1550.",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review.html#question-15",
+    "href": "exam-review/final-review.html#question-15",
+    "title": "Final review",
+    "section": "Question 15",
+    "text": "Question 15\nI have a dataset with weather data. Each day, I have variable precip that is 1 if it has rained and 0 if it has not rained. I want to use all of the variables in my data set to predict whether it has rained or not. What type of model should I use?\n\nLogistic regression\nSimple linear regression\nAdditive linear regression\nR^2 regression\nAUC regression",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review.html#question-16",
+    "href": "exam-review/final-review.html#question-16",
+    "title": "Final review",
+    "section": "Question 16",
+    "text": "Question 16\nWhich is a 98% confidence interval?\n\n\n\n\n\n\n\n\n\n\\((q_{0.01},\\,q_{0.91})\\)\n\\((q_{0.01},\\,q_{0.99})\\)\n\\((q_{0.09},\\,q_{0.95})\\)\n\\((q_{0.05},\\,q_{0.99})\\)",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review.html#question-17",
+    "href": "exam-review/final-review.html#question-17",
+    "title": "Final review",
+    "section": "Question 17",
+    "text": "Question 17\nTrue or false: In hypotheses testing, rejecting the null when the null is true is referred to as a Type II error.",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review.html#question-18",
+    "href": "exam-review/final-review.html#question-18",
+    "title": "Final review",
+    "section": "Question 18",
+    "text": "Question 18\nTrue or false: In simple linear regression, the slope will always have the same sign as the correlation coefficient.",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review.html#question-19",
+    "href": "exam-review/final-review.html#question-19",
+    "title": "Final review",
+    "section": "Question 19",
+    "text": "Question 19\nWhat is your best guess for the value of \\(R^2\\) for the line of best fit shown in this image?\n\n\n\n\n\n\n\n\n\n1.3\n0.4\n0.75\n1\n0",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review.html#question-20",
+    "href": "exam-review/final-review.html#question-20",
+    "title": "Final review",
+    "section": "Question 20",
+    "text": "Question 20\nWhy should we not use regular/unadjusted \\(R^2\\) to select which variables to include in a model?\n\nIt is too hard to calculate\nIt is too dependent on units\nIt always selects models that are too simple\nIt always goes up whenever you add any variables to your model\nIt can only be computed in simple linear regression",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review.html#question-21",
+    "href": "exam-review/final-review.html#question-21",
+    "title": "Final review",
+    "section": "Question 21",
+    "text": "Question 21\nAn ROC curve is plotted below. The red point corresponds to the values at some threshold. At this threshold, what were the true positive, false positive, true negative, and false negative rate?",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review.html#good-practice",
+    "href": "exam-review/final-review.html#good-practice",
+    "title": "Final review",
+    "section": "Good Practice",
+    "text": "Good Practice\nPick a concept we introduced in class so far that you’ve been struggling with and explain it in your own words.",
+    "crumbs": [
+      "Exam Review",
+      "Final Review"
+    ]
   },
   {
     "objectID": "exam-review/final-review-A.html",
@@ -15204,7 +15359,7 @@
     "href": "index.html",
     "title": "STA 199: Intro to Data Science and Statistical Thinking",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\n\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\n\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\n\nFri, May 16\nGrammar of Data Visualization\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02  ✅ ae 02\n\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n\n2\nMon, May 19\nMore Data visualization\n🖥️ slides 03  🗒️ notes 03  ⌨️ ae 03  ✅ ae 03\n\n\n📘 ims - chp 5 🎥 Visualizing Quantitative Data 🎥 Visualizing Categorical Data\n\n\n\n\nMon, May 19\nLab 1\n💻 lab 1\n\n\n📗 r4ds - chp 2  📘 ims - chp 5\n\n\n\n\nTue, May 20\nGrammar of Data Transformation\n🖥️ slides 04  🗒️ notes 04  ⌨️ ae 04  ✅ ae 04\n\n\n📗 r4ds - chp 3.1-3.5 \n\n\n\n\nWed, May 21\nMore Data Transformation\n🖥️ slides 05  🗒️ notes 05  ⌨️ ae 05  ✅ ae 05\n\nLab 1 - 11:59PM ET\n📗 r4ds - chp 3.6-3.7  🎥 Working with a single data frame\n\n\n\n\nThu, May 22\nTidying Data\n🖥️ slides 06  🗒️ notes 06  ⌨️ ae 06  ✅ ae 06\n\n\n📗 r4ds - chp 5 📘 ims - chp 6\n\n\n\n\nThu, May 22\nLab 2\n💻 lab 2\n\n\n📗 r4ds - chp 4 🎥 Tidy data 🎥 Tidying data 🎥 Code Along: Population over time\n\n\n\n\nFri, May 23\nJoining Data\n🖥️ slides 07  🗒️ notes 07  ⌨️ ae 07  ✅ ae 07\n\n\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n\n\n\nSun, May 25\n\n\n\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n🖥️ slides 08  🗒️ notes 08  ⌨️ ae 08  ✅ ae 08\n\n\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n\n\n\nWed, May 28\nImporting and Recoding Data\n🖥️ slides 09  🗒️ notes 09  ⌨️ ae 09  ✅ ae 09\n\nLab 2 - 11:59PM ET\n🎥 Importing data  🎥 Code along :: Student survey  📗 r4ds - chp 7\n\n\n\n\nThu, May 29\nMore Practice + Midterm Review\n🖥️ slides 10  🗒️ notes 10  ⌨️ ae 10  ✅ ae 10\n\n\n\n\n\n\nThu, May 29\nLab 3\n💻 lab 3 ✅ lab 3\n\n\n\n\n\n\nFri, May 30\nMidterm Review\n🖥️ slides 11  🗒️ notes 11  📊 Kahoot!! \n\n\n\n\n\n\nSun, Jun 1\n\n\nLab 3 - 11:59PM ET\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n🖥️ slides 12  🗒️ notes 12 \n\n\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n💻 Project Milestone 1\n\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n🖥️ slides 13  🗒️ notes 13  ⌨️ ae 11  ✅ ae 11\n\nMidterm Takehome - 9:30AM ET\n🎥 The language of models  📘 ims - chp 7.1 🎥 Fitting and interpreting models  🎥 Modeling nonlinear relationships  📘 ims - chp 7.2\n\n\n\n\nThu, Jun 5\nSimple Linear Regression\n🖥️ slides 14  🗒️ notes 14  ⌨️ ae 12  ✅ ae 12\n\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\n\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n🖥️ slides 15  🗒️ notes 15 \n\n\n🎥 Models with multiple predictors  🎥 More models with multiple predictors  📘 ims - chp 8.1-8.2\n\n\n\n\nSun, Jun 8\n\n\nProject Milestone 2 - 11:59PM ET\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n🖥️ slides 16  🗒️ notes 16  ⌨️ ae 13 \n\n\n📘 ims - chp 8.3-8.5\n\n\n\n\nMon, Jun 9\nLab 4\n💻 lab 4\n\n\n\n\n\n\nTue, Jun 10\nModel Selection\n🖥️ slides 17  🗒️ notes 17  ⌨️ ae 13  ✅ ae 13\n\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n🖥️ slides 18  🗒️ notes 18  ⌨️ ae 14  ✅ ae 14\n\nLab 4 - 11:59PM ET Peer Feedback Survey- 11:59 PM ET\n📘 ims - chp 9\n\n\n\n\nThu, Jun 12\nLogistic Regression 2\n🖥️ slides 19  🗒️ notes 19  ⌨️ ae 15  ✅ae 15 \n\n\n🎥 Logistic regression  🎥 Prediction and overfitting\n\n\n\n\nThu, Jun 12\nLab 5\n💻 lab 5\n\n\n\n\n\n\nFri, Jun 13\nIntervals\n🖥️ slides 20  🗒️ notes 20  ⌨️ ae 16  ✅ae 16 \n\nProject Milestone 3 - 11:59PM ET\n🎥 Quantifying uncertainty  🎥 Bootstrapping  📘 ims - chp 12\n\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET \n\n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n🖥️ slides 21  🗒️ notes 21  ⌨️ ae 17  ✅ae 17 \n\n\n📘 ims - chp 11\n\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n💻 Code Options\n\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n🖥️ slides 22  🗒️ notes 22 \n\n\n\n\n\n\nWed, Jun 18\nMore Inference\n🖥️ slides 23  🗒️ notes 23  ⌨️ ae 18  ✅ae 18 \n\n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n💻 lab 6 ⌨️ Final Review Survey 🖥️ Announcements\n\n\n\n\n\n\nSun, Jun 22\n\n\n\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM Lab 6 - 11:59PM ET\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM (2pm - 5pm)",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Visualization\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02  ✅ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nMore Data visualization\n🖥️ slides 03  🗒️ notes 03  ⌨️ ae 03  ✅ ae 03\n\n📘 ims - chp 5 🎥 Visualizing Quantitative Data 🎥 Visualizing Categorical Data\n\n\n\nMon, May 19\nLab 1\n💻 lab 1\n\n📗 r4ds - chp 2  📘 ims - chp 5\n\n\n\nTue, May 20\nGrammar of Data Transformation\n🖥️ slides 04  🗒️ notes 04  ⌨️ ae 04  ✅ ae 04\n\n📗 r4ds - chp 3.1-3.5 \n\n\n\nWed, May 21\nMore Data Transformation\n🖥️ slides 05  🗒️ notes 05  ⌨️ ae 05  ✅ ae 05\nLab 1 - 11:59PM ET\n📗 r4ds - chp 3.6-3.7  🎥 Working with a single data frame\n\n\n\nThu, May 22\nTidying Data\n🖥️ slides 06  🗒️ notes 06  ⌨️ ae 06  ✅ ae 06\n\n📗 r4ds - chp 5 📘 ims - chp 6\n\n\n\nThu, May 22\nLab 2\n💻 lab 2\n\n📗 r4ds - chp 4 🎥 Tidy data 🎥 Tidying data 🎥 Code Along: Population over time\n\n\n\nFri, May 23\nJoining Data\n🖥️ slides 07  🗒️ notes 07  ⌨️ ae 07  ✅ ae 07\n\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n\n\nSun, May 25\n\n\n\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n🖥️ slides 08  🗒️ notes 08  ⌨️ ae 08  ✅ ae 08\n\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n\n\nWed, May 28\nImporting and Recoding Data\n🖥️ slides 09  🗒️ notes 09  ⌨️ ae 09  ✅ ae 09\nLab 2 - 11:59PM ET\n🎥 Importing data  🎥 Code along :: Student survey  📗 r4ds - chp 7\n\n\n\nThu, May 29\nMore Practice + Midterm Review\n🖥️ slides 10  🗒️ notes 10  ⌨️ ae 10  ✅ ae 10\n\n\n\n\n\nThu, May 29\nLab 3\n💻 lab 3 ✅ lab 3\n\n\n\n\n\nFri, May 30\nMidterm Review\n🖥️ slides 11  🗒️ notes 11  📊 Kahoot!! \n\n\n\n\n\nSun, Jun 1\n\n\nLab 3 - 11:59PM ET\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n🖥️ slides 12  🗒️ notes 12 \n\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n💻 Project Milestone 1\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n🖥️ slides 13  🗒️ notes 13  ⌨️ ae 11  ✅ ae 11\nMidterm Takehome - 9:30AM ET\n🎥 The language of models  📘 ims - chp 7.1 🎥 Fitting and interpreting models  🎥 Modeling nonlinear relationships  📘 ims - chp 7.2\n\n\n\nThu, Jun 5\nSimple Linear Regression\n🖥️ slides 14  🗒️ notes 14  ⌨️ ae 12  ✅ ae 12\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\n\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n🖥️ slides 15  🗒️ notes 15 \n\n🎥 Models with multiple predictors  🎥 More models with multiple predictors  📘 ims - chp 8.1-8.2\n\n\n\nSun, Jun 8\n\n\nProject Milestone 2 - 11:59PM ET\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n🖥️ slides 16  🗒️ notes 16  ⌨️ ae 13 \n\n📘 ims - chp 8.3-8.5\n\n\n\nMon, Jun 9\nLab 4\n💻 lab 4\n\n\n\n\n\nTue, Jun 10\nModel Selection\n🖥️ slides 17  🗒️ notes 17  ⌨️ ae 13  ✅ ae 13\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n🖥️ slides 18  🗒️ notes 18  ⌨️ ae 14  ✅ ae 14\nLab 4 - 11:59PM ET Peer Feedback Survey- 11:59 PM ET\n📘 ims - chp 9\n\n\n\nThu, Jun 12\nLogistic Regression 2\n🖥️ slides 19  🗒️ notes 19  ⌨️ ae 15  ✅ae 15 \n\n🎥 Logistic regression  🎥 Prediction and overfitting\n\n\n\nThu, Jun 12\nLab 5\n💻 lab 5\n\n\n\n\n\nFri, Jun 13\nIntervals\n🖥️ slides 20  🗒️ notes 20  ⌨️ ae 16  ✅ae 16 \nProject Milestone 3 - 11:59PM ET\n🎥 Quantifying uncertainty  🎥 Bootstrapping  📘 ims - chp 12\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET \n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n🖥️ slides 21  🗒️ notes 21  ⌨️ ae 17  ✅ae 17 \n\n📘 ims - chp 11\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n💻 Code Options\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n🖥️ slides 22  🗒️ notes 22 \n\n\n\n\n\nWed, Jun 18\nMore Inference\n🖥️ slides 23  🗒️ notes 23  ⌨️ ae 18  ✅ae 18 \n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n💻 lab 6 ⌨️ Final Review Survey 🖥️ Announcements\n\n\n\n\n\nSun, Jun 22\n\n\n\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM Lab 6 - 11:59PM ET\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM (2pm - 5pm)",
     "crumbs": [
       "Course information",
       "Schedule"
