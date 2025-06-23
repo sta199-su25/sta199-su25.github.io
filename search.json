@@ -125,7 +125,7 @@
     "href": "exam-review/final-review.html#question-6",
     "title": "Final review",
     "section": "Question 6",
-    "text": "Question 6\nNow it’s time to perform a hypothesis test to see if the GPAs of the two groups are equal on average. Which of the following is the correct set of hypotheses to test?\n\n\n\\(H_0: \\beta_0 = 0\\), $H_A: _0 $\n\n\\(H_0: \\beta_0 \\neq 0\\), $H_A: _0 = 0 $\n\n\\(H_0: \\beta_1 = 0\\), $H_A: _1 $\n\n\\(H_0: \\beta_1 \\neq 0\\), $H_A: _1 = 0 $\n\n\\(H_0: \\beta_0 = \\beta_1\\), \\(H_A: \\beta_0 \\neq \\beta_1\\)",
+    "text": "Question 6\nNow it’s time to perform a hypothesis test to see if the GPAs of the two groups are equal on average. Which of the following is the correct set of hypotheses to test?\n\n\n\\(H_0: \\beta_0 = 0\\), \\(H_A: \\beta_0 \\neq 0\\)\n\n\n\\(H_0: \\beta_0 \\neq 0\\), \\(H_A: \\beta_0 = 0\\)\n\n\n\\(H_0: \\beta_1 = 0\\), \\(H_A: \\beta_1 \\neq 0\\)\n\n\n\\(H_0: \\beta_1 \\neq 0\\), \\(H_A: \\beta_1 = 0\\)\n\n\n\\(H_0: \\beta_0 = \\beta_1\\), \\(H_A: \\beta_0 \\neq \\beta_1\\)",
     "crumbs": [
       "Exam Review",
       "Final Review"
@@ -213,7 +213,7 @@
     "href": "exam-review/final-review.html#question-14",
     "title": "Final review",
     "section": "Question 14",
-    "text": "Question 14\nChoose the best answer.\nA survey based on a random sample of 2,045 American teenagers found that a 95% confidence interval for the mean number of texts sent per month was (1450, 1550). A valid interpretation of this interval is\n\n95% of all teens who text send between 1450 and 1550 text messages per month.\nIf a new survey with the same sample size were to be taken, there is a 95% chance that the mean number of texts in the sample would be between 1450 and 1550.\nWe are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550.\nWe are 95% confident that, were we to repeat this survey, the mean number of texts per month of those taking part in the survey would be between 1450 and 1550.",
+    "text": "Question 14\nChoose the best answer.\nA survey based on a random sample of 2,045 American teenagers found that a 95% confidence interval for the mean number of texts sent per month was (1450, 1550). A valid interpretation of this interval is\n\n95% of all teens who text send between 1450 and 1550 text messages per month.\nIf a new survey with the same sample size were to be taken, there is a 95% chance that the mean number of texts in the sample would be between 1450 and 1550.\nWe are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550.",
     "crumbs": [
       "Exam Review",
       "Final Review"
@@ -312,7 +312,44 @@
     "href": "exam-review/final-review-A.html",
     "title": "Final review",
     "section": "",
-    "text": "Take a random sample of size 25, with replacement, from the original sample. Calculate the proportion of students in this simulated sample who work 5 or more hours. Repeat this process 1000 times to build the bootstrap distribution. Take the middle 95% of this distribution to construct a 95% confidence interval for the true proportion of statistics majors who work 5 or more hours.\nThe exact 95% CI is (40%, 80%). Answers reasonably close to the upper and lower bounds would be accepted.\n(e) None of the above. The correct interpretation is “We are 95% confident that 40% to 80% of statistics majors work at least 5 hours per week.”\n(c) For every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.\n$R^2$ of raise_2_fit is higher than $R^2$ of raise_1_fit since raise_2_fit has one more predictor and $R^2$ always\nThe reference level of performance_rating is High, since it’s the first level alphabetically. Therefore, the coefficient -2.40% is the predicted difference in raise comparing High to Successful. In this context a negative coefficient makes sense since we would expect those with High performance rating to get higher raises than those with Successful performance.\n(a) “Poor”, “Successful”, “High”, “Top”.\nOption 3. It’s a linear model with no interaction effect, so parallel lines. And since the slope for salary_typeSalaried is positive, its intercept is higher. The equations of the lines are as follows:\n\nHourly:\n\\[\n\\begin{align*}\n\\widehat{percent\\_incr} &= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 salary\\_typeSalaried \\\\\n&= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 \\times 0 \\\\\n&= 1.24 + 0.0000137 \\times annual\\_salary\n\\end{align*}\n\\]\nSalaried:\n\\[\n\\begin{align*}\n\\widehat{percent\\_incr} &= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 salary\\_typeSalaried \\\\\n&= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 \\times 1 \\\\\n&= 2.153 + 0.0000137 \\times annual\\_salary\n\\end{align*}\n\\]\n\nA parsimonious model is the simplest model with the best predictive performance.\n(c) The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\\/(a) and (d).\n(a) and (d).\n(c) We are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550."
+    "text": "a, c, e - boxplots, histograms, and density plots are good ways of visualizing numerical variables\nc\na, d - both of these will return the same values; the one with specify() is the code we should use if we need point estimates with confidence intervals/hypothesis testing\nc - since less is the baseline, we will see level more in the output\nc\na\na, c",
+    "crumbs": [
+      "Exam Review",
+      "Final Review Answers"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review-A.html#part-1",
+    "href": "exam-review/final-review-A.html#part-1",
+    "title": "Final review",
+    "section": "",
+    "text": "a, c, e - boxplots, histograms, and density plots are good ways of visualizing numerical variables\nc\na, d - both of these will return the same values; the one with specify() is the code we should use if we need point estimates with confidence intervals/hypothesis testing\nc - since less is the baseline, we will see level more in the output\nc\na\na, c",
+    "crumbs": [
+      "Exam Review",
+      "Final Review Answers"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review-A.html#part-2",
+    "href": "exam-review/final-review-A.html#part-2",
+    "title": "Final review",
+    "section": "Part 2",
+    "text": "Part 2\n\n(c) For every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.\n$R^2$ of raise_2_fit is higher than $R^2$ of raise_1_fit since raise_2_fit has one more predictor and $R^2$ always\nThe reference level of performance_rating is High, since it’s the first level alphabetically. Therefore, the coefficient -2.40% is the predicted difference in raise comparing High to Successful. In this context a negative coefficient makes sense since we would expect those with High performance rating to get higher raises than those with Successful performance.\n(a) “Poor”, “Successful”, “High”, “Top”.\nOption 3. It’s a linear model with no interaction effect, so parallel lines. And since the slope for salary_typeSalaried is positive, its intercept is higher. The equations of the lines are as follows: - Hourly:\n\\[\n   \\begin{align*}\n   \\widehat{percent\\_incr} &= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 salary\\_typeSalaried \\\\\n   &= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 \\times 0 \\\\\n   &= 1.24 + 0.0000137 \\times annual\\_salary\n   \\end{align*}\n   \\]\n\n-   Salaried:\n\n    $$\n    \\begin{align*}\n    \\widehat{percent\\_incr} &= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 salary\\_typeSalaried \\\\\n    &= 1.24 + 0.0000137 \\times annual\\_salary + 0.913 \\times 1 \\\\\n    &= 2.153 + 0.0000137 \\times annual\\_salary\n    \\end{align*}\n    $$",
+    "crumbs": [
+      "Exam Review",
+      "Final Review Answers"
+    ]
+  },
+  {
+    "objectID": "exam-review/final-review-A.html#part-3",
+    "href": "exam-review/final-review-A.html#part-3",
+    "title": "Final review",
+    "section": "Part 3",
+    "text": "Part 3\n\nd\nc - We are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550.\na\nb\nFalse\nTrue\nc\nd\nTPR: 0.87; FPR: 0.12; TNR: 0.88; FNR = 0.13 (it’s okay if you estimated these numbers slightly differently!!)\n\nThe sensitivity (which equals the true positive rate) is about 0.87 and 1 - specificity (which equals the false positive rate) is about 0.12.\nSince true positive rate + false negative rate = 1, we know the false negative rate is 1 - TPR = 1 - 0.87 = 0.13.\nSimilarly, TNR + FPR = 1, so TNR = 1 - FPR 0.12 = 0.88.",
+    "crumbs": [
+      "Exam Review",
+      "Final Review Answers"
+    ]
   },
   {
     "objectID": "ae/ae-06-github.html",
