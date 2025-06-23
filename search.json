@@ -9998,287 +9998,287 @@
   {
     "objectID": "slides/25-final-review.html",
     "href": "slides/25-final-review.html",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "",
     "text": "Tuesday:\n\n9:30 - 10:45 AM (Marie)\n3:30 - 5:30 PM (Marie)\n\n\n\nWednesday:\n\n9:30 - 10:45 AM (Marie)\n1:30 - 3:30 PM (Mary - Zoom)\n5:30 - 7:30 PM (Katie)\n\n\n\nThursday:\nNo class or office hours! Final is 2-5pm in this room."
   },
   {
     "objectID": "slides/25-final-review.html#announcement-office-hoursexam",
     "href": "slides/25-final-review.html#announcement-office-hoursexam",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "",
     "text": "Tuesday:\n\n9:30 - 10:45 AM (Marie)\n3:30 - 5:30 PM (Marie)\n\n\n\nWednesday:\n\n9:30 - 10:45 AM (Marie)\n1:30 - 3:30 PM (Mary - Zoom)\n5:30 - 7:30 PM (Katie)\n\n\n\nThursday:\nNo class or office hours! Final is 2-5pm in this room."
   },
   {
     "objectID": "slides/25-final-review.html#teaching-evaluation",
     "href": "slides/25-final-review.html#teaching-evaluation",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Teaching Evaluation",
     "text": "Teaching Evaluation\nTeaching evaluations due tomorrow. If we get 13/17 responses, I’ll add +2 points to everyone’s final exam grade!"
   },
   {
     "objectID": "slides/25-final-review.html#current-grade-calculation",
     "href": "slides/25-final-review.html#current-grade-calculation",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Current Grade Calculation",
     "text": "Current Grade Calculation\n\n\n\nAEs: 5%: completion of 80% or more is full credits\n\nEquivalent to dropping the lowest 4 (out of 20 total)\nTake the number you have completed; divide by 16\n\n\nLab Attendance: 5% - one drop given (score - number of labs out of 10)\nLabs: 30% - Lowest is dropped (5 labs at 6% each)\nMidterm - 20% (Add in-class + take-home score to get total out of 100)\nProject - 20%\nFinal - 20%\n\n\n. . .\nIf you do better on the final than the midterm, it will be weighted higher!"
   },
   {
     "objectID": "slides/25-final-review.html#final-overview",
     "href": "slides/25-final-review.html#final-overview",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Final Overview",
     "text": "Final Overview\n\n\nAll multiple choice (same format as midterm in-class)\nCumulative!!!\nCheat sheet: 2 pages front and back"
   },
   {
     "objectID": "slides/25-final-review.html#what-model-should-i-use",
     "href": "slides/25-final-review.html#what-model-should-i-use",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "What model should I use?",
     "text": "What model should I use?\nFirst, look at what type of output you have:\n\nNumerical: Linear regression\nBinary: Logistic regression\nOther: We haven’t learned how to do this!"
   },
   {
     "objectID": "slides/25-final-review.html#what-model-should-i-use-1",
     "href": "slides/25-final-review.html#what-model-should-i-use-1",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "What model should I use?",
     "text": "What model should I use?\nNow, look at your predictors. Does the relationship between the output and each predictor stay the same regardless of other predictors?\n\nYes: Additive\nNo: interaction"
   },
   {
     "objectID": "slides/25-final-review.html#additive-vs.-interaction",
     "href": "slides/25-final-review.html#additive-vs.-interaction",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Additive vs. Interaction",
     "text": "Additive vs. Interaction"
   },
   {
     "objectID": "slides/25-final-review.html#practice",
     "href": "slides/25-final-review.html#practice",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Practice",
     "text": "Practice\n\nhead(weather_df)\n\n# A tibble: 6 × 3\n  did_rain temperature humidity\n  &lt;fct&gt;          &lt;dbl&gt;    &lt;dbl&gt;\n1 no_rain         71.4     52.7\n2 rain            66.3     80  \n3 no_rain         70.3     53.1\n4 rain            63.3     88.8\n5 rain            60.2     77.5\n6 no_rain         76.7     65.9\n\n\n\n\nWhat type of model to predict did_rain from temperature?\nWhat type of model to predict temperature from did_rain?\nWhat type of model to predict humidity from did_rain and and temperature?\nWhat type of model to predict did_rain from temperature and humidity?"
   },
   {
     "objectID": "slides/25-final-review.html#model-comparison",
     "href": "slides/25-final-review.html#model-comparison",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Model comparison",
     "text": "Model comparison\n\n\n\nLinear Regression:\n\n\n\\(R^2\\):\n\nTells us the percent of variability in the data explained by the model\nAlways increases when adding more variables to a model\n\n\nAdjusted \\(R^2\\): Like \\(R^2\\) but with a penalty for more variables\n\n\n\nLogistic Regression:\n\nTPR, TNR, FPR, FNR\nROC Curve: which curve goes further to the top right?\nAUC: Area under the ROC curve"
   },
   {
     "objectID": "slides/25-final-review.html#line-of-best-fit-a-little-silly",
     "href": "slides/25-final-review.html#line-of-best-fit-a-little-silly",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Line of best fit? A little silly…",
     "text": "Line of best fit? A little silly…"
   },
   {
     "objectID": "slides/25-final-review.html#s-curve-of-best-fit",
     "href": "slides/25-final-review.html#s-curve-of-best-fit",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "S-curve of best fit",
     "text": "S-curve of best fit"
   },
   {
     "objectID": "slides/25-final-review.html#what-is-the-s-curve",
     "href": "slides/25-final-review.html#what-is-the-s-curve",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "What is the s-curve??",
     "text": "What is the s-curve??\nIt’s the logistic function:\n\\[\n\\text{Prob}(y = 1)\n=\n\\frac{e^{\\beta_0+\\beta_1x}}{1+e^{\\beta_0+\\beta_1x}}.\n\\]\n. . .\nIf you set \\(p = \\text{Prob}(y = 1)\\) and do some algebra, you get the simple linear model for the log-odds:\n. . .\n\\[\n\\log\\left(\\frac{p}{1-p}\\right)\n=\n\\beta_0+\\beta_1x.\n\\]\n. . .\nThis is called the logistic regression model."
   },
   {
     "objectID": "slides/25-final-review.html#estimation",
     "href": "slides/25-final-review.html#estimation",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Estimation",
     "text": "Estimation\n\n\nWe estimate the parameters \\(\\beta_0,\\,\\beta_1\\) using maximum likelihood (don’t worry about it) to get the “best fitting” S-curve;\nThe fitted model is\n\n\n. . .\n\\[\n\\log\\left(\\frac{\\widehat{p}}{1-\\widehat{p}}\\right)\n=\nb_0+b_1x.\n\\]\n. . .\n\n\n\n\\(\\hat{p}\\) is the predicted probability that \\(y = 1\\)\n\nIn R, the second level of the factor is taken as \\(y = 1\\)"
   },
   {
     "objectID": "slides/25-final-review.html#interpreting-the-intercept",
     "href": "slides/25-final-review.html#interpreting-the-intercept",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Interpreting the intercept",
     "text": "Interpreting the intercept\nPlug in \\(x = 0\\):\n\\[\n\\log\\left(\\frac{\\widehat{p}}{1-\\widehat{p}}\\right)\n=\nb_0+b_1x.\n\\]\n. . .\nWhen \\(x = 0\\), the estimated log-odds is \\(b_0\\).\n. . .\nWhen \\(x = 0\\), the estimated probability that \\(y = 1\\) is\n\\[\n\\hat{p} = \\frac{e^{b_0}}{1+e^{b_0}}\n\\]"
   },
   {
     "objectID": "slides/25-final-review.html#interpreting-the-slope-is-tricky",
     "href": "slides/25-final-review.html#interpreting-the-slope-is-tricky",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Interpreting the slope is tricky",
     "text": "Interpreting the slope is tricky\nRecall:\n\\[\n\\log\\left(\\frac{\\widehat{p}}{1-\\widehat{p}}\\right)\n=\nb_0+b_1x.\n\\]\n. . .\nAlternatively:\n\\[\n\\frac{\\widehat{p}}{1-\\widehat{p}}\n=\ne^{b_0+b_1x}\n=\n\\color{blue}{e^{b_0}e^{b_1x}}\n.\n\\]\n. . .\nIf we increase \\(x\\) by one unit, we have:\n\\[\n\\frac{\\widehat{p}}{1-\\widehat{p}}\n=\ne^{b_0}e^{b_1(x+1)}\n=\ne^{b_0}e^{b_1x+b_1}\n=\n{\\color{blue}{e^{b_0}e^{b_1x}}}{\\color{red}{e^{b_1}}}\n.\n\\]\n. . .\nA one unit increase in \\(x\\) is associated with a change in odds by a factor of \\(e^{b_1}\\). Gross!"
   },
   {
     "objectID": "slides/25-final-review.html#sign-of-the-slope-is-meaningful",
     "href": "slides/25-final-review.html#sign-of-the-slope-is-meaningful",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Sign of the slope is meaningful",
     "text": "Sign of the slope is meaningful\nA one unit increase in \\(x\\) is associated with a change in odds by a factor of \\(e^{b_1}\\).\n. . .\n\nA positive slope means increasing \\(x\\) increases the odds (and probability!) that \\(y = 1\\)\n\nA negative slope means increasing \\(x\\) decreases the odds (and probability!) that \\(y = 1\\)"
   },
   {
     "objectID": "slides/25-final-review.html#threshold",
     "href": "slides/25-final-review.html#threshold",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Threshold",
     "text": "Threshold\nPick some probability threshold \\(p^*\\).\n\n\nIf \\(\\hat{p} &gt; p^*\\) - predict \\(y = 1\\)\n\nIf \\(\\hat{p} &lt; p^*\\) - predict \\(y = 0\\)\n\n\n\n. . .\nThe higher the threshold, the harder it is to classify as \\(y = 1\\)!!!"
   },
   {
     "objectID": "slides/25-final-review.html#classification-rates",
     "href": "slides/25-final-review.html#classification-rates",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Classification Rates",
     "text": "Classification Rates\n\n\n\n\n\n\nFalse negative rate = \\(\\frac{FN}{FN + TP}\\)\n\nFalse positive rate = \\(\\frac{FP}{FP + TN}\\)\n\nSensitivity = \\(\\frac{FN}{FN + TP}\\) = 1 − False negative rate\nSpecificity = \\(\\frac{TN}{FP + TN}\\) = 1 - False positive rate"
   },
   {
     "objectID": "slides/25-final-review.html#roc-curve-auc",
     "href": "slides/25-final-review.html#roc-curve-auc",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "ROC Curve + AUC",
     "text": "ROC Curve + AUC\n\n. . .\nAUC: Area under the curve"
   },
   {
     "objectID": "slides/25-final-review.html#three-branches-of-statistical-government",
     "href": "slides/25-final-review.html#three-branches-of-statistical-government",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "“Three branches of statistical government”",
     "text": "“Three branches of statistical government”\nWe have an unknown quantity we are trying to learn about (for example, \\(\\beta_1\\)) using noisy, imperfect data. Learning comes in three flavors:\n\n\nPOINT ESTIMATION: get a single-number best guess for \\(\\beta_1\\);\nINTERVAL ESTIMATION: get a range of likely values for \\(\\beta_1\\) that characterizes (sampling) uncertainty;\nHYPOTHESIS TESTING: use the data to distinguish competing claims about \\(\\beta_1\\)."
   },
   {
     "objectID": "slides/25-final-review-slides.html#announcement-office-hoursexam",
     "href": "slides/25-final-review-slides.html#announcement-office-hoursexam",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Announcement: Office Hours/Exam",
     "text": "Announcement: Office Hours/Exam\n\n\nTuesday:\n\n9:30 - 10:45 AM (Marie)\n3:30 - 5:30 PM (Marie)\n\n\n\nWednesday:\n\n9:30 - 10:45 AM (Marie)\n1:30 - 3:30 PM (Mary - Zoom)\n5:30 - 7:30 PM (Katie)\n\n\n\nThursday:\nNo class or office hours! Final is 2-5pm in this room."
   },
   {
     "objectID": "slides/25-final-review-slides.html#teaching-evaluation",
     "href": "slides/25-final-review-slides.html#teaching-evaluation",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Teaching Evaluation",
     "text": "Teaching Evaluation\nTeaching evaluations due tomorrow. If we get 13/17 responses, I’ll add +2 points to everyone’s final exam grade!"
   },
   {
     "objectID": "slides/25-final-review-slides.html#current-grade-calculation",
     "href": "slides/25-final-review-slides.html#current-grade-calculation",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Current Grade Calculation",
     "text": "Current Grade Calculation\n\n\n\nAEs: 5%: completion of 80% or more is full credits\n\nEquivalent to dropping the lowest 4 (out of 20 total)\nTake the number you have completed; divide by 16\n\n\nLab Attendance: 5% - one drop given (score - number of labs out of 10)\nLabs: 30% - Lowest is dropped (5 labs at 6% each)\nMidterm - 20% (Add in-class + take-home score to get total out of 100)\nProject - 20%\nFinal - 20%\n\n\n\nIf you do better on the final than the midterm, it will be weighted higher!"
   },
   {
     "objectID": "slides/25-final-review-slides.html#final-overview",
     "href": "slides/25-final-review-slides.html#final-overview",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Final Overview",
     "text": "Final Overview\n\n\nAll multiple choice (same format as midterm in-class)\nCumulative!!!\nCheat sheet: 2 pages front and back"
   },
   {
     "objectID": "slides/25-final-review-slides.html#what-model-should-i-use",
     "href": "slides/25-final-review-slides.html#what-model-should-i-use",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "What model should I use?",
     "text": "What model should I use?\nFirst, look at what type of output you have:\n\nNumerical: Linear regression\nBinary: Logistic regression\nOther: We haven’t learned how to do this!"
   },
   {
     "objectID": "slides/25-final-review-slides.html#what-model-should-i-use-1",
     "href": "slides/25-final-review-slides.html#what-model-should-i-use-1",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "What model should I use?",
     "text": "What model should I use?\nNow, look at your predictors. Does the relationship between the output and each predictor stay the same regardless of other predictors?\n\nYes: Additive\nNo: interaction"
   },
   {
     "objectID": "slides/25-final-review-slides.html#additive-vs.-interaction",
     "href": "slides/25-final-review-slides.html#additive-vs.-interaction",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Additive vs. Interaction",
     "text": "Additive vs. Interaction"
   },
   {
     "objectID": "slides/25-final-review-slides.html#practice",
     "href": "slides/25-final-review-slides.html#practice",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Practice",
     "text": "Practice\n\nhead(weather_df)\n\n# A tibble: 6 × 3\n  did_rain temperature humidity\n  &lt;fct&gt;          &lt;dbl&gt;    &lt;dbl&gt;\n1 no_rain         71.4     52.7\n2 rain            66.3     80  \n3 no_rain         70.3     53.1\n4 rain            63.3     88.8\n5 rain            60.2     77.5\n6 no_rain         76.7     65.9\n\n\n\n\nWhat type of model to predict did_rain from temperature?\nWhat type of model to predict temperature from did_rain?\nWhat type of model to predict humidity from did_rain and and temperature?\nWhat type of model to predict did_rain from temperature and humidity?"
   },
   {
     "objectID": "slides/25-final-review-slides.html#model-comparison",
     "href": "slides/25-final-review-slides.html#model-comparison",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Model comparison",
     "text": "Model comparison\n\n\n\nLinear Regression:\n\n\n\\(R^2\\):\n\nTells us the percent of variability in the data explained by the model\nAlways increases when adding more variables to a model\n\n\nAdjusted \\(R^2\\): Like \\(R^2\\) but with a penalty for more variables\n\n\n\nLogistic Regression:\n\nTPR, TNR, FPR, FNR\nROC Curve: which curve goes further to the top right?\nAUC: Area under the ROC curve"
   },
   {
     "objectID": "slides/25-final-review-slides.html#line-of-best-fit-a-little-silly",
     "href": "slides/25-final-review-slides.html#line-of-best-fit-a-little-silly",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Line of best fit? A little silly…",
     "text": "Line of best fit? A little silly…"
   },
   {
     "objectID": "slides/25-final-review-slides.html#s-curve-of-best-fit",
     "href": "slides/25-final-review-slides.html#s-curve-of-best-fit",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "S-curve of best fit",
     "text": "S-curve of best fit"
   },
   {
     "objectID": "slides/25-final-review-slides.html#what-is-the-s-curve",
     "href": "slides/25-final-review-slides.html#what-is-the-s-curve",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "What is the s-curve??",
     "text": "What is the s-curve??\nIt’s the logistic function:\n\\[\n\\text{Prob}(y = 1)\n=\n\\frac{e^{\\beta_0+\\beta_1x}}{1+e^{\\beta_0+\\beta_1x}}.\n\\]\n\nIf you set \\(p = \\text{Prob}(y = 1)\\) and do some algebra, you get the simple linear model for the log-odds:\n\n\n\\[\n\\log\\left(\\frac{p}{1-p}\\right)\n=\n\\beta_0+\\beta_1x.\n\\]\n\n\nThis is called the logistic regression model."
   },
   {
     "objectID": "slides/25-final-review-slides.html#estimation",
     "href": "slides/25-final-review-slides.html#estimation",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Estimation",
     "text": "Estimation\n\n\nWe estimate the parameters \\(\\beta_0,\\,\\beta_1\\) using maximum likelihood (don’t worry about it) to get the “best fitting” S-curve;\nThe fitted model is\n\n\n\n\\[\n\\log\\left(\\frac{\\widehat{p}}{1-\\widehat{p}}\\right)\n=\nb_0+b_1x.\n\\]\n\n\n\n\n\n\\(\\hat{p}\\) is the predicted probability that \\(y = 1\\)\n\nIn R, the second level of the factor is taken as \\(y = 1\\)"
   },
   {
     "objectID": "slides/25-final-review-slides.html#interpreting-the-intercept",
     "href": "slides/25-final-review-slides.html#interpreting-the-intercept",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Interpreting the intercept",
     "text": "Interpreting the intercept\nPlug in \\(x = 0\\):\n\\[\n\\log\\left(\\frac{\\widehat{p}}{1-\\widehat{p}}\\right)\n=\nb_0+b_1x.\n\\]\n\nWhen \\(x = 0\\), the estimated log-odds is \\(b_0\\).\n\n\nWhen \\(x = 0\\), the estimated probability that \\(y = 1\\) is\n\\[\n\\hat{p} = \\frac{e^{b_0}}{1+e^{b_0}}\n\\]"
   },
   {
     "objectID": "slides/25-final-review-slides.html#interpreting-the-slope-is-tricky",
     "href": "slides/25-final-review-slides.html#interpreting-the-slope-is-tricky",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Interpreting the slope is tricky",
     "text": "Interpreting the slope is tricky\nRecall:\n\\[\n\\log\\left(\\frac{\\widehat{p}}{1-\\widehat{p}}\\right)\n=\nb_0+b_1x.\n\\]\n\nAlternatively:\n\\[\n\\frac{\\widehat{p}}{1-\\widehat{p}}\n=\ne^{b_0+b_1x}\n=\n\\color{blue}{e^{b_0}e^{b_1x}}\n.\n\\]\n\n\nIf we increase \\(x\\) by one unit, we have:\n\\[\n\\frac{\\widehat{p}}{1-\\widehat{p}}\n=\ne^{b_0}e^{b_1(x+1)}\n=\ne^{b_0}e^{b_1x+b_1}\n=\n{\\color{blue}{e^{b_0}e^{b_1x}}}{\\color{red}{e^{b_1}}}\n.\n\\]\n\n\nA one unit increase in \\(x\\) is associated with a change in odds by a factor of \\(e^{b_1}\\). Gross!"
   },
   {
     "objectID": "slides/25-final-review-slides.html#sign-of-the-slope-is-meaningful",
     "href": "slides/25-final-review-slides.html#sign-of-the-slope-is-meaningful",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Sign of the slope is meaningful",
     "text": "Sign of the slope is meaningful\nA one unit increase in \\(x\\) is associated with a change in odds by a factor of \\(e^{b_1}\\).\n\n\nA positive slope means increasing \\(x\\) increases the odds (and probability!) that \\(y = 1\\)\n\nA negative slope means increasing \\(x\\) decreases the odds (and probability!) that \\(y = 1\\)"
   },
   {
     "objectID": "slides/25-final-review-slides.html#threshold",
     "href": "slides/25-final-review-slides.html#threshold",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Threshold",
     "text": "Threshold\nPick some probability threshold \\(p^*\\).\n\n\nIf \\(\\hat{p} &gt; p^*\\) - predict \\(y = 1\\)\n\nIf \\(\\hat{p} &lt; p^*\\) - predict \\(y = 0\\)\n\n\n\n\nThe higher the threshold, the harder it is to classify as \\(y = 1\\)!!!"
   },
   {
     "objectID": "slides/25-final-review-slides.html#classification-rates",
     "href": "slides/25-final-review-slides.html#classification-rates",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "Classification Rates",
     "text": "Classification Rates\n\n\n\n\n\n\nFalse negative rate = \\(\\frac{FN}{FN + TP}\\)\n\nFalse positive rate = \\(\\frac{FP}{FP + TN}\\)\n\nSensitivity = \\(\\frac{FN}{FN + TP}\\) = 1 − False negative rate\nSpecificity = \\(\\frac{TN}{FP + TN}\\) = 1 - False positive rate"
   },
   {
     "objectID": "slides/25-final-review-slides.html#roc-curve-auc",
     "href": "slides/25-final-review-slides.html#roc-curve-auc",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "ROC Curve + AUC",
     "text": "ROC Curve + AUC\n\n\nAUC: Area under the curve"
   },
   {
     "objectID": "slides/25-final-review-slides.html#three-branches-of-statistical-government",
     "href": "slides/25-final-review-slides.html#three-branches-of-statistical-government",
-    "title": "Final Review - June 23",
+    "title": "Final Review",
     "section": "“Three branches of statistical government”",
     "text": "“Three branches of statistical government”\nWe have an unknown quantity we are trying to learn about (for example, \\(\\beta_1\\)) using noisy, imperfect data. Learning comes in three flavors:\n\n\nPOINT ESTIMATION: get a single-number best guess for \\(\\beta_1\\);\nINTERVAL ESTIMATION: get a range of likely values for \\(\\beta_1\\) that characterizes (sampling) uncertainty;\nHYPOTHESIS TESTING: use the data to distinguish competing claims about \\(\\beta_1\\)."
   },
@@ -15646,7 +15646,7 @@
     "href": "index.html",
     "title": "STA 199: Intro to Data Science and Statistical Thinking",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Visualization\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02  ✅ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nMore Data visualization\n🖥️ slides 03  🗒️ notes 03  ⌨️ ae 03  ✅ ae 03\n\n📘 ims - chp 5 🎥 Visualizing Quantitative Data 🎥 Visualizing Categorical Data\n\n\n\nMon, May 19\nLab 1\n💻 lab 1\n\n📗 r4ds - chp 2  📘 ims - chp 5\n\n\n\nTue, May 20\nGrammar of Data Transformation\n🖥️ slides 04  🗒️ notes 04  ⌨️ ae 04  ✅ ae 04\n\n📗 r4ds - chp 3.1-3.5 \n\n\n\nWed, May 21\nMore Data Transformation\n🖥️ slides 05  🗒️ notes 05  ⌨️ ae 05  ✅ ae 05\nLab 1 - 11:59PM ET\n📗 r4ds - chp 3.6-3.7  🎥 Working with a single data frame\n\n\n\nThu, May 22\nTidying Data\n🖥️ slides 06  🗒️ notes 06  ⌨️ ae 06  ✅ ae 06\n\n📗 r4ds - chp 5 📘 ims - chp 6\n\n\n\nThu, May 22\nLab 2\n💻 lab 2\n\n📗 r4ds - chp 4 🎥 Tidy data 🎥 Tidying data 🎥 Code Along: Population over time\n\n\n\nFri, May 23\nJoining Data\n🖥️ slides 07  🗒️ notes 07  ⌨️ ae 07  ✅ ae 07\n\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n\n\nSun, May 25\n\n\n\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n🖥️ slides 08  🗒️ notes 08  ⌨️ ae 08  ✅ ae 08\n\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n\n\nWed, May 28\nImporting and Recoding Data\n🖥️ slides 09  🗒️ notes 09  ⌨️ ae 09  ✅ ae 09\nLab 2 - 11:59PM ET\n🎥 Importing data  🎥 Code along :: Student survey  📗 r4ds - chp 7\n\n\n\nThu, May 29\nMore Practice + Midterm Review\n🖥️ slides 10  🗒️ notes 10  ⌨️ ae 10  ✅ ae 10\n\n\n\n\n\nThu, May 29\nLab 3\n💻 lab 3 ✅ lab 3\n\n\n\n\n\nFri, May 30\nMidterm Review\n🖥️ slides 11  🗒️ notes 11  📊 Kahoot!! \n\n\n\n\n\nSun, Jun 1\n\n\nLab 3 - 11:59PM ET\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n🖥️ slides 12  🗒️ notes 12 \n\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n💻 Project Milestone 1\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n🖥️ slides 13  🗒️ notes 13  ⌨️ ae 11  ✅ ae 11\nMidterm Takehome - 9:30AM ET\n🎥 The language of models  📘 ims - chp 7.1 🎥 Fitting and interpreting models  🎥 Modeling nonlinear relationships  📘 ims - chp 7.2\n\n\n\nThu, Jun 5\nSimple Linear Regression\n🖥️ slides 14  🗒️ notes 14  ⌨️ ae 12  ✅ ae 12\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\n\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n🖥️ slides 15  🗒️ notes 15 \n\n🎥 Models with multiple predictors  🎥 More models with multiple predictors  📘 ims - chp 8.1-8.2\n\n\n\nSun, Jun 8\n\n\nProject Milestone 2 - 11:59PM ET\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n🖥️ slides 16  🗒️ notes 16  ⌨️ ae 13 \n\n📘 ims - chp 8.3-8.5\n\n\n\nMon, Jun 9\nLab 4\n💻 lab 4\n\n\n\n\n\nTue, Jun 10\nModel Selection\n🖥️ slides 17  🗒️ notes 17  ⌨️ ae 13  ✅ ae 13\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n🖥️ slides 18  🗒️ notes 18  ⌨️ ae 14  ✅ ae 14\nLab 4 - 11:59PM ET Peer Feedback Survey- 11:59 PM ET\n📘 ims - chp 9\n\n\n\nThu, Jun 12\nLogistic Regression 2\n🖥️ slides 19  🗒️ notes 19  ⌨️ ae 15  ✅ae 15 \n\n🎥 Logistic regression  🎥 Prediction and overfitting\n\n\n\nThu, Jun 12\nLab 5\n💻 lab 5\n\n\n\n\n\nFri, Jun 13\nIntervals\n🖥️ slides 20  🗒️ notes 20  ⌨️ ae 16  ✅ae 16 \nProject Milestone 3 - 11:59PM ET\n🎥 Quantifying uncertainty  🎥 Bootstrapping  📘 ims - chp 12\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET \n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n🖥️ slides 21  🗒️ notes 21  ⌨️ ae 17  ✅ae 17 \n\n📘 ims - chp 11\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n💻 Code Options\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n🖥️ slides 22  🗒️ notes 22 \n\n\n\n\n\nWed, Jun 18\nMore Inference\n🖥️ slides 23  🗒️ notes 23  ⌨️ ae 18  ✅ae 18 \n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n💻 lab 6 ⌨️ Final Review Survey) 🖥️ Announcements\n\n\n\n\n\nSun, Jun 22\n\n\n\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n🖥️ slides 25 \nProject - 9:30 AM Lab 6 - 11:59PM ET\n\n\n\n\nMon, Jun 23\nFinal Review\n\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM (2pm - 5pm)",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester! Entries for future dates are tentative; the timeline of topics, assignments, and due dates might be changed throughout the semester!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nDUE\nPREPARE\n\n\n\n1\nWed, May 14\nWelcome\n🖥️ slides 00  ⌨️ ae 00\nGithub Survey - End of Lecture\n\n\n\n\nThu, May 15\nLab 0\n💻 lab 0\nLab 0 - End of Lecture\n\n\n\n\nThu, May 15\nMeet the Toolkit\n🖥️ slides 01  🗒️ notes 01  ⌨️ ae 01\n\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto \n\n\n\nFri, May 16\nGrammar of Data Visualization\n🖥️ slides 02  🗒️ notes 02  ⌨️ ae 02  ✅ ae 02\n\n📗 r4ds - chp 1  📘 ims - chp 4 \n\n\n2\nMon, May 19\nMore Data visualization\n🖥️ slides 03  🗒️ notes 03  ⌨️ ae 03  ✅ ae 03\n\n📘 ims - chp 5 🎥 Visualizing Quantitative Data 🎥 Visualizing Categorical Data\n\n\n\nMon, May 19\nLab 1\n💻 lab 1\n\n📗 r4ds - chp 2  📘 ims - chp 5\n\n\n\nTue, May 20\nGrammar of Data Transformation\n🖥️ slides 04  🗒️ notes 04  ⌨️ ae 04  ✅ ae 04\n\n📗 r4ds - chp 3.1-3.5 \n\n\n\nWed, May 21\nMore Data Transformation\n🖥️ slides 05  🗒️ notes 05  ⌨️ ae 05  ✅ ae 05\nLab 1 - 11:59PM ET\n📗 r4ds - chp 3.6-3.7  🎥 Working with a single data frame\n\n\n\nThu, May 22\nTidying Data\n🖥️ slides 06  🗒️ notes 06  ⌨️ ae 06  ✅ ae 06\n\n📗 r4ds - chp 5 📘 ims - chp 6\n\n\n\nThu, May 22\nLab 2\n💻 lab 2\n\n📗 r4ds - chp 4 🎥 Tidy data 🎥 Tidying data 🎥 Code Along: Population over time\n\n\n\nFri, May 23\nJoining Data\n🖥️ slides 07  🗒️ notes 07  ⌨️ ae 07  ✅ ae 07\n\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n\n\nSun, May 25\n\n\n\n\n\n\n3\nMon, May 26\nNO CLASS - Memorial Day\n\n\n\n\n\n\nTue, May 27\nData Types and Classes\n🖥️ slides 08  🗒️ notes 08  ⌨️ ae 08  ✅ ae 08\n\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n\n\nWed, May 28\nImporting and Recoding Data\n🖥️ slides 09  🗒️ notes 09  ⌨️ ae 09  ✅ ae 09\nLab 2 - 11:59PM ET\n🎥 Importing data  🎥 Code along :: Student survey  📗 r4ds - chp 7\n\n\n\nThu, May 29\nMore Practice + Midterm Review\n🖥️ slides 10  🗒️ notes 10  ⌨️ ae 10  ✅ ae 10\n\n\n\n\n\nThu, May 29\nLab 3\n💻 lab 3 ✅ lab 3\n\n\n\n\n\nFri, May 30\nMidterm Review\n🖥️ slides 11  🗒️ notes 11  📊 Kahoot!! \n\n\n\n\n\nSun, Jun 1\n\n\nLab 3 - 11:59PM ET\n\n\n\n4\nMon, Jun 2\nData Science Ethics\n🖥️ slides 12  🗒️ notes 12 \n\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\n\n\nMon, Jun 2\nProject Milestone 1 - Collaboration\n💻 Project Milestone 1\nProject Milestone 1 - 12:30PM ET\n\n\n\n\nTue, Jun 3\nMidterm\n\n\n\n\n\n\nWed, Jun 4\nThe Language of Models\n🖥️ slides 13  🗒️ notes 13  ⌨️ ae 11  ✅ ae 11\nMidterm Takehome - 9:30AM ET\n🎥 The language of models  📘 ims - chp 7.1 🎥 Fitting and interpreting models  🎥 Modeling nonlinear relationships  📘 ims - chp 7.2\n\n\n\nThu, Jun 5\nSimple Linear Regression\n🖥️ slides 14  🗒️ notes 14  ⌨️ ae 12  ✅ ae 12\n\n\n\n\n\nThu, Jun 5\nProject Milestone 2 - Proposals\n\n\n\n\n\n\nFri, Jun 6\nMultiple Linear Regression 1\n🖥️ slides 15  🗒️ notes 15 \n\n🎥 Models with multiple predictors  🎥 More models with multiple predictors  📘 ims - chp 8.1-8.2\n\n\n\nSun, Jun 8\n\n\nProject Milestone 2 - 11:59PM ET\n\n\n\n5\nMon, Jun 9\nMultiple Linear Regression 2\n🖥️ slides 16  🗒️ notes 16  ⌨️ ae 13 \n\n📘 ims - chp 8.3-8.5\n\n\n\nMon, Jun 9\nLab 4\n💻 lab 4\n\n\n\n\n\nTue, Jun 10\nModel Selection\n🖥️ slides 17  🗒️ notes 17  ⌨️ ae 13  ✅ ae 13\n\n\n\n\n\nWed, Jun 11\nLogistic Regression1\n🖥️ slides 18  🗒️ notes 18  ⌨️ ae 14  ✅ ae 14\nLab 4 - 11:59PM ET Peer Feedback Survey- 11:59 PM ET\n📘 ims - chp 9\n\n\n\nThu, Jun 12\nLogistic Regression 2\n🖥️ slides 19  🗒️ notes 19  ⌨️ ae 15  ✅ae 15 \n\n🎥 Logistic regression  🎥 Prediction and overfitting\n\n\n\nThu, Jun 12\nLab 5\n💻 lab 5\n\n\n\n\n\nFri, Jun 13\nIntervals\n🖥️ slides 20  🗒️ notes 20  ⌨️ ae 16  ✅ae 16 \nProject Milestone 3 - 11:59PM ET\n🎥 Quantifying uncertainty  🎥 Bootstrapping  📘 ims - chp 12\n\n\n\nSun, Jun 15\n\n\nLab 5 - 11:59PM ET \n\n\n\n6\nMon, Jun 16\nHypothesis Testing\n🖥️ slides 21  🗒️ notes 21  ⌨️ ae 17  ✅ae 17 \n\n📘 ims - chp 11\n\n\n\nMon, Jun 16\nProject Milestone 4 - Peer Review\n💻 Code Options\nProject Milestone 4 - 12:30PM ET\n\n\n\n\nTue, Jun 17\nMore Inference\n🖥️ slides 22  🗒️ notes 22 \n\n\n\n\n\nWed, Jun 18\nMore Inference\n🖥️ slides 23  🗒️ notes 23  ⌨️ ae 18  ✅ae 18 \n\n\n\n\n\nThu, Jun 19\nNO CLASS - Juneteenth\n\n\n\n\n\n\nFri, Jun 20\nLab 6\n💻 lab 6 ⌨️ Final Review Survey 🖥️ Announcements\n\n\n\n\n\nSun, Jun 22\n\n\n\n\n\n\n7\nMon, Jun 23\nProject Milestone 5 - Presentations + Final Review\n\nProject - 9:30 AM Lab 6 - 11:59PM ET\n\n\n\n\nMon, Jun 23\nFinal Review\n🖥️ slides 25  🗒️ notes 25  📊 Kahoot\n\n\n\n\n\nThu, Jun 26\nFINAL EXAM (2pm - 5pm)",
     "crumbs": [
       "Course information",
       "Schedule"
