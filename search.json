@@ -312,7 +312,7 @@
     "href": "exam-review/final-review-A.html",
     "title": "Final review",
     "section": "",
-    "text": "a, c, e - boxplots, histograms, and density plots are good ways of visualizing numerical variables\nc\na, d - both of these will return the same values; the one with specify() is the code we should use if we need point estimates with confidence intervals/hypothesis testing\nc - since less is the baseline, we will see level more in the output\nc\na\na, c",
+    "text": "a, c, e - boxplots, histograms, and density plots are good ways of visualizing numerical variables\nc\na, d - both of these will return the same values; the one with specify() is the code we should use if we need point estimates with confidence intervals/hypothesis testing\nc - since less is the baseline, we will see level more in the output\nc\nc\nb, c, e; The p-value 0.3 greater than the 0.05 disernability level means we fail to reject the null hypothesis. About 30% of samples in the null distribution were more extreme than our observed value.\n\nOption e is a little unclear - this would be phrased more precisely if something like this appears on an exam. Here, when I am talking about our observed value, I am specifically talking about our observed value of the slope since this is what the hypothesis test was looking at. About 30% of the null distribution are more extreme - here, about 15% of the null distribution values are greater than the observed value.",
     "crumbs": [
       "Exam Review",
       "Final Review Answers"
@@ -323,7 +323,7 @@
     "href": "exam-review/final-review-A.html#part-1",
     "title": "Final review",
     "section": "",
-    "text": "a, c, e - boxplots, histograms, and density plots are good ways of visualizing numerical variables\nc\na, d - both of these will return the same values; the one with specify() is the code we should use if we need point estimates with confidence intervals/hypothesis testing\nc - since less is the baseline, we will see level more in the output\nc\na\na, c",
+    "text": "a, c, e - boxplots, histograms, and density plots are good ways of visualizing numerical variables\nc\na, d - both of these will return the same values; the one with specify() is the code we should use if we need point estimates with confidence intervals/hypothesis testing\nc - since less is the baseline, we will see level more in the output\nc\nc\nb, c, e; The p-value 0.3 greater than the 0.05 disernability level means we fail to reject the null hypothesis. About 30% of samples in the null distribution were more extreme than our observed value.\n\nOption e is a little unclear - this would be phrased more precisely if something like this appears on an exam. Here, when I am talking about our observed value, I am specifically talking about our observed value of the slope since this is what the hypothesis test was looking at. About 30% of the null distribution are more extreme - here, about 15% of the null distribution values are greater than the observed value.",
     "crumbs": [
       "Exam Review",
       "Final Review Answers"
